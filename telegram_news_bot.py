@@ -14,6 +14,7 @@ import time
 
 import feedparser
 import requests
+from googlenewsdecoder import gnewsdecoder
 
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 CHAT_ID = os.environ.get("CHAT_ID")
@@ -30,6 +31,12 @@ FEEDS = [
     {"url": "https://tiinside.com.br/feed/", "filtrar": True},
     {"url": "https://telesintese.com.br/feed/", "filtrar": True},
     {"url": "https://convergenciadigital.com.br/feed/", "filtrar": True},
+    # Busca por palavra-chave no Google Notícias (Brasil): cobre
+    # qualquer veículo indexado (Poder360, Exame, Forbes, G1, etc.).
+    {
+        "url": "https://news.google.com/rss/search?q=%22data+center%22+OR+%22data+centers%22+OR+%22centro+de+dados%22&hl=pt-BR&gl=BR&ceid=BR:pt-BR",
+        "filtrar": True,
+    },
 ]
 
 KEYWORDS = [
@@ -44,6 +51,24 @@ KEYWORDS = [
 def contem_palavra_chave(texto: str) -> bool:
     texto_lower = texto.lower()
     return any(k.lower() in texto_lower for k in KEYWORDS)
+
+
+def resolver_link_google_news(link: str) -> str:
+    if not link.startswith("https://news.google.com/"):
+        return link
+    try:
+        resultado = gnewsdecoder(link, interval=1)
+        if resultado.get("status"):
+            return resultado["decoded_url"]
+    except Exception as erro:
+        print(f"Não consegui resolver link do Google Notícias: {erro}")
+    return link
+
+
+def escapar_markdown(texto: str) -> str:
+    for caractere in ("_", "*", "`", "["):
+        texto = texto.replace(caractere, f"\\{caractere}")
+    return texto
 
 SENT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "enviados.json")
 
@@ -62,7 +87,7 @@ def salvar_enviados(enviados: set) -> None:
 
 def enviar_telegram(titulo: str, link: str, fonte: str) -> bool:
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
-    texto = f"📰 *{titulo}*\n_{fonte}_\n{link}"
+    texto = f"📰 *{escapar_markdown(titulo)}*\n_{escapar_markdown(fonte)}_\n{link}"
     payload = {
         "chat_id": CHAT_ID,
         "text": texto,
@@ -85,18 +110,27 @@ def checar_feeds() -> None:
         if feed.bozo:
             print(f"Aviso: não consegui ler corretamente {feed_url}")
 
-        fonte = feed.feed.get("title", feed_url)
+        fonte_padrao = feed.feed.get("title", feed_url)
 
         for entrada in feed.entries:
             link = entrada.get("link", "")
             titulo = entrada.get("title", "")
             resumo = entrada.get("summary", "")
 
-            if not link or link in enviados:
+            if not link:
+                continue
+
+            link = resolver_link_google_news(link)
+            if link in enviados:
                 continue
 
             if feed_info["filtrar"] and not contem_palavra_chave(f"{titulo} {resumo}"):
                 continue
+
+            fonte_especifica = entrada.get("source", {}).get("title")
+            fonte = fonte_especifica or fonte_padrao
+            if fonte_especifica and titulo.endswith(f" - {fonte_especifica}"):
+                titulo = titulo[: -len(f" - {fonte_especifica}")]
 
             if enviar_telegram(titulo, link, fonte):
                 enviados.add(link)
