@@ -25,6 +25,11 @@ FEEDS = [
     {"url": "https://www.datacenterdynamics.com/en/rss/", "filtrar": False},
     {"url": "https://www.datacenterknowledge.com/rss.xml", "filtrar": False},
     {"url": "https://megawhat.uol.com.br/feed/", "filtrar": True},
+    {"url": "https://itforum.com.br/feed/", "filtrar": True},
+    {"url": "https://www.mobiletime.com.br/feed/", "filtrar": True},
+    {"url": "https://tiinside.com.br/feed/", "filtrar": True},
+    {"url": "https://telesintese.com.br/feed/", "filtrar": True},
+    {"url": "https://convergenciadigital.com.br/feed/", "filtrar": True},
 ]
 
 KEYWORDS = [
