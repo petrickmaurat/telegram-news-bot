@@ -18,10 +18,27 @@ import requests
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 CHAT_ID = os.environ.get("CHAT_ID")
 
+# Feeds 100% dedicados a data center não precisam de filtro por
+# palavra-chave; feeds de tema mais amplo (ex: mercado de energia)
+# precisam, senão vem notícia irrelevante junto.
 FEEDS = [
-    "https://www.datacenterdynamics.com/en/rss/",
-    "https://www.datacenterknowledge.com/rss.xml",
+    {"url": "https://www.datacenterdynamics.com/en/rss/", "filtrar": False},
+    {"url": "https://www.datacenterknowledge.com/rss.xml", "filtrar": False},
+    {"url": "https://megawhat.uol.com.br/feed/", "filtrar": True},
 ]
+
+KEYWORDS = [
+    "data center",
+    "data centers",
+    "datacenter",
+    "centro de dados",
+    "centros de dados",
+]
+
+
+def contem_palavra_chave(texto: str) -> bool:
+    texto_lower = texto.lower()
+    return any(k.lower() in texto_lower for k in KEYWORDS)
 
 SENT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "enviados.json")
 
@@ -57,7 +74,8 @@ def checar_feeds() -> None:
     enviados = carregar_enviados()
     novos = 0
 
-    for feed_url in FEEDS:
+    for feed_info in FEEDS:
+        feed_url = feed_info["url"]
         feed = feedparser.parse(feed_url)
         if feed.bozo:
             print(f"Aviso: não consegui ler corretamente {feed_url}")
@@ -67,8 +85,12 @@ def checar_feeds() -> None:
         for entrada in feed.entries:
             link = entrada.get("link", "")
             titulo = entrada.get("title", "")
+            resumo = entrada.get("summary", "")
 
             if not link or link in enviados:
+                continue
+
+            if feed_info["filtrar"] and not contem_palavra_chave(f"{titulo} {resumo}"):
                 continue
 
             if enviar_telegram(titulo, link, fonte):
