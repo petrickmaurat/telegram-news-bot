@@ -1,0 +1,39 @@
+name: Digest por e-mail (2x ao dia)
+
+on:
+  schedule:
+    - cron: "0 10 * * *"  # ~07:00 no horário de Brasília
+    - cron: "0 21 * * *"  # ~18:00 no horário de Brasília
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - run: python digest_email.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          EMAIL_REMETENTE: ${{ secrets.EMAIL_REMETENTE }}
+          EMAIL_DESTINO: ${{ secrets.EMAIL_DESTINO }}
+
+      - name: Salvar estado do digest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add digest_enviados.json google_cache.json
+          git diff --staged --quiet && exit 0
+          git commit -m "Atualiza digest_enviados.json"
+          git pull --rebase --autostash
+          git push
