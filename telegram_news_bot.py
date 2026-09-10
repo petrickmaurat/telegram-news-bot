@@ -59,7 +59,7 @@ def checar_feeds() -> None:
     enviados = carregar_enviados()
     novos = 0
 
-    for item in coletar_itens_novos(enviados):
+    for item in coletar_itens_novos(enviados, topicos=["data_center"]):
         if enviar_telegram(item["titulo"], item["link"], item["fonte"]):
             enviados.add(item["link"])
             novos += 1

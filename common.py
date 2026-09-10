@@ -1,6 +1,10 @@
 """
-Configuração e coleta de notícias compartilhadas entre o bot do
-Telegram (telegram_news_bot.py) e o digest por e-mail (digest_email.py).
+Configuração e coleta de notícias, compartilhadas entre o bot do
+Telegram (só data center, tempo real) e o digest por e-mail (data
+center + mercado de carbono, curado por IA 2x ao dia).
+
+Cada tópico tem suas próprias palavras-chave e seus próprios feeds.
+Feeds marcados com origem "INT" trazem notícia de fora do Brasil.
 """
 
 import json
@@ -9,38 +13,75 @@ import os
 import feedparser
 from googlenewsdecoder import gnewsdecoder
 
-# Todos os feeds passam pelo filtro de palavra-chave: mesmo os feeds
-# "de data center" (DCD, DCK) publicam bastante coisa adjacente (5G,
-# satélite, telecom) que não interessa aqui.
-FEEDS = [
-    {"url": "https://www.datacenterdynamics.com/en/rss/", "filtrar": True},
-    {"url": "https://www.datacenterknowledge.com/rss.xml", "filtrar": True},
-    {"url": "https://megawhat.uol.com.br/feed/", "filtrar": True},
-    {"url": "https://itforum.com.br/feed/", "filtrar": True},
-    {"url": "https://www.mobiletime.com.br/feed/", "filtrar": True},
-    {"url": "https://tiinside.com.br/feed/", "filtrar": True},
-    {"url": "https://telesintese.com.br/feed/", "filtrar": True},
-    {"url": "https://convergenciadigital.com.br/feed/", "filtrar": True},
-    # Busca por palavra-chave no Google Notícias (Brasil): cobre
-    # qualquer veículo indexado (Poder360, Exame, Forbes, G1, etc.).
-    {
-        "url": "https://news.google.com/rss/search?q=%22data+center%22+OR+%22data+centers%22+OR+%22centro+de+dados%22&hl=pt-BR&gl=BR&ceid=BR:pt-BR",
-        "filtrar": True,
+# Busca no Google Notícias — cobre qualquer veículo indexado, o que
+# nos dá de graça Valor, Folha, Estadão, CNN, Reuters, FT, WaPo, etc.
+_GN_DC_BR = (
+    "https://news.google.com/rss/search?q=%22data+center%22+OR+%22data+centers%22"
+    "+OR+%22centro+de+dados%22&hl=pt-BR&gl=BR&ceid=BR:pt-BR"
+)
+_GN_DC_US = (
+    "https://news.google.com/rss/search?q=%22data+center%22+OR+%22data+centers%22"
+    "&hl=en-US&gl=US&ceid=US:en"
+)
+_GN_CARBONO_BR = (
+    "https://news.google.com/rss/search?q=%22mercado+de+carbono%22+OR+%22cr%C3%A9dito"
+    "+de+carbono%22+OR+%22cr%C3%A9ditos+de+carbono%22+OR+%22com%C3%A9rcio+de+emiss%C3%B5es%22"
+    "+OR+%22SBCE%22&hl=pt-BR&gl=BR&ceid=BR:pt-BR"
+)
+_GN_CARBONO_US = (
+    "https://news.google.com/rss/search?q=%22carbon+market%22+OR+%22cap+and+trade%22"
+    "+OR+%22emissions+trading%22&hl=en-US&gl=US&ceid=US:en"
+)
+
+TOPICOS = {
+    "data_center": {
+        "rotulo": "Data Centers",
+        "keywords": [
+            "data center",
+            "data centers",
+            "datacenter",
+            "centro de dados",
+            "centros de dados",
+        ],
+        "feeds": [
+            {"url": "https://www.datacenterdynamics.com/en/rss/", "origem": "INT"},
+            {"url": "https://www.datacenterknowledge.com/rss.xml", "origem": "INT"},
+            {"url": _GN_DC_BR, "origem": "BR"},
+            {"url": _GN_DC_US, "origem": "INT"},
+            {"url": "https://megawhat.uol.com.br/feed/", "origem": "BR"},
+            {"url": "https://itforum.com.br/feed/", "origem": "BR"},
+            {"url": "https://www.mobiletime.com.br/feed/", "origem": "BR"},
+            {"url": "https://tiinside.com.br/feed/", "origem": "BR"},
+            {"url": "https://telesintese.com.br/feed/", "origem": "BR"},
+            {"url": "https://convergenciadigital.com.br/feed/", "origem": "BR"},
+        ],
     },
-]
+    "carbono": {
+        "rotulo": "Mercado de Carbono",
+        "keywords": [
+            "mercado de carbono",
+            "mercado regulado de carbono",
+            "crédito de carbono",
+            "créditos de carbono",
+            "comércio de emissões",
+            "precificação de carbono",
+            "sbce",
+            "carbon market",
+            "emissions trading",
+            "cap and trade",
+        ],
+        "feeds": [
+            {"url": _GN_CARBONO_BR, "origem": "BR"},
+            {"url": _GN_CARBONO_US, "origem": "INT"},
+            {"url": "https://megawhat.uol.com.br/feed/", "origem": "BR"},
+        ],
+    },
+}
 
-KEYWORDS = [
-    "data center",
-    "data centers",
-    "datacenter",
-    "centro de dados",
-    "centros de dados",
-]
 
-
-def contem_palavra_chave(texto: str) -> bool:
+def contem_palavra_chave(texto: str, keywords: list) -> bool:
     texto_lower = texto.lower()
-    return any(k.lower() in texto_lower for k in KEYWORDS)
+    return any(k.lower() in texto_lower for k in keywords)
 
 
 # Cada link do Google Notícias leva ~5s para decodificar, então
@@ -80,46 +121,65 @@ def resolver_link_google_news(link: str) -> str:
     return link
 
 
-def coletar_itens_novos(ja_vistos: set) -> list:
+def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True) -> list:
     """
-    Lê todos os feeds e devolve os itens cujo link (já resolvido) não
-    está em `ja_vistos`. Não modifica `ja_vistos`. Cada item é um dict
-    com titulo, link, fonte e resumo.
+    Lê os feeds dos tópicos pedidos e devolve os itens ainda não
+    vistos. Não modifica `ja_vistos`.
+
+    topicos: lista de chaves de TOPICOS (default: todos).
+    resolver: se True, resolve o link do Google Notícias na hora
+        (necessário pro Telegram). O digest passa False e resolve
+        só os itens que a IA selecionar, para não gastar ~5s/link
+        em 100+ candidatos.
+
+    Cada item: {titulo, link, fonte, resumo, topico, origem}.
     """
+    alvos = topicos or list(TOPICOS)
     itens = []
     vistos_agora = set()
 
-    for feed_info in FEEDS:
-        feed = feedparser.parse(feed_info["url"])
-        if feed.bozo:
-            print(f"Aviso: não consegui ler corretamente {feed_info['url']}")
+    for topico in alvos:
+        cfg = TOPICOS[topico]
+        for feed_info in cfg["feeds"]:
+            feed = feedparser.parse(feed_info["url"])
+            if feed.bozo:
+                print(f"Aviso: não consegui ler corretamente {feed_info['url']}")
 
-        fonte_padrao = feed.feed.get("title", feed_info["url"])
+            fonte_padrao = feed.feed.get("title", feed_info["url"])
 
-        for entrada in feed.entries:
-            link = entrada.get("link", "")
-            if not link:
-                continue
+            for entrada in feed.entries:
+                link = entrada.get("link", "")
+                if not link:
+                    continue
 
-            link = resolver_link_google_news(link)
-            if link in ja_vistos or link in vistos_agora:
-                continue
+                if resolver:
+                    link = resolver_link_google_news(link)
+                if link in ja_vistos or link in vistos_agora:
+                    continue
 
-            titulo = entrada.get("title", "")
-            resumo = entrada.get("summary", "")
+                titulo = entrada.get("title", "")
+                resumo = entrada.get("summary", "")
 
-            if feed_info["filtrar"] and not contem_palavra_chave(f"{titulo} {resumo}"):
-                continue
+                if not contem_palavra_chave(f"{titulo} {resumo}", cfg["keywords"]):
+                    continue
 
-            fonte_especifica = entrada.get("source", {}).get("title")
-            fonte = fonte_especifica or fonte_padrao
-            if fonte_especifica and titulo.endswith(f" - {fonte_especifica}"):
-                titulo = titulo[: -len(f" - {fonte_especifica}")]
+                fonte_especifica = entrada.get("source", {}).get("title")
+                fonte = fonte_especifica or fonte_padrao
+                if fonte_especifica and titulo.endswith(f" - {fonte_especifica}"):
+                    titulo = titulo[: -len(f" - {fonte_especifica}")]
 
-            vistos_agora.add(link)
-            itens.append(
-                {"titulo": titulo, "link": link, "fonte": fonte, "resumo": resumo}
-            )
+                vistos_agora.add(link)
+                itens.append(
+                    {
+                        "titulo": titulo,
+                        "link": link,
+                        "fonte": fonte,
+                        "resumo": resumo,
+                        "topico": topico,
+                        "origem": feed_info["origem"],
+                    }
+                )
 
-    salvar_cache_google()
+    if resolver:
+        salvar_cache_google()
     return itens
