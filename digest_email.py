@@ -31,7 +31,11 @@ from common import TOPICOS, coletar_itens_novos, resolver_link_google_news, salv
 MODELO = "claude-haiku-4-5"
 MAX_BR = 3
 MAX_US = 1
-MAX_CANDIDATOS_POR_TOPICO = 70
+# Precisa ser maior que o volume real de candidatos (hoje ~270 em data
+# center, ~180 em carbono), senão o corte vira um filtro por ORDEM DOS
+# FEEDS em vez de relevância — os 2 primeiros feeds (DCD+DCK) sozinhos
+# já passam de 70 itens e empurram Valor/FT/Reuters/etc para fora.
+MAX_CANDIDATOS_POR_TOPICO = 400
 LIMITE_TEXTO_ARTIGO = 3000
 
 ESTADO_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "digest_enviados.json")
@@ -41,15 +45,20 @@ BREVO_API_KEY = os.environ.get("BREVO_API_KEY")
 EMAIL_REMETENTE = os.environ.get("EMAIL_REMETENTE")
 EMAIL_DESTINO = os.environ.get("EMAIL_DESTINO")
 
-# Veículos de referência — a IA dá mais peso a notícias publicadas
-# por estes; veículo pequeno, blog ou release corporativo pesa menos.
-VEICULOS_PRIORITARIOS = (
-    "Valor Econômico, Folha de S.Paulo, O Estado de S. Paulo (Estadão), Brazil Journal, "
-    "MegaWhat, epbr, CanalEnergia, Broadcast, Poder360, InfoMoney, NeoFeed, Pipeline, "
-    "Exame, O Globo, CNN Brasil, Reuters, Bloomberg, Bloomberg Línea, Financial Times, "
-    "The Washington Post, The Wall Street Journal, The New York Times, The Economist, "
-    "Politico, S&P Global, Carbon Pulse, Utility Dive, Data Center Dynamics, "
-    "Data Center Frontier, The Information, Canary Media, Agência eixos, Brasil Energia"
+# Veículos de referência, em duas camadas. A IA deve SEMPRE preferir um
+# candidato do Nível 1; só descer para o Nível 2 (ou abaixo) se não
+# houver nenhuma opção relevante nos veículos de maior peso.
+VEICULOS_NIVEL_1 = (
+    "Valor Econômico, Folha de S.Paulo, O Estado de S. Paulo (Estadão), O Globo, "
+    "Brazil Journal, Exame, Poder360, CNN Brasil, InfoMoney, "
+    "Financial Times, The Wall Street Journal, The New York Times, The Washington Post, "
+    "The Economist, Reuters, Bloomberg, Bloomberg Línea, Politico, Axios"
+)
+VEICULOS_NIVEL_2 = (
+    "MegaWhat, epbr, CanalEnergia, Broadcast, NeoFeed, Pipeline Valor, Agência Eixos, "
+    "Brasil Energia, UOL, Money Times, S&P Global, Carbon Pulse, Argus Media, ICIS, "
+    "Carbon Brief, Ecosystem Marketplace, Utility Dive, Canary Media, Data Center Dynamics, "
+    "Data Center Frontier, The Information, Semafor, CNBC"
 )
 
 FOCO_SETORIAL = {
@@ -65,40 +74,49 @@ FOCO_SETORIAL = {
     ),
 }
 
-PROMPT_SELECAO = """Você monta um informativo executivo sobre {rotulo}.
+PROMPT_SELECAO = """Você monta um informativo executivo sobre {rotulo}, para um leitor
+que quer ler poucas notícias, mas as mais importantes e de fontes confiáveis.
 
 Selecione, desta lista de candidatos:
 - ATÉ {max_br} notícias sobre o BRASIL (bucket "BR")
 - ATÉ {max_us} notícia sobre EUA / exterior (bucket "US")
 
-Critérios de relevância, do MAIOR para o menor peso:
+REGRA DE VEÍCULO (aplique ANTES dos critérios de conteúdo abaixo): SEMPRE prefira uma
+notícia publicada por um destes veículos de Nível 1, se houver alguma relevante:
+{veiculos_1}
+Só use um veículo de Nível 2 nesta lista se não houver NENHUMA opção relevante de
+Nível 1 para aquele bucket:
+{veiculos_2}
+Um veículo fora das duas listas (pouco conhecido, blog, release corporativo, portal
+regional pequeno) só deve ser escolhido em ÚLTIMO caso, se não houver absolutamente
+nada relevante nos níveis 1 e 2 — e mesmo assim, prefira sempre a opção mais robusta.
+
+Entre candidatos do mesmo nível de veículo, desempate pelos critérios de conteúdo,
+do maior para o menor peso:
 1. MONTANTE FINANCEIRO envolvido (investimento, aporte, contrato, financiamento, multa,
    valor de mercado). Quanto maior o valor, maior a prioridade.
 2. IMPACTO REGULATÓRIO E POLÍTICO: nova regra, decisão de agência (ANEEL, ONS, MME, CVM,
    Ibama...), lei, medida provisória, disputa judicial, posição de governo.
 3. {foco_setorial}
-4. VEÍCULO que publicou. Dê mais peso a veículos de referência: {veiculos}.
-   Veículo pequeno/desconhecido, blog ou release promocional pesa menos.
 
-Prioridade é critério de ORDENAÇÃO, não de exclusão: uma notícia fraca em um critério
-mas forte em outro (ex.: montante financeiro muito alto) pode e deve entrar.
-
-Descarte: duplicatas (mesmo fato), itens que não são sobre {rotulo}, agenda de evento,
-conteúdo meramente promocional sem fato novo.
+Descarte: duplicatas (mesmo fato contado por veículos diferentes — escolha só a melhor
+fonte), itens que não são sobre {rotulo}, agenda de evento, conteúdo promocional sem
+fato novo.
 
 Candidatos (índice | origem | veículo | título — trecho):
 {lista}
 
 Responda APENAS com um array JSON, sem texto antes ou depois, ordenado do mais para o
 menos relevante:
-[{{"indice": 0, "bucket": "BR", "motivo": "aporte de R$ X / decisão da ANEEL / ..."}}]
+[{{"indice": 0, "bucket": "BR"}}, {{"indice": 7, "bucket": "US"}}]
 """
 
 PROMPT_RESUMO = """Escreva, para cada matéria abaixo, UM PARÁGRAFO CURTO (2 a 3 frases,
-no máximo ~60 palavras) em português do Brasil, em tom jornalístico e direto. Traga
-só o essencial: o fato central, o número mais importante (valor financeiro, MW, %...)
-e, se houver, o órgão/empresa envolvido. Sem introdução, sem floreio. Não invente nada
-que não esteja no texto fornecido.
+no máximo ~55 palavras) em português do Brasil, em tom jornalístico, direto e atraente
+para quem só vai ler esse parágrafo (sem clicar na matéria). Abra com o fato mais forte
+(o número, o valor, a decisão), não com contexto genérico. Traga o número mais importante
+(valor financeiro, MW, %...) e, se houver, o órgão/empresa envolvido. Sem introdução tipo
+"a notícia trata de", sem floreio. Não invente nada que não esteja no texto fornecido.
 
 {blocos}
 
@@ -154,7 +172,8 @@ def selecionar(cliente, topico: str, candidatos: list) -> dict:
         max_br=MAX_BR,
         max_us=MAX_US,
         foco_setorial=FOCO_SETORIAL[topico],
-        veiculos=VEICULOS_PRIORITARIOS,
+        veiculos_1=VEICULOS_NIVEL_1,
+        veiculos_2=VEICULOS_NIVEL_2,
         lista="\n".join(linhas),
     )
     escolhidos = {"BR": [], "US": []}
@@ -173,9 +192,7 @@ def selecionar(cliente, topico: str, candidatos: list) -> dict:
             limite = MAX_BR if bucket == "BR" else MAX_US
             if len(escolhidos[bucket]) >= limite:
                 continue
-            item = dict(candidatos[idx])
-            item["motivo"] = entrada.get("motivo", "")
-            escolhidos[bucket].append(item)
+            escolhidos[bucket].append(dict(candidatos[idx]))
     except Exception as erro:
         print(f"Seleção por IA falhou em '{topico}' ({erro}); usando fallback.")
 
@@ -224,40 +241,50 @@ def resumir(cliente, itens: list) -> None:
 # ----------------------------------------------------------------------
 # Construção do e-mail
 #
-# Objetivo visual: um informativo executivo limpo e agradável de ler no
-# celular ou no desktop. Cartão central de 600px sobre fundo cinza claro;
-# tipografia sans-serif do sistema; hierarquia clara (kicker → título →
-# data). Cada tópico é uma seção com cor de destaque própria (índigo para
-# data center, verde para carbono) e uma faixa lateral. Dentro da seção,
-# subtítulos "Brasil" e "Exterior". Cada notícia é um cartão com: nome do
-# veículo em maiúsculas na cor de destaque, manchete clicável em negrito,
-# um parágrafo de resumo, e um link "Ler no <veículo> →". Estilos todos
-# inline (compatível com Gmail/Outlook/Apple Mail), sem CSS externo, sem
-# imagens externas.
+# Objetivo visual: um informativo colorido e chamativo, feito pra ser
+# LIDO — não só escaneado. Cartão central de 600px sobre fundo cinza
+# claro. Cada tópico abre com uma FAIXA COLORIDA CHEIA (não só uma
+# borda fina), com ícone + nome do tópico em branco — dá pra
+# identificar Data Centers x Carbono batendo o olho, sem precisar ler.
+# Dentro de cada tópico, "🇧🇷 Brasil" e "🌎 Exterior" como rótulos.
+# Cada notícia é um cartão com: selo do veículo (pílula colorida),
+# manchete grande e em negrito, um parágrafo de resumo em fonte maior
+# e mais escura que o normal (para chamar atenção mesmo sendo curto —
+# 2-3 frases, ver PROMPT_RESUMO), e um botão colorido "Ler matéria
+# completa →". Nada de metadado técnico (motivo da IA etc.) aparece
+# pro leitor. Ícones são emoji (não imagem) — renderizam em qualquer
+# cliente de e-mail sem depender de imagem externa bloqueada. Estilos
+# todos inline (compatível com Gmail/Outlook/Apple Mail).
 # ----------------------------------------------------------------------
 
 TEMA = {
-    "data_center": {"cor": "#4f46e5", "cor_clara": "#eef2ff"},
-    "carbono": {"cor": "#059669", "cor_clara": "#ecfdf5"},
+    "data_center": {"cor": "#4338ca", "cor_clara": "#eef2ff", "icone": "🖥️"},
+    "carbono": {"cor": "#047857", "cor_clara": "#ecfdf5", "icone": "🌱"},
 }
 
 
-def _card_noticia(item: dict, cor: str) -> str:
-    motivo = (
-        f'<span style="color:#9ca3af"> · {item["motivo"]}</span>' if item.get("motivo") else ""
-    )
+def _card_noticia(item: dict, tema: dict) -> str:
+    cor, cor_clara = tema["cor"], tema["cor_clara"]
     return f"""
-      <tr><td style="padding:20px 0;border-top:1px solid #edf0f3">
-        <div style="font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:{cor}">
-          {item['fonte']}{motivo}
-        </div>
-        <div style="margin:6px 0 8px">
-          <a href="{item['link']}" style="font-size:17px;line-height:1.35;font-weight:700;color:#111827;text-decoration:none">
-            {item['titulo']}</a>
-        </div>
-        <p style="margin:0 0 10px;font-size:14px;line-height:1.65;color:#374151">{item['resumo_final']}</p>
-        <a href="{item['link']}" style="font-size:13px;font-weight:600;color:{cor};text-decoration:none">
-          Ler no {item['fonte']} &rarr;</a>
+      <tr><td style="padding:0 0 14px">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+               style="background:#ffffff;border:1px solid #edf0f3;border-left:5px solid {cor};
+                      border-radius:4px 10px 10px 4px">
+          <tr><td style="padding:16px 18px 18px">
+            <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.4px;
+                  text-transform:uppercase;color:{cor};background:{cor_clara};padding:4px 11px;
+                  border-radius:999px">{item['fonte']}</span>
+            <div style="margin:11px 0 7px">
+              <a href="{item['link']}" style="font-size:18px;line-height:1.35;font-weight:800;
+                    color:#111827;text-decoration:none">{item['titulo']}</a>
+            </div>
+            <p style="margin:0 0 14px;font-size:15px;line-height:1.6;color:#1f2937;font-weight:500">
+              {item['resumo_final']}</p>
+            <a href="{item['link']}" style="display:inline-block;font-size:13px;font-weight:800;
+                  color:#ffffff;text-decoration:none;background:{cor};padding:8px 16px;
+                  border-radius:999px">Ler matéria completa &rarr;</a>
+          </td></tr>
+        </table>
       </td></tr>"""
 
 
@@ -267,24 +294,29 @@ def _secao_topico(topico: str, grupos: dict) -> str:
     total = len(grupos["BR"]) + len(grupos["US"])
     partes = [
         f"""
-        <tr><td style="padding:34px 0 8px">
-          <div style="border-left:4px solid {tema['cor']};padding-left:12px">
-            <span style="font-size:19px;font-weight:800;color:#111827">{rotulo}</span>
-            <span style="font-size:13px;color:#9ca3af"> &nbsp;{total} notícia(s)</span>
-          </div>
+        <tr><td style="padding:28px 0 14px">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+            <tr><td style="background:{tema['cor']};border-radius:10px;padding:15px 18px">
+              <span style="font-size:21px;vertical-align:middle">{tema['icone']}</span>
+              <span style="font-size:18px;font-weight:800;color:#ffffff;vertical-align:middle;padding-left:8px">
+                {rotulo}</span>
+              <span style="font-size:12px;color:#ffffff;opacity:.8;vertical-align:middle">
+                &nbsp;· {total} notícia(s)</span>
+            </td></tr>
+          </table>
         </td></tr>"""
     ]
-    for bucket, titulo in (("BR", "Brasil"), ("US", "Exterior")):
+    rotulos_bucket = {"BR": "🇧🇷&nbsp; Brasil", "US": "🌎&nbsp; Exterior"}
+    for bucket in ("BR", "US"):
         if not grupos[bucket]:
             continue
         partes.append(
-            f"""<tr><td style="padding:16px 0 0">
-              <div style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
-                    color:{tema['cor']};background:{tema['cor_clara']};display:inline-block;
-                    padding:3px 10px;border-radius:4px">{titulo}</div>
+            f"""<tr><td style="padding:6px 0 10px 2px">
+              <span style="font-size:12px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;
+                    color:{tema['cor']}">{rotulos_bucket[bucket]}</span>
             </td></tr>"""
         )
-        partes.extend(_card_noticia(item, tema["cor"]) for item in grupos[bucket])
+        partes.extend(_card_noticia(item, tema) for item in grupos[bucket])
     return "".join(partes)
 
 
@@ -298,19 +330,20 @@ def montar_html(selecao: dict, momento: str) -> str:
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef1f5">
     <tr><td align="center" style="padding:28px 12px">
       <table role="presentation" width="600" cellpadding="0" cellspacing="0"
-             style="max-width:600px;width:100%;background:#ffffff;border-radius:12px;
+             style="max-width:600px;width:100%;background:#ffffff;border-radius:14px;
                     box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden">
-        <tr><td style="padding:32px 32px 0">
-          <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9ca3af">
-            Panorama diário
+        <tr><td style="background:linear-gradient(135deg,#4338ca,#047857);padding:26px 32px">
+          <div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+                color:rgba(255,255,255,.8)">
+            🖥️ &nbsp;Panorama diário&nbsp; 🌱
           </div>
-          <h1 style="margin:6px 0 2px;font-size:22px;line-height:1.3;color:#111827;
+          <h1 style="margin:6px 0 2px;font-size:22px;line-height:1.3;color:#ffffff;
                 font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
             Data Centers &amp; Mercado de Carbono
           </h1>
-          <div style="font-size:13px;color:#9ca3af">{momento}</div>
+          <div style="font-size:13px;color:rgba(255,255,255,.85)">{momento}</div>
         </td></tr>
-        <tr><td style="padding:0 32px 8px">
+        <tr><td style="padding:22px 32px 8px">
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
                  style="font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
             {secoes}
@@ -318,9 +351,9 @@ def montar_html(selecao: dict, momento: str) -> str:
         </td></tr>
         <tr><td style="padding:24px 32px 32px;border-top:1px solid #edf0f3">
           <p style="margin:0;font-size:11px;line-height:1.6;color:#9ca3af">
-            Seleção automática a partir de feeds RSS e Google Notícias, priorizando montante
-            financeiro, impacto regulatório/político, ângulo de setor elétrico e veículos de
-            referência. Filtro e resumo por Claude Haiku.
+            Seleção automática a partir de feeds RSS e Google Notícias, priorizando veículos de
+            referência, montante financeiro, impacto regulatório/político e ângulo de setor
+            elétrico. Filtro e resumo por Claude Haiku.
           </p>
         </td></tr>
       </table>
