@@ -137,11 +137,58 @@ class RankingTests(IsolatedState):
         self.assertNotIn(item(30)["link"], selecionados)
         self.assertIn(item(0)["link"], selecionados)
 
+    def test_similar_titles_are_treated_as_duplicate_even_with_different_fato(self):
+        # Duas coberturas do MESMO acontecimento por veículos diferentes: o modelo, avaliado
+        # num único lote aqui, ainda assim erra e devolve "fato" diferente para cada uma —
+        # simula o caso real onde itens avaliados em lotes/execuções separadas nunca são
+        # comparados entre si pelo modelo. A comparação por título deve pegar isso.
+        candidates = [item(0), item(1)]
+        candidates[0]["titulo"] = "MPF e DPU pedem paralisação de mega data center do TikTok no Ceará"
+        candidates[1]["titulo"] = "MPF e DPU vão à Justiça contra operação de data center do TikTok no Ceará"
+        rows = [decision(0, score=90), decision(1, score=80)]
+        model = client(rows)
+        model.messages.create.side_effect = [model.messages.create.return_value,
+            client({"mesmo_fato": True}).messages.create.return_value]
+        self.run_model(candidates, model)
+        self.assertEqual(len(digest.carregar_estado()), 1)
+        audit = carregar_json(digest.AUDITORIA_FILE, {})
+        resultados = [n["resultado"] for n in audit["noticias"]]
+        self.assertEqual(resultados.count("selecionada"), 1)
+        self.assertEqual(resultados.count("duplicada"), 1)
+        duplicada = next(n for n in audit["noticias"] if n["resultado"] == "duplicada")
+        self.assertIn("parecido", duplicada["motivo"])
+        # a de maior prioridade (90) é a escolhida, não a de menor (80).
+        self.assertEqual(next(n for n in audit["noticias"] if n["resultado"] == "selecionada")["link"], item(0)["link"])
+
+    def test_similar_title_to_already_sent_item_is_rejected_in_a_later_run(self):
+        original = item(0)
+        original["titulo"] = "Google investirá 13 bilhões de euros em data centers na Finlândia"
+        self.run_model([original], client([decision(0, score=90)]))
+        self.assertEqual(digest.carregar_estado(), {original["link"]})
+
+        reimpressao = item(1)
+        reimpressao["titulo"] = "Google investirá € 13 bi em data centers na Finlândia, seu maior aporte na Europa"
+        linha = {**decision(0, score=90), "fato": "fato-diferente-do-anterior"}
+        model = client([linha])
+        model.messages.create.side_effect = [model.messages.create.return_value,
+            client({"mesmo_fato": True}).messages.create.return_value]
+        send = self.run_model([reimpressao], model)
+        send.assert_not_called()
+        self.assertEqual(digest.carregar_estado(), {original["link"]})
+        audit = carregar_json(digest.AUDITORIA_FILE, {})
+        registro = next(n for n in audit["noticias"] if n["link"] == reimpressao["link"])
+        self.assertEqual(registro["resultado"], "duplicada")
+        self.assertIn("parecido", registro["motivo"])
+
     def test_duplicate_facts_use_reserves_until_quota(self):
         rows = [decision(i, score=100-i) for i in range(5)]
         rows[1]["fato"] = rows[0]["fato"]
         rows[2]["fato"] = rows[0]["fato"]
-        self.run_model([item(i) for i in range(5)], client(rows))
+        model = client(rows)
+        model.messages.create.side_effect = [model.messages.create.return_value,
+            client({"mesmo_fato": True}).messages.create.return_value,
+            client({"mesmo_fato": True}).messages.create.return_value]
+        self.run_model([item(i) for i in range(5)], model)
         self.assertEqual(len(digest.carregar_estado()), 3)
         audit = carregar_json(digest.AUDITORIA_FILE, {})
         self.assertEqual(sum(r["resultado"] == "duplicada" for r in audit["noticias"]), 2)
@@ -161,9 +208,11 @@ class RankingTests(IsolatedState):
             for source, feed in zip(FONTES, targeted):
                 query = parse_qs(urlsplit(feed["url"]).query)["q"][0]
                 self.assertIn("site:" + source, query)
-        for site in ["agenciainfra.com", "gov.br/mme", "ri.sanepar.com.br", "brasilenergia.com.br", "eixos.com.br"]:
+        for site in ["agenciainfra.com", "gov.br/mme", "brasilenergia.com.br", "eixos.com.br"]:
             self.assertTrue(fonte_prioritaria({"link": "https://" + site + "/noticia"}))
         self.assertIsNone(fonte_prioritaria({"link": "https://gov.br/outro/noticia"}))
+        self.assertNotIn("ri.sanepar.com.br", FONTES)
+        self.assertIsNone(fonte_prioritaria({"link": "https://ri.sanepar.com.br/comunicado"}))
 
     def test_email_contains_readable_audit_attachment(self):
         salvar_json(digest.AUDITORIA_FILE, {"resumo": {"carbono": {"BR": 3}}})

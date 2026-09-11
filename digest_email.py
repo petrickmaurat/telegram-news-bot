@@ -34,16 +34,31 @@ from reliability import salvar_json, carregar_json, canonica, identidades
 from persist_state import checkpoint
 from email_policy import recente, google_pendente, candidato_admissivel, podar_fila
 from email_sources import fonte_prioritaria, prioritario, configuracao_email
+from email_articles import enriquecer_fila, texto_curto
+from email_source_health import atualizar as atualizar_fontes, anotar_resultados
+from email_language import idioma_permitido
+from email_dedup import comparador
 from email_ranking import classificar, VERSAO
 
 MODELO = "claude-haiku-4-5"
-MAX_BR = 3
-MAX_US = 1
+# Vagas por tema e bucket; baterias divide igual entre Brasil e exterior.
+VAGAS = {
+    "data_center": {"BR": 3, "US": 1},
+    "baterias": {"BR": 2, "US": 2},
+    "carbono": {"BR": 3, "US": 1},
+}
+VAGAS_PADRAO = {"BR": 3, "US": 1}
+ORDEM_TOPICOS = ("data_center", "baterias", "carbono")
 LIMITE_TEXTO_ARTIGO = 3000
+
+
+def vagas(topico: str, bucket: str) -> int:
+    return VAGAS.get(topico, VAGAS_PADRAO)[bucket]
 
 ESTADO_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "digest_enviados.json")
 FILA_FILE = os.path.join(os.path.dirname(ESTADO_FILE), "digest_fila.json")
 INCERTO_FILE = os.path.join(os.path.dirname(ESTADO_FILE), "digest_incerto.json")
+FONTES_FILE = os.path.join(os.path.dirname(ESTADO_FILE), "digest_fontes.json")
 AUDITORIA_FILE = os.path.join(os.path.dirname(ESTADO_FILE), "digest_auditoria.json")
 PRAZO_PENDENTE = 7 * 24 * 60 * 60
 
@@ -57,6 +72,21 @@ FOCO_SETORIAL = {
         "Dentro de data centers, priorize o ângulo do SETOR ELÉTRICO: demanda de energia, "
         "conexão à rede básica, contratação de energia, consumo, carga, subestação, "
         "impacto no sistema elétrico e nas tarifas."
+    ),
+    "baterias": (
+        "O eixo do tema é PREÇO e CUSTO de bateria/armazenamento — é o critério que mais "
+        "aumenta a nota, no Brasil e no exterior. No BRASIL, PRIORIDADE MÁXIMA (nota 90-100) "
+        "para LEILÃO de baterias/armazenamento (leilão de reserva de capacidade, resultado, "
+        "preço-teto, contratação, cronograma da Aneel/MME) e para preço/custo de sistemas de "
+        "armazenamento no país. No EXTERIOR, priorize (nota alta) preço/custo de bateria e "
+        "células, curva de custo, contratos de fornecimento, e também INOVAÇÃO tecnológica "
+        "(estado sólido, sódio-íon, densidade, química nova, nova fábrica/gigafactory) e as "
+        "FABRICANTES CHINESAS de bateria (CATL, BYD, EVE Energy, Gotion, Hithium): expansão, "
+        "capacidade, preços, contratos e tecnologia dessas empresas são elegíveis e relevantes. "
+        "Rejeite como fora_tema: bateria de celular/notebook, autonomia ou review de carro "
+        "elétrico sem ângulo de custo/produção de bateria, e vendas de veículos sem relação "
+        "com a bateria em si. Rejeite também como fora_tema qualquer texto que não esteja em "
+        "português ou inglês."
     ),
     "carbono": (
         "PRIORIDADE MÁXIMA (nota 90-100) sempre que o fato for sobre o MERCADO REGULADO "
@@ -162,7 +192,9 @@ def resumir(cliente, itens: list) -> None:
     blocos = []
     elegiveis = set()
     for i, item in enumerate(itens):
-        corpo = buscar_texto_artigo(item["link"]) or limpar_html(item["resumo"])
+        # Uma consulta já tentada na coleta respeita seu cache, inclusive falhas.
+        corpo = (item["artigo"].get("texto", "") if "artigo" in item else buscar_texto_artigo(item["link"]))
+        corpo = corpo or limpar_html(item["resumo"])
         item["resumo_final"] = corpo or item["titulo"]
         if len(corpo.split()) < 20:
             # Um título/trecho mínimo não precisa ser expandido pela IA.
@@ -218,7 +250,8 @@ def resumir(cliente, itens: list) -> None:
 # ----------------------------------------------------------------------
 
 TEMA = {
-    "data_center": {"cor": "#4338ca", "cor_clara": "#eef2ff", "icone": "🖥️"},
+    "data_center": {"cor": "#0a0032", "cor_clara": "#eef2ff", "icone": "🖥️"},
+    "baterias": {"cor": "#b45309", "cor_clara": "#fffbeb", "icone": "🔋"},
     "carbono": {"cor": "#047857", "cor_clara": "#ecfdf5", "icone": "🌱"},
 }
 
@@ -291,7 +324,7 @@ def montar_html(selecao: dict, momento: str) -> str:
     momento = escape(str(momento), quote=True)
     secoes = "".join(
         _secao_topico(t, selecao[t])
-        for t in ("data_center", "carbono")
+        for t in ORDEM_TOPICOS
         if selecao.get(t) and (selecao[t]["BR"] or selecao[t]["US"])
     )
     return f"""<!doctype html><html><body style="margin:0;padding:0;background:#eef1f5">
@@ -300,14 +333,14 @@ def montar_html(selecao: dict, momento: str) -> str:
       <table role="presentation" width="600" cellpadding="0" cellspacing="0"
              style="max-width:600px;width:100%;background:#ffffff;border-radius:14px;
                     box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden">
-        <tr><td style="background-color:#4338ca;background:linear-gradient(135deg,#4338ca,#047857);padding:26px 32px">
+        <tr><td style="background-color:#0a0032;background:linear-gradient(135deg,#0a0032,#b45309,#047857);padding:26px 32px">
           <div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
                 color:rgba(255,255,255,.8)">
-            🖥️ &nbsp;Panorama diário&nbsp; 🌱
+            🖥️ &nbsp;Panorama diário&nbsp; 🔋 &nbsp;🌱
           </div>
           <h1 style="margin:6px 0 2px;font-size:22px;line-height:1.3;color:#ffffff;
                 font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
-            Data Centers &amp; Mercado de Carbono
+            Data Centers, Baterias &amp; Mercado de Carbono
           </h1>
           <div style="font-size:13px;color:rgba(255,255,255,.85)">{momento}</div>
         </td></tr>
@@ -344,7 +377,7 @@ def enviar_email(assunto: str, html: str) -> None:
             "accept": "application/json",
         },
         json={
-            "sender": {"name": "Panorama DC & Carbono", "email": EMAIL_REMETENTE},
+            "sender": {"name": "Panorama DC, Baterias & Carbono", "email": EMAIL_REMETENTE},
             "to": destinatarios,
             "subject": assunto,
             "htmlContent": html,
@@ -371,7 +404,13 @@ def relatorio_texto(auditoria):
                       f"Resultado: {row['resultado']}\nMotivo: {row['motivo']}\n{row['link']}")
     linhas.append("\nFONTES CONSULTADAS")
     for row in auditoria.get("fontes", []):
-        linhas.append(f"{row['topico']} | {row['fonte']} | {row['resultado']} | {row['itens_rss']} itens")
+        linhas.append(f"{row['topico']} | {row['fonte']} | {row['resultado']} | {row['itens_rss']} itens | {json.dumps(row.get('contagem', {}), ensure_ascii=False)}")
+    linhas.append("\nACOMPANHAMENTO DAS FONTES (até 30 dias / 120 execuções)")
+    for row in auditoria.get("saude_fontes", []):
+        linhas.append(f"{row['topico']} | {row['fonte']} | {row['consultas']} consultas | "
+                      f"{row['falhas']} falhas | {row['itens_rss']} resultados RSS (podem se repetir) | "
+                      f"{row['capturados']} capturas | {row['mesclados']} mesclados | "
+                      f"{row['elegiveis']} elegíveis na fila | {row['selecionadas']} selecionadas | {row['acao']}")
     return "\n".join(linhas)
 
 
@@ -379,15 +418,27 @@ def auditar(registro, topico, resultado, motivo):
     registro.setdefault("resultados", {})[topico] = {"resultado": resultado, "motivo": motivo}
 
 
-def escolher_topico(cliente, topico, registros, estado, anteriores):
+def escolher_topico(cliente, topico, registros, estado, anteriores, titulos_enviados=()):
+    mesmo_fato = comparador(cliente, MODELO)
     grupos = {"BR": [], "US": []}
     usados, fatos = set(estado) | set(anteriores), set()
     detalhes_fatos = {}
+    manchetes_fatos = {}
     # Classifica TODOS, inclusive baixa prioridade, e retorna reservas sem limite de três rodadas.
     # Falha de um lote não descarta os demais: só os candidatos daquele lote ficam pendentes.
-    ranking, falhou = selecionar(cliente, topico, [r["item"] for r in registros])
-    por_chave = {r["item"]["_fila_key"]: r for r in registros}
+    aptos = []
+    idioma_bloqueado = False
     for registro in registros:
+        permitido, motivo = idioma_permitido(registro["item"]) if topico == "baterias" else (True, "")
+        if permitido:
+            aptos.append(registro)
+        else:
+            idioma_bloqueado = idioma_bloqueado or "pendente" in motivo
+            auditar(registro, topico, "idioma", motivo)
+    ranking, falhou = selecionar(cliente, topico, [r["item"] for r in aptos]) if aptos else ({"BR": [], "US": []}, False)
+    falhou = falhou or idioma_bloqueado
+    por_chave = {r["item"]["_fila_key"]: r for r in registros}
+    for registro in aptos:
         avaliacao = registro["item"].get("avaliacoes", {}).get(topico)
         registro["avaliado"][topico] = time.time()
         if avaliacao is None:
@@ -395,14 +446,20 @@ def escolher_topico(cliente, topico, registros, estado, anteriores):
         elif avaliacao["decisao"] != "elegivel":
             auditar(registro, topico, avaliacao["decisao"], avaliacao["motivo"])
     for bucket in ("BR", "US"):
-        limite = MAX_BR if bucket == "BR" else MAX_US
+        limite = vagas(topico, bucket)
         # Usa um limite otimista de prioridade para não resolver candidatos que
         # já não podem superar as vagas preenchidas por fontes prioritárias.
         resolvidos = []
         ordenados = sorted(ranking[bucket], key=lambda c: (
+            -c.get("avaliacoes", {}).get(topico, {}).get("rodada", 0),
             0 if google_pendente(c) or prioritario(c, c.get("avaliacoes", {}).get(topico, {}).get("prioridade", 0)) else 1,
             -c.get("avaliacoes", {}).get(topico, {}).get("prioridade", 0), -c.get("publicado_em", 0), c["link"]))
-        confirmados, fatos_confirmados, aliases_confirmados = 0, set(), set()
+        confirmados, fatos_confirmados, aliases_confirmados = 0, {}, set()
+        # Cobertura repetida do mesmo fato por veículos diferentes pode ter sido avaliada
+        # em lotes/execuções separadas, sem "fato" em comum. Comparação por título pega
+        # esses casos: contra o que este tópico/bucket já enviou (execuções anteriores,
+        # ainda dentro da janela de 72h) e contra o que este run já confirmou aqui.
+        titulos_otimistas = list(titulos_enviados)
         for escolhido in ordenados:
             key = escolhido.get("_fila_key", canonica(escolhido["link"]))
             registro = por_chave[key]
@@ -423,20 +480,29 @@ def escolher_topico(cliente, topico, registros, estado, anteriores):
             fato = avaliacao.get("fato")
             if (prioritario(noticia, avaliacao.get("prioridade", 0)) and recente(noticia)
                     and not aliases & (usados | aliases_confirmados)
-                    and not (fato and fato in (fatos | fatos_confirmados))):
+                    and not (fato and fato in fatos_confirmados and mesmo_fato(noticia["titulo"], fatos_confirmados[fato], forcar=True))
+                    and not any(mesmo_fato(noticia["titulo"], t) for t in titulos_otimistas)):
                 confirmados += 1
                 aliases_confirmados.update(aliases)
+                titulos_otimistas.append(noticia["titulo"])
                 if fato:
-                    fatos_confirmados.add(fato)
-        resolvidos.sort(key=lambda row: (0 if prioritario(row[1], row[2].get("prioridade", 0)) else 1,
+                    fatos_confirmados[fato] = noticia["titulo"]
+        resolvidos.sort(key=lambda row: (-row[2].get("rodada", 0), 0 if prioritario(row[1], row[2].get("prioridade", 0)) else 1,
                                         -row[2].get("prioridade", 0), -row[1].get("publicado_em", 0), row[1]["link"]))
+        titulos_confirmados = list(titulos_enviados)
         for registro, noticia, avaliacao in resolvidos:
             aliases = identidades(noticia)
             fato = avaliacao.get("fato")
             repetidos = aliases & usados
-            if repetidos or (fato and fato in fatos):
-                motivo = ("Mesmo link/alias já enviado ou selecionado: " + sorted(repetidos)[0]
-                          if repetidos else "Outra cobertura deste fato foi escolhida: " + detalhes_fatos[fato])
+            titulo_repetido = next((t for t in titulos_confirmados if mesmo_fato(noticia["titulo"], t)), None)
+            fato_igual = fato and fato in manchetes_fatos and mesmo_fato(noticia["titulo"], manchetes_fatos[fato], forcar=True)
+            if repetidos or fato_igual or titulo_repetido:
+                if repetidos:
+                    motivo = "Mesmo link/alias já enviado ou selecionado: " + sorted(repetidos)[0]
+                elif fato_igual:
+                    motivo = "Outra cobertura deste fato foi escolhida: " + detalhes_fatos[fato]
+                else:
+                    motivo = "Mesmo acontecimento confirmado após comparar título parecido com: " + titulo_repetido
                 auditar(registro, topico, "duplicada", motivo)
                 continue
             if not recente(noticia):
@@ -447,8 +513,10 @@ def escolher_topico(cliente, topico, registros, estado, anteriores):
                 continue
             grupos[bucket].append(noticia)
             usados.update(aliases)
+            titulos_confirmados.append(noticia["titulo"])
             if fato:
                 fatos.add(fato)
+                manchetes_fatos[fato] = noticia["titulo"]
                 detalhes_fatos[fato] = noticia["titulo"] + " — " + noticia["link"]
             auditar(registro, topico, "selecionada", f"Vaga preenchida em {bucket}. " + avaliacao.get("motivo", "Selecionada por ordem de prioridade."))
     return grupos, falhou
@@ -473,12 +541,20 @@ def rodar_digest() -> None:
             fila[key] = {"item": item, "criado": agora_ts, "avaliado": {}, "rejeitado": [], "status": "pendente"}
         else:
             anterior = fila[key]["item"]
+            item["feeds_origem"] = sorted(set(item.get("feeds_origem", [])) | set(anterior.get("feeds_origem", [])))
+            if anterior.get("artigo"):
+                item["artigo"] = anterior["artigo"]
+                if texto_curto(item) and anterior["artigo"].get("texto"):
+                    item["resumo"] = anterior["artigo"]["texto"]
+            if anterior.get("origem_data"):
+                item["origem_data"] = anterior["origem_data"]
             item["aliases"] = sorted(identidades(anterior) | identidades(item))
             item["topicos"] = sorted(set(anterior["topicos"]) | set(item["topicos"]))
             if item.get("publicado_em") is None:
                 item["publicado_em"] = anterior.get("publicado_em")
             if item["titulo"] == anterior.get("titulo") and item.get("resumo") == anterior.get("resumo"):
                 item["avaliacoes"] = anterior.get("avaliacoes", {})
+                item["cache_avaliacoes"] = anterior.get("cache_avaliacoes", {})
             if (fila[key]["status"] == "rejeitado"
                     and not set(item["topicos"]).issubset(fila[key]["rejeitado"])
                     and recente(item, agora_ts)):
@@ -488,6 +564,12 @@ def rodar_digest() -> None:
             if fila[key]["status"] == "pendente":
                 fila[key]["item"] = item
         por_alias.update({a: key for a in identidades(item)})
+    # Não buscar artigos já enviados, mesmo que a fila ainda esteja pendente.
+    for registro in fila.values():
+        if identidades(registro["item"]) & estado:
+            registro["status"] = "enviado"
+    enriquecer_fila(fila, resolver_link_google_news, agora_ts)
+    saude_fontes = []
     for key, registro in fila.items():
         registro["item"]["_fila_key"] = key
         registro["resultados"] = {}
@@ -506,7 +588,7 @@ def rodar_digest() -> None:
             elif registro["status"] == "expirado":
                 auditar(registro, topic, "fora_janela", "Publicação fora de 72 horas ou prazo de permanência na fila encerrado.")
             elif not recente(registro["item"], agora_ts):
-                auditar(registro, topic, "sem_data", "Não há data de publicação válida no RSS.")
+                auditar(registro, topic, "sem_data", "Sem data de publicação válida no RSS/artigo. " + registro["item"].get("artigo", {}).get("motivo", "Consulta ao artigo aguardando limite da execução."))
     salvar_json(FILA_FILE, fila)
 
     cliente = anthropic.Anthropic(timeout=60, max_retries=2)
@@ -523,8 +605,14 @@ def rodar_digest() -> None:
             registros.sort(key=lambda r: (r["avaliado"].get(t, 0), r["criado"]))
             if not registros:
                 continue
+            # Cobertura recente do mesmo fato por outro veículo, já enviada em
+            # execução anterior (ainda dentro da janela de 72h), com título ainda
+            # disponível (não compactado): usado para não repetir a mesma notícia.
+            titulos_enviados = [r["item"]["titulo"] for r in fila.values()
+                                 if r["status"] == "enviado" and t in r["item"].get("topicos", [])
+                                 and "titulo" in r["item"] and recente(r["item"], agora_ts)]
             try:
-                selecao[t], falhou = escolher_topico(cliente, t, registros, estado, ja_escolhidos)
+                selecao[t], falhou = escolher_topico(cliente, t, registros, estado, ja_escolhidos, titulos_enviados)
                 if falhou:
                     falhas.append(t)
                 for grupo in selecao[t].values():
@@ -536,8 +624,10 @@ def rodar_digest() -> None:
                 for registro in registros:
                     auditar(registro, t, "falha_ia", "Falha técnica na avaliação; não é rejeição editorial. " + str(erro))
 
+        anotar_resultados(fontes_consultadas, fila)
+        saude_fontes = atualizar_fontes(FONTES_FILE, fontes_consultadas, agora_ts)
         selecionados = [it for grupos in selecao.values() for grupo in grupos.values() for it in grupo]
-        gravar_auditoria(fila, selecao, fontes_consultadas, falhas)
+        gravar_auditoria(fila, selecao, fontes_consultadas, falhas, saude_fontes)
         if not selecionados:
             print("Nada relevante selecionado; não vou enviar e-mail.")
             if falhas:
@@ -547,7 +637,7 @@ def rodar_digest() -> None:
         agora = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-3)))
         periodo = "manhã" if agora.hour < 14 else "tarde"
         momento = agora.strftime(f"%d/%m/%Y · {periodo}")
-        assunto = f"Panorama Data Centers & Carbono — {agora.strftime('%d/%m')} ({periodo})"
+        assunto = f"Panorama Data Centers, Baterias & Carbono — {agora.strftime('%d/%m')} ({periodo})"
         html = montar_html(selecao, momento)
         salvar_json(INCERTO_FILE, {"aliases": sorted(ja_escolhidos), "assunto": assunto, "itens": selecionados})
         checkpoint()
@@ -561,13 +651,13 @@ def rodar_digest() -> None:
         if falhas:
             raise RuntimeError(f"Digest parcial enviado; falhas em: {', '.join(falhas)}.")
     finally:
-        gravar_auditoria(fila, selecao, fontes_consultadas, falhas)
+        gravar_auditoria(fila, selecao, fontes_consultadas, falhas, saude_fontes)
         podar_fila(fila, time.time())
         salvar_json(FILA_FILE, fila)
         salvar_cache_google()
 
 
-def gravar_auditoria(fila, selecao, fontes, falhas):
+def gravar_auditoria(fila, selecao, fontes, falhas, saude_fontes=None):
     noticias = []
     for registro in fila.values():
         item = registro["item"]
@@ -576,11 +666,13 @@ def gravar_auditoria(fila, selecao, fontes, falhas):
             avaliacao = item.get("avaliacoes", {}).get(topic, {})
             noticias.append({"topico": topic, "titulo": item.get("titulo", "Registro histórico compactado"),
                 "link": item["link"], "fonte": item.get("fonte", ""), **resultado,
-                "avaliacao": avaliacao, "fonte_prioritaria": fonte_prioritaria(item)})
+                "avaliacao": avaliacao, "fonte_prioritaria": fonte_prioritaria(item),
+                "consulta_artigo": {k: v for k, v in item.get("artigo", {}).items() if k != "texto"},
+                "origem_data": item.get("origem_data", "rss")})
     resumo = {t: {b: len(selecao.get(t, {}).get(b, [])) for b in ("BR", "US")} for t in TOPICOS}
-    faltantes = {t: {"BR": MAX_BR - resumo[t]["BR"], "US": MAX_US - resumo[t]["US"]} for t in TOPICOS}
+    faltantes = {t: {b: vagas(t, b) - resumo[t][b] for b in ("BR", "US")} for t in TOPICOS}
     auditoria = {"versao": VERSAO, "gerado_em": time.time(), "resumo": resumo, "faltantes": faltantes,
-                 "falhas": falhas, "fontes": fontes, "noticias": noticias}
+                 "falhas": falhas, "fontes": fontes, "noticias": noticias, "saude_fontes": saude_fontes or []}
     salvar_json(AUDITORIA_FILE, auditoria)
     print("Resumo da curadoria: " + json.dumps(resumo, ensure_ascii=False))
 

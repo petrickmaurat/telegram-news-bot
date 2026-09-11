@@ -46,7 +46,6 @@ A consulta depende de indexação/disponibilidade; ausência de resultados não 
 | Poder360 | `poder360.com.br` |
 | Politico | `politico.com` |
 | Reuters | `reuters.com` |
-| Sanepar — RI | `ri.sanepar.com.br` |
 | Semafor | `semafor.com` |
 | S&P Global | `spglobal.com` |
 | Tele.Síntese | `telesintese.com.br` |

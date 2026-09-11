@@ -3,3 +3,5 @@ requests
 googlenewsdecoder
 anthropic
 trafilatura
+
+lingua-language-detector>=2,<3

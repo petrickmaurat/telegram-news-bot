@@ -1,7 +1,7 @@
 """
 Configuração e coleta de notícias, compartilhadas entre o bot do
 Telegram (só data center, tempo real) e o digest por e-mail (data
-center + mercado de carbono, curado por IA diariamente).
+center + baterias/BESS + mercado de carbono, curado por IA diariamente).
 
 Cada tópico tem suas próprias palavras-chave e seus próprios feeds.
 Feeds marcados com origem "INT" trazem notícia de fora do Brasil.
@@ -10,6 +10,7 @@ Feeds marcados com origem "INT" trazem notícia de fora do Brasil.
 import json
 import os
 from concurrent.futures import ThreadPoolExecutor
+from urllib.parse import urlencode
 
 import feedparser
 import requests
@@ -54,6 +55,29 @@ _GN_CARBONO_US = (
     "+OR+%22emissions+trading%22&hl=en-US&gl=US&ceid=US:en"
 )
 
+
+def _google_news(consulta: str, br: bool) -> str:
+    params = {"q": consulta, "hl": "pt-BR" if br else "en-US",
+              "gl": "BR" if br else "US", "ceid": "BR:pt-BR" if br else "US:en"}
+    return "https://news.google.com/rss/search?" + urlencode(params)
+
+
+# Baterias: no Brasil o eixo é leilão e preço/custo; fora, preço/custo, inovação
+# e as fabricantes chinesas. O idioma das consultas é pt-BR/en-US de propósito —
+# não buscamos conteúdo em chinês.
+_GN_BAT_BR = _google_news(
+    '"leilão de baterias" OR "leilão de armazenamento" OR "leilão de reserva de capacidade" '
+    'OR "armazenamento de energia" OR "BESS" OR "preço da bateria" OR "custo da bateria"', br=True)
+_GN_BAT_US = _google_news(
+    '"battery storage" OR "energy storage" OR "battery price" OR "battery prices" '
+    'OR "battery cost" OR "battery costs" OR "BESS"', br=False)
+_GN_BAT_CHINA = _google_news(
+    '(CATL OR BYD OR "EVE Energy" OR Gotion OR "Hithium") '
+    '(battery OR batteries OR "energy storage")', br=False)
+_GN_BAT_INOVACAO = _google_news(
+    '"solid-state battery" OR "sodium-ion battery" OR "battery technology" '
+    'OR "battery manufacturing" OR "gigafactory"', br=False)
+
 TOPICOS = {
     "data_center": {
         "rotulo": "Data Centers",
@@ -75,6 +99,29 @@ TOPICOS = {
             {"url": "https://tiinside.com.br/feed/", "origem": "BR"},
             {"url": "https://telesintese.com.br/feed/", "origem": "BR"},
             {"url": "https://convergenciadigital.com.br/feed/", "origem": "BR"},
+        ],
+    },
+    "baterias": {
+        "rotulo": "Baterias & BESS",
+        # Amplas de propósito: as consultas já chegam focadas em leilão/preço/custo,
+        # e a IA rejeita o que fugir do recorte (celular, autonomia de carro etc.).
+        "keywords": [
+            "bateria",
+            "baterias",
+            "battery",
+            "batteries",
+            "armazenamento de energia",
+            "energy storage",
+            "bess",
+            "catl",
+        ],
+        "feeds": [
+            {"url": _GN_BAT_BR, "origem": "BR"},
+            {"url": _GN_BAT_US, "origem": "INT"},
+            {"url": _GN_BAT_CHINA, "origem": "INT"},
+            {"url": _GN_BAT_INOVACAO, "origem": "INT"},
+            {"url": "https://megawhat.uol.com.br/feed/", "origem": "BR"},
+            {"url": "https://canalsolar.com.br/feed/", "origem": "BR"},
         ],
     },
     "carbono": {
@@ -170,9 +217,10 @@ def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True, con
         cfg = configuracao[topico]
         for feed_info in cfg["feeds"]:
             feed = _parse_feed(feed_info["url"]) if resolver else feeds_cache[feed_info["url"]]
+            contagem = {"fora_keywords": 0, "sem_link": 0, "link_invalido": 0, "mesclados": 0, "capturados": 0}
             if relatorio_fontes is not None:
                 relatorio_fontes.append({"topico": topico, "fonte": feed_info.get("veiculo_monitorado", feed_info["url"]),
-                    "consulta": feed_info["url"], "itens_rss": len(feed.entries),
+                    "consulta": feed_info["url"], "itens_rss": len(feed.entries), "contagem": contagem,
                     "resultado": "falha" if getattr(feed, "fetch_error", False) else "rss_invalido" if feed.bozo else "ok"})
             if feed.bozo:
                 print(f"Aviso: não consegui ler corretamente {feed_info['url']}")
@@ -182,12 +230,17 @@ def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True, con
             for entrada in feed.entries:
                 link = entrada.get("link", "")
                 if not link:
+                    contagem["sem_link"] += 1
                     continue
 
                 titulo = entrada.get("title", "")
                 resumo = entrada.get("summary", "")
 
-                if not contem_palavra_chave(f"{titulo} {resumo}", cfg["keywords"]):
+                # Busca site:+tema já passou pelo filtro temático do buscador.
+                # Trechos curtos podem omitir o termo; deixe a IA decidir nesses casos.
+                busca_tematica = not resolver and "news.google.com/rss/search?" in feed_info["url"]
+                if not busca_tematica and not contem_palavra_chave(f"{titulo} {resumo}", cfg["keywords"]):
+                    contagem["fora_keywords"] += 1
                     continue
 
                 original = link
@@ -195,6 +248,7 @@ def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True, con
                 identidade = canonica(link)
                 google_pendente = identidade.startswith("https://news.google.com/")
                 if not identidade or (resolver and google_pendente):
+                    contagem["link_invalido"] += 1
                     continue  # resolução indisponível: tentar novamente na próxima coleta
                 aliases = {canonica(original), identidade}
                 if aliases & ja_vistos:
@@ -202,9 +256,14 @@ def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True, con
                     if resolver:
                         continue
                 if identidade in vistos_agora:
+                    contagem["mesclados"] += 1
                     existente = vistos_agora[identidade]
                     existente["topicos"] = sorted(set(existente["topicos"]) | {topico})
                     existente["aliases"] = sorted(set(existente["aliases"]) | aliases)
+                    if not resolver:
+                        existente["feeds_origem"] = sorted(set(existente.get("feeds_origem", [])) | {feed_info["url"]})
+                    if not resolver and len(resumo) > len(existente.get("resumo", "")):
+                        existente["resumo"] = resumo
                     if not resolver and existente.get("publicado_em") is None:
                         existente["publicado_em"] = data_publicacao(entrada)
                     continue
@@ -226,10 +285,12 @@ def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True, con
                 }
                 if not resolver:
                     item["publicado_em"] = data_publicacao(entrada)
+                    item["feeds_origem"] = [feed_info["url"]]
                 if nivel_fonte(item) == 99 and resolver:
                     continue
                 vistos_agora[identidade] = item
                 itens.append(item)
+                contagem["capturados"] += 1
 
     salvar_cache_google()
     return itens

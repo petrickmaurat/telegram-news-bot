@@ -1,7 +1,10 @@
 """Regras exclusivas do digest; não alteram os alertas do Telegram."""
 import calendar
+import difflib
 import math
+import re
 import time
+import unicodedata
 from email.utils import parsedate_to_datetime
 from urllib.parse import urlsplit
 
@@ -11,6 +14,7 @@ IDADE_MAXIMA = 72 * 60 * 60
 TOLERANCIA_FUTURO = 15 * 60
 RETENCAO_TEXTO = 7 * 24 * 60 * 60
 RETENCAO_REGISTRO = 30 * 24 * 60 * 60
+LIMIAR_TITULO_SEMELHANTE = 0.65
 
 
 def data_publicacao(entrada):
@@ -42,6 +46,18 @@ def google_pendente(item):
 def candidato_admissivel(item):
     # Prioridade de veículo ordena; a lista não é uma barreira de admissão no e-mail.
     return bool(canonica(item.get("link", "")))
+
+
+def _normalizar_titulo(titulo):
+    texto = unicodedata.normalize("NFKD", titulo or "").encode("ascii", "ignore").decode("ascii").lower()
+    return re.sub(r"[^a-z0-9 ]", " ", texto)
+
+
+def titulo_semelhante(a, b, limiar=LIMIAR_TITULO_SEMELHANTE):
+    """Indica pares para comparação semântica; nunca decide descarte sozinho."""
+    if not _normalizar_titulo(a).strip() or not _normalizar_titulo(b).strip():
+        return False
+    return difflib.SequenceMatcher(None, _normalizar_titulo(a), _normalizar_titulo(b)).ratio() >= limiar
 
 
 def podar_fila(fila, agora):

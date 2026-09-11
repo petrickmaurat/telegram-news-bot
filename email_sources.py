@@ -21,9 +21,9 @@ NOMES = {
     "cnbc.com": "CNBC", "datacenterknowledge.com": "Data Center Knowledge", "itforum.com.br": "IT Forum",
     "mobiletime.com.br": "Mobile Time", "tiinside.com.br": "TI Inside", "telesintese.com.br": "Tele.Síntese",
     "convergenciadigital.com.br": "Convergência Digital",
-    "agenciainfra.com": "Agência iNFRA", "gov.br/mme": "MME", "ri.sanepar.com.br": "Sanepar — RI",
+    "agenciainfra.com": "Agência iNFRA", "gov.br/mme": "MME",
 }
-FONTES = sorted({*DOMINIOS[1], *DOMINIOS[2], "agenciainfra.com", "gov.br/mme", "ri.sanepar.com.br"})
+FONTES = sorted({*DOMINIOS[1], *DOMINIOS[2], "agenciainfra.com", "gov.br/mme"})
 
 
 def fonte_prioritaria(item):
@@ -44,10 +44,18 @@ def prioritario(item, prioridade):
     return bool(fonte_prioritaria(item)) or (isinstance(prioridade, int) and prioridade >= LIMIAR_PRIORIDADE_CONTEUDO)
 
 
+# Termos que enriquecem a busca por veículo sem estarem nas keywords do tópico.
+EXTRA_CONSULTA = {
+    "data_center": ['"ReData"', '"data centre"', '"data centres"'],
+    "baterias": ['"BYD"', '"EVE Energy"', '"Gotion"', '"Hithium"', '"sodium ion"', '"solid state"', '"battery storage"', '"leilão de reserva de capacidade"', '"armazenamento em baterias"'],
+    "carbono": ['"carbon credit"', '"carbon credits"', '"carbon pricing"'],
+}
+
+
 def configuracao_email(topicos):
     config = deepcopy(topicos)
     for topic, cfg in config.items():
-        extra = ['"ReData"', '"data centre"', '"data centres"'] if topic == "data_center" else ['"carbon credit"', '"carbon credits"', '"carbon pricing"']
+        extra = EXTRA_CONSULTA.get(topic, [])
         keywords = list(dict.fromkeys([*cfg["keywords"], *[word.strip('"') for word in extra]]))
         cfg["keywords"] = keywords
         termos = "(" + " OR ".join('"' + word + '"' for word in keywords) + ")"

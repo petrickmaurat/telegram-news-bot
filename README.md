@@ -1,17 +1,19 @@
-# Bot de notícias — Data Centers & Mercado de Carbono
+# Bot de notícias — Data Centers, Baterias & Mercado de Carbono
 
 Dois canais automáticos, rodando no GitHub Actions:
 
 | Canal | Frequência | Conteúdo |
 |---|---|---|
 | **Telegram** (`telegram_news_bot.py`) | a cada 15 min | Notícias novas de **data center**, por palavras-chave e domínios permitidos |
-| **E-mail** (`digest_email.py`) | 1x/dia, às 9h BRT | Digest curado por IA: até **3 do Brasil + 1 do exterior** por tema, com resumo |
+| **E-mail** (`digest_email.py`) | 1x/dia, às 9h BRT | Digest curado por IA, na ordem data centers → baterias → carbono, com resumo |
+
+O Telegram pede explicitamente `topicos=["data_center"]`: novos temas entram só no e-mail.
 
 ## Onde configurar o quê
 
 ### Fontes e palavras-chave — `common.py`
 
-`TOPICOS` define, para cada tema (`data_center`, `carbono`):
+`TOPICOS` define, para cada tema (`data_center`, `baterias`, `carbono`):
 
 - **`keywords`** — a notícia precisa conter uma dessas expressões (título ou resumo) para ser considerada.
 - **`feeds`** — lista de `{"url": ..., "origem": "BR" | "INT"}`. `origem` diz se o feed traz notícia do Brasil ou de fora (usado para separar "Brasil" e "Exterior").
@@ -25,9 +27,12 @@ um nome de fonte no RSS não basta. A configuração do e-mail fica em `email_so
 
 - **`email_ranking.py` / `PROMPT`** — classifica e justifica cada candidata, sem limite por nota.
 - **`email_sources.py` / `FONTES`** — catálogo único de veículos prioritários para o e-mail.
-- **`FOCO_SETORIAL`** — o recorte de "setor elétrico" de cada tema.
+- **`FOCO_SETORIAL`** — o recorte editorial de cada tema. Em baterias: leilão e preço/custo no
+  Brasil; preço/custo, inovação e fabricantes chinesas (CATL, BYD, EVE, Gotion, Hithium) fora.
+  Texto fora de português/inglês é rejeitado como `fora_tema` — não buscamos conteúdo em chinês.
 - **`PROMPT_RESUMO`** — como o parágrafo de resumo é escrito.
-- **`MAX_BR` / `MAX_US`** — quantas notícias por bucket (hoje 3 e 1).
+- **`VAGAS`** — quantas notícias por tema e bucket: data centers e carbono 3 BR + 1 Exterior;
+  baterias 2 BR + 2 Exterior. `ORDEM_TOPICOS` define a ordem das seções no e-mail.
 
 ### Visual do e-mail — `digest_email.py`, função `montar_html`
 
@@ -58,11 +63,11 @@ O comentário acima da função descreve o objetivo visual. Cores por tema em `T
 - `telegram_incerto.json` / `digest_incerto.json` — envio em andamento ou com resultado incerto; `null` indica canal liberado
 
 A fila conserva candidatos mesmo depois que saem do RSS. Todos os candidatos são avaliados em
-lotes de até 30 (rodada base, com cache por tema e versão da regra — um lote malformado não
+lotes de até 30 (rodada base, com cache por conteúdo, prompt, foco editorial e modelo — um lote malformado não
 derruba o tópico, só fica pendente pra próxima execução). Se os elegíveis dessa rodada passarem
-de 30, é um torneio: os melhores de cada lote (por nota) avançam para uma nova rodada de
+de 30, é um torneio: até dez melhores por geografia em cada lote avançam para uma nova rodada de
 comparação direta entre vencedores, sem cache, repetindo até caber numa chamada só — essa rodada
-final decide nota e duplicidade com o contexto completo dos rivais. Quem não avança não é
+final decide a ordem entre os finalistas com o contexto completo dos rivais. Quem não avança não é
 descartado: continua elegível com a nota da última rodada em que participou, disponível como
 reserva. Detalhes em `email_ranking.py`.
 O e-mail só admite matérias publicadas
@@ -72,7 +77,7 @@ nem ao envio; pode receber uma data numa coleta posterior. Pendências expiram a
 desde a coleta ou antes, quando a publicação sai da janela. Essas regras de data são exclusivas
 do e-mail. Os limites ficam em `email_policy.py`.
 
-Prioridade ordena, não exclui: o código preenche três vagas BR e uma Exterior por tema quando
+Prioridade ordena, não exclui: o código preenche as vagas de cada tema (`VAGAS`) quando
 há candidatos suficientes, atuais, inéditos, com links válidos e de fatos distintos. Não existe
 corte mínimo de nota. Valores financeiros, regulação e setor elétrico aumentam a nota, mas sua
 ausência não rejeita uma notícia do tema. Notícias de veículos não prioritários completam vagas.
@@ -94,8 +99,9 @@ Falha de resolução preserva o candidato para outra execução. O **Telegram** 
 URLs equivalentes
 (Google/original, `www`, fragmentos e parâmetros de rastreamento conhecidos) compartilham
 identidade. Notícias associadas aos dois temas participam de ambos até serem escolhidas.
-A identificação do mesmo fato em textos/URLs diferentes ainda depende da curadoria da IA;
-a normalização de URLs não garante deduplicação semântica.
+A identificação do mesmo fato em textos/URLs diferentes depende primeiro da curadoria da IA
+(campo "fato"); quando veículos diferentes cobrem o mesmo acontecimento em lotes ou execuções
+que o modelo nunca viu juntos, o "fato" pode divergir. A similaridade lexical agora só identifica pares para confirmação semântica, conforme os ajustes abaixo.
 
 Registros concluídos da fila perdem o título/resumo após sete dias e são removidos após 30 dias
 do encerramento. A lista de aliases enviados em `digest_enviados.json` permanece para impedir
@@ -160,3 +166,26 @@ pip install -r requirements.txt
 TELEGRAM_TOKEN=... CHAT_ID=... python telegram_news_bot.py
 ANTHROPIC_API_KEY=... BREVO_API_KEY=... EMAIL_REMETENTE=... EMAIL_DESTINO=... python digest_email.py
 ```
+
+### Ajustes da revisão editorial
+- O torneio continua em lotes de 30. Até dez candidatos de cada geografia avançam por lote; finalistas precedem reservas mesmo quando a nota final é menor. As reservas podem completar vagas após exclusões.
+- O cache da avaliação base considera conteúdo, prompt, foco editorial e modelo. Avaliações das rodadas finais não contaminam esse cache. Falha ao renovar uma avaliação não autoriza usar a avaliação antiga.
+- Similaridade de títulos e identificadores de fato indicam pares para confirmação semântica por IA. Empresas diferentes ou novos desdobramentos devem ser preservados. A comparação é reutilizada dentro da seleção; falha técnica preserva o candidato e aparece no log.
+- Baterias valida o idioma do título/trecho RSS localmente com Lingua antes do ranking. Aceita português e inglês. Texto ambíguo fica pendente; o idioma do artigo completo não é verificado nesta etapa.
+- Buscas do Google por tema seguem para a IA mesmo sem palavra-chave no trecho. Feeds gerais continuam com o filtro de palavras. BYD, EVE Energy, Gotion, Hithium e tecnologias de células ampliam as buscas exclusivas do e-mail.
+- A coleta aproveita o resumo mais completo ao mesclar o mesmo link. A auditoria por feed mostra capturados, mesclados, fora das palavras-chave e problemas de link.
+- Consultas site: dependem da indexação do Google e não garantem capturar tudo que um veículo publica. O histórico abaixo ajuda a identificar buscas que precisam ser conferidas.
+
+
+### Recuperação de artigos e acompanhamento das fontes
+
+Quando falta data de publicação ou o resumo RSS tem menos de 20 palavras, o digest consulta o artigo antes do ranking. São até 20 tentativas por execução, com intervalo de seis horas para repetir uma tentativa incompleta. Itens ainda não consultados vêm primeiro; enviados e notícias já fora da janela não são buscados. Os demais continuam na fila e participam da seleção quando têm dados suficientes.
+
+A data é recuperada de metadados explícitos de publicação (Open Graph ou JSON-LD de artigo), com fuso horário. Datas de atualização não servem; a data válida do RSS é preservada. Sem data confiável, a notícia continua pendente. O texto extraído é reutilizado no ranking, na validação de idioma e no resumo, evitando uma segunda consulta na mesma execução. A auditoria registra resultado e motivo da tentativa.
+
+O arquivo `digest_fontes.json`, persistido pelo GitHub Actions, mantém até 30 dias ou 120 execuções. O anexo `curadoria.txt` mostra, por fonte/consulta e tema:
+- consultas feitas, falhas, resultados RSS, capturas e itens mesclados;
+- notícias elegíveis e selecionadas na fila;
+- sugestões para conferir feeds com muitas falhas, buscas vazias por três execuções ou filtros que eliminam quase todos os resultados.
+
+Os totais medem ocorrências por consulta, não publicações únicas: a mesma notícia pode aparecer em várias execuções e feeds, e uma seleção pode ser atribuída a mais de uma origem. "Selecionada" também não é confirmação de entrega. Busca vazia não prova que o site não publicou: serve como sinal para conferir indexação, termos e RSS direto. Nenhuma fonte é removida automaticamente.

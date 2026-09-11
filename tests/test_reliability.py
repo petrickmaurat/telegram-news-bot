@@ -37,10 +37,58 @@ import resolve_delivery
 from reliability import canonica, carregar_json, salvar_json, nivel_fonte
 
 
+# Manchetes lexicalmente distintas (não um template com número anexado): o filtro de
+# duplicidade por título (email_policy.titulo_semelhante) rejeitaria candidatos de teste
+# que só diferem por um dígito, tratando-os como a mesma cobertura.
+MANCHETES = [
+    "Empresa amplia capacidade de geração no sudeste do país",
+    "Regulador publica nova norma sobre conexão à rede elétrica",
+    "Fundo estrangeiro anuncia aporte bilionário em infraestrutura local",
+    "Justiça suspende licenciamento de projeto após recurso do Ministério Público",
+    "Consórcio vence leilão de capacidade com proposta abaixo do teto",
+    "Prefeitura aprova zoneamento especial para novo polo industrial",
+    "Senado aprova texto que cria incentivo fiscal para o setor",
+    "Operadora fecha acordo de fornecimento de longo prazo com fabricante asiático",
+    "Estudo aponta impacto de nova tecnologia sobre consumo de água",
+    "Governo estadual lança programa de eficiência energética",
+    "Auditoria identifica falhas em processo de licenciamento ambiental",
+    "Executivo deixa cargo após reestruturação interna da companhia",
+    "Banco de desenvolvimento libera linha de crédito para expansão",
+    "Sindicato patronal cobra celeridade em análise de projetos",
+    "Comissão do Senado debate marco regulatório do setor",
+    "Multinacional confirma investimento em nova planta industrial",
+    "Analistas revisam projeção de demanda para o próximo ano",
+    "Órgão ambiental exige novo estudo de impacto antes de liberar obra",
+    "Cooperativa firma parceria para compartilhamento de infraestrutura",
+    "Tribunal mantém decisão que susta contrato administrativo",
+    "Ministério anuncia consulta pública sobre nova regulamentação",
+    "Startup capta recursos para desenvolver solução de monitoramento",
+    "Concessionária recebe autorização para ampliar rede de distribuição",
+    "Relatório internacional classifica país entre líderes do setor",
+    "Câmara aprova projeto que altera regras de tributação setorial",
+    "Associação setorial divulga balanço anual de investimentos",
+    "Município negocia contrapartidas para viabilizar novo empreendimento",
+    "Fabricante anuncia recall após falha identificada em auditoria",
+    "Agência reguladora aplica multa por descumprimento contratual",
+    "Consultoria projeta consolidação entre players menores do mercado",
+    "Diretoria aprova plano de investimentos para os próximos cinco anos",
+    "Estado libera crédito presumido para atrair novos empreendimentos",
+    "Pesquisa mostra queda na confiança de investidores do setor",
+    "Coalizão de ONGs cobra transparência em processo de licenciamento",
+    "Fábrica retoma operação após paralisação por falta de insumos",
+    "Provedor de energia amplia portfólio com aquisição de concorrente",
+    "Painel de especialistas debate riscos de transição regulatória",
+    "Autoridade portuária libera terminal para novo tipo de operação",
+    "Distribuidora reduz tarifa após revisão anual da agência",
+    "Cadeia produtiva pressiona por prazo maior de adequação às normas",
+]
+
+
 def item(number=0, topics=None):
     topics = topics or ["data_center"]
     link = f"https://reuters.com/article/{number}"
-    return dict(titulo=f"Data center mercado de carbono {number}", resumo="Texto do feed",
+    titulo = f"{MANCHETES[number % len(MANCHETES)]} ({number})"
+    return dict(titulo=titulo, resumo="Texto do feed",
                 link=link, aliases=[link], fonte="Reuters", topico=topics[0],
                 topicos=topics, origem="BR", publicado_em=time.time())
 
@@ -55,13 +103,13 @@ class IsolatedState(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         for module, attr in [(digest, "ESTADO_FILE"), (digest, "FILA_FILE"),
-                             (digest, "AUDITORIA_FILE"),
+                             (digest, "AUDITORIA_FILE"), (digest, "FONTES_FILE"),
                              (digest, "INCERTO_FILE"), (telegram, "SENT_FILE"),
                              (telegram, "INCERTO_FILE"), (common, "_CACHE_GOOGLE_FILE")]:
             p = patch.object(module, attr, str(Path(self.temp.name) / (module.__name__ + attr + ".json")))
             p.start()
             self.addCleanup(p.stop)
-        for module, attr, value in [(digest, "checkpoint", Mock()), (telegram, "checkpoint", Mock()),
+        for module, attr, value in [(digest, "checkpoint", Mock()), (digest, "enriquecer_fila", Mock()), (telegram, "checkpoint", Mock()),
                                     (common, "_cache_google", {}), (telegram.time, "sleep", Mock())]:
             p = patch.object(module, attr, value)
             p.start()

@@ -1,9 +1,10 @@
 """Avalia todos os candidatos; o código, e não o modelo, preenche as vagas."""
+import hashlib
 import json
 import re
 from email_sources import prioritario
 
-VERSAO = 2
+VERSAO = 3
 TAMANHO_LOTE = 30
 VENCEDORES_POR_LOTE = 10  # quantos elegíveis de cada lote avançam para a rodada seguinte do torneio
 DECISOES = {"elegivel", "fora_tema", "sem_fato_novo", "fonte_duvidosa"}
@@ -77,35 +78,55 @@ def _avaliar_lote(cliente, topico, foco, lote, modelo):
 
 
 def classificar(cliente, topico, foco, candidatos, modelo):
-    """Avalia todos os candidatos em lotes de até 30 (rodada base, com cache por
-    versão — só quem ainda não foi avaliado nesta versão gasta chamada de IA).
-
-    Se o total de elegíveis passar de um lote, é um torneio: os melhores
-    (por nota) de cada lote avançam para uma nova rodada, onde são comparados
-    diretamente entre si — sem cache, porque o conjunto de vencedores muda a
-    cada execução. Repete até os vencedores caberem numa chamada só; essa
-    rodada final decide nota e duplicidade com o contexto completo dos rivais.
-    Quem não avança não desaparece: continua no resultado com a nota da
-    última rodada em que participou, disponível como reserva para o código
-    de seleção (digest_email.escolher_topico)."""
+    """Avalia lotes de 30, preservando a avaliação base em cache por conteúdo,
+    prompt, foco e modelo. Até dez por geografia/lote avançam. Rodadas seguintes
+    são reavaliadas com seus rivais; finalistas precedem reservas, sem comparar
+    suas notas com notas antigas. Reservas continuam disponíveis para preencher vagas.
+    """
     falhou = False
-    faltantes = [c for c in candidatos if c.get("avaliacoes", {}).get(topico, {}).get("versao") != VERSAO]
+    faltantes = []
+    for c in candidatos:
+        assinatura = hashlib.sha256(json.dumps(
+            [VERSAO, PROMPT, topico, foco, modelo,
+             {k: c.get(k) for k in ("titulo", "fonte", "link", "resumo")}],
+            ensure_ascii=False, sort_keys=True).encode()).hexdigest()
+        cache = c.setdefault("cache_avaliacoes", {}).get(topico, {})
+        c.setdefault("avaliacoes", {}).pop(topico, None)
+        c["_assinatura_ranking"] = assinatura
+        if cache.get("assinatura") == assinatura:
+            c["avaliacoes"][topico] = {**cache["avaliacao"], "rodada": 0}
+        else:
+            faltantes.append(c)
     for inicio in range(0, len(faltantes), TAMANHO_LOTE):
-        if not _avaliar_lote(cliente, topico, foco, faltantes[inicio:inicio + TAMANHO_LOTE], modelo):
+        lote = faltantes[inicio:inicio + TAMANHO_LOTE]
+        if not _avaliar_lote(cliente, topico, foco, lote, modelo):
             falhou = True
+            continue
+        for c in lote:
+            c["avaliacoes"][topico]["rodada"] = 0
+            c["cache_avaliacoes"][topico] = {
+                "assinatura": c["_assinatura_ranking"],
+                "avaliacao": dict(c["avaliacoes"][topico])}
 
     elegiveis = [c for c in candidatos if (c.get("avaliacoes", {}).get(topico) or {}).get("decisao") == "elegivel"]
+    rodada = 0
     pool = elegiveis
     while len(pool) > TAMANHO_LOTE:
         vencedores = []
         for inicio in range(0, len(pool), TAMANHO_LOTE):
             lote = sorted(pool[inicio:inicio + TAMANHO_LOTE], key=lambda c: -c["avaliacoes"][topico]["prioridade"])
-            vencedores += lote[:VENCEDORES_POR_LOTE]
+            # Cada geografia mantém representantes para suas próprias vagas.
+            for bucket in ("BR", "US"):
+                vencedores += [c for c in lote if c["avaliacoes"][topico]["bucket"] == bucket][:VENCEDORES_POR_LOTE]
         if len(vencedores) >= len(pool):
             break  # segurança: sem essa redução o torneio não convergiria
+        rodada += 1
         for inicio in range(0, len(vencedores), TAMANHO_LOTE):
             if not _avaliar_lote(cliente, topico, foco, vencedores[inicio:inicio + TAMANHO_LOTE], modelo):
                 falhou = True
+            else:
+                for c in vencedores[inicio:inicio + TAMANHO_LOTE]:
+                    c["avaliacoes"][topico]["rodada"] = rodada
         pool = [c for c in vencedores if c["avaliacoes"][topico]["decisao"] == "elegivel"]
 
     grupos = {"BR": [], "US": []}
@@ -114,6 +135,6 @@ def classificar(cliente, topico, foco, candidatos, modelo):
         if avaliacao["decisao"] == "elegivel":
             grupos[avaliacao["bucket"]].append(c)
     for grupo in grupos.values():
-        grupo.sort(key=lambda c: (0 if prioritario(c, c["avaliacoes"][topico]["prioridade"]) else 1,
+        grupo.sort(key=lambda c: (-c["avaliacoes"][topico].get("rodada", 0), 0 if prioritario(c, c["avaliacoes"][topico]["prioridade"]) else 1,
                                  -c["avaliacoes"][topico]["prioridade"], -c.get("publicado_em", 0), c["link"]))
     return grupos, falhou
