@@ -16,15 +16,15 @@ Dois canais automáticos, rodando no GitHub Actions:
 - **`keywords`** — a notícia precisa conter uma dessas expressões (título ou resumo) para ser considerada.
 - **`feeds`** — lista de `{"url": ..., "origem": "BR" | "INT"}`. `origem` diz se o feed traz notícia do Brasil ou de fora (usado para separar "Brasil" e "Exterior").
 
-Os domínios aceitos nos dois canais estão em `reliability.py`, em `DOMINIOS`.
-O hostname precisa corresponder exatamente à lista (o prefixo `www.` é normalizado).
-Subdomínios adicionais precisam ser cadastrados explicitamente. O nome declarado pelo RSS
-não concede confiança à fonte. O Telegram continua sem curadoria por IA.
+O Telegram mantém a lista permitida de `reliability.py`, em `DOMINIOS`, e não usa IA.
+No e-mail, os veículos de [FONTES_EMAIL.md](FONTES_EMAIL.md) têm prioridade de ordenação,
+mas outros veículos também podem preencher vagas. O domínio final valida a prioridade;
+um nome de fonte no RSS não basta. A configuração do e-mail fica em `email_sources.py`.
 
 ### Critério de seleção do digest — `digest_email.py`
 
-- **`PROMPT_SELECAO`** — prioriza nível do veículo, montante financeiro ou impacto regulatório e depois o recorte setorial.
-- **`VEICULOS_NIVEL_1` / `VEICULOS_NIVEL_2`** — referências editoriais; a admissão efetiva depende do domínio em `DOMINIOS`.
+- **`email_ranking.py` / `PROMPT`** — classifica e justifica cada candidata, sem limite por nota.
+- **`email_sources.py` / `FONTES`** — catálogo único de veículos prioritários para o e-mail.
 - **`FOCO_SETORIAL`** — o recorte de "setor elétrico" de cada tema.
 - **`PROMPT_RESUMO`** — como o parágrafo de resumo é escrito.
 - **`MAX_BR` / `MAX_US`** — quantas notícias por bucket (hoje 3 e 1).
@@ -57,25 +57,34 @@ O comentário acima da função descreve o objetivo visual. Cores por tema em `T
 - `digest_fila.json` — candidatos pendentes, enviados, rejeitados por tema ou expirados
 - `telegram_incerto.json` / `digest_incerto.json` — envio em andamento ou com resultado incerto; `null` indica canal liberado
 
-A fila conserva candidatos mesmo depois que saem do RSS. O limite de 400 vale por lote/tema;
-os ainda não avaliados têm prioridade na próxima execução. O e-mail só admite matérias publicadas
+A fila conserva candidatos mesmo depois que saem do RSS. Todos os candidatos elegíveis por data
+são avaliados em lotes de 30; resultados válidos ficam em cache por tema e versão da regra.
+O e-mail só admite matérias publicadas
 nas últimas **72 horas**, com tolerância de 15 minutos para relógios adiantados. A data vem de
 `published` do RSS/Atom; `updated` não renova a idade. Sem data válida, a notícia não chega à IA
 nem ao envio; pode receber uma data numa coleta posterior. Pendências expiram após sete dias
 desde a coleta ou antes, quando a publicação sai da janela. Essas regras de data são exclusivas
 do e-mail. Os limites ficam em `email_policy.py`.
 
-Uma seleção válida `[]` rejeita o lote naquele tema. Erros da IA não publicam fallback e mantêm
-os candidatos pendentes. Uma falha em data centers não impede tentar carbono, e vice-versa.
+Prioridade ordena, não exclui: o código preenche três vagas BR e uma Exterior por tema quando
+há candidatos suficientes, atuais, inéditos, com links válidos e de fatos distintos. Não existe
+corte mínimo de nota. Valores financeiros, regulação e setor elétrico aumentam a nota, mas sua
+ausência não rejeita uma notícia do tema. Notícias de veículos não prioritários completam vagas.
+A geografia é a do fato: CNN Brasil sobre Emirados é Exterior; Reuters sobre Brasil é BR.
+Cada candidata precisa de decisão e motivo. Só há rejeição editorial por fora do tema, ausência
+de informação substantiva/fato novo ou evidência de fonte duvidosa. Array vazio ou índices
+faltantes são falhas técnicas, não rejeições. Uma falha em data centers não impede tentar carbono.
 Se houver seleção válida em outro tema, ela é enviada; a execução sinaliza falha parcial no
 Actions, preservando o histórico do que já foi enviado. Não selecionados continuam pendentes.
 
-No **digest**, a coleta usa apenas o cache para links do Google (`resolver=False`). Links
-inéditos são resolvidos somente após a seleção. O domínio final precisa estar na lista permitida,
-e a deduplicação é repetida antes do envio. Se escolhas forem descartadas, há até três rodadas
-de seleção por tema, com no máximo quatro escolhas por rodada. Falha de resolução preserva o
-candidato para outra execução. O nome da fonte no RSS pode orientar a seleção preliminar, mas
-nunca autoriza o envio sem a verificação do domínio. O **Telegram** mantém a resolução imediata.
+No **digest**, a coleta usa apenas o cache para links do Google (`resolver=False`). Cada execução
+também consulta Google Notícias por `site:` para CADA veículo prioritário e CADA tema, com quatro
+consultas simultâneas e registro de resultados/falhas. Isso complementa os feeds existentes;
+não garante cobertura de páginas que o Google não indexa ou disponibiliza no RSS.
+Os links dos elegíveis são resolvidos na ordem do ranking até preencher as vagas com as melhores
+fontes; reservas continuam sendo usadas após falha/duplicidade, sem o antigo limite de três rodadas.
+Não são resolvidos links que já não podem superar vagas preenchidas por fontes prioritárias.
+Falha de resolução preserva o candidato para outra execução. O **Telegram** mantém a resolução imediata.
 URLs equivalentes
 (Google/original, `www`, fragmentos e parâmetros de rastreamento conhecidos) compartilham
 identidade. Notícias associadas aos dois temas participam de ambos até serem escolhidas.
@@ -87,9 +96,19 @@ do encerramento. A lista de aliases enviados em `digest_enviados.json` permanece
 reenvios; registros descartados removidos não contornam o filtro de data se reaparecerem no RSS.
 
 O HTML do e-mail escapa títulos, fontes, resumos, links e a data de edição. Links inválidos ou
-fora dos domínios permitidos impedem a montagem. Resumos não têm mínimo obrigatório de palavras:
+Google Notícias não resolvidos impedem a montagem. Resumos não têm mínimo obrigatório de palavras:
 com menos de 20 palavras de apoio, o trecho/título é usado diretamente, sem expansão pela IA;
 com mais conteúdo, o modelo recebe instruções para resumir somente fatos fornecidos.
+
+### Por que uma notícia não entrou?
+
+Cada e-mail inclui `curadoria.txt`, com resultado e motivo por notícia e fontes consultadas.
+O mesmo diagnóstico fica em `digest_auditoria.json`, versionado no GitHub e nos artefatos do
+workflow, inclusive quando nada foi enviado. O resultado distingue: selecionada, sem vaga,
+duplicada, já enviada, fora da janela, sem data, rejeição editorial e falha técnica.
+As avaliações recentes rejeitadas pela regra anterior voltam a ser consideradas. A justificativa
+antiga não pode ser recuperada: não foi registrada. Os novos motivos correspondem à nova avaliação.
+O relatório é uma justificativa editorial estruturada da IA, não comprovação independente de seus juízos.
 
 Os workflows compartilham um grupo de concorrência por branch, preservam a fila de execuções
 e fazem checkout da versão atual da branch. No Actions, `BOT_PERSIST_STATE=1` grava um marcador

@@ -40,8 +40,8 @@ def google_pendente(item):
 
 
 def candidato_admissivel(item):
-    # RSS do Google ainda não resolvido pode ser avaliado, mas jamais enviado assim.
-    return google_pendente(item) or nivel_fonte(item) < 99
+    # Prioridade de veículo ordena; a lista não é uma barreira de admissão no e-mail.
+    return bool(canonica(item.get("link", "")))
 
 
 def podar_fila(fila, agora):

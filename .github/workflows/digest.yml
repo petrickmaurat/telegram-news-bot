@@ -48,7 +48,7 @@ jobs:
         run: python persist_state.py
 
       - name: Preservar estado para recuperação
-        if: ${{ failure() }}
+        if: ${{ always() }}
         uses: actions/upload-artifact@v4
         with:
           name: estado-digest-${{ github.run_id }}
@@ -59,4 +59,5 @@ jobs:
             digest_fila.json
             telegram_incerto.json
             digest_incerto.json
+            digest_auditoria.json
           retention-days: 14

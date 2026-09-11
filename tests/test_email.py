@@ -37,7 +37,7 @@ class EmailTests(IsolatedState):
         self.assertIn("&lt;img", html)
         self.assertIn("&amp;", html)
         self.assertEqual(noticia["titulo"], attack)  # não muta o item original
-        for url in ["javascript:alert(1)", "https://reuters.com@evil.test/a", "https://evil.test/a"]:
+        for url in ["javascript:alert(1)", "https://reuters.com@evil.test/a", "https://news.google.com/rss/articles/unresolved"]:
             with self.subTest(url=url), self.assertRaises(ValueError):
                 digest._card_noticia({**noticia, "link": url}, digest.TEMA["data_center"])
 
@@ -77,7 +77,7 @@ class EmailTests(IsolatedState):
         self.assertEqual(carregar_json(digest.FILA_FILE, {})[item(1)["link"]]["status"], "pendente")
         self.assertIsNone(carregar_json(digest.INCERTO_FILE, {}))
 
-    def test_resolves_only_selected_and_refills_untrusted_source(self):
+    def test_resolves_reserves_and_prioritizes_verified_domains(self):
         candidates = [item(i) for i in range(20)]
         for n, noticia in enumerate(candidates):
             noticia["link"] = f"https://news.google.com/rss/articles/{n}"
@@ -85,15 +85,14 @@ class EmailTests(IsolatedState):
         resolved = []
         def resolve(url):
             resolved.append(url)
-            return "https://evil.test/a" if url.endswith("/0") else item(1)["link"]
+            return "https://regional.test/a" if url.endswith("/0") else item(int(url.rsplit('/', 1)[-1]))["link"]
         with patch.object(digest, "resolver_link_google_news", side_effect=resolve):
-            send = self.run_digest(candidates, lambda c, t, batch: {"BR": [batch[0]], "US": []})
+            send = self.run_digest(candidates, lambda c, t, batch: {"BR": batch, "US": []})
         send.assert_called_once()
-        self.assertEqual(len(resolved), 2)
-        self.assertEqual(digest.carregar_estado(), {candidates[1]["link"], item(1)["link"]})
+        self.assertLessEqual(len(resolved), 4)
+        self.assertEqual(len(digest.carregar_estado()), 6)
         fila = carregar_json(digest.FILA_FILE, {})
-        self.assertEqual(fila[candidates[0]["link"]]["status"], "rejeitado")
-        self.assertEqual(fila[candidates[2]["link"]]["status"], "pendente")
+        self.assertEqual(sum(r["status"] == "enviado" for r in fila.values()), 3)
 
     def test_google_duplicate_is_removed_after_resolution(self):
         first, second, third = item(1), item(2), item(3)
@@ -102,11 +101,12 @@ class EmailTests(IsolatedState):
         batches = []
         def choose(c, t, batch):
             batches.append(batch)
-            return {"BR": batch[:2], "US": []}
+            return {"BR": batch, "US": []}
         with patch.object(digest, "resolver_link_google_news", side_effect=lambda url: first["link"] if "google.com" in url else url):
             self.run_digest([first, second, third], choose)
-        self.assertEqual(digest.carregar_estado(), {first["link"], third["link"]})
-        self.assertEqual(len(batches), 2)
+        self.assertTrue({first["link"], third["link"]}.issubset(digest.carregar_estado()))
+        self.assertEqual(sum(r["status"] == "enviado" for r in carregar_json(digest.FILA_FILE, {}).values()), 2)
+        self.assertEqual(len(batches), 1)
 
     def test_publication_window_and_no_update_fallback(self):
         now = time.time()

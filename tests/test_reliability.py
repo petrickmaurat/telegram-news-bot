@@ -55,6 +55,7 @@ class IsolatedState(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         for module, attr in [(digest, "ESTADO_FILE"), (digest, "FILA_FILE"),
+                             (digest, "AUDITORIA_FILE"),
                              (digest, "INCERTO_FILE"), (telegram, "SENT_FILE"),
                              (telegram, "INCERTO_FILE"), (common, "_CACHE_GOOGLE_FILE")]:
             p = patch.object(module, attr, str(Path(self.temp.name) / (module.__name__ + attr + ".json")))
@@ -88,15 +89,17 @@ class RegressionTests(IsolatedState):
         queue = carregar_json(digest.FILA_FILE, {})
         self.assertEqual(state, {item(0)["link"]})
         self.assertEqual(queue[item(400)["link"]]["status"], "pendente")
-        self.assertEqual(queue[item(400)["link"]]["avaliado"], {})
+        self.assertIn("data_center", queue[item(400)["link"]]["avaliado"])
         self.run_digest([], choose)  # já saiu do feed, mas continua na fila
-        self.assertEqual(batches[1][0]["link"], item(400)["link"])
+        self.assertIn(item(400)["link"], [i["link"] for i in batches[1]])
 
     def test_empty_selection_rejects_without_fallback(self):
-        self.assertEqual(digest.selecionar(client([]), "data_center", [item()]), {"BR": [], "US": []})
+        # Um array vazio agora é incompleto: toda rejeição precisa de justificativa.
+        with self.assertRaises(RuntimeError):
+            digest.selecionar(client([]), "data_center", [item()])
         send = self.run_digest([item()], lambda *a: {"BR": [], "US": []})
         send.assert_not_called()
-        self.assertEqual(carregar_json(digest.FILA_FILE, {})[item()["link"]]["status"], "rejeitado")
+        self.assertEqual(carregar_json(digest.FILA_FILE, {})[item()["link"]]["status"], "pendente")
         self.assertEqual(digest.carregar_estado(), set())
 
     def test_api_failure_keeps_queue_pending(self):

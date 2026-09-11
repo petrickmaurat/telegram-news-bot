@@ -6,7 +6,7 @@ import time
 
 ROOT = Path(__file__).resolve().parent
 FILES = ["enviados.json", "digest_enviados.json", "google_cache.json",
-         "digest_fila.json", "telegram_incerto.json", "digest_incerto.json"]
+         "digest_fila.json", "telegram_incerto.json", "digest_incerto.json", "digest_auditoria.json"]
 
 
 def git(*args, check=True):

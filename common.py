@@ -9,6 +9,7 @@ Feeds marcados com origem "INT" trazem notícia de fora do Brasil.
 
 import json
 import os
+from concurrent.futures import ThreadPoolExecutor
 
 import feedparser
 import requests
@@ -29,7 +30,9 @@ def _parse_feed(url: str, tentativas: int = 2, timeout: int = 15):
         except Exception as erro:
             if tentativa == tentativas - 1:
                 print(f"Aviso: falha ao buscar {url} após {tentativas} tentativa(s): {erro}")
-    return feedparser.parse(b"")
+    feed = feedparser.parse(b"")
+    feed["fetch_error"] = True
+    return feed
 
 # Busca no Google Notícias — cobre qualquer veículo indexado, o que
 # nos dá de graça Valor, Folha, Estadão, CNN, Reuters, FT, WaPo, etc.
@@ -138,7 +141,7 @@ def resolver_link_google_news(link: str) -> str:
     return link
 
 
-def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True) -> list:
+def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True, configuracao=None, relatorio_fontes=None) -> list:
     """
     Lê os feeds dos tópicos pedidos e devolve os itens ainda não
     vistos. Não modifica `ja_vistos`.
@@ -149,18 +152,28 @@ def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True) -> 
 
     Cada item: {titulo, link, fonte, resumo, topico, origem}.
     """
-    alvos = topicos or list(TOPICOS)
+    configuracao = configuracao or TOPICOS
+    alvos = topicos or list(configuracao)
     itens = []
     vistos_agora = {}
     ja_vistos = {canonica(link) for link in ja_vistos}
     # Migra a comparação dos históricos antigos usando aliases já conhecidos.
     ja_vistos.update(canonica(destino) for original, destino in _cache_google.items()
                      if canonica(original) in ja_vistos)
+    feeds_cache = {}
+    if not resolver:
+        urls = list(dict.fromkeys(f["url"] for t in alvos for f in configuracao[t]["feeds"]))
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            feeds_cache = dict(zip(urls, pool.map(_parse_feed, urls)))
 
     for topico in alvos:
-        cfg = TOPICOS[topico]
+        cfg = configuracao[topico]
         for feed_info in cfg["feeds"]:
-            feed = _parse_feed(feed_info["url"])
+            feed = _parse_feed(feed_info["url"]) if resolver else feeds_cache[feed_info["url"]]
+            if relatorio_fontes is not None:
+                relatorio_fontes.append({"topico": topico, "fonte": feed_info.get("veiculo_monitorado", feed_info["url"]),
+                    "consulta": feed_info["url"], "itens_rss": len(feed.entries),
+                    "resultado": "falha" if getattr(feed, "fetch_error", False) else "rss_invalido" if feed.bozo else "ok"})
             if feed.bozo:
                 print(f"Aviso: não consegui ler corretamente {feed_info['url']}")
 
@@ -186,7 +199,8 @@ def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True) -> 
                 aliases = {canonica(original), identidade}
                 if aliases & ja_vistos:
                     ja_vistos.update(aliases)
-                    continue
+                    if resolver:
+                        continue
                 if identidade in vistos_agora:
                     existente = vistos_agora[identidade]
                     existente["topicos"] = sorted(set(existente["topicos"]) | {topico})
@@ -212,7 +226,7 @@ def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True) -> 
                 }
                 if not resolver:
                     item["publicado_em"] = data_publicacao(entrada)
-                if nivel_fonte(item) == 99 and (resolver or not google_pendente):
+                if nivel_fonte(item) == 99 and resolver:
                     continue
                 vistos_agora[identidade] = item
                 itens.append(item)
