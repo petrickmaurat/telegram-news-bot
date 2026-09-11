@@ -9,14 +9,21 @@ permissions:
   contents: write
 
 concurrency:
-  group: ${{ github.workflow }}
+  group: news-bot-state-${{ github.ref }}
   cancel-in-progress: false
+  queue: max
 
 jobs:
   checar:
     runs-on: ubuntu-latest
+    env:
+      BOT_PERSIST_STATE: "1"
+      BOT_BRANCH: ${{ github.ref_name }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -24,17 +31,27 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - run: python -m unittest discover -s tests
+
       - run: python telegram_news_bot.py
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
 
-      - name: Salvar histórico de notícias enviadas
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add enviados.json google_cache.json
-          git diff --staged --quiet && exit 0
-          git commit -m "Atualiza enviados.json"
-          git pull --rebase --autostash
-          git push
+      - name: Salvar estado mesmo após falha parcial
+        if: ${{ always() }}
+        run: python persist_state.py
+
+      - name: Preservar estado para recuperação
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: estado-news-${{ github.run_id }}
+          path: |
+            enviados.json
+            digest_enviados.json
+            google_cache.json
+            digest_fila.json
+            telegram_incerto.json
+            digest_incerto.json
+          retention-days: 14

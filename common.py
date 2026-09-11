@@ -1,7 +1,7 @@
 """
 Configuração e coleta de notícias, compartilhadas entre o bot do
 Telegram (só data center, tempo real) e o digest por e-mail (data
-center + mercado de carbono, curado por IA 2x ao dia).
+center + mercado de carbono, curado por IA diariamente).
 
 Cada tópico tem suas próprias palavras-chave e seus próprios feeds.
 Feeds marcados com origem "INT" trazem notícia de fora do Brasil.
@@ -13,6 +13,8 @@ import os
 import feedparser
 import requests
 from googlenewsdecoder import gnewsdecoder
+from reliability import canonica, salvar_json, nivel_fonte
+from email_policy import data_publicacao
 
 
 def _parse_feed(url: str, tentativas: int = 2, timeout: int = 15):
@@ -118,18 +120,17 @@ _cache_google = _carregar_cache_google()
 
 
 def salvar_cache_google() -> None:
-    with open(_CACHE_GOOGLE_FILE, "w", encoding="utf-8") as f:
-        json.dump(_cache_google, f, ensure_ascii=False, indent=2)
+    salvar_json(_CACHE_GOOGLE_FILE, _cache_google)
 
 
 def resolver_link_google_news(link: str) -> str:
-    if not link.startswith("https://news.google.com/"):
+    if not canonica(link).startswith("https://news.google.com/"):
         return link
     if link in _cache_google:
         return _cache_google[link]
     try:
         resultado = gnewsdecoder(link, interval=1)
-        if resultado.get("status"):
+        if resultado.get("status") and canonica(resultado.get("decoded_url", "")):
             _cache_google[link] = resultado["decoded_url"]
             return resultado["decoded_url"]
     except Exception as erro:
@@ -143,16 +144,18 @@ def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True) -> 
     vistos. Não modifica `ja_vistos`.
 
     topicos: lista de chaves de TOPICOS (default: todos).
-    resolver: se True, resolve o link do Google Notícias na hora
-        (necessário pro Telegram). O digest passa False e resolve
-        só os itens que a IA selecionar, para não gastar ~5s/link
-        em 100+ candidatos.
+    resolver: True mantém a resolução e validação imediatas do Telegram.
+        False usa apenas o cache; o digest valida os escolhidos antes do envio.
 
     Cada item: {titulo, link, fonte, resumo, topico, origem}.
     """
     alvos = topicos or list(TOPICOS)
     itens = []
-    vistos_agora = set()
+    vistos_agora = {}
+    ja_vistos = {canonica(link) for link in ja_vistos}
+    # Migra a comparação dos históricos antigos usando aliases já conhecidos.
+    ja_vistos.update(canonica(destino) for original, destino in _cache_google.items()
+                     if canonica(original) in ja_vistos)
 
     for topico in alvos:
         cfg = TOPICOS[topico]
@@ -168,15 +171,28 @@ def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True) -> 
                 if not link:
                     continue
 
-                if resolver:
-                    link = resolver_link_google_news(link)
-                if link in ja_vistos or link in vistos_agora:
-                    continue
-
                 titulo = entrada.get("title", "")
                 resumo = entrada.get("summary", "")
 
                 if not contem_palavra_chave(f"{titulo} {resumo}", cfg["keywords"]):
+                    continue
+
+                original = link
+                link = resolver_link_google_news(link) if resolver else _cache_google.get(link, link)
+                identidade = canonica(link)
+                google_pendente = identidade.startswith("https://news.google.com/")
+                if not identidade or (resolver and google_pendente):
+                    continue  # resolução indisponível: tentar novamente na próxima coleta
+                aliases = {canonica(original), identidade}
+                if aliases & ja_vistos:
+                    ja_vistos.update(aliases)
+                    continue
+                if identidade in vistos_agora:
+                    existente = vistos_agora[identidade]
+                    existente["topicos"] = sorted(set(existente["topicos"]) | {topico})
+                    existente["aliases"] = sorted(set(existente["aliases"]) | aliases)
+                    if not resolver and existente.get("publicado_em") is None:
+                        existente["publicado_em"] = data_publicacao(entrada)
                     continue
 
                 fonte_especifica = (entrada.get("source") or {}).get("title")
@@ -184,18 +200,22 @@ def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True) -> 
                 if fonte_especifica and titulo.endswith(f" - {fonte_especifica}"):
                     titulo = titulo[: -len(f" - {fonte_especifica}")]
 
-                vistos_agora.add(link)
-                itens.append(
-                    {
-                        "titulo": titulo,
-                        "link": link,
-                        "fonte": fonte,
-                        "resumo": resumo,
-                        "topico": topico,
-                        "origem": feed_info["origem"],
-                    }
-                )
+                item = {
+                    "titulo": titulo,
+                    "link": link,
+                    "fonte": fonte,
+                    "resumo": resumo,
+                    "topico": topico,
+                    "origem": feed_info["origem"],
+                    "topicos": [topico],
+                    "aliases": sorted(aliases),
+                }
+                if not resolver:
+                    item["publicado_em"] = data_publicacao(entrada)
+                if nivel_fonte(item) == 99 and (resolver or not google_pendente):
+                    continue
+                vistos_agora[identidade] = item
+                itens.append(item)
 
-    if resolver:
-        salvar_cache_google()
+    salvar_cache_google()
     return itens
