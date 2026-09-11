@@ -1,1 +1,100 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQN1BGX0I3VlR1d1V1a0I4bWE5UUlkVl92LWlobWRCQzEya284UVRCMGQwMGtRanN3MGxDZGF3aXdvWDBBNGVuZlBxaTBVUGpRM2xWNGhGYnlqZ3JfRDJZdHM4bVJNcFBLT0h0RTE0dWhOTE44cll6MkRyWkxtbXB2SVFjMDl6cF96MV82Z1ZCaF9wakFTVjhTSkM1WVdFa09DWVl5UTRDWGpDd2c0N2dJZ24wMVhyOTJN?oc=5",
+    "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSXFMS2Y2eWpfZGtYdUd1TE9PRXpZNFcxYl8yR2tUMkUyOWtsakJoOE9FSU1YbUJkdkVPcE1UcVdhbU5VYXdFYUlUNUlvTVByVWV6RkVNZ2oxMWdodzVRenVaYmRpdVY5c3pXMWp0LU50ekVEREZfUVB3VWZFSTdaWHFHcGctX3RucTJ5N2VxRUdvSWlDM0FMUXZmQUZoVWttb2RiZzU4Vmp1bkJISWpmbVNmcUVPM2dlcDl0OQ?oc=5",
+    "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNFJFMS1VdzFwY1doOThMLVNiYmdRTVB3YV9PY1RPY0dJcVl0RFdYdGhSTnAzQjhkak9qd0dQX00xMHdUeWsydTFQSzdTZWJGa2JKTG0xSGZEaDlEaGFzNVZ3eEZLMWI5RTBkWUo5OUZxVzh4eGZDOHRPWVQxWmszOEs0c2RvT1RkeTRyaThBRGhkVWplU0RuaUZFbzBGOFBrU3JmU1JxSW9DWlh0UG9pNHBxTVdMY05pWVFrb3FKM0VObm42SThZUUhQazBCbHc?oc=5",
+    "https://reuters.com/business/environment/eu-lawmaker-proposes-more-carbon-market-investments-in-industry-2026-09-11/",
+    "https://reuters.com/sustainability/cop/brazil-eyes-china-buyer-carbon-credits-targets-accord-by-cop31-2026-09-09/",
+    "https://revistafatorbrasil.com.br/2026/09/11/mercado-regulado-de-carbono-exige-precificacao-urgente-nas-planilhas-das-petroleiras/"
+  ],
+  "assunto": "Panorama Data Centers & Carbono — 11/09 (tarde)",
+  "itens": [
+    {
+      "_fila_key": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQN1BGX0I3VlR1d1V1a0I4bWE5UUlkVl92LWlobWRCQzEya284UVRCMGQwMGtRanN3MGxDZGF3aXdvWDBBNGVuZlBxaTBVUGpRM2xWNGhGYnlqZ3JfRDJZdHM4bVJNcFBLT0h0RTE0dWhOTE44cll6MkRyWkxtbXB2SVFjMDl6cF96MV82Z1ZCaF9wakFTVjhTSkM1WVdFa09DWVl5UTRDWGpDd2c0N2dJZ24wMVhyOTJN?oc=5",
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQN1BGX0I3VlR1d1V1a0I4bWE5UUlkVl92LWlobWRCQzEya284UVRCMGQwMGtRanN3MGxDZGF3aXdvWDBBNGVuZlBxaTBVUGpRM2xWNGhGYnlqZ3JfRDJZdHM4bVJNcFBLT0h0RTE0dWhOTE44cll6MkRyWkxtbXB2SVFjMDl6cF96MV82Z1ZCaF9wakFTVjhTSkM1WVdFa09DWVl5UTRDWGpDd2c0N2dJZ24wMVhyOTJN?oc=5",
+        "https://reuters.com/sustainability/cop/brazil-eyes-china-buyer-carbon-credits-targets-accord-by-cop31-2026-09-09/"
+      ],
+      "avaliacoes": {
+        "carbono": {
+          "bucket": "BR",
+          "decisao": "elegivel",
+          "fato": "brasil_china_creditos_carbono_cop31",
+          "indice": 2,
+          "motivo": "Notícia sobre Brasil negociando com China para venda de créditos de carbono com target de acordo até COP31. Tema elegível de mercado voluntário/bilateral de carbono envolvendo fato brasileiro relevante, com elemento de regulação/diplomacia climática.",
+          "prioridade": 18,
+          "versao": 2
+        }
+      },
+      "fonte": "Reuters",
+      "link": "https://www.reuters.com/sustainability/cop/brazil-eyes-china-buyer-carbon-credits-targets-accord-by-cop31-2026-09-09/",
+      "origem": "INT",
+      "publicado_em": 1788967640,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQN1BGX0I3VlR1d1V1a0I4bWE5UUlkVl92LWlobWRCQzEya284UVRCMGQwMGtRanN3MGxDZGF3aXdvWDBBNGVuZlBxaTBVUGpRM2xWNGhGYnlqZ3JfRDJZdHM4bVJNcFBLT0h0RTE0dWhOTE44cll6MkRyWkxtbXB2SVFjMDl6cF96MV82Z1ZCaF9wakFTVjhTSkM1WVdFa09DWVl5UTRDWGpDd2c0N2dJZ24wMVhyOTJN?oc=5\" target=\"_blank\">Brazil eyes China as buyer of carbon credits, targets accord by COP31</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "resumo_final": "Brazil eyes China as buyer of carbon credits, targets accord by COP31  Reuters",
+      "titulo": "Brazil eyes China as buyer of carbon credits, targets accord by COP31",
+      "topico": "carbono",
+      "topicos": [
+        "carbono"
+      ]
+    },
+    {
+      "_fila_key": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNFJFMS1VdzFwY1doOThMLVNiYmdRTVB3YV9PY1RPY0dJcVl0RFdYdGhSTnAzQjhkak9qd0dQX00xMHdUeWsydTFQSzdTZWJGa2JKTG0xSGZEaDlEaGFzNVZ3eEZLMWI5RTBkWUo5OUZxVzh4eGZDOHRPWVQxWmszOEs0c2RvT1RkeTRyaThBRGhkVWplU0RuaUZFbzBGOFBrU3JmU1JxSW9DWlh0UG9pNHBxTVdMY05pWVFrb3FKM0VObm42SThZUUhQazBCbHc?oc=5",
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNFJFMS1VdzFwY1doOThMLVNiYmdRTVB3YV9PY1RPY0dJcVl0RFdYdGhSTnAzQjhkak9qd0dQX00xMHdUeWsydTFQSzdTZWJGa2JKTG0xSGZEaDlEaGFzNVZ3eEZLMWI5RTBkWUo5OUZxVzh4eGZDOHRPWVQxWmszOEs0c2RvT1RkeTRyaThBRGhkVWplU0RuaUZFbzBGOFBrU3JmU1JxSW9DWlh0UG9pNHBxTVdMY05pWVFrb3FKM0VObm42SThZUUhQazBCbHc?oc=5",
+        "https://revistafatorbrasil.com.br/2026/09/11/mercado-regulado-de-carbono-exige-precificacao-urgente-nas-planilhas-das-petroleiras/"
+      ],
+      "avaliacoes": {
+        "carbono": {
+          "bucket": "BR",
+          "decisao": "elegivel",
+          "fato": "precificacao_carbono_petroleiras_br",
+          "indice": 0,
+          "motivo": "Notícia sobre regulação do mercado de carbono no Brasil exigindo precificação nas operações de petroleiras. Tema elegível de mercado regulado de carbono, mas com foco em setor de óleo e gás, não prioritário para boletim focado em setor elétrico.",
+          "prioridade": 15,
+          "versao": 2
+        }
+      },
+      "fonte": "Fator Brasil",
+      "link": "https://www.revistafatorbrasil.com.br/2026/09/11/mercado-regulado-de-carbono-exige-precificacao-urgente-nas-planilhas-das-petroleiras/",
+      "origem": "BR",
+      "publicado_em": 1789152003,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxPNFJFMS1VdzFwY1doOThMLVNiYmdRTVB3YV9PY1RPY0dJcVl0RFdYdGhSTnAzQjhkak9qd0dQX00xMHdUeWsydTFQSzdTZWJGa2JKTG0xSGZEaDlEaGFzNVZ3eEZLMWI5RTBkWUo5OUZxVzh4eGZDOHRPWVQxWmszOEs0c2RvT1RkeTRyaThBRGhkVWplU0RuaUZFbzBGOFBrU3JmU1JxSW9DWlh0UG9pNHBxTVdMY05pWVFrb3FKM0VObm42SThZUUhQazBCbHc?oc=5\" target=\"_blank\">Mercado regulado de carbono exige precificação urgente nas planilhas das petroleiras</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fator Brasil</font>",
+      "resumo_final": "Mercado regulado de carbono exige precificação urgente nas planilhas das petroleiras  Fator Brasil",
+      "titulo": "Mercado regulado de carbono exige precificação urgente nas planilhas das petroleiras",
+      "topico": "carbono",
+      "topicos": [
+        "carbono"
+      ]
+    },
+    {
+      "_fila_key": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSXFMS2Y2eWpfZGtYdUd1TE9PRXpZNFcxYl8yR2tUMkUyOWtsakJoOE9FSU1YbUJkdkVPcE1UcVdhbU5VYXdFYUlUNUlvTVByVWV6RkVNZ2oxMWdodzVRenVaYmRpdVY5c3pXMWp0LU50ekVEREZfUVB3VWZFSTdaWHFHcGctX3RucTJ5N2VxRUdvSWlDM0FMUXZmQUZoVWttb2RiZzU4Vmp1bkJISWpmbVNmcUVPM2dlcDl0OQ?oc=5",
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSXFMS2Y2eWpfZGtYdUd1TE9PRXpZNFcxYl8yR2tUMkUyOWtsakJoOE9FSU1YbUJkdkVPcE1UcVdhbU5VYXdFYUlUNUlvTVByVWV6RkVNZ2oxMWdodzVRenVaYmRpdVY5c3pXMWp0LU50ekVEREZfUVB3VWZFSTdaWHFHcGctX3RucTJ5N2VxRUdvSWlDM0FMUXZmQUZoVWttb2RiZzU4Vmp1bkJISWpmbVNmcUVPM2dlcDl0OQ?oc=5",
+        "https://reuters.com/business/environment/eu-lawmaker-proposes-more-carbon-market-investments-in-industry-2026-09-11/"
+      ],
+      "avaliacoes": {
+        "carbono": {
+          "bucket": "US",
+          "decisao": "elegivel",
+          "fato": "ue_investimentos_carbono_industrial",
+          "indice": 5,
+          "motivo": "Notícia sobre proposta de legislador europeu para aumentar investimentos em mercado de carbono para indústria. Tema elegível de mercado regulado europeu, regulação relevante, mas fora de escopo Brasil e não impacta setor elétrico diretamente.",
+          "prioridade": 12,
+          "versao": 2
+        }
+      },
+      "fonte": "Reuters",
+      "link": "https://www.reuters.com/business/environment/eu-lawmaker-proposes-more-carbon-market-investments-in-industry-2026-09-11/",
+      "origem": "INT",
+      "publicado_em": 1789120648,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxNSXFMS2Y2eWpfZGtYdUd1TE9PRXpZNFcxYl8yR2tUMkUyOWtsakJoOE9FSU1YbUJkdkVPcE1UcVdhbU5VYXdFYUlUNUlvTVByVWV6RkVNZ2oxMWdodzVRenVaYmRpdVY5c3pXMWp0LU50ekVEREZfUVB3VWZFSTdaWHFHcGctX3RucTJ5N2VxRUdvSWlDM0FMUXZmQUZoVWttb2RiZzU4Vmp1bkJISWpmbVNmcUVPM2dlcDl0OQ?oc=5\" target=\"_blank\">EU lawmaker proposes more carbon market investments in industry</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "resumo_final": "EU lawmaker proposes more carbon market investments in industry  Reuters",
+      "titulo": "EU lawmaker proposes more carbon market investments in industry",
+      "topico": "carbono",
+      "topicos": [
+        "carbono"
+      ]
+    }
+  ]
+}
