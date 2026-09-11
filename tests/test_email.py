@@ -63,7 +63,7 @@ class EmailTests(IsolatedState):
             calls.append(topic)
             if topic == "data_center":
                 raise RuntimeError("API falhou")
-            return {"BR": [batch[0]], "US": []}
+            return {"BR": [batch[0]], "US": []}, False
         with patch.object(digest, "enviar_email") as send, \
              patch.object(digest, "coletar_itens_novos", return_value=candidates), \
              patch.object(digest.anthropic, "Anthropic", return_value=client([])), \
@@ -87,7 +87,7 @@ class EmailTests(IsolatedState):
             resolved.append(url)
             return "https://regional.test/a" if url.endswith("/0") else item(int(url.rsplit('/', 1)[-1]))["link"]
         with patch.object(digest, "resolver_link_google_news", side_effect=resolve):
-            send = self.run_digest(candidates, lambda c, t, batch: {"BR": batch, "US": []})
+            send = self.run_digest(candidates, lambda c, t, batch: ({"BR": batch, "US": []}, False))
         send.assert_called_once()
         self.assertLessEqual(len(resolved), 4)
         self.assertEqual(len(digest.carregar_estado()), 6)
@@ -101,7 +101,7 @@ class EmailTests(IsolatedState):
         batches = []
         def choose(c, t, batch):
             batches.append(batch)
-            return {"BR": batch, "US": []}
+            return {"BR": batch, "US": []}, False
         with patch.object(digest, "resolver_link_google_news", side_effect=lambda url: first["link"] if "google.com" in url else url):
             self.run_digest([first, second, third], choose)
         self.assertTrue({first["link"], third["link"]}.issubset(digest.carregar_estado()))
@@ -124,7 +124,7 @@ class EmailTests(IsolatedState):
         candidates[0]["publicado_em"] = time.time() - 100 * 3600
         candidates[1]["publicado_em"] = None
         candidates[2]["publicado_em"] = time.time() + 86400
-        choose = Mock(side_effect=lambda c, t, batch: {"BR": batch, "US": []})
+        choose = Mock(side_effect=lambda c, t, batch: ({"BR": batch, "US": []}, False))
         self.run_digest(candidates, choose)
         self.assertEqual([i["link"] for i in choose.call_args.args[2]], [item(3)["link"]])
         self.assertEqual(digest.carregar_estado(), {item(3)["link"]})

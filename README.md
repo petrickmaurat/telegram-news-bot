@@ -57,8 +57,14 @@ O comentário acima da função descreve o objetivo visual. Cores por tema em `T
 - `digest_fila.json` — candidatos pendentes, enviados, rejeitados por tema ou expirados
 - `telegram_incerto.json` / `digest_incerto.json` — envio em andamento ou com resultado incerto; `null` indica canal liberado
 
-A fila conserva candidatos mesmo depois que saem do RSS. Todos os candidatos elegíveis por data
-são avaliados em lotes de 30; resultados válidos ficam em cache por tema e versão da regra.
+A fila conserva candidatos mesmo depois que saem do RSS. Todos os candidatos são avaliados em
+lotes de até 30 (rodada base, com cache por tema e versão da regra — um lote malformado não
+derruba o tópico, só fica pendente pra próxima execução). Se os elegíveis dessa rodada passarem
+de 30, é um torneio: os melhores de cada lote (por nota) avançam para uma nova rodada de
+comparação direta entre vencedores, sem cache, repetindo até caber numa chamada só — essa rodada
+final decide nota e duplicidade com o contexto completo dos rivais. Quem não avança não é
+descartado: continua elegível com a nota da última rodada em que participou, disponível como
+reserva. Detalhes em `email_ranking.py`.
 O e-mail só admite matérias publicadas
 nas últimas **72 horas**, com tolerância de 15 minutos para relógios adiantados. A data vem de
 `published` do RSS/Atom; `updated` não renova a idade. Sem data válida, a notícia não chega à IA

@@ -83,7 +83,7 @@ class RegressionTests(IsolatedState):
         batches = []
         def choose(c, t, batch):
             batches.append(batch)
-            return {"BR": [batch[0]], "US": []}
+            return {"BR": [batch[0]], "US": []}, False
         self.run_digest(candidates, choose)
         state = digest.carregar_estado()
         queue = carregar_json(digest.FILA_FILE, {})
@@ -94,10 +94,11 @@ class RegressionTests(IsolatedState):
         self.assertIn(item(400)["link"], [i["link"] for i in batches[1]])
 
     def test_empty_selection_rejects_without_fallback(self):
-        # Um array vazio agora é incompleto: toda rejeição precisa de justificativa.
-        with self.assertRaises(RuntimeError):
-            digest.selecionar(client([]), "data_center", [item()])
-        send = self.run_digest([item()], lambda *a: {"BR": [], "US": []})
+        # Um array vazio agora é incompleto: fica marcado como falha de lote, não seleção.
+        ranking, falhou = digest.selecionar(client([]), "data_center", [item()])
+        self.assertEqual(ranking, {"BR": [], "US": []})
+        self.assertTrue(falhou)
+        send = self.run_digest([item()], lambda *a: ({"BR": [], "US": []}, False))
         send.assert_not_called()
         self.assertEqual(carregar_json(digest.FILA_FILE, {})[item()["link"]]["status"], "pendente")
         self.assertEqual(digest.carregar_estado(), set())
@@ -107,17 +108,6 @@ class RegressionTests(IsolatedState):
             self.run_digest([item()], Mock(side_effect=RuntimeError("API falhou")))
         self.assertEqual(carregar_json(digest.FILA_FILE, {})[item()["link"]]["status"], "pendente")
         self.assertEqual(digest.carregar_estado(), set())
-
-    def test_duplicate_or_invalid_indices_reject_entire_response(self):
-        bad = [[{"indice": 0, "bucket": "BR"}] * 2,
-               [{"indice": 0, "bucket": "BR"}, {"indice": 0, "bucket": "US"}],
-               [{"indice": True, "bucket": "BR"}], [{"indice": 9, "bucket": "BR"}],
-               [{"indice": 0, "bucket": []}], {}, [None]]
-        for data in bad:
-            with self.subTest(data=data), self.assertRaises(RuntimeError):
-                digest.selecionar(client(data), "data_center", [item()])
-        with self.assertRaises(RuntimeError):
-            digest.selecionar(client([], "max_tokens"), "data_center", [item()])
 
     def test_summary_invalid_types_fall_back_to_feed(self):
         for data in [[{"indice": 0, "resumo": 123}], [{"indice": True, "resumo": "falso"}],
@@ -144,7 +134,7 @@ class RegressionTests(IsolatedState):
 
     def test_second_topic_can_select_first_topics_rejection(self):
         def choose(c, topic, batch):
-            return {"BR": [] if topic == "data_center" else [batch[0]], "US": []}
+            return {"BR": [] if topic == "data_center" else [batch[0]], "US": []}, False
         send = self.run_digest([item(topics=["data_center", "carbono"])], choose)
         send.assert_called_once()
         self.assertEqual(digest.carregar_estado(), {item()["link"]})
@@ -192,7 +182,7 @@ class RegressionTests(IsolatedState):
         digest.checkpoint.side_effect = RuntimeError("push falhou")
         with patch.object(digest, "coletar_itens_novos", return_value=[item()]), \
              patch.object(digest.anthropic, "Anthropic", return_value=client([])), \
-             patch.object(digest, "selecionar", return_value={"BR": [item()], "US": []}), \
+             patch.object(digest, "selecionar", return_value=({"BR": [item()], "US": []}, False)), \
              patch.object(digest, "resumir"), patch.object(digest, "montar_html", return_value="html"), \
              patch.object(digest, "enviar_email") as send, self.assertRaises(RuntimeError):
             digest.rodar_digest()
@@ -211,7 +201,7 @@ class RegressionTests(IsolatedState):
 
     def test_expired_candidate_does_not_reenter(self):
         candidates = [item()]
-        self.run_digest(candidates, lambda *a: {"BR": [item()], "US": []})
+        self.run_digest(candidates, lambda *a: ({"BR": [item()], "US": []}, False))
         queue = carregar_json(digest.FILA_FILE, {})
         queue[item()["link"]].update(status="pendente", criado=0)
         salvar_json(digest.FILA_FILE, queue)

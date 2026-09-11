@@ -1,10 +1,11 @@
 """Avalia todos os candidatos; o código, e não o modelo, preenche as vagas."""
 import json
 import re
-from email_sources import fonte_prioritaria
+from email_sources import prioritario
 
 VERSAO = 2
 TAMANHO_LOTE = 30
+VENCEDORES_POR_LOTE = 10  # quantos elegíveis de cada lote avançam para a rodada seguinte do torneio
 DECISOES = {"elegivel", "fora_tema", "sem_fato_novo", "fonte_duvidosa"}
 PROMPT = """Avalie CADA candidato para um boletim sobre {topico}.
 Prioridade serve APENAS para ordenar. Uma notícia do tema com baixa prioridade continua
@@ -52,12 +53,13 @@ def validar(dados, quantidade):
     return dados
 
 
-def classificar(cliente, topico, foco, candidatos, modelo):
-    faltantes = [c for c in candidatos if c.get("avaliacoes", {}).get(topico, {}).get("versao") != VERSAO]
-    for inicio in range(0, len(faltantes), TAMANHO_LOTE):
-        lote = faltantes[inicio:inicio + TAMANHO_LOTE]
-        dados = [{"indice": i, "titulo": c["titulo"], "fonte": c["fonte"], "link": c["link"],
-                  "trecho": re.sub(r"<[^>]+>", "", c.get("resumo", ""))[:600]} for i, c in enumerate(lote)]
+def _avaliar_lote(cliente, topico, foco, lote, modelo):
+    """Avalia um lote (até 30 candidatos) via IA. Isola a falha: se der errado,
+    devolve False e os candidatos do lote simplesmente não recebem avaliação
+    nesta chamada — quem já tinha uma (de outra rodada/execução) mantém a dela."""
+    dados = [{"indice": i, "titulo": c["titulo"], "fonte": c["fonte"], "link": c["link"],
+              "trecho": re.sub(r"<[^>]+>", "", c.get("resumo", ""))[:600]} for i, c in enumerate(lote)]
+    try:
         response = cliente.messages.create(model=modelo, max_tokens=8000,
             messages=[{"role": "user", "content": PROMPT.format(topico=topico, foco=foco,
               candidatos=json.dumps(dados, ensure_ascii=False))}])
@@ -68,12 +70,50 @@ def classificar(cliente, topico, foco, candidatos, modelo):
             text = re.sub(r"^```(?:json)?\s*|\s*```$", "", text)
         for row in validar(json.loads(text), len(lote)):
             lote[row["indice"]].setdefault("avaliacoes", {})[topico] = {**row, "versao": VERSAO}
+        return True
+    except Exception as erro:
+        print(f"Lote de avaliação falhou em {topico} ({erro}); candidatos deste lote continuam pendentes.")
+        return False
+
+
+def classificar(cliente, topico, foco, candidatos, modelo):
+    """Avalia todos os candidatos em lotes de até 30 (rodada base, com cache por
+    versão — só quem ainda não foi avaliado nesta versão gasta chamada de IA).
+
+    Se o total de elegíveis passar de um lote, é um torneio: os melhores
+    (por nota) de cada lote avançam para uma nova rodada, onde são comparados
+    diretamente entre si — sem cache, porque o conjunto de vencedores muda a
+    cada execução. Repete até os vencedores caberem numa chamada só; essa
+    rodada final decide nota e duplicidade com o contexto completo dos rivais.
+    Quem não avança não desaparece: continua no resultado com a nota da
+    última rodada em que participou, disponível como reserva para o código
+    de seleção (digest_email.escolher_topico)."""
+    falhou = False
+    faltantes = [c for c in candidatos if c.get("avaliacoes", {}).get(topico, {}).get("versao") != VERSAO]
+    for inicio in range(0, len(faltantes), TAMANHO_LOTE):
+        if not _avaliar_lote(cliente, topico, foco, faltantes[inicio:inicio + TAMANHO_LOTE], modelo):
+            falhou = True
+
+    elegiveis = [c for c in candidatos if (c.get("avaliacoes", {}).get(topico) or {}).get("decisao") == "elegivel"]
+    pool = elegiveis
+    while len(pool) > TAMANHO_LOTE:
+        vencedores = []
+        for inicio in range(0, len(pool), TAMANHO_LOTE):
+            lote = sorted(pool[inicio:inicio + TAMANHO_LOTE], key=lambda c: -c["avaliacoes"][topico]["prioridade"])
+            vencedores += lote[:VENCEDORES_POR_LOTE]
+        if len(vencedores) >= len(pool):
+            break  # segurança: sem essa redução o torneio não convergiria
+        for inicio in range(0, len(vencedores), TAMANHO_LOTE):
+            if not _avaliar_lote(cliente, topico, foco, vencedores[inicio:inicio + TAMANHO_LOTE], modelo):
+                falhou = True
+        pool = [c for c in vencedores if c["avaliacoes"][topico]["decisao"] == "elegivel"]
+
     grupos = {"BR": [], "US": []}
-    for c in candidatos:
+    for c in elegiveis:
         avaliacao = c["avaliacoes"][topico]
         if avaliacao["decisao"] == "elegivel":
             grupos[avaliacao["bucket"]].append(c)
     for grupo in grupos.values():
-        grupo.sort(key=lambda c: (0 if fonte_prioritaria(c) else 1, -c["avaliacoes"][topico]["prioridade"],
-                                 -c.get("publicado_em", 0), c["link"]))
-    return grupos
+        grupo.sort(key=lambda c: (0 if prioritario(c, c["avaliacoes"][topico]["prioridade"]) else 1,
+                                 -c["avaliacoes"][topico]["prioridade"], -c.get("publicado_em", 0), c["link"]))
+    return grupos, falhou

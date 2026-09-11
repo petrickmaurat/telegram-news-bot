@@ -35,6 +35,15 @@ def fonte_prioritaria(item):
     return None
 
 
+# Conteúdo excepcionalmente relevante (nota alta o bastante) dispensa veículo
+# de referência — regulação prevalece sobre a fonte, não só o contrário.
+LIMIAR_PRIORIDADE_CONTEUDO = 90
+
+
+def prioritario(item, prioridade):
+    return bool(fonte_prioritaria(item)) or (isinstance(prioridade, int) and prioridade >= LIMIAR_PRIORIDADE_CONTEUDO)
+
+
 def configuracao_email(topicos):
     config = deepcopy(topicos)
     for topic, cfg in config.items():

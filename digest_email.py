@@ -33,7 +33,7 @@ from common import TOPICOS, coletar_itens_novos, resolver_link_google_news, salv
 from reliability import salvar_json, carregar_json, canonica, identidades
 from persist_state import checkpoint
 from email_policy import recente, google_pendente, candidato_admissivel, podar_fila
-from email_sources import fonte_prioritaria, configuracao_email
+from email_sources import fonte_prioritaria, prioritario, configuracao_email
 from email_ranking import classificar, VERSAO
 
 MODELO = "claude-haiku-4-5"
@@ -59,9 +59,18 @@ FOCO_SETORIAL = {
         "impacto no sistema elétrico e nas tarifas."
     ),
     "carbono": (
-        "Priorize o SETOR ELÉTRICO: geração (térmicas, hidrelétricas, renováveis), matriz "
-        "elétrica, leilões, descarbonização da geração, impacto de créditos/precificação de "
-        "carbono sobre o setor de energia."
+        "PRIORIDADE MÁXIMA (nota 90-100) sempre que o fato for sobre o MERCADO REGULADO "
+        "brasileiro de carbono: SBCE (Sistema Brasileiro de Comércio de Emissões), cronograma "
+        "setorial, MRV (monitoramento/relato/verificação), CTCP, teto/alocação de emissões, "
+        "regulamentação da Lei 15.042/2024 ou qualquer obrigação legal de reduzir/compensar "
+        "emissões no Brasil — essa nota alta vale mesmo que o veículo não seja de referência; "
+        "aqui a regulação é o principal critério e prevalece sobre a fonte. Mercado voluntário "
+        "de carbono (créditos florestais/REDD+, offsets corporativos sem obrigação legal, "
+        "mercados regulados de outros países) é elegível e prioritário sobre o resto do tema, "
+        "mas com nota menor que o mercado regulado brasileiro. Como critério adicional (menor "
+        "peso que os anteriores): priorize o SETOR ELÉTRICO — geração (térmicas, hidrelétricas, "
+        "renováveis), matriz elétrica, leilões, descarbonização da geração, impacto de "
+        "créditos/precificação de carbono sobre o setor de energia."
     ),
 }
 
@@ -115,7 +124,8 @@ def _texto_modelo(resposta) -> str:
     return "".join(b.text for b in resposta.content if b.type == "text")
 
 
-def selecionar(cliente, topico: str, candidatos: list) -> dict:
+def selecionar(cliente, topico: str, candidatos: list) -> tuple:
+    """Devolve (ranking, falhou); falhou por lote não impede aproveitar o resto."""
     try:
         return classificar(cliente, topico, FOCO_SETORIAL[topico], candidatos, MODELO)
     except Exception as erro:
@@ -290,7 +300,7 @@ def montar_html(selecao: dict, momento: str) -> str:
       <table role="presentation" width="600" cellpadding="0" cellspacing="0"
              style="max-width:600px;width:100%;background:#ffffff;border-radius:14px;
                     box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden">
-        <tr><td style="background:linear-gradient(135deg,#4338ca,#047857);padding:26px 32px">
+        <tr><td style="background-color:#4338ca;background:linear-gradient(135deg,#4338ca,#047857);padding:26px 32px">
           <div style="font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
                 color:rgba(255,255,255,.8)">
             🖥️ &nbsp;Panorama diário&nbsp; 🌱
@@ -374,21 +384,23 @@ def escolher_topico(cliente, topico, registros, estado, anteriores):
     usados, fatos = set(estado) | set(anteriores), set()
     detalhes_fatos = {}
     # Classifica TODOS, inclusive baixa prioridade, e retorna reservas sem limite de três rodadas.
-    ranking = selecionar(cliente, topico, [r["item"] for r in registros])
+    # Falha de um lote não descarta os demais: só os candidatos daquele lote ficam pendentes.
+    ranking, falhou = selecionar(cliente, topico, [r["item"] for r in registros])
     por_chave = {r["item"]["_fila_key"]: r for r in registros}
     for registro in registros:
         avaliacao = registro["item"].get("avaliacoes", {}).get(topico)
         registro["avaliado"][topico] = time.time()
-        if avaliacao and avaliacao["decisao"] != "elegivel":
+        if avaliacao is None:
+            auditar(registro, topico, "falha_ia", "Falha técnica no lote de avaliação; não é rejeição editorial. Será reavaliada.")
+        elif avaliacao["decisao"] != "elegivel":
             auditar(registro, topico, avaliacao["decisao"], avaliacao["motivo"])
-    falhou = False
     for bucket in ("BR", "US"):
         limite = MAX_BR if bucket == "BR" else MAX_US
         # Usa um limite otimista de prioridade para não resolver candidatos que
         # já não podem superar as vagas preenchidas por fontes prioritárias.
         resolvidos = []
         ordenados = sorted(ranking[bucket], key=lambda c: (
-            0 if google_pendente(c) or fonte_prioritaria(c) else 1,
+            0 if google_pendente(c) or prioritario(c, c.get("avaliacoes", {}).get(topico, {}).get("prioridade", 0)) else 1,
             -c.get("avaliacoes", {}).get(topico, {}).get("prioridade", 0), -c.get("publicado_em", 0), c["link"]))
         confirmados, fatos_confirmados, aliases_confirmados = 0, set(), set()
         for escolhido in ordenados:
@@ -409,14 +421,14 @@ def escolher_topico(cliente, topico, registros, estado, anteriores):
             resolvidos.append((registro, noticia, avaliacao))
             aliases = identidades(noticia)
             fato = avaliacao.get("fato")
-            if (fonte_prioritaria(noticia) and recente(noticia)
+            if (prioritario(noticia, avaliacao.get("prioridade", 0)) and recente(noticia)
                     and not aliases & (usados | aliases_confirmados)
                     and not (fato and fato in (fatos | fatos_confirmados))):
                 confirmados += 1
                 aliases_confirmados.update(aliases)
                 if fato:
                     fatos_confirmados.add(fato)
-        resolvidos.sort(key=lambda row: (0 if fonte_prioritaria(row[1]) else 1,
+        resolvidos.sort(key=lambda row: (0 if prioritario(row[1], row[2].get("prioridade", 0)) else 1,
                                         -row[2].get("prioridade", 0), -row[1].get("publicado_em", 0), row[1]["link"]))
         for registro, noticia, avaliacao in resolvidos:
             aliases = identidades(noticia)
