@@ -1,1 +1,224 @@
-null
+{
+  "aliases": [
+    "https://bloomberg.com/news/articles/2026-09-09/us-power-demand-forecast-cut-after-texas-pause-on-data-centers",
+    "https://broadcast.com.br/ultimas-noticias/mpf-e-dpu-pedem-paralisacao-de-mega-data-center-do-tiktok-no-ceara/",
+    "https://eixos.com.br/empresas/mpf-e-dpu-vao-a-justica-contra-operacao-de-data-center-do-tiktok-no-ceara/",
+    "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQSXJaaElyN29kY1hOcEg3cFl3NzBrT3NWRFVNd0NRYU5ycFBLVW9BVWp6VklGS3l5UXhRZmlhMGhfLVJXM2hvSG1uaTdWNTUzUFo4UHVkWGI3MFhGaFVNRF84eEM2XzE0QWotR2FWaEw2aUMxUGVrbTE1RThHQ0h5WVNqcmFtc2hTV2JlOFVlY3JfMjZPOUoySGJjTzUzRzVsZWRrSnp3aktyTm1LdTJaTUNvRVdtZ2tWc3NkV0lLcW5KT3NFV1g2OHdnX1E3RUxlRVV6Zm80V1J2N2RJSWJDd0toamJsMWc?oc=5",
+    "https://news.google.com/rss/articles/CBMijwFBVV95cUxPN21MTE5rdTF3M056V0oybjkxbk8xSWxZR1hIQ0JjNTY5ZkFXOFBjTktpRVpTTmRpSVp5UHBJZVlyUW5abjRNOENJb1YtWTBITFZxY21MSmswbjJkMjcyLTZCVGoyUi1peURZVGgyVlppMGw2NXNLTUhmYzQxZGxvOFFrLXNhbXRLaXpfa0szSQ?oc=5",
+    "https://news.google.com/rss/articles/CBMilAFBVV95cUxQWGJEbEYzdnNhdkxSUnZhZDF0bS1xUGtNSVlwME05UHo1M29PS3dIS2NoYWdQb1B5M1d3aFhSSF9XZDJzWC1JdHpGSDIxdTljd0JBeUhwZnZoOXdLYjRtZUNrZVUzeGE5dzlqSHNjeExLTjVMTnpBTWJ4Zkt1M1dFbWo3VF9kMEhMMnNlUS1GdUJaZ2x4?oc=5",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbm1qNGw4YkplUWpPM184SjNNZno0aVAtdXVxTnFYV1ZOeVpkTV8zSnd4bVVuN1FCekNGeWlDMWYzdEFIaWYySnBOWTFZWXROYld6STg5VTUyV2k4ejR5QnhERXhmMmN2SWZnOG5UaExuMTU3VGxRbHB3Z2t2c09hb2ZVVWVzQjBLUE9DaTdTSEV0Y0xfX0JpNFBUZGs3UW5MVmpTbndlSQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxOYmRvR0FsY3FWb2hDVXFUR0dZYUk3UGZQMGVQMGdYX0tMclJ3ckVqNUVxWUU5MXpzRjRzX09OelcwWEg4bFhFbXBfVXNPM1pWcWs1TkpacVdUWjNWRnVLWGFjU1pMWklua3pjRWJWMnktMDJxbm4xZDFRQVQ5cmhBQnJLNnhac0ZNb0ZRX09vaklRd1lkeFV0MlRnT3gycXVGbEdhcHJVYk0xb0F0NEo5VFUtUQ?oc=5",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOEtnQ3FaaFhhNFpCZnB6UnRySzVqTzMzVXBWcmZuU1ZxRElnNXhQdGxrU0gxZHBlN19lVGw0UnZwNlMyUjNGQ0VGTFVIa1diRjZnSUhzVkR0T0F4Sml1RmpVcG13QndSaGplTjZNRzh2VVQ0YVRPTHFodGdRMExOTmd1U2hkbkh4R2h4OHRVNFJ6WTIzQkNaY1hmLXZPWHJxRUpGRXRINWNHQlMxSk1mQTJrdw?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxQWVZsYUxNTmM5T3RxSGM2NFNQTm1HcURrYXNXWDdQTWx0MUg3UW5EZVdzb2xjSHFOa25LaV9jcEdyelBSNDZsSElzdVdZNFVVbWdha3U4SlBXRnZCS056UEFFemt0a3ItSnBCX0FFNGlSYWVMYm1jaXlKTmFUM0p3ZWljZXJobWZCZEU4ajFHLXFNUVFHZmRwTVNmd1R1Y0k4cUJXRDlRMWRHZlhkS1ZQOVJxUWZFalE?oc=5",
+    "https://petronoticias.com.br/as-empresas-petroleiras-terao-mais-um-trabalho-de-casa-a-fazer-com-a-regulacao-do-mercado-de-carbono-exigindo-precificacao/",
+    "https://telesintese.com.br/abracloud-pede-fast-track-para-redata-ter-efeito-ainda-em-2026/",
+    "https://vietnam.vn/pt/thi-truong-carbon-viet-nam-co-loi-the-gi-trong-cuoc-choi-moi",
+    "https://www1.folha.uol.com.br/mercado/2026/09/brasil-ve-china-como-potencial-compradora-de-creditos-de-carbono.shtml"
+  ],
+  "assunto": "Panorama Data Centers & Carbono — 11/09 (tarde)",
+  "itens": [
+    {
+      "_fila_key": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOEtnQ3FaaFhhNFpCZnB6UnRySzVqTzMzVXBWcmZuU1ZxRElnNXhQdGxrU0gxZHBlN19lVGw0UnZwNlMyUjNGQ0VGTFVIa1diRjZnSUhzVkR0T0F4Sml1RmpVcG13QndSaGplTjZNRzh2VVQ0YVRPTHFodGdRMExOTmd1U2hkbkh4R2h4OHRVNFJ6WTIzQkNaY1hmLXZPWHJxRUpGRXRINWNHQlMxSk1mQTJrdw?oc=5",
+      "aliases": [
+        "https://broadcast.com.br/ultimas-noticias/mpf-e-dpu-pedem-paralisacao-de-mega-data-center-do-tiktok-no-ceara/",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOEtnQ3FaaFhhNFpCZnB6UnRySzVqTzMzVXBWcmZuU1ZxRElnNXhQdGxrU0gxZHBlN19lVGw0UnZwNlMyUjNGQ0VGTFVIa1diRjZnSUhzVkR0T0F4Sml1RmpVcG13QndSaGplTjZNRzh2VVQ0YVRPTHFodGdRMExOTmd1U2hkbkh4R2h4OHRVNFJ6WTIzQkNaY1hmLXZPWHJxRUpGRXRINWNHQlMxSk1mQTJrdw?oc=5"
+      ],
+      "avaliacoes": {
+        "data_center": {
+          "bucket": "BR",
+          "decisao": "elegivel",
+          "fato": "tiktok-datacenter-ceara-paralisacao",
+          "indice": 27,
+          "motivo": "MPF e DPU pedem paralisação de mega data center do TikTok no Ceará. Regulação brasileira, impacto no setor elétrico local, informação substantiva sobre investimento no Brasil.",
+          "prioridade": 48,
+          "versao": 2
+        }
+      },
+      "fonte": "broadcast.com.br",
+      "link": "https://www.broadcast.com.br/ultimas-noticias/mpf-e-dpu-pedem-paralisacao-de-mega-data-center-do-tiktok-no-ceara/",
+      "origem": "BR",
+      "publicado_em": 1789076804,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxQOEtnQ3FaaFhhNFpCZnB6UnRySzVqTzMzVXBWcmZuU1ZxRElnNXhQdGxrU0gxZHBlN19lVGw0UnZwNlMyUjNGQ0VGTFVIa1diRjZnSUhzVkR0T0F4Sml1RmpVcG13QndSaGplTjZNRzh2VVQ0YVRPTHFodGdRMExOTmd1U2hkbkh4R2h4OHRVNFJ6WTIzQkNaY1hmLXZPWHJxRUpGRXRINWNHQlMxSk1mQTJrdw?oc=5\" target=\"_blank\">MPF e DPU pedem paralisação de mega data center do TikTok no Ceará</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">broadcast.com.br</font>",
+      "resumo_final": "MPF e DPU ajuizaram Ação Civil Pública em 10 de setembro de 2026 para impedir a operação do Data Center Pecém, no Ceará, até que sejam realizadas consulta ao povo indígena Anacé e elaboração de Estudo de Impacto Ambiental e Relatório de Impacto Ambiental. O empreendimento será ocupado pelo TikTok, construído pela Omnia (grupo Pátria Investimentos) em parceria com Casa dos Ventos, com investimentos previstos de R$ 200 bilhões até 2035, em área de cerca de 70 hectares.",
+      "titulo": "MPF e DPU pedem paralisação de mega data center do TikTok no Ceará",
+      "topico": "data_center",
+      "topicos": [
+        "data_center"
+      ]
+    },
+    {
+      "_fila_key": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbm1qNGw4YkplUWpPM184SjNNZno0aVAtdXVxTnFYV1ZOeVpkTV8zSnd4bVVuN1FCekNGeWlDMWYzdEFIaWYySnBOWTFZWXROYld6STg5VTUyV2k4ejR5QnhERXhmMmN2SWZnOG5UaExuMTU3VGxRbHB3Z2t2c09hb2ZVVWVzQjBLUE9DaTdTSEV0Y0xfX0JpNFBUZGs3UW5MVmpTbndlSQ?oc=5",
+      "aliases": [
+        "https://eixos.com.br/empresas/mpf-e-dpu-vao-a-justica-contra-operacao-de-data-center-do-tiktok-no-ceara/",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbm1qNGw4YkplUWpPM184SjNNZno0aVAtdXVxTnFYV1ZOeVpkTV8zSnd4bVVuN1FCekNGeWlDMWYzdEFIaWYySnBOWTFZWXROYld6STg5VTUyV2k4ejR5QnhERXhmMmN2SWZnOG5UaExuMTU3VGxRbHB3Z2t2c09hb2ZVVWVzQjBLUE9DaTdTSEV0Y0xfX0JpNFBUZGs3UW5MVmpTbndlSQ?oc=5"
+      ],
+      "avaliacoes": {
+        "data_center": {
+          "bucket": "BR",
+          "decisao": "elegivel",
+          "fato": "mpf_dpu_tiktok_datacenter_ceara",
+          "indice": 6,
+          "motivo": "Ação judicial contra operação de data center do TikTok no Ceará; impacto regulatório e legal sobre infraestrutura de data center no Brasil com implicações operacionais.",
+          "prioridade": 32,
+          "versao": 2
+        }
+      },
+      "fonte": "Agência eixos",
+      "link": "https://eixos.com.br/empresas/mpf-e-dpu-vao-a-justica-contra-operacao-de-data-center-do-tiktok-no-ceara/",
+      "origem": "BR",
+      "publicado_em": 1789150351,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPbm1qNGw4YkplUWpPM184SjNNZno0aVAtdXVxTnFYV1ZOeVpkTV8zSnd4bVVuN1FCekNGeWlDMWYzdEFIaWYySnBOWTFZWXROYld6STg5VTUyV2k4ejR5QnhERXhmMmN2SWZnOG5UaExuMTU3VGxRbHB3Z2t2c09hb2ZVVWVzQjBLUE9DaTdTSEV0Y0xfX0JpNFBUZGs3UW5MVmpTbndlSQ?oc=5\" target=\"_blank\">MPF e DPU vão à Justiça contra operação de data center do TikTok no Ceará</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Agência eixos</font>",
+      "resumo_final": "MPF e DPU acionaram a Justiça para impedir que o Data Center Pecém, em Caucaia (CE), inicie operações antes de consulta ao povo indígena Anacé e elaboração de EIA/Rima. O empreendimento terá área de cerca de 70 hectares, duas edificações principais, 120 geradores a diesel, potência instalada de 300 MW e captação de água subterrânea para resfriamento. Perícia técnica do MPF em dezembro de 2025 questionou o licenciamento ambiental, especialmente quanto aos geradores a diesel e consumo de água; licenças prévia e de instalação já foram concedidas.",
+      "titulo": "MPF e DPU vão à Justiça contra operação de data center do TikTok no Ceará",
+      "topico": "data_center",
+      "topicos": [
+        "data_center"
+      ]
+    },
+    {
+      "_fila_key": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQWGJEbEYzdnNhdkxSUnZhZDF0bS1xUGtNSVlwME05UHo1M29PS3dIS2NoYWdQb1B5M1d3aFhSSF9XZDJzWC1JdHpGSDIxdTljd0JBeUhwZnZoOXdLYjRtZUNrZVUzeGE5dzlqSHNjeExLTjVMTnpBTWJ4Zkt1M1dFbWo3VF9kMEhMMnNlUS1GdUJaZ2x4?oc=5",
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxQWGJEbEYzdnNhdkxSUnZhZDF0bS1xUGtNSVlwME05UHo1M29PS3dIS2NoYWdQb1B5M1d3aFhSSF9XZDJzWC1JdHpGSDIxdTljd0JBeUhwZnZoOXdLYjRtZUNrZVUzeGE5dzlqSHNjeExLTjVMTnpBTWJ4Zkt1M1dFbWo3VF9kMEhMMnNlUS1GdUJaZ2x4?oc=5",
+        "https://telesintese.com.br/abracloud-pede-fast-track-para-redata-ter-efeito-ainda-em-2026/"
+      ],
+      "avaliacoes": {
+        "data_center": {
+          "bucket": "BR",
+          "decisao": "elegivel",
+          "fato": "abracloud-redata-fast-track-2026",
+          "indice": 15,
+          "motivo": "AbraCloud solicita fast track para regulação Redata entrar em vigor em 2026. Impacto regulatório direto e significativo para setor de data centers no Brasil.",
+          "prioridade": 30,
+          "versao": 2
+        }
+      },
+      "fonte": "telesintese.com.br",
+      "link": "https://telesintese.com.br/abracloud-pede-fast-track-para-redata-ter-efeito-ainda-em-2026/",
+      "origem": "BR",
+      "publicado_em": 1788901507,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxQWGJEbEYzdnNhdkxSUnZhZDF0bS1xUGtNSVlwME05UHo1M29PS3dIS2NoYWdQb1B5M1d3aFhSSF9XZDJzWC1JdHpGSDIxdTljd0JBeUhwZnZoOXdLYjRtZUNrZVUzeGE5dzlqSHNjeExLTjVMTnpBTWJ4Zkt1M1dFbWo3VF9kMEhMMnNlUS1GdUJaZ2x4?oc=5\" target=\"_blank\">AbraCloud pede “fast track” para Redata ter efeito ainda em 2026</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">telesintese.com.br</font>",
+      "resumo_final": "AbraCloud protocolou carta em 8 de setembro propondo regime transitório de implementação do Redata para acelerar habilitação de empresas e permitir que investimentos ocorram em 2026. A proposta, denominada \"Redata Fast Track\", prevê apresentação progressiva de comprovações em marcos de três e seis meses, além de dividir regulamentação em etapas, mantendo todas as obrigações do regime.",
+      "titulo": "AbraCloud pede “fast track” para Redata ter efeito ainda em 2026",
+      "topico": "data_center",
+      "topicos": [
+        "data_center"
+      ]
+    },
+    {
+      "_fila_key": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOYmRvR0FsY3FWb2hDVXFUR0dZYUk3UGZQMGVQMGdYX0tMclJ3ckVqNUVxWUU5MXpzRjRzX09OelcwWEg4bFhFbXBfVXNPM1pWcWs1TkpacVdUWjNWRnVLWGFjU1pMWklua3pjRWJWMnktMDJxbm4xZDFRQVQ5cmhBQnJLNnhac0ZNb0ZRX09vaklRd1lkeFV0MlRnT3gycXVGbEdhcHJVYk0xb0F0NEo5VFUtUQ?oc=5",
+      "aliases": [
+        "https://bloomberg.com/news/articles/2026-09-09/us-power-demand-forecast-cut-after-texas-pause-on-data-centers",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOYmRvR0FsY3FWb2hDVXFUR0dZYUk3UGZQMGVQMGdYX0tMclJ3ckVqNUVxWUU5MXpzRjRzX09OelcwWEg4bFhFbXBfVXNPM1pWcWs1TkpacVdUWjNWRnVLWGFjU1pMWklua3pjRWJWMnktMDJxbm4xZDFRQVQ5cmhBQnJLNnhac0ZNb0ZRX09vaklRd1lkeFV0MlRnT3gycXVGbEdhcHJVYk0xb0F0NEo5VFUtUQ?oc=5"
+      ],
+      "avaliacoes": {
+        "data_center": {
+          "bucket": "US",
+          "decisao": "elegivel",
+          "fato": "texas-datacenter-pause-energia",
+          "indice": 26,
+          "motivo": "Previsão de demanda elétrica dos EUA cortada após pausa no Texas sobre data centers. Impacto direto no sistema elétrico, regulação e demanda de energia.",
+          "prioridade": 45,
+          "versao": 2
+        }
+      },
+      "fonte": "Bloomberg.com",
+      "link": "https://www.bloomberg.com/news/articles/2026-09-09/us-power-demand-forecast-cut-after-texas-pause-on-data-centers",
+      "origem": "INT",
+      "publicado_em": 1788975346,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxOYmRvR0FsY3FWb2hDVXFUR0dZYUk3UGZQMGVQMGdYX0tMclJ3ckVqNUVxWUU5MXpzRjRzX09OelcwWEg4bFhFbXBfVXNPM1pWcWs1TkpacVdUWjNWRnVLWGFjU1pMWklua3pjRWJWMnktMDJxbm4xZDFRQVQ5cmhBQnJLNnhac0ZNb0ZRX09vaklRd1lkeFV0MlRnT3gycXVGbEdhcHJVYk0xb0F0NEo5VFUtUQ?oc=5\" target=\"_blank\">US Power-Demand Forecast Cut After Texas Pause on Data Centers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "resumo_final": "US Power-Demand Forecast Cut After Texas Pause on Data Centers  Bloomberg.com",
+      "titulo": "US Power-Demand Forecast Cut After Texas Pause on Data Centers",
+      "topico": "data_center",
+      "topicos": [
+        "data_center"
+      ]
+    },
+    {
+      "_fila_key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQWVZsYUxNTmM5T3RxSGM2NFNQTm1HcURrYXNXWDdQTWx0MUg3UW5EZVdzb2xjSHFOa25LaV9jcEdyelBSNDZsSElzdVdZNFVVbWdha3U4SlBXRnZCS056UEFFemt0a3ItSnBCX0FFNGlSYWVMYm1jaXlKTmFUM0p3ZWljZXJobWZCZEU4ajFHLXFNUVFHZmRwTVNmd1R1Y0k4cUJXRDlRMWRHZlhkS1ZQOVJxUWZFalE?oc=5",
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQWVZsYUxNTmM5T3RxSGM2NFNQTm1HcURrYXNXWDdQTWx0MUg3UW5EZVdzb2xjSHFOa25LaV9jcEdyelBSNDZsSElzdVdZNFVVbWdha3U4SlBXRnZCS056UEFFemt0a3ItSnBCX0FFNGlSYWVMYm1jaXlKTmFUM0p3ZWljZXJobWZCZEU4ajFHLXFNUVFHZmRwTVNmd1R1Y0k4cUJXRDlRMWRHZlhkS1ZQOVJxUWZFalE?oc=5",
+        "https://www1.folha.uol.com.br/mercado/2026/09/brasil-ve-china-como-potencial-compradora-de-creditos-de-carbono.shtml"
+      ],
+      "avaliacoes": {
+        "carbono": {
+          "bucket": "BR",
+          "decisao": "elegivel",
+          "fato": "brasil_china_creditos_carbono_cop31",
+          "indice": 3,
+          "motivo": "Mesma cobertura do índice 2 sobre Brasil-China e créditos de carbono. Duplicata em fonte de maior circulação nacional.",
+          "prioridade": 18,
+          "versao": 2
+        }
+      },
+      "fonte": "Folha de S.Paulo",
+      "link": "https://www1.folha.uol.com.br/mercado/2026/09/brasil-ve-china-como-potencial-compradora-de-creditos-de-carbono.shtml",
+      "origem": "BR",
+      "publicado_em": 1788973200,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQWVZsYUxNTmM5T3RxSGM2NFNQTm1HcURrYXNXWDdQTWx0MUg3UW5EZVdzb2xjSHFOa25LaV9jcEdyelBSNDZsSElzdVdZNFVVbWdha3U4SlBXRnZCS056UEFFemt0a3ItSnBCX0FFNGlSYWVMYm1jaXlKTmFUM0p3ZWljZXJobWZCZEU4ajFHLXFNUVFHZmRwTVNmd1R1Y0k4cUJXRDlRMWRHZlhkS1ZQOVJxUWZFalE?oc=5\" target=\"_blank\">Brasil vê China como potencial compradora de créditos de carbono</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Folha de S.Paulo</font>",
+      "resumo_final": "A secretária extraordinária do Mercado de Carbono, Cristina Reis, afirmou que delegação brasileira avaliará durante missão à China a possibilidade de Pequim comprar créditos de carbono brasileiros e avançar negociações para acordo bilateral a ser anunciado na COP31 em novembro. Discussões ocorrerão em Wuhan entre 14 e 18 de setembro, onde coalizão liderada por Brasil, China e União Europeia (jurisdições responsáveis por 42% das emissões globais) aprovará plano de trabalho para convergência de sistemas de comércio de emissões.",
+      "titulo": "Brasil vê China como potencial compradora de créditos de carbono",
+      "topico": "carbono",
+      "topicos": [
+        "carbono"
+      ]
+    },
+    {
+      "_fila_key": "https://petronoticias.com.br/as-empresas-petroleiras-terao-mais-um-trabalho-de-casa-a-fazer-com-a-regulacao-do-mercado-de-carbono-exigindo-precificacao/",
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQSXJaaElyN29kY1hOcEg3cFl3NzBrT3NWRFVNd0NRYU5ycFBLVW9BVWp6VklGS3l5UXhRZmlhMGhfLVJXM2hvSG1uaTdWNTUzUFo4UHVkWGI3MFhGaFVNRF84eEM2XzE0QWotR2FWaEw2aUMxUGVrbTE1RThHQ0h5WVNqcmFtc2hTV2JlOFVlY3JfMjZPOUoySGJjTzUzRzVsZWRrSnp3aktyTm1LdTJaTUNvRVdtZ2tWc3NkV0lLcW5KT3NFV1g2OHdnX1E3RUxlRVV6Zm80V1J2N2RJSWJDd0toamJsMWc?oc=5",
+        "https://petronoticias.com.br/as-empresas-petroleiras-terao-mais-um-trabalho-de-casa-a-fazer-com-a-regulacao-do-mercado-de-carbono-exigindo-precificacao/"
+      ],
+      "avaliacoes": {
+        "carbono": {
+          "bucket": "BR",
+          "decisao": "elegivel",
+          "fato": "precificacao_carbono_petroleiras_br",
+          "indice": 1,
+          "motivo": "Mesma cobertura do índice 0 sobre regulação de mercado de carbono brasileiro para petroleiras. Duplicata com mesmo fato, fonte menor prioridade comparada a Fator Brasil.",
+          "prioridade": 15,
+          "versao": 2
+        }
+      },
+      "fonte": "Petronotícias",
+      "link": "https://petronoticias.com.br/as-empresas-petroleiras-terao-mais-um-trabalho-de-casa-a-fazer-com-a-regulacao-do-mercado-de-carbono-exigindo-precificacao/",
+      "origem": "BR",
+      "publicado_em": 1788966000,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMi5wFBVV95cUxQSXJaaElyN29kY1hOcEg3cFl3NzBrT3NWRFVNd0NRYU5ycFBLVW9BVWp6VklGS3l5UXhRZmlhMGhfLVJXM2hvSG1uaTdWNTUzUFo4UHVkWGI3MFhGaFVNRF84eEM2XzE0QWotR2FWaEw2aUMxUGVrbTE1RThHQ0h5WVNqcmFtc2hTV2JlOFVlY3JfMjZPOUoySGJjTzUzRzVsZWRrSnp3aktyTm1LdTJaTUNvRVdtZ2tWc3NkV0lLcW5KT3NFV1g2OHdnX1E3RUxlRVV6Zm80V1J2N2RJSWJDd0toamJsMWc?oc=5\" target=\"_blank\">AS EMPRESAS PETROLEIRAS TERÃO MAIS UM TRABALHO DE CASA A FAZER COM A REGULAÇÃO DO MERCADO DE CARBONO EXIGINDO PRECIFICAÇÃO</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Petronotícias</font>",
+      "resumo_final": "Ministério da Fazenda, ANP, IBP e grandes petroleiras debatem diretrizes de Monitoramento, Relato e Verificação (MRV) para gases de efeito estufa. Com o Sistema Brasileiro de Comércio de Emissões (SBCE) com cumprimento de obrigações iniciando em 2027, empresas petrolíferas enfrentam desafio de provisionar financeiramente o custo de suas emissões, passando o mercado de carbono de agenda de sustentabilidade para variável crítica de governança corporativa e competitividade.",
+      "titulo": "AS EMPRESAS PETROLEIRAS TERÃO MAIS UM TRABALHO DE CASA A FAZER COM A REGULAÇÃO DO MERCADO DE CARBONO EXIGINDO PRECIFICAÇÃO",
+      "topico": "carbono",
+      "topicos": [
+        "carbono"
+      ]
+    },
+    {
+      "_fila_key": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPN21MTE5rdTF3M056V0oybjkxbk8xSWxZR1hIQ0JjNTY5ZkFXOFBjTktpRVpTTmRpSVp5UHBJZVlyUW5abjRNOENJb1YtWTBITFZxY21MSmswbjJkMjcyLTZCVGoyUi1peURZVGgyVlppMGw2NXNLTUhmYzQxZGxvOFFrLXNhbXRLaXpfa0szSQ?oc=5",
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxPN21MTE5rdTF3M056V0oybjkxbk8xSWxZR1hIQ0JjNTY5ZkFXOFBjTktpRVpTTmRpSVp5UHBJZVlyUW5abjRNOENJb1YtWTBITFZxY21MSmswbjJkMjcyLTZCVGoyUi1peURZVGgyVlppMGw2NXNLTUhmYzQxZGxvOFFrLXNhbXRLaXpfa0szSQ?oc=5",
+        "https://vietnam.vn/pt/thi-truong-carbon-viet-nam-co-loi-the-gi-trong-cuoc-choi-moi"
+      ],
+      "avaliacoes": {
+        "carbono": {
+          "bucket": "US",
+          "decisao": "elegivel",
+          "fato": "vietna_mercado_carbono_vantagens",
+          "indice": 4,
+          "motivo": "Análise sobre posicionamento do Vietnã em mercado de carbono. Tema elegível mas sem fato novo substantivo identificável, perspectiva internacional sem impacto direto Brasil, baixa prioridade.",
+          "prioridade": 8,
+          "versao": 2
+        }
+      },
+      "fonte": "Vietnam.vn",
+      "link": "https://www.vietnam.vn/pt/thi-truong-carbon-viet-nam-co-loi-the-gi-trong-cuoc-choi-moi",
+      "origem": "BR",
+      "publicado_em": 1789142158,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPN21MTE5rdTF3M056V0oybjkxbk8xSWxZR1hIQ0JjNTY5ZkFXOFBjTktpRVpTTmRpSVp5UHBJZVlyUW5abjRNOENJb1YtWTBITFZxY21MSmswbjJkMjcyLTZCVGoyUi1peURZVGgyVlppMGw2NXNLTUhmYzQxZGxvOFFrLXNhbXRLaXpfa0szSQ?oc=5\" target=\"_blank\">Mercado de carbono: Quais são as vantagens do Vietnã nesse novo cenário?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Vietnam.vn</font>",
+      "resumo_final": "Durante Semana de Conferências em Da Nang (10 e 11 de setembro), especialistas destacaram vantagens do Vietnã no mercado de carbono. Com 14,8 milhões de hectares de floresta (42% do território), 200 mil hectares de mangues absorvendo 70 milhões de toneladas de CO2 anualmente e meta de 1 milhão de hectares de arroz de baixa emissão no Delta do Mekong até 2030, Vietnã é principal vendedor de créditos de carbono por remoção natural. O país transferiu 10,3 milhões de toneladas de reduções de CO2e entre 2018 e 2024, gerando USD 51,5 milhões a preço fixo de USD 5/tonelada.",
+      "titulo": "Mercado de carbono: Quais são as vantagens do Vietnã nesse novo cenário?",
+      "topico": "carbono",
+      "topicos": [
+        "carbono"
+      ]
+    }
+  ]
+}
