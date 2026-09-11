@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxOejFDdG5XNFNxWHBrNEt6bS1rbVotMHg2NndsMlRBbll6eVBCRXBib194RFFVY0x1YXVSejVZMlJNcE9GZGctRkF5UDN6aEZONnlidk9JdVFNQjdmQk9wcjZENnhsZ2gzeGxXZzN0UmFQaUs0SmJHREFJTEZLMWE5U09SOHFkMjNBa2lHWi1SRDRSUEVldFJKcFBaNVlnNTdrdHpxMHJOc2EtbjJud2g2UHRfcWQyMFU?oc=5",
+    "https://reuters.com/legal/legalindustry/law-firm-quinn-emanuel-wins-fight-over-role-data-center-case-2026-09-11/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMitwFBVV95cUxOejFDdG5XNFNxWHBrNEt6bS1rbVotMHg2NndsMlRBbll6eVBCRXBib194RFFVY0x1YXVSejVZMlJNcE9GZGctRkF5UDN6aEZONnlidk9JdVFNQjdmQk9wcjZENnhsZ2gzeGxXZzN0UmFQaUs0SmJHREFJTEZLMWE5U09SOHFkMjNBa2lHWi1SRDRSUEVldFJKcFBaNVlnNTdrdHpxMHJOc2EtbjJud2g2UHRfcWQyMFU?oc=5",
+      "https://reuters.com/legal/legalindustry/law-firm-quinn-emanuel-wins-fight-over-role-data-center-case-2026-09-11/"
+    ],
+    "fonte": "Reuters",
+    "link": "https://www.reuters.com/legal/legalindustry/law-firm-quinn-emanuel-wins-fight-over-role-data-center-case-2026-09-11/",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxOejFDdG5XNFNxWHBrNEt6bS1rbVotMHg2NndsMlRBbll6eVBCRXBib194RFFVY0x1YXVSejVZMlJNcE9GZGctRkF5UDN6aEZONnlidk9JdVFNQjdmQk9wcjZENnhsZ2gzeGxXZzN0UmFQaUs0SmJHREFJTEZLMWE5U09SOHFkMjNBa2lHWi1SRDRSUEVldFJKcFBaNVlnNTdrdHpxMHJOc2EtbjJud2g2UHRfcWQyMFU?oc=5\" target=\"_blank\">Law firm Quinn Emanuel wins fight over role in data center case</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+    "titulo": "Law firm Quinn Emanuel wins fight over role in data center case",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
