@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxQV3dtZDdjamFXRTRWNzQzQm5jU0N6YUh4bVBBVDRDTGM5blZxTDZya0t6Tm5yTWxMTWxibzNTNDhPaDVqUXhHQjZNZHBicVN5NWtoSUNURzRqaEVEd1R5bWVFdjdodmhPQWcxQlh4aE9nckRJNnRxS1d0UFBEeXp2TDdvcjA4LWVhMGxsVTFBNFV3ZW9WUWlsNHVOZGVOQ2p1aEtfY08zNA?oc=5",
+    "https://semafor.com/article/09/11/2026/chipmaker-onsemi-says-data-centers-should-report-energy-waste"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMipwFBVV95cUxQV3dtZDdjamFXRTRWNzQzQm5jU0N6YUh4bVBBVDRDTGM5blZxTDZya0t6Tm5yTWxMTWxibzNTNDhPaDVqUXhHQjZNZHBicVN5NWtoSUNURzRqaEVEd1R5bWVFdjdodmhPQWcxQlh4aE9nckRJNnRxS1d0UFBEeXp2TDdvcjA4LWVhMGxsVTFBNFV3ZW9WUWlsNHVOZGVOQ2p1aEtfY08zNA?oc=5",
+      "https://semafor.com/article/09/11/2026/chipmaker-onsemi-says-data-centers-should-report-energy-waste"
+    ],
+    "fonte": "Semafor",
+    "link": "https://www.semafor.com/article/09/11/2026/chipmaker-onsemi-says-data-centers-should-report-energy-waste",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxQV3dtZDdjamFXRTRWNzQzQm5jU0N6YUh4bVBBVDRDTGM5blZxTDZya0t6Tm5yTWxMTWxibzNTNDhPaDVqUXhHQjZNZHBicVN5NWtoSUNURzRqaEVEd1R5bWVFdjdodmhPQWcxQlh4aE9nckRJNnRxS1d0UFBEeXp2TDdvcjA4LWVhMGxsVTFBNFV3ZW9WUWlsNHVOZGVOQ2p1aEtfY08zNA?oc=5\" target=\"_blank\">Chipmaker says data centers should report energy waste</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Semafor</font>",
+    "titulo": "Chipmaker says data centers should report energy waste",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
