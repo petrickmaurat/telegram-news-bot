@@ -94,11 +94,11 @@ menos relevante:
 [{{"indice": 0, "bucket": "BR", "motivo": "aporte de R$ X / decisão da ANEEL / ..."}}]
 """
 
-PROMPT_RESUMO = """Escreva, para cada matéria abaixo, UM PARÁGRAFO (4 a 6 frases) em
-português do Brasil, em tom jornalístico e objetivo. O parágrafo deve trazer: o fato
-central, os valores financeiros envolvidos, as empresas e órgãos citados, e o impacto
-regulatório, político ou para o setor elétrico. Seja específico com números, nomes e
-prazos. Não invente nada que não esteja no texto fornecido.
+PROMPT_RESUMO = """Escreva, para cada matéria abaixo, UM PARÁGRAFO CURTO (2 a 3 frases,
+no máximo ~60 palavras) em português do Brasil, em tom jornalístico e direto. Traga
+só o essencial: o fato central, o número mais importante (valor financeiro, MW, %...)
+e, se houver, o órgão/empresa envolvido. Sem introdução, sem floreio. Não invente nada
+que não esteja no texto fornecido.
 
 {blocos}
 

@@ -11,7 +11,23 @@ import json
 import os
 
 import feedparser
+import requests
 from googlenewsdecoder import gnewsdecoder
+
+
+def _parse_feed(url: str, tentativas: int = 2, timeout: int = 15):
+    """feedparser não tem timeout/retry embutido: uma falha de rede
+    passageira vira silenciosamente 'feed vazio'. Buscamos via
+    requests (com timeout e retry) e só então passamos pro feedparser."""
+    for tentativa in range(tentativas):
+        try:
+            resposta = requests.get(url, timeout=timeout, headers={"User-Agent": "Mozilla/5.0"})
+            resposta.raise_for_status()
+            return feedparser.parse(resposta.content)
+        except Exception as erro:
+            if tentativa == tentativas - 1:
+                print(f"Aviso: falha ao buscar {url} após {tentativas} tentativa(s): {erro}")
+    return feedparser.parse(b"")
 
 # Busca no Google Notícias — cobre qualquer veículo indexado, o que
 # nos dá de graça Valor, Folha, Estadão, CNN, Reuters, FT, WaPo, etc.
@@ -141,7 +157,7 @@ def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True) -> 
     for topico in alvos:
         cfg = TOPICOS[topico]
         for feed_info in cfg["feeds"]:
-            feed = feedparser.parse(feed_info["url"])
+            feed = _parse_feed(feed_info["url"])
             if feed.bozo:
                 print(f"Aviso: não consegui ler corretamente {feed_info['url']}")
 
