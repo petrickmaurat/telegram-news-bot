@@ -1,1 +1,677 @@
-null
+{
+  "aliases": [
+    "https://agenciainfra.com/blog/artigo-desafios-para-implementacao-do-programa-probioqav-no-brasil/",
+    "https://br.tradingview.com/news/reuters.com,2026:newsml_L1N4530I4:0/",
+    "https://brasilenergia.com.br/energia/consumidor/mpf-questiona-operacao-de-data-center-do-tiktok-no-pecem",
+    "https://brasilenergia.com.br/energia/governo-regulacao/aneel-propoe-novas-regras-para-conexao-de-baterias-e-veiculos",
+    "https://canarymedia.com/articles/batteries/the-battery-era-is-here-and-china-is-supplying-it",
+    "https://eixos.com.br/energia-eletrica/aneel-fara-consulta-publica-sobre-modernizacao-da-conexao-a-rede-eletrica/",
+    "https://estadao.com.br/coluna-da-broad/leilao-de-baterias-atrai-grandes-empresas-e-pode-demandar-r-25-bi-em-investimentos/",
+    "https://estadao.com.br/economia/brasil-cooperacao-china-mercados-carbono/",
+    "https://euobserver.com/236956/lead-centre-right-mep-suggests-softening-emissions-trading-to-help-suffering-industries/",
+    "https://ft.com/content/29d0d34e-9a21-450d-ab07-f3744437926c?syn-25a6b1a6=1",
+    "https://news.google.com/rss/articles/CBMid0FVX3lxTE1qOHpVdjdISlJsc1dwUlA5UjVjTGxYTmJUODJ5cUhTNnB3WXp4ajNCaE5JNnhxaVlLUnYzMXNadURTWFgyRkQ5OEFxc3RFNkpSbGVXd2xZazJNZExERktPU19ubERFbHVDdDVXeHdTVVRUbm5pWGkw?oc=5",
+    "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeE85TGx5dVRaYml3UG9ib0xWTHJHQVI0aW03aVdiSDk1WkE1aXB6VjFPNmtDSkhfZXlMejBMb2FVd1RkUDZjX2ZwT3FlSVRjb0xZd09XOHJsQ3J1VlBqYnVRT251UEV6eW1xcENtT1hIdmFTekk5TGR5RUVBd09mZnZFb9IBiAFBVV95cUxQTVRkV3RjMzhNdGlRUHYtREtkd1R1Q2h1UlhSeWc2MXF5OWpEZ0VjWHpWajJkMzBaaWdQWnRfVTJjVE9lU0RIc2dud0NDYVZCRWZvSl9lYzRIM0pzSk9FT2JxbHVjdElYVjR5U2FGWHR3TDBrNWtGTUxleXh4T2c2WWJHa3lRQXY3?oc=5",
+    "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMzFRZk5yU3ZoNk9kdG1CcEU3RXR3bkxNdHVTT1lfYm5zdktVc2htNlNSX2lMQWZZSlAzNmVEVGpaZW0zTDROQld3NTc4bF9vYUhYNXp4S29wRFBMTmFhM09oWjI5TzFoT3hidV9oMWVsYWNTYVFNY3lOcnZSSmh2Z1RsY1U?oc=5",
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxPd05LUHkybndzNVducm4yLTBjcFZhTF9DWDRndnNlLWtjLWM0Mk56S2JXeWRDR1lnWTk0ZjRPN0RvN0dnWVdNeFlwczVzNnI5b1BDVmhUYy1PMU1SSkhYYzRQSnNNc05hU1Y1eklzZU5pSXo3RF9wZnYxWm1tZkNWOV95WmRjLXNkMU85ZkVqT1BrRE45ci16WldvVQ?oc=5",
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxQQWdhd2x5YUYtdGdSRlY5ektoYmE0UEVfbFlTRWY4ZEhIUlBpYXhTWDhtVThwbE55TEF4YVFOQzREQ0lqcE81ZWVHRVZfRUxScEJuR1dnTkE5MG1aYno0VmYyckpCZTdtcVRpVFJBODhyY0VxbzBZT29BMmVXNTdlUjNfMWI1dUFvOF9FUzFJZHNkaGdXc1k1ME1NYmE?oc=5",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxPaDgzTHFQd2FMTXlYUENVU1BHdUY2M0hLbkRFbXNqS2RUTXNIWG9LaEJTUXUzV0NEQlRmQ05jVlRXX2d1NTMyazVWSDZuaEZQcVdqSzdoSFBJV3E4NGVyeHBHXzNDYUhidE9wa2dGV3p3YkUxN0pEWElVV3htNWh4WVZkR1Z4cTU1OVRpb09sWXR3bDd6cTdWU1NpU1dFdw?oc=5",
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRTZGUTlqSEQ3VTNDQ0RHb1VIbFJDcEpoNlNSRFQ0cENHWENSc05TQ0duY2xiZVE3blEyU3RXOWFFd0Myc25jYXFaZEwxeVZxRE5IbHlNa2cwVy03ZkphTkFZMWp3dGRqUlByM0U4VVJ2aVlhdmtHUW9kRDV1RUhvNEt1TU5NU3VTUktXRGhDY243N0RGaGRaUTJIM20wRXktSWhaa1NaOA?oc=5",
+    "https://news.google.com/rss/articles/CBMirgFBVV95cUxNcGlWeGFlRDRYZVowU2Y0Y0FJTlRmQW5ubjJwNGcxb3NsQnRBUVo5eWtMdnhoSlAzM0FKdlJHWkpJR2lxZUZHcWg5cFBqb1NxNm9Ma0MwR3AweEZpUEFTZ1JRZ3pjSDN6V2VOdE1nUjhBQU1PdlJ5Z29xSDloZHZOOExRbHotYVlRUDd0X2tpa2JVR3U1NTBHc3VhZkYzMDN4ZE9KWl9lZnFBZzkwZEE?oc=5",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWlN2ZXc1dXV4enUxbUZfTVc3QmhrTGRGUUwybUtuR2N4TkJraGI3eEJtZ29EbU02dDVPSks2QnN2ZjgwSThkYmtWSThYV0xfSWdSRnJmS0gtQzZzZ2dlNGJ5alNVX2hLZWpKMEdVaDZJVHZJb3BuV1J1SWZscnVaaXZCTU9Rc1J0Nms0UFk5MFQ1VDNhN0JmdjQ1ZWdfM1Z5SS11NC1oZTB6TDk4ZjJmazdn?oc=5",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxQRUxjeVZZYXlUVkRlZGVTUmJSWmdQYkU2a2xvWmwwUU84OEJnZzRBVXk1X1QtNEgzWTVBRHhQMkdlRzh0TXVNUVRrUDlQazJFWVg5SGwtT3pBYmktUGdDNmdEUi01RHN5RDEwa3ExcEQ0eUgwXzV4Q2o5VEZfcmFMM3l1Nm5DSTRoRHFJWjh1UjUydVZWbGI5N2k3RUVZa2J1SVk5b3dGb2tyb2ZPX0hGcnVSV3F6Z3c?oc=5",
+    "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTnZSSzdldWF3cTJLNWw1S3VlRHNrY21IQ2M0NmRUak9xcTc5TnN6ZnJrUTlBVXZoWTNLVFNGbnVEbXEyUFcxRFhXWk8yM1pNLU54eHdzc053SGdETURkNUVLWHRmNmpCVkU4aXpGbUpoSTJUZDdVQkJldTFIUGgwNGpBYkZwSFZ1UUdYdENBdkx3ZkIwaEx0YngwcXE0X3lURkhPRVA2ZE1TeUQxa01LdzFzeFRqY1NSdFE?oc=5",
+    "https://news.google.com/rss/articles/CBMixAFBVV95cUxNdUgwejgyNVp4Z2JHZ3RqT3BIeS1xY1hNNllyMnZWYjJzZ00wNnZ6YzRaTjFYSnlPMExCNk5jckNKdm50N1RJT0ltTDVkZXUwMUY0S2ZqdEtCWkpjazk3MmJGSjd2ODMxdnM0YkVjNGhtdTVSX0xQTlE2YnBBWTBfRi1uSW9aZUxUZkUtOFl6alNoZm0zRkxkaXRqYzA2eEZha2lnSUVZN1dLSGpqMHNBVnVWRHFFeEZXR0h1QTFVaUhqMjZ40gHKAUFVX3lxTE5nQUVhUk1HeXYyNmM5Tmhkbm1XczFUNmRta3JYMTloX0std245ZDVYRS02OUFscUQzNjdmclZlMVZzU0hIMklEWDlJNHZlVkh0el84cGd6VFNGVzlTWUpSU2d6NEsyejA3VEtSMS1UOG5PaFhQcnFwSlVSZkEwcTdyc1VUQkpybUNCRWhRZmtSdEFPSEZvM1QxS1IwNFBPMS1YeFJyRjZRbjJVanVPaTVzT3RXR1NqQTRrS1V3SU5rNllKTXFhUHNtV2c?oc=5",
+    "https://poder360.com.br/brasil/fazenda-envia-delegacao-a-china-para-reunioes-sobre-carbono/",
+    "https://reuters.com/business/media-telecom/google-invest-15-billion-ai-infrastructure-finland-2026-09-09/"
+  ],
+  "assunto": "Panorama Data Centers, Baterias & Carbono — 11/09 (tarde)",
+  "itens": [
+    {
+      "_assinatura_ranking": "091a0cc09de90bbce653f89c0bf955444e85b30ca7ce63673d00c000dad09e18",
+      "_fila_key": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQRUxjeVZZYXlUVkRlZGVTUmJSWmdQYkU2a2xvWmwwUU84OEJnZzRBVXk1X1QtNEgzWTVBRHhQMkdlRzh0TXVNUVRrUDlQazJFWVg5SGwtT3pBYmktUGdDNmdEUi01RHN5RDEwa3ExcEQ0eUgwXzV4Q2o5VEZfcmFMM3l1Nm5DSTRoRHFJWjh1UjUydVZWbGI5N2k3RUVZa2J1SVk5b3dGb2tyb2ZPX0hGcnVSV3F6Z3c?oc=5",
+      "aliases": [
+        "https://brasilenergia.com.br/energia/governo-regulacao/aneel-propoe-novas-regras-para-conexao-de-baterias-e-veiculos",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQRUxjeVZZYXlUVkRlZGVTUmJSWmdQYkU2a2xvWmwwUU84OEJnZzRBVXk1X1QtNEgzWTVBRHhQMkdlRzh0TXVNUVRrUDlQazJFWVg5SGwtT3pBYmktUGdDNmdEUi01RHN5RDEwa3ExcEQ0eUgwXzV4Q2o5VEZfcmFMM3l1Nm5DSTRoRHFJWjh1UjUydVZWbGI5N2k3RUVZa2J1SVk5b3dGb2tyb2ZPX0hGcnVSV3F6Z3c?oc=5"
+      ],
+      "avaliacoes": {
+        "data_center": {
+          "bucket": "BR",
+          "decisao": "elegivel",
+          "fato": "aneel-regras-conexao-baterias",
+          "indice": 2,
+          "motivo": "Regulação da Aneel sobre conexão de baterias e veículos à rede elétrica. Impacto direto na infraestrutura de data centers e armazenamento de energia. Tema de regulação crítico para o setor elétrico brasileiro.",
+          "prioridade": 25,
+          "rodada": 4,
+          "versao": 3
+        }
+      },
+      "cache_avaliacoes": {
+        "data_center": {
+          "assinatura": "091a0cc09de90bbce653f89c0bf955444e85b30ca7ce63673d00c000dad09e18",
+          "avaliacao": {
+            "bucket": "BR",
+            "decisao": "elegivel",
+            "fato": "aneel-baterias-veiculos-conexao",
+            "indice": 11,
+            "motivo": "Regulação Aneel para novas regras de conexão de baterias e veículos. Regulação com impacto direto na rede elétrica, afeta priorização de recursos e planejamento de infraestrutura que inclui data centers.",
+            "prioridade": 40,
+            "rodada": 0,
+            "versao": 3
+          }
+        }
+      },
+      "feeds_origem": [
+        "https://news.google.com/rss/search?q=site%3Abrasilenergia.com.br+%28%22bateria%22+OR+%22baterias%22+OR+%22battery%22+OR+%22batteries%22+OR+%22armazenamento+de+energia%22+OR+%22energy+storage%22+OR+%22bess%22+OR+%22catl%22+OR+%22BYD%22+OR+%22EVE+Energy%22+OR+%22Gotion%22+OR+%22Hithium%22+OR+%22sodium+ion%22+OR+%22solid+state%22+OR+%22battery+storage%22+OR+%22leil%C3%A3o+de+reserva+de+capacidade%22+OR+%22armazenamento+em+baterias%22%29+when%3A3d&hl=pt-BR&gl=BR&ceid=BR%3Apt-BR",
+        "https://news.google.com/rss/search?q=site%3Abrasilenergia.com.br+%28%22data+center%22+OR+%22data+centers%22+OR+%22datacenter%22+OR+%22centro+de+dados%22+OR+%22centros+de+dados%22+OR+%22ReData%22+OR+%22data+centre%22+OR+%22data+centres%22%29+when%3A3d&hl=pt-BR&gl=BR&ceid=BR%3Apt-BR"
+      ],
+      "fonte": "Editora Brasil Energia",
+      "link": "https://brasilenergia.com.br/energia/governo-regulacao/aneel-propoe-novas-regras-para-conexao-de-baterias-e-veiculos",
+      "origem": "BR",
+      "publicado_em": 1788947941,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQRUxjeVZZYXlUVkRlZGVTUmJSWmdQYkU2a2xvWmwwUU84OEJnZzRBVXk1X1QtNEgzWTVBRHhQMkdlRzh0TXVNUVRrUDlQazJFWVg5SGwtT3pBYmktUGdDNmdEUi01RHN5RDEwa3ExcEQ0eUgwXzV4Q2o5VEZfcmFMM3l1Nm5DSTRoRHFJWjh1UjUydVZWbGI5N2k3RUVZa2J1SVk5b3dGb2tyb2ZPX0hGcnVSV3F6Z3c?oc=5\" target=\"_blank\">Aneel propõe novas regras para conexão de baterias e veículos</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Editora Brasil Energia</font>",
+      "resumo_final": "A Aneel propõe novas regras para conexão de baterias e veículos elétricos à rede através da Consulta Pública 033/2026, que atualiza os Procedimentos de Distribuição de Energia Elétrica (Prodist) para preparar o sistema para geração solar distribuída, armazenamento de energia e mobilidade elétrica.",
+      "titulo": "Aneel propõe novas regras para conexão de baterias e veículos",
+      "topico": "data_center",
+      "topicos": [
+        "baterias",
+        "data_center"
+      ]
+    },
+    {
+      "_assinatura_ranking": "9cd0236ac6626d13c23a821a5f19aa4cb44332699afe069fa23740fc54a95cf6",
+      "_fila_key": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWlN2ZXc1dXV4enUxbUZfTVc3QmhrTGRGUUwybUtuR2N4TkJraGI3eEJtZ29EbU02dDVPSks2QnN2ZjgwSThkYmtWSThYV0xfSWdSRnJmS0gtQzZzZ2dlNGJ5alNVX2hLZWpKMEdVaDZJVHZJb3BuV1J1SWZscnVaaXZCTU9Rc1J0Nms0UFk5MFQ1VDNhN0JmdjQ1ZWdfM1Z5SS11NC1oZTB6TDk4ZjJmazdn?oc=5",
+      "aliases": [
+        "https://eixos.com.br/energia-eletrica/aneel-fara-consulta-publica-sobre-modernizacao-da-conexao-a-rede-eletrica/",
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWlN2ZXc1dXV4enUxbUZfTVc3QmhrTGRGUUwybUtuR2N4TkJraGI3eEJtZ29EbU02dDVPSks2QnN2ZjgwSThkYmtWSThYV0xfSWdSRnJmS0gtQzZzZ2dlNGJ5alNVX2hLZWpKMEdVaDZJVHZJb3BuV1J1SWZscnVaaXZCTU9Rc1J0Nms0UFk5MFQ1VDNhN0JmdjQ1ZWdfM1Z5SS11NC1oZTB6TDk4ZjJmazdn?oc=5"
+      ],
+      "avaliacoes": {
+        "data_center": {
+          "bucket": "BR",
+          "decisao": "elegivel",
+          "fato": "aneel-consulta-publica-modernizacao-conexao-rede",
+          "indice": 6,
+          "motivo": "Consulta pública da Aneel sobre modernização da conexão à rede elétrica. Regulação direta relevante para data centers, infraestrutura de energia e conexão à rede básica. Prioridade elevada por natureza regulatória.",
+          "prioridade": 24,
+          "rodada": 4,
+          "versao": 3
+        }
+      },
+      "cache_avaliacoes": {
+        "data_center": {
+          "assinatura": "9cd0236ac6626d13c23a821a5f19aa4cb44332699afe069fa23740fc54a95cf6",
+          "avaliacao": {
+            "bucket": "BR",
+            "decisao": "elegivel",
+            "fato": "aneel-modernizacao-conexao-rede",
+            "indice": 1,
+            "motivo": "Regulação de conexão à rede elétrica pela Aneel afeta diretamente infraestrutura de data centers. Alta prioridade: impacto regulatório e setor elétrico.",
+            "prioridade": 85,
+            "rodada": 0,
+            "versao": 3
+          }
+        }
+      },
+      "feeds_origem": [
+        "https://news.google.com/rss/search?q=site%3Aeixos.com.br+%28%22data+center%22+OR+%22data+centers%22+OR+%22datacenter%22+OR+%22centro+de+dados%22+OR+%22centros+de+dados%22+OR+%22ReData%22+OR+%22data+centre%22+OR+%22data+centres%22%29+when%3A3d&hl=pt-BR&gl=BR&ceid=BR%3Apt-BR"
+      ],
+      "fonte": "Agência eixos",
+      "link": "https://eixos.com.br/energia-eletrica/aneel-fara-consulta-publica-sobre-modernizacao-da-conexao-a-rede-eletrica/",
+      "origem": "BR",
+      "publicado_em": 1788973368,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNWlN2ZXc1dXV4enUxbUZfTVc3QmhrTGRGUUwybUtuR2N4TkJraGI3eEJtZ29EbU02dDVPSks2QnN2ZjgwSThkYmtWSThYV0xfSWdSRnJmS0gtQzZzZ2dlNGJ5alNVX2hLZWpKMEdVaDZJVHZJb3BuV1J1SWZscnVaaXZCTU9Rc1J0Nms0UFk5MFQ1VDNhN0JmdjQ1ZWdfM1Z5SS11NC1oZTB6TDk4ZjJmazdn?oc=5\" target=\"_blank\">Aneel fará consulta pública sobre modernização da conexão à rede elétrica</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Agência eixos</font>",
+      "resumo_final": "A Aneel abrirá consulta pública em 10 de setembro para modernizar as regras de conexão à rede elétrica incluindo geração solar, baterias e veículos elétricos. O trabalho, desenvolvido pelo ONS com universidades, permitirá que distribuidoras conheçam melhor as condições da rede e estabeleçam requisitos de monitoramento e comunicação. Interessados podem contribuir até 9 de novembro pelo email [email protected].",
+      "titulo": "Aneel fará consulta pública sobre modernização da conexão à rede elétrica",
+      "topico": "data_center",
+      "topicos": [
+        "data_center"
+      ]
+    },
+    {
+      "_assinatura_ranking": "239aefe0c6fdff787294a24a69fe009dee34c6766015a9e697b15a699a18c1c5",
+      "_fila_key": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRTZGUTlqSEQ3VTNDQ0RHb1VIbFJDcEpoNlNSRFQ0cENHWENSc05TQ0duY2xiZVE3blEyU3RXOWFFd0Myc25jYXFaZEwxeVZxRE5IbHlNa2cwVy03ZkphTkFZMWp3dGRqUlByM0U4VVJ2aVlhdmtHUW9kRDV1RUhvNEt1TU5NU3VTUktXRGhDY243N0RGaGRaUTJIM20wRXktSWhaa1NaOA?oc=5",
+      "aliases": [
+        "https://brasilenergia.com.br/energia/consumidor/mpf-questiona-operacao-de-data-center-do-tiktok-no-pecem",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRTZGUTlqSEQ3VTNDQ0RHb1VIbFJDcEpoNlNSRFQ0cENHWENSc05TQ0duY2xiZVE3blEyU3RXOWFFd0Myc25jYXFaZEwxeVZxRE5IbHlNa2cwVy03ZkphTkFZMWp3dGRqUlByM0U4VVJ2aVlhdmtHUW9kRDV1RUhvNEt1TU5NU3VTUktXRGhDY243N0RGaGRaUTJIM20wRXktSWhaa1NaOA?oc=5"
+      ],
+      "avaliacoes": {
+        "data_center": {
+          "bucket": "BR",
+          "decisao": "elegivel",
+          "fato": "mpf-bloqueio-datacenter-tiktok-pecem",
+          "indice": 9,
+          "motivo": "Quarta cobertura do mesmo acontecimento por fonte especializada (Brasil Energia). MPF questiona operação do data center TikTok com impactos regulatórios e energéticos no Complexo do Pecém.",
+          "prioridade": 22,
+          "rodada": 4,
+          "versao": 3
+        }
+      },
+      "cache_avaliacoes": {
+        "data_center": {
+          "assinatura": "239aefe0c6fdff787294a24a69fe009dee34c6766015a9e697b15a699a18c1c5",
+          "avaliacao": {
+            "bucket": "BR",
+            "decisao": "elegivel",
+            "fato": "mpf-tiktok-pecem-datacenter",
+            "indice": 19,
+            "motivo": "MPF questiona operação de data center do TikTok no Pecém/Ceará. Regulação brasileira e infraestrutura de data centers. Relevância ao setor elétrico por localização específica e impacto regulatório.",
+            "prioridade": 24,
+            "rodada": 0,
+            "versao": 3
+          }
+        }
+      },
+      "feeds_origem": [
+        "https://news.google.com/rss/search?q=site%3Abrasilenergia.com.br+%28%22data+center%22+OR+%22data+centers%22+OR+%22datacenter%22+OR+%22centro+de+dados%22+OR+%22centros+de+dados%22+OR+%22ReData%22+OR+%22data+centre%22+OR+%22data+centres%22%29+when%3A3d&hl=pt-BR&gl=BR&ceid=BR%3Apt-BR"
+      ],
+      "fonte": "Editora Brasil Energia",
+      "link": "https://brasilenergia.com.br/energia/consumidor/mpf-questiona-operacao-de-data-center-do-tiktok-no-pecem",
+      "origem": "BR",
+      "publicado_em": 1789133168,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPRTZGUTlqSEQ3VTNDQ0RHb1VIbFJDcEpoNlNSRFQ0cENHWENSc05TQ0duY2xiZVE3blEyU3RXOWFFd0Myc25jYXFaZEwxeVZxRE5IbHlNa2cwVy03ZkphTkFZMWp3dGRqUlByM0U4VVJ2aVlhdmtHUW9kRDV1RUhvNEt1TU5NU3VTUktXRGhDY243N0RGaGRaUTJIM20wRXktSWhaa1NaOA?oc=5\" target=\"_blank\">MPF questiona operação de data center do TikTok no Pecém</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Editora Brasil Energia</font>",
+      "resumo_final": "O MPF questiona a operação do data center do TikTok no Pecém, pedindo consulta ao povo Anacé, elaboração de EIA/Rima e medidas de controle ambiental antes do início das atividades.",
+      "titulo": "MPF questiona operação de data center do TikTok no Pecém",
+      "topico": "data_center",
+      "topicos": [
+        "data_center"
+      ]
+    },
+    {
+      "_assinatura_ranking": "550e6480a05956733093cf32470a5d94b04236d5c115da768b9fa132407401b0",
+      "_fila_key": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNcGlWeGFlRDRYZVowU2Y0Y0FJTlRmQW5ubjJwNGcxb3NsQnRBUVo5eWtMdnhoSlAzM0FKdlJHWkpJR2lxZUZHcWg5cFBqb1NxNm9Ma0MwR3AweEZpUEFTZ1JRZ3pjSDN6V2VOdE1nUjhBQU1PdlJ5Z29xSDloZHZOOExRbHotYVlRUDd0X2tpa2JVR3U1NTBHc3VhZkYzMDN4ZE9KWl9lZnFBZzkwZEE?oc=5",
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxNcGlWeGFlRDRYZVowU2Y0Y0FJTlRmQW5ubjJwNGcxb3NsQnRBUVo5eWtMdnhoSlAzM0FKdlJHWkpJR2lxZUZHcWg5cFBqb1NxNm9Ma0MwR3AweEZpUEFTZ1JRZ3pjSDN6V2VOdE1nUjhBQU1PdlJ5Z29xSDloZHZOOExRbHotYVlRUDd0X2tpa2JVR3U1NTBHc3VhZkYzMDN4ZE9KWl9lZnFBZzkwZEE?oc=5",
+        "https://reuters.com/business/media-telecom/google-invest-15-billion-ai-infrastructure-finland-2026-09-09/"
+      ],
+      "avaliacoes": {
+        "data_center": {
+          "bucket": "US",
+          "decisao": "elegivel",
+          "fato": "google-investimento-ia-finlandia",
+          "indice": 10,
+          "motivo": "Cobertura Reuters do mesmo investimento Google na Finlândia (índice 1). Adiciona detalhe sobre compra de energia nuclear, elevando relevância para setor elétrico e demanda de energia por data centers.",
+          "prioridade": 20,
+          "rodada": 4,
+          "versao": 3
+        }
+      },
+      "cache_avaliacoes": {
+        "data_center": {
+          "assinatura": "550e6480a05956733093cf32470a5d94b04236d5c115da768b9fa132407401b0",
+          "avaliacao": {
+            "bucket": "US",
+            "decisao": "elegivel",
+            "fato": "google-15bi-ai-infra-nuclear-finland",
+            "indice": 12,
+            "motivo": "Investimento de $15 bilhões do Google em infraestrutura de data centers e energia nuclear na Finlândia. Relevante por envolver data center, energia nuclear e montante financeiro significativo.",
+            "prioridade": 80,
+            "rodada": 0,
+            "versao": 3
+          }
+        }
+      },
+      "feeds_origem": [
+        "https://news.google.com/rss/search?q=site%3Areuters.com+%28%22data+center%22+OR+%22data+centers%22+OR+%22datacenter%22+OR+%22centro+de+dados%22+OR+%22centros+de+dados%22+OR+%22ReData%22+OR+%22data+centre%22+OR+%22data+centres%22%29+when%3A3d&hl=en-US&gl=US&ceid=US%3Aen"
+      ],
+      "fonte": "Reuters",
+      "link": "https://www.reuters.com/business/media-telecom/google-invest-15-billion-ai-infrastructure-finland-2026-09-09/",
+      "origem": "INT",
+      "publicado_em": 1788937260,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxNcGlWeGFlRDRYZVowU2Y0Y0FJTlRmQW5ubjJwNGcxb3NsQnRBUVo5eWtMdnhoSlAzM0FKdlJHWkpJR2lxZUZHcWg5cFBqb1NxNm9Ma0MwR3AweEZpUEFTZ1JRZ3pjSDN6V2VOdE1nUjhBQU1PdlJ5Z29xSDloZHZOOExRbHotYVlRUDd0X2tpa2JVR3U1NTBHc3VhZkYzMDN4ZE9KWl9lZnFBZzkwZEE?oc=5\" target=\"_blank\">Google to invest $15 billion in AI infrastructure and buy nuclear power in Finland</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "resumo_final": "Google to invest $15 billion in AI infrastructure and buy nuclear power in Finland  Reuters",
+      "titulo": "Google to invest $15 billion in AI infrastructure and buy nuclear power in Finland",
+      "topico": "data_center",
+      "topicos": [
+        "data_center"
+      ]
+    },
+    {
+      "_assinatura_ranking": "a7bf6e0f78724f5df640332902025f04e40e720e759aff930f0b7a0126cef7e0",
+      "_fila_key": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1qOHpVdjdISlJsc1dwUlA5UjVjTGxYTmJUODJ5cUhTNnB3WXp4ajNCaE5JNnhxaVlLUnYzMXNadURTWFgyRkQ5OEFxc3RFNkpSbGVXd2xZazJNZExERktPU19ubERFbHVDdDVXeHdTVVRUbm5pWGkw?oc=5",
+      "aliases": [
+        "https://br.tradingview.com/news/reuters.com,2026:newsml_L1N4530I4:0/",
+        "https://news.google.com/rss/articles/CBMid0FVX3lxTE1qOHpVdjdISlJsc1dwUlA5UjVjTGxYTmJUODJ5cUhTNnB3WXp4ajNCaE5JNnhxaVlLUnYzMXNadURTWFgyRkQ5OEFxc3RFNkpSbGVXd2xZazJNZExERktPU19ubERFbHVDdDVXeHdTVVRUbm5pWGkw?oc=5"
+      ],
+      "avaliacoes": {
+        "baterias": {
+          "bucket": "BR",
+          "decisao": "elegivel",
+          "fato": "leilao_baterias_brasil_2024",
+          "indice": 1,
+          "motivo": "BNDES prevê R$ 34 bi para leilão de baterias. Desdobramento do mesmo evento com informação sobre magnitude de investimento e recursos necessários.",
+          "prioridade": 95,
+          "rodada": 3,
+          "versao": 3
+        }
+      },
+      "cache_avaliacoes": {
+        "baterias": {
+          "assinatura": "a7bf6e0f78724f5df640332902025f04e40e720e759aff930f0b7a0126cef7e0",
+          "avaliacao": {
+            "bucket": "BR",
+            "decisao": "elegivel",
+            "fato": "bndes-34bi-leilao-baterias",
+            "indice": 28,
+            "motivo": "BNDES prevê R$34 bilhões para leilão de baterias. Notícia sobre montante financeiro e cronograma do leilão de capacidade de armazenamento (prioridade máxima BR).",
+            "prioridade": 93,
+            "rodada": 0,
+            "versao": 3
+          }
+        }
+      },
+      "feeds_origem": [
+        "https://news.google.com/rss/search?q=%22leil%C3%A3o+de+baterias%22+OR+%22leil%C3%A3o+de+armazenamento%22+OR+%22leil%C3%A3o+de+reserva+de+capacidade%22+OR+%22armazenamento+de+energia%22+OR+%22BESS%22+OR+%22pre%C3%A7o+da+bateria%22+OR+%22custo+da+bateria%22&hl=pt-BR&gl=BR&ceid=BR%3Apt-BR"
+      ],
+      "fonte": "br.tradingview.com",
+      "link": "https://br.tradingview.com/news/reuters.com,2026:newsml_L1N4530I4:0/",
+      "origem": "BR",
+      "publicado_em": 1789143183,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE1qOHpVdjdISlJsc1dwUlA5UjVjTGxYTmJUODJ5cUhTNnB3WXp4ajNCaE5JNnhxaVlLUnYzMXNadURTWFgyRkQ5OEFxc3RFNkpSbGVXd2xZazJNZExERktPU19ubERFbHVDdDVXeHdTVVRUbm5pWGkw?oc=5\" target=\"_blank\">BNDES prevê R$34 bi para leilão de baterias, mas mais recursos serão necessários, diz executivo</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">br.tradingview.com</font>",
+      "resumo_final": "O BNDES prevê R$ 34 bilhões para o leilão de baterias, mas um executivo afirma que mais recursos serão necessários.",
+      "titulo": "BNDES prevê R$34 bi para leilão de baterias, mas mais recursos serão necessários, diz executivo",
+      "topico": "baterias",
+      "topicos": [
+        "baterias"
+      ]
+    },
+    {
+      "_assinatura_ranking": "884f30b68967b93b4177cc55836d9f4cb27dee354288e3b652f4cff4d6f7c8cc",
+      "_fila_key": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNdUgwejgyNVp4Z2JHZ3RqT3BIeS1xY1hNNllyMnZWYjJzZ00wNnZ6YzRaTjFYSnlPMExCNk5jckNKdm50N1RJT0ltTDVkZXUwMUY0S2ZqdEtCWkpjazk3MmJGSjd2ODMxdnM0YkVjNGhtdTVSX0xQTlE2YnBBWTBfRi1uSW9aZUxUZkUtOFl6alNoZm0zRkxkaXRqYzA2eEZha2lnSUVZN1dLSGpqMHNBVnVWRHFFeEZXR0h1QTFVaUhqMjZ40gHKAUFVX3lxTE5nQUVhUk1HeXYyNmM5Tmhkbm1XczFUNmRta3JYMTloX0std245ZDVYRS02OUFscUQzNjdmclZlMVZzU0hIMklEWDlJNHZlVkh0el84cGd6VFNGVzlTWUpSU2d6NEsyejA3VEtSMS1UOG5PaFhQcnFwSlVSZkEwcTdyc1VUQkpybUNCRWhRZmtSdEFPSEZvM1QxS1IwNFBPMS1YeFJyRjZRbjJVanVPaTVzT3RXR1NqQTRrS1V3SU5rNllKTXFhUHNtV2c?oc=5",
+      "aliases": [
+        "https://estadao.com.br/coluna-da-broad/leilao-de-baterias-atrai-grandes-empresas-e-pode-demandar-r-25-bi-em-investimentos/",
+        "https://news.google.com/rss/articles/CBMixAFBVV95cUxNdUgwejgyNVp4Z2JHZ3RqT3BIeS1xY1hNNllyMnZWYjJzZ00wNnZ6YzRaTjFYSnlPMExCNk5jckNKdm50N1RJT0ltTDVkZXUwMUY0S2ZqdEtCWkpjazk3MmJGSjd2ODMxdnM0YkVjNGhtdTVSX0xQTlE2YnBBWTBfRi1uSW9aZUxUZkUtOFl6alNoZm0zRkxkaXRqYzA2eEZha2lnSUVZN1dLSGpqMHNBVnVWRHFFeEZXR0h1QTFVaUhqMjZ40gHKAUFVX3lxTE5nQUVhUk1HeXYyNmM5Tmhkbm1XczFUNmRta3JYMTloX0std245ZDVYRS02OUFscUQzNjdmclZlMVZzU0hIMklEWDlJNHZlVkh0el84cGd6VFNGVzlTWUpSU2d6NEsyejA3VEtSMS1UOG5PaFhQcnFwSlVSZkEwcTdyc1VUQkpybUNCRWhRZmtSdEFPSEZvM1QxS1IwNFBPMS1YeFJyRjZRbjJVanVPaTVzT3RXR1NqQTRrS1V3SU5rNllKTXFhUHNtV2c?oc=5"
+      ],
+      "avaliacoes": {
+        "baterias": {
+          "bucket": "BR",
+          "decisao": "elegivel",
+          "fato": "leilao_baterias_brasil_2024",
+          "indice": 0,
+          "motivo": "Leilão de baterias brasileiro com atração de grandes empresas e estimativa de R$ 25 bi em investimentos. Tema central de preço/custo de armazenamento no Brasil com regulação Aneel/MME.",
+          "prioridade": 95,
+          "rodada": 3,
+          "versao": 3
+        },
+        "data_center": {
+          "bucket": "BR",
+          "decisao": "sem_fato_novo",
+          "fato": "leilao-baterias-brasil",
+          "indice": 11,
+          "motivo": "Notícia sobre leilão de baterias e investimentos em armazenamento. Sem menção específica a data centers; tema de energia renovável genérico.",
+          "prioridade": 0,
+          "rodada": 1,
+          "versao": 3
+        }
+      },
+      "cache_avaliacoes": {
+        "baterias": {
+          "assinatura": "884f30b68967b93b4177cc55836d9f4cb27dee354288e3b652f4cff4d6f7c8cc",
+          "avaliacao": {
+            "bucket": "BR",
+            "decisao": "elegivel",
+            "fato": "leilao-baterias-investimentos",
+            "indice": 26,
+            "motivo": "Leilão de baterias atrai empresas e demanda R$ 25 bi em investimentos. Prioridade máxima: leilão brasileiro de baterias (ANEEL/MME), montante financeiro, preço e contratação. Eixo central com impacto regulatório e econômico.",
+            "prioridade": 95,
+            "rodada": 0,
+            "versao": 3
+          }
+        },
+        "data_center": {
+          "assinatura": "adcc32cf8639e111168197b9841d17eaee444d43523abf4e8c1ea588c29bd317",
+          "avaliacao": {
+            "bucket": "BR",
+            "decisao": "elegivel",
+            "fato": "leilao-baterias-25bi-investimento",
+            "indice": 26,
+            "motivo": "Leilão de baterias com demanda de R$ 25 bi em investimentos. Energia e infraestrutura de armazenamento relevante para data centers. Montante significativo aumenta prioridade.",
+            "prioridade": 80,
+            "rodada": 0,
+            "versao": 3
+          }
+        }
+      },
+      "feeds_origem": [
+        "https://news.google.com/rss/search?q=%22leil%C3%A3o+de+baterias%22+OR+%22leil%C3%A3o+de+armazenamento%22+OR+%22leil%C3%A3o+de+reserva+de+capacidade%22+OR+%22armazenamento+de+energia%22+OR+%22BESS%22+OR+%22pre%C3%A7o+da+bateria%22+OR+%22custo+da+bateria%22&hl=pt-BR&gl=BR&ceid=BR%3Apt-BR",
+        "https://news.google.com/rss/search?q=site%3Aestadao.com.br+%28%22bateria%22+OR+%22baterias%22+OR+%22battery%22+OR+%22batteries%22+OR+%22armazenamento+de+energia%22+OR+%22energy+storage%22+OR+%22bess%22+OR+%22catl%22+OR+%22BYD%22+OR+%22EVE+Energy%22+OR+%22Gotion%22+OR+%22Hithium%22+OR+%22sodium+ion%22+OR+%22solid+state%22+OR+%22battery+storage%22+OR+%22leil%C3%A3o+de+reserva+de+capacidade%22+OR+%22armazenamento+em+baterias%22%29+when%3A3d&hl=pt-BR&gl=BR&ceid=BR%3Apt-BR",
+        "https://news.google.com/rss/search?q=site%3Aestadao.com.br+%28%22data+center%22+OR+%22data+centers%22+OR+%22datacenter%22+OR+%22centro+de+dados%22+OR+%22centros+de+dados%22+OR+%22ReData%22+OR+%22data+centre%22+OR+%22data+centres%22%29+when%3A3d&hl=pt-BR&gl=BR&ceid=BR%3Apt-BR"
+      ],
+      "fonte": "Estadão",
+      "link": "https://www.estadao.com.br/coluna-da-broad/leilao-de-baterias-atrai-grandes-empresas-e-pode-demandar-r-25-bi-em-investimentos/",
+      "origem": "BR",
+      "publicado_em": 1788999600,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxNdUgwejgyNVp4Z2JHZ3RqT3BIeS1xY1hNNllyMnZWYjJzZ00wNnZ6YzRaTjFYSnlPMExCNk5jckNKdm50N1RJT0ltTDVkZXUwMUY0S2ZqdEtCWkpjazk3MmJGSjd2ODMxdnM0YkVjNGhtdTVSX0xQTlE2YnBBWTBfRi1uSW9aZUxUZkUtOFl6alNoZm0zRkxkaXRqYzA2eEZha2lnSUVZN1dLSGpqMHNBVnVWRHFFeEZXR0h1QTFVaUhqMjZ40gHKAUFVX3lxTE5nQUVhUk1HeXYyNmM5Tmhkbm1XczFUNmRta3JYMTloX0std245ZDVYRS02OUFscUQzNjdmclZlMVZzU0hIMklEWDlJNHZlVkh0el84cGd6VFNGVzlTWUpSU2d6NEsyejA3VEtSMS1UOG5PaFhQcnFwSlVSZkEwcTdyc1VUQkpybUNCRWhRZmtSdEFPSEZvM1QxS1IwNFBPMS1YeFJyRjZRbjJVanVPaTVzT3RXR1NqQTRrS1V3SU5rNllKTXFhUHNtV2c?oc=5\" target=\"_blank\">Leilão de baterias atrai grandes empresas e pode demandar R$ 25 bi em investimentos</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
+      "resumo_final": "O primeiro leilão de baterias para armazenamento no Brasil atraiu grandes empresas como Petrobras, Axia, Engie, Taesa e Isa Brasil, com 6.091 empreendimentos inscritos totalizando cerca de 300 GW. A ABSAE espera contratação de 4 a 5 GW com investimentos em torno de R$ 25 bilhões, mas a participação efetiva depende de regras mais claras sobre questões como rateio de custos operacionais.",
+      "titulo": "Leilão de baterias atrai grandes empresas e pode demandar R$ 25 bi em investimentos",
+      "topico": "data_center",
+      "topicos": [
+        "baterias",
+        "data_center"
+      ]
+    },
+    {
+      "_assinatura_ranking": "484120e4f625846c5a45133fa0e9249da23cdce1440f05b3a67cfc143eba838f",
+      "_fila_key": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMzFRZk5yU3ZoNk9kdG1CcEU3RXR3bkxNdHVTT1lfYm5zdktVc2htNlNSX2lMQWZZSlAzNmVEVGpaZW0zTDROQld3NTc4bF9vYUhYNXp4S29wRFBMTmFhM09oWjI5TzFoT3hidV9oMWVsYWNTYVFNY3lOcnZSSmh2Z1RsY1U?oc=5",
+      "aliases": [
+        "https://ft.com/content/29d0d34e-9a21-450d-ab07-f3744437926c?syn-25a6b1a6=1",
+        "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMzFRZk5yU3ZoNk9kdG1CcEU3RXR3bkxNdHVTT1lfYm5zdktVc2htNlNSX2lMQWZZSlAzNmVEVGpaZW0zTDROQld3NTc4bF9vYUhYNXp4S29wRFBMTmFhM09oWjI5TzFoT3hidV9oMWVsYWNTYVFNY3lOcnZSSmh2Z1RsY1U?oc=5"
+      ],
+      "avaliacoes": {
+        "baterias": {
+          "bucket": "US",
+          "decisao": "elegivel",
+          "fato": "catl_guerra_preco_baterias",
+          "indice": 11,
+          "motivo": "CATL se beneficia da guerra de preços de baterias. Análise sobre dinâmica de custo e competição da maior fabricante chinesa.",
+          "prioridade": 87,
+          "rodada": 3,
+          "versao": 3
+        }
+      },
+      "cache_avaliacoes": {
+        "baterias": {
+          "assinatura": "484120e4f625846c5a45133fa0e9249da23cdce1440f05b3a67cfc143eba838f",
+          "avaliacao": {
+            "bucket": "US",
+            "decisao": "elegivel",
+            "fato": "catl-battery-price-war",
+            "indice": 1,
+            "motivo": "Análise sobre guerra de preços de bateria e posicionamento da CATL (fabricante chinesa prioritária). Aborda custo e estratégia competitiva de bateria, eixo central do tema.",
+            "prioridade": 85,
+            "rodada": 0,
+            "versao": 3
+          }
+        }
+      },
+      "feeds_origem": [
+        "https://news.google.com/rss/search?q=%22battery+storage%22+OR+%22energy+storage%22+OR+%22battery+price%22+OR+%22battery+prices%22+OR+%22battery+cost%22+OR+%22battery+costs%22+OR+%22BESS%22&hl=en-US&gl=US&ceid=US%3Aen",
+        "https://news.google.com/rss/search?q=%28CATL+OR+BYD+OR+%22EVE+Energy%22+OR+Gotion+OR+%22Hithium%22%29+%28battery+OR+batteries+OR+%22energy+storage%22%29&hl=en-US&gl=US&ceid=US%3Aen",
+        "https://news.google.com/rss/search?q=site%3Aft.com+%28%22bateria%22+OR+%22baterias%22+OR+%22battery%22+OR+%22batteries%22+OR+%22armazenamento+de+energia%22+OR+%22energy+storage%22+OR+%22bess%22+OR+%22catl%22+OR+%22BYD%22+OR+%22EVE+Energy%22+OR+%22Gotion%22+OR+%22Hithium%22+OR+%22sodium+ion%22+OR+%22solid+state%22+OR+%22battery+storage%22+OR+%22leil%C3%A3o+de+reserva+de+capacidade%22+OR+%22armazenamento+em+baterias%22%29+when%3A3d&hl=en-US&gl=US&ceid=US%3Aen",
+        "https://news.google.com/rss/search?q=site%3Aft.com+%28%22data+center%22+OR+%22data+centers%22+OR+%22datacenter%22+OR+%22centro+de+dados%22+OR+%22centros+de+dados%22+OR+%22ReData%22+OR+%22data+centre%22+OR+%22data+centres%22%29+when%3A3d&hl=en-US&gl=US&ceid=US%3Aen"
+      ],
+      "fonte": "Financial Times",
+      "link": "https://www.ft.com/content/29d0d34e-9a21-450d-ab07-f3744437926c?syn-25a6b1a6=1",
+      "origem": "INT",
+      "publicado_em": 1789012818,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPMzFRZk5yU3ZoNk9kdG1CcEU3RXR3bkxNdHVTT1lfYm5zdktVc2htNlNSX2lMQWZZSlAzNmVEVGpaZW0zTDROQld3NTc4bF9vYUhYNXp4S29wRFBMTmFhM09oWjI5TzFoT3hidV9oMWVsYWNTYVFNY3lOcnZSSmh2Z1RsY1U?oc=5\" target=\"_blank\">The battery price war is playing into CATL’s hands</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Financial Times</font>",
+      "resumo_final": "The battery price war is playing into CATL’s hands  Financial Times",
+      "titulo": "The battery price war is playing into CATL’s hands",
+      "topico": "data_center",
+      "topicos": [
+        "baterias",
+        "data_center"
+      ]
+    },
+    {
+      "_assinatura_ranking": "dc035253d969c25c6257d1312ee476afd2af54113103ba8efd3eb6597c1947e3",
+      "_fila_key": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQQWdhd2x5YUYtdGdSRlY5ektoYmE0UEVfbFlTRWY4ZEhIUlBpYXhTWDhtVThwbE55TEF4YVFOQzREQ0lqcE81ZWVHRVZfRUxScEJuR1dnTkE5MG1aYno0VmYyckpCZTdtcVRpVFJBODhyY0VxbzBZT29BMmVXNTdlUjNfMWI1dUFvOF9FUzFJZHNkaGdXc1k1ME1NYmE?oc=5",
+      "aliases": [
+        "https://canarymedia.com/articles/batteries/the-battery-era-is-here-and-china-is-supplying-it",
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxQQWdhd2x5YUYtdGdSRlY5ektoYmE0UEVfbFlTRWY4ZEhIUlBpYXhTWDhtVThwbE55TEF4YVFOQzREQ0lqcE81ZWVHRVZfRUxScEJuR1dnTkE5MG1aYno0VmYyckpCZTdtcVRpVFJBODhyY0VxbzBZT29BMmVXNTdlUjNfMWI1dUFvOF9FUzFJZHNkaGdXc1k1ME1NYmE?oc=5"
+      ],
+      "avaliacoes": {
+        "baterias": {
+          "bucket": "US",
+          "decisao": "elegivel",
+          "fato": "china_dominio_cadeia_baterias",
+          "indice": 13,
+          "motivo": "China lidera era de baterias e fornecimento global. Análise sobre posição de fabricantes chinesas e dinâmica de custos.",
+          "prioridade": 82,
+          "rodada": 3,
+          "versao": 3
+        },
+        "data_center": {
+          "bucket": "US",
+          "decisao": "fora_tema",
+          "fato": "china-battery-supply",
+          "indice": 2,
+          "motivo": "Análise sobre cadeia de suprimento de baterias e liderança chinesa. Não aborda data centers ou sua relação com armazenamento de energia para operações de data centers.",
+          "prioridade": 0,
+          "rodada": 0,
+          "versao": 3
+        }
+      },
+      "cache_avaliacoes": {
+        "baterias": {
+          "assinatura": "dc035253d969c25c6257d1312ee476afd2af54113103ba8efd3eb6597c1947e3",
+          "avaliacao": {
+            "bucket": "US",
+            "decisao": "elegivel",
+            "fato": "china-fabricantes-baterias-era",
+            "indice": 19,
+            "motivo": "Análise sobre era de baterias e liderança chinesa no fornecimento. Fabricantes chinesas (CATL, BYD, etc.), custo e preço de bateria, análise substantiva. Prioridade alta: eixo temático central com foco em players chineses.",
+            "prioridade": 88,
+            "rodada": 0,
+            "versao": 3
+          }
+        },
+        "data_center": {
+          "assinatura": "ac1679c499f9c9b75adcdfd0ab4749d9b945e2b6fad974bc0561018cb6d11c1b",
+          "avaliacao": {
+            "bucket": "US",
+            "decisao": "fora_tema",
+            "fato": "china-battery-supply",
+            "indice": 2,
+            "motivo": "Análise sobre cadeia de suprimento de baterias e liderança chinesa. Não aborda data centers ou sua relação com armazenamento de energia para operações de data centers.",
+            "prioridade": 0,
+            "rodada": 0,
+            "versao": 3
+          }
+        }
+      },
+      "feeds_origem": [
+        "https://news.google.com/rss/search?q=site%3Acanarymedia.com+%28%22bateria%22+OR+%22baterias%22+OR+%22battery%22+OR+%22batteries%22+OR+%22armazenamento+de+energia%22+OR+%22energy+storage%22+OR+%22bess%22+OR+%22catl%22+OR+%22BYD%22+OR+%22EVE+Energy%22+OR+%22Gotion%22+OR+%22Hithium%22+OR+%22sodium+ion%22+OR+%22solid+state%22+OR+%22battery+storage%22+OR+%22leil%C3%A3o+de+reserva+de+capacidade%22+OR+%22armazenamento+em+baterias%22%29+when%3A3d&hl=en-US&gl=US&ceid=US%3Aen",
+        "https://news.google.com/rss/search?q=site%3Acanarymedia.com+%28%22data+center%22+OR+%22data+centers%22+OR+%22datacenter%22+OR+%22centro+de+dados%22+OR+%22centros+de+dados%22+OR+%22ReData%22+OR+%22data+centre%22+OR+%22data+centres%22%29+when%3A3d&hl=en-US&gl=US&ceid=US%3Aen"
+      ],
+      "fonte": "Canary Media",
+      "link": "https://www.canarymedia.com/articles/batteries/the-battery-era-is-here-and-china-is-supplying-it",
+      "origem": "INT",
+      "publicado_em": 1789111800,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQQWdhd2x5YUYtdGdSRlY5ektoYmE0UEVfbFlTRWY4ZEhIUlBpYXhTWDhtVThwbE55TEF4YVFOQzREQ0lqcE81ZWVHRVZfRUxScEJuR1dnTkE5MG1aYno0VmYyckpCZTdtcVRpVFJBODhyY0VxbzBZT29BMmVXNTdlUjNfMWI1dUFvOF9FUzFJZHNkaGdXc1k1ME1NYmE?oc=5\" target=\"_blank\">The battery era is here — and China is supplying it</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Canary Media</font>",
+      "resumo_final": "A implantação global de baterias ultrapassou 1,5 terawatt-hora em 2025, cerca de 10 vezes o total de 2020, com custos 93% menores que em 2010. A China fabrica a maioria das baterias mundiais, dominando também o refino de minerais necessários, dificultando a competição de preços para EUA e União Europeia apesar de incentivos domésticos.",
+      "titulo": "The battery era is here — and China is supplying it",
+      "topico": "data_center",
+      "topicos": [
+        "baterias",
+        "data_center"
+      ]
+    },
+    {
+      "_assinatura_ranking": "da4cfef6cb0226230ca317c54e0cda99f4d2526ee70fccdcda1f4a521a220140",
+      "_fila_key": "https://poder360.com.br/brasil/fazenda-envia-delegacao-a-china-para-reunioes-sobre-carbono/",
+      "aliases": [
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxPd05LUHkybndzNVducm4yLTBjcFZhTF9DWDRndnNlLWtjLWM0Mk56S2JXeWRDR1lnWTk0ZjRPN0RvN0dnWVdNeFlwczVzNnI5b1BDVmhUYy1PMU1SSkhYYzRQSnNNc05hU1Y1eklzZU5pSXo3RF9wZnYxWm1tZkNWOV95WmRjLXNkMU85ZkVqT1BrRE45ci16WldvVQ?oc=5",
+        "https://poder360.com.br/brasil/fazenda-envia-delegacao-a-china-para-reunioes-sobre-carbono/"
+      ],
+      "avaliacoes": {
+        "carbono": {
+          "bucket": "BR",
+          "decisao": "elegivel",
+          "fato": "brasil-china-creditos-carbono",
+          "indice": 17,
+          "motivo": "Delegação da Fazenda brasileira viaja à China para reuniões sobre carbono. Cobertura complementar de negociação Brasil-China em tema de créditos de carbono com envolvimento do Ministério da Fazenda.",
+          "prioridade": 85,
+          "rodada": 0,
+          "versao": 3
+        }
+      },
+      "cache_avaliacoes": {
+        "carbono": {
+          "assinatura": "da4cfef6cb0226230ca317c54e0cda99f4d2526ee70fccdcda1f4a521a220140",
+          "avaliacao": {
+            "bucket": "BR",
+            "decisao": "elegivel",
+            "fato": "brasil-china-creditos-carbono",
+            "indice": 17,
+            "motivo": "Delegação da Fazenda brasileira viaja à China para reuniões sobre carbono. Cobertura complementar de negociação Brasil-China em tema de créditos de carbono com envolvimento do Ministério da Fazenda.",
+            "prioridade": 85,
+            "rodada": 0,
+            "versao": 3
+          }
+        }
+      },
+      "feeds_origem": [
+        "https://news.google.com/rss/search?q=site%3Apoder360.com.br+%28%22mercado+de+carbono%22+OR+%22mercado+regulado+de+carbono%22+OR+%22cr%C3%A9dito+de+carbono%22+OR+%22cr%C3%A9ditos+de+carbono%22+OR+%22com%C3%A9rcio+de+emiss%C3%B5es%22+OR+%22precifica%C3%A7%C3%A3o+de+carbono%22+OR+%22sbce%22+OR+%22carbon+market%22+OR+%22emissions+trading%22+OR+%22cap+and+trade%22+OR+%22carbon+credit%22+OR+%22carbon+credits%22+OR+%22carbon+pricing%22%29+when%3A3d&hl=pt-BR&gl=BR&ceid=BR%3Apt-BR"
+      ],
+      "fonte": "Poder360",
+      "link": "https://www.poder360.com.br/brasil/fazenda-envia-delegacao-a-china-para-reunioes-sobre-carbono/",
+      "origem": "BR",
+      "publicado_em": 1788977914,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPd05LUHkybndzNVducm4yLTBjcFZhTF9DWDRndnNlLWtjLWM0Mk56S2JXeWRDR1lnWTk0ZjRPN0RvN0dnWVdNeFlwczVzNnI5b1BDVmhUYy1PMU1SSkhYYzRQSnNNc05hU1Y1eklzZU5pSXo3RF9wZnYxWm1tZkNWOV95WmRjLXNkMU85ZkVqT1BrRE45ci16WldvVQ?oc=5\" target=\"_blank\">Fazenda envia delegação à China para reuniões sobre carbono</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Poder360</font>",
+      "resumo_final": "O Ministério da Fazenda enviará delegação a Wuhan entre 6 e 18 de setembro para participar de reuniões sobre mercado de carbono, com objetivo de aprovar plano de trabalho da Coalizão Aberta para Mercados Regulados de Carbono pelos próximos 6 anos e avançar em memorando de entendimento a ser assinado na COP31 na Turquia. A missão será liderada por Cristina Reis e Ana Paula Cavalcante, e inclui reunião bilateral com vice-ministro chinês Li Gao.",
+      "titulo": "Fazenda envia delegação à China para reuniões sobre carbono",
+      "topico": "carbono",
+      "topicos": [
+        "carbono"
+      ]
+    },
+    {
+      "_assinatura_ranking": "3753ee7fa88ba97fd58f7200499e44b8d3adfdfa598435f5e29491e820d880b6",
+      "_fila_key": "https://estadao.com.br/economia/brasil-cooperacao-china-mercados-carbono/",
+      "aliases": [
+        "https://estadao.com.br/economia/brasil-cooperacao-china-mercados-carbono/",
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeE85TGx5dVRaYml3UG9ib0xWTHJHQVI0aW03aVdiSDk1WkE1aXB6VjFPNmtDSkhfZXlMejBMb2FVd1RkUDZjX2ZwT3FlSVRjb0xZd09XOHJsQ3J1VlBqYnVRT251UEV6eW1xcENtT1hIdmFTekk5TGR5RUVBd09mZnZFb9IBiAFBVV95cUxQTVRkV3RjMzhNdGlRUHYtREtkd1R1Q2h1UlhSeWc2MXF5OWpEZ0VjWHpWajJkMzBaaWdQWnRfVTJjVE9lU0RIc2dud0NDYVZCRWZvSl9lYzRIM0pzSk9FT2JxbHVjdElYVjR5U2FGWHR3TDBrNWtGTUxleXh4T2c2WWJHa3lRQXY3?oc=5"
+      ],
+      "avaliacoes": {
+        "carbono": {
+          "bucket": "BR",
+          "decisao": "elegivel",
+          "fato": "brasil-china-creditos-carbono",
+          "indice": 3,
+          "motivo": "Mesma cobertura do índice 2: cooperação Brasil-China em mercados de carbono. Fonte de referência (Estadão) reforça o fato em negociação diplomática sobre créditos de carbono.",
+          "prioridade": 85,
+          "rodada": 0,
+          "versao": 3
+        }
+      },
+      "cache_avaliacoes": {
+        "carbono": {
+          "assinatura": "3753ee7fa88ba97fd58f7200499e44b8d3adfdfa598435f5e29491e820d880b6",
+          "avaliacao": {
+            "bucket": "BR",
+            "decisao": "elegivel",
+            "fato": "brasil-china-creditos-carbono",
+            "indice": 3,
+            "motivo": "Mesma cobertura do índice 2: cooperação Brasil-China em mercados de carbono. Fonte de referência (Estadão) reforça o fato em negociação diplomática sobre créditos de carbono.",
+            "prioridade": 85,
+            "rodada": 0,
+            "versao": 3
+          }
+        }
+      },
+      "feeds_origem": [
+        "https://news.google.com/rss/search?q=%22mercado+de+carbono%22+OR+%22cr%C3%A9dito+de+carbono%22+OR+%22cr%C3%A9ditos+de+carbono%22+OR+%22com%C3%A9rcio+de+emiss%C3%B5es%22+OR+%22SBCE%22&hl=pt-BR&gl=BR&ceid=BR:pt-BR",
+        "https://news.google.com/rss/search?q=site%3Aestadao.com.br+%28%22mercado+de+carbono%22+OR+%22mercado+regulado+de+carbono%22+OR+%22cr%C3%A9dito+de+carbono%22+OR+%22cr%C3%A9ditos+de+carbono%22+OR+%22com%C3%A9rcio+de+emiss%C3%B5es%22+OR+%22precifica%C3%A7%C3%A3o+de+carbono%22+OR+%22sbce%22+OR+%22carbon+market%22+OR+%22emissions+trading%22+OR+%22cap+and+trade%22+OR+%22carbon+credit%22+OR+%22carbon+credits%22+OR+%22carbon+pricing%22%29+when%3A3d&hl=pt-BR&gl=BR&ceid=BR%3Apt-BR"
+      ],
+      "fonte": "Estadão",
+      "link": "https://www.estadao.com.br/economia/brasil-cooperacao-china-mercados-carbono/",
+      "origem": "BR",
+      "publicado_em": 1788975780,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxOeE85TGx5dVRaYml3UG9ib0xWTHJHQVI0aW03aVdiSDk1WkE1aXB6VjFPNmtDSkhfZXlMejBMb2FVd1RkUDZjX2ZwT3FlSVRjb0xZd09XOHJsQ3J1VlBqYnVRT251UEV6eW1xcENtT1hIdmFTekk5TGR5RUVBd09mZnZFb9IBiAFBVV95cUxQTVRkV3RjMzhNdGlRUHYtREtkd1R1Q2h1UlhSeWc2MXF5OWpEZ0VjWHpWajJkMzBaaWdQWnRfVTJjVE9lU0RIc2dud0NDYVZCRWZvSl9lYzRIM0pzSk9FT2JxbHVjdElYVjR5U2FGWHR3TDBrNWtGTUxleXh4T2c2WWJHa3lRQXY3?oc=5\" target=\"_blank\">Brasil tenta avançar em cooperação com a China em mercados de carbono</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
+      "resumo_final": "A Secretaria Extraordinária do Mercado de Carbono do Ministério da Fazenda enviará missão à China entre 13 e 19 de setembro para participar da 2ª Reunião de Alto Nível da Coalizão Aberta para Mercados Regulados de Carbono, aprovando plano de trabalho por seis anos, e iniciar diretrizes para memorando com assinatura prevista na COP31. A delegação busca alinhar o Sistema Brasileiro de Comércio de Emissões com o sistema chinês e remunerar efetivamente quem descarbonizar.",
+      "titulo": "Brasil tenta avançar em cooperação com a China em mercados de carbono",
+      "topico": "carbono",
+      "topicos": [
+        "carbono"
+      ]
+    },
+    {
+      "_assinatura_ranking": "9a7674e12a2268f35f0bdeb728ecdcb7780e24953a6dc782a459d09a29aae0e2",
+      "_fila_key": "https://news.google.com/rss/articles/CBMingFBVV95cUxPaDgzTHFQd2FMTXlYUENVU1BHdUY2M0hLbkRFbXNqS2RUTXNIWG9LaEJTUXUzV0NEQlRmQ05jVlRXX2d1NTMyazVWSDZuaEZQcVdqSzdoSFBJV3E4NGVyeHBHXzNDYUhidE9wa2dGV3p3YkUxN0pEWElVV3htNWh4WVZkR1Z4cTU1OVRpb09sWXR3bDd6cTdWU1NpU1dFdw?oc=5",
+      "aliases": [
+        "https://agenciainfra.com/blog/artigo-desafios-para-implementacao-do-programa-probioqav-no-brasil/",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxPaDgzTHFQd2FMTXlYUENVU1BHdUY2M0hLbkRFbXNqS2RUTXNIWG9LaEJTUXUzV0NEQlRmQ05jVlRXX2d1NTMyazVWSDZuaEZQcVdqSzdoSFBJV3E4NGVyeHBHXzNDYUhidE9wa2dGV3p3YkUxN0pEWElVV3htNWh4WVZkR1Z4cTU1OVRpb09sWXR3bDd6cTdWU1NpU1dFdw?oc=5"
+      ],
+      "avaliacoes": {
+        "carbono": {
+          "bucket": "BR",
+          "decisao": "elegivel",
+          "fato": "probioquav-implementacao",
+          "indice": 9,
+          "motivo": "Artigo sobre desafios de implementação do programa ProBioQAV no Brasil. Tema de sustentabilidade na aviação com conexão a redução de emissões, análise substantiva de política pública.",
+          "prioridade": 68,
+          "rodada": 0,
+          "versao": 3
+        }
+      },
+      "cache_avaliacoes": {
+        "carbono": {
+          "assinatura": "9a7674e12a2268f35f0bdeb728ecdcb7780e24953a6dc782a459d09a29aae0e2",
+          "avaliacao": {
+            "bucket": "BR",
+            "decisao": "elegivel",
+            "fato": "probioquav-implementacao",
+            "indice": 9,
+            "motivo": "Artigo sobre desafios de implementação do programa ProBioQAV no Brasil. Tema de sustentabilidade na aviação com conexão a redução de emissões, análise substantiva de política pública.",
+            "prioridade": 68,
+            "rodada": 0,
+            "versao": 3
+          }
+        }
+      },
+      "feeds_origem": [
+        "https://news.google.com/rss/search?q=site%3Aagenciainfra.com+%28%22mercado+de+carbono%22+OR+%22mercado+regulado+de+carbono%22+OR+%22cr%C3%A9dito+de+carbono%22+OR+%22cr%C3%A9ditos+de+carbono%22+OR+%22com%C3%A9rcio+de+emiss%C3%B5es%22+OR+%22precifica%C3%A7%C3%A3o+de+carbono%22+OR+%22sbce%22+OR+%22carbon+market%22+OR+%22emissions+trading%22+OR+%22cap+and+trade%22+OR+%22carbon+credit%22+OR+%22carbon+credits%22+OR+%22carbon+pricing%22%29+when%3A3d&hl=pt-BR&gl=BR&ceid=BR%3Apt-BR"
+      ],
+      "fonte": "Agência iNFRA",
+      "link": "https://agenciainfra.com/blog/artigo-desafios-para-implementacao-do-programa-probioqav-no-brasil/",
+      "origem": "BR",
+      "publicado_em": 1788998136,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPaDgzTHFQd2FMTXlYUENVU1BHdUY2M0hLbkRFbXNqS2RUTXNIWG9LaEJTUXUzV0NEQlRmQ05jVlRXX2d1NTMyazVWSDZuaEZQcVdqSzdoSFBJV3E4NGVyeHBHXzNDYUhidE9wa2dGV3p3YkUxN0pEWElVV3htNWh4WVZkR1Z4cTU1OVRpb09sWXR3bDd6cTdWU1NpU1dFdw?oc=5\" target=\"_blank\">Artigo | Desafios para implementação do programa ProBioQAV no Brasil</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Agência iNFRA</font>",
+      "resumo_final": "Artigo analisa desafios da implementação do programa ProBioQAV no Brasil, apontando que o Combustível Sustentável de Aviação (SAF) é a principal solução para reduzir emissões do setor de aviação, que representa 2,5% das emissões globais. Segundo estimativas da Iata, o custo global de transição de 2024 a 2050 será USD 4,7 trilhões, iniciando-se em USD 1 bilhão em 2025.",
+      "titulo": "Artigo | Desafios para implementação do programa ProBioQAV no Brasil",
+      "topico": "carbono",
+      "topicos": [
+        "carbono"
+      ]
+    },
+    {
+      "_assinatura_ranking": "c6c372abebea7c48a8137c7a7a887d99da7785cbcbeae88be6573453ce1f6066",
+      "_fila_key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTnZSSzdldWF3cTJLNWw1S3VlRHNrY21IQ2M0NmRUak9xcTc5TnN6ZnJrUTlBVXZoWTNLVFNGbnVEbXEyUFcxRFhXWk8yM1pNLU54eHdzc053SGdETURkNUVLWHRmNmpCVkU4aXpGbUpoSTJUZDdVQkJldTFIUGgwNGpBYkZwSFZ1UUdYdENBdkx3ZkIwaEx0YngwcXE0X3lURkhPRVA2ZE1TeUQxa01LdzFzeFRqY1NSdFE?oc=5",
+      "aliases": [
+        "https://euobserver.com/236956/lead-centre-right-mep-suggests-softening-emissions-trading-to-help-suffering-industries/",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTnZSSzdldWF3cTJLNWw1S3VlRHNrY21IQ2M0NmRUak9xcTc5TnN6ZnJrUTlBVXZoWTNLVFNGbnVEbXEyUFcxRFhXWk8yM1pNLU54eHdzc053SGdETURkNUVLWHRmNmpCVkU4aXpGbUpoSTJUZDdVQkJldTFIUGgwNGpBYkZwSFZ1UUdYdENBdkx3ZkIwaEx0YngwcXE0X3lURkhPRVA2ZE1TeUQxa01LdzFzeFRqY1NSdFE?oc=5"
+      ],
+      "avaliacoes": {
+        "carbono": {
+          "bucket": "US",
+          "decisao": "elegivel",
+          "fato": "ue-flexibilizacao-ets",
+          "indice": 4,
+          "motivo": "Proposta de legislador europeu para flexibilizar sistema de comércio de emissões da UE (ETS) em resposta a pressões de setores industriais. Afeta mercado regulado europeu de carbono com potencial impacto em regulação de precificação de carbono.",
+          "prioridade": 72,
+          "rodada": 0,
+          "versao": 3
+        }
+      },
+      "cache_avaliacoes": {
+        "carbono": {
+          "assinatura": "c6c372abebea7c48a8137c7a7a887d99da7785cbcbeae88be6573453ce1f6066",
+          "avaliacao": {
+            "bucket": "US",
+            "decisao": "elegivel",
+            "fato": "ue-flexibilizacao-ets",
+            "indice": 4,
+            "motivo": "Proposta de legislador europeu para flexibilizar sistema de comércio de emissões da UE (ETS) em resposta a pressões de setores industriais. Afeta mercado regulado europeu de carbono com potencial impacto em regulação de precificação de carbono.",
+            "prioridade": 72,
+            "rodada": 0,
+            "versao": 3
+          }
+        }
+      },
+      "feeds_origem": [
+        "https://news.google.com/rss/search?q=%22carbon+market%22+OR+%22cap+and+trade%22+OR+%22emissions+trading%22&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "fonte": "EUobserver",
+      "link": "https://euobserver.com/236956/lead-centre-right-mep-suggests-softening-emissions-trading-to-help-suffering-industries/",
+      "origem": "INT",
+      "publicado_em": 1789134916,
+      "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxOTnZSSzdldWF3cTJLNWw1S3VlRHNrY21IQ2M0NmRUak9xcTc5TnN6ZnJrUTlBVXZoWTNLVFNGbnVEbXEyUFcxRFhXWk8yM1pNLU54eHdzc053SGdETURkNUVLWHRmNmpCVkU4aXpGbUpoSTJUZDdVQkJldTFIUGgwNGpBYkZwSFZ1UUdYdENBdkx3ZkIwaEx0YngwcXE0X3lURkhPRVA2ZE1TeUQxa01LdzFzeFRqY1NSdFE?oc=5\" target=\"_blank\">Lead centre-right MEP suggests softening emissions-trading to help ‘suffering’ industries</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">EUobserver</font>",
+      "resumo_final": "O deputado alemão Peter Liese propõe aumentar para 75% a exigência de que governos gastem receitas do comércio de emissões (ETS) em descarbonização de indústrias, acima dos 50% sugeridos pela Comissão Europeia. Liese afirma ser impossível que aviação, cimento, aço e química atinjam zero emissões até 2039, e propõe reduzir o limite de emissões em 3,4% anuais a partir de 2031 e 2,3% a partir de 2036.",
+      "titulo": "Lead centre-right MEP suggests softening emissions-trading to help ‘suffering’ industries",
+      "topico": "carbono",
+      "topicos": [
+        "carbono"
+      ]
+    }
+  ]
+}
