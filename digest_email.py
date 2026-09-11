@@ -91,13 +91,20 @@ Um veículo fora das duas listas (pouco conhecido, blog, release corporativo, po
 regional pequeno) só deve ser escolhido em ÚLTIMO caso, se não houver absolutamente
 nada relevante nos níveis 1 e 2 — e mesmo assim, prefira sempre a opção mais robusta.
 
-Entre candidatos do mesmo nível de veículo, desempate pelos critérios de conteúdo,
-do maior para o menor peso:
-1. MONTANTE FINANCEIRO envolvido (investimento, aporte, contrato, financiamento, multa,
-   valor de mercado). Quanto maior o valor, maior a prioridade.
-2. IMPACTO REGULATÓRIO E POLÍTICO: nova regra, decisão de agência (ANEEL, ONS, MME, CVM,
-   Ibama...), lei, medida provisória, disputa judicial, posição de governo.
-3. {foco_setorial}
+Entre candidatos do mesmo nível de veículo, uma notícia é prioritária se atender A OU B
+abaixo (não precisam ocorrer os dois juntos — cada um sozinho já justifica prioridade):
+
+A. MONTANTE FINANCEIRO alto envolvido (investimento, aporte, contrato, financiamento,
+   multa, valor de mercado). Quanto maior o valor, maior a prioridade.
+
+B. IMPACTO REGULATÓRIO OU LEGAL, MESMO SEM VALOR FINANCEIRO ASSOCIADO: mudança de lei,
+   portaria, decreto, medida provisória; abertura ou resultado de CONSULTA PÚBLICA;
+   decisão de agência/regulador (ANEEL, ONS, MME, CVM, Ibama, órgão equivalente nos EUA);
+   disputa judicial relevante; posição oficial de governo. Trate isso como critério
+   independente e igualmente forte — não deixe de priorizar uma notícia regulatória só
+   por não ter um número associado.
+
+Como critério adicional (menor peso que A/B): {foco_setorial}
 
 Descarte: duplicatas (mesmo fato contado por veículos diferentes — escolha só a melhor
 fonte), itens que não são sobre {rotulo}, agenda de evento, conteúdo promocional sem
@@ -111,12 +118,21 @@ menos relevante:
 [{{"indice": 0, "bucket": "BR"}}, {{"indice": 7, "bucket": "US"}}]
 """
 
-PROMPT_RESUMO = """Escreva, para cada matéria abaixo, UM PARÁGRAFO CURTO (2 a 3 frases,
-no máximo ~55 palavras) em português do Brasil, em tom jornalístico, direto e atraente
-para quem só vai ler esse parágrafo (sem clicar na matéria). Abra com o fato mais forte
-(o número, o valor, a decisão), não com contexto genérico. Traga o número mais importante
-(valor financeiro, MW, %...) e, se houver, o órgão/empresa envolvido. Sem introdução tipo
-"a notícia trata de", sem floreio. Não invente nada que não esteja no texto fornecido.
+PROMPT_RESUMO = """Escreva, para cada matéria abaixo, UM PARÁGRAFO (3 a 4 frases, ~70 a
+90 palavras) em português do Brasil, em tom jornalístico, direto e atraente para quem só
+vai ler esse parágrafo (sem clicar na matéria). Abra com o fato mais forte (o número, o
+valor, a decisão), não com contexto genérico. Traga o número mais importante (valor
+financeiro, MW, %...) e, se houver, o órgão/empresa envolvido. Sem introdução tipo "a
+notícia trata de", sem floreio.
+
+IMPORTANTE — o texto de apoio de cada matéria vem de fontes automáticas e às vezes é
+curto ou incompleto (ex.: veículo pago que bloqueia extração, como Bloomberg/WSJ/FT).
+Mesmo assim, NUNCA escreva frases como "texto insuficiente", "não há informações
+suficientes" ou qualquer variação disso — isso não pode aparecer no resultado. Nesses
+casos, escreva o melhor resumo possível reformulando e expandindo o TÍTULO de forma
+natural e informativa, como um jornalista faria a partir de uma manchete. Não invente
+números ou fatos que não estejam no título/trecho fornecido, mas sempre entregue um
+parágrafo coeso — nunca uma nota sobre a própria limitação.
 
 {blocos}
 
@@ -203,12 +219,25 @@ def selecionar(cliente, topico: str, candidatos: list) -> dict:
 
 
 def buscar_texto_artigo(link: str) -> str:
+    # Um User-Agent de navegador real passa por mais bloqueios simples
+    # de robô do que o padrão do trafilatura. Sites com paywall de
+    # verdade (Bloomberg, WSJ, FT...) ainda vão falhar mesmo assim —
+    # isso é esperado, o PROMPT_RESUMO sabe lidar com texto curto.
     try:
-        baixado = trafilatura.fetch_url(link)
-        if baixado:
-            texto = trafilatura.extract(baixado, include_comments=False, include_tables=False)
-            if texto:
-                return texto[:LIMITE_TEXTO_ARTIGO]
+        resposta = requests.get(
+            link,
+            timeout=15,
+            headers={
+                "User-Agent": (
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                    "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                )
+            },
+        )
+        resposta.raise_for_status()
+        texto = trafilatura.extract(resposta.text, include_comments=False, include_tables=False)
+        if texto:
+            return texto[:LIMITE_TEXTO_ARTIGO]
     except Exception as erro:
         print(f"Não consegui extrair texto de {link}: {erro}")
     return ""
