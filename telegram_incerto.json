@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/ai-data-centers/property-tax-the-value-driver-that-ai-data-centers-overlook",
+    "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUWRzTG9mUjJxcFRpN2pYVC1WaUI3cHlqUXVLRXQ2Uks0QVBCUW43X1RqYm9JOVVBalA0YWdSSDBzZUFiY3FIbkZJMy1xbFllRUhmOElhbTZpOFE4ZGY1eU9nQUxLdW5rWUJBQ2t5ZUlBQzNBdHBSZUFKUEtyQTNOci1zQTRhamhJU3IzVkxFcGtCYTZoWmhGSWRULTltZ0JXcVo1Tm1nSU5LOXBabnNzZQ?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/ai-data-centers/property-tax-the-value-driver-that-ai-data-centers-overlook",
+      "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUWRzTG9mUjJxcFRpN2pYVC1WaUI3cHlqUXVLRXQ2Uks0QVBCUW43X1RqYm9JOVVBalA0YWdSSDBzZUFiY3FIbkZJMy1xbFllRUhmOElhbTZpOFE4ZGY1eU9nQUxLdW5rWUJBQ2t5ZUlBQzNBdHBSZUFKUEtyQTNOci1zQTRhamhJU3IzVkxFcGtCYTZoWmhGSWRULTltZ0JXcVo1Tm1nSU5LOXBabnNzZQ?oc=5"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/ai-data-centers/property-tax-the-value-driver-that-ai-data-centers-overlook",
+    "origem": "INT",
+    "resumo": "Property tax is a major, often-overlooked cost in AI data center ownership that should be strategically managed from design through operation, not treated as a yearly accounting task.",
+    "titulo": "Property Tax: The Value Driver that AI Data Centers Overlook",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
