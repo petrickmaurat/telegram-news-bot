@@ -1,6 +1,8 @@
 {
   "https://datacenterdynamics.com/en/news/plans-for-120mw-data-center-withdrawn-in-lombardy-italy/": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.89788
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://datacenterdynamics.com/en/news/plans-for-120mw-data-center-withdrawn-in-lombardy-italy/",
@@ -22,7 +24,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQjItXzFUaWRyNTFoNGRVaDRVTTJReW5NRHhEZVdfZFZhMzd2M3lKbm4xM0RjbFN1cjRZb3A4Qk1PdlJrcVVDTGZRUW1yeDdBbEVldkdKTlZmZUtGalhvX2dCTmZkNWNSa0tKTVJEUnlxNnpCX04zUjJYcl9Ua3I1WlhuV2J4eEpReXFjZzFDcjcxZ3NOdzBoYTVQSzFadmRuMUN4Q2h3RXpsYWxUTTdJSmxQajFaQXBnVHdld2I4M2t0UTNKZW9GdXFTN0xnSTZS?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978987
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQjItXzFUaWRyNTFoNGRVaDRVTTJReW5NRHhEZVdfZFZhMzd2M3lKbm4xM0RjbFN1cjRZb3A4Qk1PdlJrcVVDTGZRUW1yeDdBbEVldkdKTlZmZUtGalhvX2dCTmZkNWNSa0tKTVJEUnlxNnpCX04zUjJYcl9Ua3I1WlhuV2J4eEpReXFjZzFDcjcxZ3NOdzBoYTVQSzFadmRuMUN4Q2h3RXpsYWxUTTdJSmxQajFaQXBnVHdld2I4M2t0UTNKZW9GdXFTN0xnSTZS?oc=5",
@@ -44,7 +48,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOV1M4YzBGZ0hjdHNZLUwxNUE2cmZkQkpkVV90U2VEZUtYYlhRU0NhZ2xTN2RmN2puWldfSTZKS2FaN2xkbXNhbHBKckoxbjZaMGpuZHF1YTFMRkJsZHVSZ3hVeWVYOHhFSUVySmFPUktTZHVaUVhWN3dhd2ZETDczeWdLTHJoVGVTMnhGUXYzZ19TYnBIT1Z2WUZHX0xHQmRfTzkzYk5mMEVXbG5GOHpXMndOd25MQ3pBVUl4SWhsS3lxdXZuTGxKVGUza2w2cXZFT2ZNM3gxeEhoQQ?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.897894
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOV1M4YzBGZ0hjdHNZLUwxNUE2cmZkQkpkVV90U2VEZUtYYlhRU0NhZ2xTN2RmN2puWldfSTZKS2FaN2xkbXNhbHBKckoxbjZaMGpuZHF1YTFMRkJsZHVSZ3hVeWVYOHhFSUVySmFPUktTZHVaUVhWN3dhd2ZETDczeWdLTHJoVGVTMnhGUXYzZ19TYnBIT1Z2WUZHX0xHQmRfTzkzYk5mMEVXbG5GOHpXMndOd25MQ3pBVUl4SWhsS3lxdXZuTGxKVGUza2w2cXZFT2ZNM3gxeEhoQQ?oc=5",
@@ -66,18 +72,23 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQRVVDdGx3YXRRTHRDWC1BUnM4ZUlVa0NJRGhjZHRqSTBNazl3Z0M2MG1GanAzdHNhR0xqME81Y3Y4aUVTMmp3OXVGWGptdEIzSnhrRGVGdWZjdWR6ZTFQUE5STDFSZ3MzOHJtamo1YU5yNGRKQUJrNXZ5WVREclk4enNJR0VSLTNJckdoQjNGNWR3U2UyTlBiU0FPLTlrazBUYV9vOTJLU1BDRjUxUWlHd2hWS2o1YlNKMndDVGRHT1RuOEdLQmtrSTF4a2djek1CTWVqeFFPVDJxQQ?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146875.4701343
+    },
     "criado": 1789146856.1161633,
+    "encerrado": 1789146892.520285,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQRVVDdGx3YXRRTHRDWC1BUnM4ZUlVa0NJRGhjZHRqSTBNazl3Z0M2MG1GanAzdHNhR0xqME81Y3Y4aUVTMmp3OXVGWGptdEIzSnhrRGVGdWZjdWR6ZTFQUE5STDFSZ3MzOHJtamo1YU5yNGRKQUJrNXZ5WVREclk4enNJR0VSLTNJckdoQjNGNWR3U2UyTlBiU0FPLTlrazBUYV9vOTJLU1BDRjUxUWlHd2hWS2o1YlNKMndDVGRHT1RuOEdLQmtrSTF4a2djek1CTWVqeFFPVDJxQQ?oc=5",
       "aliases": [
+        "https://datacenterdynamics.com/br/opini%C3%B5es/beyond-pue-por-que-os-centros-de-dados-de-ia-precisam-de-dados-de-desempenho-verificaveis/",
         "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQRVVDdGx3YXRRTHRDWC1BUnM4ZUlVa0NJRGhjZHRqSTBNazl3Z0M2MG1GanAzdHNhR0xqME81Y3Y4aUVTMmp3OXVGWGptdEIzSnhrRGVGdWZjdWR6ZTFQUE5STDFSZ3MzOHJtamo1YU5yNGRKQUJrNXZ5WVREclk4enNJR0VSLTNJckdoQjNGNWR3U2UyTlBiU0FPLTlrazBUYV9vOTJLU1BDRjUxUWlHd2hWS2o1YlNKMndDVGRHT1RuOEdLQmtrSTF4a2djek1CTWVqeFFPVDJxQQ?oc=5"
       ],
       "fonte": "Data Center Dynamics",
-      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQRVVDdGx3YXRRTHRDWC1BUnM4ZUlVa0NJRGhjZHRqSTBNazl3Z0M2MG1GanAzdHNhR0xqME81Y3Y4aUVTMmp3OXVGWGptdEIzSnhrRGVGdWZjdWR6ZTFQUE5STDFSZ3MzOHJtamo1YU5yNGRKQUJrNXZ5WVREclk4enNJR0VSLTNJckdoQjNGNWR3U2UyTlBiU0FPLTlrazBUYV9vOTJLU1BDRjUxUWlHd2hWS2o1YlNKMndDVGRHT1RuOEdLQmtrSTF4a2djek1CTWVqeFFPVDJxQQ?oc=5",
+      "link": "https://www.datacenterdynamics.com/br/opini%C3%B5es/beyond-pue-por-que-os-centros-de-dados-de-ia-precisam-de-dados-de-desempenho-verificaveis/",
       "origem": "BR",
       "publicado_em": 1789138800,
       "resumo": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxQRVVDdGx3YXRRTHRDWC1BUnM4ZUlVa0NJRGhjZHRqSTBNazl3Z0M2MG1GanAzdHNhR0xqME81Y3Y4aUVTMmp3OXVGWGptdEIzSnhrRGVGdWZjdWR6ZTFQUE5STDFSZ3MzOHJtamo1YU5yNGRKQUJrNXZ5WVREclk4enNJR0VSLTNJckdoQjNGNWR3U2UyTlBiU0FPLTlrazBUYV9vOTJLU1BDRjUxUWlHd2hWS2o1YlNKMndDVGRHT1RuOEdLQmtrSTF4a2djek1CTWVqeFFPVDJxQQ?oc=5\" target=\"_blank\">Para além do PUE: Por que razão os data centers de IA precisam de dados de desempenho verificáveis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Data Center Dynamics</font>",
+      "resumo_final": "Data centers de IA requerem métricas de desempenho verificáveis além do tradicional PUE (Power Usage Effectiveness), pois suas cargas de trabalho provocam flutuações acentuadas no consumo de energia e refrigeração. Com previsão de quase 7 trilhões de dólares em despesas de capital até 2030, financiadores precisam validar independentemente se as instalações alcançam o desempenho previsto em modelos financeiros. Relatórios mensais estáticos não capturam a volatilidade operacional real, deixando exposições a violações de SLA—uma violação de 26 segundos pode gerar penalizações graves—fora dos modelos de crédito, tornando o capital mais caro quando o risco permanece opaco.",
       "titulo": "Para além do PUE: Por que razão os data centers de IA precisam de dados de desempenho verificáveis",
       "topico": "data_center",
       "topicos": [
@@ -85,10 +96,12 @@
       ]
     },
     "rejeitado": [],
-    "status": "pendente"
+    "status": "enviado"
   },
   "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNbjNTSVpOLUFXR2FxLXkxN1RET1RRZHNaenZiOEJnb0xDSnR0U1B4OW5ZMW5JQnRCTVZiaUZRU0R4c0FZTjlxUXQzVTBweERFcXJlcWJhMTB3RG9GSXpWMjZkWThXOF80UDFPSEMwWGFKWk9QYmM0ODlpY2FQb2c2Q243c1VEQU1sSV9xWUxQWk5rR2FHNDUxeDVVS0t1Y0EtYXNxdm5zOTEtcWR5ZlZ6LTVHeVR1UVluQzhWdE5sRzNzNno0VjRpTHR6WS05MWRWN3pLNlVsNXphajc2QzVuU01HakU5ajByc0Z3?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978946
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNbjNTSVpOLUFXR2FxLXkxN1RET1RRZHNaenZiOEJnb0xDSnR0U1B4OW5ZMW5JQnRCTVZiaUZRU0R4c0FZTjlxUXQzVTBweERFcXJlcWJhMTB3RG9GSXpWMjZkWThXOF80UDFPSEMwWGFKWk9QYmM0ODlpY2FQb2c2Q243c1VEQU1sSV9xWUxQWk5rR2FHNDUxeDVVS0t1Y0EtYXNxdm5zOTEtcWR5ZlZ6LTVHeVR1UVluQzhWdE5sRzNzNno0VjRpTHR6WS05MWRWN3pLNlVsNXphajc2QzVuU01HakU5ajByc0Z3?oc=5",
@@ -110,7 +123,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOeEl6bTFDOVJKd09McHd6ZGk1V1ZWUjVDUm1QamhHNXgxUmpuaU9CZW9IOG53eExRb3BuMnRzX2stS2d6ZnVFcW9lZ3E1N3dBMTktVVc2OHVOcFFqcEd3ZW92eTl6b19TcXJ0TWNSN2RuVFd4TzRpTXdhcEdfeGt2T3lMay03bmNZV0ZFOC0zV0pwT1h6c3FONXgyRkVmLW53M3pGZmhrY3N3dlI3cVQ1NkVmTmFzUnMyM0tmUzFWYUdSaFFiZUhib3UyZTNTLUNoQXVyMDNOcGcwV01tYmZOOGNhSmpqMExNWnBF?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978894
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOeEl6bTFDOVJKd09McHd6ZGk1V1ZWUjVDUm1QamhHNXgxUmpuaU9CZW9IOG53eExRb3BuMnRzX2stS2d6ZnVFcW9lZ3E1N3dBMTktVVc2OHVOcFFqcEd3ZW92eTl6b19TcXJ0TWNSN2RuVFd4TzRpTXdhcEdfeGt2T3lMay03bmNZV0ZFOC0zV0pwT1h6c3FONXgyRkVmLW53M3pGZmhrY3N3dlI3cVQ1NkVmTmFzUnMyM0tmUzFWYUdSaFFiZUhib3UyZTNTLUNoQXVyMDNOcGcwV01tYmZOOGNhSmpqMExNWnBF?oc=5",
@@ -132,7 +147,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOZFg0V3h6OFF2QXdET21nZFEtSnpkb2hJUTc5dzMzQWhTZmpKNGZIQWJtbV93aElBUGw0MzlNVVJEYldFN3M1cFpybFVhUTNvdnRUd24xWFBtZ0NZY0lReWRnVDg4Wkk4VWF0R2ZNSzZIZ0wxU0owR2YyZ0dBMEN6d0ZpRnpuMjcxQVBzTzFSNUdzOTFJc3pSSHJWMTc2ekJ1Ml9zblpiVnJHTm5wXzNlQ0J3RzNDVXB4ODhyazllcm9oak5kelp2aWhBS3FWa1JZNG5HNkRXdkI5SkpwZlNQN2t0OGJCbUtuajg0UzdjMDRLT0Z6c2Iw?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978908
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOZFg0V3h6OFF2QXdET21nZFEtSnpkb2hJUTc5dzMzQWhTZmpKNGZIQWJtbV93aElBUGw0MzlNVVJEYldFN3M1cFpybFVhUTNvdnRUd24xWFBtZ0NZY0lReWRnVDg4Wkk4VWF0R2ZNSzZIZ0wxU0owR2YyZ0dBMEN6d0ZpRnpuMjcxQVBzTzFSNUdzOTFJc3pSSHJWMTc2ekJ1Ml9zblpiVnJHTm5wXzNlQ0J3RzNDVXB4ODhyazllcm9oak5kelp2aWhBS3FWa1JZNG5HNkRXdkI5SkpwZlNQN2t0OGJCbUtuajg0UzdjMDRLT0Z6c2Iw?oc=5",
@@ -154,7 +171,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1qVUhxSFdJX0NranhUcWZpaU45X0FfSHN0cC1zVnlQNHdKMWs3US1nZzBxbWxWYkY2TjREUDR4QWNkM1FoT3BNRDdBYlNtU0pvTXJCcVBWRUFRWlJ0UktOUw?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978956
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1qVUhxSFdJX0NranhUcWZpaU45X0FfSHN0cC1zVnlQNHdKMWs3US1nZzBxbWxWYkY2TjREUDR4QWNkM1FoT3BNRDdBYlNtU0pvTXJCcVBWRUFRWlJ0UktOUw?oc=5",
@@ -176,7 +195,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBuLVpVRE1OV3dMbzl4Yzd3cmpGUHRHUUZadllPOEFRZ0daOVZvcGRwMGZIcDN0RmFMa2h2MmRTVEZoMWRFZ0gxYjlQRmh5ZkRvNTNxMTVFcW05Rk5UNi1TYUY0OGFudTg3?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.897885
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBuLVpVRE1OV3dMbzl4Yzd3cmpGUHRHUUZadllPOEFRZ0daOVZvcGRwMGZIcDN0RmFMa2h2MmRTVEZoMWRFZ0gxYjlQRmh5ZkRvNTNxMTVFcW05Rk5UNi1TYUY0OGFudTg3?oc=5",
@@ -198,7 +219,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMifkFVX3lxTE45QjlwRXZJVDFfWnJTR21FWVVUNGJGZXBqa09sT3pHUlZwazBpYjFianY2TTN4MUJ2bmJQRjVWYXB2N09aZVlnaG5kRTRaMlNTUV9sSDlZbUd6eU1sbDlId3VIdDFQOTNYRHUtWW1HeHFBa0Exb0l1OVJxNlo4dw?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.897897
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMifkFVX3lxTE45QjlwRXZJVDFfWnJTR21FWVVUNGJGZXBqa09sT3pHUlZwazBpYjFianY2TTN4MUJ2bmJQRjVWYXB2N09aZVlnaG5kRTRaMlNTUV9sSDlZbUd6eU1sbDlId3VIdDFQOTNYRHUtWW1HeHFBa0Exb0l1OVJxNlo4dw?oc=5",
@@ -222,6 +245,7 @@
   "https://news.google.com/rss/articles/CBMihAFBVV95cUxPNTRRakI5cTVnZmZvSUsxU1FabVYzV1ZBZUZCamxUVnh1RnZkU0hSbTR1Z0lPZ3NYeGhPMWt0dnVzY0RtSGs4V0VzdU9rcUQ4T05haHVJcEFxUVpZem1HMGdPaTFRM0I0Zmp1Q2xWeXBsNEl3XzVrajF5clRXZ2ZlWkNncnY?oc=5": {
     "avaliado": {},
     "criado": 1789146856.1161633,
+    "encerrado": 1789146892.520285,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPNTRRakI5cTVnZmZvSUsxU1FabVYzV1ZBZUZCamxUVnh1RnZkU0hSbTR1Z0lPZ3NYeGhPMWt0dnVzY0RtSGs4V0VzdU9rcUQ4T05haHVJcEFxUVpZem1HMGdPaTFRM0I0Zmp1Q2xWeXBsNEl3XzVrajF5clRXZ2ZlWkNncnY?oc=5",
       "aliases": [
@@ -242,7 +266,9 @@
     "status": "expirado"
   },
   "https://news.google.com/rss/articles/CBMihAJBVV95cUxQR3BlblVJT05HaEYxOUdoTlFrSjc3X1FGVnZCSkY4TE5GTW5mcnViUUZheXZkSms3X0NQOWpIdVBFaFg1anhPR1pQbldJTldRSENnbUZqYjNjWTUxdXFZalRQVGpNZXBNZUxaeHQ3d2N4OENkSWt5Z3pQNExzNGctZXNJeEZad0RUY09pX2JpZVpOdWlvNWd6RGxrdHd1aXhHanF0QWVrdmdQOGhLMnNsWm5xbURrQXltVzRId1VQdDZYLUQtTkdZeFJEVmZxWlBUeHVZbW9Wd3lKY0pqV2dPQjg1bGR1UnRNVXFjV3dRM0FXalVaVkRlakhfaFF0cC03WVhpVg?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978877
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQR3BlblVJT05HaEYxOUdoTlFrSjc3X1FGVnZCSkY4TE5GTW5mcnViUUZheXZkSms3X0NQOWpIdVBFaFg1anhPR1pQbldJTldRSENnbUZqYjNjWTUxdXFZalRQVGpNZXBNZUxaeHQ3d2N4OENkSWt5Z3pQNExzNGctZXNJeEZad0RUY09pX2JpZVpOdWlvNWd6RGxrdHd1aXhHanF0QWVrdmdQOGhLMnNsWm5xbURrQXltVzRId1VQdDZYLUQtTkdZeFJEVmZxWlBUeHVZbW9Wd3lKY0pqV2dPQjg1bGR1UnRNVXFjV3dRM0FXalVaVkRlakhfaFF0cC03WVhpVg?oc=5",
@@ -264,15 +290,19 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMihgFBVV95cUxPX0dkRTlhc3RTVUgwN2hQcjNuOEZYSnlOYzU3NlV5b2xoMzl3UEFaNHFMaEFrXzg0RkM2bFhmT0dCcTJzU1M2M0NEWllkM2ZKS3d5dnVnNFp5RThjcHpXaWtqVmFNRUFKbDF3cU5KLTJGakVxc3N2M1JzNGZDVlRDRVRPdlFQZw?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146875.4701335
+    },
     "criado": 1789146856.1161633,
+    "encerrado": 1789146892.520285,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPX0dkRTlhc3RTVUgwN2hQcjNuOEZYSnlOYzU3NlV5b2xoMzl3UEFaNHFMaEFrXzg0RkM2bFhmT0dCcTJzU1M2M0NEWllkM2ZKS3d5dnVnNFp5RThjcHpXaWtqVmFNRUFKbDF3cU5KLTJGakVxc3N2M1JzNGZDVlRDRVRPdlFQZw?oc=5",
       "aliases": [
+        "https://aciara.com.br/mpf-aciona-justica-contra-data-center-do-tiktok-no-ceara/",
         "https://news.google.com/rss/articles/CBMihgFBVV95cUxPX0dkRTlhc3RTVUgwN2hQcjNuOEZYSnlOYzU3NlV5b2xoMzl3UEFaNHFMaEFrXzg0RkM2bFhmT0dCcTJzU1M2M0NEWllkM2ZKS3d5dnVnNFp5RThjcHpXaWtqVmFNRUFKbDF3cU5KLTJGakVxc3N2M1JzNGZDVlRDRVRPdlFQZw?oc=5"
       ],
       "fonte": "Associação Comercial e Industrial de Araçatuba",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPX0dkRTlhc3RTVUgwN2hQcjNuOEZYSnlOYzU3NlV5b2xoMzl3UEFaNHFMaEFrXzg0RkM2bFhmT0dCcTJzU1M2M0NEWllkM2ZKS3d5dnVnNFp5RThjcHpXaWtqVmFNRUFKbDF3cU5KLTJGakVxc3N2M1JzNGZDVlRDRVRPdlFQZw?oc=5",
+      "link": "https://aciara.com.br/mpf-aciona-justica-contra-data-center-do-tiktok-no-ceara/",
       "origem": "BR",
       "publicado_em": 1789124744,
       "resumo": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxPX0dkRTlhc3RTVUgwN2hQcjNuOEZYSnlOYzU3NlV5b2xoMzl3UEFaNHFMaEFrXzg0RkM2bFhmT0dCcTJzU1M2M0NEWllkM2ZKS3d5dnVnNFp5RThjcHpXaWtqVmFNRUFKbDF3cU5KLTJGakVxc3N2M1JzNGZDVlRDRVRPdlFQZw?oc=5\" target=\"_blank\">MPF aciona Justiça contra data center do TikTok no Ceará</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Associação Comercial e Industrial de Araçatuba</font>",
@@ -283,10 +313,12 @@
       ]
     },
     "rejeitado": [],
-    "status": "pendente"
+    "status": "rejeitado"
   },
   "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNUzhJV0diODNwelR1Q3BFM0FOcEZ3bXpPbnBHbU4wNWEtYW9zWVliUUdBZ2NMZ0ZEUVpxZWhJMkR6UzVrZEdWa2FxbUtfR0tEUTNtRXJJeWQ2eFdDbUtHMmxSQTByaTF6T0N6cTlZTy10RlpmOTBISU5RNVNtOF9oRDNoc09QXzE3?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978903
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNUzhJV0diODNwelR1Q3BFM0FOcEZ3bXpPbnBHbU4wNWEtYW9zWVliUUdBZ2NMZ0ZEUVpxZWhJMkR6UzVrZEdWa2FxbUtfR0tEUTNtRXJJeWQ2eFdDbUtHMmxSQTByaTF6T0N6cTlZTy10RlpmOTBISU5RNVNtOF9oRDNoc09QXzE3?oc=5",
@@ -308,8 +340,11 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMijwFBVV95cUxPN21MTE5rdTF3M056V0oybjkxbk8xSWxZR1hIQ0JjNTY5ZkFXOFBjTktpRVpTTmRpSVp5UHBJZVlyUW5abjRNOENJb1YtWTBITFZxY21MSmswbjJkMjcyLTZCVGoyUi1peURZVGgyVlppMGw2NXNLTUhmYzQxZGxvOFFrLXNhbXRLaXpfa0szSQ?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "carbono": 1789146880.6371918
+    },
     "criado": 1789146856.1161633,
+    "encerrado": 1789146892.520285,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPN21MTE5rdTF3M056V0oybjkxbk8xSWxZR1hIQ0JjNTY5ZkFXOFBjTktpRVpTTmRpSVp5UHBJZVlyUW5abjRNOENJb1YtWTBITFZxY21MSmswbjJkMjcyLTZCVGoyUi1peURZVGgyVlppMGw2NXNLTUhmYzQxZGxvOFFrLXNhbXRLaXpfa0szSQ?oc=5",
       "aliases": [
@@ -326,11 +361,15 @@
         "carbono"
       ]
     },
-    "rejeitado": [],
-    "status": "pendente"
+    "rejeitado": [
+      "carbono"
+    ],
+    "status": "rejeitado"
   },
   "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZlhvakFQQmp1VHA4TERYRlJtVGhneEpqWmktOUZzODhjZF9FeDlMODVUSHRNaGpYaHNKNzRRX191RU1fdG94YXNXUndrY3JhOVlkTV9NZDZPQlJSNUdfQ0FGZjI2Y19ObmlIcVBqVEpZeTNxSnd2UTItTTNhV1lSS1VPSjFQYnQ5S0RSSVhqLVk?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978975
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNZlhvakFQQmp1VHA4TERYRlJtVGhneEpqWmktOUZzODhjZF9FeDlMODVUSHRNaGpYaHNKNzRRX191RU1fdG94YXNXUndrY3JhOVlkTV9NZDZPQlJSNUdfQ0FGZjI2Y19ObmlIcVBqVEpZeTNxSnd2UTItTTNhV1lSS1VPSjFQYnQ5S0RSSVhqLVk?oc=5",
@@ -352,7 +391,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMikAFBVV95cUxOQXRyLXE3TTFteDJibm5FRW1ReWFyeGs3VWRNc1NmM0JhcHlGTkpJM25aVDljbGdhXzZyX0k2cjlkaHFyaERMSzl1eE93a0E3LUVmc3BuNkFEU1NGMm0wcWo2aDI5SzU5VXBQOGd6cDN4TW9ISE0wTC1LZWJLQ1RKSW84ck56U2JTZ2VPZ2tXc3LSAZYBQVVfeXFMT084MXdxYmRqT2kwM1h0MHZVWnZzdHQ3VWN6WHZ6eGpyRnBDcEk2ZXIwcUhVNzF2dTBobUgweTl6NmZPYTZ3Z3RBYWFtM0pCLVkyd2NpbDdXQ3plNF9UN1h2Vncyb2pmVGlzdTM1SVZxclRFaXU4NjYwa2hvM0xpODBkNW1uc2RKMHkzTHhTbmFxakViQVVn?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.897893
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOQXRyLXE3TTFteDJibm5FRW1ReWFyeGs3VWRNc1NmM0JhcHlGTkpJM25aVDljbGdhXzZyX0k2cjlkaHFyaERMSzl1eE93a0E3LUVmc3BuNkFEU1NGMm0wcWo2aDI5SzU5VXBQOGd6cDN4TW9ISE0wTC1LZWJLQ1RKSW84ck56U2JTZ2VPZ2tXc3LSAZYBQVVfeXFMT084MXdxYmRqT2kwM1h0MHZVWnZzdHQ3VWN6WHZ6eGpyRnBDcEk2ZXIwcUhVNzF2dTBobUgweTl6NmZPYTZ3Z3RBYWFtM0pCLVkyd2NpbDdXQ3plNF9UN1h2Vncyb2pmVGlzdTM1SVZxclRFaXU4NjYwa2hvM0xpODBkNW1uc2RKMHkzTHhTbmFxakViQVVn?oc=5",
@@ -374,7 +415,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWW14clhWZy1JWGJCY0FPeHZFeEZ0UjIyNExfbldOcWdWa3VGZEJhM3ZRdks5SFczbWdfY2VVd1pvT0JlNHkybDhYajVseGN1U0E4bzNGQ0s1c05ZekVvTS1KOWR5ZVp1dl9KRDA4anFuTjYtVEdKVWZicHZTRXF2VFNFbnZwYjNhUXdsMWNkNnkzM2g5VkhR?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978982
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWW14clhWZy1JWGJCY0FPeHZFeEZ0UjIyNExfbldOcWdWa3VGZEJhM3ZRdks5SFczbWdfY2VVd1pvT0JlNHkybDhYajVseGN1U0E4bzNGQ0s1c05ZekVvTS1KOWR5ZVp1dl9KRDA4anFuTjYtVEdKVWZicHZTRXF2VFNFbnZwYjNhUXdsMWNkNnkzM2g5VkhR?oc=5",
@@ -396,7 +439,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVklfdmZUeUhmY2ZrRVFzd3otNm84eklYTFVXQVk3NjdiclROS1QxYzJ2b0VSNjJFTW5SdE5WLUhrVkxPVkJONVRlQkNBOGdzbUpkQVl1bC1abVNRNjlmVERsdmVWZDJOVHgyT0J5cFhZcnQyYmNkZ0plZTMybVJqbEdsLVktVHQ1WnM0eEQ2dlJvdHBhWjJN?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978915
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVklfdmZUeUhmY2ZrRVFzd3otNm84eklYTFVXQVk3NjdiclROS1QxYzJ2b0VSNjJFTW5SdE5WLUhrVkxPVkJONVRlQkNBOGdzbUpkQVl1bC1abVNRNjlmVERsdmVWZDJOVHgyT0J5cFhZcnQyYmNkZ0plZTMybVJqbEdsLVktVHQ1WnM0eEQ2dlJvdHBhWjJN?oc=5",
@@ -418,7 +463,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMimwFBVV95cUxOQUpMVHYzMGJHR2JwR05LYTQya0w2VE1zSTNuVVZMY3k3V1F4cC02TkJ6ZFdXcmc3WnVWXy1zWC14QnRDWFh2bEZBOGJZcDY1cWZHelFzdl9yQWRMNlZOcEVyNXNsSmctZDRtQ1Y5aDVjdVg5dEI2R2J2bk10QzBGMWtXVU82LW5WYUNWQjVmNlV4SVJRMnNxeERRWQ?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978815
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOQUpMVHYzMGJHR2JwR05LYTQya0w2VE1zSTNuVVZMY3k3V1F4cC02TkJ6ZFdXcmc3WnVWXy1zWC14QnRDWFh2bEZBOGJZcDY1cWZHelFzdl9yQWRMNlZOcEVyNXNsSmctZDRtQ1Y5aDVjdVg5dEI2R2J2bk10QzBGMWtXVU82LW5WYUNWQjVmNlV4SVJRMnNxeERRWQ?oc=5",
@@ -440,7 +487,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMinwFBVV95cUxQLV8tYkRwSDVHckhEZnBGN3F4Q0p6TzFIcFIzRGVGM0w2Rl84MU5VOGFwT29xM09CQWJRMXd1U2hwLTNKaEplZVJaV3JnbThidHUyZUYtc0h0cDZRVlkxY1lDZ1dVdVpKcHpfa0dXQUdYSlFiUVdLSmlCREYyU1QzTWFUNjRMazhtSHJUcy03UGctTDdzaFFGNktsNEF6b3M?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.897895
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQLV8tYkRwSDVHckhEZnBGN3F4Q0p6TzFIcFIzRGVGM0w2Rl84MU5VOGFwT29xM09CQWJRMXd1U2hwLTNKaEplZVJaV3JnbThidHUyZUYtc0h0cDZRVlkxY1lDZ1dVdVpKcHpfa0dXQUdYSlFiUVdLSmlCREYyU1QzTWFUNjRMazhtSHJUcy03UGctTDdzaFFGNktsNEF6b3M?oc=5",
@@ -462,15 +511,19 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMiogFBVV95cUxOQUhwWGV1TXVxcmRSTDU0VWRxb1MwQ0QteWVaZ2Z5QWUxNTh1VVRPU0dZbXV5OUFCQVN4c05EaXNmNnkwTHBINXlPRnRGVDdYOFh6eDRISjgwcm12MjNYa0xpZFV4SE16UkE3dnVrcTlFUF9DZGpCRlE4N0RZNHUwWWoyRG12c2ZkVXhvVkM5SWlnd1BPXzh3YUFORFFoU296SEE?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.897881
+    },
     "criado": 1789146856.1161633,
+    "encerrado": 1789146892.520285,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOQUhwWGV1TXVxcmRSTDU0VWRxb1MwQ0QteWVaZ2Z5QWUxNTh1VVRPU0dZbXV5OUFCQVN4c05EaXNmNnkwTHBINXlPRnRGVDdYOFh6eDRISjgwcm12MjNYa0xpZFV4SE16UkE3dnVrcTlFUF9DZGpCRlE4N0RZNHUwWWoyRG12c2ZkVXhvVkM5SWlnd1BPXzh3YUFORFFoU296SEE?oc=5",
       "aliases": [
-        "https://news.google.com/rss/articles/CBMiogFBVV95cUxOQUhwWGV1TXVxcmRSTDU0VWRxb1MwQ0QteWVaZ2Z5QWUxNTh1VVRPU0dZbXV5OUFCQVN4c05EaXNmNnkwTHBINXlPRnRGVDdYOFh6eDRISjgwcm12MjNYa0xpZFV4SE16UkE3dnVrcTlFUF9DZGpCRlE4N0RZNHUwWWoyRG12c2ZkVXhvVkM5SWlnd1BPXzh3YUFORFFoU296SEE?oc=5"
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxOQUhwWGV1TXVxcmRSTDU0VWRxb1MwQ0QteWVaZ2Z5QWUxNTh1VVRPU0dZbXV5OUFCQVN4c05EaXNmNnkwTHBINXlPRnRGVDdYOFh6eDRISjgwcm12MjNYa0xpZFV4SE16UkE3dnVrcTlFUF9DZGpCRlE4N0RZNHUwWWoyRG12c2ZkVXhvVkM5SWlnd1BPXzh3YUFORFFoU296SEE?oc=5",
+        "https://ufs.br/conteudo/80094-instalacao-de-novo-gerador-no-data-center-suspende-sistemas-da-ufs"
       ],
       "fonte": "Portal UFS",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOQUhwWGV1TXVxcmRSTDU0VWRxb1MwQ0QteWVaZ2Z5QWUxNTh1VVRPU0dZbXV5OUFCQVN4c05EaXNmNnkwTHBINXlPRnRGVDdYOFh6eDRISjgwcm12MjNYa0xpZFV4SE16UkE3dnVrcTlFUF9DZGpCRlE4N0RZNHUwWWoyRG12c2ZkVXhvVkM5SWlnd1BPXzh3YUFORFFoU296SEE?oc=5",
+      "link": "https://www.ufs.br/conteudo/80094-instalacao-de-novo-gerador-no-data-center-suspende-sistemas-da-ufs",
       "origem": "BR",
       "publicado_em": 1789138680,
       "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOQUhwWGV1TXVxcmRSTDU0VWRxb1MwQ0QteWVaZ2Z5QWUxNTh1VVRPU0dZbXV5OUFCQVN4c05EaXNmNnkwTHBINXlPRnRGVDdYOFh6eDRISjgwcm12MjNYa0xpZFV4SE16UkE3dnVrcTlFUF9DZGpCRlE4N0RZNHUwWWoyRG12c2ZkVXhvVkM5SWlnd1BPXzh3YUFORFFoU296SEE?oc=5\" target=\"_blank\">Portal UFS - Instalação de novo gerador no Data Center suspende sistemas da UFS</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Portal UFS</font>",
@@ -481,10 +534,12 @@
       ]
     },
     "rejeitado": [],
-    "status": "pendente"
+    "status": "rejeitado"
   },
   "https://news.google.com/rss/articles/CBMiowFBVV95cUxOWEdWNVhtbTBFTWxGbF9Lak1wQWN3YXZsd3dCdFdjRy1qcThKazZVN0V6alZVM2JVQ1d5Y1M2ekJqTE5YM3RBbE1VeE5UN1BkS21UZnMyZXdrTENGSnk4ZnF4TWthZWhQd2hrMlFYMXAxbkdJNE9yTDVaRHFtTGd6Ukt1MUdSYlNhSVBObE5aVkRsN0x3QWVIblZOR1piOG15V0lj?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978844
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOWEdWNVhtbTBFTWxGbF9Lak1wQWN3YXZsd3dCdFdjRy1qcThKazZVN0V6alZVM2JVQ1d5Y1M2ekJqTE5YM3RBbE1VeE5UN1BkS21UZnMyZXdrTENGSnk4ZnF4TWthZWhQd2hrMlFYMXAxbkdJNE9yTDVaRHFtTGd6Ukt1MUdSYlNhSVBObE5aVkRsN0x3QWVIblZOR1piOG15V0lj?oc=5",
@@ -506,7 +561,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMipgFBVV95cUxQenloWGE3a2ZIVXR2LU0tZGl5VW0ydW1LRTk2U2ZFMGt2M3hFaS1UczcyRGlTSEIwQUFuTmlBMmRWbklzWkJlMmRVeHhLeVZPQmFhTndJdEtxTHA0UFBVeWZyaGRjT19CVk5PdWdJUE5CS29aWS1Vd2JvQm1iM2cxS3hEMFhtNlRCREV6M0E1MHVtaFVCU0dXRy1GOXhJa1h2eDQ4Y1pn?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978977
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQenloWGE3a2ZIVXR2LU0tZGl5VW0ydW1LRTk2U2ZFMGt2M3hFaS1UczcyRGlTSEIwQUFuTmlBMmRWbklzWkJlMmRVeHhLeVZPQmFhTndJdEtxTHA0UFBVeWZyaGRjT19CVk5PdWdJUE5CS29aWS1Vd2JvQm1iM2cxS3hEMFhtNlRCREV6M0E1MHVtaFVCU0dXRy1GOXhJa1h2eDQ4Y1pn?oc=5",
@@ -528,18 +585,23 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMipwFBVV95cUxQV3dtZDdjamFXRTRWNzQzQm5jU0N6YUh4bVBBVDRDTGM5blZxTDZya0t6Tm5yTWxMTWxibzNTNDhPaDVqUXhHQjZNZHBicVN5NWtoSUNURzRqaEVEd1R5bWVFdjdodmhPQWcxQlh4aE9nckRJNnRxS1d0UFBEeXp2TDdvcjA4LWVhMGxsVTFBNFV3ZW9WUWlsNHVOZGVOQ2p1aEtfY08zNA?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146868.1653135
+    },
     "criado": 1789146856.1161633,
+    "encerrado": 1789146892.520285,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQV3dtZDdjamFXRTRWNzQzQm5jU0N6YUh4bVBBVDRDTGM5blZxTDZya0t6Tm5yTWxMTWxibzNTNDhPaDVqUXhHQjZNZHBicVN5NWtoSUNURzRqaEVEd1R5bWVFdjdodmhPQWcxQlh4aE9nckRJNnRxS1d0UFBEeXp2TDdvcjA4LWVhMGxsVTFBNFV3ZW9WUWlsNHVOZGVOQ2p1aEtfY08zNA?oc=5",
       "aliases": [
-        "https://news.google.com/rss/articles/CBMipwFBVV95cUxQV3dtZDdjamFXRTRWNzQzQm5jU0N6YUh4bVBBVDRDTGM5blZxTDZya0t6Tm5yTWxMTWxibzNTNDhPaDVqUXhHQjZNZHBicVN5NWtoSUNURzRqaEVEd1R5bWVFdjdodmhPQWcxQlh4aE9nckRJNnRxS1d0UFBEeXp2TDdvcjA4LWVhMGxsVTFBNFV3ZW9WUWlsNHVOZGVOQ2p1aEtfY08zNA?oc=5"
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxQV3dtZDdjamFXRTRWNzQzQm5jU0N6YUh4bVBBVDRDTGM5blZxTDZya0t6Tm5yTWxMTWxibzNTNDhPaDVqUXhHQjZNZHBicVN5NWtoSUNURzRqaEVEd1R5bWVFdjdodmhPQWcxQlh4aE9nckRJNnRxS1d0UFBEeXp2TDdvcjA4LWVhMGxsVTFBNFV3ZW9WUWlsNHVOZGVOQ2p1aEtfY08zNA?oc=5",
+        "https://semafor.com/article/09/11/2026/chipmaker-onsemi-says-data-centers-should-report-energy-waste"
       ],
       "fonte": "Semafor",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQV3dtZDdjamFXRTRWNzQzQm5jU0N6YUh4bVBBVDRDTGM5blZxTDZya0t6Tm5yTWxMTWxibzNTNDhPaDVqUXhHQjZNZHBicVN5NWtoSUNURzRqaEVEd1R5bWVFdjdodmhPQWcxQlh4aE9nckRJNnRxS1d0UFBEeXp2TDdvcjA4LWVhMGxsVTFBNFV3ZW9WUWlsNHVOZGVOQ2p1aEtfY08zNA?oc=5",
+      "link": "https://www.semafor.com/article/09/11/2026/chipmaker-onsemi-says-data-centers-should-report-energy-waste",
       "origem": "INT",
       "publicado_em": 1789138800,
       "resumo": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxQV3dtZDdjamFXRTRWNzQzQm5jU0N6YUh4bVBBVDRDTGM5blZxTDZya0t6Tm5yTWxMTWxibzNTNDhPaDVqUXhHQjZNZHBicVN5NWtoSUNURzRqaEVEd1R5bWVFdjdodmhPQWcxQlh4aE9nckRJNnRxS1d0UFBEeXp2TDdvcjA4LWVhMGxsVTFBNFV3ZW9WUWlsNHVOZGVOQ2p1aEtfY08zNA?oc=5\" target=\"_blank\">Chipmaker says data centers should report energy waste</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Semafor</font>",
+      "resumo_final": "O CEO da fabricante de chips Onsemi criticou moratoriums sobre data centers de IA como \"míope\" e pediu que governos exijam transparência sobre desperdício de energia em vez de banir as instalações. Onsemi propõe padrões federais e estaduais para relatar quanto de energia bruta um data center consome e quão eficientemente a utiliza, argumentando que anúncios de capacidade em gigawatts não refletem o desempenho real de computação. A empresa, com valor de mercado de US$ 28 bilhões, reportou que data centers de IA são seu negócio de crescimento mais rápido, com receita esperada para mais que dobrar este ano.",
       "titulo": "Chipmaker says data centers should report energy waste",
       "topico": "data_center",
       "topicos": [
@@ -547,10 +609,12 @@
       ]
     },
     "rejeitado": [],
-    "status": "pendente"
+    "status": "enviado"
   },
   "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQ21FZFlMekMzM1FHVXNEZlJJWUlQUEVrMXV6Y0htVXBMQUhWVTJEMG5RZHV5Ti1QQnItMzlWSUFxMW81Qkl5T1dYRHFsYkMxaWs4Z2RremNKSkNMTGx5blJQZ1ZCR1pUTkdKT2Jqb3hOWHBVOVMxRWZnaFN4Wmtqc05XRW9FOGlBUFM2c3llanFwNVVyN0RYMkNya1N5NmJjM29YaWdyVWhLXy1M?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978827
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQQ21FZFlMekMzM1FHVXNEZlJJWUlQUEVrMXV6Y0htVXBMQUhWVTJEMG5RZHV5Ti1QQnItMzlWSUFxMW81Qkl5T1dYRHFsYkMxaWs4Z2RremNKSkNMTGx5blJQZ1ZCR1pUTkdKT2Jqb3hOWHBVOVMxRWZnaFN4Wmtqc05XRW9FOGlBUFM2c3llanFwNVVyN0RYMkNya1N5NmJjM29YaWdyVWhLXy1M?oc=5",
@@ -572,7 +636,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVUYxN2syTU9NcXJaZVFIM3g0YTJlVUZHMFhQOF8zc002Nlhid1N0LVJsVWo4SXI2RjVHbkZWc3ZRYXVSS25ZdUVuZWNIekc4Zkc2Mm1EaW9OTlRjM1U2Si1YZ3dVUjUtN0xxMXZyY29zM1BwYnZoUlYxcHl1bWlnNTJYcHFoZ3UtTzZEc0htSF9ma1IwbVRkV0pTMGR6dWdXZ1JpLWZYRkRHdmw2YjluMmhzUQ?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978965
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVUYxN2syTU9NcXJaZVFIM3g0YTJlVUZHMFhQOF8zc002Nlhid1N0LVJsVWo4SXI2RjVHbkZWc3ZRYXVSS25ZdUVuZWNIekc4Zkc2Mm1EaW9OTlRjM1U2Si1YZ3dVUjUtN0xxMXZyY29zM1BwYnZoUlYxcHl1bWlnNTJYcHFoZ3UtTzZEc0htSF9ma1IwbVRkV0pTMGR6dWdXZ1JpLWZYRkRHdmw2YjluMmhzUQ?oc=5",
@@ -594,7 +660,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMitgFBVV95cUxOcnJueWNoRms4UEl3VFJuVFh1dVNaYm03UHdCc195NnY0bTRfaE5qMFRvT1E3aHJpdmRpRVFudGNkR3J3RDJ1WWlYaUJ4RF82MG5Ndk5zckMwVlJlUzJHSFU0ZXFjY3Vta3BfQmw4OGt5aFBCWVJadHFmNGZvVGstRDN2V3JCc184clVJa2Zhdk5HSnJQN29ZSGRqS1lWSlBkZVA1bFJyc3NIYXowSzJ1bThuZVNpUQ?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978887
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOcnJueWNoRms4UEl3VFJuVFh1dVNaYm03UHdCc195NnY0bTRfaE5qMFRvT1E3aHJpdmRpRVFudGNkR3J3RDJ1WWlYaUJ4RF82MG5Ndk5zckMwVlJlUzJHSFU0ZXFjY3Vta3BfQmw4OGt5aFBCWVJadHFmNGZvVGstRDN2V3JCc184clVJa2Zhdk5HSnJQN29ZSGRqS1lWSlBkZVA1bFJyc3NIYXowSzJ1bThuZVNpUQ?oc=5",
@@ -616,7 +684,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNVXNoLUxPOWN5UDVsMjhXZGNGcTlqc3ZEZnNEV3hFNTBZV3YxWm5jUGJ2eEtJNUhkekJpUC1NV0JPazdtdDUxV1hJZXB3MWtaYkp6UjNCYl90TlU3dm1zU2ljNDNINnpjZWxtTzZFZ0dhbldzYWZaRVBfbm9Bb1k4czdvNThmX0ZSbmZsUFhKZXFmd0pCdEVQZVpXc181MXppUFhUSVNJLUhpYnhTeEJhZ0xlb21mcE0x?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978963
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNVXNoLUxPOWN5UDVsMjhXZGNGcTlqc3ZEZnNEV3hFNTBZV3YxWm5jUGJ2eEtJNUhkekJpUC1NV0JPazdtdDUxV1hJZXB3MWtaYkp6UjNCYl90TlU3dm1zU2ljNDNINnpjZWxtTzZFZ0dhbldzYWZaRVBfbm9Bb1k4czdvNThmX0ZSbmZsUFhKZXFmd0pCdEVQZVpXc181MXppUFhUSVNJLUhpYnhTeEJhZ0xlb21mcE0x?oc=5",
@@ -638,7 +708,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMiugFBVV95cUxNZjlKWTlsMW5lNjFmbC1uQ0l6eUtvY0JWSURraC1DVmxlUk5IU0pYVTFKRjJpZXc2d2djT2Zsd1daTFFRaHp2NFlJRXNjLWtVRGxub0ZqY2hQanRHY0Rsb0VfSkVvNEc3Tml1anBrSWhkODliS2tDVnpaQURWaWRrckU2akF2aGZGRzFCanBkMk9jTC1MZUMwbnQ5M2RxRzVhYTZPRURjVld2bnNkTEpsdXpuRWFSekNWS3c?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.897887
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNZjlKWTlsMW5lNjFmbC1uQ0l6eUtvY0JWSURraC1DVmxlUk5IU0pYVTFKRjJpZXc2d2djT2Zsd1daTFFRaHp2NFlJRXNjLWtVRGxub0ZqY2hQanRHY0Rsb0VfSkVvNEc3Tml1anBrSWhkODliS2tDVnpaQURWaWRrckU2akF2aGZGRzFCanBkMk9jTC1MZUMwbnQ5M2RxRzVhYTZPRURjVld2bnNkTEpsdXpuRWFSekNWS3c?oc=5",
@@ -660,8 +732,11 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSXFMS2Y2eWpfZGtYdUd1TE9PRXpZNFcxYl8yR2tUMkUyOWtsakJoOE9FSU1YbUJkdkVPcE1UcVdhbU5VYXdFYUlUNUlvTVByVWV6RkVNZ2oxMWdodzVRenVaYmRpdVY5c3pXMWp0LU50ekVEREZfUVB3VWZFSTdaWHFHcGctX3RucTJ5N2VxRUdvSWlDM0FMUXZmQUZoVWttb2RiZzU4Vmp1bkJISWpmbVNmcUVPM2dlcDl0OQ?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "carbono": 1789146880.6371925
+    },
     "criado": 1789146856.1161633,
+    "encerrado": 1789146892.520285,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSXFMS2Y2eWpfZGtYdUd1TE9PRXpZNFcxYl8yR2tUMkUyOWtsakJoOE9FSU1YbUJkdkVPcE1UcVdhbU5VYXdFYUlUNUlvTVByVWV6RkVNZ2oxMWdodzVRenVaYmRpdVY5c3pXMWp0LU50ekVEREZfUVB3VWZFSTdaWHFHcGctX3RucTJ5N2VxRUdvSWlDM0FMUXZmQUZoVWttb2RiZzU4Vmp1bkJISWpmbVNmcUVPM2dlcDl0OQ?oc=5",
       "aliases": [
@@ -678,11 +753,15 @@
         "carbono"
       ]
     },
-    "rejeitado": [],
-    "status": "pendente"
+    "rejeitado": [
+      "carbono"
+    ],
+    "status": "rejeitado"
   },
   "https://news.google.com/rss/articles/CBMivAFBVV95cUxQaTJRMGJHYkt4S2hFS2VnX1BwazVUSzhucUhfczhqNUM1Z1UzTUxTQVlSTW5sWlVpR2g0R1FoSE82al9fZm1fQ2daMTZnbmw3VHJmT2tPN2RpUFFjVjZONkhQVlk5U1JLZHVKRlpuRDNFRWRKbXN1NE9YSXFrU0RGWC1BNzZfWVliOWZ2WXB0d0lXdHlzTG45MFQ1dzhnZnUyNDZoMEVPX2YxZ1ZzdmRrbVUwTjFOMjlucHI0U9IB0AFBVV95cUxQOUdCU3VJenA5WC1nUDhpVTFtNmlQUW1JYXdrQUFldTdha2FnSEw5eTRJazBiWUxUNU5kR2tCOXdoQmY2Yi1Ebl8ySF8wb1RGcG1MNm9JMGtxWEtaVDJmQlBSekF3Vk5SVk9CT2UtS245QUNtcXR1cjB1VUF0U3lLWDhjOGMwM2NNT05ic2tsa1dZd2VBWm9wUzVzdzhWZlMwTUE0OFdYbzdtNkg5bnA0RUNJSG16MHdKbnVGYUJpTVRtTUNpTnhob3BURnZ2aVMz?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978934
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQaTJRMGJHYkt4S2hFS2VnX1BwazVUSzhucUhfczhqNUM1Z1UzTUxTQVlSTW5sWlVpR2g0R1FoSE82al9fZm1fQ2daMTZnbmw3VHJmT2tPN2RpUFFjVjZONkhQVlk5U1JLZHVKRlpuRDNFRWRKbXN1NE9YSXFrU0RGWC1BNzZfWVliOWZ2WXB0d0lXdHlzTG45MFQ1dzhnZnUyNDZoMEVPX2YxZ1ZzdmRrbVUwTjFOMjlucHI0U9IB0AFBVV95cUxQOUdCU3VJenA5WC1nUDhpVTFtNmlQUW1JYXdrQUFldTdha2FnSEw5eTRJazBiWUxUNU5kR2tCOXdoQmY2Yi1Ebl8ySF8wb1RGcG1MNm9JMGtxWEtaVDJmQlBSekF3Vk5SVk9CT2UtS245QUNtcXR1cjB1VUF0U3lLWDhjOGMwM2NNT05ic2tsa1dZd2VBWm9wUzVzdzhWZlMwTUE0OFdYbzdtNkg5bnA0RUNJSG16MHdKbnVGYUJpTVRtTUNpTnhob3BURnZ2aVMz?oc=5",
@@ -704,7 +783,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMivwFBVV95cUxPMDlYNUlZeHRVZm02dVZrRTh3V2NuZHgzMlh3Y1N1aWRKLUk4WXZkOHVyWGVQWkZUT2k1bTNJUmE4ZTE2cGhzdE8yVzQ5SW9PanR5STc2WUxTMDBtNV81dW50NV85R3JaZ0dvbzl4dFpWaHBvRlhTRjhQWkpmWndpWlRxeXVCd3hIc3pXdDRmWWNUaDRaWG5VWGdGTjJKUFBDSWtYbFVJNmw2QUdKd2h4Rm5yTVdYeWYwd0NjbzctSQ?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978858
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPMDlYNUlZeHRVZm02dVZrRTh3V2NuZHgzMlh3Y1N1aWRKLUk4WXZkOHVyWGVQWkZUT2k1bTNJUmE4ZTE2cGhzdE8yVzQ5SW9PanR5STc2WUxTMDBtNV81dW50NV85R3JaZ0dvbzl4dFpWaHBvRlhTRjhQWkpmWndpWlRxeXVCd3hIc3pXdDRmWWNUaDRaWG5VWGdGTjJKUFBDSWtYbFVJNmw2QUdKd2h4Rm5yTVdYeWYwd0NjbzctSQ?oc=5",
@@ -726,7 +807,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVUt0cmVHX3NIeUw3ZWRZOEsxYm1tUm1FOVRwdGJFY3dsRjcxRFM1NWpTcS1PdGJ6ZUpFMnJGRmFHMlFVeGFmbExFeXA1WDJhNkhJTF9sRHpJcFZVSVA0WUhLdl9qV09nTHZyNmtVWkdyOEpwOEcwQVdoNFh1Nk5SOEItMElROVQ1VWxtRUJBaHFuYVNGV0FNX3p6MEdfR2h5VF9UMWdUZExrU2FvSWc4cnI1b1BaYXNwVURVOFl1RXY?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978941
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVUt0cmVHX3NIeUw3ZWRZOEsxYm1tUm1FOVRwdGJFY3dsRjcxRFM1NWpTcS1PdGJ6ZUpFMnJGRmFHMlFVeGFmbExFeXA1WDJhNkhJTF9sRHpJcFZVSVA0WUhLdl9qV09nTHZyNmtVWkdyOEpwOEcwQVdoNFh1Nk5SOEItMElROVQ1VWxtRUJBaHFuYVNGV0FNX3p6MEdfR2h5VF9UMWdUZExrU2FvSWc4cnI1b1BaYXNwVURVOFl1RXY?oc=5",
@@ -748,7 +831,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSDFaOW40ZV9CRWVsVzhCYXc3UGVKNE5nWFpJS3pTMkhoMlhRRzNiZjNaMU4ybk9YMGc4R1BXRFhxckE4Y2ZHTEdfdE5NaVpxRGVuU1FSTUhYVzhyVjVMUlZrTFZEX1E1YldtNnY5SDlhX0lyUXNvREJsUUoyODdjeU1pRG5RUmtBdjNfazhCMS1xbFljWkFPZk9rS2VXamkwMV9RMU8zTnFzYmxPNVVCVXY3cEh0TkxzeDh5aTBLV1k1QQ?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146875.4701455
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSDFaOW40ZV9CRWVsVzhCYXc3UGVKNE5nWFpJS3pTMkhoMlhRRzNiZjNaMU4ybk9YMGc4R1BXRFhxckE4Y2ZHTEdfdE5NaVpxRGVuU1FSTUhYVzhyVjVMUlZrTFZEX1E1YldtNnY5SDlhX0lyUXNvREJsUUoyODdjeU1pRG5RUmtBdjNfazhCMS1xbFljWkFPZk9rS2VXamkwMV9RMU8zTnFzYmxPNVVCVXY3cEh0TkxzeDh5aTBLV1k1QQ?oc=5",
@@ -770,7 +855,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQR3lWM2hDUGxGWEhLQ0VCdGFPUDlzS3h2TktlRTBSRzV2bS1HRnpSY2JJaEYxVGNJMktEb3BHTEVPNUlXTDNJbVFZRUFTbmdSZ2owN201dGxFNHdWWFdseGE0U0otYm1oSXQ1SXVydHowbWd1LWctUnk5c25nNWZ2eGhoX2l5TlQzVlU3TWFrYV94eVJQeHVDWTlwT3NrQnJlTWIzZUs4RjVyMnY0UVZaVjBTY2NnaUlPczNBVFBFb05qZFk?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.897892
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQR3lWM2hDUGxGWEhLQ0VCdGFPUDlzS3h2TktlRTBSRzV2bS1HRnpSY2JJaEYxVGNJMktEb3BHTEVPNUlXTDNJbVFZRUFTbmdSZ2owN201dGxFNHdWWFdseGE0U0otYm1oSXQ1SXVydHowbWd1LWctUnk5c25nNWZ2eGhoX2l5TlQzVlU3TWFrYV94eVJQeHVDWTlwT3NrQnJlTWIzZUs4RjVyMnY0UVZaVjBTY2NnaUlPczNBVFBFb05qZFk?oc=5",
@@ -792,7 +879,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPRU12UlptaGRQMjNLNkRnWmJfQmdIbUd0dktaQVU2bTBNWHBRMGVKUXVoNG1lbllLaExqYU5ha25pcFlKUWN3dUF4djF1Z3Q5UnBNYWhRVWI1Q2x0Y0JYQlduNktjT09uaHZZcHhOQmgwQkVHYzgzWVF2cjBGSWtzNnZFanhVU2UwdWU3WVZyREFRdGdxQjVKQWl1VnZ1NGNFdU1mRDNMYmNKdUtUUXhEWnNZWnJ2YjU5aEVCbUVIMHREamwzOTNtSw?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978896
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPRU12UlptaGRQMjNLNkRnWmJfQmdIbUd0dktaQVU2bTBNWHBRMGVKUXVoNG1lbllLaExqYU5ha25pcFlKUWN3dUF4djF1Z3Q5UnBNYWhRVWI1Q2x0Y0JYQlduNktjT09uaHZZcHhOQmgwQkVHYzgzWVF2cjBGSWtzNnZFanhVU2UwdWU3WVZyREFRdGdxQjVKQWl1VnZ1NGNFdU1mRDNMYmNKdUtUUXhEWnNZWnJ2YjU5aEVCbUVIMHREamwzOTNtSw?oc=5",
@@ -814,7 +903,9 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMiygFBVV95cUxNRXVIYU9ha0xfU3VqdEpaQkhXTUNhWUpxNllWY2tOdkloQzgyb0RZdnU4cl9KajFzckMwQnpIWUZRdzVhNzlYWl9FbXIybUYwVkg1QWlvZnRrTWlMekFDYlpjRE14aXhVMlNPX3o0OGh1U2dSM00wMXJMN3hBOFdIaUFwNUpQQXZ4NmVKOFRXWE82d2JrUEZZb09jMDgzNDdPT0Q4SFNLQ29JZHY2MzZRRmxMS0NhelAzYU1ha2g2a2NGVHVfN2RaVktB?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978882
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNRXVIYU9ha0xfU3VqdEpaQkhXTUNhWUpxNllWY2tOdkloQzgyb0RZdnU4cl9KajFzckMwQnpIWUZRdzVhNzlYWl9FbXIybUYwVkg1QWlvZnRrTWlMekFDYlpjRE14aXhVMlNPX3o0OGh1U2dSM00wMXJMN3hBOFdIaUFwNUpQQXZ4NmVKOFRXWE82d2JrUEZZb09jMDgzNDdPT0Q4SFNLQ29JZHY2MzZRRmxMS0NhelAzYU1ha2g2a2NGVHVfN2RaVktB?oc=5",
@@ -836,18 +927,23 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMiygFBVV95cUxOTGVaVWc0QkZUY2FEWk1FblRVWXpiUHgzd2RyeTRtVGJLSkliRE9QS0tsdVd5WDFPR29YNkljQUdjQVlFMEd6MGp6cnI4bWJObUVnLVM4LXdxSWdfTk1kX29iZlRUMzRULWtobkdwRml5Y1Fnckp4T01sOTU1aUh2SHFabTltUU5OSXBaVlkyMk54dWsxVzhxdzB4XzlIbE5TbDA4QmQ3enZ2X1lkVmVKQUJtc1RVa3NHWU1aeWJKZWxibWR4UUlPSDdR?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146868.1653118
+    },
     "criado": 1789146856.1161633,
+    "encerrado": 1789146892.520285,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOTGVaVWc0QkZUY2FEWk1FblRVWXpiUHgzd2RyeTRtVGJLSkliRE9QS0tsdVd5WDFPR29YNkljQUdjQVlFMEd6MGp6cnI4bWJObUVnLVM4LXdxSWdfTk1kX29iZlRUMzRULWtobkdwRml5Y1Fnckp4T01sOTU1aUh2SHFabTltUU5OSXBaVlkyMk54dWsxVzhxdzB4XzlIbE5TbDA4QmQ3enZ2X1lkVmVKQUJtc1RVa3NHWU1aeWJKZWxibWR4UUlPSDdR?oc=5",
       "aliases": [
+        "https://cnnbrasil.com.br/economia/money/tecnologia/emirados-arabes-unidos-revisam-plano-para-data-centers-apos-ataques-do-ira/",
         "https://news.google.com/rss/articles/CBMiygFBVV95cUxOTGVaVWc0QkZUY2FEWk1FblRVWXpiUHgzd2RyeTRtVGJLSkliRE9QS0tsdVd5WDFPR29YNkljQUdjQVlFMEd6MGp6cnI4bWJObUVnLVM4LXdxSWdfTk1kX29iZlRUMzRULWtobkdwRml5Y1Fnckp4T01sOTU1aUh2SHFabTltUU5OSXBaVlkyMk54dWsxVzhxdzB4XzlIbE5TbDA4QmQ3enZ2X1lkVmVKQUJtc1RVa3NHWU1aeWJKZWxibWR4UUlPSDdR?oc=5"
       ],
       "fonte": "CNN Brasil",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOTGVaVWc0QkZUY2FEWk1FblRVWXpiUHgzd2RyeTRtVGJLSkliRE9QS0tsdVd5WDFPR29YNkljQUdjQVlFMEd6MGp6cnI4bWJObUVnLVM4LXdxSWdfTk1kX29iZlRUMzRULWtobkdwRml5Y1Fnckp4T01sOTU1aUh2SHFabTltUU5OSXBaVlkyMk54dWsxVzhxdzB4XzlIbE5TbDA4QmQ3enZ2X1lkVmVKQUJtc1RVa3NHWU1aeWJKZWxibWR4UUlPSDdR?oc=5",
+      "link": "https://www.cnnbrasil.com.br/economia/money/tecnologia/emirados-arabes-unidos-revisam-plano-para-data-centers-apos-ataques-do-ira/",
       "origem": "BR",
       "publicado_em": 1789139829,
       "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxOTGVaVWc0QkZUY2FEWk1FblRVWXpiUHgzd2RyeTRtVGJLSkliRE9QS0tsdVd5WDFPR29YNkljQUdjQVlFMEd6MGp6cnI4bWJObUVnLVM4LXdxSWdfTk1kX29iZlRUMzRULWtobkdwRml5Y1Fnckp4T01sOTU1aUh2SHFabTltUU5OSXBaVlkyMk54dWsxVzhxdzB4XzlIbE5TbDA4QmQ3enZ2X1lkVmVKQUJtc1RVa3NHWU1aeWJKZWxibWR4UUlPSDdR?oc=5\" target=\"_blank\">Emirados Árabes Unidos revisam plano para data centers após ataques do Irã</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN Brasil</font>",
+      "resumo_final": "Os Emirados Árabes Unidos estão revisando planos para um projeto de data centers de IA de 5 gigawatts após ataques do Irã à infraestrutura tecnológica ligada aos EUA. O projeto, originalmente concebido como um campus de 26 quilômetros quadrados em Abu Dabi, deve ser reformulado como uma rede de centros de dados dispersos pelos emirados, com possível inclusão de defesas aéreas e estruturas subterrâneas para proteção contra ataques de drones e mísseis. A Reuters não conseguiu determinar o quão próximas as autoridades estão de finalizar o novo plano diretor ou em que medida as mudanças afetarão custos e prazos. A construção da primeira fase, o cluster Stargate UAE de 1 gigawatt e US$ 30 bilhões, começou no ano passado, com 200 megawatts previstos para operação ainda este ano.",
       "titulo": "Emirados Árabes Unidos revisam plano para data centers após ataques do Irã",
       "topico": "data_center",
       "topicos": [
@@ -855,10 +951,12 @@
       ]
     },
     "rejeitado": [],
-    "status": "pendente"
+    "status": "enviado"
   },
   "https://news.google.com/rss/articles/CBMizgFBVV95cUxNUk8wVkpoajEzc2FfSk9EQnl5NXgxTTFwVFFaTnVIYk1HZVgza25fVElhM3FTSmp5WG5pSTRfX0JFaGV3RHItajNWdzN3d2hCczU2N0xFSkNJYXMxMkM5Ri1PUDY4MUp1M2lLbnRZMzVpUTlsUUxCY2NIMVhzdEcwdkRwMUN5d1czWEVHeVZtQjNQRjZPVUFXeVNreHpCLVQ1aWZtd21iWS1xeXYwU1c2SzZKbTNCbm43cExSQS11NGlCTVFXUFZMMW1OMmxaUQ?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978837
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNUk8wVkpoajEzc2FfSk9EQnl5NXgxTTFwVFFaTnVIYk1HZVgza25fVElhM3FTSmp5WG5pSTRfX0JFaGV3RHItajNWdzN3d2hCczU2N0xFSkNJYXMxMkM5Ri1PUDY4MUp1M2lLbnRZMzVpUTlsUUxCY2NIMVhzdEcwdkRwMUN5d1czWEVHeVZtQjNQRjZPVUFXeVNreHpCLVQ1aWZtd21iWS1xeXYwU1c2SzZKbTNCbm43cExSQS11NGlCTVFXUFZMMW1OMmxaUQ?oc=5",
@@ -880,15 +978,19 @@
     "status": "pendente"
   },
   "https://news.google.com/rss/articles/CBMizwFBVV95cUxNMWVjaE4za0RXWDJhNGt0ZmJNaWtuYTRPRFBHaEh6Y2lOYmJiMXU2cVBDTmRhSmx6ekZ4UXdlUjVXZFR3U0NlLVZ3eDVhSzRmU0I5Z2k2QWxOWDF2eXVVYmZ6NldibWFxQmdNS3pZSWRMWFZHanhjc2o3cHFybEdwRVViMWJYWXJ4QWZZRzR3NHVybVdaTDhOWGV3NlF3VTRNV0hSYkR6RkJQLVNqX0tCSUVIclk4b0xUUmlOUGxGNWphOWljWmt3VDRqZWJXTzQ?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146868.165312
+    },
     "criado": 1789146856.1161633,
+    "encerrado": 1789146892.520285,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNMWVjaE4za0RXWDJhNGt0ZmJNaWtuYTRPRFBHaEh6Y2lOYmJiMXU2cVBDTmRhSmx6ekZ4UXdlUjVXZFR3U0NlLVZ3eDVhSzRmU0I5Z2k2QWxOWDF2eXVVYmZ6NldibWFxQmdNS3pZSWRMWFZHanhjc2o3cHFybEdwRVViMWJYWXJ4QWZZRzR3NHVybVdaTDhOWGV3NlF3VTRNV0hSYkR6RkJQLVNqX0tCSUVIclk4b0xUUmlOUGxGNWphOWljWmt3VDRqZWJXTzQ?oc=5",
       "aliases": [
+        "https://movimentoeconomico.com.br/tecnologia/2026/09/11/acao-do-mpf-e-dpu-pede-bloqueio-do-data-center-de-r-200-bi-do-tiktok-no-pecem/",
         "https://news.google.com/rss/articles/CBMizwFBVV95cUxNMWVjaE4za0RXWDJhNGt0ZmJNaWtuYTRPRFBHaEh6Y2lOYmJiMXU2cVBDTmRhSmx6ekZ4UXdlUjVXZFR3U0NlLVZ3eDVhSzRmU0I5Z2k2QWxOWDF2eXVVYmZ6NldibWFxQmdNS3pZSWRMWFZHanhjc2o3cHFybEdwRVViMWJYWXJ4QWZZRzR3NHVybVdaTDhOWGV3NlF3VTRNV0hSYkR6RkJQLVNqX0tCSUVIclk4b0xUUmlOUGxGNWphOWljWmt3VDRqZWJXTzQ?oc=5"
       ],
       "fonte": "Movimento Econômico",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNMWVjaE4za0RXWDJhNGt0ZmJNaWtuYTRPRFBHaEh6Y2lOYmJiMXU2cVBDTmRhSmx6ekZ4UXdlUjVXZFR3U0NlLVZ3eDVhSzRmU0I5Z2k2QWxOWDF2eXVVYmZ6NldibWFxQmdNS3pZSWRMWFZHanhjc2o3cHFybEdwRVViMWJYWXJ4QWZZRzR3NHVybVdaTDhOWGV3NlF3VTRNV0hSYkR6RkJQLVNqX0tCSUVIclk4b0xUUmlOUGxGNWphOWljWmt3VDRqZWJXTzQ?oc=5",
+      "link": "https://movimentoeconomico.com.br/tecnologia/2026/09/11/acao-do-mpf-e-dpu-pede-bloqueio-do-data-center-de-r-200-bi-do-tiktok-no-pecem/",
       "origem": "BR",
       "publicado_em": 1789139240,
       "resumo": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxNMWVjaE4za0RXWDJhNGt0ZmJNaWtuYTRPRFBHaEh6Y2lOYmJiMXU2cVBDTmRhSmx6ekZ4UXdlUjVXZFR3U0NlLVZ3eDVhSzRmU0I5Z2k2QWxOWDF2eXVVYmZ6NldibWFxQmdNS3pZSWRMWFZHanhjc2o3cHFybEdwRVViMWJYWXJ4QWZZRzR3NHVybVdaTDhOWGV3NlF3VTRNV0hSYkR6RkJQLVNqX0tCSUVIclk4b0xUUmlOUGxGNWphOWljWmt3VDRqZWJXTzQ?oc=5\" target=\"_blank\">Ação do MPF e DPU pede bloqueio do data center de R$ 200 bi do TikTok no Pecém</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Movimento Econômico</font>",
@@ -899,10 +1001,12 @@
       ]
     },
     "rejeitado": [],
-    "status": "pendente"
+    "status": "rejeitado"
   },
   "https://news.google.com/rss/articles/CBMizwFBVV95cUxQQ0ZOM2NPcHZiNWd5a1hKanU1Q0dlNjRGV203TVNkRVdzY1FEbkx1Z0dwYW91STVWS1FDZ19WVXJ4SUNLSGhXcUFxVC1XVDNRM0ZuM0Q4ckVmS0dUdmd2bGNIVGZvUlg3enhKOW45QU5RaUhGaEpJMVNxZXF1eHhvbXUxZVVramJrQmVlUjVLUXRxU0l1ZmdBb3JSRUdOVXNGZF9GZjA0YWVzbjMtYlpXUVZYM2tnM2ZUWlBPOWQ1TEdrSzBRb2RDTlBXVFlzRms?oc=5": {
-    "avaliado": {},
+    "avaliado": {
+      "data_center": 1789146878.8978865
+    },
     "criado": 1789146856.1161633,
     "item": {
       "_fila_key": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQQ0ZOM2NPcHZiNWd5a1hKanU1Q0dlNjRGV203TVNkRVdzY1FEbkx1Z0dwYW91STVWS1FDZ19WVXJ4SUNLSGhXcUFxVC1XVDNRM0ZuM0Q4ckVmS0dUdmd2bGNIVGZvUlg3enhKOW45QU5RaUhGaEpJMVNxZXF1eHhvbXUxZVVramJrQmVlUjVLUXRxU0l1ZmdBb3JSRUdOVXNGZF9GZjA0YWVzbjMtYlpXUVZYM2tnM2ZUWlBPOWQ1TEdrSzBRb2RDTlBXVFlzRms?oc=5",
