@@ -179,7 +179,7 @@ def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True) -> 
                 if not contem_palavra_chave(f"{titulo} {resumo}", cfg["keywords"]):
                     continue
 
-                fonte_especifica = entrada.get("source", {}).get("title")
+                fonte_especifica = (entrada.get("source") or {}).get("title")
                 fonte = fonte_especifica or fonte_padrao
                 if fonte_especifica and titulo.endswith(f" - {fonte_especifica}"):
                     titulo = titulo[: -len(f" - {fonte_especifica}")]

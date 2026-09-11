@@ -175,6 +175,26 @@ def _texto_modelo(resposta) -> str:
     return "".join(b.text for b in resposta.content if b.type == "text")
 
 
+def _fallback_por_qualidade(candidatos: list, origem: str, limite: int) -> list:
+    """Fallback usado quando a IA falha: mesmo sem o modelo, não abre
+    mão da prioridade de veículo — pega Nível 1 antes de Nível 2 antes
+    de qualquer outro."""
+    nivel_1 = [v.strip().lower() for v in VEICULOS_NIVEL_1.split(",")]
+    nivel_2 = [v.strip().lower() for v in VEICULOS_NIVEL_2.split(",")]
+
+    def nivel(item):
+        fonte = item["fonte"].lower()
+        if any(v in fonte or fonte in v for v in nivel_1):
+            return 0
+        if any(v in fonte or fonte in v for v in nivel_2):
+            return 1
+        return 2
+
+    candidatos_origem = [c for c in candidatos if c["origem"] == origem]
+    candidatos_origem.sort(key=nivel)
+    return candidatos_origem[:limite]
+
+
 def selecionar(cliente, topico: str, candidatos: list) -> dict:
     """Devolve {'BR': [...], 'US': [...]} com os itens escolhidos, já
     ordenados por relevância. Fallback: primeiros itens de cada bucket."""
@@ -213,8 +233,8 @@ def selecionar(cliente, topico: str, candidatos: list) -> dict:
         print(f"Seleção por IA falhou em '{topico}' ({erro}); usando fallback.")
 
     if not escolhidos["BR"] and not escolhidos["US"]:
-        escolhidos["BR"] = [c for c in candidatos if c["origem"] == "BR"][:MAX_BR]
-        escolhidos["US"] = [c for c in candidatos if c["origem"] == "INT"][:MAX_US]
+        escolhidos["BR"] = _fallback_por_qualidade(candidatos, "BR", MAX_BR)
+        escolhidos["US"] = _fallback_por_qualidade(candidatos, "INT", MAX_US)
     return escolhidos
 
 
@@ -428,7 +448,18 @@ def rodar_digest() -> None:
     print({t: len(v) for t, v in por_topico.items()})
 
     cliente = anthropic.Anthropic()
-    selecao = {t: selecionar(cliente, t, por_topico[t]) for t in TOPICOS if por_topico[t]}
+    # Um mesmo link pode bater a palavra-chave dos dois temas (ex.: uma
+    # matéria do megawhat que fala de data center E carbono). Evita
+    # que a mesma notícia apareça duas vezes no e-mail, uma por tema.
+    selecao = {}
+    ja_escolhidos = set()
+    for t in TOPICOS:
+        disponiveis = [c for c in por_topico[t] if c["link"] not in ja_escolhidos]
+        if not disponiveis:
+            continue
+        selecao[t] = selecionar(cliente, t, disponiveis)
+        for grupo in selecao[t].values():
+            ja_escolhidos.update(it["link"] for it in grupo)
 
     selecionados = [it for grupos in selecao.values() for it in (grupos["BR"] + grupos["US"])]
     if selecionados:

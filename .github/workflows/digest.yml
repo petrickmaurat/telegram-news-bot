@@ -8,6 +8,13 @@ on:
 permissions:
   contents: write
 
+# Evita que um disparo manual coincida com o automático e mande o
+# digest (e cobre a IA) duas vezes: a segunda execução espera a
+# primeira terminar em vez de rodar em paralelo.
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
 jobs:
   digest:
     runs-on: ubuntu-latest
