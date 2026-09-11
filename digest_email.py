@@ -363,6 +363,11 @@ def montar_html(selecao: dict, momento: str) -> str:
 
 
 def enviar_email(assunto: str, html: str) -> None:
+    # EMAIL_DESTINO aceita um endereço só, uma lista de distribuição, ou
+    # vários endereços separados por vírgula/ponto-e-vírgula.
+    destinatarios = [
+        {"email": e.strip()} for e in re.split(r"[,;]", EMAIL_DESTINO) if e.strip()
+    ]
     resposta = requests.post(
         "https://api.brevo.com/v3/smtp/email",
         headers={
@@ -372,7 +377,7 @@ def enviar_email(assunto: str, html: str) -> None:
         },
         json={
             "sender": {"name": "Panorama DC & Carbono", "email": EMAIL_REMETENTE},
-            "to": [{"email": EMAIL_DESTINO}],
+            "to": destinatarios,
             "subject": assunto,
             "htmlContent": html,
         },
