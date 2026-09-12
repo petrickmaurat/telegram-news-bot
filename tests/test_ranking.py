@@ -83,10 +83,10 @@ class RankingTests(IsolatedState):
         model = client([])
         malformado = NS(stop_reason="end_turn", content=[NS(type="text", text="isso não é JSON")])
         bom = client([decision(i) for i in range(5)]).messages.create.return_value
-        model.messages.create.side_effect = [malformado, bom]
+        model.messages.create.side_effect = [malformado, malformado, bom]
         grupos, falhou = ranking.classificar(model, "data_center", "", candidates, digest.MODELO)
         self.assertTrue(falhou)
-        self.assertEqual(model.messages.create.call_count, 2)
+        self.assertEqual(model.messages.create.call_count, 3)
         self.assertFalse(any("data_center" in c.get("avaliacoes", {}) for c in candidates[:30]))
         self.assertTrue(all("data_center" in c["avaliacoes"] for c in candidates[30:]))
         self.assertEqual(len(grupos["BR"]), 5)

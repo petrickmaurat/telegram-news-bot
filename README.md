@@ -5,7 +5,7 @@ Dois canais automáticos, rodando no GitHub Actions:
 | Canal | Frequência | Conteúdo |
 |---|---|---|
 | **Telegram** (`telegram_news_bot.py`) | a cada 15 min | Notícias novas de **data center**, por palavras-chave e domínios permitidos |
-| **E-mail** (`digest_email.py`) | 1x/dia, às 9h BRT | Digest curado por IA, na ordem data centers → baterias → carbono, com resumo |
+| **E-mail** (`digest_email.py`) | 1x/dia, às 7h17 BRT | Digest curado por IA, na ordem data centers → baterias → carbono, com resumo |
 
 O Telegram pede explicitamente `topicos=["data_center"]`: novos temas entram só no e-mail.
 
@@ -189,3 +189,5 @@ O arquivo `digest_fontes.json`, persistido pelo GitHub Actions, mantém até 30 
 - sugestões para conferir feeds com muitas falhas, buscas vazias por três execuções ou filtros que eliminam quase todos os resultados.
 
 Os totais medem ocorrências por consulta, não publicações únicas: a mesma notícia pode aparecer em várias execuções e feeds, e uma seleção pode ser atribuída a mais de uma origem. "Selecionada" também não é confirmação de entrega. Busca vazia não prova que o site não publicou: serve como sinal para conferir indexação, termos e RSS direto. Nenhuma fonte é removida automaticamente.
+
+O ranking exige saída estruturada da API: códigos de decisão e geografia e notas inteiras de 0 a 100. Há uma tentativa de recuperação de formato; avaliações válidas são preservadas e armazenadas em cache mesmo quando parte do lote continua inválida. Os lotes permanecem com até 30 candidatos. O agendamento diário é às 07h17 de Brasília (10h17 UTC), inclusive fins de semana, sujeito a atrasos do GitHub Actions.

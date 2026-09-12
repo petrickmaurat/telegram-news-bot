@@ -1,5 +1,5 @@
 """
-Digest por e-mail — roda diariamente às 9h BRT.
+Digest por e-mail — roda diariamente às 7h17 BRT.
 
 Fluxo:
   1. Lê os feeds dos dois tópicos (data center e mercado de carbono).

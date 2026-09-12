@@ -2,7 +2,7 @@ name: Digest por e-mail (1x ao dia)
 
 on:
   schedule:
-    - cron: "0 12 * * *"  # ~09:00 no horário de Brasília
+    - cron: "17 10 * * *"  # ~07:17 no horário de Brasília
   workflow_dispatch:
 
 permissions:
