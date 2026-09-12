@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZXFPc0FrZmFOeDNsdlA1aEVoQ3BVLXNkTGJ1OUQ1UjZGVG10ZjlDa3l6ZzNuanlNLVRjdWhOVHk4VDdMTXk4TDc3UUxMM2tnZ2lQVEJWTmp3RDY1YXNvcUhoTVM2eW5Ub2RlMndnTzFHQjE5VHlBUWlUNXBMT1FFRjJBVWdreENfUUZDZVUtWVd0SnpGOGYtbDR3SkhOVkJ5U2RVRzVjM1FIV0M1LVNRaGNR?oc=5",
+    "https://poder360.com.br/poder-eleicoes-2026/flavio-promete-atrair-data-centers-para-a-zona-franca-de-manaus/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMisgFBVV95cUxOZXFPc0FrZmFOeDNsdlA1aEVoQ3BVLXNkTGJ1OUQ1UjZGVG10ZjlDa3l6ZzNuanlNLVRjdWhOVHk4VDdMTXk4TDc3UUxMM2tnZ2lQVEJWTmp3RDY1YXNvcUhoTVM2eW5Ub2RlMndnTzFHQjE5VHlBUWlUNXBMT1FFRjJBVWdreENfUUZDZVUtWVd0SnpGOGYtbDR3SkhOVkJ5U2RVRzVjM1FIV0M1LVNRaGNR?oc=5",
+      "https://poder360.com.br/poder-eleicoes-2026/flavio-promete-atrair-data-centers-para-a-zona-franca-de-manaus/"
+    ],
+    "fonte": "Poder360",
+    "link": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-promete-atrair-data-centers-para-a-zona-franca-de-manaus/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOZXFPc0FrZmFOeDNsdlA1aEVoQ3BVLXNkTGJ1OUQ1UjZGVG10ZjlDa3l6ZzNuanlNLVRjdWhOVHk4VDdMTXk4TDc3UUxMM2tnZ2lQVEJWTmp3RDY1YXNvcUhoTVM2eW5Ub2RlMndnTzFHQjE5VHlBUWlUNXBMT1FFRjJBVWdreENfUUZDZVUtWVd0SnpGOGYtbDR3SkhOVkJ5U2RVRzVjM1FIV0M1LVNRaGNR?oc=5\" target=\"_blank\">Flávio promete atrair data centers para a Zona Franca de Manaus</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Poder360</font>",
+    "titulo": "Flávio promete atrair data centers para a Zona Franca de Manaus",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
