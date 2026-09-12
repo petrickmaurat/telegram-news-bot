@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://cnbc.com/2026/09/12/ai-data-centers-catastrophe-bonds-insurance.html",
+    "https://news.google.com/rss/articles/CBMihwFBVV95cUxPejh5Z2pxSV9CczNGcjF1V3V2N1ZvWE4tdUhmUTJtam1IbTZZbTBFUURqYjNYczFKQ1dXV3RpOFJ3MnhqdWdndXBtU3h1Ry1jb25fVUJlWjFOZ0FiNnAyb2J4SUhHX1YyY2JKdm0tNDF4SWtkN1Y1SFRod1Y1MnlvVEVqRGFkNnM?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://cnbc.com/2026/09/12/ai-data-centers-catastrophe-bonds-insurance.html",
+      "https://news.google.com/rss/articles/CBMihwFBVV95cUxPejh5Z2pxSV9CczNGcjF1V3V2N1ZvWE4tdUhmUTJtam1IbTZZbTBFUURqYjNYczFKQ1dXV3RpOFJ3MnhqdWdndXBtU3h1Ry1jb25fVUJlWjFOZ0FiNnAyb2J4SUhHX1YyY2JKdm0tNDF4SWtkN1Y1SFRod1Y1MnlvVEVqRGFkNnM?oc=5"
+    ],
+    "fonte": "CNBC",
+    "link": "https://www.cnbc.com/2026/09/12/ai-data-centers-catastrophe-bonds-insurance.html",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxPejh5Z2pxSV9CczNGcjF1V3V2N1ZvWE4tdUhmUTJtam1IbTZZbTBFUURqYjNYczFKQ1dXV3RpOFJ3MnhqdWdndXBtU3h1Ry1jb25fVUJlWjFOZ0FiNnAyb2J4SUhHX1YyY2JKdm0tNDF4SWtkN1Y1SFRod1Y1MnlvVEVqRGFkNnM?oc=5\" target=\"_blank\">Why data centers could be the next big market for catastrophe bonds</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+    "titulo": "Why data centers could be the next big market for catastrophe bonds",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
