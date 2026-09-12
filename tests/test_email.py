@@ -89,7 +89,9 @@ class EmailTests(IsolatedState):
         with patch.object(digest, "resolver_link_google_news", side_effect=resolve):
             send = self.run_digest(candidates, lambda c, t, batch: ({"BR": batch, "US": []}, False))
         send.assert_called_once()
-        self.assertLessEqual(len(resolved), 4)
+        # Cada URL do Google pode ocultar um veículo de prioridade máxima;
+        # a quota preenchida por fontes comuns não permite descartá-la antes de resolver.
+        self.assertEqual(len(resolved), 20)
         self.assertEqual(len(digest.carregar_estado()), 6)
         fila = carregar_json(digest.FILA_FILE, {})
         self.assertEqual(sum(r["status"] == "enviado" for r in fila.values()), 3)

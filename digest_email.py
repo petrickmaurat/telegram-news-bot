@@ -33,7 +33,7 @@ from common import TOPICOS, coletar_itens_novos, resolver_link_google_news, salv
 from reliability import salvar_json, carregar_json, canonica, identidades
 from persist_state import checkpoint
 from email_policy import recente, google_pendente, candidato_admissivel, podar_fila
-from email_sources import fonte_prioritaria, prioritario, configuracao_email
+from email_sources import fonte_prioritaria, prioritario, configuracao_email, fonte_maxima
 from email_articles import enriquecer_fila, texto_curto
 from email_source_health import atualizar as atualizar_fontes, anotar_resultados
 from email_language import idioma_permitido
@@ -451,6 +451,7 @@ def escolher_topico(cliente, topico, registros, estado, anteriores, titulos_envi
         # já não podem superar as vagas preenchidas por fontes prioritárias.
         resolvidos = []
         ordenados = sorted(ranking[bucket], key=lambda c: (
+            0 if fonte_maxima(c) or google_pendente(c) else 1,
             -c.get("avaliacoes", {}).get(topico, {}).get("rodada", 0),
             0 if google_pendente(c) or prioritario(c, c.get("avaliacoes", {}).get(topico, {}).get("prioridade", 0)) else 1,
             -c.get("avaliacoes", {}).get(topico, {}).get("prioridade", 0), -c.get("publicado_em", 0), c["link"]))
@@ -465,7 +466,9 @@ def escolher_topico(cliente, topico, registros, estado, anteriores, titulos_envi
             registro = por_chave[key]
             noticia = registro["item"]
             avaliacao = noticia.get("avaliacoes", {}).get(topico, {})
-            if confirmados >= limite:
+            # Links ainda ocultos pelo Google podem pertencer às fontes máximas.
+            # Examine também todas as fontes máximas para comparar seus candidatos.
+            if confirmados >= limite and not google_pendente(noticia) and not fonte_maxima(noticia):
                 auditar(registro, topico, "sem_vaga", f"Elegível para {bucket}; as {limite} vagas já têm fontes prioritárias anteriores no ranking. Link não precisou ser resolvido.")
                 continue
             aliases = identidades(noticia)
@@ -487,7 +490,7 @@ def escolher_topico(cliente, topico, registros, estado, anteriores, titulos_envi
                 titulos_otimistas.append(noticia["titulo"])
                 if fato:
                     fatos_confirmados[fato] = noticia["titulo"]
-        resolvidos.sort(key=lambda row: (-row[2].get("rodada", 0), 0 if prioritario(row[1], row[2].get("prioridade", 0)) else 1,
+        resolvidos.sort(key=lambda row: (0 if fonte_maxima(row[1]) else 1, -row[2].get("rodada", 0), 0 if prioritario(row[1], row[2].get("prioridade", 0)) else 1,
                                         -row[2].get("prioridade", 0), -row[1].get("publicado_em", 0), row[1]["link"]))
         titulos_confirmados = list(titulos_enviados)
         for registro, noticia, avaliacao in resolvidos:
@@ -518,7 +521,9 @@ def escolher_topico(cliente, topico, registros, estado, anteriores, titulos_envi
                 fatos.add(fato)
                 manchetes_fatos[fato] = noticia["titulo"]
                 detalhes_fatos[fato] = noticia["titulo"] + " — " + noticia["link"]
-            auditar(registro, topico, "selecionada", f"Vaga preenchida em {bucket}. " + avaliacao.get("motivo", "Selecionada por ordem de prioridade."))
+            auditar(registro, topico, "selecionada", f"Vaga preenchida em {bucket}. "
+                    + ("Veículo de prioridade máxima. " if fonte_maxima(noticia) else "")
+                    + avaliacao.get("motivo", "Selecionada por ordem de prioridade."))
     return grupos, falhou
 
 
@@ -666,7 +671,7 @@ def gravar_auditoria(fila, selecao, fontes, falhas, saude_fontes=None):
             avaliacao = item.get("avaliacoes", {}).get(topic, {})
             noticias.append({"topico": topic, "titulo": item.get("titulo", "Registro histórico compactado"),
                 "link": item["link"], "fonte": item.get("fonte", ""), **resultado,
-                "avaliacao": avaliacao, "fonte_prioritaria": fonte_prioritaria(item),
+                "avaliacao": avaliacao, "fonte_prioritaria": fonte_prioritaria(item), "fonte_maxima": fonte_maxima(item),
                 "consulta_artigo": {k: v for k, v in item.get("artigo", {}).items() if k != "texto"},
                 "origem_data": item.get("origem_data", "rss")})
     resumo = {t: {b: len(selecao.get(t, {}).get(b, [])) for b in ("BR", "US")} for t in TOPICOS}

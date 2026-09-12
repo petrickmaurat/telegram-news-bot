@@ -2,7 +2,7 @@
 import hashlib
 import json
 import re
-from email_sources import prioritario
+from email_sources import prioritario, fonte_maxima
 
 VERSAO = 4
 TAMANHO_LOTE = 30
@@ -162,7 +162,8 @@ def classificar(cliente, topico, foco, candidatos, modelo):
     while len(pool) > TAMANHO_LOTE:
         vencedores = []
         for inicio in range(0, len(pool), TAMANHO_LOTE):
-            lote = sorted(pool[inicio:inicio + TAMANHO_LOTE], key=lambda c: -c["avaliacoes"][topico]["prioridade"])
+            lote = sorted(pool[inicio:inicio + TAMANHO_LOTE], key=lambda c: (
+                0 if fonte_maxima(c) else 1, -c["avaliacoes"][topico]["prioridade"]))
             # Cada geografia mantém representantes para suas próprias vagas.
             for bucket in ("BR", "US"):
                 vencedores += [c for c in lote if c["avaliacoes"][topico]["bucket"] == bucket][:VENCEDORES_POR_LOTE]
@@ -183,6 +184,6 @@ def classificar(cliente, topico, foco, candidatos, modelo):
         if avaliacao["decisao"] == "elegivel":
             grupos[avaliacao["bucket"]].append(c)
     for grupo in grupos.values():
-        grupo.sort(key=lambda c: (-c["avaliacoes"][topico].get("rodada", 0), 0 if prioritario(c, c["avaliacoes"][topico]["prioridade"]) else 1,
+        grupo.sort(key=lambda c: (0 if fonte_maxima(c) else 1, -c["avaliacoes"][topico].get("rodada", 0), 0 if prioritario(c, c["avaliacoes"][topico]["prioridade"]) else 1,
                                  -c["avaliacoes"][topico]["prioridade"], -c.get("publicado_em", 0), c["link"]))
     return grupos, falhou

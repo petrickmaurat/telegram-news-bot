@@ -56,3 +56,6 @@ A consulta depende de indexação/disponibilidade; ausência de resultados não 
 | Valor Econômico | `valor.globo.com` |
 | Washington Post | `washingtonpost.com` |
 | Wall Street Journal | `wsj.com` |
+
+### Prioridade máxima no digest
+Brazil Journal, MegaWhat, Valor Econômico (incluindo Pipeline), Agência iNFRA e eixos têm preferência absoluta entre candidatos elegíveis dos três temas. Primeiro preenchem as vagas da sua geografia; demais fontes completam as vagas restantes. Se excederem a quantidade de vagas, o torneio e a nota ordenam as matérias desses veículos. Tema, idioma aplicável, janela de 72 horas e deduplicação continuam obrigatórios. Brasil Energia mantém a prioridade anterior, sem promoção. A prioridade vale também para reservas e links resolvidos do Google; estes podem exigir mais resoluções para identificar o veículo corretamente. Não há garantia de captura integral de um site. Telegram inalterado.

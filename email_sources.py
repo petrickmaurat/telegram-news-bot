@@ -25,6 +25,15 @@ NOMES = {
 }
 FONTES = sorted({*DOMINIOS[1], *DOMINIOS[2], "agenciainfra.com", "gov.br/mme"})
 
+# Preferência editorial absoluta entre notícias elegíveis, exclusiva do digest.
+FONTES_MAXIMAS = {"braziljournal.com", "megawhat.uol.com.br", "valor.globo.com",
+                  "pipelinevalor.globo.com", "agenciainfra.com", "eixos.com.br"}
+
+
+def fonte_maxima(item):
+    host = urlsplit(canonica(item.get("link", ""))).hostname or ""
+    return any(host == site or host.endswith("." + site) for site in FONTES_MAXIMAS)
+
 
 def fonte_prioritaria(item):
     p = urlsplit(canonica(item.get("link", "")))
