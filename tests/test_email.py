@@ -149,5 +149,5 @@ class EmailTests(IsolatedState):
         with patch.object(digest, "buscar_texto_artigo", return_value=""):
             digest.resumir(model, candidates)
         model.messages.create.assert_not_called()
-        self.assertEqual(candidates[0]["resumo_final"], candidates[0]["titulo"])
-        self.assertEqual(candidates[1]["resumo_final"], "Texto do feed")
+        self.assertIn("Resumo indisponível", candidates[0]["resumo_final"])
+        self.assertIn("Resumo indisponível", candidates[1]["resumo_final"])

@@ -88,7 +88,7 @@ def item(number=0, topics=None):
     topics = topics or ["data_center"]
     link = f"https://reuters.com/article/{number}"
     titulo = f"{MANCHETES[number % len(MANCHETES)]} ({number})"
-    return dict(titulo=titulo, resumo="Texto do feed",
+    return dict(titulo=titulo, resumo="Texto do feed sobre " + ", ".join({"data_center": "data centers", "baterias": "baterias", "carbono": "mercado de carbono"}[t] for t in topics),
                 link=link, aliases=[link], fonte="Reuters", topico=topics[0],
                 topicos=topics, origem="BR", publicado_em=time.time())
 
@@ -163,7 +163,8 @@ class RegressionTests(IsolatedState):
             candidates = [item()]
             with patch.object(digest, "buscar_texto_artigo", return_value="Texto de apoio com informação. " * 10):
                 digest.resumir(client(data), candidates)
-            self.assertEqual(candidates[0]["resumo_final"], "Texto do feed")
+            self.assertTrue(candidates[0]["resumo_final"].startswith("Trecho da fonte (resumo por IA indisponível):"))
+            self.assertIn("Texto de apoio", candidates[0]["resumo_final"])
 
     def test_collect_deduplicates_google_and_preserves_topics(self):
         google = "https://news.google.com/rss/articles/abc"

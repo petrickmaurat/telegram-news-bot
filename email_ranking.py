@@ -3,12 +3,22 @@ import hashlib
 import json
 import re
 from email_sources import prioritario, fonte_maxima
+from email_api_errors import verificar_saldo
 
-VERSAO = 4
+VERSAO = 5
 TAMANHO_LOTE = 30
 VENCEDORES_POR_LOTE = 10  # quantos elegíveis de cada lote avançam para a rodada seguinte do torneio
 DECISOES = {"elegivel", "fora_tema", "sem_fato_novo", "fonte_duvidosa"}
 PROMPT = """Avalie CADA candidato para um boletim sobre {topico}.
+PRIMEIRO determine se o assunto principal tem relação DIRETA com {topico},
+comprovada no título ou trecho fornecido. Não invente relações potenciais.
+Uma notícia de energia não vira notícia de data centers por energia ser necessária
+a data centers. Encerramento da recuperação judicial da Light é fora_tema em
+data_center; investimento da Brookfield em baterias sem ligação explícita a data
+centers pertence a baterias, não a data_center. Transmissão para conectar data
+centers é elegível. Nome da fonte, nota e vagas disponíveis NUNCA alteram o tema.
+Menção incidental, notícias relacionadas e boletins misturando assuntos não bastam:
+exija um fato específico do tópico. Na justificativa cite a relação presente no texto.
 Prioridade serve APENAS para ordenar. Uma notícia do tema com baixa prioridade continua
 elegível. Não rejeite por falta de valor financeiro, por ser internacional, por não tratar
 do setor elétrico ou por vir de um veículo de prioridade menor. Notícias de mercado de
@@ -120,6 +130,7 @@ def _avaliar_lote(cliente, topico, foco, lote, modelo, recuperar=True):
             return _avaliar_lote(cliente, topico, foco, lote, modelo, recuperar=False)
         return all(c.get("_avaliacao_recuperada") for c in lote)
     except Exception as erro:
+        verificar_saldo(erro)
         print(f"Lote de avaliação falhou em {topico} ({erro}); candidatos deste lote continuam pendentes.")
         return False
 

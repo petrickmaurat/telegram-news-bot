@@ -39,6 +39,8 @@ from email_source_health import atualizar as atualizar_fontes, anotar_resultados
 from email_language import idioma_permitido
 from email_dedup import comparador
 from email_ranking import classificar, VERSAO
+from email_topic import verificar_tema
+from email_api_errors import verificar_saldo, SaldoInsuficiente
 
 MODELO = "claude-haiku-4-5"
 # Vagas por tema e bucket; baterias divide igual entre Brasil e exterior.
@@ -159,6 +161,7 @@ def selecionar(cliente, topico: str, candidatos: list) -> tuple:
     try:
         return classificar(cliente, topico, FOCO_SETORIAL[topico], candidatos, MODELO)
     except Exception as erro:
+        verificar_saldo(erro)
         raise RuntimeError(f"Avaliação inválida em {topico}: {erro}") from erro
 
 
@@ -195,7 +198,8 @@ def resumir(cliente, itens: list) -> None:
         # Uma consulta já tentada na coleta respeita seu cache, inclusive falhas.
         corpo = (item["artigo"].get("texto", "") if "artigo" in item else buscar_texto_artigo(item["link"]))
         corpo = corpo or limpar_html(item["resumo"])
-        item["resumo_final"] = corpo or item["titulo"]
+        item["resumo_final"] = ("Trecho da fonte (resumo por IA indisponível): " + corpo if len(corpo.split()) >= 20
+                                else "Resumo indisponível: texto de apoio insuficiente. Consulte a matéria original.")
         if len(corpo.split()) < 20:
             # Um título/trecho mínimo não precisa ser expandido pela IA.
             continue
@@ -221,13 +225,16 @@ def resumir(cliente, itens: list) -> None:
             if (type(idx) is not int or idx not in elegiveis or idx in por_indice
                     or not isinstance(resumo, str) or not resumo.strip()):
                 raise ValueError("Índice ou texto de resumo inválido")
+            if limpar_html(resumo).strip().casefold() == limpar_html(itens[idx]["titulo"]).strip().casefold():
+                raise ValueError("A resposta repetiu a manchete em vez de resumir a matéria")
             por_indice[idx] = resumo.strip()
     except Exception as erro:
+        verificar_saldo(erro)
         por_indice = {}
         print(f"Resumo por IA falhou ({erro}); usando o texto do feed.")
 
     for i, item in enumerate(itens):
-        item["resumo_final"] = por_indice.get(i) or limpar_html(item["resumo"]) or item["resumo_final"]
+        item["resumo_final"] = por_indice.get(i) or item["resumo_final"]
 
 
 # ----------------------------------------------------------------------
@@ -429,6 +436,12 @@ def escolher_topico(cliente, topico, registros, estado, anteriores, titulos_envi
     aptos = []
     idioma_bloqueado = False
     for registro in registros:
+        vinculo, motivo_tema = verificar_tema(registro["item"], topico)
+        if not vinculo:
+            registro["item"].get("avaliacoes", {}).pop(topico, None)
+            registro["item"].get("cache_avaliacoes", {}).pop(topico, None)
+            auditar(registro, topico, "sem_evidencia_tema", motivo_tema)
+            continue
         permitido, motivo = idioma_permitido(registro["item"]) if topico == "baterias" else (True, "")
         if permitido:
             aptos.append(registro)
@@ -477,6 +490,10 @@ def escolher_topico(cliente, topico, registros, estado, anteriores, titulos_envi
             if google_pendente(noticia) or not canonica(noticia["link"]):
                 auditar(registro, topico, "falha_link", "Não foi possível obter um link válido; candidato permanece pendente.")
                 falhou = True
+                continue
+            vinculo, motivo_tema = verificar_tema(noticia, topico)
+            if not vinculo:
+                auditar(registro, topico, "sem_evidencia_tema", motivo_tema)
                 continue
             resolvidos.append((registro, noticia, avaliacao))
             aliases = identidades(noticia)
@@ -624,6 +641,7 @@ def rodar_digest() -> None:
                     for item in grupo:
                         ja_escolhidos.update(identidades(item))
             except Exception as erro:
+                verificar_saldo(erro)
                 falhas.append(t)
                 print(f"Tópico {t} indisponível; os demais continuam: {erro}")
                 for registro in registros:
@@ -655,6 +673,16 @@ def rodar_digest() -> None:
         checkpoint()
         if falhas:
             raise RuntimeError(f"Digest parcial enviado; falhas em: {', '.join(falhas)}.")
+    except SaldoInsuficiente as erro:
+        for registro in fila.values():
+            if registro["status"] == "pendente":
+                for topic in registro["item"]["topicos"]:
+                    if registro.get("resultados", {}).get(topic, {}).get("resultado") not in (
+                            "fora_janela", "sem_evidencia_tema", "fora_tema", "idioma"):
+                        auditar(registro, topic, "saldo_insuficiente", str(erro))
+        falhas.append("saldo_insuficiente")
+        selecao = {}
+        raise
     finally:
         gravar_auditoria(fila, selecao, fontes_consultadas, falhas, saude_fontes)
         podar_fila(fila, time.time())

@@ -48,7 +48,7 @@ class ArticleTests(TestCase):
             articles.complementar(candidate, lambda link: link, time.time())
             articles.complementar(candidate, lambda link: link, time.time())
         self.assertEqual(get.call_count, 1)
-        self.assertEqual(candidate["resumo"], "Texto do feed")
+        self.assertEqual(candidate["resumo"], "Texto do feed sobre data centers")
         self.assertEqual(candidate["artigo"]["resultado"], "falha")
 
     def test_budget_prioritizes_never_attempted_and_skips_sent_and_old(self):
@@ -99,7 +99,7 @@ class CaptureIntegrationTests(IsolatedState):
             return {"BR": candidates, "US": []}, False
         with patch.object(digest, "enriquecer_fila", articles.enriquecer_fila), \
              patch.object(articles.requests, "get", return_value=response), \
-             patch.object(articles.trafilatura, "extract", return_value="Texto recuperado da reportagem. " * 20):
+             patch.object(articles.trafilatura, "extract", return_value="Texto recuperado da reportagem sobre data centers. " * 20):
             send = self.run_digest([candidate], choose)
         send.assert_called_once()
         self.assertEqual(len(seen), 1)

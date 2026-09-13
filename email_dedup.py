@@ -1,6 +1,7 @@
 """Similaridade lexical apenas indica pares que precisam de confirmação editorial."""
 import json
 from email_policy import titulo_semelhante
+from email_api_errors import verificar_saldo
 
 
 def comparador(cliente, modelo):
@@ -28,6 +29,7 @@ def comparador(cliente, modelo):
                 raise ValueError("Comparação inválida")
             cache[chave] = dados["mesmo_fato"]
         except Exception as erro:
+            verificar_saldo(erro)
             print(f"Comparação de coberturas indisponível; preservando candidato: {erro}")
             cache[chave] = False
         return cache[chave]

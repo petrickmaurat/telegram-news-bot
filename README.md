@@ -109,7 +109,7 @@ reenvios; registros descartados removidos não contornam o filtro de data se rea
 
 O HTML do e-mail escapa títulos, fontes, resumos, links e a data de edição. Links inválidos ou
 Google Notícias não resolvidos impedem a montagem. Resumos não têm mínimo obrigatório de palavras:
-com menos de 20 palavras de apoio, o trecho/título é usado diretamente, sem expansão pela IA;
+com menos de 20 palavras de apoio, aparece um aviso de resumo indisponível, sem repetir a manchete;
 com mais conteúdo, o modelo recebe instruções para resumir somente fatos fornecidos.
 
 ### Por que uma notícia não entrou?
@@ -194,3 +194,12 @@ O ranking exige saída estruturada da API: códigos de decisão e geografia e no
 
 ### Prioridade máxima no digest
 Brazil Journal, MegaWhat, Valor Econômico (incluindo Pipeline), Agência iNFRA e eixos têm preferência absoluta entre candidatos elegíveis dos três temas. Primeiro preenchem as vagas da sua geografia; demais fontes completam as vagas restantes. Se excederem a quantidade de vagas, o torneio e a nota ordenam as matérias desses veículos. Tema, idioma aplicável, janela de 72 horas e deduplicação continuam obrigatórios. Brasil Energia mantém a prioridade anterior, sem promoção. A prioridade vale também para reservas e links resolvidos do Google; estes podem exigir mais resoluções para identificar o veículo corretamente. Não há garantia de captura integral de um site. Telegram inalterado.
+
+### Barreira de tema antes da prioridade de fonte
+Antes de classificar ou ordenar, o digest exige uma referência ao tema no título/trecho disponível, sem considerar URL, nome do veículo ou justificativas inventadas pela IA. Sem essa evidência, o candidato permanece pendente com `sem_evidencia_tema`. A IA deve avaliar se a ligação é direta e substantiva; a presença de uma palavra, isoladamente, não garante elegibilidade. A classificação anterior é invalidada pela nova versão da regra.
+
+Os casos Light (recuperação judicial) e Brookfield (baterias sem vínculo explícito com data centers) não entram em Data Centers. Brookfield pode concorrer em Baterias; transmissão e conexão de data centers continuam elegíveis. Boletins de múltiplos assuntos sem trecho suficiente ficam pendentes, inclusive quando a URL original só é descoberta ao resolver o Google. A regra não impede todo erro semântico, mas bloqueia as associações genéricas observadas na curadoria antes da prioridade máxima.
+
+Quando a Anthropic informa saldo insuficiente, o processamento interrompe novas chamadas e não envia a edição parcial. O histórico de envios fica intacto, os candidatos permanecem na fila e a auditoria registra `saldo_insuficiente`. Outras falhas transitórias mantêm o isolamento por tópico. Nenhuma recarga é automática.
+
+Falhas comuns de resumo usam texto disponível identificado como “Trecho da fonte”, ou aviso de resumo indisponível quando falta conteúdo. A manchete não é aceita como resumo gerado.
