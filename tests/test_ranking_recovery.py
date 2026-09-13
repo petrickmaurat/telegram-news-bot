@@ -12,10 +12,14 @@ class RecoveryTests(TestCase):
         self.assertFalse(failed)
         self.assertEqual(len(groups["BR"]), 1)
         schema = model.messages.create.call_args.kwargs["output_config"]["format"]["schema"]
-        fields = schema["properties"]["avaliacoes"]["items"]["properties"]
+        branches = schema["properties"]["avaliacoes"]["items"]["anyOf"]
+        fields = branches[0]["properties"]
         self.assertEqual(fields["bucket"]["enum"], ["BR", "US"])
         self.assertEqual(fields["prioridade"]["enum"], list(range(101)))
-        self.assertEqual(set(fields["decisao"]["enum"]), ranking.DECISOES)
+        self.assertEqual(set(fields["decisao"]["enum"]), {"elegivel"})
+        self.assertEqual(set(branches[1]["properties"]), {"indice", "decisao"})
+        self.assertEqual(set(branches[1]["properties"]["decisao"]["enum"]),
+                         ranking.DECISOES - {"elegivel"})
 
     def test_invalid_response_is_recovered_once(self):
         model = client([])

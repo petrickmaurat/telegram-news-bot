@@ -60,4 +60,5 @@ jobs:
             telegram_incerto.json
             digest_incerto.json
             digest_auditoria.json
+            digest_ultima_edicao.json
           retention-days: 14

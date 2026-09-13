@@ -203,3 +203,48 @@ Os casos Light (recuperação judicial) e Brookfield (baterias sem vínculo expl
 Quando a Anthropic informa saldo insuficiente, o processamento interrompe novas chamadas e não envia a edição parcial. O histórico de envios fica intacto, os candidatos permanecem na fila e a auditoria registra `saldo_insuficiente`. Outras falhas transitórias mantêm o isolamento por tópico. Nenhuma recarga é automática.
 
 Falhas comuns de resumo usam texto disponível identificado como “Trecho da fonte”, ou aviso de resumo indisponível quando falta conteúdo. A manchete não é aceita como resumo gerado.
+
+### Economia de tokens e prévia offline
+
+Rejeitados retornam apenas índice e código de decisão; a curadoria traduz o código
+em descrição padronizada, sem atribuir à IA uma justificativa individual inexistente.
+Elegíveis mantêm nota, geografia, fato e justificativa curta. URLs opacas do Google
+não vão ao prompt, mas continuam preservadas na fila e nos aliases.
+
+Antes do ranking, cópias só são unificadas com URL original confirmada, título e data
+iguais, e trecho contido no da versão mais completa. Conteúdos divergentes, links
+distintos e falhas de resolução preservam os candidatos. Nenhum corte de fontes,
+vagas ou volume foi adicionado. Registros das cópias continuam na fila e na auditoria.
+
+O cache base mantém sua assinatura anterior. O cache de rodadas exige os mesmos
+concorrentes, ordem, conteúdo, contexto, tema, foco, modelo e versão editorial.
+Somente lotes completos e válidos são salvos; dados alterados exigem nova avaliação.
+Cada item mantém até oito resultados de rodadas por tópico; a remoção de cache só
+provoca nova consulta. Para alterar apenas o formato de resposta, edite
+`prompt_compacto`/schema; mudanças de critérios editoriais devem alterar `PROMPT`
+ou `VERSAO`, invalidando avaliações antigas de propósito.
+
+`digest_auditoria.json`, em `uso_ia`, registra tokens observados por chamada, etapa,
+tópico (quando a chamada pertence a um só tema), run e tentativa do Actions. Linhas
+`USO_IA` também aparecem no log. O custo é estimado pelas tarifas padrão de Haiku
+4.5, não substitui o extrato da Anthropic. Chamadas sem uso disponível, erros e
+tentativas internas do SDK não são apresentados como custo conhecido zero.
+
+Para testar layout sem coleta, IA, envio ou alteração de histórico:
+
+```sh
+python digest_email.py --previa --saida _preview.html
+```
+
+Após um envio confirmado, `digest_ultima_edicao.json` guarda os campos de exibição
+e é persistido pelo workflow. A prévia usa o mesmo renderizador do e-mail. Para
+edições anteriores, pode reconstruir a seleção da última auditoria usando apenas
+notícias enviadas e resumos preservados na fila; nesse caso a ordem dentro dos
+grupos pode diferir. Se faltarem dados, falha sem acionar processamento ao vivo.
+Não é necessário configurar chaves para a prévia; as dependências Python normais
+do projeto precisam estar instaladas.
+
+O JSON de entrada usa separadores compactos, preservando todos os valores. As
+comparações de manchetes compartilham somente respostas booleanas válidas entre
+tópicos da mesma execução, para o mesmo modelo, instrução e par exato. Falhas não
+são compartilhadas como decisões editoriais; o cache é reiniciado a cada run.

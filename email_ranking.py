@@ -2,13 +2,20 @@
 import hashlib
 import json
 import re
+from urllib.parse import urlsplit
 from email_sources import prioritario, fonte_maxima
 from email_api_errors import verificar_saldo
+from email_usage import criar_mensagem
 
 VERSAO = 5
 TAMANHO_LOTE = 30
 VENCEDORES_POR_LOTE = 10  # quantos elegíveis de cada lote avançam para a rodada seguinte do torneio
 DECISOES = {"elegivel", "fora_tema", "sem_fato_novo", "fonte_duvidosa"}
+MOTIVOS_REJEICAO = {
+    "fora_tema": "Fora do tema principal (classificação da IA; descrição padronizada).",
+    "sem_fato_novo": "Sem informação substantiva nova (classificação da IA; descrição padronizada).",
+    "fonte_duvidosa": "Fonte considerada duvidosa pela IA (descrição padronizada).",
+}
 PROMPT = """Avalie CADA candidato para um boletim sobre {topico}.
 PRIMEIRO determine se o assunto principal tem relação DIRETA com {topico},
 comprovada no título ou trecho fornecido. Não invente relações potenciais.
@@ -54,8 +61,15 @@ def validar(dados, quantidade):
         if type(idx) is not int or not 0 <= idx < quantidade or idx in indices:
             raise ValueError("Índice ausente, inválido ou duplicado")
         indices.add(idx)
+        # Rejeitados trafegam com dois campos. Mantém o formato interno usado
+        # pela fila e pela auditoria, sem inventar uma justificativa individual.
+        if (isinstance(row.get("decisao"), str) and row["decisao"] in MOTIVOS_REJEICAO
+                and set(row) == {"indice", "decisao"}):
+            row.update(bucket=None, prioridade=0, fato="nao_aplicavel",
+                       motivo=MOTIVOS_REJEICAO[row["decisao"]])
         if (not isinstance(row.get("decisao"), str) or row["decisao"] not in DECISOES
-                or row.get("bucket") not in ("BR", "US")):
+                or (row.get("bucket") not in ("BR", "US")
+                    and not (row["decisao"] in MOTIVOS_REJEICAO and row.get("bucket") is None))):
             raise ValueError("Decisão/geografia inválida")
         if type(row.get("prioridade")) is not int or not 0 <= row["prioridade"] <= 100:
             raise ValueError("Prioridade inválida")
@@ -69,14 +83,34 @@ def validar(dados, quantidade):
 def esquema_avaliacao():
     campos = {
         "indice": {"type": "integer"},
-        "decisao": {"type": "string", "enum": sorted(DECISOES)},
+        "decisao": {"type": "string", "enum": ["elegivel"]},
         "bucket": {"type": "string", "enum": ["BR", "US"]},
         "prioridade": {"type": "integer", "enum": list(range(101))},
         "fato": {"type": "string"}, "motivo": {"type": "string"}}
+    rejeitado = {"indice": {"type": "integer"}, "decisao": {
+        "type": "string", "enum": sorted(MOTIVOS_REJEICAO)}}
     return {"type": "object", "properties": {"avaliacoes": {"type": "array",
-        "items": {"type": "object", "properties": campos, "required": list(campos),
-                  "additionalProperties": False}}}, "required": ["avaliacoes"],
+        "items": {"anyOf": [
+            {"type": "object", "properties": campos, "required": list(campos),
+             "additionalProperties": False},
+            {"type": "object", "properties": rejeitado, "required": list(rejeitado),
+             "additionalProperties": False}]}}}, "required": ["avaliacoes"],
         "additionalProperties": False}
+
+
+def prompt_compacto(topico, foco, dados):
+    # Apenas o formato muda: preserva PROMPT/VERSAO na assinatura do cache
+    # para não recomprar avaliações semanticamente equivalentes.
+    prompt = PROMPT.format(topico=topico, foco=foco,
+                           candidatos=json.dumps(dados, ensure_ascii=False, separators=(",", ":")))
+    prompt = prompt.replace("Bucket deve ser BR ou US inclusive para rejeitados.",
+                            "Bucket deve ser BR ou US somente para elegíveis.")
+    return prompt + (
+        '\nFormato de saída: {"avaliacoes": [...]}. Para rejeitados, substitua o '
+        'formato completo por SOMENTE {"indice":0,"decisao":"fora_tema"}, usando '
+        'o código correto. Não gere motivo, fato, nota ou geografia para rejeitados. '
+        'Para elegíveis, mantenha os campos completos; motivo em até 15 palavras '
+        'e fato como identificador curto do acontecimento. Cubra todos os índices.')
 
 
 def _avaliar_lote(cliente, topico, foco, lote, modelo, recuperar=True):
@@ -89,12 +123,14 @@ def _avaliar_lote(cliente, topico, foco, lote, modelo, recuperar=True):
             c["_avaliacao_recuperada"] = False
     dados = [{"indice": i, "titulo": c["titulo"], "fonte": c["fonte"], "link": c["link"],
               "trecho": re.sub(r"<[^>]+>", "", c.get("resumo", ""))[:600]} for i, c in enumerate(lote)]
+    for dado in dados:
+        if urlsplit(dado["link"]).hostname == "news.google.com":
+            # Identificadores opacos de centenas de caracteres não informam o tema.
+            del dado["link"]
     try:
-        response = cliente.messages.create(model=modelo, max_tokens=8000,
+        response = criar_mensagem(cliente, "ranking", topico, model=modelo, max_tokens=8000,
             output_config={"format": {"type": "json_schema", "schema": esquema_avaliacao()}},
-            messages=[{"role": "user", "content": PROMPT.format(topico=topico, foco=foco,
-              candidatos=json.dumps(dados, ensure_ascii=False)) +
-              '\nEncapsule o array no objeto JSON {"avaliacoes": [...]}. Use somente os códigos do schema.'}])
+            messages=[{"role": "user", "content": prompt_compacto(topico, foco, dados)}])
         if getattr(response, "stop_reason", None) != "end_turn":
             raise ValueError("Resposta de avaliação incompleta")
         text = "".join(b.text for b in response.content if b.type == "text").strip()
@@ -119,7 +155,8 @@ def _avaliar_lote(cliente, topico, foco, lote, modelo, recuperar=True):
                 if type(idx) is not int or not 0 <= idx < len(lote) or indices.count(idx) != 1:
                     continue
                 try:
-                    validar([{**row, "indice": 0}], 1)
+                    validada = validar([{**row, "indice": 0}], 1)[0]
+                    row = {**validada, "indice": idx}
                     lote[idx].setdefault("avaliacoes", {})[topico] = {**row, "versao": VERSAO}
                     lote[idx]["_avaliacao_recuperada"] = True
                 except ValueError as detalhe:
@@ -133,6 +170,35 @@ def _avaliar_lote(cliente, topico, foco, lote, modelo, recuperar=True):
         verificar_saldo(erro)
         print(f"Lote de avaliação falhou em {topico} ({erro}); candidatos deste lote continuam pendentes.")
         return False
+
+
+def avaliar_rodada(cliente, topico, foco, lote, modelo, rodada, contexto):
+    assinatura = hashlib.sha256(json.dumps(
+        [VERSAO, PROMPT, topico, foco, modelo, rodada, contexto,
+         [c["_assinatura_ranking"] for c in lote]],
+        sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+    caches = [c.setdefault("cache_rodadas", {}).setdefault(topico, {}) for c in lote]
+    if all(assinatura in cache for cache in caches):
+        try:
+            rows = [dict(cache[assinatura]) for cache in caches]
+            validar(rows, len(lote))
+            if [r["indice"] for r in rows] != list(range(len(lote))):
+                raise ValueError("Ordem do lote mudou")
+        except (ValueError, TypeError):
+            pass
+        else:
+            for c, row in zip(lote, rows):
+                c["avaliacoes"][topico] = row
+                c["_avaliacao_recuperada"] = True
+            return True
+    sucesso = _avaliar_lote(cliente, topico, foco, lote, modelo)
+    if sucesso:
+        for c, cache in zip(lote, caches):
+            cache[assinatura] = dict(c["avaliacoes"][topico])
+            # Limite afeta só reaproveitamento, nunca retenção de candidatos.
+            while len(cache) > 8:
+                cache.pop(next(iter(cache)))
+    return sucesso
 
 
 def classificar(cliente, topico, foco, candidatos, modelo):
@@ -171,6 +237,8 @@ def classificar(cliente, topico, foco, candidatos, modelo):
     rodada = 0
     pool = elegiveis
     while len(pool) > TAMANHO_LOTE:
+        contexto = [(c["_assinatura_ranking"], c.get("publicado_em"),
+                     fonte_maxima(c), c["avaliacoes"][topico]) for c in pool]
         vencedores = []
         for inicio in range(0, len(pool), TAMANHO_LOTE):
             lote = sorted(pool[inicio:inicio + TAMANHO_LOTE], key=lambda c: (
@@ -182,7 +250,8 @@ def classificar(cliente, topico, foco, candidatos, modelo):
             break  # segurança: sem essa redução o torneio não convergiria
         rodada += 1
         for inicio in range(0, len(vencedores), TAMANHO_LOTE):
-            if not _avaliar_lote(cliente, topico, foco, vencedores[inicio:inicio + TAMANHO_LOTE], modelo):
+            if not avaliar_rodada(cliente, topico, foco, vencedores[inicio:inicio + TAMANHO_LOTE],
+                                  modelo, rodada, contexto):
                 falhou = True
             for c in vencedores[inicio:inicio + TAMANHO_LOTE]:
                 if c.get("_avaliacao_recuperada"):

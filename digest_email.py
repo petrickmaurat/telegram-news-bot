@@ -39,6 +39,8 @@ from email_source_health import atualizar as atualizar_fontes, anotar_resultados
 from email_language import idioma_permitido
 from email_dedup import comparador
 from email_ranking import classificar, VERSAO
+import email_usage
+from email_exact_duplicates import unificar
 from email_topic import verificar_tema
 from email_api_errors import verificar_saldo, SaldoInsuficiente
 
@@ -210,7 +212,7 @@ def resumir(cliente, itens: list) -> None:
 
     por_indice = {}
     try:
-        resposta = cliente.messages.create(
+        resposta = email_usage.criar_mensagem(cliente, "resumos",
             model=MODELO,
             max_tokens=6000,
             messages=[{"role": "user", "content": PROMPT_RESUMO.format(blocos="\n\n".join(blocos))}],
@@ -425,8 +427,8 @@ def auditar(registro, topico, resultado, motivo):
     registro.setdefault("resultados", {})[topico] = {"resultado": resultado, "motivo": motivo}
 
 
-def escolher_topico(cliente, topico, registros, estado, anteriores, titulos_enviados=()):
-    mesmo_fato = comparador(cliente, MODELO)
+def escolher_topico(cliente, topico, registros, estado, anteriores, titulos_enviados=(), cache_comparacoes=None):
+    mesmo_fato = comparador(cliente, MODELO, topico, cache_comparacoes)
     grupos = {"BR": [], "US": []}
     usados, fatos = set(estado) | set(anteriores), set()
     detalhes_fatos = {}
@@ -448,6 +450,9 @@ def escolher_topico(cliente, topico, registros, estado, anteriores, titulos_envi
         else:
             idioma_bloqueado = idioma_bloqueado or "pendente" in motivo
             auditar(registro, topico, "idioma", motivo)
+    aptos, copias = unificar(aptos, resolver_link_google_news)
+    for copia, principal in copias:
+        auditar(copia, topico, "mesma_materia", "Cópia com URL, título, data e trecho compatíveis; avaliação feita pela versão mais completa: " + principal["item"]["link"])
     ranking, falhou = selecionar(cliente, topico, [r["item"] for r in aptos]) if aptos else ({"BR": [], "US": []}, False)
     falhou = falhou or idioma_bloqueado
     por_chave = {r["item"]["_fila_key"]: r for r in registros}
@@ -545,6 +550,7 @@ def escolher_topico(cliente, topico, registros, estado, anteriores, titulos_envi
 
 
 def rodar_digest() -> None:
+    email_usage.iniciar()
     estado = {canonica(link) for link in carregar_estado()}
     incerto = carregar_json(INCERTO_FILE, None)
     if incerto:
@@ -577,6 +583,7 @@ def rodar_digest() -> None:
             if item["titulo"] == anterior.get("titulo") and item.get("resumo") == anterior.get("resumo"):
                 item["avaliacoes"] = anterior.get("avaliacoes", {})
                 item["cache_avaliacoes"] = anterior.get("cache_avaliacoes", {})
+                item["cache_rodadas"] = anterior.get("cache_rodadas", {})
             if (fila[key]["status"] == "rejeitado"
                     and not set(item["topicos"]).issubset(fila[key]["rejeitado"])
                     and recente(item, agora_ts)):
@@ -615,6 +622,7 @@ def rodar_digest() -> None:
 
     cliente = anthropic.Anthropic(timeout=60, max_retries=2)
     selecao, ja_escolhidos = {}, set()
+    cache_comparacoes = {}
     falhas = []
     try:
         for t in TOPICOS:
@@ -634,7 +642,8 @@ def rodar_digest() -> None:
                                  if r["status"] == "enviado" and t in r["item"].get("topicos", [])
                                  and "titulo" in r["item"] and recente(r["item"], agora_ts)]
             try:
-                selecao[t], falhou = escolher_topico(cliente, t, registros, estado, ja_escolhidos, titulos_enviados)
+                selecao[t], falhou = escolher_topico(cliente, t, registros, estado, ja_escolhidos,
+                                                   titulos_enviados, cache_comparacoes)
                 if falhou:
                     falhas.append(t)
                 for grupo in selecao[t].values():
@@ -657,6 +666,7 @@ def rodar_digest() -> None:
                 raise RuntimeError(f"Falha nos tópicos: {', '.join(falhas)}; candidatos preservados.")
             return
         resumir(cliente, selecionados)
+        gravar_auditoria(fila, selecao, fontes_consultadas, falhas, saude_fontes)
         agora = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-3)))
         periodo = "manhã" if agora.hour < 14 else "tarde"
         momento = agora.strftime(f"%d/%m/%Y · {periodo}")
@@ -670,6 +680,10 @@ def rodar_digest() -> None:
         for item in selecionados:
             fila[item["_fila_key"]]["status"] = "enviado"
         salvar_json(INCERTO_FILE, None)
+        try:
+            salvar_ultima_edicao(selecao, momento)
+        except OSError as erro:
+            print(f"E-mail enviado, mas a cópia para prévia não pôde ser salva: {erro}")
         checkpoint()
         if falhas:
             raise RuntimeError(f"Digest parcial enviado; falhas em: {', '.join(falhas)}.")
@@ -705,12 +719,64 @@ def gravar_auditoria(fila, selecao, fontes, falhas, saude_fontes=None):
     resumo = {t: {b: len(selecao.get(t, {}).get(b, [])) for b in ("BR", "US")} for t in TOPICOS}
     faltantes = {t: {b: vagas(t, b) - resumo[t][b] for b in ("BR", "US")} for t in TOPICOS}
     auditoria = {"versao": VERSAO, "gerado_em": time.time(), "resumo": resumo, "faltantes": faltantes,
-                 "falhas": falhas, "fontes": fontes, "noticias": noticias, "saude_fontes": saude_fontes or []}
+                 "falhas": falhas, "fontes": fontes, "noticias": noticias, "saude_fontes": saude_fontes or [],
+                 "uso_ia": email_usage.relatorio()}
     salvar_json(AUDITORIA_FILE, auditoria)
     print("Resumo da curadoria: " + json.dumps(resumo, ensure_ascii=False))
 
 
+def arquivo_ultima_edicao():
+    return os.path.join(os.path.dirname(AUDITORIA_FILE), "digest_ultima_edicao.json")
+
+
+def salvar_ultima_edicao(selecao, momento):
+    campos = ("titulo", "fonte", "link", "resumo_final")
+    selecao = {t: {b: [{k: item.get(k, "") for k in campos} for item in itens]
+                   for b, itens in grupos.items()} for t, grupos in selecao.items()}
+    salvar_json(arquivo_ultima_edicao(), {"selecao": selecao, "momento": momento})
+
+
+def gerar_previa(saida):
+    from pathlib import Path
+    destino = Path(saida)
+    if destino.suffix.lower() != ".html":
+        raise ValueError("A prévia deve ser gravada em arquivo .html")
+    edicao = carregar_json(arquivo_ultima_edicao(), None)
+    if not edicao:
+        # Compatibilidade com edições anteriores à criação do snapshot. Somente
+        # matérias da última auditoria com envio confirmado e resumo preservado.
+        auditoria = carregar_json(AUDITORIA_FILE, {})
+        fila = carregar_json(FILA_FILE, {})
+        selecao = {}
+        for row in auditoria.get("noticias", []):
+            if row.get("resultado") != "selecionada":
+                continue
+            registro = next((r for r in fila.values() if r.get("status") == "enviado"
+                and canonica(row["link"]) in identidades(r["item"])
+                and r["item"].get("titulo") == row.get("titulo")), None)
+            if registro is None or not registro["item"].get("resumo_final"):
+                raise ValueError("A última edição não tem todos os dados preservados; prévia não gerada.")
+            bucket = row.get("avaliacao", {}).get("bucket")
+            if bucket not in ("BR", "US"):
+                raise ValueError("Geografia da edição anterior indisponível.")
+            selecao.setdefault(row["topico"], {"BR": [], "US": []})[bucket].append(registro["item"])
+        if not selecao:
+            raise ValueError("Ainda não há uma edição salva para prévia. Nenhuma IA ou envio foi acionado.")
+        instante = datetime.datetime.fromtimestamp(auditoria["gerado_em"], datetime.timezone(datetime.timedelta(hours=-3)))
+        edicao = {"selecao": selecao, "momento": instante.strftime("%d/%m/%Y · prévia da curadoria salva")}
+    destino.write_text(montar_html(edicao["selecao"], edicao["momento"]), encoding="utf-8")
+    print("Prévia local criada: " + str(destino.resolve()))
+
+
 if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--previa", action="store_true", help="Renderizar última edição sem rede, IA ou envio")
+    parser.add_argument("--saida", default="_preview.html")
+    args = parser.parse_args()
+    if args.previa:
+        gerar_previa(args.saida)
+        sys.exit(0)
     faltando = [
         nome
         for nome, valor in (
