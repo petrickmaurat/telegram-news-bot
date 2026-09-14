@@ -16,6 +16,7 @@ from html import unescape
 from pathlib import Path
 from urllib.parse import urlsplit
 
+import common
 from common import TOPICOS, coletar_itens_novos, resolver_link_google_news, salvar_cache_google
 from digest_email import FOCO_SETORIAL, VAGAS, montar_html
 from email_articles import enriquecer_fila
@@ -28,6 +29,7 @@ from reliability import canonica, carregar_json, identidades, salvar_json
 
 ROOT = Path(__file__).resolve().parent
 STATE_FILE = ROOT / "routine_v2_state.json"
+GOOGLE_CACHE_FILE = ROOT / "routine_v2_google_cache.json"
 WORK_DIR = ROOT / "routine_v2_work"
 REQUEST_FILE = WORK_DIR / "ranking_request.json"
 RANKING_RESPONSE_FILE = WORK_DIR / "ranking_response.json"
@@ -77,6 +79,13 @@ def initial_state():
 def load_state():
     state = carregar_json(STATE_FILE, None)
     return state if isinstance(state, dict) else initial_state()
+
+
+def activate_google_cache():
+    """Aponta o módulo comum para o cache da V2 antes de qualquer coleta."""
+    source = GOOGLE_CACHE_FILE if GOOGLE_CACHE_FILE.exists() else ROOT / "google_cache.json"
+    common._cache_google = carregar_json(source, {})
+    common._CACHE_GOOGLE_FILE = str(GOOGLE_CACHE_FILE)
 
 
 def merge_item(existing, incoming):
@@ -132,6 +141,7 @@ def admissible(item, topic, now):
 
 def prepare(max_new_per_topic=60):
     WORK_DIR.mkdir(exist_ok=True)
+    activate_google_cache()
     state = load_state()
     now = time.time()
     state["items"] = {key: item for key, item in state.get("items", {}).items()

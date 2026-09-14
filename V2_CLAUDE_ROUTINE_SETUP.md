@@ -25,7 +25,8 @@ candidatos por tópico, faça o ranking e os resumos nos JSONs especificados,
 valide as duas etapas e disponibilize routine_v2_preview.html. Informe o
 resultado de routine_v2_report.json. Se a validação falhar, corrija a resposta;
 não mude o validador nem relaxe as regras. Ao final, grave somente
-routine_v2_state.json, routine_v2_report.json e routine_v2_preview.html em um commit na própria branch
+routine_v2_state.json, routine_v2_google_cache.json, routine_v2_report.json e
+routine_v2_preview.html em um commit na própria branch
 v2-claude-routines e faça push. Não altere main nem arquivos digest_*.json.
 ```
 

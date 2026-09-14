@@ -24,6 +24,7 @@ class RoutineV2Tests(TestCase):
         self.addCleanup(self.temp.cleanup)
         root = Path(self.temp.name)
         values = {"STATE_FILE": root / "state.json", "WORK_DIR": root / "work",
+                  "GOOGLE_CACHE_FILE": root / "v2_google.json",
                   "REQUEST_FILE": root / "work" / "ranking_request.json",
                   "RANKING_RESPONSE_FILE": root / "work" / "ranking_response.json",
                   "SUMMARY_REQUEST_FILE": root / "work" / "summary_request.json",
@@ -31,6 +32,11 @@ class RoutineV2Tests(TestCase):
                   "REPORT_FILE": root / "report.json", "PREVIEW_FILE": root / "preview.html"}
         for name, value in values.items():
             p = patch.object(v2, name, value)
+            p.start()
+            self.addCleanup(p.stop)
+        for name, value in (("_CACHE_GOOGLE_FILE", str(root / "v1_google.json")),
+                            ("_cache_google", {})):
+            p = patch.object(v2.common, name, value)
             p.start()
             self.addCleanup(p.stop)
         v2.WORK_DIR.mkdir()
@@ -51,6 +57,12 @@ class RoutineV2Tests(TestCase):
         self.assertEqual(len(request["candidates"]), 2)
         self.assertEqual(request["truncated"]["data_center"], {
             "novos_incluidos": 2, "novos_aptos": 3, "elegiveis_em_cache": 0})
+
+    def test_google_cache_is_redirected_to_v2_file(self):
+        original = v2.common._CACHE_GOOGLE_FILE
+        v2.activate_google_cache()
+        self.assertEqual(v2.common._CACHE_GOOGLE_FILE, str(v2.GOOGLE_CACHE_FILE))
+        self.assertNotEqual(v2.common._CACHE_GOOGLE_FILE, original)
 
     def test_cap_never_starves_new_items_or_discards_cached_eligible(self):
         old, fresh = news(1), news(2)
