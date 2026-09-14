@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/damac-and-vodafone-launch-turkish-data-center/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/damac-and-vodafone-launch-turkish-data-center/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/damac-and-vodafone-launch-turkish-data-center/",
+    "origem": "INT",
+    "resumo": "<p>Facility launches with 4MW, scalable to 20MW</p>",
+    "titulo": "Damac and Vodafone launch Turkish data center",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
