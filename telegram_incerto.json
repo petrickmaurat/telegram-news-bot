@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/networking/how-ai-is-reshaping-subsea-and-terrestrial-networks"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/networking/how-ai-is-reshaping-subsea-and-terrestrial-networks"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/networking/how-ai-is-reshaping-subsea-and-terrestrial-networks",
+    "origem": "INT",
+    "resumo": "Hyperscalers are driving new subsea builds directly into data centers. Here’s how SDM cables, 800G coherent pluggables, and optical pass-through are changing end-to-end network design.",
+    "titulo": "How AI Is Reshaping Subsea and Terrestrial Networks",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
