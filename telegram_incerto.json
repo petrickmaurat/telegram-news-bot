@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/brookfield-to-acquire-a-minority-interest-in-american-real-estate-partners/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/brookfield-to-acquire-a-minority-interest-in-american-real-estate-partners/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/brookfield-to-acquire-a-minority-interest-in-american-real-estate-partners/",
+    "origem": "INT",
+    "resumo": "<p>Parent company of PowerHouse Data Centers gets new investor</p>",
+    "titulo": "Brookfield to acquire a minority interest in American Real Estate Partners",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
