@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMivAFBVV95cUxNbngtX0RSaHRyd0NlN25TTFNvUkFJUG5NbHh6TEU4d1dEcUp5MEM1azFIc0hVZjR5M1A4QUNzU0l2REstd2J0blA5YzFzMGhpMHlITl9DR1ZfX1JZdHdLMUdxQThET0tXY092eVZRVnRtLWd3dm1Cd1FwY2JxZ0cyQ3V5QWc2QV9SSEdnNDhPYmNpMVFRRm5pY3hpUTUtQXIxYklCc3V2X2xlMDdBbDZNWV8yR3U5RFVyczczRdIBywFBVV95cUxPQ0hqWlpRbDhEUUNLcGlfMTlFLWluZVVPMTVpczJ4TEt3eHNWd01BTlB0TzJMOWFVYS1Nb0J5VlBYTFVmak8td0YwMk8xTjBFWkRSc3JydWVuaHo5V2c0MmIwNUNaLW9WV0MzTk8tc0NuUG9LSjF5ZkJmVG95d2IxQWJuV0ZwcmMtSTcybnpqQjBUVjh0NG1DcWVMN2NocVZZd2tpc2tTSGlGbEVicHNTQ1ZnN1Q2NVJkTGRUX1U5dTNJR19LX3daa3hXbw?oc=5",
+    "https://valor.globo.com/patrocinado/dino/noticia/2026/09/11/redata-vai-a-sancao-e-destrava-obras-de-data-centers-1.ghtml"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMivAFBVV95cUxNbngtX0RSaHRyd0NlN25TTFNvUkFJUG5NbHh6TEU4d1dEcUp5MEM1azFIc0hVZjR5M1A4QUNzU0l2REstd2J0blA5YzFzMGhpMHlITl9DR1ZfX1JZdHdLMUdxQThET0tXY092eVZRVnRtLWd3dm1Cd1FwY2JxZ0cyQ3V5QWc2QV9SSEdnNDhPYmNpMVFRRm5pY3hpUTUtQXIxYklCc3V2X2xlMDdBbDZNWV8yR3U5RFVyczczRdIBywFBVV95cUxPQ0hqWlpRbDhEUUNLcGlfMTlFLWluZVVPMTVpczJ4TEt3eHNWd01BTlB0TzJMOWFVYS1Nb0J5VlBYTFVmak8td0YwMk8xTjBFWkRSc3JydWVuaHo5V2c0MmIwNUNaLW9WV0MzTk8tc0NuUG9LSjF5ZkJmVG95d2IxQWJuV0ZwcmMtSTcybnpqQjBUVjh0NG1DcWVMN2NocVZZd2tpc2tTSGlGbEVicHNTQ1ZnN1Q2NVJkTGRUX1U5dTNJR19LX3daa3hXbw?oc=5",
+      "https://valor.globo.com/patrocinado/dino/noticia/2026/09/11/redata-vai-a-sancao-e-destrava-obras-de-data-centers-1.ghtml"
+    ],
+    "fonte": "Valor Econômico",
+    "link": "https://valor.globo.com/patrocinado/dino/noticia/2026/09/11/redata-vai-a-sancao-e-destrava-obras-de-data-centers-1.ghtml",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxNbngtX0RSaHRyd0NlN25TTFNvUkFJUG5NbHh6TEU4d1dEcUp5MEM1azFIc0hVZjR5M1A4QUNzU0l2REstd2J0blA5YzFzMGhpMHlITl9DR1ZfX1JZdHdLMUdxQThET0tXY092eVZRVnRtLWd3dm1Cd1FwY2JxZ0cyQ3V5QWc2QV9SSEdnNDhPYmNpMVFRRm5pY3hpUTUtQXIxYklCc3V2X2xlMDdBbDZNWV8yR3U5RFVyczczRdIBywFBVV95cUxPQ0hqWlpRbDhEUUNLcGlfMTlFLWluZVVPMTVpczJ4TEt3eHNWd01BTlB0TzJMOWFVYS1Nb0J5VlBYTFVmak8td0YwMk8xTjBFWkRSc3JydWVuaHo5V2c0MmIwNUNaLW9WV0MzTk8tc0NuUG9LSjF5ZkJmVG95d2IxQWJuV0ZwcmMtSTcybnpqQjBUVjh0NG1DcWVMN2NocVZZd2tpc2tTSGlGbEVicHNTQ1ZnN1Q2NVJkTGRUX1U5dTNJR19LX3daa3hXbw?oc=5\" target=\"_blank\">Redata vai à sanção e destrava obras de data centers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Valor Econômico</font>",
+    "titulo": "Redata vai à sanção e destrava obras de data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
