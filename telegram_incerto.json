@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://estadao.com.br/em-alta/economia/welber-barral/a-nova-fase-dos-data-centers-no-brasil/",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxOY21YRHpZdU8tNVExTWlHNWpRLVpteU4wMjZUQWFQbElxenNWUWw0Q05NMGJZd2d2bmlLR0x5dEpNYXI4NWNUUkpXbnFWMTFiQUJHN1JWLXlYRlYxS3pBMThUY21iaW1vbHBETWRZa2NyeTBuUkQ2WTh2ZHpUMi0yNkxpZHpLMldneUtubzFmZXk1OEZUYS1uS2JUUHlFZw?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://estadao.com.br/em-alta/economia/welber-barral/a-nova-fase-dos-data-centers-no-brasil/",
+      "https://news.google.com/rss/articles/CBMingFBVV95cUxOY21YRHpZdU8tNVExTWlHNWpRLVpteU4wMjZUQWFQbElxenNWUWw0Q05NMGJZd2d2bmlLR0x5dEpNYXI4NWNUUkpXbnFWMTFiQUJHN1JWLXlYRlYxS3pBMThUY21iaW1vbHBETWRZa2NyeTBuUkQ2WTh2ZHpUMi0yNkxpZHpLMldneUtubzFmZXk1OEZUYS1uS2JUUHlFZw?oc=5"
+    ],
+    "fonte": "Estadão",
+    "link": "https://www.estadao.com.br/em-alta/economia/welber-barral/a-nova-fase-dos-data-centers-no-brasil/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOY21YRHpZdU8tNVExTWlHNWpRLVpteU4wMjZUQWFQbElxenNWUWw0Q05NMGJZd2d2bmlLR0x5dEpNYXI4NWNUUkpXbnFWMTFiQUJHN1JWLXlYRlYxS3pBMThUY21iaW1vbHBETWRZa2NyeTBuUkQ2WTh2ZHpUMi0yNkxpZHpLMldneUtubzFmZXk1OEZUYS1uS2JUUHlFZw?oc=5\" target=\"_blank\">Opinião | Brasil chega tarde na corrida dos data centers, mas com vantagens competitivas</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
+    "titulo": "Opinião | Brasil chega tarde na corrida dos data centers, mas com vantagens competitivas",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
