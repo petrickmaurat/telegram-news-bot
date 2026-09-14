@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://cnbc.com/video/2026/09/14/u-s-gas-exports-crucial-to-global-economic-stability-says-ferc-chairman.html",
+    "https://news.google.com/rss/articles/CBMitAFBVV95cUxNOV9PcGlZOUVMc0lFak5ZWnpDMEJjNXNrU0hwY21qaXFwX1EtZnFxOXp1cFBYam5Kc2JGRHhEeEltN2NGdmdWVWItTWV5SzlZTjBzODFvYWJpSTJFeDZrM1E0NWRtYTB1ck9yTVBKbW1JQVd1SXU3Mi16Mk9sVU42bjB4SG1UUUxES3h5X2ZNSFlpYXJWbEdzWGZ4bjJ4NHNVS3FUWTd5eG1KMllfYVZ5T1VLbEk?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://cnbc.com/video/2026/09/14/u-s-gas-exports-crucial-to-global-economic-stability-says-ferc-chairman.html",
+      "https://news.google.com/rss/articles/CBMitAFBVV95cUxNOV9PcGlZOUVMc0lFak5ZWnpDMEJjNXNrU0hwY21qaXFwX1EtZnFxOXp1cFBYam5Kc2JGRHhEeEltN2NGdmdWVWItTWV5SzlZTjBzODFvYWJpSTJFeDZrM1E0NWRtYTB1ck9yTVBKbW1JQVd1SXU3Mi16Mk9sVU42bjB4SG1UUUxES3h5X2ZNSFlpYXJWbEdzWGZ4bjJ4NHNVS3FUWTd5eG1KMllfYVZ5T1VLbEk?oc=5"
+    ],
+    "fonte": "CNBC",
+    "link": "https://www.cnbc.com/video/2026/09/14/u-s-gas-exports-crucial-to-global-economic-stability-says-ferc-chairman.html",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNOV9PcGlZOUVMc0lFak5ZWnpDMEJjNXNrU0hwY21qaXFwX1EtZnFxOXp1cFBYam5Kc2JGRHhEeEltN2NGdmdWVWItTWV5SzlZTjBzODFvYWJpSTJFeDZrM1E0NWRtYTB1ck9yTVBKbW1JQVd1SXU3Mi16Mk9sVU42bjB4SG1UUUxES3h5X2ZNSFlpYXJWbEdzWGZ4bjJ4NHNVS3FUWTd5eG1KMllfYVZ5T1VLbEk?oc=5\" target=\"_blank\">U.S. power grid still lags surging demand for AI data centers, says FERC</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+    "titulo": "U.S. power grid still lags surging demand for AI data centers, says FERC",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
