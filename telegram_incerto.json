@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/heca-data-plans-integrated-zone-for-hyperscale-data-centers-in-egypt/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/heca-data-plans-integrated-zone-for-hyperscale-data-centers-in-egypt/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/heca-data-plans-integrated-zone-for-hyperscale-data-centers-in-egypt/",
+    "origem": "INT",
+    "resumo": "<p>A delegation led by the data center developer’s CEO “voiced interest” in strengthening cooperation with the Egyptian government</p>",
+    "titulo": "Heca Data plans integrated zone for hyperscale data centers in Egypt",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
