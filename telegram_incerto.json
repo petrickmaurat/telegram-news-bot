@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNTi1tQzNJeFBfLUxRT2JvVE9iaE0xU1dmZ0JQdXd2S1d1d2d6UlBOTnpsOU1yRURYTHhtemRFVmRZZGNpVVlPcS1jY0lBbzVocVZZUElZN1BjVmo4amxQZEwxV0hpSk1mOWU4aVRqbGRQXzdEU2VNUHAyYS1GbVY0WFZ4WDU5ejcxQlhPS0FxempiN21nUVJlUzFwWkpRbW5WcFJLYkltT1AzczRZVzlMRWZ3V2xWYXQ3MXpwSGdjbUpwcWJpd3FfVy0xbEN5OUctMERjT2Y5UQ?oc=5",
+    "https://uol.com.br/tilt/colunas/helton-simoes-gomes/2026/09/14/mpf-e-dpu-vao-a-justica-para-barrar-data-center-de-r-200-bi-do-tiktok.htm"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNTi1tQzNJeFBfLUxRT2JvVE9iaE0xU1dmZ0JQdXd2S1d1d2d6UlBOTnpsOU1yRURYTHhtemRFVmRZZGNpVVlPcS1jY0lBbzVocVZZUElZN1BjVmo4amxQZEwxV0hpSk1mOWU4aVRqbGRQXzdEU2VNUHAyYS1GbVY0WFZ4WDU5ejcxQlhPS0FxempiN21nUVJlUzFwWkpRbW5WcFJLYkltT1AzczRZVzlMRWZ3V2xWYXQ3MXpwSGdjbUpwcWJpd3FfVy0xbEN5OUctMERjT2Y5UQ?oc=5",
+      "https://uol.com.br/tilt/colunas/helton-simoes-gomes/2026/09/14/mpf-e-dpu-vao-a-justica-para-barrar-data-center-de-r-200-bi-do-tiktok.htm"
+    ],
+    "fonte": "UOL",
+    "link": "https://www.uol.com.br/tilt/colunas/helton-simoes-gomes/2026/09/14/mpf-e-dpu-vao-a-justica-para-barrar-data-center-de-r-200-bi-do-tiktok.htm",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxNTi1tQzNJeFBfLUxRT2JvVE9iaE0xU1dmZ0JQdXd2S1d1d2d6UlBOTnpsOU1yRURYTHhtemRFVmRZZGNpVVlPcS1jY0lBbzVocVZZUElZN1BjVmo4amxQZEwxV0hpSk1mOWU4aVRqbGRQXzdEU2VNUHAyYS1GbVY0WFZ4WDU5ejcxQlhPS0FxempiN21nUVJlUzFwWkpRbW5WcFJLYkltT1AzczRZVzlMRWZ3V2xWYXQ3MXpwSGdjbUpwcWJpd3FfVy0xbEN5OUctMERjT2Y5UQ?oc=5\" target=\"_blank\">Helton Simões Gomes: MPF e DPU vão à Justiça para barrar data center de R$ 200 bi do TikTok</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">UOL</font>",
+    "titulo": "Helton Simões Gomes: MPF e DPU vão à Justiça para barrar data center de R$ 200 bi do TikTok",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
