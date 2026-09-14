@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/magazines/power-testing-in-the-age-of-ai/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/magazines/power-testing-in-the-age-of-ai/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/magazines/power-testing-in-the-age-of-ai/",
+    "origem": "INT",
+    "resumo": "<p>Explore the next generation of power testing for the AI data center</p>",
+    "titulo": "Power testing in the age of AI",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
