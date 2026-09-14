@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/servers/increase-data-center-density-without-new-construction",
+    "https://news.google.com/rss/articles/CBMingFBVV95cUxQaFRDbkZaWUdJTkE5SkcyR3RXUHl2djhWV1ZWem9GaFdGalEzSHhzWUZqb0hfZkwzM0FBWndqbFRZbXM5V0FPRm1LUVhPZ0h3aWRNM3JyMUNCMXphQWZhN2RIUGE5MV96c1RvUEhiUzRyLVB2aGlfSWVESWlyaHJYVnBBaHdWMDhxX0Z3NXVfczNQQXhyWkZ1dFVWejU0dw?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/servers/increase-data-center-density-without-new-construction",
+      "https://news.google.com/rss/articles/CBMingFBVV95cUxQaFRDbkZaWUdJTkE5SkcyR3RXUHl2djhWV1ZWem9GaFdGalEzSHhzWUZqb0hfZkwzM0FBWndqbFRZbXM5V0FPRm1LUVhPZ0h3aWRNM3JyMUNCMXphQWZhN2RIUGE5MV96c1RvUEhiUzRyLVB2aGlfSWVESWlyaHJYVnBBaHdWMDhxX0Z3NXVfczNQQXhyWkZ1dFVWejU0dw?oc=5"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/servers/increase-data-center-density-without-new-construction",
+    "origem": "INT",
+    "resumo": "Densifying existing data centers is often faster and cheaper than building new ones, but it requires careful management of power, cooling, access, and regulatory constraints.",
+    "titulo": "Increase Data Center Density Without New Construction",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
