@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/dayone-breaks-ground-on-data-center-in-tokyo-japan/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/dayone-breaks-ground-on-data-center-in-tokyo-japan/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/dayone-breaks-ground-on-data-center-in-tokyo-japan/",
+    "origem": "INT",
+    "resumo": "<p>Work starts on company's second campus in Japanese capital</p>",
+    "titulo": "DayOne breaks ground on data center in Tokyo, Japan",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
