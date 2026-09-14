@@ -8,7 +8,7 @@ Este fluxo é deliberadamente incapaz de enviar e-mail. Não execute
 
 1. Instale `requirements.txt` e execute:
 
-   `python routine_v2.py prepare --max-new-per-topic 60`
+   `python routine_v2.py prepare --max-new-per-topic 20`
 
 2. Leia `routine_v2_work/ranking_request.json`. Analise somente candidatos
    com `precisa_avaliar: true`; use `avaliacao_cache` nos demais.

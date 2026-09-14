@@ -20,7 +20,7 @@ estado separado e não possui comando de envio de e-mail.
 ```text
 Trabalhe somente na branch v2-claude-routines deste repositório. Leia e siga
 ROUTINE_V2_INSTRUCTIONS.md. Este é um piloto sem envio: nunca execute
-digest_email.py e não envie e-mail. Execute a preparação limitada a 60 novos
+digest_email.py e não envie e-mail. Execute a preparação limitada a 20 novos
 candidatos por tópico, faça o ranking e os resumos nos JSONs especificados,
 valide as duas etapas e disponibilize routine_v2_preview.html. Informe o
 resultado de routine_v2_report.json. Se a validação falhar, corrija a resposta;
@@ -41,7 +41,7 @@ Settings > Usage. Depois do run, anote novamente:
 - quantidade `needs_evaluation`, `cached` e `counts` do relatório;
 - se a prévia preencheu as vagas e se as matérias são editorialmente corretas.
 
-O limite de 60 vale apenas para candidatos ainda sem cache em cada tópico.
+O limite de 20 vale apenas para candidatos ainda sem cache em cada tópico.
 Elegíveis em cache continuam no confronto, e nenhum item truncado é marcado como
 rejeitado ou enviado. Portanto, um segundo piloto pode processar o restante.
 

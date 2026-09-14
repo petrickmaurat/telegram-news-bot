@@ -414,8 +414,8 @@ def main():
     parser = argparse.ArgumentParser(description="Piloto sem API do digest em Claude Code Routines")
     sub = parser.add_subparsers(dest="command", required=True)
     prep = sub.add_parser("prepare")
-    prep.add_argument("--max-new-per-topic", type=int, default=60,
-                      help="0 remove o limite; mantenha 60 no primeiro piloto")
+    prep.add_argument("--max-new-per-topic", type=int, default=20,
+                      help="0 remove o limite; mantenha 20 no primeiro piloto")
     rank = sub.add_parser("validate-ranking")
     rank.add_argument("--response", default=str(RANKING_RESPONSE_FILE))
     summaries = sub.add_parser("finalize")
