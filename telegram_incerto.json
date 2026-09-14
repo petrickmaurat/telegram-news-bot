@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://bloomberg.com/news/articles/2026-09-14/canada-developer-concord-buys-wind-farm-plots-new-data-centers",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxNdXdDc1ZrSVZtVWc5WlBfbUpKMUhPUEpsY1JXS09LNDJmM0ZFUnVIQURoaTdKNTFSdXVpeGVQMmZvVXJpbjdIREJMX2lrTVhmbzRaeHNUTVR0b0Jab3RNd1dFaEhhc0RqYWU5VDNSeVM3a1NYbzNGQUhObF9qZG13aWw4MGpOUEVodE1GZEx1WFBjNFA4cVdialZZd2dQcEVoY2wzM0g4ejBYQWlGejJQQzhPOA?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://bloomberg.com/news/articles/2026-09-14/canada-developer-concord-buys-wind-farm-plots-new-data-centers",
+      "https://news.google.com/rss/articles/CBMiswFBVV95cUxNdXdDc1ZrSVZtVWc5WlBfbUpKMUhPUEpsY1JXS09LNDJmM0ZFUnVIQURoaTdKNTFSdXVpeGVQMmZvVXJpbjdIREJMX2lrTVhmbzRaeHNUTVR0b0Jab3RNd1dFaEhhc0RqYWU5VDNSeVM3a1NYbzNGQUhObF9qZG13aWw4MGpOUEVodE1GZEx1WFBjNFA4cVdialZZd2dQcEVoY2wzM0g4ejBYQWlGejJQQzhPOA?oc=5"
+    ],
+    "fonte": "Bloomberg.com",
+    "link": "https://www.bloomberg.com/news/articles/2026-09-14/canada-developer-concord-buys-wind-farm-plots-new-data-centers",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxNdXdDc1ZrSVZtVWc5WlBfbUpKMUhPUEpsY1JXS09LNDJmM0ZFUnVIQURoaTdKNTFSdXVpeGVQMmZvVXJpbjdIREJMX2lrTVhmbzRaeHNUTVR0b0Jab3RNd1dFaEhhc0RqYWU5VDNSeVM3a1NYbzNGQUhObF9qZG13aWw4MGpOUEVodE1GZEx1WFBjNFA4cVdialZZd2dQcEVoY2wzM0g4ejBYQWlGejJQQzhPOA?oc=5\" target=\"_blank\">Canada Developer Concord Buys Wind Farm, Plots New Data Centers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+    "titulo": "Canada Developer Concord Buys Wind Farm, Plots New Data Centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
