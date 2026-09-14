@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/construction-worker-dies-after-being-hit-by-crane-lorry-at-data-center-site-in-rayong-thailand/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/construction-worker-dies-after-being-hit-by-crane-lorry-at-data-center-site-in-rayong-thailand/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/construction-worker-dies-after-being-hit-by-crane-lorry-at-data-center-site-in-rayong-thailand/",
+    "origem": "INT",
+    "resumo": "<p>Investigation underway after 36-year-old's death</p>",
+    "titulo": "Construction worker dies after being hit by crane lorry at data center site in Rayong, Thailand",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
