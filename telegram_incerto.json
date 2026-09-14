@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQUEdBZ2lQNjgtZWdzSTVVMWpfTWNrbjltQnRZdWQ2ZlB4SmNqMGJRaGtRdzVacmhtOENCbXI5ejRJc0RSMWFNOFdNOHYtajczUW9IU2ptNy14cnBQcFBXd2QyZE5la0ZvcWU5ckZNQ2p2R1RXMXBLX3ZIVGg1WmdYSmxCRVVHTG5nX2lxelNGZ1VRQzFmN2tWcVY4N0cwbUU4UFNobUtqN01rT0ZrVTl0R3ZMNW55RV9jSnVFVHhTYU9PeDVxRExJeDN3U2YtdVdMcXfSAeABQVVfeXFMT1VtTXhTSUY2aWs3ZUtQd29Td19ZcVRDTzNYNFlEWS1vSnJuc3VadDlRbTJ3V2lmSmRsTzdTN0RqUUFJbk92Y1BQdG9xeWN5dVVZSXJtaHA1YnVGMHlUS2xFUWhhcnlNNVNjRWpTYTd0Tkw0Y2c5M3ptSF9JREptQmdZVU1ndnJ3dXRsMnIyUjgzUFRjX1pvcTEzQmdLUUx0QU1kckZPMGRuM05UZDJCZjhTbUJRNXdlbVR3ZDlHcGIxM2JjbzdERWUzY1FfV0dCN0JLei1kb2dlTU9wdUZQSnM?oc=5",
+    "https://oglobo.globo.com/economia/tecnologia/noticia/2026/09/12/meta-estaria-testando-robos-para-administrar-seus-centros-de-dados.ghtml"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQUEdBZ2lQNjgtZWdzSTVVMWpfTWNrbjltQnRZdWQ2ZlB4SmNqMGJRaGtRdzVacmhtOENCbXI5ejRJc0RSMWFNOFdNOHYtajczUW9IU2ptNy14cnBQcFBXd2QyZE5la0ZvcWU5ckZNQ2p2R1RXMXBLX3ZIVGg1WmdYSmxCRVVHTG5nX2lxelNGZ1VRQzFmN2tWcVY4N0cwbUU4UFNobUtqN01rT0ZrVTl0R3ZMNW55RV9jSnVFVHhTYU9PeDVxRExJeDN3U2YtdVdMcXfSAeABQVVfeXFMT1VtTXhTSUY2aWs3ZUtQd29Td19ZcVRDTzNYNFlEWS1vSnJuc3VadDlRbTJ3V2lmSmRsTzdTN0RqUUFJbk92Y1BQdG9xeWN5dVVZSXJtaHA1YnVGMHlUS2xFUWhhcnlNNVNjRWpTYTd0Tkw0Y2c5M3ptSF9JREptQmdZVU1ndnJ3dXRsMnIyUjgzUFRjX1pvcTEzQmdLUUx0QU1kckZPMGRuM05UZDJCZjhTbUJRNXdlbVR3ZDlHcGIxM2JjbzdERWUzY1FfV0dCN0JLei1kb2dlTU9wdUZQSnM?oc=5",
+      "https://oglobo.globo.com/economia/tecnologia/noticia/2026/09/12/meta-estaria-testando-robos-para-administrar-seus-centros-de-dados.ghtml"
+    ],
+    "fonte": "O GLOBO",
+    "link": "https://oglobo.globo.com/economia/tecnologia/noticia/2026/09/12/meta-estaria-testando-robos-para-administrar-seus-centros-de-dados.ghtml",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxQUEdBZ2lQNjgtZWdzSTVVMWpfTWNrbjltQnRZdWQ2ZlB4SmNqMGJRaGtRdzVacmhtOENCbXI5ejRJc0RSMWFNOFdNOHYtajczUW9IU2ptNy14cnBQcFBXd2QyZE5la0ZvcWU5ckZNQ2p2R1RXMXBLX3ZIVGg1WmdYSmxCRVVHTG5nX2lxelNGZ1VRQzFmN2tWcVY4N0cwbUU4UFNobUtqN01rT0ZrVTl0R3ZMNW55RV9jSnVFVHhTYU9PeDVxRExJeDN3U2YtdVdMcXfSAeABQVVfeXFMT1VtTXhTSUY2aWs3ZUtQd29Td19ZcVRDTzNYNFlEWS1vSnJuc3VadDlRbTJ3V2lmSmRsTzdTN0RqUUFJbk92Y1BQdG9xeWN5dVVZSXJtaHA1YnVGMHlUS2xFUWhhcnlNNVNjRWpTYTd0Tkw0Y2c5M3ptSF9JREptQmdZVU1ndnJ3dXRsMnIyUjgzUFRjX1pvcTEzQmdLUUx0QU1kckZPMGRuM05UZDJCZjhTbUJRNXdlbVR3ZDlHcGIxM2JjbzdERWUzY1FfV0dCN0JLei1kb2dlTU9wdUZQSnM?oc=5\" target=\"_blank\">Meta estaria testando robôs para administrar seus centros de dados</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">O GLOBO</font>",
+    "titulo": "Meta estaria testando robôs para administrar seus centros de dados",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
