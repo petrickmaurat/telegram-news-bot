@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://bloomberg.com/news/articles/2026-09-14/us-data-centers-set-to-burn-more-natural-gas-than-most-nations",
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxPNTJSem5qelJfZDI0ckdSeGVrOF9vVTVnUlRDQzFEV29QcGVPRl9mZVpBUWF5NEJOYzhPZVR1T0RSejdnZUNieDVySTROQnBWdVRycWtGeENwNndUUHZTSTVBZVhwWDcwS1hFbTN5RzZoX0k2THpxX0Y5c0xLRUpUWGpiLUg1bHBlazVfRlVUVV9xVWVVbi16eG1IbU1mdWZ1MWgybktnS3F4WVZaZjREMVV5MA?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://bloomberg.com/news/articles/2026-09-14/us-data-centers-set-to-burn-more-natural-gas-than-most-nations",
+      "https://news.google.com/rss/articles/CBMiswFBVV95cUxPNTJSem5qelJfZDI0ckdSeGVrOF9vVTVnUlRDQzFEV29QcGVPRl9mZVpBUWF5NEJOYzhPZVR1T0RSejdnZUNieDVySTROQnBWdVRycWtGeENwNndUUHZTSTVBZVhwWDcwS1hFbTN5RzZoX0k2THpxX0Y5c0xLRUpUWGpiLUg1bHBlazVfRlVUVV9xVWVVbi16eG1IbU1mdWZ1MWgybktnS3F4WVZaZjREMVV5MA?oc=5"
+    ],
+    "fonte": "Bloomberg.com",
+    "link": "https://www.bloomberg.com/news/articles/2026-09-14/us-data-centers-set-to-burn-more-natural-gas-than-most-nations",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxPNTJSem5qelJfZDI0ckdSeGVrOF9vVTVnUlRDQzFEV29QcGVPRl9mZVpBUWF5NEJOYzhPZVR1T0RSejdnZUNieDVySTROQnBWdVRycWtGeENwNndUUHZTSTVBZVhwWDcwS1hFbTN5RzZoX0k2THpxX0Y5c0xLRUpUWGpiLUg1bHBlazVfRlVUVV9xVWVVbi16eG1IbU1mdWZ1MWgybktnS3F4WVZaZjREMVV5MA?oc=5\" target=\"_blank\">US Data Centers Set to Burn More Natural Gas Than Most Nations</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+    "titulo": "US Data Centers Set to Burn More Natural Gas Than Most Nations",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
