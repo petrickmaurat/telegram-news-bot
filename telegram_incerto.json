@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxOTjBKbm95RUpwekdKT3RWX3FIVVhQc2xWR1lNV2NzM1VGelRwOUdBMlQ2bVdNd1JYUmtuTktuRTBxb0pvc1MwU1BjRHA4UWMxdTZPMlQtZEJsaGROX0x2MWV2X3FtMzEtdUo0blptU1BwckQ5Y0pLbG45RWszNnJ2Uy1uc1BsaXZJY0h2TTU5M1FqLWVpS1VVVQ?oc=5",
+    "https://semafor.com/article/09/14/2026/republicans-time-crunch-data-centers-sports-crypto"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMimAFBVV95cUxOTjBKbm95RUpwekdKT3RWX3FIVVhQc2xWR1lNV2NzM1VGelRwOUdBMlQ2bVdNd1JYUmtuTktuRTBxb0pvc1MwU1BjRHA4UWMxdTZPMlQtZEJsaGROX0x2MWV2X3FtMzEtdUo0blptU1BwckQ5Y0pLbG45RWszNnJ2Uy1uc1BsaXZJY0h2TTU5M1FqLWVpS1VVVQ?oc=5",
+      "https://semafor.com/article/09/14/2026/republicans-time-crunch-data-centers-sports-crypto"
+    ],
+    "fonte": "Semafor",
+    "link": "https://www.semafor.com/article/09/14/2026/republicans-time-crunch-data-centers-sports-crypto",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOTjBKbm95RUpwekdKT3RWX3FIVVhQc2xWR1lNV2NzM1VGelRwOUdBMlQ2bVdNd1JYUmtuTktuRTBxb0pvc1MwU1BjRHA4UWMxdTZPMlQtZEJsaGROX0x2MWV2X3FtMzEtdUo0blptU1BwckQ5Y0pLbG45RWszNnJ2Uy1uc1BsaXZJY0h2TTU5M1FqLWVpS1VVVQ?oc=5\" target=\"_blank\">Republicans’ time crunch: Data centers, sports, crypto</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Semafor</font>",
+    "titulo": "Republicans’ time crunch: Data centers, sports, crypto",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
