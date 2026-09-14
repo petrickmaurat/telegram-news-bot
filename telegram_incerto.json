@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/edged-tops-out-data-centers-in-council-bluffs-iowa/",
+    "https://news.google.com/rss/articles/CBMimgFBVV95cUxQQ2tiOTBhbXdONXJ1SmNBbklvYzROS3Q3azJkRUpNeVVPa2doNWhGbFllcU5IUXVyYTUwdnlzeUlxN21KUkRhY0Y4TlRxanhXSGlVOGFaeUxfOElUVnlqMVEwNml4UWs5ZjdyUDA0MkhlaXpORG5tTGVJU1FVeFUwRnNrbUhoSVZiSnJvc19fODdBbXlrV0dLMERB?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/edged-tops-out-data-centers-in-council-bluffs-iowa/",
+      "https://news.google.com/rss/articles/CBMimgFBVV95cUxQQ2tiOTBhbXdONXJ1SmNBbklvYzROS3Q3azJkRUpNeVVPa2doNWhGbFllcU5IUXVyYTUwdnlzeUlxN21KUkRhY0Y4TlRxanhXSGlVOGFaeUxfOElUVnlqMVEwNml4UWs5ZjdyUDA0MkhlaXpORG5tTGVJU1FVeFUwRnNrbUhoSVZiSnJvc19fODdBbXlrV0dLMERB?oc=5"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/edged-tops-out-data-centers-in-council-bluffs-iowa/",
+    "origem": "INT",
+    "resumo": "<p>Structural work on two buildings at 200MW campus complete</p>",
+    "titulo": "Edged tops out data centers in Council Bluffs, Iowa",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
