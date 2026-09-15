@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://axios.com/local/boston/2026/09/15/massachusetts-data-centers-executive-order",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxOelJ6eTE4WDJVX2xjYlF5TnY0blM0a1BKV180RENXVV9OQ0ZxYnhfV2FnY0diY2dzZUhHdENXbDdwUFc4OVNUbzgtdWtMUEo4RlVqVHI3VE43eUtrM2lMNktCa3FZOFlyNk9yQm9UVFB0d1Z5SVRvWDN4Q1ZzVnJrTklYd21qRzZadElnMl9iR3VsZw?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://axios.com/local/boston/2026/09/15/massachusetts-data-centers-executive-order",
+      "https://news.google.com/rss/articles/CBMikgFBVV95cUxOelJ6eTE4WDJVX2xjYlF5TnY0blM0a1BKV180RENXVV9OQ0ZxYnhfV2FnY0diY2dzZUhHdENXbDdwUFc4OVNUbzgtdWtMUEo4RlVqVHI3VE43eUtrM2lMNktCa3FZOFlyNk9yQm9UVFB0d1Z5SVRvWDN4Q1ZzVnJrTklYd21qRzZadElnMl9iR3VsZw?oc=5"
+    ],
+    "fonte": "Axios",
+    "link": "https://www.axios.com/local/boston/2026/09/15/massachusetts-data-centers-executive-order",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOelJ6eTE4WDJVX2xjYlF5TnY0blM0a1BKV180RENXVV9OQ0ZxYnhfV2FnY0diY2dzZUhHdENXbDdwUFc4OVNUbzgtdWtMUEo4RlVqVHI3VE43eUtrM2lMNktCa3FZOFlyNk9yQm9UVFB0d1Z5SVRvWDN4Q1ZzVnJrTklYd21qRzZadElnMl9iR3VsZw?oc=5\" target=\"_blank\">Mass. tries to rein in data centers, but leaves open questions</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Axios</font>",
+    "titulo": "Mass. tries to rein in data centers, but leaves open questions",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
