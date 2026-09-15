@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMitgFBVV95cUxQM1Q3T2hEM1VOUmFwb200Z3NvX3p4a1p3SmxDS0QyUnF4dU80QkVralJGVkdFNW1DUjhFUEFFU2FBaEZOZHNsY3dubm9EVHA5YW5JTVVEdVVUb0xuc04xZlNDS3VldFY4UDlOb1QzODlZZTVPSWV5VEhnOUtzbkIzWVVKWDFjQWlwQW1vVWdVSmpsbXdsWDR6cllBcXlJX0FlTEs1X1JUTnVzZ2thSHVBX00zNndUZw?oc=5",
+    "https://utilitydive.com/news/pjms-reliability-could-start-failing-by-2030-if-data-center-growth-continu/830405/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMitgFBVV95cUxQM1Q3T2hEM1VOUmFwb200Z3NvX3p4a1p3SmxDS0QyUnF4dU80QkVralJGVkdFNW1DUjhFUEFFU2FBaEZOZHNsY3dubm9EVHA5YW5JTVVEdVVUb0xuc04xZlNDS3VldFY4UDlOb1QzODlZZTVPSWV5VEhnOUtzbkIzWVVKWDFjQWlwQW1vVWdVSmpsbXdsWDR6cllBcXlJX0FlTEs1X1JUTnVzZ2thSHVBX00zNndUZw?oc=5",
+      "https://utilitydive.com/news/pjms-reliability-could-start-failing-by-2030-if-data-center-growth-continu/830405/"
+    ],
+    "fonte": "utilitydive.com",
+    "link": "https://www.utilitydive.com/news/pjms-reliability-could-start-failing-by-2030-if-data-center-growth-continu/830405/",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQM1Q3T2hEM1VOUmFwb200Z3NvX3p4a1p3SmxDS0QyUnF4dU80QkVralJGVkdFNW1DUjhFUEFFU2FBaEZOZHNsY3dubm9EVHA5YW5JTVVEdVVUb0xuc04xZlNDS3VldFY4UDlOb1QzODlZZTVPSWV5VEhnOUtzbkIzWVVKWDFjQWlwQW1vVWdVSmpsbXdsWDR6cllBcXlJX0FlTEs1X1JUTnVzZ2thSHVBX00zNndUZw?oc=5\" target=\"_blank\">PJM faces 2030 reliability crisis if data center load growth continues: report</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">utilitydive.com</font>",
+    "titulo": "PJM faces 2030 reliability crisis if data center load growth continues: report",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
