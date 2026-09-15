@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/analysis/are-diamonds-a-data-centers-best-friend/",
+    "https://news.google.com/rss/articles/CBMikAFBVV95cUxOU1hENkFjeDNENVlYelNGVEhab2JQWnB4ZXdadXJsVklGemdlUlJicXNQNmFKZVU4azJPS1hSb1p1VmtpWTI2ZnhFekoxNzNDUjExdzdXTU1kcENNWUJPUUxjUDFtVzFMUW0wWFh5Q0pqaDJWN2g3WmFOSldLcnVRT3hjbDZEWVpiNEVBaV92ZjE?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/analysis/are-diamonds-a-data-centers-best-friend/",
+      "https://news.google.com/rss/articles/CBMikAFBVV95cUxOU1hENkFjeDNENVlYelNGVEhab2JQWnB4ZXdadXJsVklGemdlUlJicXNQNmFKZVU4azJPS1hSb1p1VmtpWTI2ZnhFekoxNzNDUjExdzdXTU1kcENNWUJPUUxjUDFtVzFMUW0wWFh5Q0pqaDJWN2g3WmFOSldLcnVRT3hjbDZEWVpiNEVBaV92ZjE?oc=5"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/analysis/are-diamonds-a-data-centers-best-friend/",
+    "origem": "INT",
+    "resumo": "<p>Akash Systems is bring diamond cooling to the data hall</p>",
+    "titulo": "Are diamonds a data center's best friend?",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
