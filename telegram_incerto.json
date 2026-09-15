@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdWEyUEpWVVFTcjFXMm8zX1ZqSU5BOWVMRVFaaG14OVpQQ2ZuOW5WaV9CNVZwYmZmTFJDZzN5cnNsa0R0NDE4b01BdlZ2WUpSallQUzBRR25CLTlDVGNVWkVGazY4ci0yZ2w3Z0xzTXppRlc4UWM2OTd0a0VUckI5Um9hbHBzVE9VeVdyWVExWkdqdnZUeGhFemtjZHpXakwzb2hYcUtrdTczMnBLNFBiSGhKQjl4Z3dWMENRM0JvTnZvZw?oc=5",
+    "https://tiinside.com.br/15/09/2026/organizacoes-pedem-paralisacao-imediata-das-obras-de-mega-data-center-do-tiktok-no-ceara/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdWEyUEpWVVFTcjFXMm8zX1ZqSU5BOWVMRVFaaG14OVpQQ2ZuOW5WaV9CNVZwYmZmTFJDZzN5cnNsa0R0NDE4b01BdlZ2WUpSallQUzBRR25CLTlDVGNVWkVGazY4ci0yZ2w3Z0xzTXppRlc4UWM2OTd0a0VUckI5Um9hbHBzVE9VeVdyWVExWkdqdnZUeGhFemtjZHpXakwzb2hYcUtrdTczMnBLNFBiSGhKQjl4Z3dWMENRM0JvTnZvZw?oc=5",
+      "https://tiinside.com.br/15/09/2026/organizacoes-pedem-paralisacao-imediata-das-obras-de-mega-data-center-do-tiktok-no-ceara/"
+    ],
+    "fonte": "TI INSIDE Online",
+    "link": "https://tiinside.com.br/15/09/2026/organizacoes-pedem-paralisacao-imediata-das-obras-de-mega-data-center-do-tiktok-no-ceara/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdWEyUEpWVVFTcjFXMm8zX1ZqSU5BOWVMRVFaaG14OVpQQ2ZuOW5WaV9CNVZwYmZmTFJDZzN5cnNsa0R0NDE4b01BdlZ2WUpSallQUzBRR25CLTlDVGNVWkVGazY4ci0yZ2w3Z0xzTXppRlc4UWM2OTd0a0VUckI5Um9hbHBzVE9VeVdyWVExWkdqdnZUeGhFemtjZHpXakwzb2hYcUtrdTczMnBLNFBiSGhKQjl4Z3dWMENRM0JvTnZvZw?oc=5\" target=\"_blank\">Organizações pedem paralisação imediata das obras de mega data center do TikTok no Ceará</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TI INSIDE Online</font>",
+    "titulo": "Organizações pedem paralisação imediata das obras de mega data center do TikTok no Ceará",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
