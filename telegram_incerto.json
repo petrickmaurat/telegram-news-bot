@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMikwFBVV95cUxNYTNTdXpkaE1tMkM4NEtoQV9GcjlLZTUzV1ByQjAxbExxNEZhZjlndFg1a3ZjUjZLX19ZLWJLWWZrcVlPb3ZyakVXRHNIUXJTUUx1Z3FIRG5leWljVXczVGdmWVFzbnBZTmEyUHlZb25yZXpMcFJJNVdveWk5MTBiMVBJQTZZTTc0bzRWNDd1Zzgwakk?oc=5",
+    "https://nytimes.com/2026/09/15/nyregion/data-center-diesel-fuel-spill-new-jersey.html"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMikwFBVV95cUxNYTNTdXpkaE1tMkM4NEtoQV9GcjlLZTUzV1ByQjAxbExxNEZhZjlndFg1a3ZjUjZLX19ZLWJLWWZrcVlPb3ZyakVXRHNIUXJTUUx1Z3FIRG5leWljVXczVGdmWVFzbnBZTmEyUHlZb25yZXpMcFJJNVdveWk5MTBiMVBJQTZZTTc0bzRWNDd1Zzgwakk?oc=5",
+      "https://nytimes.com/2026/09/15/nyregion/data-center-diesel-fuel-spill-new-jersey.html"
+    ],
+    "fonte": "The New York Times",
+    "link": "https://www.nytimes.com/2026/09/15/nyregion/data-center-diesel-fuel-spill-new-jersey.html",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNYTNTdXpkaE1tMkM4NEtoQV9GcjlLZTUzV1ByQjAxbExxNEZhZjlndFg1a3ZjUjZLX19ZLWJLWWZrcVlPb3ZyakVXRHNIUXJTUUx1Z3FIRG5leWljVXczVGdmWVFzbnBZTmEyUHlZb25yZXpMcFJJNVdveWk5MTBiMVBJQTZZTTc0bzRWNDd1Zzgwakk?oc=5\" target=\"_blank\">Data Center’s Spill of 5,000 Gallons of Diesel Forces N.J. River Cleanup</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
+    "titulo": "Data Center’s Spill of 5,000 Gallons of Diesel Forces N.J. River Cleanup",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
