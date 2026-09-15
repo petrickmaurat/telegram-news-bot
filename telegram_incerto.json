@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://itforum.com.br/noticias/eua-constroem-data-centers/",
+    "https://news.google.com/rss/articles/CBMia0FVX3lxTE4zNm9OdXVaUUEyaVpjRGlUbmthbnYwdEMyUHcwVUh3cFA5MkVVZ3hKRlRSRzJJWlIwU0FtelptT2g5ZURIM1B2NHJ4anZmRTZ0SjN4U0Njb09BTGR6by1qTXdnQndMREJyODAw0gFwQVVfeXFMT08wMlFVMUtzTUdiYjdPVzdNQUQ3cmdoTk4wSGhFU1Azd3ctNmxPSFF3V3laamhMcnU0ZHc0b1F6ZDJtalU0VkZBWlhncENPU2RBMFQ3Z3p1TVVZbDJLQlRHRm5JT0hIa0RmNVJaSG5OaA?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://itforum.com.br/noticias/eua-constroem-data-centers/",
+      "https://news.google.com/rss/articles/CBMia0FVX3lxTE4zNm9OdXVaUUEyaVpjRGlUbmthbnYwdEMyUHcwVUh3cFA5MkVVZ3hKRlRSRzJJWlIwU0FtelptT2g5ZURIM1B2NHJ4anZmRTZ0SjN4U0Njb09BTGR6by1qTXdnQndMREJyODAw0gFwQVVfeXFMT08wMlFVMUtzTUdiYjdPVzdNQUQ3cmdoTk4wSGhFU1Azd3ctNmxPSFF3V3laamhMcnU0ZHc0b1F6ZDJtalU0VkZBWlhncENPU2RBMFQ3Z3p1TVVZbDJLQlRHRm5JT0hIa0RmNVJaSG5OaA?oc=5"
+    ],
+    "fonte": "itforum.com.br",
+    "link": "https://itforum.com.br/noticias/eua-constroem-data-centers/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTE4zNm9OdXVaUUEyaVpjRGlUbmthbnYwdEMyUHcwVUh3cFA5MkVVZ3hKRlRSRzJJWlIwU0FtelptT2g5ZURIM1B2NHJ4anZmRTZ0SjN4U0Njb09BTGR6by1qTXdnQndMREJyODAw0gFwQVVfeXFMT08wMlFVMUtzTUdiYjdPVzdNQUQ3cmdoTk4wSGhFU1Azd3ctNmxPSFF3V3laamhMcnU0ZHc0b1F6ZDJtalU0VkZBWlhncENPU2RBMFQ3Z3p1TVVZbDJLQlRHRm5JT0hIa0RmNVJaSG5OaA?oc=5\" target=\"_blank\">EUA constroem data centers mais rápido do que rede elétrica expande - IT Forum</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">itforum.com.br</font>",
+    "titulo": "EUA constroem data centers mais rápido do que rede elétrica expande - IT Forum",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
