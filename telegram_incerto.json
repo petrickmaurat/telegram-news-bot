@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/what-should-britain-expect-from-its-next-generation-of-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/what-should-britain-expect-from-its-next-generation-of-data-centers/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/what-should-britain-expect-from-its-next-generation-of-data-centers/",
+    "origem": "INT",
+    "resumo": "<p>How digital infrastructure projects can contribute to communities</p>",
+    "titulo": "What should Britain expect from its next generation of data centers?",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
