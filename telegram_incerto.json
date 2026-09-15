@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://estadao.com.br/em-alta/economia/lula-sanciona-projeto-lei-regime-desoneracao-data-centers/",
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxQNnVOU1dpWnI4S1hsRlpidmUzeEJMZVR6NWV6VWNDWVk4YVpwOWZIZV9fRTQ1dEdtekd3SXNmU1VjUk5nX0xkOHV4ZHdDN25KbXZ6MU9fYkxnZDN4dHRBUzRFTTM3MmxrNXZBcnlNWVdrTVFTSzRObW90TU9CVHZuMlRQTWxnQ2FGUnFIUWxpbGxULXJvc2ZkRk1Hb3VGOVFldEZaQQ?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://estadao.com.br/em-alta/economia/lula-sanciona-projeto-lei-regime-desoneracao-data-centers/",
+      "https://news.google.com/rss/articles/CBMipAFBVV95cUxQNnVOU1dpWnI4S1hsRlpidmUzeEJMZVR6NWV6VWNDWVk4YVpwOWZIZV9fRTQ1dEdtekd3SXNmU1VjUk5nX0xkOHV4ZHdDN25KbXZ6MU9fYkxnZDN4dHRBUzRFTTM3MmxrNXZBcnlNWVdrTVFTSzRObW90TU9CVHZuMlRQTWxnQ2FGUnFIUWxpbGxULXJvc2ZkRk1Hb3VGOVFldEZaQQ?oc=5"
+    ],
+    "fonte": "estadao.com.br",
+    "link": "https://www.estadao.com.br/em-alta/economia/lula-sanciona-projeto-lei-regime-desoneracao-data-centers/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQNnVOU1dpWnI4S1hsRlpidmUzeEJMZVR6NWV6VWNDWVk4YVpwOWZIZV9fRTQ1dEdtekd3SXNmU1VjUk5nX0xkOHV4ZHdDN25KbXZ6MU9fYkxnZDN4dHRBUzRFTTM3MmxrNXZBcnlNWVdrTVFTSzRObW90TU9CVHZuMlRQTWxnQ2FGUnFIUWxpbGxULXJvc2ZkRk1Hb3VGOVFldEZaQQ?oc=5\" target=\"_blank\">Lula sanciona projeto de lei que institui regime de desoneração do setor de data centers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">estadao.com.br</font>",
+    "titulo": "Lula sanciona projeto de lei que institui regime de desoneração do setor de data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
