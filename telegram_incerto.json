@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://axios.com/2026/09/15/trump-pollster-data-center-republicans-midterm-election",
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxOQlIxYmNtZlN2TUZ1Z2owRXc1SFdXa0VTc0xYUWNlbFNKS2hVTXBNUFdoMkZjRUNLaVJzdWc4Zm5XdlV0ZnJ5SmFLck5OSHk1OUtFVXJkcG82ZG1zS0dWNTFjNExNQU1uQ2JGczVkWWYtbEFBclZvbnpQOUlyTEpOYXAzVWdNSzh5ZVBiSVhjVnlmZw?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://axios.com/2026/09/15/trump-pollster-data-center-republicans-midterm-election",
+      "https://news.google.com/rss/articles/CBMikgFBVV95cUxOQlIxYmNtZlN2TUZ1Z2owRXc1SFdXa0VTc0xYUWNlbFNKS2hVTXBNUFdoMkZjRUNLaVJzdWc4Zm5XdlV0ZnJ5SmFLck5OSHk1OUtFVXJkcG82ZG1zS0dWNTFjNExNQU1uQ2JGczVkWWYtbEFBclZvbnpQOUlyTEpOYXAzVWdNSzh5ZVBiSVhjVnlmZw?oc=5"
+    ],
+    "fonte": "Axios",
+    "link": "https://www.axios.com/2026/09/15/trump-pollster-data-center-republicans-midterm-election",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOQlIxYmNtZlN2TUZ1Z2owRXc1SFdXa0VTc0xYUWNlbFNKS2hVTXBNUFdoMkZjRUNLaVJzdWc4Zm5XdlV0ZnJ5SmFLck5OSHk1OUtFVXJkcG82ZG1zS0dWNTFjNExNQU1uQ2JGczVkWWYtbEFBclZvbnpQOUlyTEpOYXAzVWdNSzh5ZVBiSVhjVnlmZw?oc=5\" target=\"_blank\">Scoop: Trump pollster gives GOP a data center survival guide</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Axios</font>",
+    "titulo": "Scoop: Trump pollster gives GOP a data center survival guide",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
