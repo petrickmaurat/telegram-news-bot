@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxNYzF0cXpJUU1SY0Q3MEp3ampKc0UxN1lLNkR5MXFkbWx1elBvNy1VRXcwbU4wWTN2Z1E5S2luZTI2MWoxSl9KaTR2MmlPWm82M2xfY3piUGhTMEFMZ21GQ1RNSTlkZ1dTc3U2ZnlkQVpBTFo3bEZpSUE4UEV1UDhYWW56a3pDdG1IZE9OOFFB?oc=5",
+    "https://nytimes.com/2026/09/15/opinion/data-centers-americans-infrastructure.html"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMijgFBVV95cUxNYzF0cXpJUU1SY0Q3MEp3ampKc0UxN1lLNkR5MXFkbWx1elBvNy1VRXcwbU4wWTN2Z1E5S2luZTI2MWoxSl9KaTR2MmlPWm82M2xfY3piUGhTMEFMZ21GQ1RNSTlkZ1dTc3U2ZnlkQVpBTFo3bEZpSUE4UEV1UDhYWW56a3pDdG1IZE9OOFFB?oc=5",
+      "https://nytimes.com/2026/09/15/opinion/data-centers-americans-infrastructure.html"
+    ],
+    "fonte": "The New York Times",
+    "link": "https://www.nytimes.com/2026/09/15/opinion/data-centers-americans-infrastructure.html",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNYzF0cXpJUU1SY0Q3MEp3ampKc0UxN1lLNkR5MXFkbWx1elBvNy1VRXcwbU4wWTN2Z1E5S2luZTI2MWoxSl9KaTR2MmlPWm82M2xfY3piUGhTMEFMZ21GQ1RNSTlkZ1dTc3U2ZnlkQVpBTFo3bEZpSUE4UEV1UDhYWW56a3pDdG1IZE9OOFFB?oc=5\" target=\"_blank\">Opinion | Railroads. Highways. Data Centers. One of Those Is Unlike the Others.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
+    "titulo": "Opinion | Railroads. Highways. Data Centers. One of Those Is Unlike the Others.",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
