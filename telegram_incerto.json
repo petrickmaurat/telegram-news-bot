@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxNbDRtUmhVbkZEQWZFUlRfUzVWcC00dUZobGNEdG13VE1mSUpjQm5GemRDT1hOVm5XTHh1Q3pueEc3RTlqQ3R3clJXU1EzQXk0XzFiUWZBVnVEa25xMVZhbFBaN3Y1RFYtMjM3YWRNMUNYRno0MUZ1YmZiaGZFNTFuVURXZlEzcW1LZDJqdzNWN2VvckJGZXp0eHJicEdsUUFKajhFTzZSTTBjZ202cFJ3?oc=5",
+    "https://telesintese.com.br/lula-sanciona-redata-para-atrair-data-centers-e-ampliar-capacidade-de-ia-no-brasil/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMirwFBVV95cUxNbDRtUmhVbkZEQWZFUlRfUzVWcC00dUZobGNEdG13VE1mSUpjQm5GemRDT1hOVm5XTHh1Q3pueEc3RTlqQ3R3clJXU1EzQXk0XzFiUWZBVnVEa25xMVZhbFBaN3Y1RFYtMjM3YWRNMUNYRno0MUZ1YmZiaGZFNTFuVURXZlEzcW1LZDJqdzNWN2VvckJGZXp0eHJicEdsUUFKajhFTzZSTTBjZ202cFJ3?oc=5",
+      "https://telesintese.com.br/lula-sanciona-redata-para-atrair-data-centers-e-ampliar-capacidade-de-ia-no-brasil/"
+    ],
+    "fonte": "TeleSíntese",
+    "link": "https://telesintese.com.br/lula-sanciona-redata-para-atrair-data-centers-e-ampliar-capacidade-de-ia-no-brasil/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxNbDRtUmhVbkZEQWZFUlRfUzVWcC00dUZobGNEdG13VE1mSUpjQm5GemRDT1hOVm5XTHh1Q3pueEc3RTlqQ3R3clJXU1EzQXk0XzFiUWZBVnVEa25xMVZhbFBaN3Y1RFYtMjM3YWRNMUNYRno0MUZ1YmZiaGZFNTFuVURXZlEzcW1LZDJqdzNWN2VvckJGZXp0eHJicEdsUUFKajhFTzZSTTBjZ202cFJ3?oc=5\" target=\"_blank\">Lula sanciona Redata para atrair data centers e ampliar capacidade de IA no Brasil</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TeleSíntese</font>",
+    "titulo": "Lula sanciona Redata para atrair data centers e ampliar capacidade de IA no Brasil",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
