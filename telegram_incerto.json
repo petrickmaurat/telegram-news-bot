@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSnI0STdsbWpEQzFlMER5YlA4bGs4RENYSjRVOFJuQ3A1UVBRNTA5YndEYU53c1NKZnZJNkhDdDlhVlkyOHdPTzc4SGRxRVBzNmxidTd4bGVsd2lKUVZFaXk3NWx6RWQ5SmJKdU5scER1RFdWQkFnY21ZTFZ4Y3dmNkQ3Y3pNY2Ryb2c?oc=5",
+    "https://telesintese.com.br/trusted-data-entrega-novo-data-center-da-4edge-informo/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSnI0STdsbWpEQzFlMER5YlA4bGs4RENYSjRVOFJuQ3A1UVBRNTA5YndEYU53c1NKZnZJNkhDdDlhVlkyOHdPTzc4SGRxRVBzNmxidTd4bGVsd2lKUVZFaXk3NWx6RWQ5SmJKdU5scER1RFdWQkFnY21ZTFZ4Y3dmNkQ3Y3pNY2Ryb2c?oc=5",
+      "https://telesintese.com.br/trusted-data-entrega-novo-data-center-da-4edge-informo/"
+    ],
+    "fonte": "TeleSíntese",
+    "link": "https://telesintese.com.br/trusted-data-entrega-novo-data-center-da-4edge-informo/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPSnI0STdsbWpEQzFlMER5YlA4bGs4RENYSjRVOFJuQ3A1UVBRNTA5YndEYU53c1NKZnZJNkhDdDlhVlkyOHdPTzc4SGRxRVBzNmxidTd4bGVsd2lKUVZFaXk3NWx6RWQ5SmJKdU5scER1RFdWQkFnY21ZTFZ4Y3dmNkQ3Y3pNY2Ryb2c?oc=5\" target=\"_blank\">Trusted Data entrega novo data center da 4EDGE/Informo</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TeleSíntese</font>",
+    "titulo": "Trusted Data entrega novo data center da 4EDGE/Informo",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
