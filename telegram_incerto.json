@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://bloomberg.com/news/articles/2026-09-14/bce-to-expand-data-center-capacity-in-saskatchewan",
+    "https://news.google.com/rss/articles/CBMiowFBVV95cUxNcDRRSVJLNFJiWDBzaWpIek1qUEJzakRzOHR1RzNpOW81RXRaRmQ4eVJ6VFZPeXF0RnZBT0NabTF5MFA5R3I4N3FVTDV5ZWs5SmVodFVHYVRHaTJFYnZ4QzVOVTNSNGZCTUc0ZUg0VGQ5TG1xbnB4THEyQ1BBWEFCUDdOYTh0VmdHWUN5ZU9ReEpkV1d0M01YN1A3VmxEeFhSRGQ0?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://bloomberg.com/news/articles/2026-09-14/bce-to-expand-data-center-capacity-in-saskatchewan",
+      "https://news.google.com/rss/articles/CBMiowFBVV95cUxNcDRRSVJLNFJiWDBzaWpIek1qUEJzakRzOHR1RzNpOW81RXRaRmQ4eVJ6VFZPeXF0RnZBT0NabTF5MFA5R3I4N3FVTDV5ZWs5SmVodFVHYVRHaTJFYnZ4QzVOVTNSNGZCTUc0ZUg0VGQ5TG1xbnB4THEyQ1BBWEFCUDdOYTh0VmdHWUN5ZU9ReEpkV1d0M01YN1A3VmxEeFhSRGQ0?oc=5"
+    ],
+    "fonte": "Bloomberg.com",
+    "link": "https://www.bloomberg.com/news/articles/2026-09-14/bce-to-expand-data-center-capacity-in-saskatchewan",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxNcDRRSVJLNFJiWDBzaWpIek1qUEJzakRzOHR1RzNpOW81RXRaRmQ4eVJ6VFZPeXF0RnZBT0NabTF5MFA5R3I4N3FVTDV5ZWs5SmVodFVHYVRHaTJFYnZ4QzVOVTNSNGZCTUc0ZUg0VGQ5TG1xbnB4THEyQ1BBWEFCUDdOYTh0VmdHWUN5ZU9ReEpkV1d0M01YN1A3VmxEeFhSRGQ0?oc=5\" target=\"_blank\">BCE to Expand Data Center Capacity in Saskatchewan</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+    "titulo": "BCE to Expand Data Center Capacity in Saskatchewan",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
