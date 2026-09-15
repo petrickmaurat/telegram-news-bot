@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMioAFBVV95cUxPY2xnaFlUZmlodkVvMzBqcVFxY0VBcWVnLUI2XzgzUzJ5ajEzNUZzNTF2NWVqTTNpbVhHZktHZDg4OFJHU0RjcGRhN25KcnpiMGtpWXQtamtKQUZkU3hxekF2RWdIa09EYWpZQ3k0ZE5hQ1lNMDVIN1dwZnNtNUN4Vnc1UVEyZl9qeHg2TGRrX3VkeGlzV0FfSFJxalNGTFhm?oc=5",
+    "https://poder360.com.br/poder-governo/ao-vivo-lula-sanciona-incentivo-fiscal-para-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMioAFBVV95cUxPY2xnaFlUZmlodkVvMzBqcVFxY0VBcWVnLUI2XzgzUzJ5ajEzNUZzNTF2NWVqTTNpbVhHZktHZDg4OFJHU0RjcGRhN25KcnpiMGtpWXQtamtKQUZkU3hxekF2RWdIa09EYWpZQ3k0ZE5hQ1lNMDVIN1dwZnNtNUN4Vnc1UVEyZl9qeHg2TGRrX3VkeGlzV0FfSFJxalNGTFhm?oc=5",
+      "https://poder360.com.br/poder-governo/ao-vivo-lula-sanciona-incentivo-fiscal-para-data-centers/"
+    ],
+    "fonte": "Poder360",
+    "link": "https://www.poder360.com.br/poder-governo/ao-vivo-lula-sanciona-incentivo-fiscal-para-data-centers/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPY2xnaFlUZmlodkVvMzBqcVFxY0VBcWVnLUI2XzgzUzJ5ajEzNUZzNTF2NWVqTTNpbVhHZktHZDg4OFJHU0RjcGRhN25KcnpiMGtpWXQtamtKQUZkU3hxekF2RWdIa09EYWpZQ3k0ZE5hQ1lNMDVIN1dwZnNtNUN4Vnc1UVEyZl9qeHg2TGRrX3VkeGlzV0FfSFJxalNGTFhm?oc=5\" target=\"_blank\">Ao vivo: Lula sanciona incentivo fiscal para data centers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Poder360</font>",
+    "titulo": "Ao vivo: Lula sanciona incentivo fiscal para data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
