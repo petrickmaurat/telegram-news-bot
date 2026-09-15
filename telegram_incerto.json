@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/energy-power-supply/the-ripple-effect-of-data-center-project-cancellations-and-delays"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/energy-power-supply/the-ripple-effect-of-data-center-project-cancellations-and-delays"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/energy-power-supply/the-ripple-effect-of-data-center-project-cancellations-and-delays",
+    "origem": "INT",
+    "resumo": "Canceled data center projects leave utilities with stranded infrastructure costs that are often passed on to ratepayers, while capacity reassignment can take months or years to resolve.",
+    "titulo": "The Ripple Effect of Data Center Project Cancellations and Delays",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
