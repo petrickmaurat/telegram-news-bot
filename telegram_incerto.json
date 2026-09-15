@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/canadas-bell-to-triple-capacity-at-planned-saskatchewan-data-center-campus/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/canadas-bell-to-triple-capacity-at-planned-saskatchewan-data-center-campus/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/canadas-bell-to-triple-capacity-at-planned-saskatchewan-data-center-campus/",
+    "origem": "INT",
+    "resumo": "<p>Site to add 900MW, with scope for further expansion</p>",
+    "titulo": "Canada's Bell to quadruple capacity at planned Saskatchewan data center campus",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
