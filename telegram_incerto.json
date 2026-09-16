@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQbmZEdmU2eTFNQVB0S1NQNTlmaWw2akVablZQSDNQcGdfbU9BdkxGeDlfMHFVdkN4emx3dzQ5QjJfV1ZqY0tFajJoZkh3T25XTmh5Rk1zdVJDX2R0cUJ6VzA2MThXLUxSd096TGhwelJ4b0ZidVUza0NBTXkwREJaSG5oQW9kNng4ZU91cTRTa1I5YWNxWkZLMjl6cktfWlAwSDU2NVUwX3MtWERjV0ZtbHB4X2tDTzBiTFpQVjFYbjF1bXFiOXRHSkFxc2dPUEpDblhDakpBSkFLd9IB6AFBVV95cUxQLTJ4QklfT3dnbW9vN1dHbWFIb1dlRzF6YllUYnNlWENRYVBWYkwwNkVVTXdrZWJZUmFocm95VnpGcEN1VzJWZmJvQTI4cER0TTNyNGQ3X0h2Y0g2LXBGWFljSjh4YVhERHVCRXczSEhWZWJOZGJscGwxd2E2Qkg3dFRHajIwS1htV213aklVOEd5UkpiUndJYnY4eEJBRjE0UmFzMTRZeV9GUExZd1locHFhMTVXREk5b0pxWEVqMnNVcFhtN2FyWjJKeWRHbE9KbHMteUx0c0dTeFZBVDQtQ2JBc0ZNNzN3?oc=5",
+    "https://oglobo.globo.com/economia/transicao-energetica/noticia/2026/09/15/energia-limpa-coloca-nordeste-na-rota-dos-grandes-data-centers.ghtml"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQbmZEdmU2eTFNQVB0S1NQNTlmaWw2akVablZQSDNQcGdfbU9BdkxGeDlfMHFVdkN4emx3dzQ5QjJfV1ZqY0tFajJoZkh3T25XTmh5Rk1zdVJDX2R0cUJ6VzA2MThXLUxSd096TGhwelJ4b0ZidVUza0NBTXkwREJaSG5oQW9kNng4ZU91cTRTa1I5YWNxWkZLMjl6cktfWlAwSDU2NVUwX3MtWERjV0ZtbHB4X2tDTzBiTFpQVjFYbjF1bXFiOXRHSkFxc2dPUEpDblhDakpBSkFLd9IB6AFBVV95cUxQLTJ4QklfT3dnbW9vN1dHbWFIb1dlRzF6YllUYnNlWENRYVBWYkwwNkVVTXdrZWJZUmFocm95VnpGcEN1VzJWZmJvQTI4cER0TTNyNGQ3X0h2Y0g2LXBGWFljSjh4YVhERHVCRXczSEhWZWJOZGJscGwxd2E2Qkg3dFRHajIwS1htV213aklVOEd5UkpiUndJYnY4eEJBRjE0UmFzMTRZeV9GUExZd1locHFhMTVXREk5b0pxWEVqMnNVcFhtN2FyWjJKeWRHbE9KbHMteUx0c0dTeFZBVDQtQ2JBc0ZNNzN3?oc=5",
+      "https://oglobo.globo.com/economia/transicao-energetica/noticia/2026/09/15/energia-limpa-coloca-nordeste-na-rota-dos-grandes-data-centers.ghtml"
+    ],
+    "fonte": "O GLOBO",
+    "link": "https://oglobo.globo.com/economia/transicao-energetica/noticia/2026/09/15/energia-limpa-coloca-nordeste-na-rota-dos-grandes-data-centers.ghtml",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxQbmZEdmU2eTFNQVB0S1NQNTlmaWw2akVablZQSDNQcGdfbU9BdkxGeDlfMHFVdkN4emx3dzQ5QjJfV1ZqY0tFajJoZkh3T25XTmh5Rk1zdVJDX2R0cUJ6VzA2MThXLUxSd096TGhwelJ4b0ZidVUza0NBTXkwREJaSG5oQW9kNng4ZU91cTRTa1I5YWNxWkZLMjl6cktfWlAwSDU2NVUwX3MtWERjV0ZtbHB4X2tDTzBiTFpQVjFYbjF1bXFiOXRHSkFxc2dPUEpDblhDakpBSkFLd9IB6AFBVV95cUxQLTJ4QklfT3dnbW9vN1dHbWFIb1dlRzF6YllUYnNlWENRYVBWYkwwNkVVTXdrZWJZUmFocm95VnpGcEN1VzJWZmJvQTI4cER0TTNyNGQ3X0h2Y0g2LXBGWFljSjh4YVhERHVCRXczSEhWZWJOZGJscGwxd2E2Qkg3dFRHajIwS1htV213aklVOEd5UkpiUndJYnY4eEJBRjE0UmFzMTRZeV9GUExZd1locHFhMTVXREk5b0pxWEVqMnNVcFhtN2FyWjJKeWRHbE9KbHMteUx0c0dTeFZBVDQtQ2JBc0ZNNzN3?oc=5\" target=\"_blank\">Energia limpa coloca Nordeste na rota dos grandes data centers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">O GLOBO</font>",
+    "titulo": "Energia limpa coloca Nordeste na rota dos grandes data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
