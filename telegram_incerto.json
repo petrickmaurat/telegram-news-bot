@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMihwFBVV95cUxQS2dpSHNCYXZqY21qeW1CSG1IWnk0ZU44d2syUDJCUk5FYUlVRlpWcE43QkJNRWxtems0RWZyejJjRkRpVkZRYUhHaTFlanRMdVgzR0J4OWdXY3YtRUNqZTRSMWRsZ2RfcjUzcmtVNi1FRW0tc3dfeHhzbmdRT2dJZFhkeUgyYVE?oc=5",
+    "https://politico.com/news/2026/09/16/jon-husted-data-centers-senate-01078885"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMihwFBVV95cUxQS2dpSHNCYXZqY21qeW1CSG1IWnk0ZU44d2syUDJCUk5FYUlVRlpWcE43QkJNRWxtems0RWZyejJjRkRpVkZRYUhHaTFlanRMdVgzR0J4OWdXY3YtRUNqZTRSMWRsZ2RfcjUzcmtVNi1FRW0tc3dfeHhzbmdRT2dJZFhkeUgyYVE?oc=5",
+      "https://politico.com/news/2026/09/16/jon-husted-data-centers-senate-01078885"
+    ],
+    "fonte": "Politico",
+    "link": "https://www.politico.com/news/2026/09/16/jon-husted-data-centers-senate-01078885",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxQS2dpSHNCYXZqY21qeW1CSG1IWnk0ZU44d2syUDJCUk5FYUlVRlpWcE43QkJNRWxtems0RWZyejJjRkRpVkZRYUhHaTFlanRMdVgzR0J4OWdXY3YtRUNqZTRSMWRsZ2RfcjUzcmtVNi1FRW0tc3dfeHhzbmdRT2dJZFhkeUgyYVE?oc=5\" target=\"_blank\">Why the Senate might not solve Jon Husted's data center problem</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Politico</font>",
+    "titulo": "Why the Senate might not solve Jon Husted's data center problem",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
