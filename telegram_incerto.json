@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/br/not%C3%ADcias/a-schneider-electric-lanca-modulos-de-energia-de-25-mw-para-centros-de-dados-de-ia/",
+    "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQaG5nSDlmWXJ1LThsdEZYRS04dWdXcnZUNFIyclcyWmp1MFlVSk10TjJCSW9OREUzT01NRDNzMTNMYW1hTDk3WGJIY0VSSW8xNE5QR2luYlZlYnJpRG1IemgyaXR4cDRVN2V4VFFLdW0yNTZfMW80ZnUtckhoREw3YTlPaWM3ZXo4N0VQZGJvLTZyYTlVeTdGWUVTdVRHUkphTDI2U01tSlVkcUNJSkNmUUdxRDRVVmdoZXpsS1EtVlBPZ01leUhlcVJCaEl1UmpG?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/br/not%C3%ADcias/a-schneider-electric-lanca-modulos-de-energia-de-25-mw-para-centros-de-dados-de-ia/",
+      "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQaG5nSDlmWXJ1LThsdEZYRS04dWdXcnZUNFIyclcyWmp1MFlVSk10TjJCSW9OREUzT01NRDNzMTNMYW1hTDk3WGJIY0VSSW8xNE5QR2luYlZlYnJpRG1IemgyaXR4cDRVN2V4VFFLdW0yNTZfMW80ZnUtckhoREw3YTlPaWM3ZXo4N0VQZGJvLTZyYTlVeTdGWUVTdVRHUkphTDI2U01tSlVkcUNJSkNmUUdxRDRVVmdoZXpsS1EtVlBPZ01leUhlcVJCaEl1UmpG?oc=5"
+    ],
+    "fonte": "Data Center Dynamics",
+    "link": "https://www.datacenterdynamics.com/br/not%C3%ADcias/a-schneider-electric-lanca-modulos-de-energia-de-25-mw-para-centros-de-dados-de-ia/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxQaG5nSDlmWXJ1LThsdEZYRS04dWdXcnZUNFIyclcyWmp1MFlVSk10TjJCSW9OREUzT01NRDNzMTNMYW1hTDk3WGJIY0VSSW8xNE5QR2luYlZlYnJpRG1IemgyaXR4cDRVN2V4VFFLdW0yNTZfMW80ZnUtckhoREw3YTlPaWM3ZXo4N0VQZGJvLTZyYTlVeTdGWUVTdVRHUkphTDI2U01tSlVkcUNJSkNmUUdxRDRVVmdoZXpsS1EtVlBPZ01leUhlcVJCaEl1UmpG?oc=5\" target=\"_blank\">Schneider Electric lança módulos de energia de 2,5 MW para data centers de IA</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Data Center Dynamics</font>",
+    "titulo": "Schneider Electric lança módulos de energia de 2,5 MW para data centers de IA",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
