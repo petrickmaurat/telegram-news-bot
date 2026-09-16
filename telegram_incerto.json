@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/serverfarm-expands-north-american-data-center-development-fund-to-389-billion/",
+    "https://news.google.com/rss/articles/CBMivgFBVV95cUxQM1lYRng5b01nMnA3TTJzZ2x0VVkzdkFaNWNhOUxoaktHVUdiMGRYT3BwbXJFeVBfN0JraHpHb2xlWGp0ckpPYzhhM2ZQVGVtbldlYktrTmZtZFIyWmhKX21iZXZwRmtGZ0Qxc2tTa1VzVnVZcDJNcEh0NGZBeFdNdDY1MmlQZURrNDZOX3Fva2pxS3lzcmtEVVJ1ZXRCUDE2RUdpUFlQT2lDR0pUZEFuTFFWWVhyMy1jcXpmTjR3?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/serverfarm-expands-north-american-data-center-development-fund-to-389-billion/",
+      "https://news.google.com/rss/articles/CBMivgFBVV95cUxQM1lYRng5b01nMnA3TTJzZ2x0VVkzdkFaNWNhOUxoaktHVUdiMGRYT3BwbXJFeVBfN0JraHpHb2xlWGp0ckpPYzhhM2ZQVGVtbldlYktrTmZtZFIyWmhKX21iZXZwRmtGZ0Qxc2tTa1VzVnVZcDJNcEh0NGZBeFdNdDY1MmlQZURrNDZOX3Fva2pxS3lzcmtEVVJ1ZXRCUDE2RUdpUFlQT2lDR0pUZEFuTFFWWVhyMy1jcXpmTjR3?oc=5"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/serverfarm-expands-north-american-data-center-development-fund-to-389-billion/",
+    "origem": "INT",
+    "resumo": "<p>Closes an additional $895 million</p>",
+    "titulo": "Serverfarm expands North American data center development fund to $3.89 billion",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
