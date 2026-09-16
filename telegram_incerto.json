@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMirwFBVV95cUxQVlY0WjljVFZOendLdFBxMFJQU3VSME91cjJCX25WZHRIZk43RGJicl8tTHo3OGN1U3BtNzJYVmVnOHF6cTNPcG1CT29QQ3ZaR2dlRUlNdGlJb2RHeVZkQ3kxcnVfVjlRbm9leG9aQng5NGJ4VkkzQTZtSnlLOGhGNlY4eFMyYTVEaGNIdDBDUWhRdmR6VUNzVHZKOVZTa1QtejZrVlhPWlY5SHFSWl9n?oc=5",
+    "https://reuters.com/legal/legalindustry/digital-landlords-data-centers-limits-reit-law--pracin-2026-09-16/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMirwFBVV95cUxQVlY0WjljVFZOendLdFBxMFJQU3VSME91cjJCX25WZHRIZk43RGJicl8tTHo3OGN1U3BtNzJYVmVnOHF6cTNPcG1CT29QQ3ZaR2dlRUlNdGlJb2RHeVZkQ3kxcnVfVjlRbm9leG9aQng5NGJ4VkkzQTZtSnlLOGhGNlY4eFMyYTVEaGNIdDBDUWhRdmR6VUNzVHZKOVZTa1QtejZrVlhPWlY5SHFSWl9n?oc=5",
+      "https://reuters.com/legal/legalindustry/digital-landlords-data-centers-limits-reit-law--pracin-2026-09-16/"
+    ],
+    "fonte": "Reuters",
+    "link": "https://www.reuters.com/legal/legalindustry/digital-landlords-data-centers-limits-reit-law--pracin-2026-09-16/",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQVlY0WjljVFZOendLdFBxMFJQU3VSME91cjJCX25WZHRIZk43RGJicl8tTHo3OGN1U3BtNzJYVmVnOHF6cTNPcG1CT29QQ3ZaR2dlRUlNdGlJb2RHeVZkQ3kxcnVfVjlRbm9leG9aQng5NGJ4VkkzQTZtSnlLOGhGNlY4eFMyYTVEaGNIdDBDUWhRdmR6VUNzVHZKOVZTa1QtejZrVlhPWlY5SHFSWl9n?oc=5\" target=\"_blank\">COMMENTARY: Digital landlords — Data centers at the limits of REIT law</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+    "titulo": "COMMENTARY: Digital landlords — Data centers at the limits of REIT law",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
