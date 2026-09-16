@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://bloomberg.com/news/articles/2026-09-16/scottish-parliament-vows-to-set-tighter-rules-on-data-centers",
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZU5Tc2g0cUNFakExTmVWV0FOcWlTRlQwTC02cVNCR19pS3FxSUUzU09NY2FXWjB6eld0a1lRWjJ3dUZMRFo5bHMtTFFGRFFjT0lzWUdZVU1ISFgtNVpxTUh3UnpXMFFBY25VbTlXSGU5V2l1UFZqYjhvMUlqQVZvUUl4Yk5hLThvWE91aHlsU0YtRjA4ZEF0WWpBZEROV2FiSmxPTVR1V240Q09CMWJEc2NR?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://bloomberg.com/news/articles/2026-09-16/scottish-parliament-vows-to-set-tighter-rules-on-data-centers",
+      "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZU5Tc2g0cUNFakExTmVWV0FOcWlTRlQwTC02cVNCR19pS3FxSUUzU09NY2FXWjB6eld0a1lRWjJ3dUZMRFo5bHMtTFFGRFFjT0lzWUdZVU1ISFgtNVpxTUh3UnpXMFFBY25VbTlXSGU5V2l1UFZqYjhvMUlqQVZvUUl4Yk5hLThvWE91aHlsU0YtRjA4ZEF0WWpBZEROV2FiSmxPTVR1V240Q09CMWJEc2NR?oc=5"
+    ],
+    "fonte": "Bloomberg.com",
+    "link": "https://www.bloomberg.com/news/articles/2026-09-16/scottish-parliament-vows-to-set-tighter-rules-on-data-centers",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNZU5Tc2g0cUNFakExTmVWV0FOcWlTRlQwTC02cVNCR19pS3FxSUUzU09NY2FXWjB6eld0a1lRWjJ3dUZMRFo5bHMtTFFGRFFjT0lzWUdZVU1ISFgtNVpxTUh3UnpXMFFBY25VbTlXSGU5V2l1UFZqYjhvMUlqQVZvUUl4Yk5hLThvWE91aHlsU0YtRjA4ZEF0WWpBZEROV2FiSmxPTVR1V240Q09CMWJEc2NR?oc=5\" target=\"_blank\">Scottish Parliament Vows to Set Tighter Rules on Data Centers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+    "titulo": "Scottish Parliament Vows to Set Tighter Rules on Data Centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
