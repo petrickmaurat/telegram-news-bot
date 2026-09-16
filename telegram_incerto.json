@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPUWJDc0Jpd0EtZmt2Znlhdl9ER1hjVzFBemN2aWd4Qy00M1R4dVBnVWN2NzZGRWYySGZuT0lvaEdWUUtNSnFWaldpVEtkMENvWUFZcW1hNW01ekxqUGV1ZE9YY04xMUNSSThrejg2RVZZWXZtUTRXd1c5ZHBwM2VsLWthWGpUN3ZKemN0Mkt0cXBWN1lSLXR5dWdEVTB6T0lqX0Y4RjhNMHdUZ0RvdkpqRXo4UkQ4ZW5JdUFBbFVhTlFUUHJfWm01Q09pVHA5UnVZS3dFcTZvRS3SAecBQVVfeXFMTVctZEtONThBYVRGYThZaW1UVzVyLWJuR0lzM2lGeGZtMkVzb1lsSHRSUmIzbHJkaXExSi1OR2k4VnIwOFNoNTJuX1JvODNQcF8yRnE3TEkzcE1YSW8yNThMaklGcFlGWUZoOHVxSWdsRmZhUjBLd0FMejRfRC1tQ0lGR05Oa3F5V0ZvOFBaOHA5NGctLXE3cU9RZXUyZGVtcDVQc21qTW5JczdjU3ZaSUNHRjFYUjdvLWxCbjFPelhjWHZEeHpuLUhLeExab2hmRG12RU44WmpiaExhZl9lXzF4ZjlsMHR3?oc=5",
+    "https://valor.globo.com/brasil/transicao-energetica/noticia/2026/09/15/data-centers-avanam-no-nordeste-mas-trazem-desafios-para-a-regio.ghtml"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPUWJDc0Jpd0EtZmt2Znlhdl9ER1hjVzFBemN2aWd4Qy00M1R4dVBnVWN2NzZGRWYySGZuT0lvaEdWUUtNSnFWaldpVEtkMENvWUFZcW1hNW01ekxqUGV1ZE9YY04xMUNSSThrejg2RVZZWXZtUTRXd1c5ZHBwM2VsLWthWGpUN3ZKemN0Mkt0cXBWN1lSLXR5dWdEVTB6T0lqX0Y4RjhNMHdUZ0RvdkpqRXo4UkQ4ZW5JdUFBbFVhTlFUUHJfWm01Q09pVHA5UnVZS3dFcTZvRS3SAecBQVVfeXFMTVctZEtONThBYVRGYThZaW1UVzVyLWJuR0lzM2lGeGZtMkVzb1lsSHRSUmIzbHJkaXExSi1OR2k4VnIwOFNoNTJuX1JvODNQcF8yRnE3TEkzcE1YSW8yNThMaklGcFlGWUZoOHVxSWdsRmZhUjBLd0FMejRfRC1tQ0lGR05Oa3F5V0ZvOFBaOHA5NGctLXE3cU9RZXUyZGVtcDVQc21qTW5JczdjU3ZaSUNHRjFYUjdvLWxCbjFPelhjWHZEeHpuLUhLeExab2hmRG12RU44WmpiaExhZl9lXzF4ZjlsMHR3?oc=5",
+      "https://valor.globo.com/brasil/transicao-energetica/noticia/2026/09/15/data-centers-avanam-no-nordeste-mas-trazem-desafios-para-a-regio.ghtml"
+    ],
+    "fonte": "Valor Econômico",
+    "link": "https://valor.globo.com/brasil/transicao-energetica/noticia/2026/09/15/data-centers-avanam-no-nordeste-mas-trazem-desafios-para-a-regio.ghtml",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMi2AFBVV95cUxPUWJDc0Jpd0EtZmt2Znlhdl9ER1hjVzFBemN2aWd4Qy00M1R4dVBnVWN2NzZGRWYySGZuT0lvaEdWUUtNSnFWaldpVEtkMENvWUFZcW1hNW01ekxqUGV1ZE9YY04xMUNSSThrejg2RVZZWXZtUTRXd1c5ZHBwM2VsLWthWGpUN3ZKemN0Mkt0cXBWN1lSLXR5dWdEVTB6T0lqX0Y4RjhNMHdUZ0RvdkpqRXo4UkQ4ZW5JdUFBbFVhTlFUUHJfWm01Q09pVHA5UnVZS3dFcTZvRS3SAecBQVVfeXFMTVctZEtONThBYVRGYThZaW1UVzVyLWJuR0lzM2lGeGZtMkVzb1lsSHRSUmIzbHJkaXExSi1OR2k4VnIwOFNoNTJuX1JvODNQcF8yRnE3TEkzcE1YSW8yNThMaklGcFlGWUZoOHVxSWdsRmZhUjBLd0FMejRfRC1tQ0lGR05Oa3F5V0ZvOFBaOHA5NGctLXE3cU9RZXUyZGVtcDVQc21qTW5JczdjU3ZaSUNHRjFYUjdvLWxCbjFPelhjWHZEeHpuLUhLeExab2hmRG12RU44WmpiaExhZl9lXzF4ZjlsMHR3?oc=5\" target=\"_blank\">Data centers avançam no Nordeste, mas trazem desafios para a região</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Valor Econômico</font>",
+    "titulo": "Data centers avançam no Nordeste, mas trazem desafios para a região",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
