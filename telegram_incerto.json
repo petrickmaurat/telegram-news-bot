@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://convergenciadigital.com.br/governo/redata-virou-lei-15504-mas-tem-de-definir-logo-as-desoneracoes-do-ipi-pis-pasep-e-cofins/"
+  ],
+  "item": {
+    "aliases": [
+      "https://convergenciadigital.com.br/governo/redata-virou-lei-15504-mas-tem-de-definir-logo-as-desoneracoes-do-ipi-pis-pasep-e-cofins/"
+    ],
+    "fonte": "ConvergenciaDigital",
+    "link": "https://convergenciadigital.com.br/governo/redata-virou-lei-15504-mas-tem-de-definir-logo-as-desoneracoes-do-ipi-pis-pasep-e-cofins/",
+    "origem": "BR",
+    "resumo": "Lei nº 15.504 cria regime tributário para data centers e deixa para regulamentação critérios de habilitação, relação de equipamentos e cumprimento de contrapartidas",
+    "titulo": "Redata virou Lei 15504, mas tem de definir logo as desonerações do IPI, Pis/Pasep e Cofins",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
