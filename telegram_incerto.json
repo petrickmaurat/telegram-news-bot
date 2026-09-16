@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/aws-unable-to-restore-access-to-data-centers-hit-by-iran-strikes/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/aws-unable-to-restore-access-to-data-centers-hit-by-iran-strikes/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/aws-unable-to-restore-access-to-data-centers-hit-by-iran-strikes/",
+    "origem": "INT",
+    "resumo": "<p>Damage exceeded what availability zone-design designed to withstand</p>",
+    "titulo": "AWS “unable to restore access” to data centers hit by Iran strikes",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
