@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://cnnbrasil.com.br/infra/a-revolucao-da-ia-tambem-sera-decidida-pelos-data-centers/",
+    "https://news.google.com/rss/articles/CBMimAFBVV95cUxON29qbENnRzU4NjNHZE45UF9qeGQzQk9mbXlaQVlYTlNtRWloLUM3TkZkdkNMbFQxYTR0NTZOeG5tVURtZWRyNGZLZXBGYmthd1k2UlBBdDFsSUctRVZlWWdKdXUzWG1qclNocVNxWXZJWXJGUkxvanhtSFUxc1NMbDMxMXdxcE9EMWJoc2FVdnBqRnhfaDdWdA?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://cnnbrasil.com.br/infra/a-revolucao-da-ia-tambem-sera-decidida-pelos-data-centers/",
+      "https://news.google.com/rss/articles/CBMimAFBVV95cUxON29qbENnRzU4NjNHZE45UF9qeGQzQk9mbXlaQVlYTlNtRWloLUM3TkZkdkNMbFQxYTR0NTZOeG5tVURtZWRyNGZLZXBGYmthd1k2UlBBdDFsSUctRVZlWWdKdXUzWG1qclNocVNxWXZJWXJGUkxvanhtSFUxc1NMbDMxMXdxcE9EMWJoc2FVdnBqRnhfaDdWdA?oc=5"
+    ],
+    "fonte": "CNN Brasil",
+    "link": "https://www.cnnbrasil.com.br/infra/a-revolucao-da-ia-tambem-sera-decidida-pelos-data-centers/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxON29qbENnRzU4NjNHZE45UF9qeGQzQk9mbXlaQVlYTlNtRWloLUM3TkZkdkNMbFQxYTR0NTZOeG5tVURtZWRyNGZLZXBGYmthd1k2UlBBdDFsSUctRVZlWWdKdXUzWG1qclNocVNxWXZJWXJGUkxvanhtSFUxc1NMbDMxMXdxcE9EMWJoc2FVdnBqRnhfaDdWdA?oc=5\" target=\"_blank\">A revolução da IA também será decidida pelos data centers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN Brasil</font>",
+    "titulo": "A revolução da IA também será decidida pelos data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
