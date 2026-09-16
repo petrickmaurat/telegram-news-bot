@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxQcGJmY0J2UklLRlNBZUt5aUxMOVdOUFoyd2hrazFxZFBkQVNGZW92R3ZZNHNHMDhIV3dHS0NfUEhDOFlVdHlRN0s0cEZna0tublJTYnJWam5fRE1kOHRUcS1YUjY0aXltU1lQR3JQSk1odmJ6QVo4Y2RYY1BISWJqWHR5TmljckVpczBWWUxyYWlxdXBtRnFvSDZnMF9zenp6TERkWTFJYw?oc=5",
+    "https://utilitydive.com/news/climavision-offers-expanded-weather-forecasting-to-data-centers/830057/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMipwFBVV95cUxQcGJmY0J2UklLRlNBZUt5aUxMOVdOUFoyd2hrazFxZFBkQVNGZW92R3ZZNHNHMDhIV3dHS0NfUEhDOFlVdHlRN0s0cEZna0tublJTYnJWam5fRE1kOHRUcS1YUjY0aXltU1lQR3JQSk1odmJ6QVo4Y2RYY1BISWJqWHR5TmljckVpczBWWUxyYWlxdXBtRnFvSDZnMF9zenp6TERkWTFJYw?oc=5",
+      "https://utilitydive.com/news/climavision-offers-expanded-weather-forecasting-to-data-centers/830057/"
+    ],
+    "fonte": "Utility Dive",
+    "link": "https://www.utilitydive.com/news/climavision-offers-expanded-weather-forecasting-to-data-centers/830057/",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxQcGJmY0J2UklLRlNBZUt5aUxMOVdOUFoyd2hrazFxZFBkQVNGZW92R3ZZNHNHMDhIV3dHS0NfUEhDOFlVdHlRN0s0cEZna0tublJTYnJWam5fRE1kOHRUcS1YUjY0aXltU1lQR3JQSk1odmJ6QVo4Y2RYY1BISWJqWHR5TmljckVpczBWWUxyYWlxdXBtRnFvSDZnMF9zenp6TERkWTFJYw?oc=5\" target=\"_blank\">Climavision offers expanded weather forecasting to data centers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Utility Dive</font>",
+    "titulo": "Climavision offers expanded weather forecasting to data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
