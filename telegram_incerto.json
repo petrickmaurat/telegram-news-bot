@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMisgFBVV95cUxNVXNfd2d0UUkzRDJ2YUVVZ1BHQWFlNERQTkNkZy1ReUdwTUl5T3Q0NzgydXNRa3VSX1JBZ2JxOVE1cjBLR083eHVvNV95Z3F0UzdsVU5DR2dmQW9kV1RRdEJYOVFUazVwVUE3NGR4WUE4MnJOaThUNHJZbEFxLXg0QUVmOTl1MWVpRlk3dVNKclZQeGtfbGhheVVKdURKX1psS3pmNWNqbENTbk15TFFQZVRR?oc=5",
+    "https://tiinside.com.br/15/09/2026/sancionado-regime-especial-para-incentivar-instalacao-de-datacenters-no-pais/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMisgFBVV95cUxNVXNfd2d0UUkzRDJ2YUVVZ1BHQWFlNERQTkNkZy1ReUdwTUl5T3Q0NzgydXNRa3VSX1JBZ2JxOVE1cjBLR083eHVvNV95Z3F0UzdsVU5DR2dmQW9kV1RRdEJYOVFUazVwVUE3NGR4WUE4MnJOaThUNHJZbEFxLXg0QUVmOTl1MWVpRlk3dVNKclZQeGtfbGhheVVKdURKX1psS3pmNWNqbENTbk15TFFQZVRR?oc=5",
+      "https://tiinside.com.br/15/09/2026/sancionado-regime-especial-para-incentivar-instalacao-de-datacenters-no-pais/"
+    ],
+    "fonte": "TI INSIDE Online",
+    "link": "https://tiinside.com.br/15/09/2026/sancionado-regime-especial-para-incentivar-instalacao-de-datacenters-no-pais/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNVXNfd2d0UUkzRDJ2YUVVZ1BHQWFlNERQTkNkZy1ReUdwTUl5T3Q0NzgydXNRa3VSX1JBZ2JxOVE1cjBLR083eHVvNV95Z3F0UzdsVU5DR2dmQW9kV1RRdEJYOVFUazVwVUE3NGR4WUE4MnJOaThUNHJZbEFxLXg0QUVmOTl1MWVpRlk3dVNKclZQeGtfbGhheVVKdURKX1psS3pmNWNqbENTbk15TFFQZVRR?oc=5\" target=\"_blank\">Sancionado regime especial para incentivar instalação de datacenters no país</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TI INSIDE Online</font>",
+    "titulo": "Sancionado regime especial para incentivar instalação de datacenters no país",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
