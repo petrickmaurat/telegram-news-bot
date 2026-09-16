@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/goodman-raises-455m-for-its-hong-kong-data-center-partnership/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/goodman-raises-455m-for-its-hong-kong-data-center-partnership/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/goodman-raises-455m-for-its-hong-kong-data-center-partnership/",
+    "origem": "INT",
+    "resumo": "<p>Will fund construction of Hong Kong data center, due to open in 2028</p>",
+    "titulo": "Goodman raises $455m for its Hong Kong data center partnership",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
