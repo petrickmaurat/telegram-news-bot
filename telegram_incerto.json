@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVjBTVGRVR0lPdXNhZDAxY0xQVHJiNXctX3VqT1VCQ0JiWWplal96cV91eDVQTUQ0bEthX2RUcWEyRTlxalhLUnZEMExZWVZsM1VyOVlZZlFmdm9HTDhtMXBmY2JHY1JBd2pITnNfekJySHhKZ040clJsd1RBR0VpOGh5Y1U1TnNrZjFGM3VUY1JFak1WX1RETnRVVlJnMk1yOXM3WENMN0RKSVJZQTA5dnpLSQ?oc=5",
+    "https://politico.com/news/2026/09/16/democrat-targets-trumps-push-for-publicly-sited-ai-data-centers-01079309"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVjBTVGRVR0lPdXNhZDAxY0xQVHJiNXctX3VqT1VCQ0JiWWplal96cV91eDVQTUQ0bEthX2RUcWEyRTlxalhLUnZEMExZWVZsM1VyOVlZZlFmdm9HTDhtMXBmY2JHY1JBd2pITnNfekJySHhKZ040clJsd1RBR0VpOGh5Y1U1TnNrZjFGM3VUY1JFak1WX1RETnRVVlJnMk1yOXM3WENMN0RKSVJZQTA5dnpLSQ?oc=5",
+      "https://politico.com/news/2026/09/16/democrat-targets-trumps-push-for-publicly-sited-ai-data-centers-01079309"
+    ],
+    "fonte": "Politico",
+    "link": "https://www.politico.com/news/2026/09/16/democrat-targets-trumps-push-for-publicly-sited-ai-data-centers-01079309",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxQVjBTVGRVR0lPdXNhZDAxY0xQVHJiNXctX3VqT1VCQ0JiWWplal96cV91eDVQTUQ0bEthX2RUcWEyRTlxalhLUnZEMExZWVZsM1VyOVlZZlFmdm9HTDhtMXBmY2JHY1JBd2pITnNfekJySHhKZ040clJsd1RBR0VpOGh5Y1U1TnNrZjFGM3VUY1JFak1WX1RETnRVVlJnMk1yOXM3WENMN0RKSVJZQTA5dnpLSQ?oc=5\" target=\"_blank\">Democrat targets Trump’s push for publicly sited AI data centers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Politico</font>",
+    "titulo": "Democrat targets Trump’s push for publicly sited AI data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
