@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/scotland-data-center-moratorium/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/scotland-data-center-moratorium/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/scotland-data-center-moratorium/",
+    "origem": "INT",
+    "resumo": "<p>No plans will be approved until new planning guidance is published</p>",
+    "titulo": "Scotland's parliament backs defacto, temporary, moratorium on new hyperscale data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
