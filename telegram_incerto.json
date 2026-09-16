@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://axios.com/local/raleigh/2026/09/16/raleigh-is-considering-a-six-month-moratorium-on-data-centers",
+    "https://news.google.com/rss/articles/CBMirAFBVV95cUxQR3dIWWRfMWRESndOdl9DRTUyWFhRWFRKZ3JhREFDRldPaVR1V2dONUFnTnNicmg2bnNlSUZtV3lrYURCMUFibXNlNE9MR2s4Y3AzY001ZmRVSWg2N3NoMVZRS1ZaTkkycmxrbTF6UXZ3NU5vSkIyOUNRZ2ZpSHRrUENBX3ZqcVN2T1diUDB0YmdjQmJzZmFRUVpUdkUxeHNqSVB4TElWa05KSXFM?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://axios.com/local/raleigh/2026/09/16/raleigh-is-considering-a-six-month-moratorium-on-data-centers",
+      "https://news.google.com/rss/articles/CBMirAFBVV95cUxQR3dIWWRfMWRESndOdl9DRTUyWFhRWFRKZ3JhREFDRldPaVR1V2dONUFnTnNicmg2bnNlSUZtV3lrYURCMUFibXNlNE9MR2s4Y3AzY001ZmRVSWg2N3NoMVZRS1ZaTkkycmxrbTF6UXZ3NU5vSkIyOUNRZ2ZpSHRrUENBX3ZqcVN2T1diUDB0YmdjQmJzZmFRUVpUdkUxeHNqSVB4TElWa05KSXFM?oc=5"
+    ],
+    "fonte": "Axios",
+    "link": "https://www.axios.com/local/raleigh/2026/09/16/raleigh-is-considering-a-six-month-moratorium-on-data-centers",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQR3dIWWRfMWRESndOdl9DRTUyWFhRWFRKZ3JhREFDRldPaVR1V2dONUFnTnNicmg2bnNlSUZtV3lrYURCMUFibXNlNE9MR2s4Y3AzY001ZmRVSWg2N3NoMVZRS1ZaTkkycmxrbTF6UXZ3NU5vSkIyOUNRZ2ZpSHRrUENBX3ZqcVN2T1diUDB0YmdjQmJzZmFRUVpUdkUxeHNqSVB4TElWa05KSXFM?oc=5\" target=\"_blank\">Raleigh could become the latest city to add a data center moratorium</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Axios</font>",
+    "titulo": "Raleigh could become the latest city to add a data center moratorium",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
