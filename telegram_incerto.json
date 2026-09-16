@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/microsoft-files-to-build-data-center-campus-in-prince-william-county-virginia/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/microsoft-files-to-build-data-center-campus-in-prince-william-county-virginia/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/microsoft-files-to-build-data-center-campus-in-prince-william-county-virginia/",
+    "origem": "INT",
+    "resumo": "<p>Company looks to develop two buildings outside Gainesville</p>",
+    "titulo": "Microsoft files to build data center campus in Prince William County, Virginia",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
