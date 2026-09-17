@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/data-center-construction/delivery-certainty-will-define-the-next-phase-of-data-center-growth"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/data-center-construction/delivery-certainty-will-define-the-next-phase-of-data-center-growth"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/data-center-construction/delivery-certainty-will-define-the-next-phase-of-data-center-growth",
+    "origem": "INT",
+    "resumo": "Data center demand is strong, but delivery capability will determine success. Power, labor, and supply chain constraints are the new competitive battleground.",
+    "titulo": "Delivery Certainty Will Define the Next Phase of Data Center Growth",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
