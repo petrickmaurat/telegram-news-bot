@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://megawhat.uol.com.br/podcasts/%f0%9f%8e%99%ef%b8%8fdata-centers-curtailment-e-as-salvaguardas-do-mercado/"
+  ],
+  "item": {
+    "aliases": [
+      "https://megawhat.uol.com.br/podcasts/%f0%9f%8e%99%ef%b8%8fdata-centers-curtailment-e-as-salvaguardas-do-mercado/"
+    ],
+    "fonte": "MegaWhat",
+    "link": "https://megawhat.uol.com.br/podcasts/%f0%9f%8e%99%ef%b8%8fdata-centers-curtailment-e-as-salvaguardas-do-mercado/",
+    "origem": "BR",
+    "resumo": "<div><figure><img alt=\"MinutoMega. MegaWhat (Divulgação)\" src=\"https://megawhat.uol.com.br/wp-content/uploads/2025/04/tj8X5sEM-MinutoMega.-MegaWhat-Divulgacao.png\" /><figcaption>MinutoMega</figcaption></figure></div><p>No MinutoMega, Camila Maia explica as novas propostas para reduzir riscos no mercado livre e os impasses envolvendo data centers e renováveis.</p>\n<p>O post <a href=\"https://megawhat.uol.com.br/podcasts/%f0%9f%8e%99%ef%b8%8fdata-centers-curtailment-e-as-salvaguardas-do-mercado/\">🎙️Data centers, curtailment e as salvaguardas do mercado</a> apareceu primeiro em <a href=\"https://megawhat.uol.com.br\">MegaWhat</a>.</p>",
+    "titulo": "🎙️Data centers, curtailment e as salvaguardas do mercado",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
