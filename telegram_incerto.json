@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://cnbc.com/2026/09/17/ai-data-center-utility-cost-senate.html",
+    "https://news.google.com/rss/articles/CBMie0FVX3lxTE96aEV6alJ1OGZOenNiWk91TmtyeW90bXd5Vm5jVmlrbFRsb1lrMnliV28xZUhVSHFwM3daUDJRU0pNYzl1NjJjVkxMOFpRNklMOWJteHhlR29udl9odUNwRzVEQlQ2ZmVCOEtyV1Jqb204RUs1OVJkS3BYWdIBgAFBVV95cUxOVXlraDlxWnBHQWxvWkJyeWxwYjdYMGl3SVFFNnEtY0lNcERrZjlBZURSSDhJWHJ4Tjg4Z2w4MGdNbmxMR1VlREVFb0NtaEJKRm82Yi1HeGVFNzFEWENOMEdQSHdrWGNxaE5IMmNhNFdzV3pLR09PdlVMTHlZU1hrNg?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://cnbc.com/2026/09/17/ai-data-center-utility-cost-senate.html",
+      "https://news.google.com/rss/articles/CBMie0FVX3lxTE96aEV6alJ1OGZOenNiWk91TmtyeW90bXd5Vm5jVmlrbFRsb1lrMnliV28xZUhVSHFwM3daUDJRU0pNYzl1NjJjVkxMOFpRNklMOWJteHhlR29udl9odUNwRzVEQlQ2ZmVCOEtyV1Jqb204RUs1OVJkS3BYWdIBgAFBVV95cUxOVXlraDlxWnBHQWxvWkJyeWxwYjdYMGl3SVFFNnEtY0lNcERrZjlBZURSSDhJWHJ4Tjg4Z2w4MGdNbmxMR1VlREVFb0NtaEJKRm82Yi1HeGVFNzFEWENOMEdQSHdrWGNxaE5IMmNhNFdzV3pLR09PdlVMTHlZU1hrNg?oc=5"
+    ],
+    "fonte": "CNBC",
+    "link": "https://www.cnbc.com/2026/09/17/ai-data-center-utility-cost-senate.html",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE96aEV6alJ1OGZOenNiWk91TmtyeW90bXd5Vm5jVmlrbFRsb1lrMnliV28xZUhVSHFwM3daUDJRU0pNYzl1NjJjVkxMOFpRNklMOWJteHhlR29udl9odUNwRzVEQlQ2ZmVCOEtyV1Jqb204RUs1OVJkS3BYWdIBgAFBVV95cUxOVXlraDlxWnBHQWxvWkJyeWxwYjdYMGl3SVFFNnEtY0lNcERrZjlBZURSSDhJWHJ4Tjg4Z2w4MGdNbmxMR1VlREVFb0NtaEJKRm82Yi1HeGVFNzFEWENOMEdQSHdrWGNxaE5IMmNhNFdzV3pLR09PdlVMTHlZU1hrNg?oc=5\" target=\"_blank\">Bill to curb AI data center utility costs hits snag in Senate</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+    "titulo": "Bill to curb AI data center utility costs hits snag in Senate",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
