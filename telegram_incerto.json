@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMijAFBVV95cUxQWmlxaHdRVWNucko0cHVZR3EwcTQzU1dOQkFDRTAydXZ6MTNzRTE0RFJNQlAtWVZLYzNKb1JtVzdodEl0dzNKdFRxSWNkQ0E0bTJqUHE5TGZmOU5rR0NZSkQ0MGpnaW9XaUZ4MEltbzRCckZwVUVzV3Iya1VER0MwbDdoMVlxMkFzZmZYbw?oc=5",
+    "https://nytimes.com/2026/09/16/us/politics/house-bill-data-center-ai-energy.html"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMijAFBVV95cUxQWmlxaHdRVWNucko0cHVZR3EwcTQzU1dOQkFDRTAydXZ6MTNzRTE0RFJNQlAtWVZLYzNKb1JtVzdodEl0dzNKdFRxSWNkQ0E0bTJqUHE5TGZmOU5rR0NZSkQ0MGpnaW9XaUZ4MEltbzRCckZwVUVzV3Iya1VER0MwbDdoMVlxMkFzZmZYbw?oc=5",
+      "https://nytimes.com/2026/09/16/us/politics/house-bill-data-center-ai-energy.html"
+    ],
+    "fonte": "The New York Times",
+    "link": "https://www.nytimes.com/2026/09/16/us/politics/house-bill-data-center-ai-energy.html",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQWmlxaHdRVWNucko0cHVZR3EwcTQzU1dOQkFDRTAydXZ6MTNzRTE0RFJNQlAtWVZLYzNKb1JtVzdodEl0dzNKdFRxSWNkQ0E0bTJqUHE5TGZmOU5rR0NZSkQ0MGpnaW9XaUZ4MEltbzRCckZwVUVzV3Iya1VER0MwbDdoMVlxMkFzZmZYbw?oc=5\" target=\"_blank\">House Passes Bill Taking Aim at Data Center Electricity Costs</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
+    "titulo": "House Passes Bill Taking Aim at Data Center Electricity Costs",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
