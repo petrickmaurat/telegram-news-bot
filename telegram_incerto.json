@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMigwFBVV95cUxNbkptQ2hPMzFQaFBmMTRJa0hMVE1QOEFlS0RKS0oyajVGXzFXSHJDRmoyWVBLazF5UkV2aU80QWpJMnVZWWxsYktxV01ZX3hGQ2VucmtHNlEtclJ0VVVVVXJsbnhpWHR3VlpxeUt6dW9RYjZYWUc3dWJNTnRRRDVNOFVTZw?oc=5",
+    "https://telesintese.com.br/redata-abre-espaco-para-data-centers-distribuidos/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMigwFBVV95cUxNbkptQ2hPMzFQaFBmMTRJa0hMVE1QOEFlS0RKS0oyajVGXzFXSHJDRmoyWVBLazF5UkV2aU80QWpJMnVZWWxsYktxV01ZX3hGQ2VucmtHNlEtclJ0VVVVVXJsbnhpWHR3VlpxeUt6dW9RYjZYWUc3dWJNTnRRRDVNOFVTZw?oc=5",
+      "https://telesintese.com.br/redata-abre-espaco-para-data-centers-distribuidos/"
+    ],
+    "fonte": "TeleSíntese",
+    "link": "https://telesintese.com.br/redata-abre-espaco-para-data-centers-distribuidos/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxNbkptQ2hPMzFQaFBmMTRJa0hMVE1QOEFlS0RKS0oyajVGXzFXSHJDRmoyWVBLazF5UkV2aU80QWpJMnVZWWxsYktxV01ZX3hGQ2VucmtHNlEtclJ0VVVVVXJsbnhpWHR3VlpxeUt6dW9RYjZYWUc3dWJNTnRRRDVNOFVTZw?oc=5\" target=\"_blank\">REDATA abre espaço para data centers distribuídos</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TeleSíntese</font>",
+    "titulo": "REDATA abre espaço para data centers distribuídos",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
