@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZXRhQm5ybHZJNHI2ZG04aGFmZ2NNemRIckM5SGFReTAyc04tRjhzQnE2NkM5Z3FhRHdrUnE0VEFsMlcxY1Vmcl9pc1loM3BNMHlzVEUyclV0eDlZbnVPWEptckRuZ2ZtRC1xYXB0SmZPam9nVUlfaVlsdnEwWFRaTzJMcFl1TjFMNVVqeUFMWGh4b3FJLTJCaG9pSTFPYkRjRnpfWS1sYw?oc=5",
+    "https://tiinside.com.br/17/09/2026/data-centers-energia-agua-e-o-impacto-real-da-infraestrutura-digital/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZXRhQm5ybHZJNHI2ZG04aGFmZ2NNemRIckM5SGFReTAyc04tRjhzQnE2NkM5Z3FhRHdrUnE0VEFsMlcxY1Vmcl9pc1loM3BNMHlzVEUyclV0eDlZbnVPWEptckRuZ2ZtRC1xYXB0SmZPam9nVUlfaVlsdnEwWFRaTzJMcFl1TjFMNVVqeUFMWGh4b3FJLTJCaG9pSTFPYkRjRnpfWS1sYw?oc=5",
+      "https://tiinside.com.br/17/09/2026/data-centers-energia-agua-e-o-impacto-real-da-infraestrutura-digital/"
+    ],
+    "fonte": "TI INSIDE Online",
+    "link": "https://tiinside.com.br/17/09/2026/data-centers-energia-agua-e-o-impacto-real-da-infraestrutura-digital/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNZXRhQm5ybHZJNHI2ZG04aGFmZ2NNemRIckM5SGFReTAyc04tRjhzQnE2NkM5Z3FhRHdrUnE0VEFsMlcxY1Vmcl9pc1loM3BNMHlzVEUyclV0eDlZbnVPWEptckRuZ2ZtRC1xYXB0SmZPam9nVUlfaVlsdnEwWFRaTzJMcFl1TjFMNVVqeUFMWGh4b3FJLTJCaG9pSTFPYkRjRnpfWS1sYw?oc=5\" target=\"_blank\">Data centers: energia, água e o impacto real da infraestrutura digital</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TI INSIDE Online</font>",
+    "titulo": "Data centers: energia, água e o impacto real da infraestrutura digital",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
