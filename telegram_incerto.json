@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://bloomberg.com/opinion/articles/2026-09-17/ai-boom-how-to-stop-data-centers-from-taking-too-much-electricity",
+    "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQWDVyalM2Rlpqd2czU3VuZlFLYXYtSFM5ZHQwbXlFcHVmenNhRjBZLUFlSldfd0pPNzg2aS1IeWlWYjIyZ3JQRXkxT0tRMEVMeFlXYVlVYmQxck4tUkNCWGhRTlJvQnFxWVRsNFF4MFk5WTY3ZTVxQnNOc2J2RmVGOGpJUlBkUlFCb0VaOG9JZTFpWWxQSkJVVlh3Ry15UV93TDVJRkxNa0o4S3htSFlFMFEyVXlOeFVDUWNZ?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://bloomberg.com/opinion/articles/2026-09-17/ai-boom-how-to-stop-data-centers-from-taking-too-much-electricity",
+      "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQWDVyalM2Rlpqd2czU3VuZlFLYXYtSFM5ZHQwbXlFcHVmenNhRjBZLUFlSldfd0pPNzg2aS1IeWlWYjIyZ3JQRXkxT0tRMEVMeFlXYVlVYmQxck4tUkNCWGhRTlJvQnFxWVRsNFF4MFk5WTY3ZTVxQnNOc2J2RmVGOGpJUlBkUlFCb0VaOG9JZTFpWWxQSkJVVlh3Ry15UV93TDVJRkxNa0o4S3htSFlFMFEyVXlOeFVDUWNZ?oc=5"
+    ],
+    "fonte": "Bloomberg.com",
+    "link": "https://www.bloomberg.com/opinion/articles/2026-09-17/ai-boom-how-to-stop-data-centers-from-taking-too-much-electricity",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxQWDVyalM2Rlpqd2czU3VuZlFLYXYtSFM5ZHQwbXlFcHVmenNhRjBZLUFlSldfd0pPNzg2aS1IeWlWYjIyZ3JQRXkxT0tRMEVMeFlXYVlVYmQxck4tUkNCWGhRTlJvQnFxWVRsNFF4MFk5WTY3ZTVxQnNOc2J2RmVGOGpJUlBkUlFCb0VaOG9JZTFpWWxQSkJVVlh3Ry15UV93TDVJRkxNa0o4S3htSFlFMFEyVXlOeFVDUWNZ?oc=5\" target=\"_blank\">How to Stop Data Centers From Grabbing Too Much Power</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+    "titulo": "How to Stop Data Centers From Grabbing Too Much Power",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
