@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMixgFBVV95cUxPWTQ5dDJfTXF4ZklmaUVxcGhGSnRLOEpER3VPbHRwampPRTVxclpiUVQzY1FzczNCRVRiRFpuTFBSWTg2MmJoZUVBOWtHdUdOUjVqNnkzQ2N5QUp2TnhWLXl0cmpnWmtGT3pDd1Y1S0p5cDZLY2M0UW40aDBqZEdFTDNYVkVYcGxFOXlJRzEtTHJFWXVDeDNyNVdqVVIzVkN2NlpLaU1Bbi1QXzd4dWl5NzNNOGxDOEZHZnpaRVlqeVZVdW13ZGfSAdQBQVVfeXFMT29UOEFOT1FMRERLeWZBT2RBUU9vZ0taaDdqOTJNcGZIemJMb2pUV0RhSXIzVGk1VkU2N2pFVlEwZUptRlRma0gxbkJKUmlBVE9rQ0tqazRBOW4yWURERV81NWZ1d1MwMDNjZHJxVW8yV2FPVWpDYkhfRDM1YmgxZW9uMk5PdXRMTnZ1QU5zb0J0QVYxX2RNcFNCU1RwSUVDN3BJek9YUW1IYXQtTzk4N0Q5eHBOVTJuNlNOZTNvNFhYTWRjZFlOWHVkWUxXcDVBa20teEo?oc=5",
+    "https://valor.globo.com/empresas/noticia/2026/09/17/debate-sobre-icms-menor-para-data-center-deve-ficar-para-o-fim-do-ano.ghtml"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMixgFBVV95cUxPWTQ5dDJfTXF4ZklmaUVxcGhGSnRLOEpER3VPbHRwampPRTVxclpiUVQzY1FzczNCRVRiRFpuTFBSWTg2MmJoZUVBOWtHdUdOUjVqNnkzQ2N5QUp2TnhWLXl0cmpnWmtGT3pDd1Y1S0p5cDZLY2M0UW40aDBqZEdFTDNYVkVYcGxFOXlJRzEtTHJFWXVDeDNyNVdqVVIzVkN2NlpLaU1Bbi1QXzd4dWl5NzNNOGxDOEZHZnpaRVlqeVZVdW13ZGfSAdQBQVVfeXFMT29UOEFOT1FMRERLeWZBT2RBUU9vZ0taaDdqOTJNcGZIemJMb2pUV0RhSXIzVGk1VkU2N2pFVlEwZUptRlRma0gxbkJKUmlBVE9rQ0tqazRBOW4yWURERV81NWZ1d1MwMDNjZHJxVW8yV2FPVWpDYkhfRDM1YmgxZW9uMk5PdXRMTnZ1QU5zb0J0QVYxX2RNcFNCU1RwSUVDN3BJek9YUW1IYXQtTzk4N0Q5eHBOVTJuNlNOZTNvNFhYTWRjZFlOWHVkWUxXcDVBa20teEo?oc=5",
+      "https://valor.globo.com/empresas/noticia/2026/09/17/debate-sobre-icms-menor-para-data-center-deve-ficar-para-o-fim-do-ano.ghtml"
+    ],
+    "fonte": "valor.globo.com",
+    "link": "https://valor.globo.com/empresas/noticia/2026/09/17/debate-sobre-icms-menor-para-data-center-deve-ficar-para-o-fim-do-ano.ghtml",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxPWTQ5dDJfTXF4ZklmaUVxcGhGSnRLOEpER3VPbHRwampPRTVxclpiUVQzY1FzczNCRVRiRFpuTFBSWTg2MmJoZUVBOWtHdUdOUjVqNnkzQ2N5QUp2TnhWLXl0cmpnWmtGT3pDd1Y1S0p5cDZLY2M0UW40aDBqZEdFTDNYVkVYcGxFOXlJRzEtTHJFWXVDeDNyNVdqVVIzVkN2NlpLaU1Bbi1QXzd4dWl5NzNNOGxDOEZHZnpaRVlqeVZVdW13ZGfSAdQBQVVfeXFMT29UOEFOT1FMRERLeWZBT2RBUU9vZ0taaDdqOTJNcGZIemJMb2pUV0RhSXIzVGk1VkU2N2pFVlEwZUptRlRma0gxbkJKUmlBVE9rQ0tqazRBOW4yWURERV81NWZ1d1MwMDNjZHJxVW8yV2FPVWpDYkhfRDM1YmgxZW9uMk5PdXRMTnZ1QU5zb0J0QVYxX2RNcFNCU1RwSUVDN3BJek9YUW1IYXQtTzk4N0Q5eHBOVTJuNlNOZTNvNFhYTWRjZFlOWHVkWUxXcDVBa20teEo?oc=5\" target=\"_blank\">Debate sobre ICMS menor para ‘data center’ deve ficar para o fim do ano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">valor.globo.com</font>",
+    "titulo": "Debate sobre ICMS menor para ‘data center’ deve ficar para o fim do ano",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
