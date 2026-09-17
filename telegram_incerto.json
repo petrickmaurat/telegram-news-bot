@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQlF2bi1uaVRoSFdTaTlZV1lacUJCaGRIVGhiSkl5VXgxQUNpa3ZxdVFmQmI3THEwVzRYY1lBYXpQSmJQcEdSNDQ5ZU5UY2Y0Y2xRVV9NdFlPaXhscS1SYkNxVEZSYkNVZWROSG82dFpZOW5aYzQtS2drOWdLYmtGM3N5OUJBb0dKX3hXLUZ6eTlVbTlHSnBz?oc=5",
+    "https://utilitydive.com/news/house-passes-ratepayer-protection-bill-data-centers/830658/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQlF2bi1uaVRoSFdTaTlZV1lacUJCaGRIVGhiSkl5VXgxQUNpa3ZxdVFmQmI3THEwVzRYY1lBYXpQSmJQcEdSNDQ5ZU5UY2Y0Y2xRVV9NdFlPaXhscS1SYkNxVEZSYkNVZWROSG82dFpZOW5aYzQtS2drOWdLYmtGM3N5OUJBb0dKX3hXLUZ6eTlVbTlHSnBz?oc=5",
+      "https://utilitydive.com/news/house-passes-ratepayer-protection-bill-data-centers/830658/"
+    ],
+    "fonte": "Utility Dive",
+    "link": "https://www.utilitydive.com/news/house-passes-ratepayer-protection-bill-data-centers/830658/",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOQlF2bi1uaVRoSFdTaTlZV1lacUJCaGRIVGhiSkl5VXgxQUNpa3ZxdVFmQmI3THEwVzRYY1lBYXpQSmJQcEdSNDQ5ZU5UY2Y0Y2xRVV9NdFlPaXhscS1SYkNxVEZSYkNVZWROSG82dFpZOW5aYzQtS2drOWdLYmtGM3N5OUJBb0dKX3hXLUZ6eTlVbTlHSnBz?oc=5\" target=\"_blank\">House passes ratepayer protection bill to limit data center cost shifts</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Utility Dive</font>",
+    "titulo": "House passes ratepayer protection bill to limit data center cost shifts",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
