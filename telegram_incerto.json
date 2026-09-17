@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxOd2g4WVBPTzZtaWNCaVE0YzRZVTVsUnhtOC1SZzgwWnhQbm1VMjVEU0xOTmVmOUhzZE9tQ0xzY2xyNmJfMUsxVFNPV1RFQkVndHZnOG9VMVJnUXZfNENnTHBqMHRDYUVoVGFmMGZsbjZvcVV6NTNPUjBwdm5vd2hibWRHUFYweUZoelpKR3JqNklna25YeEZuZnF5NA?oc=5",
+    "https://tiinside.com.br/16/09/2026/eaf-estuda-data-center-publico-de-ia-para-o-governo-federal/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMimwFBVV95cUxOd2g4WVBPTzZtaWNCaVE0YzRZVTVsUnhtOC1SZzgwWnhQbm1VMjVEU0xOTmVmOUhzZE9tQ0xzY2xyNmJfMUsxVFNPV1RFQkVndHZnOG9VMVJnUXZfNENnTHBqMHRDYUVoVGFmMGZsbjZvcVV6NTNPUjBwdm5vd2hibWRHUFYweUZoelpKR3JqNklna25YeEZuZnF5NA?oc=5",
+      "https://tiinside.com.br/16/09/2026/eaf-estuda-data-center-publico-de-ia-para-o-governo-federal/"
+    ],
+    "fonte": "TI INSIDE Online",
+    "link": "https://tiinside.com.br/16/09/2026/eaf-estuda-data-center-publico-de-ia-para-o-governo-federal/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxOd2g4WVBPTzZtaWNCaVE0YzRZVTVsUnhtOC1SZzgwWnhQbm1VMjVEU0xOTmVmOUhzZE9tQ0xzY2xyNmJfMUsxVFNPV1RFQkVndHZnOG9VMVJnUXZfNENnTHBqMHRDYUVoVGFmMGZsbjZvcVV6NTNPUjBwdm5vd2hibWRHUFYweUZoelpKR3JqNklna25YeEZuZnF5NA?oc=5\" target=\"_blank\">EAF estuda data center público de IA para o Governo Federal</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TI INSIDE Online</font>",
+    "titulo": "EAF estuda data center público de IA para o Governo Federal",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
