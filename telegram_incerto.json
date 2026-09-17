@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMipAFBVV95cUxOS083TTN6VWhFczdsMTRsUHA4cXFVdXBxaGE4YjJSeXVQbnhVZUxjdUszX29LaWJDS0Yyc3Npc25OMjRHRTlKbWtPNXNLRHAxWWZVLWZzbktOVWp4RDcwcVhLblYtWWVPLWw3SGZqVXVFR3JCRmZPY0pqVTdCaUZNbGkwY2xfSkVqX01rM3RCNElodEFOWWJzUmlCTVFOcDk3RlZIcQ?oc=5",
+    "https://reuters.com/business/silicon-valley-ai-data-center-boom-meets-local-resistance-2026-09-17/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMipAFBVV95cUxOS083TTN6VWhFczdsMTRsUHA4cXFVdXBxaGE4YjJSeXVQbnhVZUxjdUszX29LaWJDS0Yyc3Npc25OMjRHRTlKbWtPNXNLRHAxWWZVLWZzbktOVWp4RDcwcVhLblYtWWVPLWw3SGZqVXVFR3JCRmZPY0pqVTdCaUZNbGkwY2xfSkVqX01rM3RCNElodEFOWWJzUmlCTVFOcDk3RlZIcQ?oc=5",
+      "https://reuters.com/business/silicon-valley-ai-data-center-boom-meets-local-resistance-2026-09-17/"
+    ],
+    "fonte": "Reuters",
+    "link": "https://www.reuters.com/business/silicon-valley-ai-data-center-boom-meets-local-resistance-2026-09-17/",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxOS083TTN6VWhFczdsMTRsUHA4cXFVdXBxaGE4YjJSeXVQbnhVZUxjdUszX29LaWJDS0Yyc3Npc25OMjRHRTlKbWtPNXNLRHAxWWZVLWZzbktOVWp4RDcwcVhLblYtWWVPLWw3SGZqVXVFR3JCRmZPY0pqVTdCaUZNbGkwY2xfSkVqX01rM3RCNElodEFOWWJzUmlCTVFOcDk3RlZIcQ?oc=5\" target=\"_blank\">In Silicon Valley, AI data center boom meets local resistance</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+    "titulo": "In Silicon Valley, AI data center boom meets local resistance",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
