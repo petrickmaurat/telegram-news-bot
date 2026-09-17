@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://estadao.com.br/tecmundo/stem/ataques-de-drones-a-data-centers-resultaram-na-perda-permanente-de-dados-confirma-amazon/",
+    "https://news.google.com/rss/articles/CBMiygFBVV95cUxNWmxoZzhBSVFOOTUwbEhZMkVmS1B2T2FPc08wZm05QV9RbUtuc1pqMkNYc3J6c0tIRmc4TlEwUkVKSVZrd09ZRlh6OXNQUkFpTGpxbENibVBWY3JfU1U5aVI1OS02NEF5Z0IzZ0V1YjRVN1AxUU4tdTR2eFJoaXRpejIxbkI0Ym1ydjNHMF9tSjdmTFExdmItV280RFllMmE0X0sxX1BHX0hUMGJPbkhXWElMWFcxRzVPUk1IcERyMld4SVduSTg5V01n0gHPAUFVX3lxTE1kSDZJNDlNeFFFQW0xZEVYTGVxUENWaU9WZTRWTzczY18wOW9EclpfTThXc2tsNUNRUU9vLVE0VUdhNDhSaS05d1A5a1BDbktiSUd3OXBaTVRFcmRWa29yandGQlRMTk1xRnI5UzFkcGxkMkRvLUhJYnY2WS1mcVQ5LWlySE1MdzYxNEtfdDk2aTIyUVZub0ltV2ktYWs0eTJITUJZMG1jX3dHSTNJZ2l5bXJrQ1p1UzB5a2dNTDRUN0lUU1ZvOW9TREF0OUlVOA?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://estadao.com.br/tecmundo/stem/ataques-de-drones-a-data-centers-resultaram-na-perda-permanente-de-dados-confirma-amazon/",
+      "https://news.google.com/rss/articles/CBMiygFBVV95cUxNWmxoZzhBSVFOOTUwbEhZMkVmS1B2T2FPc08wZm05QV9RbUtuc1pqMkNYc3J6c0tIRmc4TlEwUkVKSVZrd09ZRlh6OXNQUkFpTGpxbENibVBWY3JfU1U5aVI1OS02NEF5Z0IzZ0V1YjRVN1AxUU4tdTR2eFJoaXRpejIxbkI0Ym1ydjNHMF9tSjdmTFExdmItV280RFllMmE0X0sxX1BHX0hUMGJPbkhXWElMWFcxRzVPUk1IcERyMld4SVduSTg5V01n0gHPAUFVX3lxTE1kSDZJNDlNeFFFQW0xZEVYTGVxUENWaU9WZTRWTzczY18wOW9EclpfTThXc2tsNUNRUU9vLVE0VUdhNDhSaS05d1A5a1BDbktiSUd3OXBaTVRFcmRWa29yandGQlRMTk1xRnI5UzFkcGxkMkRvLUhJYnY2WS1mcVQ5LWlySE1MdzYxNEtfdDk2aTIyUVZub0ltV2ktYWs0eTJITUJZMG1jX3dHSTNJZ2l5bXJrQ1p1UzB5a2dNTDRUN0lUU1ZvOW9TREF0OUlVOA?oc=5"
+    ],
+    "fonte": "Estadão",
+    "link": "https://www.estadao.com.br/tecmundo/stem/ataques-de-drones-a-data-centers-resultaram-na-perda-permanente-de-dados-confirma-amazon/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxNWmxoZzhBSVFOOTUwbEhZMkVmS1B2T2FPc08wZm05QV9RbUtuc1pqMkNYc3J6c0tIRmc4TlEwUkVKSVZrd09ZRlh6OXNQUkFpTGpxbENibVBWY3JfU1U5aVI1OS02NEF5Z0IzZ0V1YjRVN1AxUU4tdTR2eFJoaXRpejIxbkI0Ym1ydjNHMF9tSjdmTFExdmItV280RFllMmE0X0sxX1BHX0hUMGJPbkhXWElMWFcxRzVPUk1IcERyMld4SVduSTg5V01n0gHPAUFVX3lxTE1kSDZJNDlNeFFFQW0xZEVYTGVxUENWaU9WZTRWTzczY18wOW9EclpfTThXc2tsNUNRUU9vLVE0VUdhNDhSaS05d1A5a1BDbktiSUd3OXBaTVRFcmRWa29yandGQlRMTk1xRnI5UzFkcGxkMkRvLUhJYnY2WS1mcVQ5LWlySE1MdzYxNEtfdDk2aTIyUVZub0ltV2ktYWs0eTJITUJZMG1jX3dHSTNJZ2l5bXJrQ1p1UzB5a2dNTDRUN0lUU1ZvOW9TREF0OUlVOA?oc=5\" target=\"_blank\">Ataques de drones a data centers resultaram na perda permanente de dados, confirma Amazon</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Estadão</font>",
+    "titulo": "Ataques de drones a data centers resultaram na perda permanente de dados, confirma Amazon",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
