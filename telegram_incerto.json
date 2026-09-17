@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/analysis/the-companies-that-are-cooling-on-gas/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/analysis/the-companies-that-are-cooling-on-gas/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/analysis/the-companies-that-are-cooling-on-gas/",
+    "origem": "INT",
+    "resumo": "<p>Data centers could be attached to gas pipelines</p>",
+    "titulo": "The companies that are cooling on gas",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
