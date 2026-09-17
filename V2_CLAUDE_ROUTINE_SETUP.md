@@ -9,7 +9,8 @@ estado separado e não possui comando de envio de e-mail.
 2. Confirme em Settings > Usage que uso adicional/extra está desativado.
    Assim, atingir o limite interrompe a Routine em vez de gerar cobrança extra.
 3. Crie uma Routine e conecte o repositório `telegram-news-bot`.
-4. Selecione explicitamente a branch `v2-claude-routines`.
+4. As instruções abaixo mandam a Routine abrir `v2-claude-routines`; a interface
+   web não possui seletor de branch.
 5. Use execução manual/one-off no primeiro teste. Não crie agenda diária ainda.
 6. No ambiente da Routine, habilite acesso de rede aos feeds e artigos usados
    pelo projeto. Para o piloto, não configure `ANTHROPIC_API_KEY`, `BREVO_API_KEY`,
@@ -18,16 +19,23 @@ estado separado e não possui comando de envio de e-mail.
 ## Prompt para colar na Routine
 
 ```text
-Trabalhe somente na branch v2-claude-routines deste repositório. Leia e siga
-ROUTINE_V2_INSTRUCTIONS.md. Este é um piloto sem envio: nunca execute
-digest_email.py e não envie e-mail. Execute a preparação limitada a 20 novos
-candidatos por tópico, faça o ranking e os resumos nos JSONs especificados,
-valide as duas etapas e disponibilize routine_v2_preview.html. Informe o
-resultado de routine_v2_report.json. Se a validação falhar, corrija a resposta;
-não mude o validador nem relaxe as regras. Ao final, grave somente
-routine_v2_state.json, routine_v2_google_cache.json, routine_v2_report.json e
-routine_v2_preview.html em um commit na própria branch
-v2-claude-routines e faça push. Não altere main nem arquivos digest_*.json.
+Trabalhe a partir da versão v2-claude-routines deste repositório. No início,
+execute `git fetch origin v2-claude-routines` e `git checkout
+v2-claude-routines`. Leia e siga integralmente ROUTINE_V2_INSTRUCTIONS.md.
+Este é um piloto sem envio: nunca execute digest_email.py, não envie e-mail,
+não altere main nem arquivos digest_*.json e não use ANTHROPIC_API_KEY.
+
+Faça primeiro `python routine_v2.py preflight`. Se falhar, pare imediatamente,
+informe o diagnóstico e não execute mais chamadas de rede. Se passar, execute a
+coleta completa com `python routine_v2.py prepare --max-new-per-topic 0`, faça
+ranking e resumos, valide as duas etapas e finalize. Não mude o validador nem
+relaxe as regras.
+
+Ao final, crie uma branch nova com prefixo `claude/v2-pilot-`, grave somente os
+artefatos autorizados em ROUTINE_V2_INSTRUCTIONS.md e faça um único push dessa
+branch. Nunca faça push direto para v2-claude-routines ou main. Se o push falhar,
+pare sem criar agentes auxiliares ou tentar contornar pela API; apresente o
+relatório completo na sessão.
 ```
 
 ## O que anotar no primeiro teste
@@ -41,9 +49,8 @@ Settings > Usage. Depois do run, anote novamente:
 - quantidade `needs_evaluation`, `cached` e `counts` do relatório;
 - se a prévia preencheu as vagas e se as matérias são editorialmente corretas.
 
-O limite de 20 vale apenas para candidatos ainda sem cache em cada tópico.
-Elegíveis em cache continuam no confronto, e nenhum item truncado é marcado como
-rejeitado ou enviado. Portanto, um segundo piloto pode processar o restante.
+Este teste processa todos os candidatos. O preflight impede que uma falha de
+rede seja confundida com um dia sem notícias ou consuma a franquia no ranking.
 
 ## Critério para avançar
 

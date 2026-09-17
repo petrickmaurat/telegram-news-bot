@@ -2,6 +2,7 @@ import json
 import tempfile
 import time
 from pathlib import Path
+from types import SimpleNamespace
 from unittest import TestCase
 from unittest.mock import patch
 
@@ -29,7 +30,8 @@ class RoutineV2Tests(TestCase):
                   "RANKING_RESPONSE_FILE": root / "work" / "ranking_response.json",
                   "SUMMARY_REQUEST_FILE": root / "work" / "summary_request.json",
                   "SUMMARY_RESPONSE_FILE": root / "work" / "summary_response.json",
-                  "REPORT_FILE": root / "report.json", "PREVIEW_FILE": root / "preview.html"}
+                  "REPORT_FILE": root / "report.json", "PREVIEW_FILE": root / "preview.html",
+                  "PREFLIGHT_FILE": root / "preflight.json"}
         for name, value in values.items():
             p = patch.object(v2, name, value)
             p.start()
@@ -57,6 +59,51 @@ class RoutineV2Tests(TestCase):
         self.assertEqual(len(request["candidates"]), 2)
         self.assertEqual(request["truncated"]["data_center"], {
             "novos_incluidos": 2, "novos_aptos": 3, "elegiveis_em_cache": 0})
+
+    def test_preflight_requires_google_and_direct_feed(self):
+        responses = [SimpleNamespace(status_code=200, content=b"rss", ok=True),
+                     SimpleNamespace(status_code=403, content=b"", ok=False),
+                     SimpleNamespace(status_code=403, content=b"", ok=False)]
+        with patch.object(v2.requests, "get", side_effect=responses):
+            with self.assertRaisesRegex(RuntimeError, "Preflight"):
+                v2.preflight()
+        report = carregar_json(v2.PREFLIGHT_FILE, {})
+        self.assertEqual(report["status"], "network_failed")
+
+    def test_preflight_accepts_one_working_direct_feed(self):
+        responses = [SimpleNamespace(status_code=200, content=b"rss", ok=True),
+                     SimpleNamespace(status_code=403, content=b"", ok=False),
+                     SimpleNamespace(status_code=200, content=b"rss", ok=True)]
+        with patch.object(v2.requests, "get", side_effect=responses):
+            v2.preflight()
+        self.assertEqual(carregar_json(v2.PREFLIGHT_FILE, {})["status"], "network_ready")
+
+    def test_prepare_aborts_when_collection_is_blocked(self):
+        def blocked(*args, **kwargs):
+            kwargs["relatorio_fontes"].extend([
+                {"fonte": "Google", "resultado": "falha", "itens_rss": 0},
+                {"fonte": "Direto", "resultado": "falha", "itens_rss": 0},
+            ])
+            return []
+
+        with patch.object(v2, "load_state", return_value=self.base_state([])), \
+             patch.object(v2, "coletar_itens_novos", side_effect=blocked):
+            with self.assertRaisesRegex(RuntimeError, "Coleta indisponível"):
+                v2.prepare(max_new_per_topic=0)
+        report = carregar_json(v2.REPORT_FILE, {})
+        self.assertEqual(report["status"], "collection_failed")
+        self.assertFalse(v2.REQUEST_FILE.exists())
+
+    def test_zero_cap_processes_all_candidates(self):
+        items = [news(i) for i in range(35)]
+        with patch.object(v2, "load_state", return_value=self.base_state([])), \
+             patch.object(v2, "coletar_itens_novos", return_value=items), \
+             patch.object(v2, "enriquecer_fila"), patch.object(v2, "resolve_candidates"), \
+             patch.object(v2, "salvar_cache_google"):
+            v2.prepare(max_new_per_topic=0)
+        request = carregar_json(v2.REQUEST_FILE, {})
+        self.assertEqual(len(request["candidates"]), 35)
+        self.assertEqual(request["truncated"], {})
 
     def test_google_cache_is_redirected_to_v2_file(self):
         original = v2.common._CACHE_GOOGLE_FILE

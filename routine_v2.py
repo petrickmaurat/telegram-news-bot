@@ -17,6 +17,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 import common
+import requests
 from common import TOPICOS, coletar_itens_novos, resolver_link_google_news, salvar_cache_google
 from digest_email import FOCO_SETORIAL, VAGAS, montar_html
 from email_articles import enriquecer_fila
@@ -37,9 +38,16 @@ SUMMARY_REQUEST_FILE = WORK_DIR / "summary_request.json"
 SUMMARY_RESPONSE_FILE = WORK_DIR / "summary_response.json"
 REPORT_FILE = ROOT / "routine_v2_report.json"
 PREVIEW_FILE = ROOT / "routine_v2_preview.html"
+PREFLIGHT_FILE = ROOT / "routine_v2_preflight.json"
 POLICY_VERSION = 1
 DECISIONS = {"elegivel", "fora_tema", "sem_fato_novo", "fonte_duvidosa"}
 TOPIC_ORDER = ("data_center", "baterias", "carbono")
+PREFLIGHT_TARGETS = (
+    ("google_news", "buscador", TOPICOS["data_center"]["feeds"][2]["url"]),
+    ("megawhat", "rss_direto", "https://megawhat.uol.com.br/feed/"),
+    ("data_center_dynamics", "rss_direto",
+     "https://www.datacenterdynamics.com/en/rss/"),
+)
 
 
 def clean(text):
@@ -139,8 +147,51 @@ def admissible(item, topic, now):
     return True, "apto"
 
 
-def prepare(max_new_per_topic=60):
+def preflight():
+    """Confirma acesso aos dois caminhos essenciais antes da coleta completa."""
+    results = []
+    for name, group, url in PREFLIGHT_TARGETS:
+        row = {"name": name, "group": group, "url": url, "ok": False}
+        try:
+            response = requests.get(url, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
+            row.update({"status_code": response.status_code,
+                        "bytes": len(response.content),
+                        "ok": response.ok and bool(response.content)})
+        except requests.RequestException as error:
+            row["error"] = f"{type(error).__name__}: {error}"
+        results.append(row)
+    google_ready = any(r["ok"] for r in results if r["group"] == "buscador")
+    direct_ready = any(r["ok"] for r in results if r["group"] == "rss_direto")
+    report = {"status": "network_ready" if google_ready and direct_ready
+              else "network_failed", "generated_at": time.time(), "targets": results}
+    salvar_json(PREFLIGHT_FILE, report)
+    print(json.dumps(report, ensure_ascii=False))
+    if report["status"] != "network_ready":
+        raise RuntimeError("Preflight de rede falhou; coleta completa e IA não foram executadas.")
+
+
+def collection_health(sources):
+    total = len(sources)
+    outcomes = Counter(row.get("resultado", "desconhecido") for row in sources)
+    failed = outcomes.get("falha", 0)
+    return {
+        "queries": total,
+        "ok": outcomes.get("ok", 0),
+        "failed": failed,
+        "invalid": outcomes.get("rss_invalido", 0),
+        "entries": sum(int(row.get("itens_rss", 0) or 0) for row in sources),
+        "failure_ratio": round(failed / total, 4) if total else 0,
+        "failed_examples": [row.get("fonte", row.get("consulta", ""))
+                            for row in sources if row.get("resultado") == "falha"][:10],
+    }
+
+
+def prepare(max_new_per_topic=0):
     WORK_DIR.mkdir(exist_ok=True)
+    for stale in (REQUEST_FILE, RANKING_RESPONSE_FILE, SUMMARY_REQUEST_FILE,
+                  SUMMARY_RESPONSE_FILE, REPORT_FILE, PREVIEW_FILE):
+        if stale.exists():
+            stale.unlink()
     activate_google_cache()
     state = load_state()
     now = time.time()
@@ -151,6 +202,14 @@ def prepare(max_new_per_topic=60):
     sources = []
     collected = coletar_itens_novos(sent, resolver=False,
         configuracao=configuracao_email(TOPICOS), relatorio_fontes=sources)
+    health = collection_health(sources)
+    if sources and (health["ok"] == 0 or health["failure_ratio"] >= 0.8):
+        report = {"status": "collection_failed", "send_enabled": False,
+                  "generated_at": time.time(), "collection": health,
+                  "note": "Coleta abortada antes da IA; cobertura de fontes insuficiente."}
+        salvar_json(REPORT_FILE, report)
+        print(json.dumps(report, ensure_ascii=False))
+        raise RuntimeError("Coleta indisponível; ranking e resumos não foram executados.")
     for item in collected:
         key = item_key(item)
         state["items"][key] = merge_item(state["items"].get(key), item)
@@ -223,7 +282,7 @@ def prepare(max_new_per_topic=60):
         "candidates": candidates,
         "local_rejections": [{"topico": topic, "resultado": reason, "quantidade": count}
                              for (topic, reason), count in sorted(rejected_locally.items())],
-        "truncated": truncated, "source_queries": len(sources),
+        "truncated": truncated, "source_queries": len(sources), "collection": health,
     }
     request["request_sha256"] = hashlib.sha256(json.dumps(
         request, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
@@ -233,9 +292,6 @@ def prepare(max_new_per_topic=60):
                             if key in live_evaluation_ids}
     salvar_json(STATE_FILE, state)
     salvar_json(REQUEST_FILE, request)
-    for stale in (RANKING_RESPONSE_FILE, SUMMARY_REQUEST_FILE, SUMMARY_RESPONSE_FILE, PREVIEW_FILE):
-        if stale.exists():
-            stale.unlink()
     print(json.dumps({"status": "prepared", "request": str(REQUEST_FILE),
         "candidates": len(candidates),
         "needs_evaluation": sum(c["precisa_avaliar"] for c in candidates),
@@ -391,12 +447,15 @@ def finalize(response_path=None):
     moment = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-3))).strftime(
         "%d/%m/%Y · piloto Claude Routine")
     PREVIEW_FILE.write_text(montar_html(selection, moment), encoding="utf-8")
-    report = {"status": "pilot_ready", "send_enabled": False,
+    selected_count = sum(len(selection[t][b]) for t in TOPIC_ORDER for b in ("BR", "US"))
+    report = {"status": "pilot_ready" if selected_count else "pilot_empty",
+        "send_enabled": False,
         "request_sha256": request["request_sha256"], "generated_at": time.time(),
         "counts": {t: {b: len(selection[t][b]) for b in ("BR", "US")} for t in TOPIC_ORDER},
         "needs_evaluation": sum(c["precisa_avaliar"] for c in request["candidates"]),
         "cached": sum(not c["precisa_avaliar"] for c in request["candidates"]),
-        "truncated": request.get("truncated", {}), "preview": str(PREVIEW_FILE),
+        "truncated": request.get("truncated", {}),
+        "collection": request.get("collection", {}), "preview": str(PREVIEW_FILE),
         "note": "Piloto: nenhum e-mail foi enviado e o histórico da V1 não foi alterado."}
     salvar_json(REPORT_FILE, report)
     print(json.dumps(report, ensure_ascii=False))
@@ -404,6 +463,7 @@ def finalize(response_path=None):
 
 def status():
     print(json.dumps({"branch_expected": "v2-claude-routines", "state": STATE_FILE.exists(),
+        "preflight": carregar_json(PREFLIGHT_FILE, None),
         "ranking_request": REQUEST_FILE.exists(), "ranking_response": RANKING_RESPONSE_FILE.exists(),
         "summary_request": SUMMARY_REQUEST_FILE.exists(), "summary_response": SUMMARY_RESPONSE_FILE.exists(),
         "preview": PREVIEW_FILE.exists(), "report": carregar_json(REPORT_FILE, None),
@@ -413,16 +473,19 @@ def status():
 def main():
     parser = argparse.ArgumentParser(description="Piloto sem API do digest em Claude Code Routines")
     sub = parser.add_subparsers(dest="command", required=True)
+    sub.add_parser("preflight")
     prep = sub.add_parser("prepare")
-    prep.add_argument("--max-new-per-topic", type=int, default=20,
-                      help="0 remove o limite; mantenha 20 no primeiro piloto")
+    prep.add_argument("--max-new-per-topic", type=int, default=0,
+                      help="0 processa todos os candidatos; valor positivo limita por tópico")
     rank = sub.add_parser("validate-ranking")
     rank.add_argument("--response", default=str(RANKING_RESPONSE_FILE))
     summaries = sub.add_parser("finalize")
     summaries.add_argument("--response", default=str(SUMMARY_RESPONSE_FILE))
     sub.add_parser("status")
     args = parser.parse_args()
-    if args.command == "prepare":
+    if args.command == "preflight":
+        preflight()
+    elif args.command == "prepare":
         prepare(args.max_new_per_topic)
     elif args.command == "validate-ranking":
         validate_ranking(Path(args.response))
