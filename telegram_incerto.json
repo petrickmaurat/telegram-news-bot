@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxNYVdqQVZlUUREc3FobzI0TkgzUTVwTnVMNm43ZnlDZmJyUlpFNFZnWVZmTFBDakp1LWlNMThiQnFXUjJqaGNOdUQ3cVpIVmx4RzJ4aWJIbHBLZlUxU2lBYUQ5NF9BVDdfVlFzRDVvc08zRkFFOG9aQWFzVzdDVU1HcXotOElWcUdLR1NuZnVKdGw5RmVtcWc?oc=5",
+    "https://washingtonpost.com/politics/2026/09/17/democrat-blocks-data-center-bill-senate/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMilgFBVV95cUxNYVdqQVZlUUREc3FobzI0TkgzUTVwTnVMNm43ZnlDZmJyUlpFNFZnWVZmTFBDakp1LWlNMThiQnFXUjJqaGNOdUQ3cVpIVmx4RzJ4aWJIbHBLZlUxU2lBYUQ5NF9BVDdfVlFzRDVvc08zRkFFOG9aQWFzVzdDVU1HcXotOElWcUdLR1NuZnVKdGw5RmVtcWc?oc=5",
+      "https://washingtonpost.com/politics/2026/09/17/democrat-blocks-data-center-bill-senate/"
+    ],
+    "fonte": "washingtonpost.com",
+    "link": "https://www.washingtonpost.com/politics/2026/09/17/democrat-blocks-data-center-bill-senate/",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxNYVdqQVZlUUREc3FobzI0TkgzUTVwTnVMNm43ZnlDZmJyUlpFNFZnWVZmTFBDakp1LWlNMThiQnFXUjJqaGNOdUQ3cVpIVmx4RzJ4aWJIbHBLZlUxU2lBYUQ5NF9BVDdfVlFzRDVvc08zRkFFOG9aQWFzVzdDVU1HcXotOElWcUdLR1NuZnVKdGw5RmVtcWc?oc=5\" target=\"_blank\">Senator blocks bill meant to lower electricity prices linked to data centers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">washingtonpost.com</font>",
+    "titulo": "Senator blocks bill meant to lower electricity prices linked to data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
