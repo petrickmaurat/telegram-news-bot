@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/northc-breaks-ground-on-data-center-in-frankfurt-germany/",
+    "https://news.google.com/rss/articles/CBMiogFBVV95cUxNVVFHcElZN2xjWEltODFZMDBYUGx0U1cwMFJVazQ4VUNoLU81cHlCVDhpWVd6aHhHVkNGV01nMzhGMkNjY1pKRTJINUxzdnlibm1CZ0VPZi0zZ18yNnZ0WU9QeE41S2xDUzVVeXBRbFFRQ3lCeHM3My1JVUNZVjkyRk5qWVU4YTJUaWRLeVZjZmFpMjFQbEtSSHNQNXU4ZDRKSGc?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/northc-breaks-ground-on-data-center-in-frankfurt-germany/",
+      "https://news.google.com/rss/articles/CBMiogFBVV95cUxNVVFHcElZN2xjWEltODFZMDBYUGx0U1cwMFJVazQ4VUNoLU81cHlCVDhpWVd6aHhHVkNGV01nMzhGMkNjY1pKRTJINUxzdnlibm1CZ0VPZi0zZ18yNnZ0WU9QeE41S2xDUzVVeXBRbFFRQ3lCeHM3My1JVUNZVjkyRk5qWVU4YTJUaWRLeVZjZmFpMjFQbEtSSHNQNXU4ZDRKSGc?oc=5"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/northc-breaks-ground-on-data-center-in-frankfurt-germany/",
+    "origem": "INT",
+    "resumo": "<p>6MW facility due live in 2028</p>",
+    "titulo": "NorthC breaks ground on data center in Frankfurt, Germany",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
