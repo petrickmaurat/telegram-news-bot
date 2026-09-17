@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPYW1ZV2l0QlA1SjQtOWlLYzRFVHV0cTMtNE1uU1BoZVN1VEpIdmNTOWU3bVhLVTBLb1JSbkhCRGtvT1dzWkw0ck0zeDRZNzVwaWlzYWFnQlhaZ29yRGRZRUtTYVhHXzc0UG9GWEFtdDRxSHNYZlBwWXJnV0VNYlZIWVJ6LTZfNTcxaTlyLUNUMV95Q3QtVUpBM2FJZGpjRUlfMC1SUFJkaU0?oc=5",
+    "https://washingtonpost.com/politics/2026/09/16/house-attempts-empower-states-lower-data-center-costs/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPYW1ZV2l0QlA1SjQtOWlLYzRFVHV0cTMtNE1uU1BoZVN1VEpIdmNTOWU3bVhLVTBLb1JSbkhCRGtvT1dzWkw0ck0zeDRZNzVwaWlzYWFnQlhaZ29yRGRZRUtTYVhHXzc0UG9GWEFtdDRxSHNYZlBwWXJnV0VNYlZIWVJ6LTZfNTcxaTlyLUNUMV95Q3QtVUpBM2FJZGpjRUlfMC1SUFJkaU0?oc=5",
+      "https://washingtonpost.com/politics/2026/09/16/house-attempts-empower-states-lower-data-center-costs/"
+    ],
+    "fonte": "The Washington Post",
+    "link": "https://www.washingtonpost.com/politics/2026/09/16/house-attempts-empower-states-lower-data-center-costs/",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxPYW1ZV2l0QlA1SjQtOWlLYzRFVHV0cTMtNE1uU1BoZVN1VEpIdmNTOWU3bVhLVTBLb1JSbkhCRGtvT1dzWkw0ck0zeDRZNzVwaWlzYWFnQlhaZ29yRGRZRUtTYVhHXzc0UG9GWEFtdDRxSHNYZlBwWXJnV0VNYlZIWVJ6LTZfNTcxaTlyLUNUMV95Q3QtVUpBM2FJZGpjRUlfMC1SUFJkaU0?oc=5\" target=\"_blank\">House passes bill attempting to lower data center costs</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>",
+    "titulo": "House passes bill attempting to lower data center costs",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
