@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/whitepapers/800vdc-protection-in-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/whitepapers/800vdc-protection-in-data-centers/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/whitepapers/800vdc-protection-in-data-centers/",
+    "origem": "INT",
+    "resumo": "<p>Unlocking next-gen AI data center efficiency</p>",
+    "titulo": "800VDC protection in data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
