@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/crusoe-raises-39bn-for-ai-data-center-build-out/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/crusoe-raises-39bn-for-ai-data-center-build-out/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/crusoe-raises-39bn-for-ai-data-center-build-out/",
+    "origem": "INT",
+    "resumo": "<p>Nvidia buys in as one of several new investors</p>",
+    "titulo": "Crusoe raises $3.9bn for AI data center build-out",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
