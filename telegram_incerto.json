@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMikgFBVV95cUxOZXpvV2dlUkdYeHlPbkIyZWIyQkRmenVJcEthcGNYYmw4bGVYNkRpX3JhQVJDRUp5UXlCOVktUXNONGlOb1ZxWU5jbXItRzZSakYwbDdWUUptVXl4SDZBa05PMTZnNGRqSW5IOGVEdWlmUm96eTZfNllLWldfbkZtRmpMYkRuMndUcDEtank3QzJnZw?oc=5",
+    "https://utilitydive.com/news/microsoft-virginia-scc-data-center-transmission/830775/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMikgFBVV95cUxOZXpvV2dlUkdYeHlPbkIyZWIyQkRmenVJcEthcGNYYmw4bGVYNkRpX3JhQVJDRUp5UXlCOVktUXNONGlOb1ZxWU5jbXItRzZSakYwbDdWUUptVXl4SDZBa05PMTZnNGRqSW5IOGVEdWlmUm96eTZfNllLWldfbkZtRmpMYkRuMndUcDEtank3QzJnZw?oc=5",
+      "https://utilitydive.com/news/microsoft-virginia-scc-data-center-transmission/830775/"
+    ],
+    "fonte": "Utility Dive",
+    "link": "https://www.utilitydive.com/news/microsoft-virginia-scc-data-center-transmission/830775/",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOZXpvV2dlUkdYeHlPbkIyZWIyQkRmenVJcEthcGNYYmw4bGVYNkRpX3JhQVJDRUp5UXlCOVktUXNONGlOb1ZxWU5jbXItRzZSakYwbDdWUUptVXl4SDZBa05PMTZnNGRqSW5IOGVEdWlmUm96eTZfNllLWldfbkZtRmpMYkRuMndUcDEtank3QzJnZw?oc=5\" target=\"_blank\">Microsoft ‘preserving its ability’ to challenge data center transmission costs decision</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Utility Dive</font>",
+    "titulo": "Microsoft ‘preserving its ability’ to challenge data center transmission costs decision",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
