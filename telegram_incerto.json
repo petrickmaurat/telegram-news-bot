@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/asp-data-center-secures-nok16bn-to-fund-data-center-project-in-stavanger-norway/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/asp-data-center-secures-nok16bn-to-fund-data-center-project-in-stavanger-norway/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/asp-data-center-secures-nok16bn-to-fund-data-center-project-in-stavanger-norway/",
+    "origem": "INT",
+    "resumo": "<p>Company refinances previous agreement</p>",
+    "titulo": "Asp Data Center secures NOK1.6bn to fund data center project in Stavanger, Norway",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
