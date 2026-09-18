@@ -31,6 +31,7 @@ from reliability import canonica, carregar_json, identidades, salvar_json
 ROOT = Path(__file__).resolve().parent
 STATE_FILE = ROOT / "routine_v2_state.json"
 GOOGLE_CACHE_FILE = ROOT / "routine_v2_google_cache.json"
+INPUT_FILE = ROOT / "routine_v2_input.json"
 WORK_DIR = ROOT / "routine_v2_work"
 REQUEST_FILE = WORK_DIR / "ranking_request.json"
 RANKING_RESPONSE_FILE = WORK_DIR / "ranking_response.json"
@@ -186,12 +187,30 @@ def collection_health(sources):
     }
 
 
-def prepare(max_new_per_topic=0):
-    WORK_DIR.mkdir(exist_ok=True)
-    for stale in (REQUEST_FILE, RANKING_RESPONSE_FILE, SUMMARY_REQUEST_FILE,
-                  SUMMARY_RESPONSE_FILE, REPORT_FILE, PREVIEW_FILE):
+def request_sha256(request):
+    """Calcula o identificador do pedido sem depender do hash já gravado nele."""
+    payload = dict(request)
+    payload.pop("request_sha256", None)
+    return hashlib.sha256(json.dumps(
+        payload, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+
+
+def clear_work_outputs(include_request=True):
+    paths = [RANKING_RESPONSE_FILE, SUMMARY_REQUEST_FILE, SUMMARY_RESPONSE_FILE,
+             REPORT_FILE, PREVIEW_FILE]
+    if include_request:
+        paths.insert(0, REQUEST_FILE)
+    for stale in paths:
         if stale.exists():
             stale.unlink()
+
+
+def prepare(max_new_per_topic=0):
+    WORK_DIR.mkdir(exist_ok=True)
+    clear_work_outputs()
+    # Falhas de coleta jamais podem deixar uma entrada antiga disponível à Routine.
+    if INPUT_FILE.exists():
+        INPUT_FILE.unlink()
     activate_google_cache()
     state = load_state()
     now = time.time()
@@ -284,19 +303,59 @@ def prepare(max_new_per_topic=0):
                              for (topic, reason), count in sorted(rejected_locally.items())],
         "truncated": truncated, "source_queries": len(sources), "collection": health,
     }
-    request["request_sha256"] = hashlib.sha256(json.dumps(
-        request, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
+    request["request_sha256"] = request_sha256(request)
     live_evaluation_ids = {candidate_id(topic, item) for item in items
                            for topic in item.get("topicos", [])}
     state["evaluations"] = {key: value for key, value in state.get("evaluations", {}).items()
                             if key in live_evaluation_ids}
     salvar_json(STATE_FILE, state)
     salvar_json(REQUEST_FILE, request)
+    salvar_json(INPUT_FILE, request)
     print(json.dumps({"status": "prepared", "request": str(REQUEST_FILE),
         "candidates": len(candidates),
         "needs_evaluation": sum(c["precisa_avaliar"] for c in candidates),
         "cached": sum(not c["precisa_avaliar"] for c in candidates),
         "truncated": truncated, "send_enabled": False}, ensure_ascii=False))
+
+
+def load_input(max_age_hours=6):
+    """Carrega na área de trabalho a coleta feita previamente pelo GitHub Actions."""
+    WORK_DIR.mkdir(exist_ok=True)
+    clear_work_outputs()
+    request = carregar_json(INPUT_FILE, None)
+    if not isinstance(request, dict):
+        raise ValueError("Entrada V2 ausente. Execute antes o workflow de preparação no GitHub.")
+    if request.get("schema") != 1 or request.get("policy_version") != POLICY_VERSION:
+        raise ValueError("Entrada V2 usa schema ou política incompatível com este código.")
+    if request.get("pilot") is not True or request.get("send_enabled") is not False:
+        raise ValueError("Entrada V2 não está marcada como piloto seguro sem envio.")
+    if request.get("request_sha256") != request_sha256(request):
+        raise ValueError("Entrada V2 falhou na verificação de integridade.")
+    generated_at = request.get("generated_at")
+    if not isinstance(generated_at, (int, float)):
+        raise ValueError("Entrada V2 não informa quando foi gerada.")
+    age_seconds = time.time() - generated_at
+    if age_seconds < -300 or age_seconds > max_age_hours * 3600:
+        raise ValueError(f"Entrada V2 fora da janela de {max_age_hours:g} hora(s).")
+    if request.get("truncated"):
+        raise ValueError("Entrada V2 foi truncada; o teste integral foi bloqueado.")
+    collection = request.get("collection")
+    if (not isinstance(collection, dict) or collection.get("queries", 0) <= 0
+            or collection.get("ok", 0) <= 0 or collection.get("failure_ratio", 1) >= 0.8):
+        raise ValueError("Entrada V2 não comprova uma coleta saudável.")
+    if not STATE_FILE.exists():
+        raise ValueError("Estado V2 correspondente à entrada não foi encontrado.")
+    candidates = request.get("candidates")
+    if not isinstance(candidates, list):
+        raise ValueError("Entrada V2 não contém uma lista válida de candidatos.")
+
+    salvar_json(REQUEST_FILE, request)
+    print(json.dumps({"status": "input_loaded", "request": str(REQUEST_FILE),
+        "run_id": request.get("run_id"), "age_minutes": round(age_seconds / 60, 1),
+        "candidates": len(candidates),
+        "needs_evaluation": sum(bool(c.get("precisa_avaliar")) for c in candidates),
+        "cached": sum(not bool(c.get("precisa_avaliar")) for c in candidates),
+        "send_enabled": False}, ensure_ascii=False))
 
 
 def valid_evaluation(row, candidate):
@@ -464,6 +523,7 @@ def finalize(response_path=None):
 def status():
     print(json.dumps({"branch_expected": "v2-claude-routines", "state": STATE_FILE.exists(),
         "preflight": carregar_json(PREFLIGHT_FILE, None),
+        "input": INPUT_FILE.exists(),
         "ranking_request": REQUEST_FILE.exists(), "ranking_response": RANKING_RESPONSE_FILE.exists(),
         "summary_request": SUMMARY_REQUEST_FILE.exists(), "summary_response": SUMMARY_RESPONSE_FILE.exists(),
         "preview": PREVIEW_FILE.exists(), "report": carregar_json(REPORT_FILE, None),
@@ -477,6 +537,9 @@ def main():
     prep = sub.add_parser("prepare")
     prep.add_argument("--max-new-per-topic", type=int, default=0,
                       help="0 processa todos os candidatos; valor positivo limita por tópico")
+    load = sub.add_parser("load-input")
+    load.add_argument("--max-age-hours", type=float, default=6,
+                      help="idade máxima aceita para a coleta preparada pelo GitHub Actions")
     rank = sub.add_parser("validate-ranking")
     rank.add_argument("--response", default=str(RANKING_RESPONSE_FILE))
     summaries = sub.add_parser("finalize")
@@ -487,6 +550,8 @@ def main():
         preflight()
     elif args.command == "prepare":
         prepare(args.max_new_per_topic)
+    elif args.command == "load-input":
+        load_input(args.max_age_hours)
     elif args.command == "validate-ranking":
         validate_ranking(Path(args.response))
     elif args.command == "finalize":

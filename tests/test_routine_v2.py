@@ -26,6 +26,7 @@ class RoutineV2Tests(TestCase):
         root = Path(self.temp.name)
         values = {"STATE_FILE": root / "state.json", "WORK_DIR": root / "work",
                   "GOOGLE_CACHE_FILE": root / "v2_google.json",
+                  "INPUT_FILE": root / "input.json",
                   "REQUEST_FILE": root / "work" / "ranking_request.json",
                   "RANKING_RESPONSE_FILE": root / "work" / "ranking_response.json",
                   "SUMMARY_REQUEST_FILE": root / "work" / "summary_request.json",
@@ -55,6 +56,7 @@ class RoutineV2Tests(TestCase):
              patch.object(v2, "salvar_cache_google"):
             v2.prepare(max_new_per_topic=2)
         request = carregar_json(v2.REQUEST_FILE, {})
+        self.assertEqual(request, carregar_json(v2.INPUT_FILE, {}))
         self.assertFalse(request["send_enabled"])
         self.assertEqual(len(request["candidates"]), 2)
         self.assertEqual(request["truncated"]["data_center"], {
@@ -86,6 +88,7 @@ class RoutineV2Tests(TestCase):
             ])
             return []
 
+        salvar_json(v2.INPUT_FILE, {"old": True})
         with patch.object(v2, "load_state", return_value=self.base_state([])), \
              patch.object(v2, "coletar_itens_novos", side_effect=blocked):
             with self.assertRaisesRegex(RuntimeError, "Coleta indisponível"):
@@ -93,6 +96,7 @@ class RoutineV2Tests(TestCase):
         report = carregar_json(v2.REPORT_FILE, {})
         self.assertEqual(report["status"], "collection_failed")
         self.assertFalse(v2.REQUEST_FILE.exists())
+        self.assertFalse(v2.INPUT_FILE.exists())
 
     def test_zero_cap_processes_all_candidates(self):
         items = [news(i) for i in range(35)]
@@ -130,6 +134,46 @@ class RoutineV2Tests(TestCase):
         request = {"request_sha256": "request", "candidates": candidates}
         salvar_json(v2.REQUEST_FILE, request)
         return request
+
+    def valid_input(self, **changes):
+        request = {"schema": 1, "policy_version": v2.POLICY_VERSION,
+            "run_id": "test", "generated_at": time.time(), "pilot": True,
+            "send_enabled": False, "candidates": [], "truncated": {},
+            "collection": {"queries": 10, "ok": 10, "failure_ratio": 0}}
+        request.update(changes)
+        request["request_sha256"] = v2.request_sha256(request)
+        return request
+
+    def test_load_input_copies_valid_snapshot_to_private_work_area(self):
+        request = self.valid_input(candidates=[{"id": "a", "precisa_avaliar": True}])
+        salvar_json(v2.INPUT_FILE, request)
+        salvar_json(v2.STATE_FILE, self.base_state([]))
+        v2.load_input(max_age_hours=6)
+        self.assertEqual(carregar_json(v2.REQUEST_FILE, {}), request)
+
+    def test_load_input_rejects_stale_snapshot(self):
+        request = self.valid_input(generated_at=time.time() - 7 * 3600)
+        salvar_json(v2.INPUT_FILE, request)
+        salvar_json(v2.STATE_FILE, self.base_state([]))
+        salvar_json(v2.REQUEST_FILE, {"old": True})
+        with self.assertRaisesRegex(ValueError, "fora da janela"):
+            v2.load_input(max_age_hours=6)
+        self.assertFalse(v2.REQUEST_FILE.exists())
+
+    def test_load_input_rejects_tampered_snapshot(self):
+        request = self.valid_input()
+        request["candidates"].append({"id": "adulterado"})
+        salvar_json(v2.INPUT_FILE, request)
+        salvar_json(v2.STATE_FILE, self.base_state([]))
+        with self.assertRaisesRegex(ValueError, "integridade"):
+            v2.load_input()
+
+    def test_load_input_rejects_truncated_snapshot(self):
+        request = self.valid_input(truncated={"data_center": {"novos_incluidos": 20}})
+        salvar_json(v2.INPUT_FILE, request)
+        salvar_json(v2.STATE_FILE, self.base_state([]))
+        with self.assertRaisesRegex(ValueError, "truncada"):
+            v2.load_input()
 
     def candidate(self, item, maximum=False, cached=None):
         cid = v2.candidate_id("data_center", item)
