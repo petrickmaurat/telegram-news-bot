@@ -1,4 +1,5 @@
 name: Preparar entrada V2 (sem IA)
+run-name: Preparar entrada V2 integral — execução ${{ github.run_number }}
 
 on:
   workflow_dispatch:
