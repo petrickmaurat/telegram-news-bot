@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/gazprom-partners-with-crypto-energy-to-deploy-modular-data-center-at-gas-field-in-siberia-report/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/gazprom-partners-with-crypto-energy-to-deploy-modular-data-center-at-gas-field-in-siberia-report/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/gazprom-partners-with-crypto-energy-to-deploy-modular-data-center-at-gas-field-in-siberia-report/",
+    "origem": "INT",
+    "resumo": "<p>The pilot project will utilize gas from a depleted field in the Yamalo-Nenets Autonomous Okrug region</p>",
+    "titulo": "Gazprom partners with Crypto Energy to deploy modular data center at gas field in Siberia - report",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
