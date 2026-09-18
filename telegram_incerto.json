@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/russia-claims-strikes-on-de-novo-data-center-in-kyiv-ukraine/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/russia-claims-strikes-on-de-novo-data-center-in-kyiv-ukraine/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/russia-claims-strikes-on-de-novo-data-center-in-kyiv-ukraine/",
+    "origem": "INT",
+    "resumo": "<p>Strikes were part of a wider infrastructure attack</p>",
+    "titulo": "Russia claims strikes on De Novo data center in Kyiv, Ukraine",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
