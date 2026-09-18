@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://cnbc.com/video/2026/09/18/ntt-global-data-centers-ceo-doug-adams-on-backlash-against-data-centers-in-the-u-s.html",
+    "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOTldZR3JjczE5eTVxZXhKbVh4LXp6UXdER2ZZb1RWQ1hXUkFzdlhJZGc2OTdDVEpydGtTZ0E0M2FhVDMzbWlUQWt2VnJzRi1oWEctZTR0N25zbzBjbUlsaWdBdDR3REI4TTdaVERfdkVCRnRLcDhDNUVqX2ZFelpLYVl3WDI4NHNVaTRGd1dVLUFXcTh5VnVVakFjSXBpMXhXZEtZWUlKT25kWGE0OXZOSmdCYUhFZGtWQmU2UkRILU5KS3M?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://cnbc.com/video/2026/09/18/ntt-global-data-centers-ceo-doug-adams-on-backlash-against-data-centers-in-the-u-s.html",
+      "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOTldZR3JjczE5eTVxZXhKbVh4LXp6UXdER2ZZb1RWQ1hXUkFzdlhJZGc2OTdDVEpydGtTZ0E0M2FhVDMzbWlUQWt2VnJzRi1oWEctZTR0N25zbzBjbUlsaWdBdDR3REI4TTdaVERfdkVCRnRLcDhDNUVqX2ZFelpLYVl3WDI4NHNVaTRGd1dVLUFXcTh5VnVVakFjSXBpMXhXZEtZWUlKT25kWGE0OXZOSmdCYUhFZGtWQmU2UkRILU5KS3M?oc=5"
+    ],
+    "fonte": "CNBC",
+    "link": "https://www.cnbc.com/video/2026/09/18/ntt-global-data-centers-ceo-doug-adams-on-backlash-against-data-centers-in-the-u-s.html",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxOTldZR3JjczE5eTVxZXhKbVh4LXp6UXdER2ZZb1RWQ1hXUkFzdlhJZGc2OTdDVEpydGtTZ0E0M2FhVDMzbWlUQWt2VnJzRi1oWEctZTR0N25zbzBjbUlsaWdBdDR3REI4TTdaVERfdkVCRnRLcDhDNUVqX2ZFelpLYVl3WDI4NHNVaTRGd1dVLUFXcTh5VnVVakFjSXBpMXhXZEtZWUlKT25kWGE0OXZOSmdCYUhFZGtWQmU2UkRILU5KS3M?oc=5\" target=\"_blank\">NTT Global Data Centers CEO Doug Adams on backlash against data centers in the U.S.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+    "titulo": "NTT Global Data Centers CEO Doug Adams on backlash against data centers in the U.S.",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
