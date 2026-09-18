@@ -23,7 +23,7 @@ from common import TOPICOS, coletar_itens_novos, resolver_link_google_news, salv
 from digest_email import FOCO_SETORIAL, VAGAS, montar_html
 from email_articles import enriquecer_fila
 from email_language import idioma_permitido
-from email_policy import IDADE_MAXIMA, recente
+from email_policy import IDADE_MAXIMA, google_pendente, recente
 from email_sources import configuracao_email, fonte_maxima, fonte_prioritaria
 from email_topic import verificar_tema
 from reliability import canonica, carregar_json, identidades, salvar_json
@@ -287,12 +287,17 @@ def prepare(max_new_per_topic=0):
             valid_cache = cached and cached.get("assinatura") == signature
             candidate = {
                 "id": cid, "topico": topic, "titulo": item["titulo"], "fonte": item.get("fonte", ""),
-                "link": canonica(item["link"]), "trecho": clean(item.get("resumo", ""))[:600],
+                "trecho": clean(item.get("resumo", ""))[:600],
                 "publicado_em": item.get("publicado_em"), "fonte_maxima": fonte_maxima(item),
                 "fonte_prioritaria": bool(fonte_prioritaria(item)), "assinatura": signature,
                 "precisa_avaliar": not valid_cache,
                 "avaliacao_cache": cached.get("avaliacao") if valid_cache else None,
             }
+            # O link opaco do Google Noticias pode ter centenas de caracteres
+            # e nao acrescenta informacao editorial. A V1 tambem o omite da IA;
+            # a V2 o resolve somente se a materia chegar a selecao final.
+            if not google_pendente(item):
+                candidate["link"] = canonica(item["link"])
             if valid_cache:
                 if cached["avaliacao"].get("decisao") == "elegivel":
                     cached_candidates.append(candidate)
@@ -465,16 +470,30 @@ def validate_ranking(response_path=None):
                 raise ValueError(f"{topic}/{bucket}: havia {len(eligible)} elegíveis e deveriam ser preenchidas {expected} vagas.")
 
     summary_items = []
-    by_item_key = {item_key(item): item for item in state["items"].values()}
+    by_candidate_id = {}
+    for item in state["items"].values():
+        for topic in item.get("topicos", []):
+            by_candidate_id[candidate_id(topic, item)] = item
+    selected_items = {}
+    for selected in selections:
+        original = by_candidate_id.get(selected["id"])
+        if original is not None:
+            selected_items[selected["id"]] = dict(original)
+    # Resolve somente os poucos finalistas e faz isso em paralelo. Copias
+    # mantem estavel o ID usado pelo cache editorial da coleta atual.
+    resolve_candidates(list(selected_items.values()))
     for selected in selections:
         candidate = candidates[selected["id"]]
-        item = by_item_key.get(candidate["link"])
+        item = selected_items.get(selected["id"])
         if item is None:
             raise ValueError("Texto original de item selecionado não foi localizado.")
+        link = canonica(item.get("link", ""))
+        if not link or google_pendente(item):
+            raise ValueError("Link final de item selecionado nao foi resolvido.")
         body = item.get("artigo", {}).get("texto") or clean(item.get("resumo", ""))
         summary_items.append({"id": selected["id"], "topico": candidate["topico"],
             "bucket": evaluations[selected["id"]]["bucket"], "titulo": candidate["titulo"],
-            "fonte": candidate["fonte"], "link": candidate["link"], "texto": clean(body)[:3000]})
+            "fonte": candidate["fonte"], "link": link, "texto": clean(body)[:3000]})
     summary_request = {"schema": 1, "request_sha256": request["request_sha256"],
                        "items": summary_items}
     summary_request["summary_sha256"] = hashlib.sha256(json.dumps(

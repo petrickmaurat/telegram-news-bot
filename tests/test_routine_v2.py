@@ -136,6 +136,28 @@ class RoutineV2Tests(TestCase):
         self.assertEqual([item["link"] for item in items[:2]], [resolved, resolved])
         self.assertIn(v2.canonica(google), items[0]["aliases"])
 
+    def test_google_link_is_hidden_from_ranking_and_resolved_only_if_selected(self):
+        google = "https://news.google.com/articles/opaque-token"
+        resolved = "https://example.com/materia-final"
+        item = news(1, link=google)
+        with patch.object(v2, "load_state", return_value=self.base_state([])), \
+             patch.object(v2, "coletar_itens_novos", return_value=[item]), \
+             patch.object(v2, "enriquecer_fila"), \
+             patch.object(v2, "salvar_cache_google"):
+            v2.prepare(max_new_per_topic=0)
+        request = carregar_json(v2.REQUEST_FILE, {})
+        candidate = request["candidates"][0]
+        self.assertNotIn("link", candidate)
+        salvar_json(v2.RANKING_RESPONSE_FILE, {"request_sha256": request["request_sha256"],
+            "evaluations": [{"id": candidate["id"], "decisao": "elegivel", "bucket": "BR",
+                             "prioridade": 80, "fato": "projeto"}],
+            "selections": [{"id": candidate["id"], "topico": "data_center", "bucket": "BR"}],
+            "duplicates": {}})
+        with patch.object(v2, "resolver_link_google_news", return_value=resolved):
+            v2.validate_ranking()
+        summary = carregar_json(v2.SUMMARY_REQUEST_FILE, {})
+        self.assertEqual(summary["items"][0]["link"], resolved)
+
     def test_cap_never_starves_new_items_or_discards_cached_eligible(self):
         old, fresh = news(1), news(2)
         old_id = v2.candidate_id("data_center", old)
