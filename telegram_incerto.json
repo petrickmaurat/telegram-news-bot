@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://cnbc.com/video/2026/09/18/middle-east-is-the-worlds-fastest-growing-ai-data-center-market.html",
+    "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQc1Q2U1FSSXVrNDFHc2VQTjljS1Qza000UkI3SmdMT2lkVlJsU29RdGZQNkRpcVN0eTZ3a0dGX3BoWllxNWJKeGZhYy1xR3h4UVhzWFZhYmJMRURkLXdQN1g3N1NMQ0NWNVN2OWdqQXhCNEtQOTAyb2VISXZ3M1RyMHlJY3pyQThtNjRQLUctUlpYSTZ1UnVIZTk0SmxmMlhQdE90VEticHlNUQ?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://cnbc.com/video/2026/09/18/middle-east-is-the-worlds-fastest-growing-ai-data-center-market.html",
+      "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQc1Q2U1FSSXVrNDFHc2VQTjljS1Qza000UkI3SmdMT2lkVlJsU29RdGZQNkRpcVN0eTZ3a0dGX3BoWllxNWJKeGZhYy1xR3h4UVhzWFZhYmJMRURkLXdQN1g3N1NMQ0NWNVN2OWdqQXhCNEtQOTAyb2VISXZ3M1RyMHlJY3pyQThtNjRQLUctUlpYSTZ1UnVIZTk0SmxmMlhQdE90VEticHlNUQ?oc=5"
+    ],
+    "fonte": "cnbc.com",
+    "link": "https://www.cnbc.com/video/2026/09/18/middle-east-is-the-worlds-fastest-growing-ai-data-center-market.html",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQc1Q2U1FSSXVrNDFHc2VQTjljS1Qza000UkI3SmdMT2lkVlJsU29RdGZQNkRpcVN0eTZ3a0dGX3BoWllxNWJKeGZhYy1xR3h4UVhzWFZhYmJMRURkLXdQN1g3N1NMQ0NWNVN2OWdqQXhCNEtQOTAyb2VISXZ3M1RyMHlJY3pyQThtNjRQLUctUlpYSTZ1UnVIZTk0SmxmMlhQdE90VEticHlNUQ?oc=5\" target=\"_blank\">Middle East is the world's fastest-growing AI data center market, says PwC</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">cnbc.com</font>",
+    "titulo": "Middle East is the world's fastest-growing AI data center market, says PwC",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
