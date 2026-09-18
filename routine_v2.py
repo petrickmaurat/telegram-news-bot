@@ -250,7 +250,10 @@ def prepare(max_new_per_topic=0):
              for key, item in state["items"].items()}
     enriquecer_fila(queue, resolver_link_google_news, time.time())
     items = [r["item"] for r in queue.values()]
-    resolve_candidates(items)
+    # Não resolva todo o backlog do Google Notícias aqui. O texto, a fonte e a
+    # data bastam para a curadoria; os poucos selecionados serão resolvidos na
+    # etapa posterior de entrega. O enriquecimento acima continua resolvendo
+    # no máximo MAX_ARTIGOS itens quando precisa abrir o artigo.
     items = dedupe_same_article(items)
     state["items"] = {item_key(item): item for item in items}
     salvar_cache_google()
