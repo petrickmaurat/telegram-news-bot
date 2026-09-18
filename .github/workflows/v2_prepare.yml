@@ -1,0 +1,56 @@
+name: Preparar entrada V2 (sem IA)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: v2-prepare-input
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Baixar a V2
+        uses: actions/checkout@v4
+        with:
+          ref: v2-claude-routines
+          fetch-depth: 0
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Testar a V2
+        run: python -m unittest tests.test_routine_v2 -v
+
+      - name: Verificar acesso às fontes
+        run: python routine_v2.py preflight
+
+      - name: Preparar todos os candidatos sem usar IA
+        run: python routine_v2.py prepare --max-new-per-topic 0
+
+      - name: Validar o arquivo que o Claude receberá
+        run: python routine_v2.py load-input --max-age-hours 2
+
+      - name: Salvar entrada na branch V2
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- routine_v2_input.json routine_v2_state.json routine_v2_google_cache.json routine_v2_preflight.json
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteração de entrada para publicar."
+            exit 0
+          fi
+          git commit -m "Prepara entrada V2 sem IA"
+          git push origin HEAD:v2-claude-routines
