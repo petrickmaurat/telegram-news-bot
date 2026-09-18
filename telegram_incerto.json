@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/marketwatch/the-truth-about-speed-to-power-and-why-it-matters-now-more-than-ever/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/marketwatch/the-truth-about-speed-to-power-and-why-it-matters-now-more-than-ever/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/marketwatch/the-truth-about-speed-to-power-and-why-it-matters-now-more-than-ever/",
+    "origem": "INT",
+    "resumo": "<p>How microgrid integrated control technology changes the power game for data centers</p>",
+    "titulo": "Sponsored: The truth about speed to power – and why it matters now more than ever",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
