@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOQlFJNndIamduaXZzUmhqdjNWbXF6YUZaeFNDa3h3TFdTVFJlanptdmZaaEhrRkFYcWNseHh0cmRMTlZOdk1aN1FpM0wxT0ZiLUJzR3MxMHFIcDloSkxmVm4wMFFJeTYzQWVoWGhpdFJhUTdiekVhaVNoSWh0YVVzaktudmlNbDItOEktam5fYkxmc05PZVJoaEhYa3N6M1RsSGp4YUVSVzlodDVmTVNkMFNFdkc5S3ln?oc=5",
+    "https://politico.com/newsletters/west-wing-playbook-remaking-government/2026/09/18/the-data-center-dance-01084642"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOQlFJNndIamduaXZzUmhqdjNWbXF6YUZaeFNDa3h3TFdTVFJlanptdmZaaEhrRkFYcWNseHh0cmRMTlZOdk1aN1FpM0wxT0ZiLUJzR3MxMHFIcDloSkxmVm4wMFFJeTYzQWVoWGhpdFJhUTdiekVhaVNoSWh0YVVzaktudmlNbDItOEktam5fYkxmc05PZVJoaEhYa3N6M1RsSGp4YUVSVzlodDVmTVNkMFNFdkc5S3ln?oc=5",
+      "https://politico.com/newsletters/west-wing-playbook-remaking-government/2026/09/18/the-data-center-dance-01084642"
+    ],
+    "fonte": "Politico",
+    "link": "https://www.politico.com/newsletters/west-wing-playbook-remaking-government/2026/09/18/the-data-center-dance-01084642",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOQlFJNndIamduaXZzUmhqdjNWbXF6YUZaeFNDa3h3TFdTVFJlanptdmZaaEhrRkFYcWNseHh0cmRMTlZOdk1aN1FpM0wxT0ZiLUJzR3MxMHFIcDloSkxmVm4wMFFJeTYzQWVoWGhpdFJhUTdiekVhaVNoSWh0YVVzaktudmlNbDItOEktam5fYkxmc05PZVJoaEhYa3N6M1RsSGp4YUVSVzlodDVmTVNkMFNFdkc5S3ln?oc=5\" target=\"_blank\">The data center dance</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Politico</font>",
+    "titulo": "The data center dance",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
