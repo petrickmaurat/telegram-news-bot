@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMijAFBVV95cUxQS2QwR2dBdG9ENGpOMUI4dXozZmRzdEhMLTZJQjIxV3lPdmhNR1dEVlR1amd4Ym54eVJRaDhLMVNnRW9nWlFBcE8xN3lJX3RvLXJCVXRCUHdwOEU0RjV0VFFFTEFpbldVUVdDMlRxLVkyekZhM1QtTE5vcmlYRVJZQVVpRldFUnVQenhPeg?oc=5",
+    "https://politico.com/news/2026/09/18/lombardo-nevada-data-centers-order-01083668"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMijAFBVV95cUxQS2QwR2dBdG9ENGpOMUI4dXozZmRzdEhMLTZJQjIxV3lPdmhNR1dEVlR1amd4Ym54eVJRaDhLMVNnRW9nWlFBcE8xN3lJX3RvLXJCVXRCUHdwOEU0RjV0VFFFTEFpbldVUVdDMlRxLVkyekZhM1QtTE5vcmlYRVJZQVVpRldFUnVQenhPeg?oc=5",
+      "https://politico.com/news/2026/09/18/lombardo-nevada-data-centers-order-01083668"
+    ],
+    "fonte": "politico.com",
+    "link": "https://www.politico.com/news/2026/09/18/lombardo-nevada-data-centers-order-01083668",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQS2QwR2dBdG9ENGpOMUI4dXozZmRzdEhMLTZJQjIxV3lPdmhNR1dEVlR1amd4Ym54eVJRaDhLMVNnRW9nWlFBcE8xN3lJX3RvLXJCVXRCUHdwOEU0RjV0VFFFTEFpbldVUVdDMlRxLVkyekZhM1QtTE5vcmlYRVJZQVVpRldFUnVQenhPeg?oc=5\" target=\"_blank\">As data center backlash grows, another GOP governor draws a line</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">politico.com</font>",
+    "titulo": "As data center backlash grows, another GOP governor draws a line",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
