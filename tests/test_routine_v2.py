@@ -65,11 +65,12 @@ class RoutineV2Tests(TestCase):
     def test_prepare_uses_more_feed_workers_only_in_v2(self):
         with patch.object(v2, "load_state", return_value=self.base_state([])), \
              patch.object(v2, "coletar_itens_novos", return_value=[]) as collect, \
-             patch.object(v2, "enriquecer_fila"), \
+             patch.object(v2, "enriquecer_fila") as enrich, \
              patch.object(v2, "resolve_candidates") as resolve_all, \
              patch.object(v2, "salvar_cache_google"):
             v2.prepare(max_new_per_topic=0)
         self.assertEqual(collect.call_args.kwargs["feed_workers"], 8)
+        self.assertEqual(enrich.call_args.kwargs["max_workers"], 8)
         resolve_all.assert_not_called()
 
     def test_preflight_requires_google_and_direct_feed(self):

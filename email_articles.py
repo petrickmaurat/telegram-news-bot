@@ -2,6 +2,7 @@
 import datetime
 import json
 import re
+from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import urlsplit
 from html import unescape
 from html.parser import HTMLParser
@@ -111,16 +112,25 @@ def complementar(item, resolver, agora):
         resultado["motivo"] = str(erro)
 
 
-def enriquecer_fila(fila, resolver, agora):
+def enriquecer_fila(fila, resolver, agora, max_workers=1):
     candidatos = [r["item"] for r in fila.values() if r["status"] == "pendente"
         and (r["item"].get("publicado_em") is None or recente(r["item"], agora))
         and (r["item"].get("publicado_em") is None or texto_curto(r["item"]))]
     candidatos.sort(key=lambda i: i.get("artigo", {}).get("tentado_em", 0))
-    tentativas = 0
+    selecionados = []
     for item in candidatos:
         if item.get("artigo", {}).get("tentado_em", 0) + INTERVALO > agora:
             continue
-        if tentativas >= MAX_ARTIGOS:
+        if len(selecionados) >= MAX_ARTIGOS:
             break
-        complementar(item, resolver, agora)
-        tentativas += 1
+        selecionados.append(item)
+
+    # A V1 preserva a execucao sequencial por padrao. A V2 pode paralelizar
+    # somente as mesmas consultas ja selecionadas acima; isso reduz espera de
+    # rede sem mudar quais artigos recebem texto/data complementar.
+    if max_workers <= 1 or len(selecionados) <= 1:
+        for item in selecionados:
+            complementar(item, resolver, agora)
+        return
+    with ThreadPoolExecutor(max_workers=min(max_workers, len(selecionados))) as pool:
+        list(pool.map(lambda item: complementar(item, resolver, agora), selecionados))

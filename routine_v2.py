@@ -248,7 +248,7 @@ def prepare(max_new_per_topic=0):
     # Enriquece uma cópia da fila; não chama qualquer modelo de IA.
     queue = {key: {"item": item, "status": "pendente"}
              for key, item in state["items"].items()}
-    enriquecer_fila(queue, resolver_link_google_news, time.time())
+    enriquecer_fila(queue, resolver_link_google_news, time.time(), max_workers=8)
     items = [r["item"] for r in queue.values()]
     # Não resolva todo o backlog do Google Notícias aqui. O texto, a fonte e a
     # data bastam para a curadoria; os poucos selecionados serão resolvidos na
