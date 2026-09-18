@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/br/not%C3%ADcias/epe-alerta-para-trabalho-dobrado-causado-por-duplicidade-em-pedidos-de-conex%C3%A3o-de-data-centers/",
+    "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQRVRnTzVQSk4yWno5MWRRd2J4R1c2N21ib3BxOHoyRXotZUJCbEltV2pWN3J2bnFENGh5VFMwNmZGaWgtS3ZCMWp6V2d1N1hJOW9IX3g3Z0ctRmtUY1hTY0xES0I0dlh6VEs4NDRPVGtNdTZqVTdyQkZHVXR4TFNjWkZGVG54WHE0NWZHOFJfZ0pFcjQ3ck8yRTlGV18zRkMyYUx4ZTQ1bjl0VE94QWVpMTdxVHdkR2VFMzllZ3RkR3RVSXlTYmowcnZMdnRTRmlmZEhNeGRUSHNrV21HVHljcGN3VjhrdTA?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/br/not%C3%ADcias/epe-alerta-para-trabalho-dobrado-causado-por-duplicidade-em-pedidos-de-conex%C3%A3o-de-data-centers/",
+      "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQRVRnTzVQSk4yWno5MWRRd2J4R1c2N21ib3BxOHoyRXotZUJCbEltV2pWN3J2bnFENGh5VFMwNmZGaWgtS3ZCMWp6V2d1N1hJOW9IX3g3Z0ctRmtUY1hTY0xES0I0dlh6VEs4NDRPVGtNdTZqVTdyQkZHVXR4TFNjWkZGVG54WHE0NWZHOFJfZ0pFcjQ3ck8yRTlGV18zRkMyYUx4ZTQ1bjl0VE94QWVpMTdxVHdkR2VFMzllZ3RkR3RVSXlTYmowcnZMdnRTRmlmZEhNeGRUSHNrV21HVHljcGN3VjhrdTA?oc=5"
+    ],
+    "fonte": "Data Center Dynamics",
+    "link": "https://www.datacenterdynamics.com/br/not%C3%ADcias/epe-alerta-para-trabalho-dobrado-causado-por-duplicidade-em-pedidos-de-conex%C3%A3o-de-data-centers/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMi5wFBVV95cUxQRVRnTzVQSk4yWno5MWRRd2J4R1c2N21ib3BxOHoyRXotZUJCbEltV2pWN3J2bnFENGh5VFMwNmZGaWgtS3ZCMWp6V2d1N1hJOW9IX3g3Z0ctRmtUY1hTY0xES0I0dlh6VEs4NDRPVGtNdTZqVTdyQkZHVXR4TFNjWkZGVG54WHE0NWZHOFJfZ0pFcjQ3ck8yRTlGV18zRkMyYUx4ZTQ1bjl0VE94QWVpMTdxVHdkR2VFMzllZ3RkR3RVSXlTYmowcnZMdnRTRmlmZEhNeGRUSHNrV21HVHljcGN3VjhrdTA?oc=5\" target=\"_blank\">EPE alerta para “trabalho dobrado” causado por duplicidade em pedidos de conexão de data centers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Data Center Dynamics</font>",
+    "titulo": "EPE alerta para “trabalho dobrado” causado por duplicidade em pedidos de conexão de data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
