@@ -289,10 +289,11 @@ def prepare(max_new_per_topic=0):
                 "id": cid, "topico": topic, "titulo": item["titulo"], "fonte": item.get("fonte", ""),
                 "trecho": clean(item.get("resumo", ""))[:600],
                 "publicado_em": item.get("publicado_em"), "fonte_maxima": fonte_maxima(item),
-                "fonte_prioritaria": bool(fonte_prioritaria(item)), "assinatura": signature,
+                "fonte_prioritaria": bool(fonte_prioritaria(item)),
                 "precisa_avaliar": not valid_cache,
-                "avaliacao_cache": cached.get("avaliacao") if valid_cache else None,
             }
+            if valid_cache:
+                candidate["avaliacao_cache"] = cached["avaliacao"]
             # O link opaco do Google Noticias pode ter centenas de caracteres
             # e nao acrescenta informacao editorial. A V1 tambem o omite da IA;
             # a V2 o resolve somente se a materia chegar a selecao final.
@@ -408,12 +409,20 @@ def validate_ranking(response_path=None):
         raise ValueError(f"A resposta deve cobrir exatamente os {len(required)} candidatos novos.")
 
     state = load_state()
+    by_candidate_id = {}
+    for item in state["items"].values():
+        for topic in item.get("topicos", []):
+            by_candidate_id[candidate_id(topic, item)] = item
     evaluations = {}
     for cid, candidate in candidates.items():
         if candidate["precisa_avaliar"]:
             evaluation = valid_evaluation(supplied[cid], candidate)
+            original = by_candidate_id.get(cid)
+            if original is None:
+                raise ValueError("Item original de candidato nao foi localizado.")
             state.setdefault("evaluations", {})[cid] = {
-                "assinatura": candidate["assinatura"], "avaliacao": evaluation}
+                "assinatura": evaluation_signature(candidate["topico"], original),
+                "avaliacao": evaluation}
         else:
             evaluation = candidate["avaliacao_cache"]
         evaluations[cid] = evaluation
@@ -470,10 +479,6 @@ def validate_ranking(response_path=None):
                 raise ValueError(f"{topic}/{bucket}: havia {len(eligible)} elegíveis e deveriam ser preenchidas {expected} vagas.")
 
     summary_items = []
-    by_candidate_id = {}
-    for item in state["items"].values():
-        for topic in item.get("topicos", []):
-            by_candidate_id[candidate_id(topic, item)] = item
     selected_items = {}
     for selected in selections:
         original = by_candidate_id.get(selected["id"])
