@@ -1,0 +1,30 @@
+{
+  "generated_at": 1789747223.7817879,
+  "status": "network_ready",
+  "targets": [
+    {
+      "bytes": 150005,
+      "group": "buscador",
+      "name": "google_news",
+      "ok": true,
+      "status_code": 200,
+      "url": "https://news.google.com/rss/search?q=%22data+center%22+OR+%22data+centers%22+OR+%22centro+de+dados%22&hl=pt-BR&gl=BR&ceid=BR:pt-BR"
+    },
+    {
+      "bytes": 24400,
+      "group": "rss_direto",
+      "name": "megawhat",
+      "ok": true,
+      "status_code": 200,
+      "url": "https://megawhat.uol.com.br/feed/"
+    },
+    {
+      "bytes": 13618,
+      "group": "rss_direto",
+      "name": "data_center_dynamics",
+      "ok": true,
+      "status_code": 200,
+      "url": "https://www.datacenterdynamics.com/en/rss/"
+    }
+  ]
+}
