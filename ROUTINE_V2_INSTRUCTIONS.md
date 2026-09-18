@@ -81,3 +81,8 @@ ou sites de notícias nesta Routine e não execute `preflight` nem `prepare`.
 
 Se qualquer etapa não puder ser concluída, preserve os arquivos e informe o
 erro. Não substitua análise ausente por seleção automática.
+
+Uma falha no `git push` depois de `finalize` não invalida a curadoria, o
+relatório nem a prévia. Nesse caso, encerre a execução como piloto concluído e
+informe separadamente que somente a persistência do cache ficou pendente por
+falta de permissão de escrita no GitHub.
