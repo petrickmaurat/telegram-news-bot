@@ -115,6 +115,16 @@ class RoutineV2Tests(TestCase):
         self.assertEqual(v2.common._CACHE_GOOGLE_FILE, str(v2.GOOGLE_CACHE_FILE))
         self.assertNotEqual(v2.common._CACHE_GOOGLE_FILE, original)
 
+    def test_google_resolution_reuses_one_parallel_call_for_duplicate_urls(self):
+        google = "https://news.google.com/articles/same"
+        resolved = "https://example.com/materia"
+        items = [news(1, link=google), news(2, link=google), news(3)]
+        with patch.object(v2, "resolver_link_google_news", return_value=resolved) as resolver:
+            v2.resolve_candidates(items)
+        resolver.assert_called_once_with(google)
+        self.assertEqual([item["link"] for item in items[:2]], [resolved, resolved])
+        self.assertIn(v2.canonica(google), items[0]["aliases"])
+
     def test_cap_never_starves_new_items_or_discards_cached_eligible(self):
         old, fresh = news(1), news(2)
         old_id = v2.candidate_id("data_center", old)

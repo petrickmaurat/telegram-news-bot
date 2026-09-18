@@ -12,6 +12,7 @@ import os
 import re
 import time
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 from html import unescape
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -117,12 +118,22 @@ def merge_item(existing, incoming):
 
 
 def resolve_candidates(items):
+    pending = {}
     for item in items:
         if urlsplit(canonica(item.get("link", ""))).hostname != "news.google.com":
             continue
-        old_ids = identidades(item)
-        resolved = resolver_link_google_news(item["link"])
-        if canonica(resolved) and urlsplit(canonica(resolved)).hostname != "news.google.com":
+        pending.setdefault(item["link"], []).append(item)
+
+    # A função e o cache são os mesmos da coleta sequencial. Paralelizamos
+    # apenas URLs distintas; isso reduz o tempo sem alterar decisões editoriais.
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        resolved_by_link = dict(zip(pending, pool.map(resolver_link_google_news, pending)))
+    for original, matching_items in pending.items():
+        resolved = resolved_by_link[original]
+        if not canonica(resolved) or urlsplit(canonica(resolved)).hostname == "news.google.com":
+            continue
+        for item in matching_items:
+            old_ids = identidades(item)
             item["link"] = resolved
             item["aliases"] = sorted(old_ids | identidades(item))
 
