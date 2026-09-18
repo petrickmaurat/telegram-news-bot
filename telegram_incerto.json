@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMijgFBVV95cUxNM0xCYnRELXVkQWcwdy0tWHhRakhDT0JNRmdGN1lhR0NIdGRGaGxrRWUwcEVKZUlPckQ2U3BJWFZwQ1AxVUxjbkxTeDF6UDAzRTdTdVdkOG5YbFhnOGY1a0V4RDZpUWRwejNVWS1SbU1HOE92WERDNTJPdzZ5V0VocTUtTVBEOHFremw3NzRB?oc=5",
+    "https://politico.com/news/2026/09/18/florida-jolly-virginia-data-centers-01084693"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMijgFBVV95cUxNM0xCYnRELXVkQWcwdy0tWHhRakhDT0JNRmdGN1lhR0NIdGRGaGxrRWUwcEVKZUlPckQ2U3BJWFZwQ1AxVUxjbkxTeDF6UDAzRTdTdVdkOG5YbFhnOGY1a0V4RDZpUWRwejNVWS1SbU1HOE92WERDNTJPdzZ5V0VocTUtTVBEOHFremw3NzRB?oc=5",
+      "https://politico.com/news/2026/09/18/florida-jolly-virginia-data-centers-01084693"
+    ],
+    "fonte": "Politico",
+    "link": "https://www.politico.com/news/2026/09/18/florida-jolly-virginia-data-centers-01084693",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNM0xCYnRELXVkQWcwdy0tWHhRakhDT0JNRmdGN1lhR0NIdGRGaGxrRWUwcEVKZUlPckQ2U3BJWFZwQ1AxVUxjbkxTeDF6UDAzRTdTdVdkOG5YbFhnOGY1a0V4RDZpUWRwejNVWS1SbU1HOE92WERDNTJPdzZ5V0VocTUtTVBEOHFremw3NzRB?oc=5\" target=\"_blank\">Florida’s governor race heads to Virginia, as Jolly highlights data center debate</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Politico</font>",
+    "titulo": "Florida’s governor race heads to Virginia, as Jolly highlights data center debate",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
