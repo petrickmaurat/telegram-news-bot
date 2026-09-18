@@ -2,6 +2,11 @@ name: Preparar entrada V2 (sem IA)
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/v2_prepare.yml
 
 permissions:
   contents: write
