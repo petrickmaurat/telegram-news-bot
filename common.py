@@ -188,7 +188,8 @@ def resolver_link_google_news(link: str) -> str:
     return link
 
 
-def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True, configuracao=None, relatorio_fontes=None) -> list:
+def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True,
+                        configuracao=None, relatorio_fontes=None, feed_workers: int = 4) -> list:
     """
     Lê os feeds dos tópicos pedidos e devolve os itens ainda não
     vistos. Não modifica `ja_vistos`.
@@ -210,7 +211,7 @@ def coletar_itens_novos(ja_vistos: set, topicos=None, resolver: bool = True, con
     feeds_cache = {}
     if not resolver:
         urls = list(dict.fromkeys(f["url"] for t in alvos for f in configuracao[t]["feeds"]))
-        with ThreadPoolExecutor(max_workers=4) as pool:
+        with ThreadPoolExecutor(max_workers=max(1, feed_workers)) as pool:
             feeds_cache = dict(zip(urls, pool.map(_parse_feed, urls)))
 
     for topico in alvos:

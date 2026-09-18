@@ -126,7 +126,7 @@ def resolve_candidates(items):
 
     # A função e o cache são os mesmos da coleta sequencial. Paralelizamos
     # apenas URLs distintas; isso reduz o tempo sem alterar decisões editoriais.
-    with ThreadPoolExecutor(max_workers=4) as pool:
+    with ThreadPoolExecutor(max_workers=12) as pool:
         resolved_by_link = dict(zip(pending, pool.map(resolver_link_google_news, pending)))
     for original, matching_items in pending.items():
         resolved = resolved_by_link[original]
@@ -231,7 +231,8 @@ def prepare(max_new_per_topic=0):
     sent = {canonica(x) for x in state.get("sent", [])}
     sources = []
     collected = coletar_itens_novos(sent, resolver=False,
-        configuracao=configuracao_email(TOPICOS), relatorio_fontes=sources)
+        configuracao=configuracao_email(TOPICOS), relatorio_fontes=sources,
+        feed_workers=8)
     health = collection_health(sources)
     if sources and (health["ok"] == 0 or health["failure_ratio"] >= 0.8):
         report = {"status": "collection_failed", "send_enabled": False,

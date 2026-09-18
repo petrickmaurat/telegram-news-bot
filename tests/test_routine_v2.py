@@ -62,6 +62,13 @@ class RoutineV2Tests(TestCase):
         self.assertEqual(request["truncated"]["data_center"], {
             "novos_incluidos": 2, "novos_aptos": 3, "elegiveis_em_cache": 0})
 
+    def test_prepare_uses_more_feed_workers_only_in_v2(self):
+        with patch.object(v2, "load_state", return_value=self.base_state([])), \
+             patch.object(v2, "coletar_itens_novos", return_value=[]) as collect, \
+             patch.object(v2, "enriquecer_fila"), patch.object(v2, "salvar_cache_google"):
+            v2.prepare(max_new_per_topic=0)
+        self.assertEqual(collect.call_args.kwargs["feed_workers"], 8)
+
     def test_preflight_requires_google_and_direct_feed(self):
         responses = [SimpleNamespace(status_code=200, content=b"rss", ok=True),
                      SimpleNamespace(status_code=403, content=b"", ok=False),
