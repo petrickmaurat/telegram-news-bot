@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMimwFBVV95cUxPR0Q3V3IzT1BweTU3bDdKaG5oS3g0RVFnMEF4X2ZmQUhwMDAxU1g3TnAxXzZLYllmeENJaS1OMk91eF9vamJuYzdnam5yeFphZkI2bzF1NGp4RkMxQnpRbmlPY0NnUXAwMVRZR1JoLWIwQkxQdURTdHl4eGlrVVZNVU5WSFVJa2YtaUhBOVVkTjktMXA2YTk2YWRkcw?oc=5",
+    "https://tiinside.com.br/18/09/2026/entidades-pedem-ao-confaz-reducao-do-icms-para-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMimwFBVV95cUxPR0Q3V3IzT1BweTU3bDdKaG5oS3g0RVFnMEF4X2ZmQUhwMDAxU1g3TnAxXzZLYllmeENJaS1OMk91eF9vamJuYzdnam5yeFphZkI2bzF1NGp4RkMxQnpRbmlPY0NnUXAwMVRZR1JoLWIwQkxQdURTdHl4eGlrVVZNVU5WSFVJa2YtaUhBOVVkTjktMXA2YTk2YWRkcw?oc=5",
+      "https://tiinside.com.br/18/09/2026/entidades-pedem-ao-confaz-reducao-do-icms-para-data-centers/"
+    ],
+    "fonte": "TI INSIDE Online",
+    "link": "https://tiinside.com.br/18/09/2026/entidades-pedem-ao-confaz-reducao-do-icms-para-data-centers/",
+    "origem": "BR",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPR0Q3V3IzT1BweTU3bDdKaG5oS3g0RVFnMEF4X2ZmQUhwMDAxU1g3TnAxXzZLYllmeENJaS1OMk91eF9vamJuYzdnam5yeFphZkI2bzF1NGp4RkMxQnpRbmlPY0NnUXAwMVRZR1JoLWIwQkxQdURTdHl4eGlrVVZNVU5WSFVJa2YtaUhBOVVkTjktMXA2YTk2YWRkcw?oc=5\" target=\"_blank\">Entidades pedem ao Confaz redução do ICMS para Data Centers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TI INSIDE Online</font>",
+    "titulo": "Entidades pedem ao Confaz redução do ICMS para Data Centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
