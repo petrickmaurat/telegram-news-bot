@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://cnbc.com/2026/09/05/ai-data-centers-cost-economy.html",
+    "https://news.google.com/rss/articles/CBMic0FVX3lxTFBwLVVsX3VUZ3lBT1R4REFEY3RQTHF5SEQtVWxNSDhtalFvZGp2WHl3UEZPb1c4UDY3U3VaZWFGRmdQNW9LYTJGRHBLUW56SFJhZ2hNNFIxRC04WElZV0VtYkdnWk5TTXNaTXp6ZnRselJMOUXSAXhBVV95cUxPWW5SaEZRRjBWNnRuamh1SEhWQnY3UnVOS0FuXzl2dVFINW9xbVYxSWJQTFAzcmR4RkZDb2xkbGw1NElVbVVjU3prLTMtc3dPNFpuNTRxZDBrZ3M1NFNLdEppNXdjM3kxV0N1ZkZrVmNWOHRuTnVWOTc?oc=5"
+  ],
+  "item": {
+    "aliases": [
+      "https://cnbc.com/2026/09/05/ai-data-centers-cost-economy.html",
+      "https://news.google.com/rss/articles/CBMic0FVX3lxTFBwLVVsX3VUZ3lBT1R4REFEY3RQTHF5SEQtVWxNSDhtalFvZGp2WHl3UEZPb1c4UDY3U3VaZWFGRmdQNW9LYTJGRHBLUW56SFJhZ2hNNFIxRC04WElZV0VtYkdnWk5TTXNaTXp6ZnRselJMOUXSAXhBVV95cUxPWW5SaEZRRjBWNnRuamh1SEhWQnY3UnVOS0FuXzl2dVFINW9xbVYxSWJQTFAzcmR4RkZDb2xkbGw1NElVbVVjU3prLTMtc3dPNFpuNTRxZDBrZ3M1NFNLdEppNXdjM3kxV0N1ZkZrVmNWOHRuTnVWOTc?oc=5"
+    ],
+    "fonte": "CNBC",
+    "link": "https://www.cnbc.com/2026/09/05/ai-data-centers-cost-economy.html",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTFBwLVVsX3VUZ3lBT1R4REFEY3RQTHF5SEQtVWxNSDhtalFvZGp2WHl3UEZPb1c4UDY3U3VaZWFGRmdQNW9LYTJGRHBLUW56SFJhZ2hNNFIxRC04WElZV0VtYkdnWk5TTXNaTXp6ZnRselJMOUXSAXhBVV95cUxPWW5SaEZRRjBWNnRuamh1SEhWQnY3UnVOS0FuXzl2dVFINW9xbVYxSWJQTFAzcmR4RkZDb2xkbGw1NElVbVVjU3prLTMtc3dPNFpuNTRxZDBrZ3M1NFNLdEppNXdjM3kxV0N1ZkZrVmNWOHRuTnVWOTc?oc=5\" target=\"_blank\">Many truckers don't feel like the rest of America about AI data centers as business booms</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+    "titulo": "Many truckers don't feel like the rest of America about AI data centers as business booms",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
