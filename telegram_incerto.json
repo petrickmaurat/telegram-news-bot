@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMilgFBVV95cUxQNTJXWWZZdzVTTGtMeTRScktXTjFvUEo1Rmd0SXVVeDc3X0VhZXJqX3pMTWZRcklSTlFlOUZxTk9NY0VRSUJNNFBfTjlRbnlDUWZIeUxETUNMbjNLb0lnUkIyTDl0RmtLYkZlTXNEZFFlOW03M1V6OEdtcHQ2YjZQQzJHZFFSSEkxcGZsdlB3MGFwUmRVMUE?oc=5",
+    "https://wsj.com/business/what-its-like-to-work-in-one-of-americas-data-centers-b4358003"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMilgFBVV95cUxQNTJXWWZZdzVTTGtMeTRScktXTjFvUEo1Rmd0SXVVeDc3X0VhZXJqX3pMTWZRcklSTlFlOUZxTk9NY0VRSUJNNFBfTjlRbnlDUWZIeUxETUNMbjNLb0lnUkIyTDl0RmtLYkZlTXNEZFFlOW03M1V6OEdtcHQ2YjZQQzJHZFFSSEkxcGZsdlB3MGFwUmRVMUE?oc=5",
+      "https://wsj.com/business/what-its-like-to-work-in-one-of-americas-data-centers-b4358003"
+    ],
+    "fonte": "WSJ",
+    "link": "https://www.wsj.com/business/what-its-like-to-work-in-one-of-americas-data-centers-b4358003",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQNTJXWWZZdzVTTGtMeTRScktXTjFvUEo1Rmd0SXVVeDc3X0VhZXJqX3pMTWZRcklSTlFlOUZxTk9NY0VRSUJNNFBfTjlRbnlDUWZIeUxETUNMbjNLb0lnUkIyTDl0RmtLYkZlTXNEZFFlOW03M1V6OEdtcHQ2YjZQQzJHZFFSSEkxcGZsdlB3MGFwUmRVMUE?oc=5\" target=\"_blank\">What It’s Like to Work in One of America’s Data Centers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>",
+    "titulo": "What It’s Like to Work in One of America’s Data Centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
