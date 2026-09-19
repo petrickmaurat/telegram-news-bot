@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVFpJSnRiVG5vbTNvcmd4RlFQdkFTMUxTQ0RvcVg3TTBuMGF5OEtHWlViYkNrREx4Z1R6OGRXSUNSU3NPYXUwMFZSZTBGV0V5UTVXWXJ5VmxzRWdlQ1I4WVc3VURhV3V3bzFKTkF4WHZCQTJET0dONEJaSkNUeTBCOHJBb3p1R3ZRbEJaUXpYNC05MlJhaEdQV1l5eHc?oc=5",
+    "https://politico.com/news/2026/09/18/amazon-data-center-north-carolina-energy-trump-01084934"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVFpJSnRiVG5vbTNvcmd4RlFQdkFTMUxTQ0RvcVg3TTBuMGF5OEtHWlViYkNrREx4Z1R6OGRXSUNSU3NPYXUwMFZSZTBGV0V5UTVXWXJ5VmxzRWdlQ1I4WVc3VURhV3V3bzFKTkF4WHZCQTJET0dONEJaSkNUeTBCOHJBb3p1R3ZRbEJaUXpYNC05MlJhaEdQV1l5eHc?oc=5",
+      "https://politico.com/news/2026/09/18/amazon-data-center-north-carolina-energy-trump-01084934"
+    ],
+    "fonte": "politico.com",
+    "link": "https://www.politico.com/news/2026/09/18/amazon-data-center-north-carolina-energy-trump-01084934",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOVFpJSnRiVG5vbTNvcmd4RlFQdkFTMUxTQ0RvcVg3TTBuMGF5OEtHWlViYkNrREx4Z1R6OGRXSUNSU3NPYXUwMFZSZTBGV0V5UTVXWXJ5VmxzRWdlQ1I4WVc3VURhV3V3bzFKTkF4WHZCQTJET0dONEJaSkNUeTBCOHJBb3p1R3ZRbEJaUXpYNC05MlJhaEdQV1l5eHc?oc=5\" target=\"_blank\">Citing Trump, GOP regulators reject gas plant for Amazon data center</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">politico.com</font>",
+    "titulo": "Citing Trump, GOP regulators reject gas plant for Amazon data center",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
