@@ -265,9 +265,9 @@ TEMA = {
 }
 
 
-def _card_noticia(item: dict, tema: dict) -> str:
+def _card_noticia(item: dict, tema: dict, permitir_google: bool = False) -> str:
     link = canonica(item.get("link", ""))
-    if not link or google_pendente({"link": link}):
+    if not link or (google_pendente({"link": link}) and not permitir_google):
         raise ValueError("Link de notícia inválido ou não resolvido")
     # Cópia: dados externos nunca podem virar marcação ou atributos do e-mail.
     item = {**item, "link": escape(link, quote=True),
@@ -297,7 +297,7 @@ def _card_noticia(item: dict, tema: dict) -> str:
       </td></tr>"""
 
 
-def _secao_topico(topico: str, grupos: dict) -> str:
+def _secao_topico(topico: str, grupos: dict, permitir_google: bool = False) -> str:
     tema = TEMA[topico]
     rotulo = TOPICOS[topico]["rotulo"]
     total = len(grupos["BR"]) + len(grupos["US"])
@@ -325,14 +325,14 @@ def _secao_topico(topico: str, grupos: dict) -> str:
                     color:{tema['cor']}">{rotulos_bucket[bucket]}</span>
             </td></tr>"""
         )
-        partes.extend(_card_noticia(item, tema) for item in grupos[bucket])
+        partes.extend(_card_noticia(item, tema, permitir_google) for item in grupos[bucket])
     return "".join(partes)
 
 
-def montar_html(selecao: dict, momento: str) -> str:
+def montar_html(selecao: dict, momento: str, permitir_google: bool = False) -> str:
     momento = escape(str(momento), quote=True)
     secoes = "".join(
-        _secao_topico(t, selecao[t])
+        _secao_topico(t, selecao[t], permitir_google)
         for t in ORDEM_TOPICOS
         if selecao.get(t) and (selecao[t]["BR"] or selecao[t]["US"])
     )

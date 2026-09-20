@@ -136,9 +136,8 @@ class RoutineV2Tests(TestCase):
         self.assertEqual([item["link"] for item in items[:2]], [resolved, resolved])
         self.assertIn(v2.canonica(google), items[0]["aliases"])
 
-    def test_google_link_is_hidden_from_ranking_and_resolved_only_if_selected(self):
+    def test_google_link_is_hidden_from_ranking_and_does_not_block_validation(self):
         google = "https://news.google.com/articles/opaque-token"
-        resolved = "https://example.com/materia-final"
         item = news(1, link=google)
         with patch.object(v2, "load_state", return_value=self.base_state([])), \
              patch.object(v2, "coletar_itens_novos", return_value=[item]), \
@@ -153,10 +152,11 @@ class RoutineV2Tests(TestCase):
                              "prioridade": 80, "fato": "projeto"}],
             "selections": [{"id": candidate["id"], "topico": "data_center", "bucket": "BR"}],
             "duplicates": {}})
-        with patch.object(v2, "resolver_link_google_news", return_value=resolved):
+        with patch.object(v2, "resolve_candidates") as resolve:
             v2.validate_ranking()
+        resolve.assert_not_called()
         summary = carregar_json(v2.SUMMARY_REQUEST_FILE, {})
-        self.assertEqual(summary["items"][0]["link"], resolved)
+        self.assertEqual(summary["items"][0]["link"], google)
 
     def test_cap_never_starves_new_items_or_discards_cached_eligible(self):
         old, fresh = news(1), news(2)
@@ -288,3 +288,21 @@ class RoutineV2Tests(TestCase):
         self.assertTrue(v2.PREVIEW_FILE.exists())
         self.assertFalse(carregar_json(v2.REPORT_FILE, {})["send_enabled"])
         self.assertIn("Ler matéria completa", v2.PREVIEW_FILE.read_text(encoding="utf-8"))
+
+    def test_pilot_preview_accepts_google_link_but_normal_email_rejects_it(self):
+        item = news(link="https://news.google.com/articles/opaque-token")
+        summary_request = {"schema": 1, "request_sha256": "request", "items": [{
+            "id": "id1", "topico": "data_center", "bucket": "BR", "titulo": item["titulo"],
+            "fonte": item["fonte"], "link": item["link"], "texto": item["resumo"]}],
+            "summary_sha256": "summary"}
+        salvar_json(v2.REQUEST_FILE, {"request_sha256": "request", "candidates": []})
+        salvar_json(v2.SUMMARY_REQUEST_FILE, summary_request)
+        salvar_json(v2.SUMMARY_RESPONSE_FILE, {"summary_sha256": "summary", "summaries": [
+            {"id": "id1", "resumo": "O projeto recebeu autorização de conexão elétrica e divulgou sua capacidade."}]})
+        v2.finalize()
+        report = carregar_json(v2.REPORT_FILE, {})
+        self.assertEqual(report["google_links_pending"], 1)
+        self.assertFalse(report["delivery_links_ready"])
+        self.assertIn(item["link"], v2.PREVIEW_FILE.read_text(encoding="utf-8"))
+        with self.assertRaisesRegex(ValueError, "Link"):
+            v2.montar_html({"data_center": {"BR": [{**item, "resumo_final": "Resumo."}], "US": []}}, "Teste")

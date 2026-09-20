@@ -7,6 +7,11 @@ arquivos `digest_*.json` da V1 e não habilite envio.
 A coleta já foi executada pelo GitHub Actions. Não acesse feeds, Google News
 ou sites de notícias nesta Routine e não execute `preflight` nem `prepare`.
 
+Ao retomar uma sessão que já contém `routine_v2_work/ranking_request.json` e
+`routine_v2_work/ranking_response.json`, não execute `load-input` novamente:
+ele limpa a resposta existente. Preserve a mesma coleta e continue em
+`validate-ranking` após atualizar apenas o código da branch V2.
+
 ## Execução do piloto
 
 1. Instale `requirements.txt` e carregue a entrada preparada:
@@ -47,8 +52,12 @@ ou sites de notícias nesta Routine e não execute `preflight` nem `prepare`.
    `precisa_avaliar: true`. Decisões permitidas: `elegivel`, `fora_tema`,
    `sem_fato_novo`, `fonte_duvidosa`. Rejeitados levam somente `id` e decisão.
 
-7. Execute `python routine_v2.py validate-ranking`. Se falhar, corrija apenas
-   o JSON de resposta e rode a validação novamente. Não afrouxe o validador.
+7. Execute `python routine_v2.py validate-ranking`. Se falhar por decisão
+   editorial ou formato, corrija apenas o JSON de resposta e rode a validação
+   novamente. Não afrouxe as regras editoriais do validador.
+   Este piloto sem envio aceita links do Google Notícias ainda não resolvidos;
+   não tente acessá-los no ambiente do Claude. O relatório final contará esses
+   links e indicará que a prévia ainda não está pronta para envio.
 8. Leia `routine_v2_work/summary_request.json`. Resuma em português do Brasil,
    usando somente título e `texto`, preservando números, datas, atribuições e
    incertezas. Faça até quatro frases, proporcionalmente ao material disponível.

@@ -479,22 +479,14 @@ def validate_ranking(response_path=None):
                 raise ValueError(f"{topic}/{bucket}: havia {len(eligible)} elegíveis e deveriam ser preenchidas {expected} vagas.")
 
     summary_items = []
-    selected_items = {}
-    for selected in selections:
-        original = by_candidate_id.get(selected["id"])
-        if original is not None:
-            selected_items[selected["id"]] = dict(original)
-    # Resolve somente os poucos finalistas e faz isso em paralelo. Copias
-    # mantem estavel o ID usado pelo cache editorial da coleta atual.
-    resolve_candidates(list(selected_items.values()))
     for selected in selections:
         candidate = candidates[selected["id"]]
-        item = selected_items.get(selected["id"])
+        item = by_candidate_id.get(selected["id"])
         if item is None:
             raise ValueError("Texto original de item selecionado não foi localizado.")
         link = canonica(item.get("link", ""))
-        if not link or google_pendente(item):
-            raise ValueError("Link final de item selecionado nao foi resolvido.")
+        if not link:
+            raise ValueError("Link de item selecionado ausente.")
         body = item.get("artigo", {}).get("texto") or clean(item.get("resumo", ""))
         summary_items.append({"id": selected["id"], "topico": candidate["topico"],
             "bucket": evaluations[selected["id"]]["bucket"], "titulo": candidate["titulo"],
@@ -544,12 +536,19 @@ def finalize(response_path=None):
             "resumo_final": validate_summary_text(by_id[item["id"]].get("resumo"), item["titulo"])})
     moment = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-3))).strftime(
         "%d/%m/%Y · piloto Claude Routine")
-    PREVIEW_FILE.write_text(montar_html(selection, moment), encoding="utf-8")
+    # O piloto nao envia e-mail. Links do Google Noticias podem permanecer na
+    # previa quando o ambiente do Claude nao consegue resolver seus destinos.
+    # A renderizacao da V1 continua exigindo links finais por padrao.
+    PREVIEW_FILE.write_text(montar_html(selection, moment, permitir_google=True), encoding="utf-8")
     selected_count = sum(len(selection[t][b]) for t in TOPIC_ORDER for b in ("BR", "US"))
+    pending_links = sum(google_pendente(item) for topic in TOPIC_ORDER
+                        for bucket in ("BR", "US") for item in selection[topic][bucket])
     report = {"status": "pilot_ready" if selected_count else "pilot_empty",
         "send_enabled": False,
         "request_sha256": request["request_sha256"], "generated_at": time.time(),
         "counts": {t: {b: len(selection[t][b]) for b in ("BR", "US")} for t in TOPIC_ORDER},
+        "google_links_pending": pending_links,
+        "delivery_links_ready": pending_links == 0,
         "needs_evaluation": sum(c["precisa_avaliar"] for c in request["candidates"]),
         "cached": sum(not c["precisa_avaliar"] for c in request["candidates"]),
         "truncated": request.get("truncated", {}),
