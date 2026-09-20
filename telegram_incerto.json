@@ -1,1 +1,21 @@
-null
+{
+  "aliases": [
+    "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOS3JqaDZtWmVxelF0WnI5WWNkQVhsLS1GRmMzVTBFNUxnOE1yazZfcC1BYWpZVDVTSHF5cFVBWlNPVWRVRDI3TmZNcmk1OHFNbk9tYk8tY3JrMWFLeUt0X1lZSDBhYlFNVHVvM2U0SUNWLW52SjYwUmU0Z1ozUEczaUVENml6eHRK?oc=5",
+    "https://theinformation.com/articles/jane-street-linked-data-center-debt-sours"
+  ],
+  "item": {
+    "aliases": [
+      "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOS3JqaDZtWmVxelF0WnI5WWNkQVhsLS1GRmMzVTBFNUxnOE1yazZfcC1BYWpZVDVTSHF5cFVBWlNPVWRVRDI3TmZNcmk1OHFNbk9tYk8tY3JrMWFLeUt0X1lZSDBhYlFNVHVvM2U0SUNWLW52SjYwUmU0Z1ozUEczaUVENml6eHRK?oc=5",
+      "https://theinformation.com/articles/jane-street-linked-data-center-debt-sours"
+    ],
+    "fonte": "The Information",
+    "link": "https://www.theinformation.com/articles/jane-street-linked-data-center-debt-sours",
+    "origem": "INT",
+    "resumo": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOS3JqaDZtWmVxelF0WnI5WWNkQVhsLS1GRmMzVTBFNUxnOE1yazZfcC1BYWpZVDVTSHF5cFVBWlNPVWRVRDI3TmZNcmk1OHFNbk9tYk8tY3JrMWFLeUt0X1lZSDBhYlFNVHVvM2U0SUNWLW52SjYwUmU0Z1ozUEczaUVENml6eHRK?oc=5\" target=\"_blank\">Jane Street-Linked Data Center Debt Sours</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Information</font>",
+    "titulo": "Jane Street-Linked Data Center Debt Sours",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
