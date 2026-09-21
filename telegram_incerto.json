@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://convergenciadigital.com.br/governo/california-endurece-regras-para-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://convergenciadigital.com.br/governo/california-endurece-regras-para-data-centers/"
+    ],
+    "fonte": "ConvergenciaDigital",
+    "link": "https://convergenciadigital.com.br/governo/california-endurece-regras-para-data-centers/",
+    "origem": "BR",
+    "resumo": "Data centers estão obrigados a divulgar informações sobre o uso de eletricidade, consumo de água, ocupação do solo e necessidades de mão de obra.",
+    "titulo": "Califórnia endurece regras para data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
