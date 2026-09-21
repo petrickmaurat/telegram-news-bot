@@ -1,0 +1,39 @@
+{
+  "cached": 0,
+  "collection": {
+    "entries": 7407,
+    "failed": 2,
+    "failed_examples": [
+      "https://itforum.com.br/feed/",
+      "https://tiinside.com.br/feed/"
+    ],
+    "failure_ratio": 0.0118,
+    "invalid": 1,
+    "ok": 166,
+    "queries": 169
+  },
+  "counts": {
+    "baterias": {
+      "BR": 2,
+      "US": 2
+    },
+    "carbono": {
+      "BR": 3,
+      "US": 1
+    },
+    "data_center": {
+      "BR": 3,
+      "US": 1
+    }
+  },
+  "delivery_links_ready": false,
+  "generated_at": 1789947561.060255,
+  "google_links_pending": 8,
+  "needs_evaluation": 546,
+  "note": "Piloto: nenhum e-mail foi enviado e o histórico da V1 não foi alterado.",
+  "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
+  "request_sha256": "30dc282b577ee5b16650ae5f07ca64ddb16a4a20c8655a4658f4aef7b797242e",
+  "send_enabled": false,
+  "status": "pilot_ready",
+  "truncated": {}
+}

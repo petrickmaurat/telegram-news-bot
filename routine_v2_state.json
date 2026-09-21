@@ -1,5 +1,4395 @@
 {
-  "evaluations": {},
+  "evaluations": {
+    "001a1775700615d5ccc9": {
+      "assinatura": "acbb48635b27ef0866686478d38ca5540159704faf02f78f9275b67b6cdbd528",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "02729d278acd8307f0a8": {
+      "assinatura": "a3d39d2ea3f30e2cc17e6c4defdab2ef7423464eb642e3d8f5d26d9f761473e9",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "data-center-backlash-trending-news-lates",
+        "prioridade": 20
+      }
+    },
+    "02a669fb07130b4023b3": {
+      "assinatura": "6d42d8de0410d87849ae187f88cb8124481a32f0c52ca5c1c08ce76e3eb0c676",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "virginia-curbs-state-support-for-large-d",
+        "prioridade": 20
+      }
+    },
+    "02cdb8c5d22479a4fa35": {
+      "assinatura": "80605be014fa7d947a39bbb04162bafe90a91e5a1e7c276cde5b86a6e8613102",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "02dfec1d9a058cf056fe": {
+      "assinatura": "0f8147d2b74934d2f319c0327ba051c6ab3d0ce53b88dfec86dcd8dc0f87ba17",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "0377db51d2f9d19f30a1": {
+      "assinatura": "b2b28bafd7a215bed045104935cb2353349b77a987d7c25cf48d7b7d1f67e79a",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "amsted-industries-estuda-venda-da-baltim",
+        "prioridade": 20
+      }
+    },
+    "03d334ef6a3aa7c492c8": {
+      "assinatura": "478b4d8d0d267fb02cf88e8fcee7ede240e41b304433ed0f0169435233851067",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "2026-utility-innovation-survey-industry",
+        "prioridade": 45
+      }
+    },
+    "04716c3e9b2b8aa0bbcf": {
+      "assinatura": "a9e5e234f976addb549f41ec6baa985c6dbe720dccb93278269c34d7bd76b9d1",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "byd-solid-state-2027",
+        "prioridade": 75
+      }
+    },
+    "0509728d32baeb945c02": {
+      "assinatura": "7ea119ab86672a3d745f195eb78c64f9cb03e7295df513d6965fc32b2fdd6979",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "como-trabalhar-em-um-data-center-de-inte",
+        "prioridade": 20
+      }
+    },
+    "07012cf6399e5b2a462b": {
+      "assinatura": "ab15632b14f5790e1d1173069ea78c9214851627cf3ec87143787d05193d3c24",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "hatred-for-data-centers-is-sky-high-but",
+        "prioridade": 20
+      }
+    },
+    "074bba4075c620332aaf": {
+      "assinatura": "7dc81d3b977f59d34019285b5a3446cd750bc47049e391dc1a12794149fb6160",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "08345cc5bddb08290b34": {
+      "assinatura": "31b79a9074da8ba5c37f27d6e9024c0008edd69ea40e6c53fa642a67bbe9f325",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "eve-fluence-206gwh-megadeal",
+        "prioridade": 70
+      }
+    },
+    "08ab3ee92b1f69ea1d73": {
+      "assinatura": "aa32ab97a89aa909cacb35ecf75a254a3816f3da2c6a2bd93f12ab7680fdcfdd",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "nevada-gov-signs-order-putting-guardrail",
+        "prioridade": 20
+      }
+    },
+    "08fc382f9ec3b0bc2c72": {
+      "assinatura": "6dce641f63990487b79f17f730a9258ff6835ca80b23f8069648cb3aac799765",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "normal-council-weighs-extending-data-cen",
+        "prioridade": 20
+      }
+    },
+    "091537d2d16609a2c763": {
+      "assinatura": "cc67956212524adee96922884a4aa58d3d83101c81a3cde1b068e3a4c6856959",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "tarrant-lawmaker-plans-texas-data-center",
+        "prioridade": 20
+      }
+    },
+    "09676372bb07d4717e3b": {
+      "assinatura": "d07c1bc97cab325e1d5a42620c98db2a51c24b1a488328729176e4d9d6280ddd",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "eve-energy-iaa-30gwh-orders",
+        "prioridade": 60
+      }
+    },
+    "099152bad80f04a7af5a": {
+      "assinatura": "2fbc46d42cceea2e6a082ae9e5dc25dc5fdb2138ea514ce6d0e3ffe7dfb41f9c",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "vietnam-domestic-carbon-quotas",
+        "prioridade": 55
+      }
+    },
+    "09ae134253572a886a64": {
+      "assinatura": "d22ef391348c5674176f7a2982625085fdff284ac7e513c61da1d9f232f39f61",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "proposed-data-center-regulations-for-wil",
+        "prioridade": 20
+      }
+    },
+    "0a27c82969f03d85e70e": {
+      "assinatura": "89889c72e8b9e8cb3a1e1d373c1113222f812bff5536eec08342f34e7ec06538",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "voto-latino-infla-o-e-data-centers-aumen",
+        "prioridade": 20
+      }
+    },
+    "0a52d719ac0284c58a9e": {
+      "assinatura": "51c23fa8679df74691428d4207dc8e8acbf5c715fa7f753a60b976123ebf492e",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "trenton-voters-will-decide-on-a-data-cen",
+        "prioridade": 20
+      }
+    },
+    "0a7eca9602233d6a30c8": {
+      "assinatura": "4622c9f8d388c422436b97506bdcc3b1a9e3e92ab886bdbf267f2ec041b447ce",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "0c82390bd40843c35435": {
+      "assinatura": "94a63bbf4763078f19b3e7e0a2a1cc5ecec7a448c5c940bfb7002fd70124a0d0",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "chatham-county-data-center-moratorium-judge",
+        "prioridade": 25
+      }
+    },
+    "0cace8b37bcae7cd51f1": {
+      "assinatura": "bdf78ab00b8c89470e60ab4cb6791de8f67d945953b70d96e728fed841185672",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "0d89d7eecdcd58cbf259": {
+      "assinatura": "b1ef654902743d53a3b18e7f23e2c85fc4be506fe6ba3ea7496af8f626d59ac5",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "ricardo-semler-on-the-prisoner-s-dilemma",
+        "prioridade": 20
+      }
+    },
+    "0e59525f60ab0d0de6c4": {
+      "assinatura": "c0945510c6cca53875dcd8f422d2beead2e87391ecef65b7eb56af24d9d23788",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "ai-infrastructure-is-redrawing-the-data",
+        "prioridade": 20
+      }
+    },
+    "0e663f89de4ed08c5230": {
+      "assinatura": "d7fcf963f5e9e460dbb15b982e3ac91d08d4f743bfec0a8536fa62a1323cc1b4",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "0eb23e7f5ea64dd9c8a5": {
+      "assinatura": "d599c2d83f49490c1f8ad83e0a886a9895e03077380fc3c871a7d1b565b3b8f5",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "in-silicon-valley-ai-data-center-boom-me",
+        "prioridade": 20
+      }
+    },
+    "0ebcaa5625bd14e0a59f": {
+      "assinatura": "258b024acdc39ad1cdcc4df0d93cbdfe3c23c2b33d45327904db22d21c0b34cd",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "0f5686b88d3b8c2616de": {
+      "assinatura": "cef74b6db13ddc143f12d57320743d4d215b0770e35028a6ae17a303ba3f1ef1",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "nvidia-google-coalizao-flex-power",
+        "prioridade": 80
+      }
+    },
+    "100be57d26ddaff188e7": {
+      "assinatura": "5cd2ef34f2af2e6f0e3136f269b09579f5a50ef329159387bcd9ef323188e6be",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "franklin-county-storage-funding",
+        "prioridade": 20
+      }
+    },
+    "115b6ad8d4567f428ec3": {
+      "assinatura": "0ffcd5a22a6a0dfe218df6be940f44eb60f70576b849d929f1dc6a54850d7607",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "trump-admin-pushing-to-build-data-center",
+        "prioridade": 20
+      }
+    },
+    "1198dcf59dc939ab536d": {
+      "assinatura": "394069e791719a70be5789237837995b28b83adb8832e2392ecd200102e9bdfa",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "company-offers-exclusive-look-inside-its",
+        "prioridade": 20
+      }
+    },
+    "11a4824587a5b2c82dfb": {
+      "assinatura": "90d8b0f78add01a0317ad24663b4f42db7939b220ebca758b42243a2267f0b3d",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "romania-650m-funding-scheme",
+        "prioridade": 45
+      }
+    },
+    "1362da70d8360e1db3d5": {
+      "assinatura": "65fe00b90f1323e0d3d9c11744854e76762e7adf5430861206021d084e7c43c4",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "catl-pickup-truck-us-trade-barriers",
+        "prioridade": 65
+      }
+    },
+    "13919ccbdf08fa5894e2": {
+      "assinatura": "c1fc22e415891975cd6bcb7ead1481aa9f494537db5e6bd01e7326293028a2af",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "iowa-needs-to-regulate-data-centers-at-t",
+        "prioridade": 20
+      }
+    },
+    "13bcdcbed52dc9798e20": {
+      "assinatura": "b15d21250df65277c7dd51197cd8f0597609bff4be2131b27ce5815594af5e4d",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "13dbe41a4ceae8806e18": {
+      "assinatura": "de3fe05c7e4f17b7e2180328369b41ad0c41b68f53eeca04df98b1e271505ccb",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "13ea928355b93fc317db": {
+      "assinatura": "5c8193496a9907637400b8e7e7dc4fa2bc1b92fa06c138ea8af4b2585c9aa5e8",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "opinion-data-centers-grid-strain-and-the",
+        "prioridade": 45
+      }
+    },
+    "13eedb5e93466eab282f": {
+      "assinatura": "b95b06d6f6fb9666f754842ff2116f5048d874e336b2f9814aba1743ba936a65",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "opini-o-brasil-chega-tarde-na-corrida-do",
+        "prioridade": 20
+      }
+    },
+    "1460596efb6dd0dc880c": {
+      "assinatura": "c7a57b06ba2ef6071e580ced03868c6135a5093088a6e73aff267cde0319cc77",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "1467b4ed4623fbd45606": {
+      "assinatura": "2c3bca53a8441b2e03d8afe101d3be1663ff1e80814b1b16bfc5231804fa83f3",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "solid-state-battery-weekly-roundup",
+        "prioridade": 45
+      }
+    },
+    "148ecba63461535df2a1": {
+      "assinatura": "27954f8e3bc8a40f512a1fa96a003c7be17d9be517889b480b0f0b6d40f106e7",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "why-ai-data-centers-need-board-level-pro",
+        "prioridade": 20
+      }
+    },
+    "14aacff6b8b8cb11efa1": {
+      "assinatura": "c3ac36cb0904d97c092a71281674a10477b20edabd8d0ebd6274f24aa3e7152d",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "frente-parlamentar-neutralidade-tecnologica",
+        "prioridade": 82
+      }
+    },
+    "14dcae3a2808577b6ab7": {
+      "assinatura": "360d606107c5b2894208ddb297d4d5af671867e4def76dca08f85d65aa195ec4",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "crusoe-raises-3-9bn-for-ai-data-center-b",
+        "prioridade": 20
+      }
+    },
+    "1585a91cf565f6e25ab3": {
+      "assinatura": "3d0053de00fb262da2420def232e53b918a93ff430c3f597aca5389459975b74",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "data-centers-on-the-ballot-in-grove-city",
+        "prioridade": 20
+      }
+    },
+    "15c2d593d2dc22c6aa4e": {
+      "assinatura": "682db8fd25987bcacf722f4752813b276856c0f88877bea2012793d3c293b652",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "clean-water-advocates-worry-about-data-c",
+        "prioridade": 20
+      }
+    },
+    "15f8b243f6f3daabeeb6": {
+      "assinatura": "1087d8d5da72ff28e61bb91fc84f33fff85ff5ae8631cc5dc5e1b769282868aa",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "which-county-has-the-most-data-centers-i",
+        "prioridade": 20
+      }
+    },
+    "16907d0d533aee004dfe": {
+      "assinatura": "868c73daf08376a87409f7cfda05c61d08721bb7316cbb5a769494744751ae83",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "16c68d7b6038b171cd96": {
+      "assinatura": "4d4464d55f7a098728ee1b56f1178469da78f3c44cdb2f0c52fbcb4257817a0e",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "17ba9f738f6e7ec49cc0": {
+      "assinatura": "6ad6777e9f067746b274498e68fcc2622f1867ac1ab5ca3dc9e31aa89f784984",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "slap-in-the-face-joppa-residents-raise",
+        "prioridade": 20
+      }
+    },
+    "18224dc4c5918ba24e58": {
+      "assinatura": "e1f935b8a5ec3ebb96385f090d97cbbf83770f6012daf5743a74cb3c966a7820",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "keralam-bess-power-shortage",
+        "prioridade": 40
+      }
+    },
+    "182c59677d91cdaecc62": {
+      "assinatura": "f0a9cefdf65e91b3ce9e9ed4d0adafd3b996b686650cf627a8ea3f4e6253261a",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "hyperscale-data-declares-monthly-cash-di",
+        "prioridade": 20
+      }
+    },
+    "1891d30a0d2ec895512d": {
+      "assinatura": "9516fbcc9cdc01423dcd0d11af95bfc4e269a7cf0a5e39a652d96374550b19f3",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "in-the-name-of-tax-fairness-politicians",
+        "prioridade": 20
+      }
+    },
+    "18b1470dc712c234dc51": {
+      "assinatura": "616e4313e7fc30c26ab8c0dfeae27143dc13cb2ec551dd6faca8ab76281ab83f",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "19d0bcfe273f84bc23d7": {
+      "assinatura": "cb42148de4d2af197db88f670718a8586711769b6fce498b727bf6bf0191c1c0",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "1a6e2d2d8c3bd18a1299": {
+      "assinatura": "9006bc45f3f0a87640dde0e9931da3b59283b4e64bc310789e2f3d2175c1dabf",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "1a891c5cee14af255ebb": {
+      "assinatura": "5a83bb01ff411817d5fa57480241b5bca3bce031c0fb0b86be0624e83a767d13",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "sandpoint-council-approves-data-center-b",
+        "prioridade": 20
+      }
+    },
+    "1b0643b08686a4b35e06": {
+      "assinatura": "a67721e7464e788bf2f8d4772b0f2f17f65eef188915fb9f761b399ee3d903c3",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "sacramento-is-now-in-the-data-center-deb",
+        "prioridade": 20
+      }
+    },
+    "1c6b3d5aced69bddf159": {
+      "assinatura": "af5d1394a73554c11eda9547b2b22bfca93525b1a797e52a365874c3059ddaf7",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "trump-likes-data-centers-congress-seems",
+        "prioridade": 20
+      }
+    },
+    "1d01bcf448afeafb13e7": {
+      "assinatura": "6c5a6e64f688a850f21e4c0e3a197fdfad3f78650284d90f5aa925583be28603",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "agl-liddell-500mw-commission",
+        "prioridade": 45
+      }
+    },
+    "1dac15bac85b2d295b24": {
+      "assinatura": "f4792f8a290fc9b2237d2f8d2718b19771a71aec256c683831c888237a6de9bc",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "entidades-confaz-icms-reducao",
+        "prioridade": 55
+      }
+    },
+    "1e073259356b5c9da9c1": {
+      "assinatura": "1cd7ff90b89a66c9ba98ebeddea73e692fb26d8a36c48ece92dd9124ab4d5577",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "1e1689e10cbd7e5a5eb1": {
+      "assinatura": "c181f22c13d4d47b7a52f977730a095adf7c486d1c2aabb0f3bae1c3d53c65a8",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "asp-data-center-secures-nok1-6bn-to-fund",
+        "prioridade": 20
+      }
+    },
+    "1e75be44d5b367792171": {
+      "assinatura": "9eceddb29d548c35855657bc1b94b4cb219c499704a7753464fc9fbb2a4a27a9",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "1ee7bff5a4c97c9ce1b6": {
+      "assinatura": "53338d97df908b1b1630a65acec99b573c1dee89f56e3fc105118a4743fa1cde",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "20274314f4bd247aa950": {
+      "assinatura": "838e5052ff3aee23456868ff6edfec9913068ff375e73c6aeadb25b5692b1bbe",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "20a682c7fddb6da2850d": {
+      "assinatura": "bd5c4b63887f7a4871fbdda5f7bd60a04f7842d231b0929d4bed9c334a05e881",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "ohio-supreme-court-blocks-citizen-led-da",
+        "prioridade": 20
+      }
+    },
+    "21603f53cf3f06a68a68": {
+      "assinatura": "7592045f4cd96275f05da2fbf09af709e3778a302e7a294ad3db90085e1d920d",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "21d783ec06853bb5586d": {
+      "assinatura": "2ebb493e8e1a76f30c48538603dd595c3e00ef97465cc34278083e33c98d255e",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "21f4a61c12f125290e18": {
+      "assinatura": "ebbf808883f6c7af60536ccbca7e97812415b8a3e2a0256c6a241da4bf8f83b0",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "22a4d4917f996dd8ae18": {
+      "assinatura": "8198438f9d13f08060770668e0135d0e33e5fbcbdd3ebc5f7d0c6d5cef59426f",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "estados-gas-redata-mptcu-auditoria-terras-raras",
+        "prioridade": 55
+      }
+    },
+    "236ca1a43e78f5b3184b": {
+      "assinatura": "568819b83cdc1860c9356a1ece3dda025a0018e3b81fa655b3c809306e213b57",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "catl-tectrans-ii",
+        "prioridade": 55
+      }
+    },
+    "2457df94912a1f1ddbeb": {
+      "assinatura": "fb9d0066ef1d4d47b528eaf36d3a1c84dc487c6479f0a1e625f07697b06f66bc",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "24663b3a7b2fc760f570": {
+      "assinatura": "6d261473a7debc20ad9046585ed329fd7ca6d9b70e871cbc7bdaea484f03a67d",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "247497b5dacf1d59f39e": {
+      "assinatura": "214314a8923164f317e7b3dc5ff762805dd0a2a464c397ab5ac26f0e2df57d7c",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "24aeca2c0d255857df27": {
+      "assinatura": "e6e810166c2e2bf0e485ab8651593d02898b897e29df6cbd4a16b12a3bf8ee15",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "bmz-poland-eve-energy-partnership",
+        "prioridade": 45
+      }
+    },
+    "24c7f4b349036c068294": {
+      "assinatura": "9e6684a233a264655ea908fa32e94d64b1806ece5d9aa3af468352b5ceab3a99",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "laredo-city-council-to-discuss-flock-cam",
+        "prioridade": 20
+      }
+    },
+    "24e3b8d1360c99cfc86e": {
+      "assinatura": "491118fcdc6343996c239189ee8e325a1982f2b1c316db80886b3fb4290b0ab1",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "eua-gas-data-centers-japao-alemanha",
+        "prioridade": 75
+      }
+    },
+    "25f86fc2166f6e2e9665": {
+      "assinatura": "dc4eee9eeeb7e6e173c014be8cb117be0d0fdc74202b57d7918e506a71a19c1b",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "2605870bf5228bf73d1d": {
+      "assinatura": "dad57c409b74c3f8f46b4fecabc7fa36ebf143b1cb1529dc3cca2ee603ad0ab5",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "fact-check-where-do-district-7-city-coun",
+        "prioridade": 20
+      }
+    },
+    "270e265fbfad0598de98": {
+      "assinatura": "62856a09fd791c7d665636b70c121101f5b006737e5baeadc6fd4d528537dcad",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "trump-expands-his-plan-to-have-data-cent",
+        "prioridade": 20
+      }
+    },
+    "276a5e70ec641dbbd534": {
+      "assinatura": "129de8b5ac21a1ea3c7abeb10b16df21ac168ee55d29dc97110c7f2d2469499e",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "what-s-the-difference-between-data-cente",
+        "prioridade": 20
+      }
+    },
+    "277a4fb20fc630a547de": {
+      "assinatura": "4e8bdfa61f847ce73d869eece2a3e5157a4dff9fb57b576db338eee0bfac59af",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "china-carbon-market-expands",
+        "prioridade": 50
+      }
+    },
+    "27bfdcacbf34f0bc9272": {
+      "assinatura": "99a3327eef9bfa09c4168313b9d8645effa78ee45ed802d401b3d8497a70daa4",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "27d22e13361e66a68918": {
+      "assinatura": "6d0cc6c3ffcbfe08d57475351277ba90fc87a7599fd80725807c93bb5b5b9d22",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "uc-davis-environmental-law-expert-argues",
+        "prioridade": 20
+      }
+    },
+    "28406cefd933478d7c80": {
+      "assinatura": "67bb96b1c02af1f513e936c230f4ef8a6a0104ad1c3f47b5b3bff621773c6669",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "28429755f5c73bd5c1b8": {
+      "assinatura": "172daf2694f2ce79a0e798753896bbf21c4db58a9b57950b8cb4e0f05aa5a179",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "28a52286e12305cf39a2": {
+      "assinatura": "15b563c62f70ba7ecbf5ac24769198ea44f4cc86e81112961a60aa90286af3d9",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "2904eeff07dc001dc972": {
+      "assinatura": "958964f59f6c60ff7a380bf7f475a21d429089cdf41fad486a7948f3f6acf931",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "ai-datacenter-long-duration-storage-boom",
+        "prioridade": 65
+      }
+    },
+    "294d0dfb011a23862c4d": {
+      "assinatura": "a9f7cd4a655d40e22751392d34c49bc68e8e32d031289ccb18d03e9c4f30faf8",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "29bae7486d9202cb4955": {
+      "assinatura": "3ca8a7175a9f981671d6d4bb6a6cf8feb28e59abfa58b05df69fb81132b2aaf4",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "2a351f9998496d03fe80": {
+      "assinatura": "c653dedb50688ae8ae497e40511d7c0b7e04abb460b7a472fe6292d7fb8aa591",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "former-epa-officials-trump-is-letting-da",
+        "prioridade": 20
+      }
+    },
+    "2a4f71905aa0a395ad70": {
+      "assinatura": "1aaa4816460efd2029d8ffe7dbc1946dee751a29b8acde7aa05435d891bc71f2",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "2ac32cb055b28474b11a": {
+      "assinatura": "0eaa734edd8ea2295f45c2e53df74af5e26c4c175d82b998d65b2b74356164ac",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "22-regional-data-center-projects-and-whe",
+        "prioridade": 20
+      }
+    },
+    "2b395f07d37b878d7abe": {
+      "assinatura": "3a9e1e78b1e068530096ffa666900791d56e603ad66b2b663b1bbe79c3101841",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "2ba0999dd8d4ace6995c": {
+      "assinatura": "ebe772475f7722572a53d4b7a68f08c9a09c82cb864e8a413a83c68bb4f1fcf2",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "ohio-now-has-over-125-active-moratoriums",
+        "prioridade": 20
+      }
+    },
+    "2c734c25732cf44f3568": {
+      "assinatura": "a25904125b9c0a30c068557547c3a3ab080594c00814893428deae6872da2aa7",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "energia-brasileira-atraiu-corrida-data-centers",
+        "prioridade": 78
+      }
+    },
+    "2c868edc1b623dfb09ab": {
+      "assinatura": "38c7ade44029f8fd051b1e82918a65b837771bba09b62a7c680de51465836e5e",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "pe-backing-both-sides-of-data-center-boo",
+        "prioridade": 20
+      }
+    },
+    "2cb336fa2ea4a7c38213": {
+      "assinatura": "a2f4328ea7a101ba3748fbcc357312ad37c4f5657b6d7a418fd2657990f4c258",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "kirksville-commission-sends-data-center",
+        "prioridade": 20
+      }
+    },
+    "2ce9e0684f533bc909ea": {
+      "assinatura": "4ad858a5e9c602d9f6effb83fe6f856d1d8371c0453418c5a98357ca499f9c12",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "data-center-opposition-group-brings-nati",
+        "prioridade": 20
+      }
+    },
+    "2cfcf050dce37891e1b5": {
+      "assinatura": "b8cc89fbb24d6bab60fe84b59c54308635aa6436164fdb8050c50ff781cbdd5e",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "2dba740fb537b81d2277": {
+      "assinatura": "685b7d102b0ef7233275ac7de764131b574eba9fe021c3d4a7da44273245732e",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "yonder-radio-special-report-power-dynami",
+        "prioridade": 45
+      }
+    },
+    "2eb19d61cdeb12026017": {
+      "assinatura": "89d6eeb5938992b91d5bf25c8e4cf894662f632a89fccc866a461b6dce98cfaa",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "fact-check-how-ceres-city-council-candid",
+        "prioridade": 20
+      }
+    },
+    "31e942414c919b8f907b": {
+      "assinatura": "ad103d00c4727f181885c4130224f5cba704a09489aaf2ea98fb29a271449586",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "north-coventry-unveils-data-center-ordin",
+        "prioridade": 20
+      }
+    },
+    "321be4d5d28badfe49a0": {
+      "assinatura": "3b1dba0a690350dd5e1088e838927f398be0995fd80e06245476f61155be03fd",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "indiana-mayor-says-data-center-nda-ban-m",
+        "prioridade": 20
+      }
+    },
+    "323050c199c98e8c69ae": {
+      "assinatura": "49e0442dd465d9c909974da8b8a45a7f87643bc39cacb75e94a81d18604e947b",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "329a64b92f096f255339": {
+      "assinatura": "b047a4c3470de78565509e25eeb1d0547db3dab7b5194e8c931d102c8c388f0e",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "32d56d1f79df4b704b40": {
+      "assinatura": "a690a4f51e77f2baa5878b51554de588649f2b3377e440da7b00f3625987afbc",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "332926cf7219f640499b": {
+      "assinatura": "2b630943ad14c197a1a64ee292e1c732b98cb1385357466516d7581d3bb5e89d",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "prysmian-riotinto-amazon-aluminio",
+        "prioridade": 40
+      }
+    },
+    "34726317e17ef6f5ad28": {
+      "assinatura": "c2710d57709e06f1e7bc96d3c4201ecfdd36401836c4754ab8b70daac44f44ee",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "dfc-ukraine-bess-support",
+        "prioridade": 40
+      }
+    },
+    "3486cbf014b8b85f12c8": {
+      "assinatura": "a2204847738a094e7b84fa8ba5d6ebd15405a4685abdcc1b923cf17e2aae73db",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "byd-manufacturing-analysis",
+        "prioridade": 40
+      }
+    },
+    "34c5accc36dd7b1b6063": {
+      "assinatura": "16cc2551800bc785da58f24cadc51e935c9887adcf3bc984bde978610d08c335",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "licenciamento-ambiental-mercado-carbono",
+        "prioridade": 82
+      }
+    },
+    "3512bf1ba341fb84542d": {
+      "assinatura": "e5f5bce8e8a0a210a8c235e0113e260d9ec9910da3ec1131ce825ac1479e2ec3",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "florida-s-governor-race-heads-to-virgini",
+        "prioridade": 20
+      }
+    },
+    "3547717750abb6677afe": {
+      "assinatura": "723902a5dad6a46a639fe69682f66038d5e459fba937f81e373d29f9c3269fd5",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "prologis-pld-could-be-14-below-fair-valu",
+        "prioridade": 20
+      }
+    },
+    "35abc7cce47e62caeaa3": {
+      "assinatura": "4139a6ff337f301ff2d63b532d958ce6c80920589e6638fb089fd72e0f1737da",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "adopt-this-data-center-plushie-and-hear",
+        "prioridade": 20
+      }
+    },
+    "35b67a26bde6c866a70e": {
+      "assinatura": "9118a9ea6f4cffa2bc35bb48eb3b9c2a398e6e78e9b751ba4efde27419199ea2",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "fact-check-jocelyn-benson-s-family-ties",
+        "prioridade": 20
+      }
+    },
+    "35c191994b5b3653c636": {
+      "assinatura": "4887d161d1ceb2c799a366ea535b33430b9ae53c39fc0309a2aff84f97b37d6d",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "36a261e2e7e04a8b4020": {
+      "assinatura": "ec5a0383b67d6c45ab09760d7c8928692f3faa8c2c3cf4af0ee89e19a92caf40",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "36b144390a9876ff91fb": {
+      "assinatura": "f387dfb520539dceffa86e7e359c230f01d650f156d67048d5aa4954db03bdd4",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "georgia-power-robins-battery-commercial-operation",
+        "prioridade": 35
+      }
+    },
+    "36f76265accdbfd2fa79": {
+      "assinatura": "556fd3f0a2b4392b480b28fd4aa1a5e9cebb08293a0ef5d6fa8c48c65de1aee0",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "37243a81945b2ba7571d": {
+      "assinatura": "3bb32259e270b579af29b3c73cde903500e52b63ad9fa056ce4f54db7a82fecf",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "axios-mapped-florida-power",
+        "prioridade": 45
+      }
+    },
+    "377977bc474fd6533940": {
+      "assinatura": "9282fd5780990d80f90817c3efe08277992c749ace407f9d319ba5575e5e36ec",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "377ddd39febda77db275": {
+      "assinatura": "e9bb0c4373d3c1fde9d15e3ed6dc79dd4f2a7c4738610470333e8fce0e90a99b",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "normal-to-consider-longer-moratorium-on",
+        "prioridade": 20
+      }
+    },
+    "379a0997b3c61e857c6f": {
+      "assinatura": "72906fd71f3eff3e7155d0b2cc02540cba497c3079a957e9505a1c64b71472da",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "380d314f37bd4ecd4191": {
+      "assinatura": "f4e4a76ac5df6a9316755cb89df9c27c56d0c40deeaa398fd3f49905fd765af6",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "killeen-council-took-steps-to-regulate-d",
+        "prioridade": 20
+      }
+    },
+    "3811609365b17de8adb1": {
+      "assinatura": "a7bbca6199132d381a92cf88ce99f64c80563e2ef61ac96dde13310580cde7e2",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "in-policy-shift-republicans-say-they-ll",
+        "prioridade": 20
+      }
+    },
+    "38143ac9f2f7b83ea01d": {
+      "assinatura": "329f2e40dff37db5b71671d2f01a8823d689e9f3f09e2b689d2ce42c963ee00f",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "as-data-center-backlash-grows-another-go",
+        "prioridade": 20
+      }
+    },
+    "383d59399cb6a8abe913": {
+      "assinatura": "8aac3b447a27947271f06322a450ca98d2d92df07134a035165f69bda61d2753",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "mitsui-factorial-solid-state-scaleup",
+        "prioridade": 55
+      }
+    },
+    "3a977a306b7fe063cca7": {
+      "assinatura": "13987f907d9edfca01d539ca7d8b35b3a6a10cb2b71067be928263256c3fa367",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "3ad88c3323f67657bb23": {
+      "assinatura": "3fe632c1e06aeba1a541d4a5fafe085a8668731a4aff24dd9a01cb917b00cec6",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "wheatfield-board-storage-discussion",
+        "prioridade": 15
+      }
+    },
+    "3af90d80844cbdea0880": {
+      "assinatura": "d03c6cb0c390a413ed01d8590af32b328b92e4b0c1eb6b272d1c62378404812d",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "oracle-s-18bn-data-centre-debt-under-str",
+        "prioridade": 20
+      }
+    },
+    "3b61042171a8a45b2d1f": {
+      "assinatura": "c05535524d413baa0681fea1e05fd840b750948660d4a97c08588cab0bb856a3",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "mayor-cara-spencer-signs-bill-tight-enin",
+        "prioridade": 20
+      }
+    },
+    "3ceec3ab9a00cfb40b66": {
+      "assinatura": "75ab9675fb49864bafe88c2995df4bc97e625dcea285a314d2537556046f7dad",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "gavin-newsom-s-data-center-plans-may-cos",
+        "prioridade": 20
+      }
+    },
+    "3d06296271123d614582": {
+      "assinatura": "31dbf5e3071b0066312aa34c33a19c73e757ba6cb6d75482a6fd6d79ffbb4c0c",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "3d2e804b31bf807455eb": {
+      "assinatura": "61fdf518549818076eda50ddf01686dffbb63b935d6b58a9735f2d0d4474d663",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "james-briggs-end-tax-breaks-for-data-cen",
+        "prioridade": 20
+      }
+    },
+    "3d6c648cbe00f3358084": {
+      "assinatura": "0a01e2f4c04dd2039295341caee7c6a8979c4e6434a156f73f741d889dd8ac15",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "ecoguard-confed-philippines",
+        "prioridade": 45
+      }
+    },
+    "3d767e4c2a8dafec3195": {
+      "assinatura": "93f845649980aca2bbf4f0e04e26d422648432da87aecf8d9bc50aef3857c632",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "redata-tropicalizar-data-centers-n-o-pro",
+        "prioridade": 20
+      }
+    },
+    "3d819b557aac42432a0c": {
+      "assinatura": "afe416cf7259c473893a1549add144af4f660227eefab150bceae90dc4432cfb",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "lawinfra-seguranca-nacional-judicializacao",
+        "prioridade": 45
+      }
+    },
+    "3e7bee21e99988493d89": {
+      "assinatura": "513611c531c253d4543f7d7faf6ad026d2b9e91562f2501362613ab17f9a12e3",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "nvidia-power-bottleneck-feature",
+        "prioridade": 55
+      }
+    },
+    "3fcbbe5aa4f397c056e2": {
+      "assinatura": "a472fff0e5c17dc75d31ca88554c7514687dc9438e49835b977a0609c0fbc66c",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "91-of-florida-readers-fear-what-ai-data",
+        "prioridade": 20
+      }
+    },
+    "400ef339ac6bd5de14b6": {
+      "assinatura": "8a2c84628c02d89b51d74344277c95d1a245c36706d1ba99999f3245e0fd3334",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "blackstone-consegue-empr-stimo-para-aqui",
+        "prioridade": 20
+      }
+    },
+    "40372db8412259d4804b": {
+      "assinatura": "af935b365ebd5fbaa8852e72bb73df02fd18f947a44b205937507862b79791ed",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "4037989fd4e79728801c": {
+      "assinatura": "40a4561d4a5a8984953f74b351f19b958d0f7901c1a46ca7d22343c4e189c909",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "4153fc2fa3fc038d397b": {
+      "assinatura": "2dcb8ea93c9e1c0b7aec6a07c79237c48905b546030c2fdf48e86fe206a71d32",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "op-ed-idaho-town-sees-major-tech-investm",
+        "prioridade": 20
+      }
+    },
+    "41963cd1a5cfc807b910": {
+      "assinatura": "3bd2b9e6dc122177c6aee2188d548b71c08c346da6df9154b102694f7e3ead8c",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "419671178dffd4917936": {
+      "assinatura": "af1ad3fb20f1bf9d6a5e6136b00bc821ec500f438065ba2cb83efbc56bc19c2c",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "capital-b-gary-residents-opposition-lead",
+        "prioridade": 20
+      }
+    },
+    "448b256c59f078f579e9": {
+      "assinatura": "fbe93cd9f2a76db4c901b4a33f181b9f7de02432be82120d0a20c347fdb4acc4",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "44bc3b2f0bf08da17f51": {
+      "assinatura": "f7236e899b5349b5b1ba6bf885551ee3d760f1ddbb5ce8e7eefb4f2744a7e8cf",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "44c4fa69f33e1ac6346f": {
+      "assinatura": "466cbb869c90944e0aa8ccd22e5692e2018351c588cc3da2856056f6813cf5b5",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "subs-dio-bilion-rio-retorno-duvidoso-o-b",
+        "prioridade": 20
+      }
+    },
+    "4591233e588d23891533": {
+      "assinatura": "71460e67a024dbf084bb3dacb6bc6e53f91fa8ca1161b0be91e2ca2f521348eb",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "fauquier-planning-battery-storage-approval",
+        "prioridade": 20
+      }
+    },
+    "45a6bac89b878f7e07d5": {
+      "assinatura": "1baa7a56dafd5d146e650d73b9ba45c7ed0f347f51348a55d79731ac670f1c9b",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "rack-power-is-rising-fast-here-s-what-it",
+        "prioridade": 45
+      }
+    },
+    "462ad44017360e825442": {
+      "assinatura": "2117683ee39907dda2c6adaf95b816c1b07f19337f96d799bc8ab5632a1010f2",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "lula-nao-vamos-deixar-energia-data-center",
+        "prioridade": 60
+      }
+    },
+    "46730db93af20942b009": {
+      "assinatura": "fa3eacdb1db802d9c4d91b8586441aebd5129ba3d52dfe174c11cfd58ed718a4",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "u-s-economy-hits-pivotal-milestone-spend",
+        "prioridade": 20
+      }
+    },
+    "476ad63ce2151970d2de": {
+      "assinatura": "2a471e4862b39181ce73dd6db5a710c0fabc8e7e7ea54e7af7307f9292f7b1fd",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "exclusive-lithium-startup-electroflow-se",
+        "prioridade": 20
+      }
+    },
+    "47764ab17fea76e9a745": {
+      "assinatura": "1e8026599a9033b9fb5e0afedaa53bf952605f428766cca79f6ae4eb74555fee",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "moss-landing-fire-recurrence",
+        "prioridade": 35
+      }
+    },
+    "48005281d58fa880a707": {
+      "assinatura": "b0469c24ede97f1b56c4af4ce6f58ca02f7ed58e8c60bbd414755bfde39454e3",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "cftc-probe-voluntary-carbon",
+        "prioridade": 70
+      }
+    },
+    "48367997a51eec931112": {
+      "assinatura": "6e084f5f4a1873944aa0f7d01dd58176c7e24dd81a9c058847dee476c9ce52ab",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "bess-financing-emerging-europe",
+        "prioridade": 45
+      }
+    },
+    "48c6c8f959c4f022a641": {
+      "assinatura": "7c53af6678f1d143a1371eac3f6dde1b01feb3fe32ddd1c2bf4c6b2b0d592e25",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "brown-targets-data-center-tax-breaks-and",
+        "prioridade": 20
+      }
+    },
+    "4a2f787ab8a37ef9e62f": {
+      "assinatura": "2e1d1ec062464832bcf00ded61e0c0873b67bff6a6259b994b868f5a261e5dee",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "harrington-seeking-to-ban-data-centers-i",
+        "prioridade": 20
+      }
+    },
+    "4afa34858dcf5df8b85d": {
+      "assinatura": "959f9ddeceeb7797bc4e61575f47cfc5d13fd289dbb5f95eba156b058c9dfd82",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "4b5aa73d6895ee66883c": {
+      "assinatura": "b27459ce5302e039a8bc41fb5028944d43f5cd9d240f2f8701828c438a977610",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "webinar-highlights-cognitive-dissonance",
+        "prioridade": 20
+      }
+    },
+    "4bb416b8f3620c427949": {
+      "assinatura": "89c2e9c775c882242d95ffe6f99afa0a1e1b9a69f48bbae09335934aaf06e3a4",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "western-mass-storage-grants",
+        "prioridade": 30
+      }
+    },
+    "4c03f6ac1f8d125485c6": {
+      "assinatura": "59f33932401e41cfc9e2f690766216ba2058f2008c42c6aae30b5ed73077edaf",
+      "avaliacao": {
+        "decisao": "fonte_duvidosa"
+      }
+    },
+    "4ce6ffd9d6e982f36f78": {
+      "assinatura": "044faf02fec4ddd7fc598dd085ebbb7563961b782b8ec8e19c08588888024fa4",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "what-are-the-real-effects-of-data-center",
+        "prioridade": 20
+      }
+    },
+    "4cf1bfdb417048efe760": {
+      "assinatura": "039c4c7313954c29db605fdf3b5bb0c2a96e684f56dc4858b071715ad719e5bd",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "pjm-estudo-escassez-rede",
+        "prioridade": 78
+      }
+    },
+    "4da440148efe0e931cb1": {
+      "assinatura": "d36d01b367819185d2e8be1e8e5f32ca4b54ff1f6d673881a05143b7364c618d",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "4e7fdd227ea51afe9dd9": {
+      "assinatura": "7256a1e406f0cd7f2eb6c20b0ac2a14eba6511cf6cca67394636bd27e349dee9",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "most-americans-don-t-want-a-data-center",
+        "prioridade": 20
+      }
+    },
+    "4ef98f8ff2c8f5668029": {
+      "assinatura": "6105a198911522967844d9eb19a3e97b365f4fcf69d14c07e051ec0d349522f0",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "texas-construction-firms-facing-labor-sq",
+        "prioridade": 20
+      }
+    },
+    "4fa81d8b3a408d364228": {
+      "assinatura": "97d3a94cc8612949316aa4b3f6d6b192e3522fcfaff1942ca4eb36cfca54cf32",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "inova-amazonia-summit-mercado",
+        "prioridade": 40
+      }
+    },
+    "4fb00d9e949c1752f771": {
+      "assinatura": "8d4d435c20fac9f880b566e50643d0ad49b9213cc9eb4c48f18e4a7643af5e99",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "the-startup-that-built-openai-s-biggest",
+        "prioridade": 20
+      }
+    },
+    "506abb13bb57f2ef5f37": {
+      "assinatura": "604815278f073231ac26b0da81fc5429b060aba80a3dd60264b7f66fbd961ac6",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "british-data-centre-group-nscale-files-f",
+        "prioridade": 20
+      }
+    },
+    "516ef016a179e2924517": {
+      "assinatura": "70edec815a9adc44b6bfa525b6fffbcb2c6e6abe5d4872f468e9ccd87c85b59c",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "ntt-global-data-centers-ceo-doug-adams-o",
+        "prioridade": 20
+      }
+    },
+    "5180017a9d5da265ae6d": {
+      "assinatura": "5338e82db1ce7f0e192182cdef03fc2ff5c75a163809947801be1ae15a48bdde",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "51b0317fe6cb30a4ab12": {
+      "assinatura": "7f60b49184856771586c0463a61cf534b4bf1fb6933f4794172bf68e81a3ea4f",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "gas-data-centers-divide-governo",
+        "prioridade": 50
+      }
+    },
+    "51f4139558048a973484": {
+      "assinatura": "c463131d270ed90c58b55d0f66dd4c15818a39f4db02fa3aad40a0788a8c56bc",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "data-center-windfall-maybe-not",
+        "prioridade": 20
+      }
+    },
+    "5258a242a30a650aa17c": {
+      "assinatura": "93202e496681fed871d00a9d11b970ce6bec3763b5396084c42dc47d768f8ca5",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "ai-data-center-alarms-dominate-congressi",
+        "prioridade": 20
+      }
+    },
+    "52e629961310cde20060": {
+      "assinatura": "2a9990d76edbeba5251a90eb2a6f51a0d013454f33ae42c81288146f22ae1bf6",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "ai-data-center-backlash-reaches-silicon",
+        "prioridade": 20
+      }
+    },
+    "5315c65d67e8152bc75a": {
+      "assinatura": "93b1da6c564647109e8862d4f45f7d75782ea7c4e7c7b968e9b317577abfdc07",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "53631d699e31b9838f3c": {
+      "assinatura": "cc2e5b465593fd85d658bf44d91dadb09b1c9f781e830eb86e76cbcfdd56df51",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "asian-economies-boom-on-ai-driven-data-c",
+        "prioridade": 20
+      }
+    },
+    "537272687ed601f1a112": {
+      "assinatura": "0091e9d495db27db1931a02e58d740e51d21d64330fd608cbf998e9f8719b84d",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "catl-exclusive-cell-sales",
+        "prioridade": 55
+      }
+    },
+    "5378f53a9ef561a34832": {
+      "assinatura": "c184e0628b062b3875db05b3072a4d0e1dd0d6d7669f13bbd329617f1ef77da2",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "53b89cb7dd7a5a806c78": {
+      "assinatura": "347618bcf9f5608fe11124a9f0c7ff6395bba86d5fb0137370d8a9369310a5c1",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "russia-ataca-de-novo-kyiv",
+        "prioridade": 30
+      }
+    },
+    "53e1deea3179766e69df": {
+      "assinatura": "4c876872514cb40c1bfcb82f845e84d14273772e3d29b17cbfdc8b12f9d83515",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "county-supervisors-solar-battery-approval",
+        "prioridade": 18
+      }
+    },
+    "53e9ae91c08777238f51": {
+      "assinatura": "567fcee6718a69e830f334da524123b813752df2914fff9d73fa077375aeda22",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "5419877ab148c1327aec": {
+      "assinatura": "aa096d24af4a950494895600e30763384b3ac05c69e09ea40709ca759ebd8b94",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "sos-limited-announces-framework-memorand",
+        "prioridade": 45
+      }
+    },
+    "5436eb926a1ba124f60d": {
+      "assinatura": "45c9f4af01ee06029fb2f0185672d6525d8ea94a7a0c7d8f7aca823ff99aea2e",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "543aa91cf88b171cd5bd": {
+      "assinatura": "3e927b5256f609a3da03ff6dc2f910d4313c2fa9b0de79870030f33e17fbd7af",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "brazil-bess-2027-transmission-auction",
+        "prioridade": 92
+      }
+    },
+    "54b6e369d0824431c3fa": {
+      "assinatura": "965548684e1453fa066a4a3930593595218f95bcc7481ddeb58f43960a653174",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "rejei-o-a-data-centers-vira-aposta-de-de",
+        "prioridade": 20
+      }
+    },
+    "54c62877c8beb4e34963": {
+      "assinatura": "3fd9fd9eceb83d12002b73a8c679c36e1ffd81cc4cd46f5d2ad5ac70684568d6",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "54f5d14858a48a2100cf": {
+      "assinatura": "e9768b66f0f6875b66377e399de85d333229f891306c95c6c371bae03d624c9f",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "japan-s-nippon-life-plans-13-billion-for",
+        "prioridade": 20
+      }
+    },
+    "557124c6af27b029252b": {
+      "assinatura": "044ae5c2693048d8400269ea63d8dd7de00e035c73b46c4e60e4c5f4caf2b3be",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "5726acadcd79d625c0f9": {
+      "assinatura": "a814c2fab9e87897c15760064faaec75d9bb89747f1022cbb860af8fbde8983a",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "inside-data-center-monitoring-hubs",
+        "prioridade": 20
+      }
+    },
+    "5736fa131abd53bde10f": {
+      "assinatura": "f4fbd010ec6990b4aa49894890a378fb9d92cbd7c12ee0170200c2592df18a16",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "it-s-donald-trump-versus-maga-on-data-ce",
+        "prioridade": 20
+      }
+    },
+    "585f187f42b714ed49d6": {
+      "assinatura": "aeb7ef893e2046bf04216bab54cacb173d5adcb126add421004b3b18e6cf8187",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "jackie-venson-to-headline-austin-anti-da",
+        "prioridade": 20
+      }
+    },
+    "5885301be87ad605798b": {
+      "assinatura": "43d21690611020faae8f13288b561ef5f4ee2c197bbc7376be31a27d897644a7",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "byd-denza-z9gt-thailand-flash-charging",
+        "prioridade": 35
+      }
+    },
+    "58e1bab109066b7e10d9": {
+      "assinatura": "27d7a44ae00a10a6cf716bea94baa204d3c9601d6554f609b0eec37daa074002",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "59c7464b842af31347d0": {
+      "assinatura": "35696620c5846105a297f03e5479fbf1e95d7178100087c984d2856093032ab0",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "egg-harbor-zoning-bess",
+        "prioridade": 20
+      }
+    },
+    "5a3a3110ac10f3d5270c": {
+      "assinatura": "33d0df070684212a564ba0e9dfa4ee81ae1475b5c42556d0e69a2daed2a32b9c",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "loudoun-county-pausa-aplicacoes",
+        "prioridade": 30
+      }
+    },
+    "5bbd782c259d5db85ba8": {
+      "assinatura": "95997ee034ff56872d82ea643bd4aaf1f0c424d533e4364ac48ea80590089b04",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "a-rural-kansas-town-considers-data-cente",
+        "prioridade": 20
+      }
+    },
+    "5c122ccdd143d83f3728": {
+      "assinatura": "c0e4be7a1ebebfad576b25b94da13195a364a404bc41efb26b4dde2d4d8c29ac",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "full-news-conference-governor-signs-exec",
+        "prioridade": 20
+      }
+    },
+    "5c8766803a2f8d4fe50c": {
+      "assinatura": "49de326ee8c9fbac6f835089de166ceac6470d8a772082ab2bcf2ab1bfd5a6a6",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "5d6ccab88c6f0ae88cd1": {
+      "assinatura": "6c667d0515b5f092ee617731591f6a8e8e145f73fcfd53bcca2069fe205712b6",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "data-centers-are-swapping-water-for-fore",
+        "prioridade": 20
+      }
+    },
+    "5f1110bf8623dfb4d491": {
+      "assinatura": "7631c380d8688ba01fd0714158ddaefa1539ba56ed358c7c93bdb9bfe380b669",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "sodium-batteries-europe",
+        "prioridade": 65
+      }
+    },
+    "5f2c818e383ef04971e1": {
+      "assinatura": "23ba7ac34eff91230fa6f03f598941f933cdca753ec450601bd8f4481357e561",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "meta-tied-data-center-draws-blowout-dema",
+        "prioridade": 20
+      }
+    },
+    "5f3cf54593d09fdad569": {
+      "assinatura": "943306d283df935c87678758ef8dfb96a838da9ea44f9b65b39ab1c8a0dacdc4",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "goodwe-nantes-launch-event",
+        "prioridade": 20
+      }
+    },
+    "5f94cba8eab0468fefab": {
+      "assinatura": "99f303cca2b98cec0979cb2d7223cbe753e3fe31629477f9a62c962aed97b463",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "mississippi-river-mayors-call-for-water",
+        "prioridade": 20
+      }
+    },
+    "60b7c60012dcb0ee5bea": {
+      "assinatura": "247d613a14f8e5c4544c28689568ed0401c6808be9eb1410b3a79c2d852c3223",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "60cc673028665972adc2": {
+      "assinatura": "d05c2afe6a0bf0ce7c11d9156eb7fc8578cd3e76fdbcda1a60557e4a88ae55f0",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "60d8c6d9adfb362dd43f": {
+      "assinatura": "3410eee6f38a6242b2585cadf4146ead525bd73130df7c57767ce1cfba31f113",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "will-lawrence-rolls-out-plan-for-regulat",
+        "prioridade": 20
+      }
+    },
+    "635e06d08b11675ec381": {
+      "assinatura": "eb28dfa40540c0530059e1388fd0125b8e1392f918f2752a21704346f9fd5754",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "638befe96bae50a591dc": {
+      "assinatura": "0f2d4fecedb6be5bb3d78b3ab23b63fe65aa4bf839058fab5196327bbdbf9457",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "greenfield-city-council-approves-one-yea",
+        "prioridade": 20
+      }
+    },
+    "6480df16da740c6ad124": {
+      "assinatura": "17442f9c861905c719ab42ef3356d6e6178ce5ded981dd2d9fe3ce87f3078ac8",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "pam-treece-discusses-tight-race-for-wash",
+        "prioridade": 20
+      }
+    },
+    "64e001b53aa3152a6ff1": {
+      "assinatura": "4c3f34524c2c7a556fee9278ce5fb878a07c2b3af809f91507c61a2bbd0084b7",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "google-esvolta-time-shift-recs",
+        "prioridade": 55
+      }
+    },
+    "64e657d8e313f8cbdbdb": {
+      "assinatura": "6b5c950970d1a2c2ddcef163f939f7d8742b610ae2a82641f77ae686cb656dab",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "655c56e5d9bd48424b02": {
+      "assinatura": "2fb77e1f72aace984e8730d34d968261e02151fe4f1ca98920bb47ca76c19510",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "66a6361b27562907d3f3": {
+      "assinatura": "ba833a94e44d348bd48b3718eaf1914de39f4508956bf4a5ab97368a7a4842bb",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "brasil-o-novo-centro-dos-data-centers",
+        "prioridade": 20
+      }
+    },
+    "66c5bed4726468e0197c": {
+      "assinatura": "846c679dd7d3e6a629a9c97490257ab0f6453b459e2044b83080981109cf6d66",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "hithium-sodium-ion-nextgen",
+        "prioridade": 72
+      }
+    },
+    "66f32d9e9ecf4d59ac9e": {
+      "assinatura": "3a1fdd3f035f50bbe316f4e2940cc67989a3b9e7d0efd7d93e31586d03c3d91d",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "illinois-battery-auction-600mw",
+        "prioridade": 65
+      }
+    },
+    "673badd2b43452c668e1": {
+      "assinatura": "e677ca834d63d93c976fe1768f19e3d5efd3371922a1dafcc67b225e516e4b76",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "67526f06f04c5ed73158": {
+      "assinatura": "dbf7b02c076a6a61bca1243faa64af08d27e3b5f0d3b5259c38e025170b37d09",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "china-battery-quality-survey",
+        "prioridade": 30
+      }
+    },
+    "67a2bce23c68ee54d115": {
+      "assinatura": "948975216dccd82f47aa1d9d0db2568479e74331bc4ce4f760088609ccb3f80b",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "700-billion-data-center-boom-tax-gains",
+        "prioridade": 20
+      }
+    },
+    "6895148b9f3550cfb507": {
+      "assinatura": "295646c8af5f76c8841dea8950171621e8be207225080a5d23e2f3de05a179a7",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "what-it-s-like-to-work-in-one-of-america",
+        "prioridade": 20
+      }
+    },
+    "68f70818ea26067fb547": {
+      "assinatura": "5c11c535ad171adae21026e058ffc6a5d703d91b7c66c8e28e43f318347ae5fb",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "advocacy-group-can-continue-to-challenge",
+        "prioridade": 20
+      }
+    },
+    "6951daf7817ab847b7e5": {
+      "assinatura": "f18475f3f37d241d2348a124b7f5f9849bff05943f9862350e662b2abd33f42e",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "reyna-data-centers-have-arrived",
+        "prioridade": 20
+      }
+    },
+    "69b0512abe0d974b83b3": {
+      "assinatura": "fa1a07f2697f58f9d4c4cd61b124168f804abbcc109aa3b3861a7fcf309f9482",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "la-county-issues-temporary-ban-on-data-c",
+        "prioridade": 20
+      }
+    },
+    "69d6a917d956b8991898": {
+      "assinatura": "cab0615fc681a3030229ce2b49905b217071c26666e98d4eb09640a8860c7b86",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "nexo-disputas-construcao-data-centers",
+        "prioridade": 35
+      }
+    },
+    "6b4ea9fcfbd719872c0c": {
+      "assinatura": "b8c2170dd019cc81b93c1e34cbc1e491fba3093694f62597cf785dfa53cf73ed",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "trump-thune-projeto-custos-eletricidade",
+        "prioridade": 68
+      }
+    },
+    "6b4fc91ac550ed3eab19": {
+      "assinatura": "98a6fef46fa156c9b734ccddcb04ab413203630bb3720fbfebef36482f38cb39",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "data-center-proposals-could-be-on-garco",
+        "prioridade": 45
+      }
+    },
+    "6bc685e9946f634f9016": {
+      "assinatura": "af41fdce5d45ff63980340e836fd0f785bd1410fb548ade7de68b6e3746d3a03",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "arevon-cormorant-storage-ca",
+        "prioridade": 30
+      }
+    },
+    "6c344d412542e31bb693": {
+      "assinatura": "d029ae061cdacc189c8f15b64870c691a2b71564de6ff3610fc58ff39f3e7615",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "6c35f75840a3861ea42f": {
+      "assinatura": "5c3f336f66020728664c2c9e1e48118fefc932de68ad9823bcb3df3d22fd317f",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "6cd7daa5a90cf56bdfba": {
+      "assinatura": "f4bb12626a0536b520949bd5c801778519fd5a516201f0c00b1fc7a6ca4b393e",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "6cdf99cefbe0989e864a": {
+      "assinatura": "10f5a0ffbb9ed8fe972ece966dae0b30e833a64b96e912fc0e8b42b9545cf485",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "rg-os-entram-com-a-o-na-justi-a-para-qu",
+        "prioridade": 20
+      }
+    },
+    "6d0c143a2a3d90377748": {
+      "assinatura": "78a1ccd758c7ab59e54e7c2f3c2ad5bd919610bfe37db6e753a7451bdb7fcba0",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "6d31f36ad4cf97b10af1": {
+      "assinatura": "6fc388e577452e6a84d6f8bcf6dfbea5ff354199dc76c99c1f286d5d58db16ee",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "opini-o-os-data-centers-v-o-beneficiar-o",
+        "prioridade": 20
+      }
+    },
+    "6e43c75b8c019589bdac": {
+      "assinatura": "f35406386adcd7c287819f5617e33bf7dcae807c0e269a97cc65d0c5fa2492da",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "6e9d1caaab7c93d22999": {
+      "assinatura": "fdabd1ff93289caa8ecff9ea30d1f09a5229feea4f8348afaf8d1b2662e1583a",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "colorado-springs-project-taurus-adiado",
+        "prioridade": 25
+      }
+    },
+    "6f0c2ef587924f83f8d9": {
+      "assinatura": "7e020ff40387ef943b17f72abb8061d2d30d168e470056b6adc9e03766cbeed8",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "data-center-do-vale-do-a-o-mant-m-opera",
+        "prioridade": 20
+      }
+    },
+    "6f51974ed413f093d712": {
+      "assinatura": "544c653a89ef11c320856031840d1429c37153ed98637865b137f1288d144f06",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "nvidia-nvda-forms-alliance-to-build-a-po",
+        "prioridade": 45
+      }
+    },
+    "6f6710a9fb5d8cb8116c": {
+      "assinatura": "8d4ff1c1831712f4ca6fa724d6e84a384e6d4b1f3eea7e787aacaa66e118cd1f",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "6f834aa509ab3b211a1c": {
+      "assinatura": "7ebb0a4692e0727f935091623234122a7f6ca6acbd0fce07b27833db9bf58cd6",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "aneel-setor-eletrico-preparado",
+        "prioridade": 87
+      }
+    },
+    "6faf0aa3c2256cf3a6bb": {
+      "assinatura": "598b283ef860cbffaeb648226e1f4c42004dadc2b32da427bda4344ee9f40ef3",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "6fdf51398f437e29564c": {
+      "assinatura": "d896693dd2c8fbacc8985991d1c6851b5a19c819125850e9c70534e88b3b9fbd",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "catl-license-bme-egypt",
+        "prioridade": 45
+      }
+    },
+    "702bbab92f759e9b5979": {
+      "assinatura": "237eb2fca311c4381c5cdfe70caa2a168ad7a874f4e4d60a97e2f061594406c9",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "708d6e260841286dfe29": {
+      "assinatura": "2e4149e5c769e758a5b04d8d11621969362aaa59e96f81b2e8a158dc58234af6",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "70b3167ec0664cfd96c3": {
+      "assinatura": "2e73155688218d2f47e55324c688ec2537bf10a092fc2b27bf1878967be1fe61",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "data-centers-drawing-concerns-over-water",
+        "prioridade": 45
+      }
+    },
+    "711e43e2e503e7630e08": {
+      "assinatura": "07efacaccf5dc0ffe5b443f2e683407c879ea2bc782b743bcbefa7016e707c88",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "u-s-senators-banks-young-talk-drones-dat",
+        "prioridade": 20
+      }
+    },
+    "7126fdf19059aceeb53a": {
+      "assinatura": "fbd55bd4ef22373582dc3b4e02bea533d26e2381f20ea7d1b4d7f4a87235ca62",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "produtor-rural-credito-carbono",
+        "prioridade": 30
+      }
+    },
+    "7192039bf49da4dccd74": {
+      "assinatura": "b8a870f28eb6673e646065a7620be7a2bdbac51c5454da5a9bd046d79fc7e680",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "boulevard-ca-solar-battery-project",
+        "prioridade": 35
+      }
+    },
+    "726218d25f60d5361bd4": {
+      "assinatura": "216b49647f4a30355e66d5111559eb7fa32bb58b9958a0f5a84aa253fe7d764c",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "72627dc3cb2394063d0d": {
+      "assinatura": "f4856c5db9cfa915207434baba555669a844c253fc1fc6bd3ab1f7c3179a3f26",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "data-centers-podem-atrair-r-500-bilh-es",
+        "prioridade": 20
+      }
+    },
+    "7293ddc8139bb09674e1": {
+      "assinatura": "bfd31ae4e0814ae8e2f32c878c5a9cf98152e8e0b7ef25e15be4d6c155d46099",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "nio-catl-cooperation",
+        "prioridade": 25
+      }
+    },
+    "72ffbcc6f01c77ed561a": {
+      "assinatura": "c2b49dc790e04d238ece1e06fd3aa378a1dea9371caeb07b2d2f0cce393ac67e",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "bitdeer-ai-to-lease-65mw-data-center-in",
+        "prioridade": 20
+      }
+    },
+    "7385e275fa2fd6b0c501": {
+      "assinatura": "da5f6575e65ee43d6bde6a1898d5d37e1a74d95764132a65e85ae6820dbb8d06",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "this-kentucky-county-is-the-first-in-sta",
+        "prioridade": 20
+      }
+    },
+    "7422af2bce19f018d02f": {
+      "assinatura": "c269ddbb249a53516524d630f18852b28c6f85d9386ea0cf10188a0bb6449975",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "savannah-georgia-regulators-public-wrath",
+        "prioridade": 40
+      }
+    },
+    "74287fe78350aa6fdc64": {
+      "assinatura": "0d5b1ff0f07d98145b31675c799ae0be5897476b542c80c024ae48f5ccc5c679",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "lam-dong-mercado-florestal",
+        "prioridade": 40
+      }
+    },
+    "7450437353f2d0b15f06": {
+      "assinatura": "3242f9f8e066fc5694f536446cb289c7f0de332adda67d9747e32d2902587051",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "747b68a3ccdb0f15e11a": {
+      "assinatura": "896b004a2c8c375e2fc405f951d0648202ed5449b8c699ab3d19533dfad54c14",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "epe-alerta-duplicidade-conexao",
+        "prioridade": 91
+      }
+    },
+    "753793daaaf74f01953b": {
+      "assinatura": "232bb0a729028e1610db48a849b3ad2145b102ee1e20554341a93bae092d9057",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "762b8a3e3662c98e2d49": {
+      "assinatura": "102198f43d2fec3edf047d7617d27abc3b51996e11c236479a72493b8b67e428",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "huawei-s-oceanstor-kv-cache-storage-for",
+        "prioridade": 20
+      }
+    },
+    "7688b179304e62fa3c4e": {
+      "assinatura": "c1efb499d8302bd4660d967f74c13cf51ae778203340943afec55c3085b35d4d",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "a-empresa-de-energia-ppc-faz-parceria-co",
+        "prioridade": 45
+      }
+    },
+    "76d9cf399352c18f3578": {
+      "assinatura": "a4826c63b72491b8a844c59d42de475c9ca4c88e566e43a0a7ccea8ab489aa40",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "7784cc4e3f7772f83629": {
+      "assinatura": "d9ce78aeb722de7d3a1930c3aa00713b17bf924990fa9a16a6706a99713d83dd",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "77feb16c464a5928cf5f": {
+      "assinatura": "8e0304304515e779a8126026ef2da8b173615c01d1c882f7658e1bd0ab364019",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "virginia-governor-creates-an-ai-task-for",
+        "prioridade": 20
+      }
+    },
+    "7844ecfeb173c8ec3e23": {
+      "assinatura": "82b9fbd01fbaa1eaa1c8b1e04e0df14c4f0b81c713eaa30fe3615df25738aa38",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "785a3d718f3f41bbd010": {
+      "assinatura": "fb9d96cff8a9eadef830f7162485dbd945195f51388a11771111768a784b38f6",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "oracle-has-committed-hundreds-of-billion",
+        "prioridade": 45
+      }
+    },
+    "78d5f8706f0a19a286e5": {
+      "assinatura": "006cdd04aa3c556c3527f66758225c03fee9c00e1952ee716b9ae58689b93a05",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "companies-seek-to-hide-indiana-data-cent",
+        "prioridade": 20
+      }
+    },
+    "79f6a3599862aff3f81f": {
+      "assinatura": "23b5075cc4490ef3d8a5eb4bd64cf8c17302ad36dd7880958134ddc7e847b961",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "flexgen-lightshift-55mw-200mwh",
+        "prioridade": 35
+      }
+    },
+    "7a4c51f08375ddd3ea0f": {
+      "assinatura": "bc5eb3a39d34367a8a8bfaf1d89720728cecbf6a12e5d135f91126142bb13834",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "blue-line-storage-commentary",
+        "prioridade": 20
+      }
+    },
+    "7b43e639da50b5e6dd8b": {
+      "assinatura": "588df8a0425e0b21140076b6341c651c0ab242e7d9fc564b8b2f971e8aa76a29",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "congressional-black-caucus-leadership-on",
+        "prioridade": 20
+      }
+    },
+    "7bcafbf576040fd0820f": {
+      "assinatura": "2fe547b6bac40aa57f593e5435c269d1432587e91bda21adbc5e10cfb6e9015b",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "letters-snap-special-ed-data-centers-ai",
+        "prioridade": 20
+      }
+    },
+    "7bf4e30556f722531c31": {
+      "assinatura": "ea654ed10722f16a549da9ff82967e8e76385618fefe3b741dea5cd45c3589e4",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "haaland-backs-data-center-moratorium-cal",
+        "prioridade": 20
+      }
+    },
+    "7c03c3bccabdf59281e3": {
+      "assinatura": "163ad4cd964664a1983d435faff16e29a5eebe01dc63970e38d9f5e7bbd1424c",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "7c4881bd3fa2ca505909": {
+      "assinatura": "e3b0f3f56cf16e99cfef7c3b7bbf0f4930b6b0fcc26ed1fb76d4614adb03027d",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "tera-batteries-southern-europe-largest",
+        "prioridade": 35
+      }
+    },
+    "7c5c48528e3ba76af0d8": {
+      "assinatura": "2a9d5086c1ce2791b9ae6160f2f766abb134b3ded76a4bf418838472f497d9dd",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "7cacd06aa0f252dbd1c4": {
+      "assinatura": "8da2968c4dd004b4bd7632fb2256168207d1ba1f9cd7295b07838e1e7b30003f",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "vietnam-forest-credit-path",
+        "prioridade": 35
+      }
+    },
+    "7d15b9b2c0bc90cbec5d": {
+      "assinatura": "0807c2c4a113921332294b190909f42e1d094cab7b3588d9634023fd2af03496",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "middle-east-is-the-world-s-fastest-growi",
+        "prioridade": 20
+      }
+    },
+    "7d8d64c44b9914f6ca07": {
+      "assinatura": "a323a486bf02f9031c646cf70609dff927192d213826435303aa6a93bb36f525",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "7ee43d27e6c85f0c2f45": {
+      "assinatura": "5e57ccb90fd1054473b2428b58e83b45265da58481559adeba139d9fb8fa6031",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "cleveland-data-center-hearings-when-and",
+        "prioridade": 20
+      }
+    },
+    "7f6325fb91ce8fd94790": {
+      "assinatura": "e5e77a92e788aa0c591414b3d576a089c3e7ddf13863e17ed709e75d325c08bf",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "fazendeiras-recusam-oferta-de-r-133-milh",
+        "prioridade": 20
+      }
+    },
+    "7fcddd1e3e56ff39ac98": {
+      "assinatura": "3619c208c48437deefc514bb8e76c328e2002f6174056a435b29e251be8ec74a",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "iowa-cci-holds-no-new-data-centers-commu",
+        "prioridade": 20
+      }
+    },
+    "8116d9ce2bdb2871871a": {
+      "assinatura": "740130849c0e7db61b8a5089f39b82a4507f3eb3ed80337e660cbb18673ed418",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "data-centers-nova-lei-abre-caminho-para",
+        "prioridade": 20
+      }
+    },
+    "818f31e9cad9f54ddf99": {
+      "assinatura": "a404eed74310bacff16c3efa7a1f9ee893748b09fe3c9118a3e3cef26c186b8f",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "sauk-county-voters-weigh-cost-of-living",
+        "prioridade": 20
+      }
+    },
+    "819cca9fbc9cefa893d1": {
+      "assinatura": "57eacb785d4eb6ad0a54ee1a36b28866bb3461a1fac03b90bed2406705d4110d",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "senado-bloqueia-projeto-lei-energia-data-centers",
+        "prioridade": 92
+      }
+    },
+    "822377197464ce80283a": {
+      "assinatura": "b3c11537b8b09b7a9bb9a5c306bcaaa45f05a42b48d5abc68cd9aa8eed7688f4",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "could-this-portland-skyscraper-become-th",
+        "prioridade": 20
+      }
+    },
+    "82298b0abc2cb75a7499": {
+      "assinatura": "77a6bc6cbde9fdfed6ae15ea71c3130924b5951325b25af87a1364c438f5b2fe",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "most-respondents-to-kdh-online-poll-won",
+        "prioridade": 20
+      }
+    },
+    "8256bdd5f8b37255e55c": {
+      "assinatura": "b282860078a6d0551bbe3a16163265bc0c2f221ed8dda059c441aa04ee668d92",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "wsj-domestic-batteries-china",
+        "prioridade": 55
+      }
+    },
+    "82e73203b6d1c1429743": {
+      "assinatura": "5ed4d61b07a283795e7aeb3aa7b17751274d8775394a38ea968711d6d0762d56",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "83020585f3190ed0f239": {
+      "assinatura": "1682e215a1c16d3bc208e27e8edf2a5bddd02dd643b5852df3eedbf35f103ac4",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "opini-o-os-data-centers-s-o-os-novos-pro",
+        "prioridade": 20
+      }
+    },
+    "83b93ef72ff8562c811b": {
+      "assinatura": "81f3a866fdc3977b719ddbdefb9a7c37fb9a8d2c6be18ebff87a26191faf5f2d",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "trump-pledge-on-data-center-power-suppli",
+        "prioridade": 45
+      }
+    },
+    "841a09612efdeb558b6a": {
+      "assinatura": "df8a0be26593a903abe982d4bc9916151c048c88bf6ed2369a5a803400a0c215",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "usp-greenline-registro",
+        "prioridade": 55
+      }
+    },
+    "84241854ddbf2f2d17f0": {
+      "assinatura": "d395e44322d56dcf0932cd2e675390dc0538bf97d975989ceb84e0483579adbc",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "trump-is-considering-data-centers-on-6-s",
+        "prioridade": 20
+      }
+    },
+    "84745e78a6ebd545f8b2": {
+      "assinatura": "4202770cb7dd888465c7a7d61206a7c3e8937e19f0ef17043efd65c4d03ae81e",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "byd-caminhao-eletrico-1000cv",
+        "prioridade": 40
+      }
+    },
+    "84767b2bd18beb8d414e": {
+      "assinatura": "078dfafe775195a1cf69c9e749c03d6fcc8294bffb2f6151cf18e6f86d7e03c4",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "mol-algyo-battery-park",
+        "prioridade": 40
+      }
+    },
+    "848cf01f4a47ecd8854c": {
+      "assinatura": "4cfd6beb62023ac4ba3f93926cd7022748c1175b2a0a0ba33fc41bd7eda4ec8e",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "8513699059eee8e13e86": {
+      "assinatura": "760f2bc923ef92153bff309f14da4ea666550713df495555ec178189e79b2df9",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "hobart-mayor-lauds-windfall-payments-for",
+        "prioridade": 20
+      }
+    },
+    "8560e027919c5daa863b": {
+      "assinatura": "d2807a9bbe962428d6f44cb228180e4528b21c2d7edc38fe3ef2a197be9655fb",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "ai-data-centers-in-philly-protest-planne",
+        "prioridade": 20
+      }
+    },
+    "85c1b8123a1489a70902": {
+      "assinatura": "3eac9fa8441785773cd7372f9057e0f385871eae1a8fe3e631bb9a02cc3d5988",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "microsoft-transmission-costs-challenge",
+        "prioridade": 78
+      }
+    },
+    "861789a47be48664c038": {
+      "assinatura": "d8d9f0f444ed7ddb0c79c8dacce650ba0d6d6828e5337ffb178db4a2a7e926cf",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "what-to-know-about-proposed-grady-county",
+        "prioridade": 20
+      }
+    },
+    "867314d412cdfb60ce04": {
+      "assinatura": "671c3c8a6e4eded1c3e010e343341edba0f22159f051b17c739942571077f9a3",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "virg-nia-endurece-restri-es-aos-data-cen",
+        "prioridade": 20
+      }
+    },
+    "8808ce3d4613c74274b3": {
+      "assinatura": "3e7231f436a2d5072dd8b3076487fa11e936a44caead86b0a1148aa3a00b55b8",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "hilldale-ave-battery-site",
+        "prioridade": 15
+      }
+    },
+    "8944a45216113bfdb44a": {
+      "assinatura": "686c000b96cacb76b51859534588f2873b00641cbaceb4ec209a22ca7f0dde0f",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "8969f3c8988604421adc": {
+      "assinatura": "6236293a96eae6b6a174abb7ed948244a63f46be4cb823c758302dbf0668dc31",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "89cc08bc7f82b561a25a": {
+      "assinatura": "f242ba246d41cbbbba529e943dd42dbbb3054a55bc1f3f1176ac25eb35e64506",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "powerx-109mwh-japan-order",
+        "prioridade": 40
+      }
+    },
+    "8b84b67a08f5bac0829e": {
+      "assinatura": "4f89623c6d8238a53acaed9ec89e07c844816fd4e89f06b5268d61add2895215",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "8bb9dd61f0fd9620cc6a": {
+      "assinatura": "8dcd2b856665c93bd7f30595dc41cc6fb2d4e64de050fd6076a500fbbf5bd346",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "california-1000mwh-storage-facility",
+        "prioridade": 40
+      }
+    },
+    "8bf512bee8992f61d8a9": {
+      "assinatura": "297daebd4e722caf14b891e6da5f060c34530d0957ab6aa83d3eaa6c8bfeacaf",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "one-half-of-oregon-is-crawling-with-data",
+        "prioridade": 20
+      }
+    },
+    "8c179a39621dc241c787": {
+      "assinatura": "c6fac7ab11a5c9289f6f620e966589edfbadf4a0dd03d0227a82a1be11874aef",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "cumberland-county-judge-reviewing-argume",
+        "prioridade": 20
+      }
+    },
+    "8c1f41d282b07a2cbe37": {
+      "assinatura": "f98b186f440454d769b4e2f5e5881650f633700957b67a1ba5686e9d1a51a74b",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "8c4f6014fa49fec5c5f8": {
+      "assinatura": "cd6d734e41b9af84008a3d41c008bbb1bc6e1b29f137815f79aa865e546aa249",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "broadview-area-data-center-sees-first-ph",
+        "prioridade": 20
+      }
+    },
+    "8ccb9699aeab2d51302e": {
+      "assinatura": "f129564738d6851ee29dbc8583f8576b4ca14c21159dc6e4f235bcc6a8f70e6b",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "data-centers-no-brasil-entenda-os-impact",
+        "prioridade": 20
+      }
+    },
+    "8d858672692c79ca390b": {
+      "assinatura": "7650cc3eb92b97c1690aaaf9637491c396f24e9d854fe83571a91703d28ab41c",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "communities-deserve-top-say-in-data-cent",
+        "prioridade": 20
+      }
+    },
+    "8deaf03ecfccb0af3232": {
+      "assinatura": "eac3f9139b187e9aec5b85da6c63e2b9b34d3d53e31a6b9b9d7910d8aa2d900a",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "8e04fc8c5eecd27929a4": {
+      "assinatura": "73783c6e0a11fb538738440c5b68adc08cf094de2e82919bf8a6373662a02867",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "8e8f285ce08555693643": {
+      "assinatura": "15d051b8332dde3af8da347f51a57bfd4b9d97f996dfdf6b4a92e8630fa9d34e",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "sbce-mercado-financeiro-licoes",
+        "prioridade": 88
+      }
+    },
+    "90a9ad74f27e864f4a0f": {
+      "assinatura": "76750a16d25d029612dcdcb2c1ed44ef5d4d4b6a8e17e09908a723fe0c9d598a",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "openai-s-listing-delay-raises-stakes-for",
+        "prioridade": 20
+      }
+    },
+    "90cea7736becdee83470": {
+      "assinatura": "f89e9988ae34db88dab9820c204789e75d3b355e4c1faa5cfc9d7b7438700b7c",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "why-data-center-dissent-has-suddenly-gon",
+        "prioridade": 20
+      }
+    },
+    "9191e1a55a0ba8b9853b": {
+      "assinatura": "7f9a724d5bfe471931e07bec2ccd62e35a2978281da0b1c2486a20a69fbbcdd3",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "virginia-spanberger-endurece-restricoes",
+        "prioridade": 55
+      }
+    },
+    "920d757b9adf7b77cea6": {
+      "assinatura": "fb10b33f97f65aa41a27dac224adf825285005f875849d33493c18b877cf87e7",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "93427f26a43bc3524969": {
+      "assinatura": "d9548bdde451dc95d52c4b515b8d2fa8dd53a02ebf79e04d40ce97beedfdb9f7",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "936afae2e79e9df91f08": {
+      "assinatura": "05ac19807255ef8363463d9198832191384879bafcf8f58d9fe534ce7bbad19a",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "ons-30pct-energia-pais",
+        "prioridade": 93
+      }
+    },
+    "938ba0b158f3b3485c10": {
+      "assinatura": "435397748064d190bd254e7e257511bc688502812d3e7ab0504d973df715f337",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "o-data-center-vai-nos-ajudar-a-criar-um",
+        "prioridade": 20
+      }
+    },
+    "93ae959f93557cdf3932": {
+      "assinatura": "77f8fe887aac5b697bbe1a27661b8c96ffb4103017dd5e1b06d08061051b5942",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "family-slows-proposed-tennessee-data-cen",
+        "prioridade": 20
+      }
+    },
+    "93c0508f9f1dc026b771": {
+      "assinatura": "01b3f59f81d5111641892face932f7bf8ef51c0306420c324babd120a8db9862",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "9407e3c41a395c7f3ecf": {
+      "assinatura": "d1a9e0571fe5c75518711e2f92ca2e8ab84a0bb85bb95331e2f4384bc77445dd",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "941bd306eb43ed39e80d": {
+      "assinatura": "2197ecf40354fd7d8ac465ae5bff188a340633634524f8a4b5f73b71cd0d7616",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "941d23eb955bac98cc3f": {
+      "assinatura": "6f5ca6af2bc06a5531e8d06576ab47cdd515469b30d76fc58e042f03282ec883",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "94548d1e352de681ed20": {
+      "assinatura": "64cbaf63f422272bd5a0f91ebb57b8e3c1561eaaac8c9c971bb374b1610645c2",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "94a9c8d8117d887ce131": {
+      "assinatura": "f7605eb1494891e9dad30820d057d56140c66ea5161a2090e79df725239ed924",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "doe-next-gen-batteries-explainer",
+        "prioridade": 30
+      }
+    },
+    "94f383264f763d639665": {
+      "assinatura": "9f5b53ad8746289b9bf403a2630c60619a8cfa7891056c89c88481afc3178c16",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "nevada-clark-county-education-associatio",
+        "prioridade": 20
+      }
+    },
+    "9538a4022ea5725aea94": {
+      "assinatura": "23285a8afb038be91425703e6ebfac1ad5780395aadb2aed9c01a6e8ebfaee45",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "954b14346708058d353f": {
+      "assinatura": "efc589adf7bb99a1c779f2c4b0a156289c67fa26843c6906b2a4bc0d679781da",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "the-data-center-boom-is-inverting-the-st",
+        "prioridade": 20
+      }
+    },
+    "957860219209ef152b51": {
+      "assinatura": "38fd796e5ffcd7131434c8befb17efd86ac7c5cbe6d8c0b81c06c7973c3ec248",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "96c823fa9ee1c7dfd049": {
+      "assinatura": "b4fc79105a3aaaffd507f02e77d99e5a9c7ccd183bdd3ec085c3e33184c9f052",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "jane-street-linked-data-center-debt-sour",
+        "prioridade": 20
+      }
+    },
+    "96d496e72cfd640714af": {
+      "assinatura": "615cf9c765a3bd2f92135065bf73520f7b1c2efb991fc38e20702e1c84eb0e8e",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "calexico-enacts-permanent-data-center-ba",
+        "prioridade": 20
+      }
+    },
+    "96d97e717e8cfa0c26b3": {
+      "assinatura": "5287f66adbc6ee80b72e388ec2ae1271a7f0baa0ba6222618184c403fc9652af",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "o-data-center-do-tiktok-e-o-verdadeiro-p",
+        "prioridade": 20
+      }
+    },
+    "96e71b76f0747c57d3d1": {
+      "assinatura": "342c0693171b7329320b365e2b443f11e6b9adb0e445af6c3fa9cca024ee7871",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "jinko-bess-brazil-showcase",
+        "prioridade": 40
+      }
+    },
+    "975213f8bcbec14ab4a4": {
+      "assinatura": "00445801ffbcc2cd3b0112b351c2870f9ee3826e31428d5a01875183dde5f34e",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "petition-against-new-sf-data-center-gain",
+        "prioridade": 20
+      }
+    },
+    "97a190307cd0df4a32ca": {
+      "assinatura": "d9017463141eeda5ecf58560b35dd22ccf788d1eb38302824c2a3969dd24578d",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "self-described-country-hicks-refused-26",
+        "prioridade": 20
+      }
+    },
+    "97faf9622de9c38b413b": {
+      "assinatura": "75189665eadaa8c86ab405018e32d2309cc18a865908ee7927eb34f1e5c27ff3",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "98142b7b496d3409c86b": {
+      "assinatura": "f67be86fa41aa9ecc783695969c283eb53f4aa72542d9d6ff2c7fcc9e1b5986c",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "opinion-public-outrage-takes-center-stag",
+        "prioridade": 45
+      }
+    },
+    "9b25c9547bdd9ab6b69b": {
+      "assinatura": "c21b9490b6e9071995f50834c0cddfbdb8ff6fa8cbb1a0072cc7dda0edf3d9f6",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "axios-mapped-america-power",
+        "prioridade": 50
+      }
+    },
+    "9b61525a71b8afbdc7a9": {
+      "assinatura": "003769aeb2746a70cc48a9ae00ab5d82b495039996e49017d0f7c8ee1105ed95",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "redata-o-que-falta-esclarecer",
+        "prioridade": 58
+      }
+    },
+    "9c010b5a04c2ba6a80e2": {
+      "assinatura": "3b3f5695dd80f6ebbf275150d485e62753ea3bb5173062367cf545376de30372",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "9cc9c05e041d7710e58a": {
+      "assinatura": "4a2fb52e89070bde3e590f2ac33d313d4b7076719673c64071dab60d1516e6fa",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "water-based-coating-battery-manufacturing",
+        "prioridade": 40
+      }
+    },
+    "9d22b5885b7d20dc1017": {
+      "assinatura": "7050d7202e8fc94c96c7837858cb38c13c35c60fbf61625e8a65c2f828a2cbda",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "fazenda-x-minas-energia-impasse",
+        "prioridade": 80
+      }
+    },
+    "9d71b65f747d5ced9e2f": {
+      "assinatura": "fa76a99a270eac3f9ca5ce25694fa966c8ffa6f67b500322037bdd7e1e5342be",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "9da09b60e65ef66dde0f": {
+      "assinatura": "322040f080398ea9aac593385b383a6b116bb02a3a4d3d6f271e70facd6b995c",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "9df0cf25d03f9a0d1247": {
+      "assinatura": "d6255a6f8a3dfbe1d8081892294270ed3f7e1acdf1076960ec8652f0136eb7b5",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "9e0b024d635f0890be40": {
+      "assinatura": "2f63e0a6693e7cd8b8a759a3b37a74c805b1ccd973f6197d8cc5f582a0c2bb8a",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "uk-storage-returns-support-scheme",
+        "prioridade": 45
+      }
+    },
+    "9e48f0ac1ba326939f2f": {
+      "assinatura": "297294f10b2cf1a7801d1da0acab31f88247ae36e74b56c038dd0175395790d9",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "clima-precos-bateria-bahia-byd",
+        "prioridade": 75
+      }
+    },
+    "9e80e19029eaa8d525b1": {
+      "assinatura": "c9478bfd85f6270ce7ab65954ab95f2ff1aaf03bb4f49f4cbfeaedc9fc9bd4bc",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "9e84d3d806c4c1ad23bb": {
+      "assinatura": "cd6318fdce1dd61a4cf93bb0c47e92a80841e9e99cdc5b6b6c5ac2fc4d8ecee0",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "developer-sues-upper-merion-township-ove",
+        "prioridade": 20
+      }
+    },
+    "9ee3d3b3f1e0ebd98c80": {
+      "assinatura": "0b10ecdb1b1f6b03332dfa5f5b014abe8aa96081b61ca4052e4275f37a0f9bbf",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "fact-check-nc-attack-ad-targets-candidat",
+        "prioridade": 45
+      }
+    },
+    "9fe73b2391e600594358": {
+      "assinatura": "1b9b4608b3d6e43e84f29c24c207897d06c9f796397e4aa1950e02b7e0ece6a9",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "a12152141a9a1894b7cf": {
+      "assinatura": "d578c109f5b928cc4abaa48704e8aade231f355524e759d920e1b9b9f51b195a",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "la-county-issues-temporary-ban-on-data-c",
+        "prioridade": 20
+      }
+    },
+    "a1c50cd945481c4897bd": {
+      "assinatura": "a66797aa55e2b6fa6db7b0a819bcd866ad72727a72c04fed78c19d310ceb7962",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "space-data-centers-reality",
+        "prioridade": 20
+      }
+    },
+    "a208908786c61fa81e1d": {
+      "assinatura": "7864bdee07b73f864e7db94dad4324be3f14197320210d8bc70d47ab90e8d072",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "a3849deadb7b7269bae6": {
+      "assinatura": "12db94b8a5b8d38cd9640aa52ee4125050a4870bfd5aaa0f3ac4b1680e8d12b5",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "a4e0b7359365aa04fc88": {
+      "assinatura": "cc2fa03eeeae97f289635ca243374e8d3ce802a9b56d4805074de71af1747c9c",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "new-data-center-firm-snatches-jll-leader",
+        "prioridade": 20
+      }
+    },
+    "a5f5b0e81b935b1aeeee": {
+      "assinatura": "24ea3cfb231b22a47af748d6999c3794f430c963413084dda4573d5d82b4df34",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "connie-chan-discusses-ai-data-centers-an",
+        "prioridade": 20
+      }
+    },
+    "a670ad1714c6ed663b0a": {
+      "assinatura": "1fe943de3cc8ebbb591f6bb4a5f12a0f84572fd1c38b7b66ef7834e4a65bfef4",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "salem-twp-planning-board-to-vote-3rd-tim",
+        "prioridade": 20
+      }
+    },
+    "a6fa59d13171d467a318": {
+      "assinatura": "7cfbbd7a80db50bb2c0705da7536d2b610fe43c8b56c4861f22984dfa339700d",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "a7b752591a8fbf49b930": {
+      "assinatura": "c59cd06ccac431949e98b2b5cfe7a5a632651f3bb4f73a87eeb5826982824fa7",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "we-don-t-know-how-to-be-proactive-data",
+        "prioridade": 20
+      }
+    },
+    "a8817b70fe519226b4aa": {
+      "assinatura": "604f4efd4bcec37af8a5126871251474ffee85e853da293a6e149066b166eb7b",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "this-data-center-has-operated-unnoticed",
+        "prioridade": 20
+      }
+    },
+    "a90250eafd41bbc96541": {
+      "assinatura": "c5dfb6525ab71c6552f3210878ca623afe7a4bb5bcf91c2086f64581479e6777",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "local-control-is-best-even-with-data-cen",
+        "prioridade": 20
+      }
+    },
+    "a91ab024a6c39b5c6933": {
+      "assinatura": "b70840c40948b6d8dac0337ae73b64188fbe9c6618cd12347c13a43a33b7b31d",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "alter-enersun-spain-financing",
+        "prioridade": 35
+      }
+    },
+    "a9cc0b1b5f0b50144d4d": {
+      "assinatura": "4be2b79595ebecdaf6607647fac6ba5f23b7c4f8e3f4dc6504637682eb10f65d",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "a9e85e99c402a58a9ca2": {
+      "assinatura": "0fcad9b0135533072540df64bae894dddbc08ada6e4317b0a5c868980d927cc9",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "shapiro-cites-archbald-in-the-need-for-m",
+        "prioridade": 20
+      }
+    },
+    "aa9552de14f2fb59f416": {
+      "assinatura": "234c581caff6712644644a14767cb07a7458b7d1a24ab840ebdbbd2d8061e9dc",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "lawmakers-punt-on-data-center-concerns",
+        "prioridade": 20
+      }
+    },
+    "ab14a069c10e6274f6fd": {
+      "assinatura": "451810245ddb4eacb4239317a19dd92bb9ca46692e3631a37d5a524f5bed8edd",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "germany-storage-summit-takeaways",
+        "prioridade": 35
+      }
+    },
+    "ab76aed34d20cc10afc1": {
+      "assinatura": "088b5ae77879a916884be8fc6f1578c34b85d6a3a4b266708db97fc7d4fa3260",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "the-data-center-dance",
+        "prioridade": 20
+      }
+    },
+    "abc012c095520569e2a5": {
+      "assinatura": "b82fce6260a1ebc6431333a91e11fddbba887c0e6ab7f3aceafa157b1df3f40d",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "vifc-dn-financas-verdes",
+        "prioridade": 25
+      }
+    },
+    "ac979bdec6aa230d72a2": {
+      "assinatura": "9f24340cd847976620fea9925e440474a2bbb374e7a76bb8a646a304a6e41376",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "pernambuco-vantagem-competitiva-energia",
+        "prioridade": 62
+      }
+    },
+    "ac9f7fd5afa7a268fe4d": {
+      "assinatura": "f39ed7c9efb44c4b4a5e27a3bde0b3e91eced649820a8cfbe3cc123930dbf524",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "ad87d62abed0f3d075c3": {
+      "assinatura": "ebfabb3c7b7f93ca90ccf7667d87a53417e67e2f7173356e5c9dd1fa5adff4ab",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "pedro-sanchez-reining-in-data-center-po",
+        "prioridade": 45
+      }
+    },
+    "adb13da61b0aac7b5826": {
+      "assinatura": "bafc1a5957c870087bc7d465ec11511e88d1166d75fd96851b2b13e9ae872ca9",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "redata-virou-lei-mas-o-pr-ximo-desafio-d",
+        "prioridade": 20
+      }
+    },
+    "ae603d4f060160aaa164": {
+      "assinatura": "0274e368f0fa63ea45660a53bd825fb90dc2c0fd1bef9680689a353d2c3b1561",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "aec984c69cdc20f67db3": {
+      "assinatura": "e1f37d6fa8a4b8d5d195c275944d691360f95ce4794fbcded54cc972b2e1071a",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "advait-hithium-1gwh-lfp",
+        "prioridade": 50
+      }
+    },
+    "aedd3fecead6814a9bea": {
+      "assinatura": "888ce5b352203bf4ba4f7d464367d08d550ffff0f5b5d84bf0a75dadc3e645cf",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "af1e9f2f47e0d9de15e6": {
+      "assinatura": "1064f4a7df418f5e7e55ed9921e7d162c88f806415cc644c33cf6ee97468ead7",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "b075996212bdd0c8dffb": {
+      "assinatura": "a4ef10f53ebfb2d77160f03c70414dfc32b460983a061ee8cb408bd8b46b1ea7",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "b0d5f911c7cbfc35cf65": {
+      "assinatura": "b09e77ea518fd751b9d9081552aa225836705fe2a475bab7c4d30b225931dd27",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "q-a-for-u-s-senate-shows-virginia-s-warn",
+        "prioridade": 20
+      }
+    },
+    "b1148896c21afde94b86": {
+      "assinatura": "5498bdb3d234bd9dbf6a6fce9e8c5f402d2a691148dc6be4053c24d37c25ee10",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "b13f4f10d6d76430369a": {
+      "assinatura": "48c97d8797510e1a43ccad488e8ea741677d2ebafc671140bae5508221580b86",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "b209a5883028dc56369c": {
+      "assinatura": "249287535ca58ade003b2e06d73f6c3bce96ab8dff1b3f01a34528e83100fff4",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "citing-trump-gop-regulators-reject-gas-p",
+        "prioridade": 45
+      }
+    },
+    "b211823d94a5b89d60e9": {
+      "assinatura": "15ccd4429de3d46b1d8cccc7eb4285d8433446c0285dd81ca581468b145e0d26",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "az-quest-capta-r-482-milh-es-com-fii-de",
+        "prioridade": 20
+      }
+    },
+    "b29cff696ac2024d311b": {
+      "assinatura": "b9f0c60485e8ce9de49c41cf8e81c624221c23a012fe8094e0ccb7d285fedc27",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "b2a5d2ff41206dbdb0a5": {
+      "assinatura": "79a5df7cd0a983cd1e9a44a2772ac42e39ee45598da5516268667976fb3a19b5",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "should-the-state-of-ohio-ban-property-ta",
+        "prioridade": 20
+      }
+    },
+    "b2c00cdfe6d8f07edb29": {
+      "assinatura": "a906bdbd44b342267e65cee2269727878fe04b08b939dc262f478b74bcce344d",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "b3d97c2b671bcb4e9bcc": {
+      "assinatura": "6123ba85680393564a9f6d43e8d87b93adf6461699facf54346ff550ea10bd56",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "san-jose-mayor-meets-with-neighbors-comp",
+        "prioridade": 20
+      }
+    },
+    "b408d2dfec583ec9567d": {
+      "assinatura": "765647f0be5317dcba9071dfc192e010c3c1f640ed58ac537b42f45f7634f0ce",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "b43a0f25e3ad3d5c9d92": {
+      "assinatura": "383710fed63c5a9baf2391be5b6b2cecde5a8805a5459f2affa1aee800dd0e34",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "nj-church-storage-township",
+        "prioridade": 20
+      }
+    },
+    "b46a1c8d18f64a7ead04": {
+      "assinatura": "61557b721341bd12707ab996de8d4aa1837019229819d867d953b4fe0eef9a04",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "poll-voters-recoil-at-candidates-who-bac",
+        "prioridade": 20
+      }
+    },
+    "b4b083fd05a67f8e4bd4": {
+      "assinatura": "4d032c12e4fef0b674c0983729a09cfc575214754f7989730b7ecb9b06382196",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "bimergen-federal-contracts-registration",
+        "prioridade": 20
+      }
+    },
+    "b4cae86469eca089ef13": {
+      "assinatura": "6af93bb2ce87c6131b9435eba21b5303ba76887e76320a4b6432434f6606519d",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "sungrow-bestoraged-partnership",
+        "prioridade": 40
+      }
+    },
+    "b4f8d810f5ed01661f47": {
+      "assinatura": "46ad686b3077a433e367d4c6b19ede101bb249a58cc09491cdd75461737ef103",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "b524390009fffdec4437": {
+      "assinatura": "d523a2408411f7fd76f9f4c509c793d922ad72100c761fd32bfddac1af5822d5",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "b5b3bd913868d517e4eb": {
+      "assinatura": "beac48a5758b9502d077e30b7eb27a9b761d8718110a200942a0ff7013b39707",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "why-atkore-belden-and-flex-stock-are-gai",
+        "prioridade": 20
+      }
+    },
+    "b655b22b5f151b2452df": {
+      "assinatura": "4e2a621035327cd1f05f4d91b1bc8d5f9559963a620c387405f5507d25cbbf2a",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "eveo-recife-expansao",
+        "prioridade": 35
+      }
+    },
+    "b659b56c983a43419037": {
+      "assinatura": "6db08b390e7aaf0394e56007e4a3f46c01057b9554f41b089b788eb14dd60ea7",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "data-center-tax-breaks-lose-favor-in-sta",
+        "prioridade": 20
+      }
+    },
+    "b6b6156b56f32964c251": {
+      "assinatura": "70339c2e15c319c63ab6dd1de75e87898397a4ca7f2ae54938c307ebc19949b9",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "pakistan-bess-policy-conclave",
+        "prioridade": 25
+      }
+    },
+    "b6d3aa0328a62edac16a": {
+      "assinatura": "b3f2ec45b1cac3bca16fd918c9b7e673eb6911a4a61d164726a7d0fe25be300e",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "big-tech-is-trampling-native-treaty-righ",
+        "prioridade": 20
+      }
+    },
+    "b72be60d826c378953ce": {
+      "assinatura": "d79e85cf03461b9e9c60ccb213f802d59f0941c31391c3b2625b10ba53c0bc65",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "b853ffcdf6fd03e9a1dd": {
+      "assinatura": "2b9f2571f32d186675217e1903fd4f7bb769fecba4be06e8fc0990f2a2888647",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "tulare-council-oks-study-session-on-data",
+        "prioridade": 20
+      }
+    },
+    "b8585357fde3a818ec46": {
+      "assinatura": "958e75e5e57b6679ca6fb58875d0a9ca0793cb3e983f26ae287d8157668af972",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "b8be0f982d9871ae5dc1": {
+      "assinatura": "6e5cd3bdd36cae97c841bc5613dadab129cbaf17b99d747ea7574262b222c21e",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "ba46c896726a7e9fd91e": {
+      "assinatura": "fe327e95fbbc4a4159cc17a57182dea308de3a1b0665e72e0c9b2477e5859357",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "ba8ff1999bcc0c6042d8": {
+      "assinatura": "1df8d456a69474c7111c356d0fe20fd01003d3320235fdf77524bd9c52d1205b",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "gotion-battery-swap-europe-africa",
+        "prioridade": 45
+      }
+    },
+    "bb0591a8448735279c61": {
+      "assinatura": "7b8c20cbaa16baca517058a29b24f705fc2ced2f2c58b3d0ea193ef2e18295d6",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "data-centers-fuel-ai-boom-and-community",
+        "prioridade": 20
+      }
+    },
+    "bb7f490230c324145a4c": {
+      "assinatura": "8f916ecdb4ea358d2f1aaf8886d419cb86fb9962975802280babc0fc0af4879c",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "sfb-edital-concessao-florestal",
+        "prioridade": 78
+      }
+    },
+    "bbacb4246a2d8aa6f68f": {
+      "assinatura": "fbac0ba5fcfe2d51694ee2a80c6824a042dcc0f4d89c0662ca3972b49e039835",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "how-should-cleveland-regulate-data-cente",
+        "prioridade": 20
+      }
+    },
+    "bbe7db5c0f162ff10c57": {
+      "assinatura": "10101849c960bdb036d489e24bb70441fe382bb81c11bf0f6e31c01c7c0b22d7",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "bc62fba1dea6ea95239c": {
+      "assinatura": "a7b0998edb93150ed5b9fb7907d5c22c9afaa7d68887d6caee1b75f4aef5a684",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "camara-aprova-projeto-custos-energia",
+        "prioridade": 72
+      }
+    },
+    "bc93bb91c8200a39ef2e": {
+      "assinatura": "04e34a64f8519d1c3336dc08dfd86418b5dc6159fe493eeb9d0548ed9b5b3245",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "be345dddf843e2f186b2": {
+      "assinatura": "69892c90f0b055eb280089bb3c5bae824f65e67626553964feab58ee6d6eb828",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "leilao-baterias-debate-regulatorio",
+        "prioridade": 88
+      }
+    },
+    "bed281f8cb8f27a76dcd": {
+      "assinatura": "3d445e85c5b380216c661043db38a3cd716bdda3f289de02ba59351f82774b14",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "empresas-emitem-at-junk-bonds-para-const",
+        "prioridade": 20
+      }
+    },
+    "c01484d6f2bf8021e87b": {
+      "assinatura": "717dcc9b4f60b67820c7caa3095d89cdcd2c78bf419b67c51f86454b78bb31fd",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "exclusive-major-s-f-waterfront-site-may",
+        "prioridade": 20
+      }
+    },
+    "c01d1898286c09c0037c": {
+      "assinatura": "fb119c9199c175ca2e4411835e68f73e6cdff238a558b0a41d725351affe91ff",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "novelis-aluminum-battery-expansion",
+        "prioridade": 30
+      }
+    },
+    "c049cb309a0be3d27f3b": {
+      "assinatura": "9425f232f6fc84b792fdadadf546c3984449d37098c6a931ae737b6d45472a8a",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "c10f0fcb6ab7903d0c65": {
+      "assinatura": "c8057b806b878a92bf48bb0c75820142f48d150e80e96a43645ab351b475b341",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "os-dois-desafios-a-partir-da-aprova-o-do",
+        "prioridade": 20
+      }
+    },
+    "c19edda78c0ffa00f786": {
+      "assinatura": "c2a5e2fe29c3e5be42ccd8c847387f25d27300f91ecfcdf047651645a3299cb9",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "for-some-skilled-tradespeople-data-cente",
+        "prioridade": 20
+      }
+    },
+    "c29090152bce9025bc04": {
+      "assinatura": "847aa213bb4db34d472b65576e73e0aa64697103b092736767b9449343c68d31",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "regime-especial-de-tributa-o-para-data-c",
+        "prioridade": 20
+      }
+    },
+    "c328bdd5ba535090cbf4": {
+      "assinatura": "b770a9e8aabb581577159ee171216d44d9768022b8fb90882237c90bbb8cd888",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "anthropic-openai-smaller-dc-deals",
+        "prioridade": 40
+      }
+    },
+    "c33dad1917a845091f21": {
+      "assinatura": "038e52b68d0f2a3acf098d0dec26b9e0f4a73b4a9374be8f7de64f7f8b97384a",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "roundup-data-center-watch-level-homes-sm",
+        "prioridade": 20
+      }
+    },
+    "c37eebd39ba0ae2c16bd": {
+      "assinatura": "162f053173de947f0623fe3c9b13dd92fe6fd77fa56b098c1491ca03d6830c8a",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "nsw-firming-tender-round2-operational",
+        "prioridade": 60
+      }
+    },
+    "c3c9c1672f8272144b97": {
+      "assinatura": "bb940df59f04bd2e999ba04f40d877af84346062c2709d0eb60b7ccaa13a78ff",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "lombardo-ordem-executiva-data-centers",
+        "prioridade": 45
+      }
+    },
+    "c4c0e12ca6f028ba6127": {
+      "assinatura": "3a29cb84e3635ba55f457038b12ac5e2916ae28734974262e6026aab2473f8c9",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "c56b9105790f6292f2f4": {
+      "assinatura": "a2adbd7f32aff6d9a2e1e7b2eaecf1350c388121037f4619f04128a55888e90f",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "advocacy-group-can-continue-to-challenge",
+        "prioridade": 20
+      }
+    },
+    "c5a3931831095fa8b88a": {
+      "assinatura": "7d385e1a6227ea7356a450a420e3198c1eda4007847416955b160d2794ddf24b",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "c5c9e58fc1df91e5a468": {
+      "assinatura": "18c776b8738cf2d6d162eead38f1d8eb57f35162e78ab84334efbf9f8806e9be",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "the-fight-over-data-centers-is-a-fight-o",
+        "prioridade": 20
+      }
+    },
+    "c5ec7e82be751b80ce48": {
+      "assinatura": "844ee61c079266bcbb4d1e4d6dd63728307818d84636014d6a586c51f1a823aa",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "ataques-de-drones-a-data-centers-resulta",
+        "prioridade": 20
+      }
+    },
+    "c6063a57a35699eecc8e": {
+      "assinatura": "fbb5110e1c65676a824c26bff3190dfb5b3209aeaad50f624262cdd6acc9fde3",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "c62a9c60ac5c8f8dbdcb": {
+      "assinatura": "1b868689befbae89c67e899dd0363778ebf2518a0a63356efc37f56b3a4a7868",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "council-approves-data-center-ban",
+        "prioridade": 20
+      }
+    },
+    "c7822e37340e8dcbc83d": {
+      "assinatura": "ab801888a36ddee170302d6f9f63f63f034d56176a6a16ae939693fb46fe8d6d",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "gazprom-partners-with-crypto-energy-to-d",
+        "prioridade": 45
+      }
+    },
+    "c7f2f6d6cba7e73a272f": {
+      "assinatura": "8a55c847a352c234640fc00c5fca1724e9a9560baa7314639b316ea0fc32dd55",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "inside-the-uptown-charlotte-data-center",
+        "prioridade": 20
+      }
+    },
+    "c85b6d50c057c691da58": {
+      "assinatura": "6bf1150b5db7f5aee69b3c1ccdef234a2f7a538b601ffdc24f930562a9f0237a",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "byd-europe-factory-plans",
+        "prioridade": 55
+      }
+    },
+    "c8bb47e6b3933dff2444": {
+      "assinatura": "00dfb65f8935456758b21d972a17ec2d14cfb419e65f02620655f54546436700",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "c8da7f5248d998eb430b": {
+      "assinatura": "d4832026be5a09644f7f89876d55792955b16917a6dd923072054ae674938e94",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "c925b1c2aa3ef805c60f": {
+      "assinatura": "c8048531a7ada81180f674d7b92d058fcaa7154609a1d109720a0d5823953394",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "pgim-sells-data-center-development-site",
+        "prioridade": 20
+      }
+    },
+    "c94e246e0549ef3183f2": {
+      "assinatura": "405dc293f308727eb103f10077c7a18e74ae0e927cf09f34db3b626201c3740a",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "can-husted-s-new-data-center-position-be",
+        "prioridade": 20
+      }
+    },
+    "c9c25e981924e70a58da": {
+      "assinatura": "37bc9780900562f0b7764f88be788a22580e08708ca213e681b52d9304cf793e",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "shell-harmonising-carbon-market",
+        "prioridade": 35
+      }
+    },
+    "ca0612c9007f277b24a3": {
+      "assinatura": "b06f969aabb3e5f7a571dbdee42f933ce1142b8805fa40f3744c8493e6122774",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "energia-para-data-centers-generico",
+        "prioridade": 35
+      }
+    },
+    "cac66e0c9a77917e5ebb": {
+      "assinatura": "d0bd5cfdf48af160b269211f5f958126e55800d307144fb793bb30c5a1611bf9",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "boston-city-councilor-pitches-a-citywide",
+        "prioridade": 20
+      }
+    },
+    "cb3eacbd199a95e4f4b2": {
+      "assinatura": "7662ffc9160f67bcf60a395361c3e05b03f5cf5c7d07fc07880b410ef6f8a7f5",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "jupiter-power-1.4b-financing",
+        "prioridade": 65
+      }
+    },
+    "cb587a0f9a5b826756d8": {
+      "assinatura": "c1e86fde36dd19ad1df7654adc9c322da1250e47d629184256eb4e31c888f1a6",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "upfront-data-center-fight-in-wisconsin-a",
+        "prioridade": 20
+      }
+    },
+    "cbe2f2901adf67100680": {
+      "assinatura": "82e201254ec11369320eb4fa4ed91760c34496ef08330abecc356f9b9c87a409",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "catl-2027-solid-state-target",
+        "prioridade": 70
+      }
+    },
+    "cbeba612894340193a2f": {
+      "assinatura": "2294b45d72133c7af662386454bea992238321f8f01fed73f720ad667924fc64",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "data-centers-are-driving-up-ohio-electri",
+        "prioridade": 20
+      }
+    },
+    "cc501e9e47a1b7afc2f1": {
+      "assinatura": "0ca323407ec3fdd95c858045e24d47219aa5a71f0c6c8afb13d8ea9ce520b71a",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "cc719d45b72e85362de9": {
+      "assinatura": "6c5ec1e3d4cf5684ad2b293c1017002ee53c9e4c8ea8d122839281eee79b2ffc",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "z-squared-inc-ceo-david-halabu-discusses",
+        "prioridade": 20
+      }
+    },
+    "cdd598ea73c31b3cae37": {
+      "assinatura": "b3b8bfa0339dee6a0db8f223e5a94e2c491d04ae6291dbec0df60bdbc04dc678",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "icymi-dr-amy-acton-pledges-to-not-own-in",
+        "prioridade": 20
+      }
+    },
+    "ce4144ba11bd832b0974": {
+      "assinatura": "75ac580276fed05ae6561e0bfc92554746f0557e5e2c92fcffba37f7c500a4fc",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "catl-dhl-pact-europe",
+        "prioridade": 45
+      }
+    },
+    "ce89edea44d8d892ad2d": {
+      "assinatura": "e887f5135484823ea54b90cd9e3b813c8ccfd2199845b9a5e98e9daff8db20d3",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "salt-lake-county-hit-pause-on-data-cente",
+        "prioridade": 20
+      }
+    },
+    "ce969a9d98dadc8b9a3f": {
+      "assinatura": "aab3b6b582d28a251e7df1099d7bd1f51d17600a4eb8a34e469cc94b1634ca6d",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "cf8a089f3b4568f633d9": {
+      "assinatura": "e49cc88968eb2291d0f0044d9f2d11c1897ae7849bd09cca47f6d0f2f6b2bf0b",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "texas-data-center-leaders-say-shale-boom",
+        "prioridade": 20
+      }
+    },
+    "cfb1c55d91db93f8d6c2": {
+      "assinatura": "887c6de4a6a91ce8e06894c44a53a118ed03a090e7bb9a18688d8a45fc690756",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "cfd5718120a010013b52": {
+      "assinatura": "a1e6707bf364bcd1e684c80d7f07d0c229fe8bb3185cb52f28af7dc057022626",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "oracle-s-18-billion-data-center-debt-und",
+        "prioridade": 20
+      }
+    },
+    "d06a0cdb059ab2fa4789": {
+      "assinatura": "3920cf1c5fd3f6f3ab01f1efb7a2aaa568fcfd4c49c9a18565f5440bc3a4ba7b",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "d1328770ad67dfdb8233": {
+      "assinatura": "78cc48dd5e89abf527133688dad513d13dda9a045f8d0cb4ed32fa1b26281fd5",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "d182cae1c379a7044855": {
+      "assinatura": "f0e5d678d6b56ce1810fba8190d2de9e278b2bf728c08263ba361827a46d16e4",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "data-center-company-that-spilled-fuel-in",
+        "prioridade": 20
+      }
+    },
+    "d1a43342085d81f12f21": {
+      "assinatura": "1afd4edd29f52a1591d94f71cb72e284f6b46fbcb027275dfc2de1b19a589375",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "d1bb6abe4f745e6a5ca6": {
+      "assinatura": "f204067d4d11067c5eb4addad4a6b90e228a5c25291aa4cf7b0a23f7c607c151",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "d2aa5b7134dca7c92366": {
+      "assinatura": "88b8934cbde7c73a9172d05b9764d1aabad24f1a7538376cdff30d76e061cd99",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "d402e225a5d3b064562d": {
+      "assinatura": "8892d554db8f3b65e5329610ae947a6e4f95cc24e3493b72705f431de9303609",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "3-buy-rated-reits-collecting-rent-from-w",
+        "prioridade": 20
+      }
+    },
+    "d46931a5ab9de9f26c3a": {
+      "assinatura": "db182c2b4c93c15acee0de4ad6b8dd8be361dfae807a5aea4cb60378f03fa95f",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "d4d59f3b8196c327f35e": {
+      "assinatura": "954e323aea082d7796eae26c95bf030ef602a268478e5490ca62c934215e6d27",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "lula-sanciona-redata-lei",
+        "prioridade": 60
+      }
+    },
+    "d4f79a58ea7748e272e1": {
+      "assinatura": "0848439a0e467cd13722e08a82b73ebf664243ae9884aea877e5b17c5424e919",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "d5c1944a41eb837f69a7": {
+      "assinatura": "46ba0f4ed136e40ae24610eb107eadc8ec27087b2c142dd1134e43448dde7390",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "senate-roadblock-sparks-new-competition",
+        "prioridade": 20
+      }
+    },
+    "d6480d67c05b3fcba5fc": {
+      "assinatura": "1b26811bf5ef4605656d0f565d20204ae992aa7335a0522d017085f92a2274ad",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "d65664c098a19fbd2247": {
+      "assinatura": "198fbcd5a2b9f89f8639f7cba5625f95f66b3f1437e961a3158d5d76759109d7",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "mingan-weiye-solid-state",
+        "prioridade": 60
+      }
+    },
+    "d6d1e549fae9429a92b4": {
+      "assinatura": "7a4583c8c5533fafcfa82ab1e2407fc9009a848ea09c1828b59903f21530b00a",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "romania-solar-bess-trend",
+        "prioridade": 30
+      }
+    },
+    "d702784621715e31e17d": {
+      "assinatura": "7514e8febe200e7a00f830f2a206030e22c5eeae6f3b6978d2a436a70c8c343c",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "victoria-2stage-bess-1.4gwh",
+        "prioridade": 35
+      }
+    },
+    "d754341895c75eab4363": {
+      "assinatura": "e82f6f5bc2ffd729f240d29dede333be6e41511f3f5c514fa2ce985b305c0c95",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "d87486c00f4d888a7926": {
+      "assinatura": "083bbb4de185ee57365a68bdc07624c56896bbe82defb038f7f18573fa394f02",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "d88e1838d90e4d319688": {
+      "assinatura": "c48ddf69c774631006f5e3b7bc75e235cabdf3895b7ea7cfea8d883633217b14",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "king-catl-stranglehold-loosening",
+        "prioridade": 60
+      }
+    },
+    "d95732511acf2af35db0": {
+      "assinatura": "601c64ec8a71f371aeeaa8dd40c2b8ce1dd347bd7fd4ace7900f4e80a5bd7490",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "catl-asean-market",
+        "prioridade": 55
+      }
+    },
+    "d9d1b4e012d2a109d36d": {
+      "assinatura": "9c104ebe5ccc3e554f694c201976497b8e6463c41e5a5a4370537da93b1dd68a",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "da44eada3dd7ee43fa94": {
+      "assinatura": "f963b0fbda6764d4ec223237176f19dfbbda5026eb4f23c8cde10066bc9b1cec",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "oregon-25pct-energia-estado",
+        "prioridade": 82
+      }
+    },
+    "da72acf22438d00748dd": {
+      "assinatura": "b7d2e26c6abc60e98b8c450a779a2efbf29acf76f103278cefadb1791d56d93c",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "energia-limpa-cabos-submarinos-nordeste",
+        "prioridade": 72
+      }
+    },
+    "db70461ae76e833989f6": {
+      "assinatura": "6b012ff6e0805fb281cd4a0307232cf726b24da2ba2621648f2624015be2cde0",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "the-upper-west-side-version-of-a-data-ce",
+        "prioridade": 20
+      }
+    },
+    "db988ec0c05d7a3a8b88": {
+      "assinatura": "60093449c7e7b1486d90baf6ea9192191b846c2779ccffdebd14724dd2b4da11",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "ddeef625a704b3db6acf": {
+      "assinatura": "7b039b38bae64897b8839c66a2a83728f1312c21bc4bc01b6f985f1d944fb440",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "de371c6795ec875f7ffc": {
+      "assinatura": "7ce3dccfe6f91ec4c620715749868379a9ba4314159f69a98d04d2f44d18742c",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "mayoral-candidates-outline-where-they-st",
+        "prioridade": 20
+      }
+    },
+    "de73c8d6f48024bde4df": {
+      "assinatura": "a051d026f84e3f3f88738931def59154ec17b62396bd1261b2c6fe521868319e",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "google-says-company-is-exploring-a-poten",
+        "prioridade": 20
+      }
+    },
+    "dedacc6ea216755b7e84": {
+      "assinatura": "c5294a3c0039636b16869487f28eea7ffbff86aa91cbe014355bf003218210a2",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "where-do-alaska-s-four-governor-candidat",
+        "prioridade": 20
+      }
+    },
+    "dfa155ea0a8a9652d55b": {
+      "assinatura": "d21972a66ac17672289cfda747b58e3166d6ee6424203dacd6603191fc241f1f",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "data-centers-explained-insiders-answer-c",
+        "prioridade": 20
+      }
+    },
+    "dfaa1951f40faed62a90": {
+      "assinatura": "41ac892750f284cce9e3497b7c41f2e537a8ca09aeeb2bafdbcf96513c0c9598",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "redata-entra-em-vigor",
+        "prioridade": 48
+      }
+    },
+    "dfd00544c997d3a3b453": {
+      "assinatura": "c4d989e64d224209f811c345ee72e4f32a08da16f4447ba5614a7c44099bf6c6",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "campinas-mega-datacenter-oposicao",
+        "prioridade": 30
+      }
+    },
+    "e04b034cef1f1fc2e38e": {
+      "assinatura": "6735037992dfaa8eb1df31da9baf5a2b47ca15e2e9406ffe5b2fb34994d6916d",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "redata-corrida-energia-rn",
+        "prioridade": 55
+      }
+    },
+    "e128895e9f13e0823916": {
+      "assinatura": "c24f2e6aea80c2835ac1b9810ee33ddc10b72f92e20934f85dfe54aa26c998fc",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "amcham-redata-minerais-criticos-investimentos",
+        "prioridade": 60
+      }
+    },
+    "e132374c7721f9f7d3fe": {
+      "assinatura": "b63cc29491477094683c54480f92cf78dbc4ce84e19a8a1dd2f3e421c0e581c2",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "fabrizio-panzini-redata-abre-caminho-par",
+        "prioridade": 20
+      }
+    },
+    "e14941029d0b8b7d6334": {
+      "assinatura": "baf54f4d7ad0e444eb247344de676eadf189f779915808addecdbb6eab254214",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "electroflow-25m-lithium-startup",
+        "prioridade": 55
+      }
+    },
+    "e1aa6ef92599eb3d89f8": {
+      "assinatura": "4f9378c7d0ab19f4223e28d08a6512aab05019a25d5ef6337dd325855d2a1418",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "watch-crusoe-ceo-data-center-indusry-has",
+        "prioridade": 20
+      }
+    },
+    "e1c2ce213f80203587cf": {
+      "assinatura": "bd1038a074cb8e2a0b3b259a3abc203a0eee7a18be7db36e3e52332918659dc6",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "e1e7bf44cd7b7d27db07": {
+      "assinatura": "bcc64cb5557ee749a03826dc272bf2be61798183bfacf0000bc519f53fa8448b",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "e2386c2f2037623591d4": {
+      "assinatura": "f491689c70a62ea0784df1fcc8ac18ad9685d82e6b1098b68749f11f65599394",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "the-data-center-debate-is-divorced-from",
+        "prioridade": 20
+      }
+    },
+    "e2ad214ce2438695be51": {
+      "assinatura": "0f9eccea31dc50f121e681bccd9559d3e51808a6ea5de5bf37ee5200ad5fb545",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "e2da6455f1538ce924da": {
+      "assinatura": "d46e46a71201ca7269b8a07952377540b646967ee2e32d0c0a4e0ba968f8fb98",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "e310655327565197d3ae": {
+      "assinatura": "6d09a259762b142c40e4a19c0289491f655373e96177d3b757cc3115750cf9d4",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "incentivos-a-data-centers-moderno-ou-enc",
+        "prioridade": 20
+      }
+    },
+    "e32cfa99e97b0c4ea2e5": {
+      "assinatura": "ff261803319a32582d62f53eb15bb8e708760781fcde8b337280654d5a4cb388",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "e3f895b6f3914726c8d9": {
+      "assinatura": "a72e13d6f17079890bd70642d5733ba2a8bee116b49bbeaa98e806fdcc17d8b8",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "leverdi-burocracia-rede-eletrica",
+        "prioridade": 84
+      }
+    },
+    "e4c0130ae434b8194b02": {
+      "assinatura": "c45aeb5b847d82e5e2dec3adbe02964d6bb286023b3d7156e4fdc52825a1036f",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "redata-vantagem-nordeste",
+        "prioridade": 45
+      }
+    },
+    "e515ee48c06254bfcdac": {
+      "assinatura": "b40a285d5b4bf9b774096b8e75f4ff6250689e361d08a8855f6fb520c0734ff3",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "enabling-the-next-generation-of-ai-data",
+        "prioridade": 20
+      }
+    },
+    "e5630921ed49ba531053": {
+      "assinatura": "1ff598864ac74ae6ece8a599b37f9cfeb1ea0ed41ed8e6face07b041ea5467f5",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "e67533e8fd6ac429d68b": {
+      "assinatura": "3dd61f92094ffe9dea8754e9636d2752e6e78ae66bdfbb2126c23d3a837f459f",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "democrats-try-to-ride-data-center-backla",
+        "prioridade": 20
+      }
+    },
+    "e6f602ffe73b82fc89e2": {
+      "assinatura": "8e681b4b6d260d24e5d172a11b27393c9e5e755f775b05d381399fda231fd988",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "e709b8fcf68e739f0051": {
+      "assinatura": "d02866dd5726e03e8cca42d2e4219e6713b4b26dfe85936261e2987162998d7e",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "cumberland-council-bans-data-centers-in",
+        "prioridade": 20
+      }
+    },
+    "e7268e1fe08bbce38e42": {
+      "assinatura": "7f2a5d6136068ed48e64046ff6d36eb4d2c6b54fcd4f13c74a22587aaa99d728",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "atc-transmissao-port-washington",
+        "prioridade": 70
+      }
+    },
+    "e73df12346a6d6ddb0da": {
+      "assinatura": "2ccba9ef812bc43936fe512a90c3ca793376a5437391593a20aeb0db4d80ef8b",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "leapmotor-leap5-ctc3",
+        "prioridade": 45
+      }
+    },
+    "e751411be6f7081e2c42": {
+      "assinatura": "d16ce17cd617f8b97007f40b7eecf02d5a8373c4b8fb2091f57671d10df8b524",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "data-centers-at-mesmo-apoiadores-de-trum",
+        "prioridade": 20
+      }
+    },
+    "e7eadd9968109f217e86": {
+      "assinatura": "e9569afe57c5150a149b7ec2f392d86ac97302ffa089e608d76205e0125df9e2",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "data-center-command-hub-keeps-ai-up-and",
+        "prioridade": 20
+      }
+    },
+    "e8a88a45d8dd3a597ca8": {
+      "assinatura": "fbd5041c2670af3c85339e7bdd2b7e305ac87e20bab7aa1878312163031905a6",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "crusoe-ceo-chase-lochmiller-on-3-9b-seri",
+        "prioridade": 20
+      }
+    },
+    "e98231b4b95a845a47d0": {
+      "assinatura": "bb5c4f89b3aa98c3290711c56a7ffe611e908642ef633b03a2f644cfb10d5bac",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "ead93259623ff0c172a2": {
+      "assinatura": "460002bcc99a7a8991452aeef1a533c44c009c67c739ef8e726b7dabac748dcc",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "mississippi-river-mayors-help-cities-nav",
+        "prioridade": 20
+      }
+    },
+    "eb0c642323b612f758a1": {
+      "assinatura": "129d88f5f2c9d8a195760b053937a844e90f1543c661d993152eb04c34b8468e",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "wilmington-select-board-may-prohibit-lar",
+        "prioridade": 20
+      }
+    },
+    "eb49aa5bdcd618422413": {
+      "assinatura": "f58aa226e1bc7dceb4f457f1615051cd03b1e1e8127513aab6e70120ae3dfc7e",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "dcd-intelligence-data-center-expansion-i",
+        "prioridade": 20
+      }
+    },
+    "ebf6eaddca568aee678b": {
+      "assinatura": "33ced00f79ea70f51e24549dc35613fd7f2296d144b25ad75002a63b5ace54bd",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "ec765526c878afae6c7a": {
+      "assinatura": "c8feccc220f9e833ef60422914cc63150ee69dfc51d5e95f69b853ea479f3f67",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "india-farms-carbon-frontier",
+        "prioridade": 25
+      }
+    },
+    "edc9be4ef0ca4b891262": {
+      "assinatura": "d167cf4e2f8e4a064af4d13290ade868bbd5ca2fcca265bfeeedd81d54d940c1",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "nevada-governor-signs-executive-order-se",
+        "prioridade": 20
+      }
+    },
+    "ee100e318422061e29c3": {
+      "assinatura": "014400d3cab32027abe7ac3fea0b5008bd36d993c82933d72bf5b9c568d285cb",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "ef55c00b5112d07be918": {
+      "assinatura": "767a7089dec42b15e3ffd8fa4fa748332679870036dd23082bd5961e5dc6226c",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "efd05cb11dbe2df5c304": {
+      "assinatura": "9163bd0d7457c7def7646626895deeb5acb894b7e717b9606b129896a9211641",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "data-centers-local-control-and-real-guar",
+        "prioridade": 20
+      }
+    },
+    "efe8cc5bf76c80f6dfec": {
+      "assinatura": "94ba6a1b0d8dea7ccae90a07a095025ac906806498f5de0a8c85362d1d870604",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "clean-energy-resources-to-meet-data-cent",
+        "prioridade": 45
+      }
+    },
+    "f09a78b7edeb58ea8ee6": {
+      "assinatura": "8244a324a82f3838f9eb2b1d0e5d590780809b95123ae97619bf306d5e59d50c",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "f13730eaeb37a75b10ed": {
+      "assinatura": "9bcae71c25318274f48ef0c41343871a28168c9f4a9ec6d7ff45a749a25c8205",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "opinion-most-of-what-you-know-about-data",
+        "prioridade": 20
+      }
+    },
+    "f1d5d869df8600db9e23": {
+      "assinatura": "e53ce68930785fe181ddd59fe1429a3064ff6a746b83813b2fa294a2ef637e1f",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "f232db07a4a4aeb92a5b": {
+      "assinatura": "2dbdd8640881d2dbe3580a3ce4974f4b0f5987a161cd8611d5423f9a7fd71da5",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "virginia-governor-unveils-nation-leading",
+        "prioridade": 20
+      }
+    },
+    "f2fa43a55584f7bb384a": {
+      "assinatura": "afa2eaa22f7f7871f20465e9b93b5fd477d33fb3a6a2a3e748d6c094e59e0ef0",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "f2ff469d7276b164062e": {
+      "assinatura": "c8e5e6fdb5ee5c46a56991e495bc73fef69b8ba45706e659b2cdfef802d921a4",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "f44889bf707d991d0766": {
+      "assinatura": "1710a594806306f992a976fe307934207c44a29941a4a337571141764a66acd4",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "blackstone-lands-loan-for-data-center-co",
+        "prioridade": 20
+      }
+    },
+    "f6376b7f4c0d78fea2c5": {
+      "assinatura": "5a187ca4491302f1090acc5b6377c428e9fa33da87c94ada4ee51d33428eb104",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "f6fcfd5d2dac38295cac": {
+      "assinatura": "a66a0829526175c4f57c5e7b4bb1897e595a289ee50a719637ef3a3976997ea8",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "uk-bess-fees-grid-queue",
+        "prioridade": 55
+      }
+    },
+    "f733e4de3f967f973f10": {
+      "assinatura": "a4456ac94a4ad5c8d91d1868b4500da1cfb78ef90127e6baa34063794ac047e3",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "nvidia-backed-data-center-firm-nscale-fi",
+        "prioridade": 20
+      }
+    },
+    "f73730cea8d9dcd894a9": {
+      "assinatura": "1e4973f74548ab66d25575c5548421dbb1b053c2c97618fb3607787318b21b55",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "india-financier-dc-loans-1.2bi",
+        "prioridade": 40
+      }
+    },
+    "f96210da8c1f34a1c20a": {
+      "assinatura": "b9b3a6021f9f053c0361ef3ebd0598051ae25baee15d8b19455ccc037171fc88",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "governadores-gas-redata-suprimento-eletrico",
+        "prioridade": 96
+      }
+    },
+    "f9e3d7d3f7dcd2eedd4d": {
+      "assinatura": "5a834abbe3d85ae955ce16a9b334082ec329625ffabbc06c186697beaa97abdf",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "fa3fcfe91dbcf77d40b2": {
+      "assinatura": "5714550fb288053367d05a8b9dd01c726d525546542cbf4c92a120cf8131d488",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "fb055fa22f87fd23d64d": {
+      "assinatura": "8cd7276c50ebb61b756fa0a96d47590a0179583c055800b6239b7a8ec641e0a7",
+      "avaliacao": {
+        "decisao": "fora_tema"
+      }
+    },
+    "fb7d70d7c19913db57b0": {
+      "assinatura": "18fd14420c1a6cd70db328fc3ca68d4504132165d1e5c83aaa1fdfab2c7114e7",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "where-does-your-city-stand-on-data-cente",
+        "prioridade": 20
+      }
+    },
+    "fbc3bbe9fa867112eee2": {
+      "assinatura": "c04a412efd8e8bfcff7dd5e51187e40b96ad4a90d857f76d2390adf672736198",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "action-picks-up-in-lawsuits-targeting-bi",
+        "prioridade": 20
+      }
+    },
+    "fbcd214bf95db0567186": {
+      "assinatura": "db738b990a1c80007925186fa420664428fc89397e69ff0752c9c1782f9f0f73",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "catl-swaptopus-semi-battery",
+        "prioridade": 45
+      }
+    },
+    "fd6e995752fd7655dd13": {
+      "assinatura": "8d7fb4bd1331727b9e46191f9d1d5ff0c80061e3d2675dfac6665644319f7e0e",
+      "avaliacao": {
+        "decisao": "sem_fato_novo"
+      }
+    },
+    "fe13ad3b6cae5e4866c3": {
+      "assinatura": "e2513c96dcfa537e64046616cba93493dce5e3eae8495c0698b3d90d4af57831",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "ecopro-catl-cathode-talks",
+        "prioridade": 50
+      }
+    },
+    "fe4f22446b2be4fe4d5a": {
+      "assinatura": "7baf40ab0f6b784f70fdf791a5f1b776afccee37a74582326c075257e033a68e",
+      "avaliacao": {
+        "bucket": "BR",
+        "decisao": "elegivel",
+        "fato": "lawinfra-summit-risco-institucional",
+        "prioridade": 50
+      }
+    },
+    "ff08a6d4c901c17aa7cb": {
+      "assinatura": "55b8a449e2c02731f421d2db0612d540fc5d9e3664f6f6a0025ed7d895bc7fea",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "byd-carregador-60-5min",
+        "prioridade": 45
+      }
+    },
+    "ff46313c8d43363e13f0": {
+      "assinatura": "29cbed38a6d8ee17e634d3ed75c23048d8647720acdca0ed0e05cf9d5b5f8cbc",
+      "avaliacao": {
+        "bucket": "US",
+        "decisao": "elegivel",
+        "fato": "greene-county-says-no-permit-for-data-ce",
+        "prioridade": 20
+      }
+    }
+  },
   "items": {
     "https://12onyourside.com/2026/09/18/watch-live-spanberger-address-data-centers-ai/": {
       "_v2_seen_at": 1789747235.572483,
