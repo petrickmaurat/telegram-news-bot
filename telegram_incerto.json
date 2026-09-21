@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/prysmian-rio-tinto-to-supply-amazon-data-center-in-ohio-with-low-carbon-aluminum/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/prysmian-rio-tinto-to-supply-amazon-data-center-in-ohio-with-low-carbon-aluminum/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/prysmian-rio-tinto-to-supply-amazon-data-center-in-ohio-with-low-carbon-aluminum/",
+    "origem": "INT",
+    "resumo": "<p>Will deliver electrical cabling to the data center</p>",
+    "titulo": "Prysmian, Rio Tinto to supply Amazon data center in Ohio with low-carbon aluminum",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
