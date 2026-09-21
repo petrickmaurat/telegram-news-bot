@@ -330,9 +330,9 @@ class RoutineV2Tests(TestCase):
         salvar_json(v2.STATE_FILE, self.base_state([unreadable, readable]))
         salvar_json(v2.RANKING_RESPONSE_FILE, {"request_sha256": "request",
             "evaluations": [
-                {"id": c["id"], "decisao": "elegivel", "bucket": "BR",
-                 "prioridade": 90 - index, "fato": str(index)}
-                for index, c in enumerate(candidates)],
+                {"id": candidates[0]["id"], "decisao": "elegivel", "bucket": "BR",
+                 "prioridade": 90, "fato": "investimento"},
+                {"id": candidates[1]["id"], "decisao": "fora_tema"}],
             "selections": [{"id": candidates[0]["id"], "topico": "data_center", "bucket": "BR"}],
             "duplicates": {}})
         v2.validate_ranking()
