@@ -136,6 +136,16 @@ class RoutineV2Tests(TestCase):
         self.assertEqual(v2.common._CACHE_GOOGLE_FILE, str(v2.GOOGLE_CACHE_FILE))
         self.assertNotEqual(v2.common._CACHE_GOOGLE_FILE, original)
 
+    def test_dedupe_preserves_cache_identity_after_google_link_is_resolved(self):
+        google = news(1, link="https://news.google.com/rss/articles/opaque")
+        direct = news(1, link="https://reuters.com/final")
+        google["aliases"] = [google["link"]]
+        direct["aliases"] = [google["link"], direct["link"]]
+        merged = v2.dedupe_same_article([google, direct])
+        self.assertEqual(len(merged), 1)
+        self.assertEqual(merged[0]["link"], google["link"])
+        self.assertEqual(set(merged[0]["aliases"]), {google["link"], direct["link"]})
+
     def test_delivery_fetch_resolves_and_reads_without_changing_identity(self):
         google = "https://news.google.com/articles/opaque"
         item = news(link=google)

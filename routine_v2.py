@@ -204,11 +204,21 @@ def enrich_delivery_candidates(items, max_workers=12):
 
 
 def dedupe_same_article(items):
-    """Só une a mesma URL canônica. Manchetes parecidas continuam separadas."""
+    """Une URLs que representam o mesmo artigo; manchetes parecidas ficam separadas.
+
+    Depois que um link do Google Noticias e resolvido, a coleta seguinte pode
+    trazer a URL direta. ``aliases`` liga as duas identidades e impede que a
+    mesma materia volte como candidata nova ou perca sua avaliacao em cache.
+    """
     merged = {}
+    alias_to_key = {}
     for item in items:
-        key = item_key(item)
+        aliases = identidades(item)
+        key = next((alias_to_key[alias] for alias in aliases
+                    if alias in alias_to_key), item_key(item))
         merged[key] = merge_item(merged.get(key), item)
+        for alias in identidades(merged[key]) | {key}:
+            alias_to_key[alias] = key
     return list(merged.values())
 
 
