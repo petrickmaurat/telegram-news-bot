@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/odata-to-deploy-aligneds-deltaflow-liquid-cooling-system-at-brazil-and-mexico-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/odata-to-deploy-aligneds-deltaflow-liquid-cooling-system-at-brazil-and-mexico-data-centers/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/odata-to-deploy-aligneds-deltaflow-liquid-cooling-system-at-brazil-and-mexico-data-centers/",
+    "origem": "INT",
+    "resumo": "<p>Project will cost $630m</p>",
+    "titulo": "OData to deploy Aligned's DeltaFlow liquid cooling system at Brazil and Mexico data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
