@@ -73,7 +73,11 @@ ele limpa a resposta existente. Preserve a mesma coleta e continue em
    em até quatro frases. Quando a URL não puder ser lida, use somente manchete
    e `texto`, faça uma única frase conservadora e não infira contexto ausente.
    A indisponibilidade de uma página não elimina uma notícia que venceu por
-   relevância.
+   relevância. Se a leitura revelar que o assunto central não é o tópico, que
+   a menção era incidental ou que não existe fato novo, volte ao
+   `ranking_response.json`, substitua esse finalista pelo próximo elegível do
+   mesmo tópico/bucket, execute `validate-ranking` novamente e leia o novo
+   finalista antes de produzir os resumos.
 9. Grave `routine_v2_work/summary_response.json`:
 
 ```json
