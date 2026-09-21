@@ -1,6 +1,6 @@
 feedparser
 requests
-googlenewsdecoder
+googlenewsdecoder==0.2.1
 anthropic
 trafilatura
 

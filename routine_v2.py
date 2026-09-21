@@ -50,6 +50,7 @@ MIN_EXCERPT_WORDS = 40
 MIN_LIMITED_WORDS = 10
 ARTICLE_TEXT_LIMIT = 6000
 DELIVERY_RETRY_SECONDS = 6 * 3600
+DELIVERY_READER_VERSION = 2
 PREFLIGHT_TARGETS = (
     ("google_news", "buscador", TOPICOS["data_center"]["feeds"][2]["url"]),
     ("megawhat", "rss_direto", "https://megawhat.uol.com.br/feed/"),
@@ -159,9 +160,13 @@ def _fetch_delivery_article(item, now):
     current = delivery_view(item)
     if current["nivel"] == "artigo_completo" and current["link_resolvido"]:
         return
-    if article.get("entrega_tentada_em", 0) + DELIVERY_RETRY_SECONDS > now:
+    # Uma mudanca no resolvedor/leitor precisa invalidar falhas antigas. Sem
+    # esta versao, o cache impediria a correcao de ser testada por seis horas.
+    if (article.get("leitor_versao") == DELIVERY_READER_VERSION
+            and article.get("entrega_tentada_em", 0) + DELIVERY_RETRY_SECONDS > now):
         return
     article["entrega_tentada_em"] = now
+    article["leitor_versao"] = DELIVERY_READER_VERSION
     original = item.get("link", "")
     try:
         resolved = resolver_link_google_news(original)
@@ -389,6 +394,11 @@ def prepare(max_new_per_topic=0):
         else:
             candidate.pop("link", None)
     reading = Counter(candidate["leitura"]["nivel"] for candidate in candidates)
+    reading_by_topic = {
+        topic: dict(Counter(candidate["leitura"]["nivel"] for candidate in candidates
+                            if candidate["topico"] == topic))
+        for topic in TOPIC_ORDER
+    }
 
     request = {
         "schema": REQUEST_SCHEMA, "policy_version": POLICY_VERSION,
@@ -397,7 +407,7 @@ def prepare(max_new_per_topic=0):
         "limits": VAGAS, "topic_order": list(TOPIC_ORDER), "focus": FOCO_SETORIAL,
         "batch_size": 30, "batch_winners_per_bucket": 10,
         "candidates": candidates,
-        "reading": dict(reading),
+        "reading": dict(reading), "reading_by_topic": reading_by_topic,
         "local_rejections": [{"topico": topic, "resultado": reason, "quantidade": count}
                              for (topic, reason), count in sorted(rejected_locally.items())],
         "truncated": truncated, "source_queries": len(sources), "collection": health,
@@ -456,6 +466,22 @@ def load_input(max_age_hours=6):
                 or type(reading.get("selecionavel")) is not bool
                 or type(reading.get("link_resolvido")) is not bool):
             raise ValueError("Entrada V2 contém candidato sem diagnóstico de leitura.")
+
+    # Feeds acessiveis nao garantem que os links finais estejam legiveis. A
+    # Routine so deve consumir a franquia do Claude quando houver ao menos
+    # material selecionavel para preencher todas as vagas de cada tema.
+    limits = request.get("limits", VAGAS)
+    selectable_by_topic = Counter(candidate.get("topico") for candidate in candidates
+                                  if candidate.get("leitura", {}).get("selecionavel") is True)
+    missing = {}
+    for topic, buckets in limits.items():
+        required = sum(int(value) for value in buckets.values())
+        available = selectable_by_topic.get(topic, 0)
+        if available < required:
+            missing[topic] = {"selecionaveis": available, "necessarias": required}
+    if missing:
+        raise ValueError("Entrada V2 sem cobertura legível suficiente: "
+                         + json.dumps(missing, ensure_ascii=False, sort_keys=True))
 
     salvar_json(REQUEST_FILE, request)
     print(json.dumps({"status": "input_loaded", "request": str(REQUEST_FILE),

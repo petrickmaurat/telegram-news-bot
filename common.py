@@ -180,7 +180,12 @@ def resolver_link_google_news(link: str) -> str:
         return _cache_google[link]
     try:
         resultado = gnewsdecoder(link, interval=1)
-        if resultado.get("status") and canonica(resultado.get("decoded_url", "")):
+        # googlenewsdecoder <=0.1.7 usava ``status``. A partir da 0.2.1
+        # passou a usar ``success``. Aceitar os dois formatos evita perder
+        # silenciosamente todos os links do Google Noticias numa atualizacao
+        # da dependencia.
+        sucesso = resultado.get("success", resultado.get("status", False))
+        if sucesso and canonica(resultado.get("decoded_url", "")):
             _cache_google[link] = resultado["decoded_url"]
             return resultado["decoded_url"]
     except Exception as erro:

@@ -56,6 +56,15 @@ class EmailTests(IsolatedState):
                 self.assertEqual(cached[0]["link"], item()["link"])
                 decoder.assert_not_called()
 
+    def test_google_decoder_accepts_current_success_field(self):
+        google = "https://news.google.com/rss/articles/current"
+        destination = item()["link"]
+        with patch.dict(common._cache_google, {}, clear=True), \
+             patch.object(common, "gnewsdecoder", return_value={
+                 "success": True, "decoded_url": destination}):
+            self.assertEqual(common.resolver_link_google_news(google), destination)
+            self.assertEqual(common._cache_google[google], destination)
+
     def test_topic_failure_still_sends_carbon_and_reports_partial_failure(self):
         candidates = [item(1), item(2, ["carbono"])]
         calls = []

@@ -240,6 +240,7 @@ class RoutineV2Tests(TestCase):
         request = {"schema": v2.REQUEST_SCHEMA, "policy_version": v2.POLICY_VERSION,
             "run_id": "test", "generated_at": time.time(), "pilot": True,
             "send_enabled": False, "candidates": [], "truncated": {},
+            "limits": {"data_center": {"BR": 1, "US": 0}},
             "collection": {"queries": 10, "ok": 10, "failure_ratio": 0}}
         request.update(changes)
         request["request_sha256"] = v2.request_sha256(request)
@@ -247,12 +248,25 @@ class RoutineV2Tests(TestCase):
 
     def test_load_input_copies_valid_snapshot_to_private_work_area(self):
         request = self.valid_input(candidates=[{"id": "a", "precisa_avaliar": True,
+            "topico": "data_center",
             "leitura": {"nivel": "artigo_completo", "selecionavel": True,
                         "link_resolvido": True}}])
         salvar_json(v2.INPUT_FILE, request)
         salvar_json(v2.STATE_FILE, self.base_state([]))
         v2.load_input(max_age_hours=6)
         self.assertEqual(carregar_json(v2.REQUEST_FILE, {}), request)
+
+    def test_load_input_rejects_topic_without_enough_readable_candidates(self):
+        request = self.valid_input(
+            limits={"data_center": {"BR": 1, "US": 0},
+                    "baterias": {"BR": 1, "US": 1}},
+            candidates=[{"id": "a", "topico": "data_center", "precisa_avaliar": True,
+                "leitura": {"nivel": "artigo_completo", "selecionavel": True,
+                            "link_resolvido": True}}])
+        salvar_json(v2.INPUT_FILE, request)
+        salvar_json(v2.STATE_FILE, self.base_state([]))
+        with self.assertRaisesRegex(ValueError, "baterias"):
+            v2.load_input(max_age_hours=6)
 
     def test_load_input_rejects_stale_snapshot(self):
         request = self.valid_input(generated_at=time.time() - 7 * 3600)
