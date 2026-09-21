@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/valorem-eyes-data-centers-in-savonlinna-and-kankaanp%C3%A4%C3%A4-finland/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/valorem-eyes-data-centers-in-savonlinna-and-kankaanp%C3%A4%C3%A4-finland/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/valorem-eyes-data-centers-in-savonlinna-and-kankaanp%C3%A4%C3%A4-finland/",
+    "origem": "INT",
+    "resumo": "<p>French energy firm adds more data center projects to pipeline</p>",
+    "titulo": "Valorem eyes data centers in Savonlinna and Kankaanpää, Finland",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
