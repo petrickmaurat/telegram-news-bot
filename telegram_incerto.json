@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/retrofitting-existing-data-centers-for-ai-two-practical-paths-to-liquid-cooling/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/retrofitting-existing-data-centers-for-ai-two-practical-paths-to-liquid-cooling/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/retrofitting-existing-data-centers-for-ai-two-practical-paths-to-liquid-cooling/",
+    "origem": "INT",
+    "resumo": "<p>How operators can introduce liquid cooling when servers or facility infrastructure are not yet ready for a full transition</p>",
+    "titulo": "Sponsored: Retrofitting existing data centers for AI: Two practical paths to liquid cooling",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
