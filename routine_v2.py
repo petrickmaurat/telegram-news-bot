@@ -42,7 +42,7 @@ REPORT_FILE = ROOT / "routine_v2_report.json"
 PREVIEW_FILE = ROOT / "routine_v2_preview.html"
 PREFLIGHT_FILE = ROOT / "routine_v2_preflight.json"
 POLICY_VERSION = 1
-REQUEST_SCHEMA = 2
+REQUEST_SCHEMA = 3
 DECISIONS = {"elegivel", "fora_tema", "sem_fato_novo", "fonte_duvidosa"}
 TOPIC_ORDER = ("data_center", "baterias", "carbono")
 MIN_ARTICLE_WORDS = 80
@@ -151,7 +151,10 @@ def delivery_view(item, allow_limited=False):
             level = "insuficiente"
     return {"nivel": level, "palavras": words, "link_final": link,
             "link_resolvido": link_ready,
-            "selecionavel": link_ready and level != "insuficiente", "texto": text}
+            # Relevancia e acesso ao texto sao decisoes diferentes. Com link
+            # direto, o candidato pode ser ranqueado e o Claude tenta ler
+            # somente os finalistas; falha de scraping nao e veto editorial.
+            "selecionavel": link_ready, "texto": text}
 
 
 def _fetch_delivery_article(item, now):
@@ -467,9 +470,9 @@ def load_input(max_age_hours=6):
                 or type(reading.get("link_resolvido")) is not bool):
             raise ValueError("Entrada V2 contém candidato sem diagnóstico de leitura.")
 
-    # Feeds acessiveis nao garantem que os links finais estejam legiveis. A
-    # Routine so deve consumir a franquia do Claude quando houver ao menos
-    # material selecionavel para preencher todas as vagas de cada tema.
+    # Feeds acessiveis nao garantem links finais utilizaveis. A Routine so deve
+    # consumir a franquia do Claude quando houver links diretos suficientes
+    # para preencher todas as vagas; quantidade de texto nao entra nesta trava.
     limits = request.get("limits", VAGAS)
     selectable_by_topic = Counter(candidate.get("topico") for candidate in candidates
                                   if candidate.get("leitura", {}).get("selecionavel") is True)
@@ -480,7 +483,7 @@ def load_input(max_age_hours=6):
         if available < required:
             missing[topic] = {"selecionaveis": available, "necessarias": required}
     if missing:
-        raise ValueError("Entrada V2 sem cobertura legível suficiente: "
+        raise ValueError("Entrada V2 sem links diretos suficientes: "
                          + json.dumps(missing, ensure_ascii=False, sort_keys=True))
 
     salvar_json(REQUEST_FILE, request)
@@ -507,9 +510,7 @@ def valid_evaluation(row, candidate):
 def candidate_selectable(candidate):
     reading = candidate.get("leitura", {})
     return (reading.get("selecionavel") is True
-            and reading.get("link_resolvido") is True
-            and reading.get("nivel") in
-                ("artigo_completo", "trecho_disponivel", "trecho_limitado"))
+            and reading.get("link_resolvido") is True)
 
 
 def validate_ranking(response_path=None):
@@ -577,7 +578,7 @@ def validate_ranking(response_path=None):
         if not evaluation or evaluation.get("decisao") != "elegivel":
             raise ValueError("Um item selecionado não foi classificado como elegível.")
         if not candidate_selectable(candidate):
-            raise ValueError("Um item selecionado nao tem link e conteudo suficientes para o resumo.")
+            raise ValueError("Um item selecionado nao tem link direto para leitura final.")
         if selected.get("topico") != candidate["topico"] or selected.get("bucket") != evaluation["bucket"]:
             raise ValueError("Tópico/geografia da seleção diverge da avaliação.")
         groups[candidate["topico"]][evaluation["bucket"]].append(candidate)
@@ -608,13 +609,14 @@ def validate_ranking(response_path=None):
         if item is None:
             raise ValueError("Texto original de item selecionado não foi localizado.")
         view = delivery_view(item, allow_limited=candidate["fonte_maxima"])
-        if not view["selecionavel"]:
-            raise ValueError("Material de item selecionado deixou de ser suficiente.")
+        if not view["link_resolvido"]:
+            raise ValueError("Link direto de item selecionado deixou de estar disponível.")
         link, body = view["link_final"], view["texto"]
         summary_items.append({"id": selected["id"], "topico": candidate["topico"],
             "bucket": evaluations[selected["id"]]["bucket"], "titulo": candidate["titulo"],
             "fonte": candidate["fonte"], "link": link, "texto": clean(body)[:ARTICLE_TEXT_LIMIT],
-            "base_resumo": view["nivel"], "palavras_disponiveis": view["palavras"]})
+            "base_resumo": view["nivel"], "palavras_disponiveis": view["palavras"],
+            "requer_leitura_url": view["nivel"] in ("insuficiente", "trecho_limitado")})
     summary_request = {"schema": REQUEST_SCHEMA, "request_sha256": request["request_sha256"],
                        "items": summary_items}
     summary_request["summary_sha256"] = hashlib.sha256(json.dumps(
@@ -655,10 +657,18 @@ def finalize(response_path=None):
 
     selection = {t: {"BR": [], "US": []} for t in TOPIC_ORDER}
     for item in summary_request["items"]:
+        summary_row = by_id[item["id"]]
+        reading_base = item["base_resumo"]
+        if item.get("requer_leitura_url"):
+            url_reading = summary_row.get("leitura_url")
+            if url_reading not in ("confirmada", "indisponivel"):
+                raise ValueError("Finalista sem confirmação da tentativa de leitura da URL.")
+            reading_base = ("artigo_lido_pelo_modelo" if url_reading == "confirmada"
+                            else "trecho_limitado_final")
         selection[item["topico"]][item["bucket"]].append({
             "titulo": item["titulo"], "fonte": item["fonte"], "link": item["link"],
-            "base_resumo": item["base_resumo"],
-            "resumo_final": validate_summary_text(by_id[item["id"]].get("resumo"), item["titulo"])})
+            "base_resumo": reading_base,
+            "resumo_final": validate_summary_text(summary_row.get("resumo"), item["titulo"])})
     moment = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-3))).strftime(
         "%d/%m/%Y · piloto Claude Routine")
     PREVIEW_FILE.write_text(montar_html(selection, moment), encoding="utf-8")

@@ -162,13 +162,13 @@ class RoutineV2Tests(TestCase):
         self.assertEqual(view["nivel"], "trecho_disponivel")
         self.assertTrue(view["selecionavel"])
 
-    def test_delivery_rejects_too_little_material(self):
+    def test_delivery_keeps_thin_material_for_final_url_reading(self):
         item = news()
         with patch.object(v2.requests, "get", side_effect=RuntimeError("bloqueado")):
             v2._fetch_delivery_article(item, time.time())
         view = v2.delivery_view(item)
         self.assertEqual(view["nivel"], "insuficiente")
-        self.assertFalse(view["selecionavel"])
+        self.assertTrue(view["selecionavel"])
         limited = v2.delivery_view(item, allow_limited=True)
         self.assertEqual(limited["nivel"], "trecho_limitado")
         self.assertTrue(limited["selecionavel"])
@@ -256,7 +256,7 @@ class RoutineV2Tests(TestCase):
         v2.load_input(max_age_hours=6)
         self.assertEqual(carregar_json(v2.REQUEST_FILE, {}), request)
 
-    def test_load_input_rejects_topic_without_enough_readable_candidates(self):
+    def test_load_input_rejects_topic_without_enough_direct_links(self):
         request = self.valid_input(
             limits={"data_center": {"BR": 1, "US": 0},
                     "baterias": {"BR": 1, "US": 1}},
@@ -303,7 +303,7 @@ class RoutineV2Tests(TestCase):
                 "fonte_maxima": maximum, "fonte_prioritaria": True,
                 "leitura": {"nivel": "artigo_completo" if selectable else "insuficiente",
                             "palavras": v2.MIN_ARTICLE_WORDS + 5 if selectable else 10,
-                            "link_resolvido": True, "selecionavel": selectable},
+                            "link_resolvido": True, "selecionavel": True},
                 "assinatura": v2.evaluation_signature("data_center", item),
                 "precisa_avaliar": cached is None, "avaliacao_cache": cached}
 
@@ -321,7 +321,7 @@ class RoutineV2Tests(TestCase):
         with self.assertRaisesRegex(ValueError, "Fonte máxima"):
             v2.validate_ranking()
 
-    def test_ranking_substitutes_unreadable_maximum_source(self):
+    def test_ranking_keeps_relevant_maximum_source_for_final_url_reading(self):
         unreadable = news(1, "Brazil Journal", "https://braziljournal.com/a")
         readable = news(2)
         candidates = [self.candidate(unreadable, True, selectable=False),
@@ -333,11 +333,12 @@ class RoutineV2Tests(TestCase):
                 {"id": c["id"], "decisao": "elegivel", "bucket": "BR",
                  "prioridade": 90 - index, "fato": str(index)}
                 for index, c in enumerate(candidates)],
-            "selections": [{"id": candidates[1]["id"], "topico": "data_center", "bucket": "BR"}],
+            "selections": [{"id": candidates[0]["id"], "topico": "data_center", "bucket": "BR"}],
             "duplicates": {}})
         v2.validate_ranking()
         summary = carregar_json(v2.SUMMARY_REQUEST_FILE, {})
-        self.assertEqual([item["id"] for item in summary["items"]], [candidates[1]["id"]])
+        self.assertEqual([item["id"] for item in summary["items"]], [candidates[0]["id"]])
+        self.assertTrue(summary["items"][0]["requer_leitura_url"])
 
     def test_cached_evaluation_is_not_required_in_response(self):
         item = news()
@@ -414,4 +415,20 @@ class RoutineV2Tests(TestCase):
             {"id": "id1", "resumo": "O projeto recebeu autorização e informou capacidade."}]})
         v2.finalize()
         self.assertIn("trecho disponibilizado pela fonte",
+                      v2.PREVIEW_FILE.read_text(encoding="utf-8"))
+
+    def test_unavailable_final_url_is_disclosed_in_preview(self):
+        item = news()
+        summary_request = {"schema": v2.REQUEST_SCHEMA, "request_sha256": "request", "items": [{
+            "id": "id1", "topico": "data_center", "bucket": "BR", "titulo": item["titulo"],
+            "fonte": item["fonte"], "link": item["link"], "texto": item["resumo"],
+            "base_resumo": "insuficiente", "requer_leitura_url": True}],
+            "summary_sha256": "summary"}
+        salvar_json(v2.REQUEST_FILE, {"request_sha256": "request", "candidates": []})
+        salvar_json(v2.SUMMARY_REQUEST_FILE, summary_request)
+        salvar_json(v2.SUMMARY_RESPONSE_FILE, {"summary_sha256": "summary", "summaries": [{
+            "id": "id1", "resumo": "A fonte anunciou um novo projeto no setor.",
+            "leitura_url": "indisponivel"}]})
+        v2.finalize()
+        self.assertIn("não permitiu leitura integral",
                       v2.PREVIEW_FILE.read_text(encoding="utf-8"))

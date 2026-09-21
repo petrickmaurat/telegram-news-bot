@@ -272,6 +272,8 @@ def _card_noticia(item: dict, tema: dict) -> str:
     reading_labels = {
         "trecho_disponivel": "Resumo baseado no trecho disponibilizado pela fonte.",
         "trecho_limitado": "Resumo baseado em trecho curto disponibilizado pela fonte.",
+        "trecho_limitado_final": ("A fonte não permitiu leitura integral durante a curadoria; "
+                                  "resumo baseado na manchete e no trecho disponível."),
     }
     reading_label = reading_labels.get(item.get("base_resumo"), "")
     reading_note = ("<div style=\"margin:-5px 0 14px;font-size:11px;color:#6b7280\">"
