@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/why-protecting-your-data-centers-cash-flow-costs-less-than-you-think/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/why-protecting-your-data-centers-cash-flow-costs-less-than-you-think/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/why-protecting-your-data-centers-cash-flow-costs-less-than-you-think/",
+    "origem": "INT",
+    "resumo": "<p>And why the consequences of an SLA breach can go far beyond financial</p>",
+    "titulo": "Sponsored: Why protecting your data center's cash flow costs less than you think",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
