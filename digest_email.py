@@ -265,10 +265,17 @@ TEMA = {
 }
 
 
-def _card_noticia(item: dict, tema: dict, permitir_google: bool = False) -> str:
+def _card_noticia(item: dict, tema: dict) -> str:
     link = canonica(item.get("link", ""))
-    if not link or (google_pendente({"link": link}) and not permitir_google):
+    if not link or google_pendente({"link": link}):
         raise ValueError("Link de notícia inválido ou não resolvido")
+    reading_labels = {
+        "trecho_disponivel": "Resumo baseado no trecho disponibilizado pela fonte.",
+        "trecho_limitado": "Resumo baseado em trecho curto disponibilizado pela fonte.",
+    }
+    reading_label = reading_labels.get(item.get("base_resumo"), "")
+    reading_note = ("<div style=\"margin:-5px 0 14px;font-size:11px;color:#6b7280\">"
+                    + reading_label + "</div>" if reading_label else "")
     # Cópia: dados externos nunca podem virar marcação ou atributos do e-mail.
     item = {**item, "link": escape(link, quote=True),
             **{key: escape(str(item.get(key, "")), quote=True)
@@ -289,6 +296,7 @@ def _card_noticia(item: dict, tema: dict, permitir_google: bool = False) -> str:
             </div>
             <p style="margin:0 0 14px;font-size:15px;line-height:1.6;color:#1f2937;font-weight:500">
               {item['resumo_final']}</p>
+            {reading_note}
             <a href="{item['link']}" style="display:inline-block;font-size:13px;font-weight:800;
                   color:#ffffff;text-decoration:none;background:{cor};padding:8px 16px;
                   border-radius:999px">Ler matéria completa &rarr;</a>
@@ -297,7 +305,7 @@ def _card_noticia(item: dict, tema: dict, permitir_google: bool = False) -> str:
       </td></tr>"""
 
 
-def _secao_topico(topico: str, grupos: dict, permitir_google: bool = False) -> str:
+def _secao_topico(topico: str, grupos: dict) -> str:
     tema = TEMA[topico]
     rotulo = TOPICOS[topico]["rotulo"]
     total = len(grupos["BR"]) + len(grupos["US"])
@@ -325,14 +333,14 @@ def _secao_topico(topico: str, grupos: dict, permitir_google: bool = False) -> s
                     color:{tema['cor']}">{rotulos_bucket[bucket]}</span>
             </td></tr>"""
         )
-        partes.extend(_card_noticia(item, tema, permitir_google) for item in grupos[bucket])
+        partes.extend(_card_noticia(item, tema) for item in grupos[bucket])
     return "".join(partes)
 
 
-def montar_html(selecao: dict, momento: str, permitir_google: bool = False) -> str:
+def montar_html(selecao: dict, momento: str) -> str:
     momento = escape(str(momento), quote=True)
     secoes = "".join(
-        _secao_topico(t, selecao[t], permitir_google)
+        _secao_topico(t, selecao[t])
         for t in ORDEM_TOPICOS
         if selecao.get(t) and (selecao[t]["BR"] or selecao[t]["US"])
     )

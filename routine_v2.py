@@ -15,10 +15,10 @@ from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from html import unescape
 from pathlib import Path
-from urllib.parse import urlsplit
 
 import common
 import requests
+import trafilatura
 from common import TOPICOS, coletar_itens_novos, resolver_link_google_news, salvar_cache_google
 from digest_email import FOCO_SETORIAL, VAGAS, montar_html
 from email_articles import enriquecer_fila
@@ -42,8 +42,14 @@ REPORT_FILE = ROOT / "routine_v2_report.json"
 PREVIEW_FILE = ROOT / "routine_v2_preview.html"
 PREFLIGHT_FILE = ROOT / "routine_v2_preflight.json"
 POLICY_VERSION = 1
+REQUEST_SCHEMA = 2
 DECISIONS = {"elegivel", "fora_tema", "sem_fato_novo", "fonte_duvidosa"}
 TOPIC_ORDER = ("data_center", "baterias", "carbono")
+MIN_ARTICLE_WORDS = 80
+MIN_EXCERPT_WORDS = 40
+MIN_LIMITED_WORDS = 10
+ARTICLE_TEXT_LIMIT = 6000
+DELIVERY_RETRY_SECONDS = 6 * 3600
 PREFLIGHT_TARGETS = (
     ("google_news", "buscador", TOPICOS["data_center"]["feeds"][2]["url"]),
     ("megawhat", "rss_direto", "https://megawhat.uol.com.br/feed/"),
@@ -117,25 +123,76 @@ def merge_item(existing, incoming):
     return merged
 
 
-def resolve_candidates(items):
-    pending = {}
-    for item in items:
-        if urlsplit(canonica(item.get("link", ""))).hostname != "news.google.com":
-            continue
-        pending.setdefault(item["link"], []).append(item)
+def word_count(text):
+    return len(clean(text).split())
 
-    # A função e o cache são os mesmos da coleta sequencial. Paralelizamos
-    # apenas URLs distintas; isso reduz o tempo sem alterar decisões editoriais.
-    with ThreadPoolExecutor(max_workers=12) as pool:
-        resolved_by_link = dict(zip(pending, pool.map(resolver_link_google_news, pending)))
-    for original, matching_items in pending.items():
-        resolved = resolved_by_link[original]
-        if not canonica(resolved) or urlsplit(canonica(resolved)).hostname == "news.google.com":
-            continue
-        for item in matching_items:
-            old_ids = identidades(item)
-            item["link"] = resolved
-            item["aliases"] = sorted(old_ids | identidades(item))
+
+def delivery_view(item, allow_limited=False):
+    """Material verificavel usado no resumo e no link final da noticia."""
+    article = item.get("artigo", {})
+    original = canonica(item.get("link", ""))
+    resolved = canonica(article.get("link_final", ""))
+    link = resolved if resolved and not google_pendente({"link": resolved}) else original
+    link_ready = bool(link) and not google_pendente({"link": link})
+    article_text = clean(article.get("texto", ""))[:ARTICLE_TEXT_LIMIT]
+    rss_text = clean(item.get("resumo", ""))[:ARTICLE_TEXT_LIMIT]
+    article_words, rss_words = word_count(article_text), word_count(rss_text)
+    if article_words >= MIN_ARTICLE_WORDS:
+        level, text, words = "artigo_completo", article_text, article_words
+    else:
+        text = article_text if article_words > rss_words else rss_text
+        words = max(article_words, rss_words)
+        if words >= MIN_EXCERPT_WORDS:
+            level = "trecho_disponivel"
+        elif allow_limited and words >= MIN_LIMITED_WORDS:
+            level = "trecho_limitado"
+        else:
+            level = "insuficiente"
+    return {"nivel": level, "palavras": words, "link_final": link,
+            "link_resolvido": link_ready,
+            "selecionavel": link_ready and level != "insuficiente", "texto": text}
+
+
+def _fetch_delivery_article(item, now):
+    """Resolve e le um candidato sem trocar sua identidade editorial."""
+    article = dict(item.get("artigo", {}))
+    current = delivery_view(item)
+    if current["nivel"] == "artigo_completo" and current["link_resolvido"]:
+        return
+    if article.get("entrega_tentada_em", 0) + DELIVERY_RETRY_SECONDS > now:
+        return
+    article["entrega_tentada_em"] = now
+    original = item.get("link", "")
+    try:
+        resolved = resolver_link_google_news(original)
+        final_link = canonica(resolved)
+        if not final_link or google_pendente({"link": final_link}):
+            raise ValueError("link final nao resolvido")
+        article["link_final"] = final_link
+        response = requests.get(final_link, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+        response.raise_for_status()
+        extracted = trafilatura.extract(response.text[:2_000_000],
+                                        include_comments=False, include_tables=False) or ""
+        extracted = clean(extracted)[:ARTICLE_TEXT_LIMIT]
+        if extracted:
+            article["texto"] = extracted
+        article["resultado_entrega"] = ("artigo_completo"
+            if word_count(extracted) >= MIN_ARTICLE_WORDS else "texto_curto")
+        article["motivo_entrega"] = "Link resolvido e pagina consultada."
+    except Exception as error:
+        article["resultado_entrega"] = "falha"
+        article["motivo_entrega"] = str(error)[:300]
+    item["artigo"] = article
+
+
+def enrich_delivery_candidates(items, max_workers=12):
+    """Prepara links e texto fora do Claude, com cache por item."""
+    unique = list({item_key(item): item for item in items}.values())
+    now = time.time()
+    if not unique:
+        return
+    with ThreadPoolExecutor(max_workers=min(max_workers, len(unique))) as pool:
+        list(pool.map(lambda item: _fetch_delivery_article(item, now), unique))
 
 
 def dedupe_same_article(items):
@@ -250,16 +307,13 @@ def prepare(max_new_per_topic=0):
              for key, item in state["items"].items()}
     enriquecer_fila(queue, resolver_link_google_news, time.time(), max_workers=8)
     items = [r["item"] for r in queue.values()]
-    # Não resolva todo o backlog do Google Notícias aqui. O texto, a fonte e a
-    # data bastam para a curadoria; os poucos selecionados serão resolvidos na
-    # etapa posterior de entrega. O enriquecimento acima continua resolvendo
-    # no máximo MAX_ARTIGOS itens quando precisa abrir o artigo.
+    # A primeira passagem continua limitada a dados ausentes. A etapa de
+    # entrega abaixo tentará ler todos os candidatos efetivos do ranking.
     items = dedupe_same_article(items)
     state["items"] = {item_key(item): item for item in items}
-    salvar_cache_google()
-
     now = time.time()
     candidates = []
+    candidate_items = {}
     rejected_locally = Counter()
     truncated = {}
     sent_ids = {canonica(x) for x in state.get("sent", [])}
@@ -292,6 +346,7 @@ def prepare(max_new_per_topic=0):
                 "fonte_prioritaria": bool(fonte_prioritaria(item)),
                 "precisa_avaliar": not valid_cache,
             }
+            candidate_items[cid] = item
             if valid_cache:
                 candidate["avaliacao_cache"] = cached["avaliacao"]
             # O link opaco do Google Noticias pode ter centenas de caracteres
@@ -313,13 +368,36 @@ def prepare(max_new_per_topic=0):
             new_candidates = new_candidates[:max_new_per_topic]
         candidates.extend(cached_candidates + new_candidates)
 
+    # A rede do GitHub prepara o material antes da Routine: resolve os links e
+    # tenta ler todos os candidatos que realmente chegaram ao ranking. O cache
+    # no estado evita repetir essas consultas nas execucoes seguintes.
+    active_ids = {candidate["id"] for candidate in candidates}
+    enrich_delivery_candidates([candidate_items[cid] for cid in active_ids])
+    salvar_cache_google()
+    for candidate in candidates:
+        item = candidate_items[candidate["id"]]
+        base_view = delivery_view(item)
+        delivery_item = {**item, "link": base_view["link_final"]}
+        candidate["fonte_maxima"] = fonte_maxima(delivery_item)
+        candidate["fonte_prioritaria"] = bool(fonte_prioritaria(delivery_item))
+        view = delivery_view(item, allow_limited=candidate["fonte_maxima"])
+        candidate["trecho"] = view["texto"][:600]
+        candidate["leitura"] = {key: view[key] for key in
+                                ("nivel", "palavras", "link_resolvido", "selecionavel")}
+        if view["link_resolvido"]:
+            candidate["link"] = view["link_final"]
+        else:
+            candidate.pop("link", None)
+    reading = Counter(candidate["leitura"]["nivel"] for candidate in candidates)
+
     request = {
-        "schema": 1, "policy_version": POLICY_VERSION,
+        "schema": REQUEST_SCHEMA, "policy_version": POLICY_VERSION,
         "run_id": datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%dT%H%M%SZ"),
         "generated_at": now, "pilot": True, "send_enabled": False,
         "limits": VAGAS, "topic_order": list(TOPIC_ORDER), "focus": FOCO_SETORIAL,
         "batch_size": 30, "batch_winners_per_bucket": 10,
         "candidates": candidates,
+        "reading": dict(reading),
         "local_rejections": [{"topico": topic, "resultado": reason, "quantidade": count}
                              for (topic, reason), count in sorted(rejected_locally.items())],
         "truncated": truncated, "source_queries": len(sources), "collection": health,
@@ -336,6 +414,7 @@ def prepare(max_new_per_topic=0):
         "candidates": len(candidates),
         "needs_evaluation": sum(c["precisa_avaliar"] for c in candidates),
         "cached": sum(not c["precisa_avaliar"] for c in candidates),
+        "reading": dict(reading),
         "truncated": truncated, "send_enabled": False}, ensure_ascii=False))
 
 
@@ -346,7 +425,7 @@ def load_input(max_age_hours=6):
     request = carregar_json(INPUT_FILE, None)
     if not isinstance(request, dict):
         raise ValueError("Entrada V2 ausente. Execute antes o workflow de preparação no GitHub.")
-    if request.get("schema") != 1 or request.get("policy_version") != POLICY_VERSION:
+    if request.get("schema") != REQUEST_SCHEMA or request.get("policy_version") != POLICY_VERSION:
         raise ValueError("Entrada V2 usa schema ou política incompatível com este código.")
     if request.get("pilot") is not True or request.get("send_enabled") is not False:
         raise ValueError("Entrada V2 não está marcada como piloto seguro sem envio.")
@@ -369,6 +448,14 @@ def load_input(max_age_hours=6):
     candidates = request.get("candidates")
     if not isinstance(candidates, list):
         raise ValueError("Entrada V2 não contém uma lista válida de candidatos.")
+    for candidate in candidates:
+        reading = candidate.get("leitura") if isinstance(candidate, dict) else None
+        if (not isinstance(reading, dict)
+                or reading.get("nivel") not in
+                    ("artigo_completo", "trecho_disponivel", "trecho_limitado", "insuficiente")
+                or type(reading.get("selecionavel")) is not bool
+                or type(reading.get("link_resolvido")) is not bool):
+            raise ValueError("Entrada V2 contém candidato sem diagnóstico de leitura.")
 
     salvar_json(REQUEST_FILE, request)
     print(json.dumps({"status": "input_loaded", "request": str(REQUEST_FILE),
@@ -389,6 +476,14 @@ def valid_evaluation(row, candidate):
             raise ValueError(f"Elegível com nota/fato inválido: {candidate['id']}")
         return {k: row[k] for k in ("decisao", "bucket", "prioridade", "fato")}
     return {"decisao": row["decisao"]}
+
+
+def candidate_selectable(candidate):
+    reading = candidate.get("leitura", {})
+    return (reading.get("selecionavel") is True
+            and reading.get("link_resolvido") is True
+            and reading.get("nivel") in
+                ("artigo_completo", "trecho_disponivel", "trecho_limitado"))
 
 
 def validate_ranking(response_path=None):
@@ -455,6 +550,8 @@ def validate_ranking(response_path=None):
         candidate, evaluation = candidates[cid], evaluations[cid]
         if not evaluation or evaluation.get("decisao") != "elegivel":
             raise ValueError("Um item selecionado não foi classificado como elegível.")
+        if not candidate_selectable(candidate):
+            raise ValueError("Um item selecionado nao tem link e conteudo suficientes para o resumo.")
         if selected.get("topico") != candidate["topico"] or selected.get("bucket") != evaluation["bucket"]:
             raise ValueError("Tópico/geografia da seleção diverge da avaliação.")
         groups[candidate["topico"]][evaluation["bucket"]].append(candidate)
@@ -467,7 +564,7 @@ def validate_ranking(response_path=None):
             eligible = [c for c in candidates.values() if c["topico"] == topic
                         and evaluations[c["id"]].get("decisao") == "elegivel"
                         and evaluations[c["id"]].get("bucket") == bucket
-                        and c["id"] not in duplicate_of]
+                        and c["id"] not in duplicate_of and candidate_selectable(c)]
             maximum = [c for c in eligible if c["fonte_maxima"]]
             chosen_ids = {c["id"] for c in chosen}
             if len(maximum) <= limit and not {c["id"] for c in maximum} <= chosen_ids:
@@ -484,14 +581,15 @@ def validate_ranking(response_path=None):
         item = by_candidate_id.get(selected["id"])
         if item is None:
             raise ValueError("Texto original de item selecionado não foi localizado.")
-        link = canonica(item.get("link", ""))
-        if not link:
-            raise ValueError("Link de item selecionado ausente.")
-        body = item.get("artigo", {}).get("texto") or clean(item.get("resumo", ""))
+        view = delivery_view(item, allow_limited=candidate["fonte_maxima"])
+        if not view["selecionavel"]:
+            raise ValueError("Material de item selecionado deixou de ser suficiente.")
+        link, body = view["link_final"], view["texto"]
         summary_items.append({"id": selected["id"], "topico": candidate["topico"],
             "bucket": evaluations[selected["id"]]["bucket"], "titulo": candidate["titulo"],
-            "fonte": candidate["fonte"], "link": link, "texto": clean(body)[:3000]})
-    summary_request = {"schema": 1, "request_sha256": request["request_sha256"],
+            "fonte": candidate["fonte"], "link": link, "texto": clean(body)[:ARTICLE_TEXT_LIMIT],
+            "base_resumo": view["nivel"], "palavras_disponiveis": view["palavras"]})
+    summary_request = {"schema": REQUEST_SCHEMA, "request_sha256": request["request_sha256"],
                        "items": summary_items}
     summary_request["summary_sha256"] = hashlib.sha256(json.dumps(
         summary_request, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
@@ -533,22 +631,24 @@ def finalize(response_path=None):
     for item in summary_request["items"]:
         selection[item["topico"]][item["bucket"]].append({
             "titulo": item["titulo"], "fonte": item["fonte"], "link": item["link"],
+            "base_resumo": item["base_resumo"],
             "resumo_final": validate_summary_text(by_id[item["id"]].get("resumo"), item["titulo"])})
     moment = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-3))).strftime(
         "%d/%m/%Y · piloto Claude Routine")
-    # O piloto nao envia e-mail. Links do Google Noticias podem permanecer na
-    # previa quando o ambiente do Claude nao consegue resolver seus destinos.
-    # A renderizacao da V1 continua exigindo links finais por padrao.
-    PREVIEW_FILE.write_text(montar_html(selection, moment, permitir_google=True), encoding="utf-8")
+    PREVIEW_FILE.write_text(montar_html(selection, moment), encoding="utf-8")
     selected_count = sum(len(selection[t][b]) for t in TOPIC_ORDER for b in ("BR", "US"))
     pending_links = sum(google_pendente(item) for topic in TOPIC_ORDER
                         for bucket in ("BR", "US") for item in selection[topic][bucket])
+    selected_bases = Counter(item["base_resumo"] for topic in TOPIC_ORDER
+                             for bucket in ("BR", "US") for item in selection[topic][bucket])
     report = {"status": "pilot_ready" if selected_count else "pilot_empty",
         "send_enabled": False,
         "request_sha256": request["request_sha256"], "generated_at": time.time(),
         "counts": {t: {b: len(selection[t][b]) for b in ("BR", "US")} for t in TOPIC_ORDER},
         "google_links_pending": pending_links,
         "delivery_links_ready": pending_links == 0,
+        "reading": {"candidates": request.get("reading", {}),
+                    "selected": dict(selected_bases)},
         "needs_evaluation": sum(c["precisa_avaliar"] for c in request["candidates"]),
         "cached": sum(not c["precisa_avaliar"] for c in request["candidates"]),
         "truncated": request.get("truncated", {}),

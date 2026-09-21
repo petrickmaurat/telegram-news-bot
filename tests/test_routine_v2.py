@@ -42,7 +42,19 @@ class RoutineV2Tests(TestCase):
             p = patch.object(v2.common, name, value)
             p.start()
             self.addCleanup(p.stop)
+        p = patch.object(v2, "enrich_delivery_candidates", side_effect=self.mark_ready)
+        p.start()
+        self.addCleanup(p.stop)
         v2.WORK_DIR.mkdir()
+
+    def mark_ready(self, items, max_workers=12):
+        for index, item in enumerate(items):
+            link = item["link"]
+            final = (f"https://example.com/resolved-{index}"
+                     if "news.google.com" in link else link)
+            item["artigo"] = {"link_final": final,
+                "texto": " ".join(["conteudo"] * (v2.MIN_ARTICLE_WORDS + 5)),
+                "resultado_entrega": "artigo_completo"}
 
     def base_state(self, items):
         return {"version": 1, "items": {v2.item_key(i): i for i in items},
@@ -52,7 +64,7 @@ class RoutineV2Tests(TestCase):
         items = [news(i) for i in range(3)]
         with patch.object(v2, "load_state", return_value=self.base_state([])), \
              patch.object(v2, "coletar_itens_novos", return_value=items), \
-             patch.object(v2, "enriquecer_fila"), patch.object(v2, "resolve_candidates"), \
+             patch.object(v2, "enriquecer_fila"), \
              patch.object(v2, "salvar_cache_google"):
             v2.prepare(max_new_per_topic=2)
         request = carregar_json(v2.REQUEST_FILE, {})
@@ -66,12 +78,10 @@ class RoutineV2Tests(TestCase):
         with patch.object(v2, "load_state", return_value=self.base_state([])), \
              patch.object(v2, "coletar_itens_novos", return_value=[]) as collect, \
              patch.object(v2, "enriquecer_fila") as enrich, \
-             patch.object(v2, "resolve_candidates") as resolve_all, \
              patch.object(v2, "salvar_cache_google"):
             v2.prepare(max_new_per_topic=0)
         self.assertEqual(collect.call_args.kwargs["feed_workers"], 8)
         self.assertEqual(enrich.call_args.kwargs["max_workers"], 8)
-        resolve_all.assert_not_called()
 
     def test_preflight_requires_google_and_direct_feed(self):
         responses = [SimpleNamespace(status_code=200, content=b"rss", ok=True),
@@ -113,7 +123,7 @@ class RoutineV2Tests(TestCase):
         items = [news(i) for i in range(35)]
         with patch.object(v2, "load_state", return_value=self.base_state([])), \
              patch.object(v2, "coletar_itens_novos", return_value=items), \
-             patch.object(v2, "enriquecer_fila"), patch.object(v2, "resolve_candidates"), \
+             patch.object(v2, "enriquecer_fila"), \
              patch.object(v2, "salvar_cache_google"):
             v2.prepare(max_new_per_topic=0)
         request = carregar_json(v2.REQUEST_FILE, {})
@@ -126,17 +136,65 @@ class RoutineV2Tests(TestCase):
         self.assertEqual(v2.common._CACHE_GOOGLE_FILE, str(v2.GOOGLE_CACHE_FILE))
         self.assertNotEqual(v2.common._CACHE_GOOGLE_FILE, original)
 
-    def test_google_resolution_reuses_one_parallel_call_for_duplicate_urls(self):
-        google = "https://news.google.com/articles/same"
-        resolved = "https://example.com/materia"
-        items = [news(1, link=google), news(2, link=google), news(3)]
-        with patch.object(v2, "resolver_link_google_news", return_value=resolved) as resolver:
-            v2.resolve_candidates(items)
-        resolver.assert_called_once_with(google)
-        self.assertEqual([item["link"] for item in items[:2]], [resolved, resolved])
-        self.assertIn(v2.canonica(google), items[0]["aliases"])
+    def test_delivery_fetch_resolves_and_reads_without_changing_identity(self):
+        google = "https://news.google.com/articles/opaque"
+        item = news(link=google)
+        original_key = v2.item_key(item)
+        response = SimpleNamespace(text="<html>materia</html>", raise_for_status=lambda: None)
+        full_text = " ".join(["informacao"] * (v2.MIN_ARTICLE_WORDS + 10))
+        with patch.object(v2, "resolver_link_google_news", return_value="https://reuters.com/final"), \
+             patch.object(v2.requests, "get", return_value=response), \
+             patch.object(v2.trafilatura, "extract", return_value=full_text):
+            v2._fetch_delivery_article(item, time.time())
+        view = v2.delivery_view(item)
+        self.assertEqual(item["link"], google)
+        self.assertEqual(v2.item_key(item), original_key)
+        self.assertEqual(view["link_final"], "https://reuters.com/final")
+        self.assertEqual(view["nivel"], "artigo_completo")
+        self.assertTrue(view["selecionavel"])
 
-    def test_google_link_is_hidden_from_ranking_and_does_not_block_validation(self):
+    def test_delivery_uses_disclosed_rss_excerpt_when_page_fails(self):
+        item = news()
+        item["resumo"] = " ".join(["trecho"] * (v2.MIN_EXCERPT_WORDS + 2))
+        with patch.object(v2.requests, "get", side_effect=RuntimeError("bloqueado")):
+            v2._fetch_delivery_article(item, time.time())
+        view = v2.delivery_view(item)
+        self.assertEqual(view["nivel"], "trecho_disponivel")
+        self.assertTrue(view["selecionavel"])
+
+    def test_delivery_rejects_too_little_material(self):
+        item = news()
+        with patch.object(v2.requests, "get", side_effect=RuntimeError("bloqueado")):
+            v2._fetch_delivery_article(item, time.time())
+        view = v2.delivery_view(item)
+        self.assertEqual(view["nivel"], "insuficiente")
+        self.assertFalse(view["selecionavel"])
+        limited = v2.delivery_view(item, allow_limited=True)
+        self.assertEqual(limited["nivel"], "trecho_limitado")
+        self.assertTrue(limited["selecionavel"])
+
+    def test_resolved_google_domain_restores_maximum_source_priority(self):
+        item = news(source="Valor Econômico",
+                    link="https://news.google.com/articles/valor")
+
+        def resolve_as_valor(items, max_workers=12):
+            for candidate_item in items:
+                candidate_item["artigo"] = {
+                    "link_final": "https://valor.globo.com/empresas/noticia.ghtml",
+                    "texto": " ".join(["conteudo"] * (v2.MIN_ARTICLE_WORDS + 5))}
+
+        with patch.object(v2, "load_state", return_value=self.base_state([])), \
+             patch.object(v2, "coletar_itens_novos", return_value=[item]), \
+             patch.object(v2, "enriquecer_fila"), \
+             patch.object(v2, "enrich_delivery_candidates", side_effect=resolve_as_valor), \
+             patch.object(v2, "salvar_cache_google"):
+            v2.prepare(max_new_per_topic=0)
+        candidate = carregar_json(v2.REQUEST_FILE, {})["candidates"][0]
+        self.assertTrue(candidate["fonte_maxima"])
+        self.assertEqual(candidate["link"],
+                         "https://valor.globo.com/empresas/noticia.ghtml")
+
+    def test_google_link_is_resolved_before_ranking_and_summary(self):
         google = "https://news.google.com/articles/opaque-token"
         item = news(1, link=google)
         with patch.object(v2, "load_state", return_value=self.base_state([])), \
@@ -146,17 +204,17 @@ class RoutineV2Tests(TestCase):
             v2.prepare(max_new_per_topic=0)
         request = carregar_json(v2.REQUEST_FILE, {})
         candidate = request["candidates"][0]
-        self.assertNotIn("link", candidate)
+        self.assertEqual(candidate["link"], "https://example.com/resolved-0")
+        self.assertTrue(candidate["leitura"]["selecionavel"])
         salvar_json(v2.RANKING_RESPONSE_FILE, {"request_sha256": request["request_sha256"],
             "evaluations": [{"id": candidate["id"], "decisao": "elegivel", "bucket": "BR",
                              "prioridade": 80, "fato": "projeto"}],
             "selections": [{"id": candidate["id"], "topico": "data_center", "bucket": "BR"}],
             "duplicates": {}})
-        with patch.object(v2, "resolve_candidates") as resolve:
-            v2.validate_ranking()
-        resolve.assert_not_called()
+        v2.validate_ranking()
         summary = carregar_json(v2.SUMMARY_REQUEST_FILE, {})
-        self.assertEqual(summary["items"][0]["link"], google)
+        self.assertEqual(summary["items"][0]["link"], "https://example.com/resolved-0")
+        self.assertEqual(summary["items"][0]["base_resumo"], "artigo_completo")
 
     def test_cap_never_starves_new_items_or_discards_cached_eligible(self):
         old, fresh = news(1), news(2)
@@ -166,7 +224,7 @@ class RoutineV2Tests(TestCase):
             "avaliacao": {"decisao": "elegivel", "bucket": "BR", "prioridade": 10, "fato": "old"}}
         with patch.object(v2, "load_state", return_value=state), \
              patch.object(v2, "coletar_itens_novos", return_value=[fresh]), \
-             patch.object(v2, "enriquecer_fila"), patch.object(v2, "resolve_candidates"), \
+             patch.object(v2, "enriquecer_fila"), \
              patch.object(v2, "salvar_cache_google"):
             v2.prepare(max_new_per_topic=1)
         request = carregar_json(v2.REQUEST_FILE, {})
@@ -179,7 +237,7 @@ class RoutineV2Tests(TestCase):
         return request
 
     def valid_input(self, **changes):
-        request = {"schema": 1, "policy_version": v2.POLICY_VERSION,
+        request = {"schema": v2.REQUEST_SCHEMA, "policy_version": v2.POLICY_VERSION,
             "run_id": "test", "generated_at": time.time(), "pilot": True,
             "send_enabled": False, "candidates": [], "truncated": {},
             "collection": {"queries": 10, "ok": 10, "failure_ratio": 0}}
@@ -188,7 +246,9 @@ class RoutineV2Tests(TestCase):
         return request
 
     def test_load_input_copies_valid_snapshot_to_private_work_area(self):
-        request = self.valid_input(candidates=[{"id": "a", "precisa_avaliar": True}])
+        request = self.valid_input(candidates=[{"id": "a", "precisa_avaliar": True,
+            "leitura": {"nivel": "artigo_completo", "selecionavel": True,
+                        "link_resolvido": True}}])
         salvar_json(v2.INPUT_FILE, request)
         salvar_json(v2.STATE_FILE, self.base_state([]))
         v2.load_input(max_age_hours=6)
@@ -218,12 +278,18 @@ class RoutineV2Tests(TestCase):
         with self.assertRaisesRegex(ValueError, "truncada"):
             v2.load_input()
 
-    def candidate(self, item, maximum=False, cached=None):
+    def candidate(self, item, maximum=False, cached=None, selectable=True):
+        if selectable:
+            item["artigo"] = {"link_final": item["link"],
+                "texto": " ".join(["conteudo"] * (v2.MIN_ARTICLE_WORDS + 5))}
         cid = v2.candidate_id("data_center", item)
         return {"id": cid, "topico": "data_center", "titulo": item["titulo"],
                 "fonte": item["fonte"], "link": v2.canonica(item["link"]),
                 "trecho": item["resumo"], "publicado_em": item["publicado_em"],
                 "fonte_maxima": maximum, "fonte_prioritaria": True,
+                "leitura": {"nivel": "artigo_completo" if selectable else "insuficiente",
+                            "palavras": v2.MIN_ARTICLE_WORDS + 5 if selectable else 10,
+                            "link_resolvido": True, "selecionavel": selectable},
                 "assinatura": v2.evaluation_signature("data_center", item),
                 "precisa_avaliar": cached is None, "avaliacao_cache": cached}
 
@@ -240,6 +306,24 @@ class RoutineV2Tests(TestCase):
         salvar_json(v2.RANKING_RESPONSE_FILE, response)
         with self.assertRaisesRegex(ValueError, "Fonte máxima"):
             v2.validate_ranking()
+
+    def test_ranking_substitutes_unreadable_maximum_source(self):
+        unreadable = news(1, "Brazil Journal", "https://braziljournal.com/a")
+        readable = news(2)
+        candidates = [self.candidate(unreadable, True, selectable=False),
+                      self.candidate(readable)]
+        self.write_request(candidates)
+        salvar_json(v2.STATE_FILE, self.base_state([unreadable, readable]))
+        salvar_json(v2.RANKING_RESPONSE_FILE, {"request_sha256": "request",
+            "evaluations": [
+                {"id": c["id"], "decisao": "elegivel", "bucket": "BR",
+                 "prioridade": 90 - index, "fato": str(index)}
+                for index, c in enumerate(candidates)],
+            "selections": [{"id": candidates[1]["id"], "topico": "data_center", "bucket": "BR"}],
+            "duplicates": {}})
+        v2.validate_ranking()
+        summary = carregar_json(v2.SUMMARY_REQUEST_FILE, {})
+        self.assertEqual([item["id"] for item in summary["items"]], [candidates[1]["id"]])
 
     def test_cached_evaluation_is_not_required_in_response(self):
         item = news()
@@ -276,9 +360,10 @@ class RoutineV2Tests(TestCase):
 
     def test_finalize_generates_preview_without_sending_or_marking_sent(self):
         item = news()
-        summary_request = {"schema": 1, "request_sha256": "request", "items": [{
+        summary_request = {"schema": v2.REQUEST_SCHEMA, "request_sha256": "request", "items": [{
             "id": "id1", "topico": "data_center", "bucket": "BR", "titulo": item["titulo"],
-            "fonte": item["fonte"], "link": item["link"], "texto": item["resumo"]}],
+            "fonte": item["fonte"], "link": item["link"], "texto": item["resumo"],
+            "base_resumo": "artigo_completo"}],
             "summary_sha256": "summary"}
         salvar_json(v2.REQUEST_FILE, {"request_sha256": "request", "candidates": []})
         salvar_json(v2.SUMMARY_REQUEST_FILE, summary_request)
@@ -289,20 +374,30 @@ class RoutineV2Tests(TestCase):
         self.assertFalse(carregar_json(v2.REPORT_FILE, {})["send_enabled"])
         self.assertIn("Ler matéria completa", v2.PREVIEW_FILE.read_text(encoding="utf-8"))
 
-    def test_pilot_preview_accepts_google_link_but_normal_email_rejects_it(self):
+    def test_pilot_preview_rejects_unresolved_google_link(self):
         item = news(link="https://news.google.com/articles/opaque-token")
-        summary_request = {"schema": 1, "request_sha256": "request", "items": [{
+        summary_request = {"schema": v2.REQUEST_SCHEMA, "request_sha256": "request", "items": [{
             "id": "id1", "topico": "data_center", "bucket": "BR", "titulo": item["titulo"],
-            "fonte": item["fonte"], "link": item["link"], "texto": item["resumo"]}],
+            "fonte": item["fonte"], "link": item["link"], "texto": item["resumo"],
+            "base_resumo": "trecho_disponivel"}],
             "summary_sha256": "summary"}
         salvar_json(v2.REQUEST_FILE, {"request_sha256": "request", "candidates": []})
         salvar_json(v2.SUMMARY_REQUEST_FILE, summary_request)
         salvar_json(v2.SUMMARY_RESPONSE_FILE, {"summary_sha256": "summary", "summaries": [
             {"id": "id1", "resumo": "O projeto recebeu autorização de conexão elétrica e divulgou sua capacidade."}]})
-        v2.finalize()
-        report = carregar_json(v2.REPORT_FILE, {})
-        self.assertEqual(report["google_links_pending"], 1)
-        self.assertFalse(report["delivery_links_ready"])
-        self.assertIn(item["link"], v2.PREVIEW_FILE.read_text(encoding="utf-8"))
         with self.assertRaisesRegex(ValueError, "Link"):
-            v2.montar_html({"data_center": {"BR": [{**item, "resumo_final": "Resumo."}], "US": []}}, "Teste")
+            v2.finalize()
+
+    def test_excerpt_is_disclosed_in_preview(self):
+        item = news()
+        summary_request = {"schema": v2.REQUEST_SCHEMA, "request_sha256": "request", "items": [{
+            "id": "id1", "topico": "data_center", "bucket": "BR", "titulo": item["titulo"],
+            "fonte": item["fonte"], "link": item["link"], "texto": item["resumo"],
+            "base_resumo": "trecho_disponivel"}], "summary_sha256": "summary"}
+        salvar_json(v2.REQUEST_FILE, {"request_sha256": "request", "candidates": []})
+        salvar_json(v2.SUMMARY_REQUEST_FILE, summary_request)
+        salvar_json(v2.SUMMARY_RESPONSE_FILE, {"summary_sha256": "summary", "summaries": [
+            {"id": "id1", "resumo": "O projeto recebeu autorização e informou capacidade."}]})
+        v2.finalize()
+        self.assertIn("trecho disponibilizado pela fonte",
+                      v2.PREVIEW_FILE.read_text(encoding="utf-8"))
