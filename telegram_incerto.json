@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/kodiak-gas-services-to-supply-76mw-of-behind-the-meter-gas-power-to-west-texas-data-center/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/kodiak-gas-services-to-supply-76mw-of-behind-the-meter-gas-power-to-west-texas-data-center/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/kodiak-gas-services-to-supply-76mw-of-behind-the-meter-gas-power-to-west-texas-data-center/",
+    "origem": "INT",
+    "resumo": "<p>Will deploy 40 natural gas-fueled reciprocating generation units</p>",
+    "titulo": "Kodiak Gas Services to supply 76MW of behind-the-meter gas power to West Texas data center",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
