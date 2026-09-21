@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/colocation/enterprises-adopt-colocation-for-ai-and-hybrid-cloud-initiatives"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/colocation/enterprises-adopt-colocation-for-ai-and-hybrid-cloud-initiatives"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/colocation/enterprises-adopt-colocation-for-ai-and-hybrid-cloud-initiatives",
+    "origem": "INT",
+    "resumo": "Enterprises are strategically choosing colocation data centers to host AI applications, deploy a hybrid cloud model, add incremental capacity, improve connectivity, and reduce costs.",
+    "titulo": "Enterprises Adopt Colocation for AI and Hybrid Cloud Initiatives",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
