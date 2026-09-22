@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/polcom-to-build-40mw-data-center-in-skawina-poland/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/polcom-to-build-40mw-data-center-in-skawina-poland/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/polcom-to-build-40mw-data-center-in-skawina-poland/",
+    "origem": "INT",
+    "resumo": "<p>The facility will be the cloud services firm’s second in the town</p>",
+    "titulo": "Polcom to build 40MW data center in Skawina, Poland",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
