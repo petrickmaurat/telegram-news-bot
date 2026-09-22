@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/physical-security/designing-layered-drone-defenses-for-data-centers"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/physical-security/designing-layered-drone-defenses-for-data-centers"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/physical-security/designing-layered-drone-defenses-for-data-centers",
+    "origem": "INT",
+    "resumo": "Drone threats to data centers are rising and real. Operators should adopt layered defenses – physical hardening, detection systems, redundancy, and regulatory coordination – to build resilience.",
+    "titulo": "Designing Layered Drone Defenses for Data Centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
