@@ -67,8 +67,15 @@ só vê a lista curta de finalistas.
      nota alta) vem antes de fontes comuns, que só completam vagas;
    - evite duas coberturas do mesmo acontecimento: tema semelhante não basta;
      empresas, decisões, etapas ou valores novos são fatos diferentes;
-   - não repita acontecimentos de `ja_enviados` do tópico (edições dos últimos
-     dias); só escolha outra matéria sobre eles se trouxer desdobramento novo;
+   - no máximo uma matéria por ASSUNTO em cada tópico. Assunto é o tema
+     amplo (ex.: `redata`, `leilao-baterias`, `sbce`), mais largo que o fato:
+     sanção do REDATA, análise da Moody's sobre o REDATA e empresa comentando o
+     REDATA são o mesmo assunto. Prioridade alta de regulação não justifica
+     lotar as vagas com um único tema; prefira diversidade de assuntos. Uma
+     segunda matéria do mesmo assunto só é aceita com `repeticao_justificada`
+     explicando o desdobramento de natureza diferente;
+   - não repita acontecimentos nem assuntos de `ja_enviados` do tópico
+     (edições dos últimos dias) sem desdobramento novo;
    - `nivel` só desempata matérias editorialmente equivalentes; um finalista
      `insuficiente` será lido no passo 8.
 
@@ -77,7 +84,7 @@ só vê a lista curta de finalistas.
 ```json
 {
   "selections": [
-    {"id": "candidato escolhido", "topico": "data_center", "bucket": "BR"}
+    {"id": "candidato escolhido", "topico": "data_center", "bucket": "BR", "assunto": "redata"}
   ],
   "duplicates": {"id-da-cobertura-repetida": "id-da-cobertura-mantida"}
 }

@@ -720,7 +720,8 @@ def validate_ranking(response_path=None):
             "bucket": evaluations[selected["id"]]["bucket"], "titulo": candidate["titulo"],
             "fonte": candidate["fonte"], "link": link, "texto": clean(body)[:ARTICLE_TEXT_LIMIT],
             "base_resumo": view["nivel"], "palavras_disponiveis": view["palavras"],
-            "requer_leitura_url": view["nivel"] in ("insuficiente", "trecho_limitado")})
+            "requer_leitura_url": view["nivel"] in ("insuficiente", "trecho_limitado"),
+            "assunto": selected.get("assunto")})
     summary_request = {"schema": REQUEST_SCHEMA, "request_sha256": request["request_sha256"],
                        "items": summary_items}
     summary_request["summary_sha256"] = hashlib.sha256(json.dumps(
@@ -808,7 +809,7 @@ def merge_batches():
     sent_by_topic = {}
     for fact in load_state().get("sent_facts", []):
         sent_by_topic.setdefault(fact.get("topico"), []).append(
-            {"titulo": fact.get("titulo"), "fato": fact.get("fato")})
+            {"titulo": fact.get("titulo"), "fato": fact.get("fato"), "assunto": fact.get("assunto")})
     shortlist = {}
     for topic in TOPIC_ORDER:
         shortlist[topic] = {}
@@ -854,12 +855,38 @@ def merge_batches():
         "finalistas": str(SHORTLIST_FILE)}, ensure_ascii=False))
 
 
+def _subject_key(text):
+    return " ".join(re.sub(r"[^\w]+", " ", str(text or "").casefold()).split())
+
+
+def check_subject_diversity(selections):
+    """Um assunto por tópico: prioridade de regulação não pode lotar as vagas.
+
+    Coberturas diferentes do mesmo tema (ex.: sanção do REDATA, Moody's sobre o
+    REDATA, empresa comentando o REDATA) são fatos distintos para a deduplicação,
+    mas repetem o assunto. Uma segunda matéria do assunto exige justificativa.
+    """
+    seen = set()
+    for selected in selections:
+        subject = _subject_key(selected.get("assunto"))
+        if not subject:
+            raise ValueError(f"Seleção {selected.get('id')} sem assunto.")
+        key = (selected.get("topico"), subject)
+        if key in seen and not str(selected.get("repeticao_justificada", "")).strip():
+            raise ValueError(f"Assunto repetido em {key[0]}: {selected.get('assunto')}. "
+                             "Escolha outro assunto ou justifique o desdobramento novo.")
+        seen.add(key)
+
+
 def select(selection_path):
     """Grava seleção e duplicidades na resposta montada e executa validate-ranking."""
     selection = carregar_json(Path(selection_path), None)
     response = carregar_json(RANKING_RESPONSE_FILE, None)
     if not isinstance(selection, dict) or not isinstance(response, dict):
         raise ValueError("Execute merge-batches e grave o arquivo de seleção antes.")
+    if not isinstance(selection.get("selections"), list):
+        raise ValueError("selecao.json precisa de uma lista selections.")
+    check_subject_diversity(selection["selections"])
     response["selections"] = selection.get("selections")
     response["duplicates"] = selection.get("duplicates", {})
     save_compact_json(RANKING_RESPONSE_FILE, response)
@@ -931,7 +958,8 @@ def finalize(response_path=None):
         "collection": request.get("collection", {}), "preview": str(PREVIEW_FILE),
         "subject": f"Panorama Data Centers, Baterias & Carbono — {now_brt.strftime('%d/%m')} ({period})",
         "selected": [{"id": item["id"], "topico": item["topico"], "link": item["link"],
-                      "titulo": item["titulo"]} for item in summary_request["items"]],
+                      "titulo": item["titulo"], "assunto": item.get("assunto")}
+                     for item in summary_request["items"]],
         "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions."}
     salvar_json(REPORT_FILE, report)
     print(json.dumps(report, ensure_ascii=False))
@@ -996,7 +1024,8 @@ def send():
     for selected in report["selected"]:
         evaluation = state.get("evaluations", {}).get(selected["id"], {}).get("avaliacao", {})
         facts.append({"topico": selected["topico"], "titulo": selected.get("titulo"),
-                      "fato": evaluation.get("fato"), "sent_at": now})
+                      "fato": evaluation.get("fato"), "assunto": selected.get("assunto"),
+                      "sent_at": now})
     state["sent_facts"] = facts
     state["last_sent_request"] = edition
     save_compact_json(STATE_FILE, state)

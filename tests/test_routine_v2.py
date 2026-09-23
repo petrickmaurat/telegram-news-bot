@@ -338,10 +338,12 @@ class RoutineV2Tests(TestCase):
         self.assertEqual(shortlist["finalistas"][0]["id"], old_id)
         chosen = [row["id"] for row in shortlist["finalistas"]]
         salvar_json(v2.WORK_DIR / "selecao.json", {"selections": [
-            {"id": cid, "topico": "data_center", "bucket": "BR"} for cid in chosen]})
+            {"id": cid, "topico": "data_center", "bucket": "BR", "assunto": f"assunto-{n}"}
+            for n, cid in enumerate(chosen)]})
         v2.select(v2.WORK_DIR / "selecao.json")
         summary = carregar_json(v2.SUMMARY_REQUEST_FILE, {})
         self.assertEqual({i["id"] for i in summary["items"]}, set(chosen))
+        self.assertEqual({i["assunto"] for i in summary["items"]}, {"assunto-0", "assunto-1", "assunto-2"})
         response = carregar_json(v2.RANKING_RESPONSE_FILE, {})
         self.assertEqual(response["request_sha256"], request["request_sha256"])
         self.assertEqual(len(response["evaluations"]), 3)
@@ -397,6 +399,20 @@ class RoutineV2Tests(TestCase):
         v2.merge_batches()
         shortlist = carregar_json(v2.SHORTLIST_FILE, {})["topicos"]["data_center"]
         self.assertEqual(shortlist["ja_enviados"][0]["titulo"], facts[0]["titulo"])
+
+    def test_same_subject_cannot_fill_topic_without_justification(self):
+        rows = [{"id": "a", "topico": "data_center", "bucket": "BR", "assunto": "REDATA"},
+                {"id": "b", "topico": "data_center", "bucket": "BR", "assunto": "redata"}]
+        with self.assertRaises(ValueError) as error:
+            v2.check_subject_diversity(rows)
+        self.assertIn("Assunto repetido", str(error.exception))
+        rows[1]["repeticao_justificada"] = "Veto presidencial derrubado: decisão nova do Congresso."
+        v2.check_subject_diversity(rows)
+        # O mesmo assunto em tópicos diferentes não conflita.
+        v2.check_subject_diversity([rows[0], {"id": "c", "topico": "baterias", "bucket": "BR",
+                                              "assunto": "redata"}])
+        with self.assertRaises(ValueError):
+            v2.check_subject_diversity([{"id": "d", "topico": "carbono", "bucket": "BR"}])
 
     def test_merge_reports_missing_or_incomplete_batches(self):
         self.prepare_and_load([news(1), news(2), news(3)])
