@@ -10,11 +10,13 @@ import hashlib
 import json
 import os
 import re
+import tempfile
 import time
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from html import unescape
 from pathlib import Path
+from urllib.parse import urlsplit
 
 import common
 import requests
@@ -41,14 +43,38 @@ SUMMARY_RESPONSE_FILE = WORK_DIR / "summary_response.json"
 REPORT_FILE = ROOT / "routine_v2_report.json"
 PREVIEW_FILE = ROOT / "routine_v2_preview.html"
 PREFLIGHT_FILE = ROOT / "routine_v2_preflight.json"
+BATCH_DIR = WORK_DIR / "lotes"
+SHORTLIST_FILE = WORK_DIR / "finalistas.json"
+# Cada lote é avaliado por um subagente com contexto próprio. Um agente único
+# acumulava todos os candidatos no contexto e reprocessava tudo a cada passo.
+EVALUATION_BATCH_SIZE = 60
+SHORTLIST_PER_BUCKET = 15
+# Notas de subagentes diferentes não são calibradas entre si. Como no torneio da
+# V1, os melhores de cada lote sempre chegam à rodada final.
+SHORTLIST_PER_BATCH = 3
+SHORTLIST_EXCERPT = 200
+BATCH_RULES = (
+    "Avalie cada candidato somente para o tópico deste lote, usando o foco. "
+    "A relação com o tema precisa ser direta e substantiva; menção incidental é fora_tema. "
+    "A fonte nunca torna elegível um conteúdo fora do tema, e a falta de texto não torna "
+    "inelegível uma manchete relevante. Decisões: elegivel, fora_tema, sem_fato_novo, "
+    "fonte_duvidosa. Rejeitados levam apenas id e decisao. Elegíveis levam bucket BR "
+    "(fato ocorrido no Brasil) ou US (fato fora do Brasil; a geografia é a do fato, não a do "
+    "veículo), prioridade inteira de 0 a 100 conforme o foco, e fato: identificador curto do "
+    "acontecimento (ex.: catl-reduz-preco-celulas), igual para coberturas do mesmo "
+    "acontecimento e diferente para empresas, decisões, etapas ou valores novos.")
 POLICY_VERSION = 1
-REQUEST_SCHEMA = 3
+REQUEST_SCHEMA = 4
 DECISIONS = {"elegivel", "fora_tema", "sem_fato_novo", "fonte_duvidosa"}
 TOPIC_ORDER = ("data_center", "baterias", "carbono")
 MIN_ARTICLE_WORDS = 80
 MIN_EXCERPT_WORDS = 40
 MIN_LIMITED_WORDS = 10
 ARTICLE_TEXT_LIMIT = 6000
+# Trecho enviado ao ranking. Candidatos já avaliados só competem pela nota salva,
+# então recebem um trecho menor para desempate.
+RANKING_EXCERPT_NEW = 600
+RANKING_EXCERPT_CACHED = 300
 DELIVERY_RETRY_SECONDS = 6 * 3600
 DELIVERY_READER_VERSION = 2
 PREFLIGHT_TARGETS = (
@@ -61,6 +87,55 @@ PREFLIGHT_TARGETS = (
 
 def clean(text):
     return " ".join(unescape(re.sub(r"<[^>]+>", " ", text or "")).split())
+
+
+def save_compact_json(path, value):
+    """Grava JSON sem indentação, com um registro por linha.
+
+    A Routine paga por caractere lido: a indentação do salvar_json ocupava cerca
+    de 15% do pedido. Um registro por linha mantém o arquivo legível pelo Read.
+    """
+    def dump(data):
+        return json.dumps(data, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+
+    lines = []
+    for key in sorted(value):
+        data, name = value[key], dump(key)
+        if isinstance(data, list) and data:
+            lines.append(name + ":[\n" + ",\n".join(dump(x) for x in data) + "\n]")
+        elif isinstance(data, dict) and data:
+            lines.append(name + ":{\n" + ",\n".join(
+                dump(k) + ":" + dump(data[k]) for k in sorted(data)) + "\n}")
+        else:
+            lines.append(name + ":" + dump(data))
+    text = "{\n" + ",\n".join(lines) + "\n}\n"
+    path = Path(path)
+    fd, temporary = tempfile.mkstemp(dir=path.parent, suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as stream:
+            stream.write(text)
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.replace(temporary, path)
+    except BaseException:
+        if os.path.exists(temporary):
+            os.unlink(temporary)
+        raise
+
+
+def is_maximum(candidate):
+    return candidate.get("fonte_maxima") is True
+
+
+def keep_in_state(item, now):
+    """Mantém só o que ainda pode virar candidato: dentro da janela ou sem data recente."""
+    return recente(item, now) or (item.get("publicado_em") is None
+                                  and now - item.get("_v2_seen_at", now) <= 7 * 86400)
+
+
+def domain(link):
+    host = urlsplit(link).hostname or ""
+    return host[4:] if host.startswith("www.") else host
 
 
 def item_key(item):
@@ -283,7 +358,7 @@ def request_sha256(request):
 
 def clear_work_outputs(include_request=True):
     paths = [RANKING_RESPONSE_FILE, SUMMARY_REQUEST_FILE, SUMMARY_RESPONSE_FILE,
-             REPORT_FILE, PREVIEW_FILE]
+             REPORT_FILE, PREVIEW_FILE, SHORTLIST_FILE, *BATCH_DIR.glob("*.json")]
     if include_request:
         paths.insert(0, REQUEST_FILE)
     for stale in paths:
@@ -301,8 +376,7 @@ def prepare(max_new_per_topic=0):
     state = load_state()
     now = time.time()
     state["items"] = {key: item for key, item in state.get("items", {}).items()
-                      if recente(item, now) or (item.get("publicado_em") is None
-                      and now - item.get("_v2_seen_at", now) <= 7 * 86400)}
+                      if keep_in_state(item, now)}
     sent = {canonica(x) for x in state.get("sent", [])}
     sources = []
     collected = coletar_itens_novos(sent, resolver=False,
@@ -319,6 +393,10 @@ def prepare(max_new_per_topic=0):
     for item in collected:
         key = item_key(item)
         state["items"][key] = merge_item(state["items"].get(key), item)
+    # Matérias com data fora da janela nunca chegam ao ranking; guardá-las só
+    # inflava o estado versionado e o tempo de enriquecimento.
+    state["items"] = {key: item for key, item in state["items"].items()
+                      if keep_in_state(item, now)}
 
     # Enriquece uma cópia da fila; não chama qualquer modelo de IA.
     queue = {key: {"item": item, "status": "pendente"}
@@ -357,21 +435,15 @@ def prepare(max_new_per_topic=0):
             signature = evaluation_signature(topic, item)
             cached = state.get("evaluations", {}).get(cid)
             valid_cache = cached and cached.get("assinatura") == signature
+            published = item.get("publicado_em")
             candidate = {
                 "id": cid, "topico": topic, "titulo": item["titulo"], "fonte": item.get("fonte", ""),
-                "trecho": clean(item.get("resumo", ""))[:600],
-                "publicado_em": item.get("publicado_em"), "fonte_maxima": fonte_maxima(item),
-                "fonte_prioritaria": bool(fonte_prioritaria(item)),
+                "publicado_em": int(published) if isinstance(published, (int, float)) else None,
                 "precisa_avaliar": not valid_cache,
             }
             candidate_items[cid] = item
             if valid_cache:
                 candidate["avaliacao_cache"] = cached["avaliacao"]
-            # O link opaco do Google Noticias pode ter centenas de caracteres
-            # e nao acrescenta informacao editorial. A V1 tambem o omite da IA;
-            # a V2 o resolve somente se a materia chegar a selecao final.
-            if not google_pendente(item):
-                candidate["link"] = canonica(item["link"])
             if valid_cache:
                 if cached["avaliacao"].get("decisao") == "elegivel":
                     cached_candidates.append(candidate)
@@ -396,16 +468,21 @@ def prepare(max_new_per_topic=0):
         item = candidate_items[candidate["id"]]
         base_view = delivery_view(item)
         delivery_item = {**item, "link": base_view["link_final"]}
-        candidate["fonte_maxima"] = fonte_maxima(delivery_item)
-        candidate["fonte_prioritaria"] = bool(fonte_prioritaria(delivery_item))
-        view = delivery_view(item, allow_limited=candidate["fonte_maxima"])
-        candidate["trecho"] = view["texto"][:600]
-        candidate["leitura"] = {key: view[key] for key in
-                                ("nivel", "palavras", "link_resolvido", "selecionavel")}
+        # Marcadores só aparecem quando verdadeiros; ausência significa falso.
+        for flag, value in (("fonte_maxima", fonte_maxima(delivery_item)),
+                            ("fonte_prioritaria", bool(fonte_prioritaria(delivery_item)))):
+            if value:
+                candidate[flag] = True
+        view = delivery_view(item, allow_limited=is_maximum(candidate))
+        limit = RANKING_EXCERPT_NEW if candidate["precisa_avaliar"] else RANKING_EXCERPT_CACHED
+        candidate["trecho"] = view["texto"][:limit]
+        # selecionavel já equivale a link direto resolvido; palavras e
+        # link_resolvido eram redundantes para a decisão editorial.
+        candidate["leitura"] = {"nivel": view["nivel"], "selecionavel": view["selecionavel"]}
+        # O domínio identifica o veículo; a URL completa custava ~11% do pedido
+        # e o link final continua indo ao passo de resumos.
         if view["link_resolvido"]:
-            candidate["link"] = view["link_final"]
-        else:
-            candidate.pop("link", None)
+            candidate["dominio"] = domain(view["link_final"])
     reading = Counter(candidate["leitura"]["nivel"] for candidate in candidates)
     reading_by_topic = {
         topic: dict(Counter(candidate["leitura"]["nivel"] for candidate in candidates
@@ -430,9 +507,9 @@ def prepare(max_new_per_topic=0):
                            for topic in item.get("topicos", [])}
     state["evaluations"] = {key: value for key, value in state.get("evaluations", {}).items()
                             if key in live_evaluation_ids}
-    salvar_json(STATE_FILE, state)
-    salvar_json(REQUEST_FILE, request)
-    salvar_json(INPUT_FILE, request)
+    save_compact_json(STATE_FILE, state)
+    save_compact_json(REQUEST_FILE, request)
+    save_compact_json(INPUT_FILE, request)
     print(json.dumps({"status": "prepared", "request": str(REQUEST_FILE),
         "candidates": len(candidates),
         "needs_evaluation": sum(c["precisa_avaliar"] for c in candidates),
@@ -476,8 +553,7 @@ def load_input(max_age_hours=6):
         if (not isinstance(reading, dict)
                 or reading.get("nivel") not in
                     ("artigo_completo", "trecho_disponivel", "trecho_limitado", "insuficiente")
-                or type(reading.get("selecionavel")) is not bool
-                or type(reading.get("link_resolvido")) is not bool):
+                or type(reading.get("selecionavel")) is not bool):
             raise ValueError("Entrada V2 contém candidato sem diagnóstico de leitura.")
 
     # Feeds acessiveis nao garantem links finais utilizaveis. A Routine so deve
@@ -496,7 +572,7 @@ def load_input(max_age_hours=6):
         raise ValueError("Entrada V2 sem links diretos suficientes: "
                          + json.dumps(missing, ensure_ascii=False, sort_keys=True))
 
-    salvar_json(REQUEST_FILE, request)
+    save_compact_json(REQUEST_FILE, request)
     print(json.dumps({"status": "input_loaded", "request": str(REQUEST_FILE),
         "run_id": request.get("run_id"), "age_minutes": round(age_seconds / 60, 1),
         "candidates": len(candidates),
@@ -518,9 +594,7 @@ def valid_evaluation(row, candidate):
 
 
 def candidate_selectable(candidate):
-    reading = candidate.get("leitura", {})
-    return (reading.get("selecionavel") is True
-            and reading.get("link_resolvido") is True)
+    return candidate.get("leitura", {}).get("selecionavel") is True
 
 
 def validate_ranking(response_path=None):
@@ -578,7 +652,7 @@ def validate_ranking(response_path=None):
         if (evaluations[child].get("decisao") != "elegivel"
                 or evaluations[parent].get("decisao") != "elegivel"):
             raise ValueError("Duplicidade editorial só pode relacionar coberturas elegíveis.")
-        if candidates[child]["fonte_maxima"] and not candidates[parent]["fonte_maxima"]:
+        if is_maximum(candidates[child]) and not is_maximum(candidates[parent]):
             raise ValueError("Uma fonte máxima não pode ser descartada em favor de fonte comum.")
 
     groups = {t: {"BR": [], "US": []} for t in TOPIC_ORDER}
@@ -602,11 +676,11 @@ def validate_ranking(response_path=None):
                         and evaluations[c["id"]].get("decisao") == "elegivel"
                         and evaluations[c["id"]].get("bucket") == bucket
                         and c["id"] not in duplicate_of and candidate_selectable(c)]
-            maximum = [c for c in eligible if c["fonte_maxima"]]
+            maximum = [c for c in eligible if is_maximum(c)]
             chosen_ids = {c["id"] for c in chosen}
             if len(maximum) <= limit and not {c["id"] for c in maximum} <= chosen_ids:
                 raise ValueError(f"Fonte máxima elegível omitida em {topic}/{bucket}.")
-            if len(maximum) > limit and any(not c["fonte_maxima"] for c in chosen):
+            if len(maximum) > limit and any(not is_maximum(c) for c in chosen):
                 raise ValueError(f"Fonte comum ocupou vaga reservada por fontes máximas em {topic}/{bucket}.")
             expected = min(limit, len(eligible))
             if len(chosen) != expected:
@@ -618,7 +692,7 @@ def validate_ranking(response_path=None):
         item = by_candidate_id.get(selected["id"])
         if item is None:
             raise ValueError("Texto original de item selecionado não foi localizado.")
-        view = delivery_view(item, allow_limited=candidate["fonte_maxima"])
+        view = delivery_view(item, allow_limited=is_maximum(candidate))
         if not view["link_resolvido"]:
             raise ValueError("Link direto de item selecionado deixou de estar disponível.")
         link, body = view["link_final"], view["texto"]
@@ -631,10 +705,134 @@ def validate_ranking(response_path=None):
                        "items": summary_items}
     summary_request["summary_sha256"] = hashlib.sha256(json.dumps(
         summary_request, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
-    salvar_json(STATE_FILE, state)
-    salvar_json(SUMMARY_REQUEST_FILE, summary_request)
+    save_compact_json(STATE_FILE, state)
+    save_compact_json(SUMMARY_REQUEST_FILE, summary_request)
     print(json.dumps({"status": "ranking_validated", "summary_request": str(SUMMARY_REQUEST_FILE),
                       "selected": len(summary_items), "send_enabled": False}, ensure_ascii=False))
+
+
+def _loaded_request():
+    request = carregar_json(REQUEST_FILE, None)
+    if not isinstance(request, dict) or not isinstance(request.get("candidates"), list):
+        raise ValueError("Execute load-input antes de dividir ou juntar lotes.")
+    return request
+
+
+def _batch_manifest(request):
+    manifest = carregar_json(BATCH_DIR / "manifest.json", None)
+    if not isinstance(manifest, dict) or manifest.get("request_sha256") != request["request_sha256"]:
+        raise ValueError("Lotes ausentes ou de outra coleta; execute split-batches.")
+    return manifest
+
+
+def split_batches(size=EVALUATION_BATCH_SIZE):
+    """Divide os candidatos novos em arquivos autossuficientes para subagentes."""
+    request = _loaded_request()
+    BATCH_DIR.mkdir(parents=True, exist_ok=True)
+    for stale in BATCH_DIR.glob("*.json"):
+        stale.unlink()
+    batches = []
+    for topic in TOPIC_ORDER:
+        pending = [c for c in request["candidates"]
+                   if c.get("topico") == topic and c.get("precisa_avaliar")]
+        for start in range(0, len(pending), size):
+            name = f"{topic}_{start // size + 1:02d}"
+            path, answer = BATCH_DIR / f"{name}.json", BATCH_DIR / f"{name}.resposta.json"
+            # A leitura e o marcador de avaliação não pesam na decisão editorial.
+            rows = [{k: v for k, v in c.items() if k not in ("leitura", "precisa_avaliar", "topico")}
+                    for c in pending[start:start + size]]
+            save_compact_json(path, {"lote": name, "topico": topic,
+                "foco": request.get("focus", FOCO_SETORIAL)[topic], "regras": BATCH_RULES,
+                "resposta": str(answer), "formato_resposta": {"evaluations": [
+                    {"id": "...", "decisao": "fora_tema"},
+                    {"id": "...", "decisao": "elegivel", "bucket": "BR", "prioridade": 80,
+                     "fato": "id-curto-do-fato"}]},
+                "candidates": rows})
+            batches.append({"lote": name, "topico": topic, "quantidade": len(rows),
+                            "arquivo": str(path), "resposta": str(answer)})
+    manifest = {"request_sha256": request["request_sha256"], "lotes": batches}
+    save_compact_json(BATCH_DIR / "manifest.json", manifest)
+    print(json.dumps({"status": "batches_ready", "lotes": len(batches),
+                      "candidatos": sum(b["quantidade"] for b in batches),
+                      "manifesto": str(BATCH_DIR / "manifest.json")}, ensure_ascii=False))
+
+
+def merge_batches():
+    """Junta as respostas dos lotes, valida cada uma e prepara a rodada final."""
+    request = _loaded_request()
+    manifest = _batch_manifest(request)
+    candidates = {c["id"]: c for c in request["candidates"]}
+    evaluations, problems, batch_of = [], {}, {}
+    for batch in manifest["lotes"]:
+        expected = {c["id"] for c in carregar_json(Path(batch["arquivo"]), {}).get("candidates", [])}
+        batch_of.update(dict.fromkeys(expected, batch["lote"]))
+        answer = carregar_json(Path(batch["resposta"]), None)
+        rows = answer.get("evaluations") if isinstance(answer, dict) else None
+        if not isinstance(rows, list):
+            problems[batch["lote"]] = "resposta ausente"
+            continue
+        ids = [r.get("id") for r in rows if isinstance(r, dict)]
+        if len(ids) != len(rows) or len(set(ids)) != len(ids) or set(ids) != expected:
+            problems[batch["lote"]] = "a resposta deve cobrir exatamente os candidatos do lote"
+            continue
+        try:
+            evaluations += [{"id": r["id"], **valid_evaluation(r, candidates[r["id"]])} for r in rows]
+        except ValueError as error:
+            problems[batch["lote"]] = str(error)
+    if problems:
+        print(json.dumps({"status": "batches_incomplete", "refazer": problems}, ensure_ascii=False))
+        raise ValueError(f"{len(problems)} lote(s) precisam ser refeitos: {', '.join(problems)}")
+
+    # Rodada final: todas as fontes máximas e as melhores notas de cada geografia.
+    decided = {row["id"]: row for row in evaluations}
+    shortlist = {}
+    for topic in TOPIC_ORDER:
+        shortlist[topic] = {}
+        for bucket in ("BR", "US"):
+            rows = []
+            for cid, candidate in candidates.items():
+                evaluation = decided.get(cid) or candidate.get("avaliacao_cache") or {}
+                if (candidate.get("topico") != topic or evaluation.get("decisao") != "elegivel"
+                        or evaluation.get("bucket") != bucket or not candidate_selectable(candidate)):
+                    continue
+                rows.append({"id": cid, "titulo": candidate["titulo"], "fonte": candidate["fonte"],
+                    "dominio": candidate.get("dominio"), "publicado_em": candidate.get("publicado_em"),
+                    "prioridade": evaluation["prioridade"], "fato": evaluation["fato"],
+                    "fonte_maxima": is_maximum(candidate), "nivel": candidate["leitura"]["nivel"],
+                    "trecho": candidate.get("trecho", "")[:SHORTLIST_EXCERPT]})
+            rows.sort(key=lambda r: (not r["fonte_maxima"], -r["prioridade"], r["id"]))
+            others = [r for r in rows if not r["fonte_maxima"]]
+            # Avaliações de dias anteriores formam um grupo próprio.
+            chosen = {r["id"] for r in rows if r["fonte_maxima"]}
+            chosen.update(r["id"] for r in others[:SHORTLIST_PER_BUCKET])
+            per_batch = Counter()
+            for r in others:
+                group = batch_of.get(r["id"], "cache")
+                if per_batch[group] < SHORTLIST_PER_BATCH:
+                    per_batch[group] += 1
+                    chosen.add(r["id"])
+            shortlist[topic][bucket] = {"vagas": VAGAS[topic][bucket], "elegiveis_total": len(rows),
+                                        "finalistas": [r for r in rows if r["id"] in chosen]}
+    save_compact_json(RANKING_RESPONSE_FILE, {"request_sha256": request["request_sha256"],
+        "evaluations": evaluations, "selections": [], "duplicates": {}})
+    save_compact_json(SHORTLIST_FILE, {"request_sha256": request["request_sha256"],
+                                       "limits": VAGAS, "topicos": shortlist})
+    print(json.dumps({"status": "batches_merged", "avaliacoes": len(evaluations),
+        "elegiveis": {t: {b: shortlist[t][b]["elegiveis_total"] for b in ("BR", "US")}
+                      for t in TOPIC_ORDER},
+        "finalistas": str(SHORTLIST_FILE)}, ensure_ascii=False))
+
+
+def select(selection_path):
+    """Grava seleção e duplicidades na resposta montada e executa validate-ranking."""
+    selection = carregar_json(Path(selection_path), None)
+    response = carregar_json(RANKING_RESPONSE_FILE, None)
+    if not isinstance(selection, dict) or not isinstance(response, dict):
+        raise ValueError("Execute merge-batches e grave o arquivo de seleção antes.")
+    response["selections"] = selection.get("selections")
+    response["duplicates"] = selection.get("duplicates", {})
+    save_compact_json(RANKING_RESPONSE_FILE, response)
+    validate_ranking()
 
 
 def validate_summary_text(text, title):
@@ -724,6 +922,11 @@ def main():
     load = sub.add_parser("load-input")
     load.add_argument("--max-age-hours", type=float, default=6,
                       help="idade máxima aceita para a coleta preparada pelo GitHub Actions")
+    split = sub.add_parser("split-batches")
+    split.add_argument("--size", type=int, default=EVALUATION_BATCH_SIZE)
+    sub.add_parser("merge-batches")
+    choose = sub.add_parser("select")
+    choose.add_argument("--file", default=str(WORK_DIR / "selecao.json"))
     rank = sub.add_parser("validate-ranking")
     rank.add_argument("--response", default=str(RANKING_RESPONSE_FILE))
     summaries = sub.add_parser("finalize")
@@ -736,6 +939,12 @@ def main():
         prepare(args.max_new_per_topic)
     elif args.command == "load-input":
         load_input(args.max_age_hours)
+    elif args.command == "split-batches":
+        split_batches(args.size)
+    elif args.command == "merge-batches":
+        merge_batches()
+    elif args.command == "select":
+        select(args.file)
     elif args.command == "validate-ranking":
         validate_ranking(Path(args.response))
     elif args.command == "finalize":

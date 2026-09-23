@@ -1,6 +1,6 @@
 """Catálogo e consultas por veículo, exclusivos do e-mail."""
 from copy import deepcopy
-from urllib.parse import urlencode, urlsplit
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from reliability import DOMINIOS, canonica
 
 NOMES = {
@@ -61,9 +61,28 @@ EXTRA_CONSULTA = {
 }
 
 
+def _limitar_janela(url):
+    """Restringe buscas temáticas do Google às 72 h que o e-mail aceita.
+
+    Sem o filtro, o Google devolve até 100 resultados de qualquer época: a maior
+    parte expirava na fila sem chance de envio e ocupava vagas de matérias recentes.
+    """
+    partes = urlsplit(url)
+    if partes.netloc != "news.google.com" or not partes.path.startswith("/rss/search"):
+        return url
+    params = dict(parse_qsl(partes.query, keep_blank_values=True))
+    if "when:" in params.get("q", ""):
+        return url
+    params["q"] = params.get("q", "") + " when:3d"
+    return urlunsplit(partes._replace(query=urlencode(params)))
+
+
 def configuracao_email(topicos):
     config = deepcopy(topicos)
     for topic, cfg in config.items():
+        # O Telegram usa TOPICOS diretamente e continua sem este filtro.
+        for feed in cfg["feeds"]:
+            feed["url"] = _limitar_janela(feed["url"])
         extra = EXTRA_CONSULTA.get(topic, [])
         keywords = list(dict.fromkeys([*cfg["keywords"], *[word.strip('"') for word in extra]]))
         cfg["keywords"] = keywords

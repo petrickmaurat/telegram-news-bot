@@ -201,8 +201,7 @@ class RoutineV2Tests(TestCase):
             v2.prepare(max_new_per_topic=0)
         candidate = carregar_json(v2.REQUEST_FILE, {})["candidates"][0]
         self.assertTrue(candidate["fonte_maxima"])
-        self.assertEqual(candidate["link"],
-                         "https://valor.globo.com/empresas/noticia.ghtml")
+        self.assertEqual(candidate["dominio"], "valor.globo.com")
 
     def test_google_link_is_resolved_before_ranking_and_summary(self):
         google = "https://news.google.com/articles/opaque-token"
@@ -214,7 +213,8 @@ class RoutineV2Tests(TestCase):
             v2.prepare(max_new_per_topic=0)
         request = carregar_json(v2.REQUEST_FILE, {})
         candidate = request["candidates"][0]
-        self.assertEqual(candidate["link"], "https://example.com/resolved-0")
+        self.assertEqual(candidate["dominio"], "example.com")
+        self.assertNotIn("link", candidate)
         self.assertTrue(candidate["leitura"]["selecionavel"])
         salvar_json(v2.RANKING_RESPONSE_FILE, {"request_sha256": request["request_sha256"],
             "evaluations": [{"id": candidate["id"], "decisao": "elegivel", "bucket": "BR",
@@ -240,6 +240,144 @@ class RoutineV2Tests(TestCase):
         request = carregar_json(v2.REQUEST_FILE, {})
         self.assertEqual(len(request["candidates"]), 2)
         self.assertEqual(sum(c["precisa_avaliar"] for c in request["candidates"]), 1)
+
+    def test_ranking_payload_is_compact_and_keeps_editorial_fields(self):
+        old, fresh = news(1), news(2)
+        old_id = v2.candidate_id("data_center", old)
+        old["resumo"] = fresh["resumo"] = "palavra " * 200
+        state = self.base_state([old])
+        state["evaluations"][old_id] = {"assinatura": v2.evaluation_signature("data_center", old),
+            "avaliacao": {"decisao": "elegivel", "bucket": "BR", "prioridade": 10, "fato": "old"}}
+        with patch.object(v2, "load_state", return_value=state), \
+             patch.object(v2, "coletar_itens_novos", return_value=[fresh]), \
+             patch.object(v2, "enriquecer_fila"), \
+             patch.object(v2, "salvar_cache_google"):
+            v2.prepare(max_new_per_topic=0)
+        text = v2.REQUEST_FILE.read_text(encoding="utf-8")
+        self.assertNotIn("\n  ", text)
+        self.assertEqual(json.loads(text), carregar_json(v2.INPUT_FILE, {}))
+        candidates = {c["precisa_avaliar"]: c for c in json.loads(text)["candidates"]}
+        # Um candidato por linha: legível pelo Read sem indentação.
+        lines = {line.rstrip(",") for line in text.splitlines()}
+        for candidate in candidates.values():
+            self.assertIn(json.dumps(candidate, ensure_ascii=False, sort_keys=True,
+                                     separators=(",", ":")), lines)
+        self.assertLessEqual(len(candidates[False]["trecho"]), v2.RANKING_EXCERPT_CACHED)
+        self.assertGreater(len(candidates[True]["trecho"]), v2.RANKING_EXCERPT_CACHED)
+        for candidate in candidates.values():
+            self.assertEqual(set(candidate["leitura"]), {"nivel", "selecionavel"})
+            self.assertNotIn("fonte_maxima", candidate)
+            self.assertTrue(candidate["fonte_prioritaria"])
+            self.assertEqual(candidate["dominio"], "reuters.com")
+            self.assertTrue(candidate["titulo"] and candidate["fonte"])
+
+    def test_items_outside_window_are_not_kept_in_state(self):
+        old = news(1)
+        old["publicado_em"] = time.time() - v2.IDADE_MAXIMA - 3600
+        undated = news(2)
+        undated["publicado_em"] = None
+        with patch.object(v2, "load_state", return_value=self.base_state([])), \
+             patch.object(v2, "coletar_itens_novos", return_value=[old, undated, news(3)]), \
+             patch.object(v2, "enriquecer_fila"), \
+             patch.object(v2, "salvar_cache_google"):
+            v2.prepare(max_new_per_topic=0)
+        kept = carregar_json(v2.STATE_FILE, {})["items"]
+        self.assertNotIn(v2.item_key(old), kept)
+        self.assertIn(v2.item_key(undated), kept)
+        self.assertIn(v2.item_key(news(3)), kept)
+
+    def test_email_google_queries_are_limited_to_window_without_touching_telegram(self):
+        from common import TOPICOS
+        from email_sources import configuracao_email
+        config = configuracao_email(TOPICOS)
+        from urllib.parse import parse_qs, urlsplit
+        for topic, cfg in config.items():
+            for feed in cfg["feeds"]:
+                if feed["url"].startswith("https://news.google.com/rss/search"):
+                    query = parse_qs(urlsplit(feed["url"]).query)["q"][0]
+                    self.assertEqual(query.count("when:"), 1, feed["url"])
+                    self.assertIn("when:3d", query)
+        telegram_urls = [f["url"] for f in TOPICOS["data_center"]["feeds"]]
+        self.assertTrue(all("when" not in url for url in telegram_urls))
+
+    def prepare_and_load(self, items, state=None):
+        with patch.object(v2, "load_state", return_value=state or self.base_state([])), \
+             patch.object(v2, "coletar_itens_novos", return_value=items), \
+             patch.object(v2, "enriquecer_fila"), \
+             patch.object(v2, "salvar_cache_google"):
+            v2.prepare(max_new_per_topic=0)
+        return carregar_json(v2.REQUEST_FILE, {})
+
+    def answer_batches(self, decide):
+        manifest = carregar_json(v2.BATCH_DIR / "manifest.json", {})
+        for batch in manifest["lotes"]:
+            rows = carregar_json(batch["arquivo"], {})["candidates"]
+            salvar_json(batch["resposta"], {"evaluations": [decide(row) for row in rows]})
+        return manifest
+
+    def test_batch_flow_reaches_summary_through_existing_validator(self):
+        old = news(9)
+        old_id = v2.candidate_id("data_center", old)
+        state = self.base_state([old])
+        state["evaluations"][old_id] = {"assinatura": v2.evaluation_signature("data_center", old),
+            "avaliacao": {"decisao": "elegivel", "bucket": "BR", "prioridade": 95, "fato": "antigo"}}
+        request = self.prepare_and_load([news(1), news(2), news(3)], state)
+        v2.split_batches(size=2)
+        batch_file = carregar_json(v2.BATCH_DIR / "data_center_01.json", {})
+        self.assertIn("foco", batch_file)
+        self.assertNotIn("leitura", batch_file["candidates"][0])
+        manifest = self.answer_batches(lambda row: (
+            {"id": row["id"], "decisao": "fora_tema"} if row["titulo"].endswith("3") else
+            {"id": row["id"], "decisao": "elegivel", "bucket": "BR", "prioridade": 60,
+             "fato": row["titulo"][-1]}))
+        self.assertEqual(sum(b["quantidade"] for b in manifest["lotes"]), 3)
+        v2.merge_batches()
+        shortlist = carregar_json(v2.SHORTLIST_FILE, {})["topicos"]["data_center"]["BR"]
+        # Avaliação em cache compete na rodada final junto com as novas.
+        self.assertEqual(shortlist["elegiveis_total"], 3)
+        self.assertEqual(shortlist["finalistas"][0]["id"], old_id)
+        chosen = [row["id"] for row in shortlist["finalistas"]]
+        salvar_json(v2.WORK_DIR / "selecao.json", {"selections": [
+            {"id": cid, "topico": "data_center", "bucket": "BR"} for cid in chosen]})
+        v2.select(v2.WORK_DIR / "selecao.json")
+        summary = carregar_json(v2.SUMMARY_REQUEST_FILE, {})
+        self.assertEqual({i["id"] for i in summary["items"]}, set(chosen))
+        response = carregar_json(v2.RANKING_RESPONSE_FILE, {})
+        self.assertEqual(response["request_sha256"], request["request_sha256"])
+        self.assertEqual(len(response["evaluations"]), 3)
+
+    def test_best_of_each_batch_reaches_final_round_despite_harsh_scores(self):
+        self.prepare_and_load([news(n) for n in range(1, 41)])
+        v2.split_batches(size=20)
+        manifest = carregar_json(v2.BATCH_DIR / "manifest.json", {})
+        harsh = {c["id"] for c in carregar_json(manifest["lotes"][1]["arquivo"], {})["candidates"]}
+        self.answer_batches(lambda row: {"id": row["id"], "decisao": "elegivel", "bucket": "BR",
+            "prioridade": 5 if row["id"] in harsh else 90, "fato": row["id"]})
+        v2.merge_batches()
+        finalists = carregar_json(v2.SHORTLIST_FILE, {})["topicos"]["data_center"]["BR"]["finalistas"]
+        self.assertEqual(len([r for r in finalists if r["id"] in harsh]), v2.SHORTLIST_PER_BATCH)
+        self.assertEqual(len(finalists), v2.SHORTLIST_PER_BUCKET + v2.SHORTLIST_PER_BATCH)
+
+    def test_merge_reports_missing_or_incomplete_batches(self):
+        self.prepare_and_load([news(1), news(2), news(3)])
+        v2.split_batches(size=2)
+        manifest = carregar_json(v2.BATCH_DIR / "manifest.json", {})
+        first = carregar_json(manifest["lotes"][0]["arquivo"], {})["candidates"]
+        salvar_json(manifest["lotes"][0]["resposta"], {"evaluations": [
+            {"id": first[0]["id"], "decisao": "fora_tema"}]})
+        with self.assertRaises(ValueError) as error:
+            v2.merge_batches()
+        self.assertIn("2 lote(s)", str(error.exception))
+        self.assertFalse(v2.RANKING_RESPONSE_FILE.exists())
+
+    def test_merge_rejects_batches_from_another_collection(self):
+        self.prepare_and_load([news(1)])
+        v2.split_batches()
+        request = carregar_json(v2.REQUEST_FILE, {})
+        request["request_sha256"] = "outra"
+        salvar_json(v2.REQUEST_FILE, request)
+        with self.assertRaises(ValueError):
+            v2.merge_batches()
 
     def write_request(self, candidates):
         request = {"request_sha256": "request", "candidates": candidates}

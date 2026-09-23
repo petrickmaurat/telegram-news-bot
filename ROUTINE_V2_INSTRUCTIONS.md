@@ -9,10 +9,13 @@ ou sites de notícias durante o ranking e não execute `preflight` nem `prepare`
 Depois da seleção, acesse somente os links diretos dos finalistas marcados com
 `requer_leitura_url: true`, conforme o passo 8.
 
-Ao retomar uma sessão que já contém `routine_v2_work/ranking_request.json` e
-`routine_v2_work/ranking_response.json`, não execute `load-input` novamente:
-ele limpa a resposta existente. Preserve a mesma coleta e continue em
-`validate-ranking` após atualizar apenas o código da branch V2.
+Ao retomar uma sessão que já contém `routine_v2_work/ranking_request.json`,
+não execute `load-input` novamente: ele limpa lotes e respostas existentes.
+Continue da etapa em que parou; `merge-batches` informa quais lotes faltam.
+
+Para economizar a franquia, nunca leia `ranking_request.json` inteiro: os
+candidatos novos são avaliados em lotes por subagentes, e o agente principal
+só vê a lista curta de finalistas.
 
 ## Execução do piloto
 
@@ -23,33 +26,51 @@ ele limpa a resposta existente. Preserve a mesma coleta e continue em
    Se falhar, pare imediatamente. Não reutilize arquivos antigos, não produza
    seleção automática e não tente fazer a coleta no ambiente do Claude.
 
-2. Leia `routine_v2_work/ranking_request.json`. Analise somente candidatos
-   com `precisa_avaliar: true`; use `avaliacao_cache` nos demais.
-3. Trabalhe por tópico, em lotes de até 30. Em cada lote mantenha até dez
-   elegíveis BR e dez US. Reúna os vencedores e repita em novos lotes de 30
-   até restarem no máximo 30. Na escolha final, cumpra `limits`.
-4. Relação temática direta vem antes da fonte. Menção incidental não basta.
-   Use o `focus` de cada tema. Prioridade baixa não torna a notícia inelegível.
-   Uma fonte com `fonte_maxima: true` vence fontes comuns entre matérias
-   elegíveis, mas nunca transforma conteúdo fora do tema em elegível.
-   O GitHub já tentou resolver e ler cada candidato. `leitura.selecionavel`
-   precisa ser `true` para que uma matéria possa entrar em `selections`; esse
-   campo confirma que existe link direto, não que o scraping conseguiu ler a
-   página. Julgue primeiro a relevância. `leitura.nivel` serve como indicador
-   de qualidade e desempate entre notícias editorialmente equivalentes, nunca
-   como motivo isolado para rejeitar uma notícia relevante. Um candidato
-   `insuficiente` pode ser finalista e será lido no passo 8.
-5. Evite duas coberturas do mesmo acontecimento. Tema semelhante não basta:
-   empresas, decisões, etapas ou valores novos são fatos diferentes.
-6. Grave `routine_v2_work/ranking_response.json` neste formato:
+2. Divida os candidatos novos em lotes:
+
+   `python routine_v2.py split-batches`
+
+   O comando grava `routine_v2_work/lotes/manifest.json`. Cada lote é um
+   arquivo autossuficiente, com tópico, foco, regras, candidatos e o caminho
+   `resposta` onde a avaliação deve ser gravada.
+
+3. Para cada lote do manifesto, inicie um subagente (ferramenta Agent/Task)
+   com esta tarefa, trocando os caminhos:
+
+   > Leia `<arquivo do lote>` e siga `regras` e `foco`. Não acesse a internet
+   > nem outros arquivos. Grave em `<resposta>` somente o JSON
+   > `{"evaluations": [...]}` no `formato_resposta`, cobrindo exatamente todos
+   > os candidatos do lote. Responda apenas "ok" ou o erro encontrado.
+
+   Subagentes podem rodar em paralelo. Não leia os lotes no agente principal.
+   Se subagentes não estiverem disponíveis, avalie um lote por vez e grave a
+   resposta antes de abrir o próximo.
+
+4. Junte as avaliações:
+
+   `python routine_v2.py merge-batches`
+
+   Se algum lote estiver ausente ou inválido, o comando lista os lotes a
+   refazer; refaça somente esses e execute de novo. O comando grava
+   `routine_v2_work/ranking_response.json` com as avaliações e
+   `routine_v2_work/finalistas.json` com a rodada final: todas as fontes
+   máximas elegíveis e as melhores notas de cada tópico e geografia,
+   incluindo avaliações de dias anteriores.
+
+5. Leia `routine_v2_work/finalistas.json` e escolha, comparando os finalistas
+   entre si, as matérias de cada tópico/geografia até o número de `vagas`:
+   - relação temática direta vem antes da fonte;
+   - `fonte_maxima: true` vence fontes comuns entre elegíveis, e toda fonte
+     máxima elegível deve ser escolhida enquanto houver vaga;
+   - evite duas coberturas do mesmo acontecimento: tema semelhante não basta;
+     empresas, decisões, etapas ou valores novos são fatos diferentes;
+   - `nivel` só desempata matérias editorialmente equivalentes; um finalista
+     `insuficiente` será lido no passo 8.
+
+   Grave `routine_v2_work/selecao.json`:
 
 ```json
 {
-  "request_sha256": "copiar do pedido",
-  "evaluations": [
-    {"id": "somente candidato novo", "decisao": "fora_tema"},
-    {"id": "somente candidato novo", "decisao": "elegivel", "bucket": "BR", "prioridade": 80, "fato": "id-curto-do-fato"}
-  ],
   "selections": [
     {"id": "candidato escolhido", "topico": "data_center", "bucket": "BR"}
   ],
@@ -57,14 +78,14 @@ ele limpa a resposta existente. Preserve a mesma coleta e continue em
 }
 ```
 
-   `evaluations` deve cobrir exatamente todos os candidatos com
-   `precisa_avaliar: true`. Decisões permitidas: `elegivel`, `fora_tema`,
-   `sem_fato_novo`, `fonte_duvidosa`. Rejeitados levam somente `id` e decisão.
+   `duplicates` só é necessário quando uma cobertura repetida deixaria uma
+   vaga sem preencher.
 
-7. Execute `python routine_v2.py validate-ranking`. Se falhar por decisão
-   editorial ou formato, corrija apenas o JSON de resposta e rode a validação
-   novamente. Não afrouxe as regras editoriais do validador.
-   O validador recusará somente finalistas sem link direto.
+6. Execute `python routine_v2.py select`. Ele grava a seleção na resposta e
+   roda `validate-ranking`. Se falhar por decisão editorial ou formato,
+   corrija apenas `selecao.json` e rode novamente. Não afrouxe as regras do
+   validador.
+
 8. Leia `routine_v2_work/summary_request.json`. Para cada item com
    `requer_leitura_url: true`, abra o `link` direto e tente ler a matéria antes
    de resumi-la. Não faça nova busca ampla e não abra candidatos que não foram
@@ -74,10 +95,10 @@ ele limpa a resposta existente. Preserve a mesma coleta e continue em
    e `texto`, faça uma única frase conservadora e não infira contexto ausente.
    A indisponibilidade de uma página não elimina uma notícia que venceu por
    relevância. Se a leitura revelar que o assunto central não é o tópico, que
-   a menção era incidental ou que não existe fato novo, volte ao
-   `ranking_response.json`, substitua esse finalista pelo próximo elegível do
-   mesmo tópico/bucket, execute `validate-ranking` novamente e leia o novo
-   finalista antes de produzir os resumos.
+   a menção era incidental ou que não existe fato novo, substitua esse
+   finalista em `selecao.json` pelo próximo de `finalistas.json` no mesmo
+   tópico/bucket, execute `python routine_v2.py select` novamente e leia o
+   novo finalista antes de produzir os resumos.
 9. Grave `routine_v2_work/summary_response.json`:
 
 ```json
@@ -111,7 +132,7 @@ ele limpa a resposta existente. Preserve a mesma coleta e continue em
     um commit com a mensagem `Atualiza resultado do piloto V2`, execute
     `git pull --rebase origin v2-claude-routines` e faça uma única tentativa de
     `git push origin HEAD:v2-claude-routines`. Nunca escreva em `main`. Se o
-    push falhar, pare; não crie agente auxiliar e não tente contornar pela API.
+    push falhar, pare; não crie agente para contornar o push e não use a API.
 
 Se qualquer etapa não puder ser concluída, preserve os arquivos e informe o
 erro. Não substitua análise ausente por seleção automática.

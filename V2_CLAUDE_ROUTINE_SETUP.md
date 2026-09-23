@@ -37,13 +37,14 @@ Este é um piloto sem envio: nunca execute digest_email.py, não envie e-mail,
 não altere main nem arquivos digest_*.json e não use ANTHROPIC_API_KEY. A
 coleta já foi feita pelo GitHub Actions: não acesse feeds ou sites de notícias,
 não execute preflight nem prepare. Execute primeiro
-`python routine_v2.py load-input --max-age-hours 6`; depois faça ranking e
-resumos, valide as duas etapas e finalize. Não mude nem afrouxe os validadores.
+`python routine_v2.py load-input --max-age-hours 6`; depois siga os passos de
+lotes com subagentes, seleção, resumos e finalize. Não leia o
+ranking_request.json inteiro. Não mude nem afrouxe os validadores.
 
 Ao final, grave na branch v2-claude-routines somente os três artefatos
 autorizados em ROUTINE_V2_INSTRUCTIONS.md e faça uma única tentativa de push.
-Nunca escreva em main. Se o push falhar, pare sem criar agentes auxiliares ou
-tentar contornar pela API; apresente no chat o relatório, os títulos, as fontes
+Nunca escreva em main. Se o push falhar, pare sem criar agentes para contornar
+o push nem usar a API; apresente no chat o relatório, os títulos, as fontes
 e os resumos.
 ```
 
