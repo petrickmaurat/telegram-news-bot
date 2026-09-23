@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/openai-and-anthropic-seek-20-30mw-data-center-deployments/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/openai-and-anthropic-seek-20-30mw-data-center-deployments/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/openai-and-anthropic-seek-20-30mw-data-center-deployments/",
+    "origem": "INT",
+    "resumo": "<p>As companies ramp up inference footprint</p>",
+    "titulo": "OpenAI and Anthropic seek 20-30MW data center deployments",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
