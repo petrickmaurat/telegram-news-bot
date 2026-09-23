@@ -1,8 +1,9 @@
-"""Piloto do digest executado por uma Claude Code Routine, sem API de IA.
+"""Digest executado por uma Claude Code Routine, sem API de IA.
 
 O script cuida de coleta, estado e validação. A Routine só toma decisões
 editoriais e grava JSON nos formatos documentados em ROUTINE_V2_INSTRUCTIONS.md.
-Nenhum comando deste piloto envia e-mail ou altera o histórico da V1.
+A Routine nunca envia e-mail: o comando ``send`` roda no GitHub Actions, depois
+que o resultado validado chega à branch v2-claude-routines.
 """
 import argparse
 import datetime
@@ -877,8 +878,9 @@ def finalize(response_path=None):
             "titulo": item["titulo"], "fonte": item["fonte"], "link": item["link"],
             "base_resumo": reading_base,
             "resumo_final": validate_summary_text(summary_row.get("resumo"), item["titulo"])})
-    moment = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-3))).strftime(
-        "%d/%m/%Y · piloto Claude Routine")
+    now_brt = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-3)))
+    period = "manhã" if now_brt.hour < 14 else "tarde"
+    moment = now_brt.strftime(f"%d/%m/%Y · {period}")
     PREVIEW_FILE.write_text(montar_html(selection, moment), encoding="utf-8")
     selected_count = sum(len(selection[t][b]) for t in TOPIC_ORDER for b in ("BR", "US"))
     pending_links = sum(google_pendente(item) for topic in TOPIC_ORDER
@@ -897,9 +899,73 @@ def finalize(response_path=None):
         "cached": sum(not c["precisa_avaliar"] for c in request["candidates"]),
         "truncated": request.get("truncated", {}),
         "collection": request.get("collection", {}), "preview": str(PREVIEW_FILE),
-        "note": "Piloto: nenhum e-mail foi enviado e o histórico da V1 não foi alterado."}
+        "subject": f"Panorama Data Centers, Baterias & Carbono — {now_brt.strftime('%d/%m')} ({period})",
+        "selected": [{"id": item["id"], "topico": item["topico"], "link": item["link"]}
+                     for item in summary_request["items"]],
+        "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions."}
     salvar_json(REPORT_FILE, report)
     print(json.dumps(report, ensure_ascii=False))
+
+
+def _send_via_brevo(subject, html):
+    recipients = [{"email": e.strip()} for e in re.split(r"[,;]", os.environ.get("EMAIL_DESTINO", ""))
+                  if e.strip()]
+    if not (os.environ.get("BREVO_API_KEY") and os.environ.get("EMAIL_REMETENTE") and recipients):
+        raise RuntimeError("Credenciais de envio ausentes; nada foi enviado.")
+    response = requests.post("https://api.brevo.com/v3/smtp/email", timeout=30, headers={
+        "api-key": os.environ["BREVO_API_KEY"], "content-type": "application/json",
+        "accept": "application/json"}, json={
+        "sender": {"name": "Panorama DC, Baterias & Carbono", "email": os.environ["EMAIL_REMETENTE"]},
+        "to": recipients, "subject": subject, "htmlContent": html})
+    if 400 <= response.status_code < 500:
+        return "rejeitado", f"HTTP {response.status_code}"
+    if response.status_code != 201 or not response.json().get("messageId"):
+        return "incerto", f"HTTP {response.status_code}"
+    return "enviado", response.json()["messageId"]
+
+
+def send():
+    """Envia a edição finalizada e marca as matérias como enviadas no estado.
+
+    Roda somente no GitHub Actions, com os secrets da Brevo. Cada coleta é enviada
+    no máximo uma vez: uma entrega incerta bloqueia a repetição daquela edição.
+    """
+    report = carregar_json(REPORT_FILE, None)
+    if not isinstance(report, dict) or report.get("status") != "pilot_ready":
+        print("Nenhuma edição pronta para envio.")
+        return
+    if not report.get("delivery_links_ready") or not report.get("selected"):
+        raise RuntimeError("Edição com links pendentes ou sem seleção; nada foi enviado.")
+    state = load_state()
+    edition = report["request_sha256"]
+    if edition in (state.get("last_sent_request"), (state.get("delivery_pending") or {}).get("request")):
+        print("Esta edição já foi enviada ou tem entrega incerta; nada foi reenviado.")
+        return
+    by_candidate_id = {candidate_id(topic, item): item for item in state.get("items", {}).values()
+                       for topic in item.get("topicos", [])}
+    aliases = set()
+    for selected in report["selected"]:
+        item = by_candidate_id.get(selected["id"])
+        aliases |= identidades(item) if item else set()
+        aliases.add(canonica(selected["link"]))
+    aliases.discard("")
+    state["delivery_pending"] = {"request": edition, "subject": report["subject"],
+                                 "aliases": sorted(aliases), "since": time.time()}
+    save_compact_json(STATE_FILE, state)
+    outcome, detail = _send_via_brevo(report["subject"], PREVIEW_FILE.read_text(encoding="utf-8"))
+    if outcome == "incerto":
+        raise RuntimeError(f"Entrega incerta ({detail}); edição bloqueada para não duplicar.")
+    state.pop("delivery_pending", None)
+    if outcome == "rejeitado":
+        save_compact_json(STATE_FILE, state)
+        raise RuntimeError(f"Brevo rejeitou o e-mail ({detail}); nada foi marcado como enviado.")
+    state["sent"] = sorted(set(state.get("sent", [])) | aliases)
+    state["last_sent_request"] = edition
+    save_compact_json(STATE_FILE, state)
+    report["email"] = {"status": "enviado", "message_id": detail, "sent_at": time.time()}
+    salvar_json(REPORT_FILE, report)
+    print(json.dumps({"status": "email_sent", "subject": report["subject"],
+                      "items": len(report["selected"])}, ensure_ascii=False))
 
 
 def status():
@@ -931,6 +997,7 @@ def main():
     rank.add_argument("--response", default=str(RANKING_RESPONSE_FILE))
     summaries = sub.add_parser("finalize")
     summaries.add_argument("--response", default=str(SUMMARY_RESPONSE_FILE))
+    sub.add_parser("send")
     sub.add_parser("status")
     args = parser.parse_args()
     if args.command == "preflight":
@@ -949,6 +1016,8 @@ def main():
         validate_ranking(Path(args.response))
     elif args.command == "finalize":
         finalize(Path(args.response))
+    elif args.command == "send":
+        send()
     else:
         status()
 

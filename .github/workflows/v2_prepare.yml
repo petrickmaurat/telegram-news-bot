@@ -2,6 +2,11 @@ name: Preparar entrada V2 (sem IA)
 run-name: Preparar entrada V2 integral — execução ${{ github.run_number }}
 
 on:
+  # Dias úteis, 03h17 e 04h47 de Brasília. Duas tentativas porque o agendador do
+  # GitHub pode atrasar; a Routine roda às 07h e aceita entradas de até 6 h.
+  schedule:
+    - cron: "17 6 * * 1-5"
+    - cron: "47 7 * * 1-5"
   workflow_dispatch:
   push:
     branches:
@@ -19,43 +24,65 @@ on:
 permissions:
   contents: write
 
+# Mesmo grupo do envio: uma coleta nunca interrompe um envio em andamento.
 concurrency:
   group: v2-prepare-input
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   prepare:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
+      # Uma coleta agendada que atrasou até perto das 07h trocaria a entrada que a
+      # Routine está usando, e o resultado dela seria recusado. Nesse caso, pula.
+      - name: Conferir horário da coleta agendada
+        id: window
+        if: ${{ github.event_name == 'schedule' }}
+        shell: bash
+        run: |
+          now=$(TZ=America/Sao_Paulo date +%H%M)
+          if (( 10#$now >= 630 )); then
+            echo "Coleta agendada começou às $now (Brasília), tarde demais; entrada atual preservada."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Baixar a V2
+        if: ${{ steps.window.outputs.skip != 'true' }}
         uses: actions/checkout@v4
         with:
           ref: v2-claude-routines
           fetch-depth: 0
 
       - name: Configurar Python
+        if: ${{ steps.window.outputs.skip != 'true' }}
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
 
       - name: Instalar dependências
+        if: ${{ steps.window.outputs.skip != 'true' }}
         run: pip install -r requirements.txt
 
       - name: Testar a V2
+        if: ${{ steps.window.outputs.skip != 'true' }}
         run: python -m unittest discover -s tests -p "test_*.py" -v
 
       - name: Verificar acesso às fontes
+        if: ${{ steps.window.outputs.skip != 'true' }}
         run: python routine_v2.py preflight
 
       - name: Preparar todos os candidatos sem usar IA
+        if: ${{ steps.window.outputs.skip != 'true' }}
         run: python routine_v2.py prepare --max-new-per-topic 0
 
       - name: Validar o arquivo que o Claude receberá
+        if: ${{ steps.window.outputs.skip != 'true' }}
         run: python routine_v2.py load-input --max-age-hours 2
 
       - name: Salvar entrada na branch V2
+        if: ${{ steps.window.outputs.skip != 'true' }}
         shell: bash
         run: |
           git config user.name "github-actions[bot]"

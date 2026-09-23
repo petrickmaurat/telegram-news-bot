@@ -537,6 +537,67 @@ class RoutineV2Tests(TestCase):
         self.assertFalse(carregar_json(v2.REPORT_FILE, {})["send_enabled"])
         self.assertIn("Ler matéria completa", v2.PREVIEW_FILE.read_text(encoding="utf-8"))
 
+    def finalized_edition(self):
+        item = news()
+        cid = v2.candidate_id("data_center", item)
+        salvar_json(v2.STATE_FILE, self.base_state([item]))
+        summary_request = {"schema": v2.REQUEST_SCHEMA, "request_sha256": "request", "items": [{
+            "id": cid, "topico": "data_center", "bucket": "BR", "titulo": item["titulo"],
+            "fonte": item["fonte"], "link": item["link"], "texto": item["resumo"],
+            "base_resumo": "artigo_completo"}],
+            "summary_sha256": "summary"}
+        salvar_json(v2.REQUEST_FILE, {"request_sha256": "request", "candidates": []})
+        salvar_json(v2.SUMMARY_REQUEST_FILE, summary_request)
+        salvar_json(v2.SUMMARY_RESPONSE_FILE, {"summary_sha256": "summary", "summaries": [
+            {"id": cid, "resumo": "O projeto recebeu autorização de conexão elétrica e divulgou sua capacidade."}]})
+        v2.finalize()
+        return item
+
+    def brevo(self, status_code, body=None):
+        response = SimpleNamespace(status_code=status_code, json=lambda: body or {})
+        env = {"BREVO_API_KEY": "k", "EMAIL_REMETENTE": "a@b.c", "EMAIL_DESTINO": "d@e.f"}
+        return patch.object(v2.requests, "post", return_value=response), patch.dict(v2.os.environ, env)
+
+    def test_send_marks_selection_as_sent_and_never_repeats_edition(self):
+        item = self.finalized_edition()
+        report = carregar_json(v2.REPORT_FILE, {})
+        self.assertIn("Panorama Data Centers", report["subject"])
+        self.assertNotIn("piloto", v2.PREVIEW_FILE.read_text(encoding="utf-8"))
+        post, env = self.brevo(201, {"messageId": "m1"})
+        with post as sent, env:
+            v2.send()
+            v2.send()
+        self.assertEqual(sent.call_count, 1)
+        self.assertEqual(sent.call_args.kwargs["json"]["subject"], report["subject"])
+        state = carregar_json(v2.STATE_FILE, {})
+        self.assertIn(item["link"], state["sent"])
+        self.assertNotIn("delivery_pending", state)
+        self.assertEqual(carregar_json(v2.REPORT_FILE, {})["email"]["status"], "enviado")
+
+    def test_rejected_send_marks_nothing_and_uncertain_send_blocks_repeat(self):
+        item = self.finalized_edition()
+        post, env = self.brevo(400)
+        with post, env, self.assertRaises(RuntimeError):
+            v2.send()
+        state = carregar_json(v2.STATE_FILE, {})
+        self.assertNotIn(item["link"], state.get("sent", []))
+        self.assertNotIn("delivery_pending", state)
+        post, env = self.brevo(502)
+        with post, env, self.assertRaises(RuntimeError):
+            v2.send()
+        post, env = self.brevo(201, {"messageId": "m1"})
+        with post as sent, env:
+            v2.send()
+        self.assertEqual(sent.call_count, 0)
+        self.assertIn("delivery_pending", carregar_json(v2.STATE_FILE, {}))
+
+    def test_send_without_credentials_sends_nothing(self):
+        self.finalized_edition()
+        with patch.dict(v2.os.environ, {}, clear=True), \
+             patch.object(v2.requests, "post") as sent, self.assertRaises(RuntimeError):
+            v2.send()
+        sent.assert_not_called()
+
     def test_pilot_preview_rejects_unresolved_google_link(self):
         item = news(link="https://news.google.com/articles/opaque-token")
         summary_request = {"schema": v2.REQUEST_SCHEMA, "request_sha256": "request", "items": [{

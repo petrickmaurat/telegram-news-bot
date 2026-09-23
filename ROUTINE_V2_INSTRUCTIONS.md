@@ -1,8 +1,9 @@
-# Piloto V2 — curadoria com a franquia do Claude Pro
+# Digest V2 — curadoria com a franquia do Claude Pro
 
-Este fluxo é deliberadamente incapaz de enviar e-mail. Não execute
-`digest_email.py`, não use `ANTHROPIC_API_KEY`, não altere `main` nem os
-arquivos `digest_*.json` da V1 e não habilite envio.
+A Routine nunca envia e-mail: o GitHub Actions envia a edição depois que o
+resultado publicado no passo 11 é validado. Não execute `digest_email.py` nem
+`routine_v2.py send`, não use `ANTHROPIC_API_KEY` e não altere `main` nem os
+arquivos `digest_*.json` da V1.
 
 A coleta já foi executada pelo GitHub Actions. Não acesse feeds, Google News
 ou sites de notícias durante o ranking e não execute `preflight` nem `prepare`.

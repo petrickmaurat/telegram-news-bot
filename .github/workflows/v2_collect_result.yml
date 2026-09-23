@@ -1,10 +1,10 @@
-name: Coletar resultado da Routine V2
+name: Coletar resultado da Routine V2 e enviar e-mail
 run-name: Coletar resultado da Routine V2 — ${{ github.ref_name }}
 
-# A Routine só consegue fazer push em branches claude/... quando a branch de
-# destino tem commits de outro autor (o robô do Actions). Ela publica o resultado
-# em claude/v2-resultado-*; este workflow copia somente os três artefatos
-# autorizados para a v2-claude-routines e apaga a branch temporária.
+# A Routine publica o resultado em claude/v2-resultado-* (única branch que ela
+# sempre consegue gravar). Este workflow confere se o resultado pertence à coleta
+# atual, copia somente os três artefatos para a v2-claude-routines, envia o
+# e-mail pela Brevo e apaga a branch temporária. A Routine nunca envia e-mail.
 on:
   push:
     branches:
@@ -27,11 +27,20 @@ jobs:
           ref: v2-claude-routines
           fetch-depth: 0
 
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
       - name: Copiar artefatos da Routine
+        id: copy
         shell: bash
         env:
           RESULT_SHA: ${{ github.sha }}
-          RESULT_BRANCH: ${{ github.ref_name }}
         run: |
           set -euo pipefail
           git fetch origin "$RESULT_SHA"
@@ -51,7 +60,32 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- routine_v2_state.json routine_v2_report.json routine_v2_preview.html
           if ! git diff --cached --quiet; then
-            git commit -m "Atualiza resultado do piloto V2"
+            git commit -m "Atualiza resultado da Routine V2"
             git push origin HEAD:v2-claude-routines
           fi
-          git push origin --delete "$RESULT_BRANCH"
+
+      - name: Enviar e-mail
+        run: python routine_v2.py send
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          EMAIL_REMETENTE: ${{ secrets.EMAIL_REMETENTE }}
+          EMAIL_DESTINO: ${{ secrets.EMAIL_DESTINO }}
+
+      # Salva o estado mesmo se o envio falhar: uma entrega incerta fica
+      # registrada e impede que a mesma edição seja enviada duas vezes.
+      - name: Salvar estado do envio
+        if: ${{ always() && steps.copy.outcome == 'success' }}
+        shell: bash
+        run: |
+          git add -- routine_v2_state.json routine_v2_report.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Registra envio do digest V2"
+            for attempt in 1 2 3; do
+              git pull --rebase origin v2-claude-routines && git push origin HEAD:v2-claude-routines && break
+              sleep $((attempt * 5))
+            done
+          fi
+
+      - name: Apagar branch temporária
+        if: ${{ success() }}
+        run: git push origin --delete "${{ github.ref_name }}"
