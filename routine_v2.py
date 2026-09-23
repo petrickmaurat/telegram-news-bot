@@ -54,17 +54,29 @@ SHORTLIST_PER_BUCKET = 15
 # V1, os melhores de cada lote sempre chegam à rodada final.
 SHORTLIST_PER_BATCH = 3
 SHORTLIST_EXCERPT = 200
+# Mesmas regras editoriais do PROMPT da V1 (email_ranking.py). O foco ordena as
+# notas; ele nunca restringe o que pertence ao tema.
 BATCH_RULES = (
-    "Avalie cada candidato somente para o tópico deste lote, usando o foco. "
-    "A relação com o tema precisa ser direta e substantiva; menção incidental é fora_tema. "
-    "A fonte nunca torna elegível um conteúdo fora do tema, e a falta de texto não torna "
-    "inelegível uma manchete relevante. Decisões: elegivel, fora_tema, sem_fato_novo, "
-    "fonte_duvidosa. Rejeitados levam apenas id e decisao. Elegíveis levam bucket BR "
-    "(fato ocorrido no Brasil) ou US (fato fora do Brasil; a geografia é a do fato, não a do "
-    "veículo), prioridade inteira de 0 a 100 conforme o foco, e fato: identificador curto do "
-    "acontecimento (ex.: catl-reduz-preco-celulas), igual para coberturas do mesmo "
-    "acontecimento e diferente para empresas, decisões, etapas ou valores novos.")
-POLICY_VERSION = 1
+    "Avalie cada candidato somente para o tópico deste lote. PRIMEIRO determine se o "
+    "assunto principal tem relação DIRETA com o tópico, comprovada no título ou trecho; "
+    "não invente relações potenciais. Menção incidental, notícias apenas relacionadas e "
+    "boletins misturando assuntos são fora_tema. Uma notícia de energia não vira notícia de "
+    "data centers por energia ser necessária a data centers. Nome da fonte nunca altera o tema. "
+    "O tema é amplo: data centers incluem infraestrutura, tecnologia, energia, regulação, leis, "
+    "tributação, incentivos e investimentos; mercado de carbono inclui o industrial, florestal, "
+    "regulado e voluntário. O FOCO serve APENAS para ordenar a prioridade: uma notícia do tema "
+    "fora do foco continua elegível, com nota menor. Não rejeite por falta de valor financeiro, "
+    "por ser internacional, por não tratar do setor elétrico ou por vir de veículo menor. "
+    "Análises com informação substantiva são elegíveis. Regulação, leis, impacto legal e "
+    "montantes financeiros aumentam a prioridade. Só rejeite: fora_tema; sem_fato_novo "
+    "(agenda ou publicidade vazia); fonte_duvidosa com evidência concreta (fonte desconhecida "
+    "não é prova). Rejeitados levam apenas id e decisao. Elegíveis levam bucket BR (fato "
+    "ocorrido no Brasil) ou US (fato fora do Brasil; a geografia é a do fato, não a do veículo), "
+    "prioridade inteira de 0 a 100 conforme o foco, e fato: identificador curto do acontecimento "
+    "(ex.: catl-reduz-preco-celulas), igual para coberturas do mesmo acontecimento e diferente "
+    "para empresas, decisões, etapas ou valores novos.")
+# 2: regras dos lotes alinhadas à V1; avaliações anteriores refeitas.
+POLICY_VERSION = 2
 REQUEST_SCHEMA = 4
 DECISIONS = {"elegivel", "fora_tema", "sem_fato_novo", "fonte_duvidosa"}
 TOPIC_ORDER = ("data_center", "baterias", "carbono")

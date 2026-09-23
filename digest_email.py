@@ -73,9 +73,14 @@ EMAIL_DESTINO = os.environ.get("EMAIL_DESTINO")
 
 FOCO_SETORIAL = {
     "data_center": (
-        "Dentro de data centers, priorize o ângulo do SETOR ELÉTRICO: demanda de energia, "
-        "conexão à rede básica, contratação de energia, consumo, carga, subestação, "
-        "impacto no sistema elétrico e nas tarifas."
+        "PRIORIDADE MÁXIMA (nota 85-100) para REGULAÇÃO, LEIS e POLÍTICA PÚBLICA de data centers "
+        "no Brasil: REDATA (tramitação, votação, aprovação, sanção, vetos, regulamentação, "
+        "habilitação de projetos), incentivos e tributação, e decisões de Aneel, ONS, MME ou "
+        "Congresso sobre data centers. Também prioridade alta (nota 70-100) para o ângulo do "
+        "SETOR ELÉTRICO: demanda de energia, conexão à rede básica, contratação de energia, "
+        "consumo, carga, subestação, impacto no sistema elétrico e nas tarifas. Regulação e leis "
+        "relevantes de outros países também têm nota alta no bucket US. Investimentos, projetos "
+        "e tecnologia de data centers seguem elegíveis, com nota menor."
     ),
     "baterias": (
         "O eixo do tema é PREÇO e CUSTO de bateria/armazenamento — é o critério que mais "

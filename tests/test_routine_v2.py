@@ -358,6 +358,16 @@ class RoutineV2Tests(TestCase):
         self.assertEqual(len([r for r in finalists if r["id"] in harsh]), v2.SHORTLIST_PER_BATCH)
         self.assertEqual(len(finalists), v2.SHORTLIST_PER_BUCKET + v2.SHORTLIST_PER_BATCH)
 
+    def test_batch_rules_keep_topic_broad_and_focus_only_orders(self):
+        # Regressão: sem estas regras, o foco elétrico rejeitou o REDATA como fora_tema.
+        self.prepare_and_load([news(1)])
+        v2.split_batches()
+        batch = carregar_json(v2.BATCH_DIR / "data_center_01.json", {})
+        self.assertIn("APENAS para ordenar", batch["regras"])
+        self.assertIn("não tratar do setor elétrico", batch["regras"])
+        self.assertIn("tributação", batch["regras"])
+        self.assertIn("REDATA", batch["foco"])
+
     def test_merge_reports_missing_or_incomplete_batches(self):
         self.prepare_and_load([news(1), news(2), news(3)])
         v2.split_batches(size=2)
