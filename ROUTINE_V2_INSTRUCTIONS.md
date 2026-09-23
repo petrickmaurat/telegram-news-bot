@@ -120,19 +120,28 @@ só vê a lista curta de finalistas.
     `routine_v2_report.json`, liste títulos e fontes selecionados e disponibilize
     `routine_v2_preview.html`. Não envie e-mail.
 
-11. Para preservar o cache editorial do próximo dia, permaneça na branch
-    `v2-claude-routines` e confira que somente os três arquivos abaixo serão
-    incluídos no commit:
+11. Para preservar o cache editorial do próximo dia, publique somente os três
+    arquivos abaixo numa branch nova `claude/v2-resultado-<run_id>`, usando o
+    `run_id` do pedido. Branches `claude/` são sempre aceitas pela Routine; um
+    workflow do GitHub copia o resultado para `v2-claude-routines` e apaga a
+    branch temporária.
 
     - `routine_v2_state.json`
     - `routine_v2_report.json`
     - `routine_v2_preview.html`
 
-    Não inclua código, instruções, a entrada ou qualquer outro arquivo. Faça
-    um commit com a mensagem `Atualiza resultado do piloto V2`, execute
-    `git pull --rebase origin v2-claude-routines` e faça uma única tentativa de
-    `git push origin HEAD:v2-claude-routines`. Nunca escreva em `main`. Se o
-    push falhar, pare; não crie agente para contornar o push e não use a API.
+    Não inclua código, instruções, a entrada ou qualquer outro arquivo:
+
+    ```
+    git checkout -b claude/v2-resultado-<run_id>
+    git add routine_v2_state.json routine_v2_report.json routine_v2_preview.html
+    git commit -m "Atualiza resultado do piloto V2"
+    git push origin claude/v2-resultado-<run_id>
+    ```
+
+    Faça uma única tentativa de push. Nunca escreva em `main` nem diretamente em
+    `v2-claude-routines`. Se o push falhar, pare; não crie agente para contornar
+    o push e não use a API.
 
 Se qualquer etapa não puder ser concluída, preserve os arquivos e informe o
 erro. Não substitua análise ausente por seleção automática.
@@ -140,4 +149,4 @@ erro. Não substitua análise ausente por seleção automática.
 Uma falha no `git push` depois de `finalize` não invalida a curadoria, o
 relatório nem a prévia. Nesse caso, encerre a execução como piloto concluído e
 informe separadamente que somente a persistência do cache ficou pendente por
-falta de permissão de escrita no GitHub.
+falha no push.

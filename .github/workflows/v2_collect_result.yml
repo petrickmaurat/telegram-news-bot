@@ -1,0 +1,57 @@
+name: Coletar resultado da Routine V2
+run-name: Coletar resultado da Routine V2 — ${{ github.ref_name }}
+
+# A Routine só consegue fazer push em branches claude/... quando a branch de
+# destino tem commits de outro autor (o robô do Actions). Ela publica o resultado
+# em claude/v2-resultado-*; este workflow copia somente os três artefatos
+# autorizados para a v2-claude-routines e apaga a branch temporária.
+on:
+  push:
+    branches:
+      - "claude/v2-resultado-**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: v2-prepare-input
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar a V2
+        uses: actions/checkout@v4
+        with:
+          ref: v2-claude-routines
+          fetch-depth: 0
+
+      - name: Copiar artefatos da Routine
+        shell: bash
+        env:
+          RESULT_SHA: ${{ github.sha }}
+          RESULT_BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          git fetch origin "$RESULT_SHA"
+          git checkout "$RESULT_SHA" -- routine_v2_state.json routine_v2_report.json routine_v2_preview.html
+          python - <<'PY'
+          import json
+          report = json.load(open("routine_v2_report.json", encoding="utf-8"))
+          current = json.load(open("routine_v2_input.json", encoding="utf-8"))
+          json.load(open("routine_v2_state.json", encoding="utf-8"))
+          if report.get("status") not in ("pilot_ready", "pilot_empty"):
+              raise SystemExit(f"Relatório sem finalização válida: {report.get('status')}")
+          if report.get("request_sha256") != current.get("request_sha256"):
+              raise SystemExit("Resultado pertence a outra coleta; estado atual preservado.")
+          print("Resultado válido:", json.dumps(report.get("counts"), ensure_ascii=False))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- routine_v2_state.json routine_v2_report.json routine_v2_preview.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Atualiza resultado do piloto V2"
+            git push origin HEAD:v2-claude-routines
+          fi
+          git push origin --delete "$RESULT_BRANCH"

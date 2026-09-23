@@ -41,9 +41,10 @@ não execute preflight nem prepare. Execute primeiro
 lotes com subagentes, seleção, resumos e finalize. Não leia o
 ranking_request.json inteiro. Não mude nem afrouxe os validadores.
 
-Ao final, grave na branch v2-claude-routines somente os três artefatos
-autorizados em ROUTINE_V2_INSTRUCTIONS.md e faça uma única tentativa de push.
-Nunca escreva em main. Se o push falhar, pare sem criar agentes para contornar
+Ao final, publique somente os três artefatos autorizados numa branch
+claude/v2-resultado-<run_id>, conforme o passo 11 de ROUTINE_V2_INSTRUCTIONS.md,
+com uma única tentativa de push. Nunca escreva em main nem diretamente em
+v2-claude-routines. Se o push falhar, pare sem criar agentes para contornar
 o push nem usar a API; apresente no chat o relatório, os títulos, as fontes
 e os resumos.
 ```
