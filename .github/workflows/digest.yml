@@ -1,8 +1,8 @@
 name: Digest por e-mail (1x ao dia)
 
 on:
-  schedule:
-    - cron: "17 10 * * *"  # ~07:17 no horário de Brasília
+  # Agendamento desligado: o digest diário passou para a V2 (Claude Routine,
+  # branch v2-claude-routines). A V1 continua disponível para disparo manual.
   workflow_dispatch:
 
 permissions:
