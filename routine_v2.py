@@ -27,7 +27,8 @@ from digest_email import FOCO_SETORIAL, VAGAS, montar_html
 from email_articles import enriquecer_fila
 from email_language import idioma_permitido
 from email_policy import IDADE_MAXIMA, google_pendente, recente
-from email_sources import configuracao_email, fonte_maxima, fonte_prioritaria
+from email_sources import (LIMIAR_PRIORIDADE_CONTEUDO, configuracao_email, fonte_maxima,
+                           fonte_prioritaria)
 from email_topic import verificar_tema
 from reliability import canonica, carregar_json, identidades, salvar_json
 
@@ -54,6 +55,9 @@ SHORTLIST_PER_BUCKET = 15
 # V1, os melhores de cada lote sempre chegam à rodada final.
 SHORTLIST_PER_BATCH = 3
 SHORTLIST_EXCERPT = 200
+# Fatos já enviados ficam na memória para não repetir o mesmo acontecimento com
+# outro link, como a V1 fazia comparando as manchetes enviadas.
+SENT_FACTS_DAYS = 7
 # Mesmas regras editoriais do PROMPT da V1 (email_ranking.py). O foco ordena as
 # notas; ele nunca restringe o que pertence ao tema.
 BATCH_RULES = (
@@ -61,7 +65,10 @@ BATCH_RULES = (
     "assunto principal tem relação DIRETA com o tópico, comprovada no título ou trecho; "
     "não invente relações potenciais. Menção incidental, notícias apenas relacionadas e "
     "boletins misturando assuntos são fora_tema. Uma notícia de energia não vira notícia de "
-    "data centers por energia ser necessária a data centers. Nome da fonte nunca altera o tema. "
+    "data centers por energia ser necessária a data centers: o fim da recuperação judicial da "
+    "Light é fora_tema em data centers; um investimento em baterias sem ligação explícita a data "
+    "centers pertence a baterias. Transmissão para conectar data centers é elegível. "
+    "Nome da fonte nunca altera o tema. "
     "O tema é amplo: data centers incluem infraestrutura, tecnologia, energia, regulação, leis, "
     "tributação, incentivos e investimentos; mercado de carbono inclui o industrial, florestal, "
     "regulado e voluntário. O FOCO serve APENAS para ordenar a prioridade: uma notícia do tema "
@@ -798,6 +805,10 @@ def merge_batches():
 
     # Rodada final: todas as fontes máximas e as melhores notas de cada geografia.
     decided = {row["id"]: row for row in evaluations}
+    sent_by_topic = {}
+    for fact in load_state().get("sent_facts", []):
+        sent_by_topic.setdefault(fact.get("topico"), []).append(
+            {"titulo": fact.get("titulo"), "fato": fact.get("fato")})
     shortlist = {}
     for topic in TOPIC_ORDER:
         shortlist[topic] = {}
@@ -808,12 +819,18 @@ def merge_batches():
                 if (candidate.get("topico") != topic or evaluation.get("decisao") != "elegivel"
                         or evaluation.get("bucket") != bucket or not candidate_selectable(candidate)):
                     continue
+                # Mesma regra da V1: veículo do catálogo ou conteúdo com nota alta
+                # vem antes de fonte comum, que só completa vagas.
+                priority = (candidate.get("fonte_prioritaria") is True
+                            or evaluation["prioridade"] >= LIMIAR_PRIORIDADE_CONTEUDO)
                 rows.append({"id": cid, "titulo": candidate["titulo"], "fonte": candidate["fonte"],
                     "dominio": candidate.get("dominio"), "publicado_em": candidate.get("publicado_em"),
                     "prioridade": evaluation["prioridade"], "fato": evaluation["fato"],
-                    "fonte_maxima": is_maximum(candidate), "nivel": candidate["leitura"]["nivel"],
+                    "fonte_maxima": is_maximum(candidate), "prioritaria": priority,
+                    "nivel": candidate["leitura"]["nivel"],
                     "trecho": candidate.get("trecho", "")[:SHORTLIST_EXCERPT]})
-            rows.sort(key=lambda r: (not r["fonte_maxima"], -r["prioridade"], r["id"]))
+            rows.sort(key=lambda r: (not r["fonte_maxima"], not r["prioritaria"],
+                                     -r["prioridade"], r["id"]))
             others = [r for r in rows if not r["fonte_maxima"]]
             # Avaliações de dias anteriores formam um grupo próprio.
             chosen = {r["id"] for r in rows if r["fonte_maxima"]}
@@ -824,6 +841,7 @@ def merge_batches():
                 if per_batch[group] < SHORTLIST_PER_BATCH:
                     per_batch[group] += 1
                     chosen.add(r["id"])
+            shortlist[topic]["ja_enviados"] = sent_by_topic.get(topic, [])
             shortlist[topic][bucket] = {"vagas": VAGAS[topic][bucket], "elegiveis_total": len(rows),
                                         "finalistas": [r for r in rows if r["id"] in chosen]}
     save_compact_json(RANKING_RESPONSE_FILE, {"request_sha256": request["request_sha256"],
@@ -912,8 +930,8 @@ def finalize(response_path=None):
         "truncated": request.get("truncated", {}),
         "collection": request.get("collection", {}), "preview": str(PREVIEW_FILE),
         "subject": f"Panorama Data Centers, Baterias & Carbono — {now_brt.strftime('%d/%m')} ({period})",
-        "selected": [{"id": item["id"], "topico": item["topico"], "link": item["link"]}
-                     for item in summary_request["items"]],
+        "selected": [{"id": item["id"], "topico": item["topico"], "link": item["link"],
+                      "titulo": item["titulo"]} for item in summary_request["items"]],
         "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions."}
     salvar_json(REPORT_FILE, report)
     print(json.dumps(report, ensure_ascii=False))
@@ -972,6 +990,14 @@ def send():
         save_compact_json(STATE_FILE, state)
         raise RuntimeError(f"Brevo rejeitou o e-mail ({detail}); nada foi marcado como enviado.")
     state["sent"] = sorted(set(state.get("sent", [])) | aliases)
+    now = time.time()
+    facts = [f for f in state.get("sent_facts", [])
+             if now - f.get("sent_at", 0) <= SENT_FACTS_DAYS * 86400]
+    for selected in report["selected"]:
+        evaluation = state.get("evaluations", {}).get(selected["id"], {}).get("avaliacao", {})
+        facts.append({"topico": selected["topico"], "titulo": selected.get("titulo"),
+                      "fato": evaluation.get("fato"), "sent_at": now})
+    state["sent_facts"] = facts
     state["last_sent_request"] = edition
     save_compact_json(STATE_FILE, state)
     report["email"] = {"status": "enviado", "message_id": detail, "sent_at": time.time()}

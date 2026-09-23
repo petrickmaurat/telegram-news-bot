@@ -368,6 +368,36 @@ class RoutineV2Tests(TestCase):
         self.assertIn("tributação", batch["regras"])
         self.assertIn("REDATA", batch["foco"])
 
+    def test_final_round_puts_catalog_sources_before_common_ones(self):
+        common_source = news(1, source="Blog", link="https://blog-desconhecido.test/a")
+        self.prepare_and_load([common_source, news(2)])
+        v2.split_batches()
+        self.answer_batches(lambda row: {"id": row["id"], "decisao": "elegivel", "bucket": "BR",
+            "prioridade": 80 if row["dominio"] == "blog-desconhecido.test" else 40, "fato": row["id"]})
+        v2.merge_batches()
+        finalists = carregar_json(v2.SHORTLIST_FILE, {})["topicos"]["data_center"]["BR"]["finalistas"]
+        self.assertEqual([r["dominio"] for r in finalists], ["reuters.com", "blog-desconhecido.test"])
+        self.assertEqual([r["prioritaria"] for r in finalists], [True, False])
+
+    def test_sent_facts_are_remembered_for_next_final_round(self):
+        self.finalized_edition()
+        post, env = self.brevo(201, {"messageId": "m1"})
+        with post, env:
+            v2.send()
+        facts = carregar_json(v2.STATE_FILE, {})["sent_facts"]
+        self.assertEqual(len(facts), 1)
+        self.assertEqual(facts[0]["topico"], "data_center")
+        self.assertIn("data center", facts[0]["titulo"])
+        state = carregar_json(v2.STATE_FILE, {})
+        with patch.object(v2, "load_state", return_value=state),              patch.object(v2, "coletar_itens_novos", return_value=[news(5)]),              patch.object(v2, "enriquecer_fila"), patch.object(v2, "salvar_cache_google"):
+            v2.prepare(max_new_per_topic=0)
+        salvar_json(v2.STATE_FILE, state)
+        v2.split_batches()
+        self.answer_batches(lambda row: {"id": row["id"], "decisao": "fora_tema"})
+        v2.merge_batches()
+        shortlist = carregar_json(v2.SHORTLIST_FILE, {})["topicos"]["data_center"]
+        self.assertEqual(shortlist["ja_enviados"][0]["titulo"], facts[0]["titulo"])
+
     def test_merge_reports_missing_or_incomplete_batches(self):
         self.prepare_and_load([news(1), news(2), news(3)])
         v2.split_batches(size=2)

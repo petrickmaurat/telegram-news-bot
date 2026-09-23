@@ -63,8 +63,12 @@ só vê a lista curta de finalistas.
    - relação temática direta vem antes da fonte;
    - `fonte_maxima: true` vence fontes comuns entre elegíveis, e toda fonte
      máxima elegível deve ser escolhida enquanto houver vaga;
+   - depois das fontes máximas, `prioritaria: true` (veículo do catálogo ou
+     nota alta) vem antes de fontes comuns, que só completam vagas;
    - evite duas coberturas do mesmo acontecimento: tema semelhante não basta;
      empresas, decisões, etapas ou valores novos são fatos diferentes;
+   - não repita acontecimentos de `ja_enviados` do tópico (edições dos últimos
+     dias); só escolha outra matéria sobre eles se trouxer desdobramento novo;
    - `nivel` só desempata matérias editorialmente equivalentes; um finalista
      `insuficiente` será lido no passo 8.
 
@@ -91,8 +95,10 @@ só vê a lista curta de finalistas.
    `requer_leitura_url: true`, abra o `link` direto e tente ler a matéria antes
    de resumi-la. Não faça nova busca ampla e não abra candidatos que não foram
    selecionados. Nos demais itens, use o `texto` já preparado. Resuma em
-   português do Brasil, preservando números, datas, atribuições e incertezas,
-   em até quatro frases. Quando a URL não puder ser lida, use somente manchete
+   português do Brasil, em tom jornalístico direto, abrindo com o fato
+   principal e usando somente fatos presentes no material. Preserve números,
+   datas, atribuições e incertezas; o tamanho é proporcional ao material, em
+   até quatro frases. Quando a URL não puder ser lida, use somente manchete
    e `texto`, faça uma única frase conservadora e não infira contexto ausente.
    A indisponibilidade de uma página não elimina uma notícia que venceu por
    relevância. Se a leitura revelar que o assunto central não é o tópico, que
