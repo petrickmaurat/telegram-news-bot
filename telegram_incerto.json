@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/marketwatch/how-ai-factories-are-driving-the-next-industrial-revolution/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/marketwatch/how-ai-factories-are-driving-the-next-industrial-revolution/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/marketwatch/how-ai-factories-are-driving-the-next-industrial-revolution/",
+    "origem": "INT",
+    "resumo": "<p>For data center operators like Polar DC, what used to be an occasional mega-project has now become standard operating procedure</p>",
+    "titulo": "Sponsored: How AI factories are driving the next industrial revolution",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
