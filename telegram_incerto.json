@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/zeo-energy-and-ewyze-partner-on-off-grid-power-solutions-for-us-data-center-sector/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/zeo-energy-and-ewyze-partner-on-off-grid-power-solutions-for-us-data-center-sector/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/zeo-energy-and-ewyze-partner-on-off-grid-power-solutions-for-us-data-center-sector/",
+    "origem": "INT",
+    "resumo": "<p>Also looking at international expansion</p>",
+    "titulo": "Zeo Energy and Ewyze partner on off-grid power solutions for US data center sector",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
