@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/abbott-halts-new-texas-data-center-permits-pending-ercot-audit/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/abbott-halts-new-texas-data-center-permits-pending-ercot-audit/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/abbott-halts-new-texas-data-center-permits-pending-ercot-audit/",
+    "origem": "INT",
+    "resumo": "<p>ERCOT claims the audit will be completed by December</p>",
+    "titulo": "Abbott halts new Texas data center permits pending ERCOT audit",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
