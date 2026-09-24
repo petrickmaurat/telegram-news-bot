@@ -1104,11 +1104,12 @@ def request_input():
                      ensure_ascii=False))
 
 
-def wait_input(max_minutes=9):
+def wait_input(max_minutes=1.5):
     """Espera a coleta pedida chegar à branch V2 e atualiza a cópia local.
 
-    Sai com código 3 se o prazo desta chamada acabar, para caber no limite de
-    tempo de um comando; basta executar de novo.
+    Sai com código 3 se o prazo desta chamada acabar: cada chamada dura no
+    máximo 1,5 min, abaixo do limite padrão de 2 min de um comando na Routine;
+    basta executar de novo.
     """
     request = carregar_json(COLLECTION_REQUEST_FILE, None)
     if not isinstance(request, dict):
@@ -1151,7 +1152,7 @@ def main():
     sub.add_parser("sent-today")
     sub.add_parser("request-input")
     wait = sub.add_parser("wait-input")
-    wait.add_argument("--max-minutes", type=float, default=9)
+    wait.add_argument("--max-minutes", type=float, default=1.5)
     load = sub.add_parser("load-input")
     load.add_argument("--max-age-hours", type=float, default=6,
                       help="idade máxima aceita para a coleta preparada pelo GitHub Actions")

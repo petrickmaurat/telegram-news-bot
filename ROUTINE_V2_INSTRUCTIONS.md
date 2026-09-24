@@ -35,9 +35,9 @@ só vê a lista curta de finalistas.
 
    `python routine_v2.py wait-input`
 
-   A coleta roda no GitHub e costuma levar de 3 a 8 minutos. Se `wait-input`
-   terminar com `still_waiting` (código 3), execute-o de novo, no máximo três
-   vezes no total. Não execute `request-input` mais de uma vez. Se a coleta não
+   A coleta roda no GitHub e costuma levar de 1 a 8 minutos. Cada `wait-input`
+   espera no máximo 1,5 minuto; se terminar com `still_waiting` (código 3),
+   execute-o de novo, até 15 vezes no total. Não execute `request-input` mais de uma vez. Se a coleta não
    chegar, pare e informe. Depois carregue a entrada:
 
    `python routine_v2.py load-input --max-age-hours 6`
