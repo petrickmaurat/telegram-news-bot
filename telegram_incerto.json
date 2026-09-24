@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://convergenciadigital.com.br/internet/capacidade-de-data-centers-cresce-91-e-chegou-a-661-mw-no-1o-semestre-em-sao-paulo/"
+  ],
+  "item": {
+    "aliases": [
+      "https://convergenciadigital.com.br/internet/capacidade-de-data-centers-cresce-91-e-chegou-a-661-mw-no-1o-semestre-em-sao-paulo/"
+    ],
+    "fonte": "ConvergenciaDigital",
+    "link": "https://convergenciadigital.com.br/internet/capacidade-de-data-centers-cresce-91-e-chegou-a-661-mw-no-1o-semestre-em-sao-paulo/",
+    "origem": "BR",
+    "resumo": "São Paulo lidera o mercado latino-ameriano ao possuir quase o dobro da capacidade de Querétaro, no México, que registra 336 MW. Santiago, no Chile, aparece com 272 MW, enquanto Bogotá, na Colômbia, possui 58 MW.",
+    "titulo": "Capacidade de data centers cresce 91% e chegou a 661 MW no 1º semestre em São Paulo",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
