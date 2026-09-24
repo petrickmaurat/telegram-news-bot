@@ -86,10 +86,15 @@ BATCH_RULES = (
     "ocorrido no Brasil) ou US (fato fora do Brasil; a geografia é a do fato, não a do veículo), "
     "prioridade inteira de 0 a 100 conforme o foco, e fato: identificador curto do acontecimento "
     "(ex.: catl-reduz-preco-celulas), igual para coberturas do mesmo acontecimento e diferente "
-    "para empresas, decisões, etapas ou valores novos.")
+    "para empresas, decisões, etapas ou valores novos. Nos tópicos carbono e data_center, "
+    "elegíveis levam também regulacao: true quando o fato principal for regulação, legislação "
+    "ou política pública do tema (carbono: mercado regulado, SBCE, Lei 15.042, regulamentação, "
+    "CTCP, EU ETS, cap-and-trade, CBAM; data centers: REDATA, leis, decisões de Aneel, ONS, "
+    "MME ou Congresso) e false nos demais casos, incluindo mercado voluntário.")
 # 2: regras dos lotes alinhadas à V1; avaliações anteriores refeitas.
 # 3: descarta as avaliações simplificadas do teste de ponta a ponta de 24/09.
-POLICY_VERSION = 3
+# 4: avaliações passam a marcar regulação/legislação (carbono e data centers).
+POLICY_VERSION = 4
 REQUEST_SCHEMA = 4
 DECISIONS = {"elegivel", "fora_tema", "sem_fato_novo", "fonte_duvidosa"}
 TOPIC_ORDER = ("data_center", "baterias", "carbono")
@@ -618,7 +623,12 @@ def valid_evaluation(row, candidate):
             raise ValueError(f"Elegível sem geografia/nota válida: {candidate['id']}")
         if not 0 <= row["prioridade"] <= 100 or not str(row.get("fato", "")).strip():
             raise ValueError(f"Elegível com nota/fato inválido: {candidate['id']}")
-        return {k: row[k] for k in ("decisao", "bucket", "prioridade", "fato")}
+        if "regulacao" in row and type(row["regulacao"]) is not bool:
+            raise ValueError(f"regulacao deve ser true ou false: {candidate['id']}")
+        kept = {k: row[k] for k in ("decisao", "bucket", "prioridade", "fato")}
+        if row.get("regulacao") is True:
+            kept["regulacao"] = True
+        return kept
     return {"decisao": row["decisao"]}
 
 
@@ -705,11 +715,21 @@ def validate_ranking(response_path=None):
                         and evaluations[c["id"]].get("decisao") == "elegivel"
                         and evaluations[c["id"]].get("bucket") == bucket
                         and c["id"] not in duplicate_of and candidate_selectable(c)]
-            maximum = [c for c in eligible if is_maximum(c)]
+            # Regulação/legislação vem antes das fontes máximas: se houver matéria
+            # elegível desse tipo, ao menos uma entra; as fontes máximas disputam as
+            # vagas restantes.
+            regulated = [c for c in eligible if evaluations[c["id"]].get("regulacao")]
+            chosen_regulated = [c for c in chosen if evaluations[c["id"]].get("regulacao")]
+            if regulated and not chosen_regulated:
+                raise ValueError(f"Matéria de regulação/legislação elegível omitida em {topic}/{bucket}; "
+                                 "ela tem precedência sobre as fontes máximas.")
+            slots = limit - len(chosen_regulated)
+            maximum = [c for c in eligible if is_maximum(c) and not evaluations[c["id"]].get("regulacao")]
             chosen_ids = {c["id"] for c in chosen}
-            if len(maximum) <= limit and not {c["id"] for c in maximum} <= chosen_ids:
+            if len(maximum) <= slots and not {c["id"] for c in maximum} <= chosen_ids:
                 raise ValueError(f"Fonte máxima elegível omitida em {topic}/{bucket}.")
-            if len(maximum) > limit and any(not is_maximum(c) for c in chosen):
+            if len(maximum) > slots and any(not is_maximum(c) and not evaluations[c["id"]].get("regulacao")
+                                            for c in chosen):
                 raise ValueError(f"Fonte comum ocupou vaga reservada por fontes máximas em {topic}/{bucket}.")
             expected = min(limit, len(eligible))
             if len(chosen) != expected:
@@ -776,7 +796,7 @@ def split_batches(size=EVALUATION_BATCH_SIZE):
                 "resposta": str(answer), "formato_resposta": {"evaluations": [
                     {"id": "...", "decisao": "fora_tema"},
                     {"id": "...", "decisao": "elegivel", "bucket": "BR", "prioridade": 80,
-                     "fato": "id-curto-do-fato"}]},
+                     "fato": "id-curto-do-fato", "regulacao": False}]},
                 "candidates": rows})
             batches.append({"lote": name, "topico": topic, "quantidade": len(rows),
                             "arquivo": str(path), "resposta": str(answer)})
@@ -837,13 +857,14 @@ def merge_batches():
                     "dominio": candidate.get("dominio"), "publicado_em": candidate.get("publicado_em"),
                     "prioridade": evaluation["prioridade"], "fato": evaluation["fato"],
                     "fonte_maxima": is_maximum(candidate), "prioritaria": priority,
+                    "regulacao": evaluation.get("regulacao") is True,
                     "nivel": candidate["leitura"]["nivel"],
                     "trecho": candidate.get("trecho", "")[:SHORTLIST_EXCERPT]})
-            rows.sort(key=lambda r: (not r["fonte_maxima"], not r["prioritaria"],
+            rows.sort(key=lambda r: (not r["regulacao"], not r["fonte_maxima"], not r["prioritaria"],
                                      -r["prioridade"], r["id"]))
-            others = [r for r in rows if not r["fonte_maxima"]]
-            # Avaliações de dias anteriores formam um grupo próprio.
-            chosen = {r["id"] for r in rows if r["fonte_maxima"]}
+            others = [r for r in rows if not r["fonte_maxima"] and not r["regulacao"]]
+            # Regulação e fontes máximas sempre chegam à rodada final.
+            chosen = {r["id"] for r in rows if r["fonte_maxima"] or r["regulacao"]}
             chosen.update(r["id"] for r in others[:SHORTLIST_PER_BUCKET])
             per_batch = Counter()
             for r in others:

@@ -79,6 +79,10 @@ só vê a lista curta de finalistas.
 5. Leia `routine_v2_work/finalistas.json` e escolha, comparando os finalistas
    entre si, as matérias de cada tópico/geografia até o número de `vagas`:
    - relação temática direta vem antes da fonte;
+   - `regulacao: true` (mercado regulado de carbono, legislação, REDATA,
+     decisões de governo e Congresso) vem antes de tudo: se houver finalista
+     assim no tópico/geografia, ao menos um deve ser escolhido, mesmo que
+     ocupe a vaga de uma fonte máxima sobre mercado voluntário;
    - `fonte_maxima: true` vence fontes comuns entre elegíveis, e toda fonte
      máxima elegível deve ser escolhida enquanto houver vaga;
    - depois das fontes máximas, `prioritaria: true` (veículo do catálogo ou

@@ -459,6 +459,39 @@ class RoutineV2Tests(TestCase):
             v2.wait_input(max_minutes=0)
         self.assertEqual(stop.exception.code, 3)
 
+    def test_regulation_takes_precedence_over_maximum_sources(self):
+        maxima = [news(n, source="Valor", link=f"https://valor.globo.com/empresas/noticia/{n}.ghtml")
+                  for n in (1, 2, 3)]
+        law = news(4, source="Senado", link="https://www12.senado.leg.br/noticias/redata")
+        self.prepare_and_load([*maxima, law])
+        v2.split_batches()
+        self.answer_batches(lambda row: {"id": row["id"], "decisao": "elegivel", "bucket": "BR",
+            "prioridade": 60, "fato": row["id"], "regulacao": row["dominio"].endswith("senado.leg.br")})
+        v2.merge_batches()
+        finalists = carregar_json(v2.SHORTLIST_FILE, {})["topicos"]["data_center"]["BR"]["finalistas"]
+        self.assertTrue(finalists[0]["regulacao"])
+        ids = {r["dominio"]: [] for r in finalists}
+        for r in finalists:
+            ids[r["dominio"]].append(r["id"])
+        only_maxima = [{"id": cid, "topico": "data_center", "bucket": "BR", "assunto": f"a{n}"}
+                       for n, cid in enumerate(ids["valor.globo.com"])]
+        salvar_json(v2.WORK_DIR / "selecao.json", {"selections": only_maxima})
+        with self.assertRaises(ValueError) as error:
+            v2.select(v2.WORK_DIR / "selecao.json")
+        self.assertIn("regulação", str(error.exception))
+        with_law = only_maxima[:2] + [{"id": ids["www12.senado.leg.br"][0], "topico": "data_center",
+                                        "bucket": "BR", "assunto": "redata"}]
+        salvar_json(v2.WORK_DIR / "selecao.json", {"selections": with_law})
+        v2.select(v2.WORK_DIR / "selecao.json")
+
+    def test_regulation_flag_must_be_boolean(self):
+        candidate = {"id": "x"}
+        row = {"id": "x", "decisao": "elegivel", "bucket": "BR", "prioridade": 5, "fato": "f"}
+        self.assertNotIn("regulacao", v2.valid_evaluation({**row, "regulacao": False}, candidate))
+        self.assertTrue(v2.valid_evaluation({**row, "regulacao": True}, candidate)["regulacao"])
+        with self.assertRaises(ValueError):
+            v2.valid_evaluation({**row, "regulacao": "sim"}, candidate)
+
     def test_merge_reports_missing_or_incomplete_batches(self):
         self.prepare_and_load([news(1), news(2), news(3)])
         v2.split_batches(size=2)
