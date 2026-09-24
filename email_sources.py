@@ -27,11 +27,27 @@ NOMES = {
     "gov.br/mdic": "MDIC", "gov.br/aneel": "Aneel", "epe.gov.br": "EPE",
     "agenciabrasil.ebc.com.br": "Agência Brasil", "agenciagov.ebc.com.br": "Agência Gov",
     "camara.leg.br": "Câmara dos Deputados", "senado.leg.br": "Senado Federal",
+    # Carbono: veículos especializados, já que os prioritários publicam pouco do tema.
+    "capitalreset.uol.com.br": "Capital Reset", "umsoplaneta.globo.com": "Um Só Planeta",
+    "qcintel.com": "Quantum Commodity Intelligence", "carbonherald.com": "Carbon Herald",
+    "climatechangenews.com": "Climate Home News",
 }
 GOVERNO = {"gov.br/mme", "gov.br/fazenda", "gov.br/mma", "gov.br/mdic", "gov.br/aneel",
            "epe.gov.br", "agenciabrasil.ebc.com.br", "agenciagov.ebc.com.br",
            "camara.leg.br", "senado.leg.br"}
-FONTES = sorted({*DOMINIOS[1], *DOMINIOS[2], "agenciainfra.com", *GOVERNO})
+CARBONO = {"capitalreset.uol.com.br", "umsoplaneta.globo.com", "qcintel.com", "carbonherald.com",
+           "climatechangenews.com"}
+FONTES = sorted({*DOMINIOS[1], *DOMINIOS[2], "agenciainfra.com", *GOVERNO, *CARBONO})
+# Veículos brasileiros fora de .br. Sem esta lista, a busca por veículo rodava na
+# edição americana do Google Notícias, que quase não devolve matérias deles
+# (Valor: 1 resultado contra 100 na edição brasileira).
+BRASILEIROS_SEM_BR = {"agenciainfra.com", "braziljournal.com", "exame.com"}
+
+
+def veiculo_brasileiro(site):
+    domain = site.partition("/")[0]
+    return (domain.endswith(".br") or domain.endswith(".globo.com")
+            or domain in BRASILEIROS_SEM_BR)
 
 # Preferência editorial absoluta entre notícias elegíveis, exclusiva do digest.
 FONTES_MAXIMAS = {"braziljournal.com", "megawhat.uol.com.br", "valor.globo.com",
@@ -101,8 +117,7 @@ def configuracao_email(topicos):
         cfg["keywords"] = keywords
         termos = "(" + " OR ".join('"' + word + '"' for word in keywords) + ")"
         for site in FONTES:
-            # O domínio decide: "gov.br/fazenda" é brasileiro, embora não termine em .br.
-            br = site.partition("/")[0].endswith(".br") or site == "agenciainfra.com"
+            br = veiculo_brasileiro(site)
             params = {"q": f"site:{site} {termos} when:3d", "hl": "pt-BR" if br else "en-US",
                       "gl": "BR" if br else "US", "ceid": "BR:pt-BR" if br else "US:en"}
             cfg["feeds"].append({"url": "https://news.google.com/rss/search?" + urlencode(params),

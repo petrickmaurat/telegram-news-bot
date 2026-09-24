@@ -216,9 +216,14 @@ class RankingTests(IsolatedState):
                            ("https://www12.senado.leg.br/noticias/materias/2026/09/redata", "senado.leg.br")]:
             self.assertEqual(fonte_prioritaria({"link": link}), site)
         config = configuracao_email(digest.TOPICOS)
-        fazenda = [f for f in config["carbono"]["feeds"] if f.get("veiculo_monitorado") == "Ministério da Fazenda"]
-        self.assertEqual(fazenda[0]["origem"], "BR")
-        self.assertIn("hl=pt-BR", fazenda[0]["url"])
+        feeds = {f.get("veiculo_monitorado"): f for f in config["carbono"]["feeds"]}
+        # Veículos brasileiros fora de .br precisam da edição brasileira do Google.
+        for name in ["Ministério da Fazenda", "Valor Econômico", "O Globo", "Brazil Journal",
+                     "Exame", "Agência iNFRA", "Um Só Planeta", "Capital Reset"]:
+            self.assertEqual(feeds[name]["origem"], "BR", name)
+            self.assertIn("hl=pt-BR", feeds[name]["url"], name)
+        for name in ["Reuters", "Carbon Herald", "Quantum Commodity Intelligence"]:
+            self.assertIn("hl=en-US", feeds[name]["url"], name)
         self.assertNotIn("ri.sanepar.com.br", FONTES)
         self.assertIsNone(fonte_prioritaria({"link": "https://ri.sanepar.com.br/comunicado"}))
 
