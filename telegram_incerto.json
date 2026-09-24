@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/data-center-construction/low-frequency-noise-and-data-centers-what-to-know"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/data-center-construction/low-frequency-noise-and-data-centers-what-to-know"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/data-center-construction/low-frequency-noise-and-data-centers-what-to-know",
+    "origem": "INT",
+    "resumo": "Infrasound produced by data centers is increasingly scrutinized by communities, making proactive mitigation and transparent communication essential for operators.",
+    "titulo": "Low-Frequency Noise and Data Centers: What to Know",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
