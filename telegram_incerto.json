@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/networking/the-role-of-optical-frequency-comb-generators-in-ai-data-centers"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/networking/the-role-of-optical-frequency-comb-generators-in-ai-data-centers"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/networking/the-role-of-optical-frequency-comb-generators-in-ai-data-centers",
+    "origem": "INT",
+    "resumo": "Optical frequency combs generate many wavelengths from a single laser instead of using separate lasers per channel, cutting power, cost, and failure points as AI data centers scale to 16+ wavelengths per fiber.",
+    "titulo": "The Role of Optical Frequency Comb Generators in AI Data Centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
