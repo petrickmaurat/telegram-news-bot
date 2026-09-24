@@ -1,5 +1,5 @@
 {
-  "generated_at": 1790253519.8055344,
+  "generated_at": 1790253631.3236108,
   "status": "network_ready",
   "targets": [
     {
@@ -19,7 +19,7 @@
       "url": "https://megawhat.uol.com.br/feed/"
     },
     {
-      "bytes": 14569,
+      "bytes": 14632,
       "group": "rss_direto",
       "name": "data_center_dynamics",
       "ok": true,
