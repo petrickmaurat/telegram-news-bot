@@ -13,8 +13,10 @@ on:
 permissions:
   contents: write
 
+# Grupo próprio: no GitHub, uma execução nova do mesmo grupo cancela a que
+# está esperando na fila, e uma coleta não pode cancelar um envio.
 concurrency:
-  group: v2-prepare-input
+  group: v2-collect-result
   cancel-in-progress: false
 
 jobs:
@@ -61,7 +63,14 @@ jobs:
           git add -- routine_v2_state.json routine_v2_report.json routine_v2_preview.html
           if ! git diff --cached --quiet; then
             git commit -m "Atualiza resultado da Routine V2"
-            git push origin HEAD:v2-claude-routines
+            pushed=0
+            for attempt in 1 2 3; do
+              if git pull --rebase --autostash origin v2-claude-routines && git push origin HEAD:v2-claude-routines; then
+                pushed=1; break
+              fi
+              sleep $((attempt * 5))
+            done
+            [ "$pushed" = 1 ] || { echo "Não foi possível publicar na v2-claude-routines."; exit 1; }
           fi
 
       - name: Enviar e-mail
@@ -82,7 +91,7 @@ jobs:
             git commit -m "Registra envio do digest V2"
             pushed=0
             for attempt in 1 2 3; do
-              if git pull --rebase origin v2-claude-routines && git push origin HEAD:v2-claude-routines; then
+              if git pull --rebase --autostash origin v2-claude-routines && git push origin HEAD:v2-claude-routines; then
                 pushed=1; break
               fi
               sleep $((attempt * 5))

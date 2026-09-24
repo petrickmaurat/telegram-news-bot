@@ -24,7 +24,6 @@ on:
 permissions:
   contents: write
 
-# Mesmo grupo do envio: uma coleta nunca interrompe um envio em andamento.
 concurrency:
   group: v2-prepare-input
   cancel-in-progress: false
@@ -73,7 +72,7 @@ jobs:
             git commit -m "Prepara entrada V2 sem IA"
             pushed=0
             for attempt in 1 2 3; do
-              if git pull --rebase origin v2-claude-routines && git push origin HEAD:v2-claude-routines; then
+              if git pull --rebase --autostash origin v2-claude-routines && git push origin HEAD:v2-claude-routines; then
                 pushed=1; break
               fi
               sleep $((attempt * 5))

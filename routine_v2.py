@@ -971,6 +971,20 @@ def finalize(response_path=None):
     print(json.dumps(report, ensure_ascii=False))
 
 
+BRT = datetime.timezone(datetime.timedelta(hours=-3))
+
+
+def _brt_date(timestamp):
+    return datetime.datetime.fromtimestamp(timestamp, BRT).date()
+
+
+def delivered_today(state, now=None):
+    """Um e-mail por dia: enviado hoje, ou com entrega incerta iniciada hoje."""
+    today = _brt_date(now or time.time())
+    stamps = [state.get("last_sent_at"), (state.get("delivery_pending") or {}).get("since")]
+    return any(isinstance(t, (int, float)) and _brt_date(t) == today for t in stamps)
+
+
 def _send_via_brevo(subject, html):
     recipients = [{"email": e.strip()} for e in re.split(r"[,;]", os.environ.get("EMAIL_DESTINO", ""))
                   if e.strip()]
@@ -1005,6 +1019,11 @@ def send():
     if edition in (state.get("last_sent_request"), (state.get("delivery_pending") or {}).get("request")):
         print("Esta edição já foi enviada ou tem entrega incerta; nada foi reenviado.")
         return
+    # A Routine tem uma segunda tentativa no dia; se as duas terminarem, só a
+    # primeira edição é enviada.
+    if delivered_today(state):
+        print("O e-mail de hoje já foi enviado; esta edição não será enviada.")
+        return
     by_candidate_id = {candidate_id(topic, item): item for item in state.get("items", {}).values()
                        for topic in item.get("topicos", [])}
     aliases = set()
@@ -1034,6 +1053,7 @@ def send():
                       "sent_at": now})
     state["sent_facts"] = facts
     state["last_sent_request"] = edition
+    state["last_sent_at"] = now
     save_compact_json(STATE_FILE, state)
     report["email"] = {"status": "enviado", "message_id": detail, "sent_at": time.time()}
     salvar_json(REPORT_FILE, report)
@@ -1042,9 +1062,19 @@ def send():
 
 
 def _git(*args, capture=False):
+    # UTF-8 explícito: no Windows o padrão cp1252 quebra a leitura do JSON.
     result = subprocess.run(["git", *args], cwd=ROOT, check=True, text=True,
-                            capture_output=capture)
+                            encoding="utf-8", capture_output=capture)
     return result.stdout.strip() if capture else None
+
+
+def sent_today():
+    """Primeiro passo da Routine: evita refazer o trabalho se o e-mail já saiu."""
+    _git("fetch", "-q", "origin", BRANCH)
+    state = json.loads(_git("show", f"origin/{BRANCH}:{STATE_FILE.name}", capture=True))
+    done = delivered_today(state)
+    print(json.dumps({"status": "already_sent" if done else "not_sent",
+                      "sent_today": done}, ensure_ascii=False))
 
 
 def request_input():
@@ -1116,6 +1146,7 @@ def main():
     prep = sub.add_parser("prepare")
     prep.add_argument("--max-new-per-topic", type=int, default=0,
                       help="0 processa todos os candidatos; valor positivo limita por tópico")
+    sub.add_parser("sent-today")
     sub.add_parser("request-input")
     wait = sub.add_parser("wait-input")
     wait.add_argument("--max-minutes", type=float, default=9)
@@ -1138,6 +1169,8 @@ def main():
         preflight()
     elif args.command == "prepare":
         prepare(args.max_new_per_topic)
+    elif args.command == "sent-today":
+        sent_today()
     elif args.command == "request-input":
         request_input()
     elif args.command == "wait-input":

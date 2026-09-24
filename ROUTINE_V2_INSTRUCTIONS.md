@@ -19,7 +19,15 @@ Para economizar a franquia, nunca leia `ranking_request.json` inteiro: os
 candidatos novos são avaliados em lotes por subagentes, e o agente principal
 só vê a lista curta de finalistas.
 
-## Execução do piloto
+## Execução
+
+0. A Routine tem dois horários por dia; o segundo é uma nova tentativa caso o
+   primeiro falhe. Comece sempre por:
+
+   `python routine_v2.py sent-today`
+
+   Se responder `already_sent`, o e-mail de hoje já saiu: encerre a execução
+   imediatamente, sem executar mais nada, informando apenas isso.
 
 1. Instale `requirements.txt`, peça a coleta ao GitHub e espere ela chegar:
 

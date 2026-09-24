@@ -32,7 +32,13 @@ class RoutineV2Tests(TestCase):
                   "SUMMARY_REQUEST_FILE": root / "work" / "summary_request.json",
                   "SUMMARY_RESPONSE_FILE": root / "work" / "summary_response.json",
                   "REPORT_FILE": root / "report.json", "PREVIEW_FILE": root / "preview.html",
-                  "PREFLIGHT_FILE": root / "preflight.json"}
+                  "PREFLIGHT_FILE": root / "preflight.json",
+                  # Caminhos derivados de WORK_DIR são calculados na importação:
+                  # sem isolá-los, a suíte gravava na pasta real do projeto.
+                  "BATCH_DIR": root / "work" / "lotes",
+                  "SHORTLIST_FILE": root / "work" / "finalistas.json",
+                  "COLLECTION_REQUEST_FILE": root / "work" / "coleta_solicitada.json",
+                  "TRIGGER_FILE": root / "trigger.txt"}
         for name, value in values.items():
             p = patch.object(v2, name, value)
             p.start()
@@ -666,6 +672,32 @@ class RoutineV2Tests(TestCase):
         self.assertIn(item["link"], state["sent"])
         self.assertNotIn("delivery_pending", state)
         self.assertEqual(carregar_json(v2.REPORT_FILE, {})["email"]["status"], "enviado")
+
+    def test_second_edition_on_same_day_is_not_sent(self):
+        self.finalized_edition()
+        post, env = self.brevo(201, {"messageId": "m1"})
+        with post as sent, env:
+            v2.send()
+            report = carregar_json(v2.REPORT_FILE, {})
+            report["request_sha256"] = "outra-edicao-do-mesmo-dia"
+            report.pop("email", None)
+            salvar_json(v2.REPORT_FILE, report)
+            v2.send()
+        self.assertEqual(sent.call_count, 1)
+
+    def test_delivered_today_uses_brasilia_date_and_uncertain_delivery(self):
+        now = 1790254800  # 24/09/2026 08:00 em Brasília
+        self.assertTrue(v2.delivered_today({"last_sent_at": now - 3600}, now))
+        self.assertFalse(v2.delivered_today({"last_sent_at": now - 86400}, now))
+        self.assertTrue(v2.delivered_today({"delivery_pending": {"since": now - 60}}, now))
+        self.assertFalse(v2.delivered_today({}, now))
+
+    def test_sent_today_reads_remote_state(self):
+        state = {"last_sent_at": time.time()}
+        with patch.object(v2, "_git", side_effect=lambda *a, capture=False:
+                          json.dumps(state) if a[0] == "show" else None),              patch("builtins.print") as shown:
+            v2.sent_today()
+        self.assertIn("already_sent", shown.call_args.args[0])
 
     def test_rejected_send_marks_nothing_and_uncertain_send_blocks_repeat(self):
         item = self.finalized_edition()
