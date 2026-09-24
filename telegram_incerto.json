@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/powering-the-ai-data-center-era-why-ups-battery-technology-needs-to-evolve/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/powering-the-ai-data-center-era-why-ups-battery-technology-needs-to-evolve/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/powering-the-ai-data-center-era-why-ups-battery-technology-needs-to-evolve/",
+    "origem": "INT",
+    "resumo": "<p>The rise of AI infrastructure is forcing data centers to rethink backup power strategies</p>",
+    "titulo": "Sponsored: Powering the AI data center era: Why UPS battery technology needs to evolve",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
