@@ -88,7 +88,8 @@ BATCH_RULES = (
     "(ex.: catl-reduz-preco-celulas), igual para coberturas do mesmo acontecimento e diferente "
     "para empresas, decisões, etapas ou valores novos.")
 # 2: regras dos lotes alinhadas à V1; avaliações anteriores refeitas.
-POLICY_VERSION = 2
+# 3: descarta as avaliações simplificadas do teste de ponta a ponta de 24/09.
+POLICY_VERSION = 3
 REQUEST_SCHEMA = 4
 DECISIONS = {"elegivel", "fora_tema", "sem_fato_novo", "fonte_duvidosa"}
 TOPIC_ORDER = ("data_center", "baterias", "carbono")
