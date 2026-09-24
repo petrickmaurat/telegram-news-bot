@@ -56,6 +56,8 @@ class RecoveryTests(TestCase):
         self.assertTrue(failed)
         self.assertEqual(groups, {"BR": [], "US": []})
 
-    def test_schedule_includes_weekends_at_0717_brasilia(self):
+    def test_v1_digest_runs_only_manually(self):
+        # O envio diário passou para a V2; um agendamento aqui mandaria dois e-mails.
         workflow = Path(".github/workflows/digest.yml").read_text(encoding="utf-8")
-        self.assertIn('cron: "17 10 * * *"', workflow)
+        self.assertNotIn("schedule:", workflow)
+        self.assertIn("workflow_dispatch:", workflow)
