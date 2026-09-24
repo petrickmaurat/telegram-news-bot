@@ -1,9 +1,9 @@
 {
-  "generated_at": 1790253257.2388756,
+  "generated_at": 1790253433.5466282,
   "status": "network_ready",
   "targets": [
     {
-      "bytes": 150620,
+      "bytes": 150635,
       "group": "buscador",
       "name": "google_news",
       "ok": true,
