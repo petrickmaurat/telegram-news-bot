@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/australias-data-center-guidelines-lay-the-platform-for-new-good-grid-citizens/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/australias-data-center-guidelines-lay-the-platform-for-new-good-grid-citizens/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/australias-data-center-guidelines-lay-the-platform-for-new-good-grid-citizens/",
+    "origem": "INT",
+    "resumo": "<p>How can big energy consumers make a greater contribution to energy systems and the communities they serve?</p>",
+    "titulo": "Australia’s data center guidelines lay the platform for new good grid citizens",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
