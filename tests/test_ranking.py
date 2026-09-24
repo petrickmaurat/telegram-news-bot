@@ -211,6 +211,14 @@ class RankingTests(IsolatedState):
         for site in ["agenciainfra.com", "gov.br/mme", "brasilenergia.com.br", "eixos.com.br"]:
             self.assertTrue(fonte_prioritaria({"link": "https://" + site + "/noticia"}))
         self.assertIsNone(fonte_prioritaria({"link": "https://gov.br/outro/noticia"}))
+        for link, site in [("https://www.gov.br/fazenda/pt-br/assuntos/noticias/sbce", "gov.br/fazenda"),
+                           ("https://www.gov.br/aneel/pt-br/assuntos/noticias/2026/leilao", "gov.br/aneel"),
+                           ("https://www12.senado.leg.br/noticias/materias/2026/09/redata", "senado.leg.br")]:
+            self.assertEqual(fonte_prioritaria({"link": link}), site)
+        config = configuracao_email(digest.TOPICOS)
+        fazenda = [f for f in config["carbono"]["feeds"] if f.get("veiculo_monitorado") == "Ministério da Fazenda"]
+        self.assertEqual(fazenda[0]["origem"], "BR")
+        self.assertIn("hl=pt-BR", fazenda[0]["url"])
         self.assertNotIn("ri.sanepar.com.br", FONTES)
         self.assertIsNone(fonte_prioritaria({"link": "https://ri.sanepar.com.br/comunicado"}))
 

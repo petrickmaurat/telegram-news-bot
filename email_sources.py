@@ -22,8 +22,16 @@ NOMES = {
     "mobiletime.com.br": "Mobile Time", "tiinside.com.br": "TI Inside", "telesintese.com.br": "Tele.Síntese",
     "convergenciadigital.com.br": "Convergência Digital",
     "agenciainfra.com": "Agência iNFRA", "gov.br/mme": "MME",
+    # Governo e Congresso: publicam regulação (SBCE, Redata, leilões de baterias).
+    "gov.br/fazenda": "Ministério da Fazenda", "gov.br/mma": "Ministério do Meio Ambiente",
+    "gov.br/mdic": "MDIC", "gov.br/aneel": "Aneel", "epe.gov.br": "EPE",
+    "agenciabrasil.ebc.com.br": "Agência Brasil", "agenciagov.ebc.com.br": "Agência Gov",
+    "camara.leg.br": "Câmara dos Deputados", "senado.leg.br": "Senado Federal",
 }
-FONTES = sorted({*DOMINIOS[1], *DOMINIOS[2], "agenciainfra.com", "gov.br/mme"})
+GOVERNO = {"gov.br/mme", "gov.br/fazenda", "gov.br/mma", "gov.br/mdic", "gov.br/aneel",
+           "epe.gov.br", "agenciabrasil.ebc.com.br", "agenciagov.ebc.com.br",
+           "camara.leg.br", "senado.leg.br"}
+FONTES = sorted({*DOMINIOS[1], *DOMINIOS[2], "agenciainfra.com", *GOVERNO})
 
 # Preferência editorial absoluta entre notícias elegíveis, exclusiva do digest.
 FONTES_MAXIMAS = {"braziljournal.com", "megawhat.uol.com.br", "valor.globo.com",
@@ -39,7 +47,12 @@ def fonte_prioritaria(item):
     p = urlsplit(canonica(item.get("link", "")))
     for site in FONTES:
         domain, _, path = site.partition("/")
-        if p.hostname == domain and (not path or p.path == "/" + path or p.path.startswith("/" + path + "/")):
+        if path:
+            # gov.br/fazenda: o caminho identifica o órgão dentro de gov.br.
+            if p.hostname == domain and (p.path == "/" + path or p.path.startswith("/" + path + "/")):
+                return site
+        # Subdomínios contam: o Senado publica em www12.senado.leg.br.
+        elif p.hostname == domain or (p.hostname or "").endswith("." + domain):
             return site
     return None
 
@@ -88,7 +101,8 @@ def configuracao_email(topicos):
         cfg["keywords"] = keywords
         termos = "(" + " OR ".join('"' + word + '"' for word in keywords) + ")"
         for site in FONTES:
-            br = site.endswith(".br") or site in ("gov.br/mme", "agenciainfra.com")
+            # O domínio decide: "gov.br/fazenda" é brasileiro, embora não termine em .br.
+            br = site.partition("/")[0].endswith(".br") or site == "agenciainfra.com"
             params = {"q": f"site:{site} {termos} when:3d", "hl": "pt-BR" if br else "en-US",
                       "gl": "BR" if br else "US", "ceid": "BR:pt-BR" if br else "US:en"}
             cfg["feeds"].append({"url": "https://news.google.com/rss/search?" + urlencode(params),
