@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/whitepapers/800-vdc-architecture-for-ai-infrastructure/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/whitepapers/800-vdc-architecture-for-ai-infrastructure/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/whitepapers/800-vdc-architecture-for-ai-infrastructure/",
+    "origem": "INT",
+    "resumo": "<p>What does the shift to 800 VDC mean for AI data center efficiency, resilience, energy storage and power distribution?</p>",
+    "titulo": "800 VDC architecture for AI infrastructure",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
