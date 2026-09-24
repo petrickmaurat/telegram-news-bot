@@ -436,7 +436,9 @@ class RoutineV2Tests(TestCase):
 
     def test_wait_input_accepts_only_collection_after_request(self):
         salvar_json(v2.COLLECTION_REQUEST_FILE, {"since": 1000, "branch": "claude/v2-coleta-1000"})
-        snapshots = iter([{"generated_at": 500}, {"generated_at": 1010}])
+        # Uma coleta de outro disparo, mesmo recente, não serve.
+        snapshots = iter([{"generated_at": 1010, "trigger": "v2-claude-routines"},
+                          {"generated_at": 1020, "trigger": "claude/v2-coleta-1000"}])
         merged = []
 
         def git(*args, capture=False):

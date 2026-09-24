@@ -526,6 +526,8 @@ def prepare(max_new_per_topic=0):
         "local_rejections": [{"topico": topic, "resultado": reason, "quantidade": count}
                              for (topic, reason), count in sorted(rejected_locally.items())],
         "truncated": truncated, "source_queries": len(sources), "collection": health,
+        # Branch que disparou a coleta: wait-input só aceita a do próprio pedido.
+        "trigger": os.environ.get("GITHUB_REF_NAME", "local"),
     }
     request["request_sha256"] = request_sha256(request)
     live_evaluation_ids = {candidate_id(topic, item) for item in items
@@ -1118,7 +1120,7 @@ def wait_input(max_minutes=9):
             snapshot = json.loads(_git("show", f"origin/{BRANCH}:{INPUT_FILE.name}", capture=True))
         except (subprocess.CalledProcessError, ValueError):
             snapshot = {}
-        if snapshot.get("generated_at", 0) >= request["since"] - 60:
+        if snapshot.get("trigger") == request["branch"]:
             _git("merge", "-q", "--ff-only", f"origin/{BRANCH}")
             print(json.dumps({"status": "input_ready", "waited_seconds":
                               round(time.time() - request["since"])}, ensure_ascii=False))
