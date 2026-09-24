@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/marketwatch/as-data-center-power-evolves-so-do-the-logistics-behind-it/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/marketwatch/as-data-center-power-evolves-so-do-the-logistics-behind-it/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/marketwatch/as-data-center-power-evolves-so-do-the-logistics-behind-it/",
+    "origem": "INT",
+    "resumo": "<p>As data centers adopt a wider range of power-generation technologies, the logistics of moving, storing, and installing that equipment are growing more complex</p>",
+    "titulo": "Sponsored: As data center power evolves, so do the logistics behind it",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
