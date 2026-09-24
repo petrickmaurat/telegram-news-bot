@@ -12,7 +12,11 @@ def texto_limpo(texto):
 PADROES = {
     "data_center": r"\b(data[ -]?cent(?:er|re)s?|centros? de dados|red ata|redata|hyperscal\w*)\b",
     "baterias": r"\b(bateri\w*|batter\w*|bess|armazenamento|energy storage|catl|byd|eve energy|gotion|hithium|solid.state|sodium.ion)\b",
-    "carbono": r"\b(carbon\w*|emiss\w*|emission\w*|sbce|ets|cap.and.trade)\b",
+    # Termos do mercado de carbono que não contêm "carbono": projetos de
+    # reflorestamento e REDD vendem créditos (ex.: Mombak e o fundo do BNDES).
+    "carbono": (r"\b(carbon\w*|emiss\w*|emission\w*|sbce|ets|cap.and.trade|reflorest\w*|"
+                r"reforest\w*|restauracao florestal|redd\w*|descarboniz\w*|decarboni\w*|"
+                r"offsets?|artigo 6|article 6)\b"),
 }
 
 

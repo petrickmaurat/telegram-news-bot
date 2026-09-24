@@ -1,3 +1,4 @@
+import unittest
 from unittest.mock import patch
 from test_reliability import IsolatedState, item, client
 import test_ranking
@@ -71,3 +72,16 @@ class TopicBoundaryTests(IsolatedState):
             digest.resumir(model, [candidate])
         self.assertTrue(candidate["resumo_final"].startswith("Trecho da fonte"))
         self.assertNotEqual(candidate["resumo_final"], candidate["titulo"])
+
+
+class CarbonMarketTermsTests(unittest.TestCase):
+    def test_carbon_projects_without_the_word_carbon_reach_the_ranking(self):
+        # Mombak/BNDES (reflorestamento) foi descartada antes da IA por não dizer "carbono".
+        for title in ["Mombak lança novo fundo e anuncia R$ 200 milhões do BNDES para reflorestamento na Amazônia",
+                      "Brasil e Suíça assinam acordo do Artigo 6",
+                      "Descarbonização da indústria avança com novo marco"]:
+            self.assertTrue(verificar_tema({"titulo": title, "resumo": ""}, "carbono")[0], title)
+
+    def test_unrelated_green_news_still_blocked(self):
+        for title in ["Shopping distribui mudas no Dia da Árvore", "Rede de farmácias abre 50 lojas"]:
+            self.assertFalse(verificar_tema({"titulo": title, "resumo": ""}, "carbono")[0], title)
