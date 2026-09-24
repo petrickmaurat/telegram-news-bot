@@ -80,10 +80,14 @@ jobs:
           git add -- routine_v2_state.json routine_v2_report.json
           if ! git diff --cached --quiet; then
             git commit -m "Registra envio do digest V2"
+            pushed=0
             for attempt in 1 2 3; do
-              git pull --rebase origin v2-claude-routines && git push origin HEAD:v2-claude-routines && break
+              if git pull --rebase origin v2-claude-routines && git push origin HEAD:v2-claude-routines; then
+                pushed=1; break
+              fi
               sleep $((attempt * 5))
             done
+            [ "$pushed" = 1 ] || { echo "Não foi possível publicar na v2-claude-routines."; exit 1; }
           fi
 
       - name: Apagar branch temporária

@@ -11,6 +11,7 @@ import hashlib
 import json
 import os
 import re
+import subprocess
 import tempfile
 import time
 from collections import Counter
@@ -45,6 +46,10 @@ SUMMARY_RESPONSE_FILE = WORK_DIR / "summary_response.json"
 REPORT_FILE = ROOT / "routine_v2_report.json"
 PREVIEW_FILE = ROOT / "routine_v2_preview.html"
 PREFLIGHT_FILE = ROOT / "routine_v2_preflight.json"
+TRIGGER_FILE = ROOT / "routine_v2_trigger.txt"
+COLLECTION_REQUEST_FILE = WORK_DIR / "coleta_solicitada.json"
+BRANCH = "v2-claude-routines"
+WAIT_POLL_SECONDS = 30
 BATCH_DIR = WORK_DIR / "lotes"
 SHORTLIST_FILE = WORK_DIR / "finalistas.json"
 # Cada lote é avaliado por um subagente com contexto próprio. Um agente único
@@ -556,7 +561,8 @@ def load_input(max_age_hours=6):
         raise ValueError("Entrada V2 não informa quando foi gerada.")
     age_seconds = time.time() - generated_at
     if age_seconds < -300 or age_seconds > max_age_hours * 3600:
-        raise ValueError(f"Entrada V2 fora da janela de {max_age_hours:g} hora(s).")
+        raise ValueError(f"Entrada V2 fora da janela de {max_age_hours:g} hora(s). "
+                         "Peça uma coleta nova com request-input e wait-input (passo 1).")
     if request.get("truncated"):
         raise ValueError("Entrada V2 foi truncada; o teste integral foi bloqueado.")
     collection = request.get("collection")
@@ -1035,6 +1041,64 @@ def send():
                       "items": len(report["selected"])}, ensure_ascii=False))
 
 
+def _git(*args, capture=False):
+    result = subprocess.run(["git", *args], cwd=ROOT, check=True, text=True,
+                            capture_output=capture)
+    return result.stdout.strip() if capture else None
+
+
+def request_input():
+    """Pede ao GitHub uma coleta nova, sem depender do agendador do GitHub.
+
+    O agendador do Actions atrasa horas; um push dispara o workflow na hora.
+    A Routine só consegue gravar branches claude/, então o pedido é uma branch
+    claude/v2-coleta-* com um arquivo de marcação. O workflow a apaga no fim.
+    """
+    WORK_DIR.mkdir(exist_ok=True)
+    since = int(time.time())
+    branch = f"claude/v2-coleta-{since}"
+    current = _git("rev-parse", "--abbrev-ref", "HEAD", capture=True)
+    _git("checkout", "-q", "-b", branch)
+    try:
+        TRIGGER_FILE.write_text(f"Coleta solicitada pela Routine em {since}\n", encoding="utf-8")
+        _git("add", "--", TRIGGER_FILE.name)
+        _git("commit", "-q", "-m", "Solicita coleta V2")
+        _git("push", "-q", "origin", branch)
+    finally:
+        _git("checkout", "-q", current)
+        _git("branch", "-q", "-D", branch)
+    salvar_json(COLLECTION_REQUEST_FILE, {"since": since, "branch": branch})
+    print(json.dumps({"status": "collection_requested", "branch": branch, "since": since},
+                     ensure_ascii=False))
+
+
+def wait_input(max_minutes=9):
+    """Espera a coleta pedida chegar à branch V2 e atualiza a cópia local.
+
+    Sai com código 3 se o prazo desta chamada acabar, para caber no limite de
+    tempo de um comando; basta executar de novo.
+    """
+    request = carregar_json(COLLECTION_REQUEST_FILE, None)
+    if not isinstance(request, dict):
+        raise ValueError("Execute request-input antes de esperar a coleta.")
+    deadline = time.time() + max_minutes * 60
+    while True:
+        _git("fetch", "-q", "origin", BRANCH)
+        try:
+            snapshot = json.loads(_git("show", f"origin/{BRANCH}:{INPUT_FILE.name}", capture=True))
+        except (subprocess.CalledProcessError, ValueError):
+            snapshot = {}
+        if snapshot.get("generated_at", 0) >= request["since"] - 60:
+            _git("merge", "-q", "--ff-only", f"origin/{BRANCH}")
+            print(json.dumps({"status": "input_ready", "waited_seconds":
+                              round(time.time() - request["since"])}, ensure_ascii=False))
+            return
+        if time.time() >= deadline:
+            print(json.dumps({"status": "still_waiting", "since": request["since"]}, ensure_ascii=False))
+            raise SystemExit(3)
+        time.sleep(WAIT_POLL_SECONDS)
+
+
 def status():
     print(json.dumps({"branch_expected": "v2-claude-routines", "state": STATE_FILE.exists(),
         "preflight": carregar_json(PREFLIGHT_FILE, None),
@@ -1052,6 +1116,9 @@ def main():
     prep = sub.add_parser("prepare")
     prep.add_argument("--max-new-per-topic", type=int, default=0,
                       help="0 processa todos os candidatos; valor positivo limita por tópico")
+    sub.add_parser("request-input")
+    wait = sub.add_parser("wait-input")
+    wait.add_argument("--max-minutes", type=float, default=9)
     load = sub.add_parser("load-input")
     load.add_argument("--max-age-hours", type=float, default=6,
                       help="idade máxima aceita para a coleta preparada pelo GitHub Actions")
@@ -1071,6 +1138,10 @@ def main():
         preflight()
     elif args.command == "prepare":
         prepare(args.max_new_per_topic)
+    elif args.command == "request-input":
+        request_input()
+    elif args.command == "wait-input":
+        wait_input(args.max_minutes)
     elif args.command == "load-input":
         load_input(args.max_age_hours)
     elif args.command == "split-batches":

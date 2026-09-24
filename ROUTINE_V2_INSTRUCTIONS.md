@@ -5,8 +5,9 @@ resultado publicado no passo 11 é validado. Não execute `digest_email.py` nem
 `routine_v2.py send`, não use `ANTHROPIC_API_KEY` e não altere `main` nem os
 arquivos `digest_*.json` da V1.
 
-A coleta já foi executada pelo GitHub Actions. Não acesse feeds, Google News
-ou sites de notícias durante o ranking e não execute `preflight` nem `prepare`.
+A coleta é executada pelo GitHub Actions a pedido do passo 1. Não acesse feeds,
+Google News ou sites de notícias durante o ranking e não execute `preflight` nem
+`prepare`.
 Depois da seleção, acesse somente os links diretos dos finalistas marcados com
 `requer_leitura_url: true`, conforme o passo 8.
 
@@ -20,7 +21,16 @@ só vê a lista curta de finalistas.
 
 ## Execução do piloto
 
-1. Instale `requirements.txt` e carregue a entrada preparada:
+1. Instale `requirements.txt`, peça a coleta ao GitHub e espere ela chegar:
+
+   `python routine_v2.py request-input`
+
+   `python routine_v2.py wait-input`
+
+   A coleta roda no GitHub e costuma levar de 3 a 8 minutos. Se `wait-input`
+   terminar com `still_waiting` (código 3), execute-o de novo, no máximo três
+   vezes no total. Não execute `request-input` mais de uma vez. Se a coleta não
+   chegar, pare e informe. Depois carregue a entrada:
 
    `python routine_v2.py load-input --max-age-hours 6`
 

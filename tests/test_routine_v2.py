@@ -414,6 +414,43 @@ class RoutineV2Tests(TestCase):
         with self.assertRaises(ValueError):
             v2.check_subject_diversity([{"id": "d", "topico": "carbono", "bucket": "BR"}])
 
+    def test_request_input_pushes_claude_branch_and_returns_to_current(self):
+        calls = []
+
+        def git(*args, capture=False):
+            calls.append(args)
+            return "v2-claude-routines" if capture else None
+
+        with patch.object(v2, "_git", side_effect=git),              patch.object(v2, "TRIGGER_FILE", v2.WORK_DIR / "trigger.txt"):
+            v2.request_input()
+        request = carregar_json(v2.COLLECTION_REQUEST_FILE, {})
+        self.assertTrue(request["branch"].startswith("claude/v2-coleta-"))
+        self.assertIn(("push", "-q", "origin", request["branch"]), calls)
+        self.assertEqual(calls[-2], ("checkout", "-q", "v2-claude-routines"))
+
+    def test_wait_input_accepts_only_collection_after_request(self):
+        salvar_json(v2.COLLECTION_REQUEST_FILE, {"since": 1000, "branch": "claude/v2-coleta-1000"})
+        snapshots = iter([{"generated_at": 500}, {"generated_at": 1010}])
+        merged = []
+
+        def git(*args, capture=False):
+            if args[0] == "show":
+                return json.dumps(next(snapshots))
+            if args[0] == "merge":
+                merged.append(args)
+            return None
+
+        with patch.object(v2, "_git", side_effect=git), patch.object(v2.time, "sleep"):
+            v2.wait_input(max_minutes=5)
+        self.assertEqual(len(merged), 1)
+
+    def test_wait_input_stops_with_code_3_when_time_is_up(self):
+        salvar_json(v2.COLLECTION_REQUEST_FILE, {"since": 1000, "branch": "claude/v2-coleta-1000"})
+        with patch.object(v2, "_git", side_effect=lambda *a, capture=False:
+                          json.dumps({"generated_at": 1}) if a[0] == "show" else None),              patch.object(v2.time, "sleep"), self.assertRaises(SystemExit) as stop:
+            v2.wait_input(max_minutes=0)
+        self.assertEqual(stop.exception.code, 3)
+
     def test_merge_reports_missing_or_incomplete_batches(self):
         self.prepare_and_load([news(1), news(2), news(3)])
         v2.split_batches(size=2)
