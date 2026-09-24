@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/cooling/data-center-water-use-from-efficiency-metrics-to-real-world-resilience"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/cooling/data-center-water-use-from-efficiency-metrics-to-real-world-resilience"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/cooling/data-center-water-use-from-efficiency-metrics-to-real-world-resilience",
+    "origem": "INT",
+    "resumo": "Water has shifted from a background utility to a core constraint for data centers, requiring site-specific resilience planning that addresses peak stress, local hydrology, and community impact, not just average efficiency metrics.",
+    "titulo": "Data Center Water Use: From Efficiency Metrics to Real-World Resilience",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
