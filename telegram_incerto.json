@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/energy-power-supply/efforts-to-curb-data-center-speculation-gain-ground-across-the-us"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/energy-power-supply/efforts-to-curb-data-center-speculation-gain-ground-across-the-us"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/energy-power-supply/efforts-to-curb-data-center-speculation-gain-ground-across-the-us",
+    "origem": "INT",
+    "resumo": "Large-load tariffs and other measures to weed out speculative projects are taking shape amid public backlash to data centers and shifting state-level policies.",
+    "titulo": "Efforts to Curb Data Center Speculation Gain Ground Across the US",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
