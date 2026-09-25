@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://megawhat.uol.com.br/opiniao-da-comunidade/expansao-da-ia-e-de-data-centers-desafiam-a-gestao-do-sistema-eletrico-brasileiro/"
+  ],
+  "item": {
+    "aliases": [
+      "https://megawhat.uol.com.br/opiniao-da-comunidade/expansao-da-ia-e-de-data-centers-desafiam-a-gestao-do-sistema-eletrico-brasileiro/"
+    ],
+    "fonte": "MegaWhat",
+    "link": "https://megawhat.uol.com.br/opiniao-da-comunidade/expansao-da-ia-e-de-data-centers-desafiam-a-gestao-do-sistema-eletrico-brasileiro/",
+    "origem": "BR",
+    "resumo": "<div><figure><img alt=\"\" src=\"https://uploads.megawhat.energy/uploads/2026/09/Thumb-Opiniao-da-Comunidade-V2-Azul-e-Roxo-5.png\" /></figure></div><p>Para ser um polo de infraestrutura digital global, o país não precisa apenas atrair investimentos e ter energia disponível, mas de regras que coordenem adequadamente os crescentes pedidos de acesso à rede básica</p>\n<p>O post <a href=\"https://megawhat.uol.com.br/opiniao-da-comunidade/expansao-da-ia-e-de-data-centers-desafiam-a-gestao-do-sistema-eletrico-brasileiro/\">Expansão da IA e de data centers desafiam a gestão do sistema elétrico brasileiro</a> apareceu primeiro em <a href=\"https://megawhat.uol.com.br\">MegaWhat</a>.</p>",
+    "titulo": "Expansão da IA e de data centers desafiam a gestão do sistema elétrico brasileiro",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
