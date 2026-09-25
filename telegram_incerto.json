@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/northern-virginias-prince-william-county-puts-controls-on-new-data-center-projects/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/northern-virginias-prince-william-county-puts-controls-on-new-data-center-projects/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/northern-virginias-prince-william-county-puts-controls-on-new-data-center-projects/",
+    "origem": "INT",
+    "resumo": "<p>Size of 'by right' overlay district for digital infrastructure projects cut by two thirds</p>",
+    "titulo": "Northern Virginia's Prince William County puts controls on new data center projects",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
