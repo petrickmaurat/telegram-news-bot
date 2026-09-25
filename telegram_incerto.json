@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/project-suncatcher-google-to-launch-first-space-data-center-test-in-orbit-next-week/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/project-suncatcher-google-to-launch-first-space-data-center-test-in-orbit-next-week/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/project-suncatcher-google-to-launch-first-space-data-center-test-in-orbit-next-week/",
+    "origem": "INT",
+    "resumo": "<p>TPUs are ready to catch some rays, hyperscaler claims</p>",
+    "titulo": "Project Suncatcher: Google to launch first space data center test in orbit next week",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
