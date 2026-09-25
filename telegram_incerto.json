@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/whitepapers/solid-oxide-fuel-cells-enabling-growth-in-a-power-constrained-world/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/whitepapers/solid-oxide-fuel-cells-enabling-growth-in-a-power-constrained-world/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/whitepapers/solid-oxide-fuel-cells-enabling-growth-in-a-power-constrained-world/",
+    "origem": "INT",
+    "resumo": "<p>How solid oxide fuel cells are offering a scalable route to reliable, on-site power as grid constraints reshape data center growth</p>",
+    "titulo": "Solid oxide fuel cells enabling growth in a power-constrained world",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
