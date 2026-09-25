@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/vertiv-to-acquire-data-center-fluid-management-firm-king-environmental-services/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/vertiv-to-acquire-data-center-fluid-management-firm-king-environmental-services/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/vertiv-to-acquire-data-center-fluid-management-firm-king-environmental-services/",
+    "origem": "INT",
+    "resumo": "<p>Transaction to close before the end of the year</p>",
+    "titulo": "Vertiv to acquire data center fluid management firm King Environmental Services",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
