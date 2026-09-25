@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/how-to-scale-data-centers-cheaper-faster-and-at-a-higher-quality/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/how-to-scale-data-centers-cheaper-faster-and-at-a-higher-quality/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/how-to-scale-data-centers-cheaper-faster-and-at-a-higher-quality/",
+    "origem": "INT",
+    "resumo": "<p>Data centers are the last heavy industry still built by hand. It's time to move them into the factory</p>",
+    "titulo": "Sponsored: How to scale data centers cheaper, faster, and at a higher quality",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
