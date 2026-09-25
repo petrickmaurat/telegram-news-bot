@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/doe-unveils-19bn-in-funding-for-31-grid-upgrade-projects-to-speed-data-center-connections/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/doe-unveils-19bn-in-funding-for-31-grid-upgrade-projects-to-speed-data-center-connections/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/doe-unveils-19bn-in-funding-for-31-grid-upgrade-projects-to-speed-data-center-connections/",
+    "origem": "INT",
+    "resumo": "<p>Expected to unlock 23GW of additional capacity on the grid</p>",
+    "titulo": "DOE unveils $1.9bn in funding for 31 grid upgrade projects to speed data center connections",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
