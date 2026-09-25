@@ -1,16 +1,16 @@
 {
   "cached": 0,
   "collection": {
-    "entries": 7464,
+    "entries": 9907,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
       "https://tiinside.com.br/feed/"
     ],
-    "failure_ratio": 0.0118,
+    "failure_ratio": 0.0095,
     "invalid": 1,
-    "ok": 166,
-    "queries": 169
+    "ok": 208,
+    "queries": 211
   },
   "counts": {
     "baterias": {
@@ -18,7 +18,7 @@
       "US": 2
     },
     "carbono": {
-      "BR": 2,
+      "BR": 3,
       "US": 1
     },
     "data_center": {
@@ -27,109 +27,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202609241258.48644144719@smtp-relay.mailin.fr>",
-    "sent_at": 1790254723.0403252,
-    "status": "enviado"
-  },
-  "generated_at": 1790254677.4768803,
+  "generated_at": 1790331786.5687802,
   "google_links_pending": 0,
-  "needs_evaluation": 1020,
+  "needs_evaluation": 1186,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
-  "preview": "C:\\Users\\Ptr\\AppData\\Local\\Temp\\claude\\C--Users-Ptr--claude\\8d24185c-3388-483d-845a-0ccd109a6f53\\scratchpad\\routine_sim\\routine_v2_preview.html",
+  "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 624,
-      "insuficiente": 374,
-      "trecho_disponivel": 22
+      "artigo_completo": 711,
+      "insuficiente": 441,
+      "trecho_disponivel": 34
     },
     "selected": {
-      "artigo_completo": 8,
-      "trecho_limitado_final": 3
+      "artigo_completo": 10,
+      "trecho_limitado_final": 2
     }
   },
-  "request_sha256": "337b0d882f0a1b2b18f16126a9fed240b60236cc85537ab531aac2bb6ce260bc",
+  "request_sha256": "47f8667035f36f3135328abde8b2f80eb94d213ef274d2766ea77b1fd8251757",
   "selected": [
     {
-      "assunto": "conexao-rede",
-      "id": "649c39cbdd1361514135",
-      "link": "https://agenciainfra.com/blog/data-centers-driblam-ons-e-buscam-distribuidoras-para-conexao-ao-sistema/",
-      "titulo": "Data centers driblam ONS e buscam distribuidoras para conexão ao sistema",
-      "topico": "data_center"
+      "assunto": "sbce-intervencao-governo",
+      "id": "2aa3e836c754b349d1d0",
+      "link": "https://c-level.folha.uol.com.br/economia-sustentavel/2026/09/intervencao-do-governo-no-mercado-de-carbono-deve-ser-minima-diz-ceo-da-mombak.shtml",
+      "titulo": "Intervenção do governo no mercado de carbono deve ser mínima, diz CEO da Mombak",
+      "topico": "carbono"
     },
     {
-      "assunto": "redata",
-      "id": "80a01d97dba9146dc2dd",
-      "link": "https://eixos.com.br/videos-e-podcasts/ao-vivo/brasil-tem-legitimidade-para-usar-gas-como-backup-afirma-luiz-felipe-coutinho-da-origem/",
-      "titulo": "Discussão do Redata é preocupante e carece de pragmatismo, diz CEO da Origem",
-      "topico": "data_center"
+      "assunto": "sbce-povos-tradicionais",
+      "id": "46af76a0ddd7d6a559a8",
+      "link": "https://mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/mercado-de-carbono-mpf-reafirma-o-papel-da-instituicao-e-defende-seu-historico-de-atuacoes-na-protecao-de-povos-e-comunidades-tradicionais",
+      "titulo": "Mercado de carbono: MPF reafirma o papel da instituição e defende seu histórico de atuações na proteção de povos e comunidades tradicionais",
+      "topico": "carbono"
     },
     {
-      "assunto": "investimentos-scala",
-      "id": "6bb71eea1cbdf89e08af",
-      "link": "https://braziljournal.com/play/data-centers-podem-atrair-us-1-trilhao-se-brasil-nao-perder-a-segunda-onda-diz-scala/",
-      "titulo": "Data centers podem atrair US$ 1 trilhão se Brasil não “perder a segunda onda”, diz Scala",
-      "topico": "data_center"
+      "assunto": "piloto-comercio-emissoes-rio",
+      "id": "7a8bb45bd44f0df1ab15",
+      "link": "https://eco-business.com/news/after-gujarat-win-an-emissions-trading-experiment-heads-to-rio/",
+      "titulo": "After Gujarat win, an emissions trading experiment heads to Rio",
+      "topico": "carbono"
     },
     {
-      "assunto": "leis-california",
-      "id": "442a3607b4be5ebe596f",
-      "link": "https://valor.globo.com/empresas/noticia/2026/09/21/governador-da-california-sanciona-sete-novas-leis-que-regulamentam-data-centers.ghtml",
-      "titulo": "Governador da Califórnia sanciona sete novas leis que regulamentam data centers",
-      "topico": "data_center"
+      "assunto": "nz-ets-florestal",
+      "id": "30fd72575c415b0a2845",
+      "link": "https://qcintel.com/carbon/article/nz-awards-14-exotic-forestry-permits-under-first-ets-ballot-73570.html",
+      "titulo": "NZ awards 14 'exotic' forestry permits under first ETS ballot",
+      "topico": "carbono"
     },
     {
       "assunto": "leilao-baterias",
-      "id": "23d0b4ba857e3491da01",
-      "link": "https://megawhat.uol.com.br/armazenamento/procuradoria-considera-legal-diferenciar-encargo-de-baterias-entre-geradores/",
-      "titulo": "Procuradoria considera legal diferenciar encargo de baterias entre geradores",
+      "id": "46ce307b588856764f4b",
+      "link": "https://valor.globo.com/empresas/noticia/2026/09/24/leilao-de-bateria-ja-move-mercado-mas-setor-busca-visao-de-longo-prazo.ghtml",
+      "titulo": "Leilão de bateria já move mercado, mas setor busca visão de longo prazo",
       "topico": "baterias"
     },
     {
-      "assunto": "estudo-volt",
-      "id": "f67682e8afa1f2d5fcde",
-      "link": "https://agenciainfra.com/blog/uhes-seriam-mais-beneficiadas-por-baterias-que-eolica-e-solar-diz-volt/",
-      "titulo": "UHEs seriam mais beneficiadas por baterias que eólica e solar, diz Volt",
+      "assunto": "armazenamento-hidreletrico-reversivel",
+      "id": "3f4fd655919b60adaded",
+      "link": "https://braziljournal.com/play/copel-quer-usar-hidreletricas-como-baterias-e-levara-projetos-ao-governo/",
+      "titulo": "Copel quer usar hidrelétricas como baterias, e levará projetos ao Governo",
       "topico": "baterias"
     },
     {
-      "assunto": "fabricantes-coreanas",
-      "id": "46e2d13ba7d2c02c02a4",
-      "link": "https://bloomberg.com/news/articles/2026-09-23/korean-battery-makers-lock-in-local-supply-as-us-rules-tighten",
-      "titulo": "Korean Battery Makers Lock In Local Supply as US Rules Tighten",
+      "assunto": "bateria-sodio-ion",
+      "id": "1ea8c3ee0d3afc0f0198",
+      "link": "https://finance.yahoo.com/energy/articles/hithium-launches-4-mwh-sodium-143000374.html",
+      "titulo": "HiTHIUM Launches 4 MWh Sodium-Ion Energy Storage System with New 785 Ah Cell",
       "topico": "baterias"
     },
     {
-      "assunto": "gm-catodos",
-      "id": "1ed04da8843053e6b79b",
-      "link": "https://theinformation.com/newsletters/the-electric/exclusive-gm-pumping-cathodes-moving-bypass-chinas-battery-chokehold",
-      "titulo": "Exclusive: GM Is Pumping Out Cathodes And Moving to Bypass China's Battery Chokehold",
+      "assunto": "bateria-estado-solido",
+      "id": "28d5fbb99969173db380",
+      "link": "https://news.metal.com/en/newscontent/104133997-solid-state-battery-weekly-li2s-production-line-construction-accelerates-while-cost-contradiction-remains-unresolved",
+      "titulo": "Solid-State Battery Weekly ：Li2S Production Line Construction Accelerates While Cost Contradiction Remains Unresolved",
       "topico": "baterias"
     },
     {
-      "assunto": "regulacao-credito",
-      "id": "4cae87eaaafa14cbbd1b",
-      "link": "https://valor.globo.com/google/amp/brasil/noticia/2026/09/23/mudancas-regulatorias-podem-afetar-mercado-de-credito-de-carbono.ghtml",
-      "titulo": "Mudanças regulatórias podem afetar mercado de crédito de carbono",
-      "topico": "carbono"
+      "assunto": "redata",
+      "id": "9c50123b9b2a02a8c224",
+      "link": "https://canalenergia.com.br/noticias/53356008/lula-sanciona-sem-vetos-a-lei-do-redata",
+      "titulo": "Lula sanciona sem vetos a Lei do Redata",
+      "topico": "data_center"
     },
     {
-      "assunto": "plano-abc",
-      "id": "a0c594fbbb1f1d687409",
-      "link": "https://carbon-pulse.com/552823/",
-      "titulo": "CWNYC26: Brazil adds carbon removal techs to sustainable agriculture support scheme",
-      "topico": "carbono"
+      "assunto": "aneel-acesso-transmissao-dc",
+      "id": "64e2a6b3cbbbb5f5c99a",
+      "link": "https://agenciainfra.com/blog/proposta-para-novas-regras-de-transmissao-pode-beneficiar-data-center/",
+      "titulo": "Proposta para novas regras de transmissão pode beneficiar data center",
+      "topico": "data_center"
     },
     {
-      "assunto": "eu-ets",
-      "id": "a3310b12e4bcda86311c",
-      "link": "https://reuters.com/business/energy/eu-countries-back-carbon-market-changes-curb-price-spikes-diplomats-say-2026-09-23/",
-      "titulo": "EU countries back carbon market changes to curb price spikes, diplomats say",
-      "topico": "carbono"
+      "assunto": "rn-licenciamento-ambiental-dc",
+      "id": "6616abb70db762d7d53e",
+      "link": "https://g1.globo.com/rn/rio-grande-do-norte/videos-bom-dia-rn/video/data-centers-rn-aprova-regras-para-licenciamento-ambiental-14986333.ghtml",
+      "titulo": "Data centers: RN aprova regras para licenciamento ambiental",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "maryland-executivo-data-centers",
+      "id": "4dff70b7d9123bd8fb72",
+      "link": "https://govtech.com/policy/maryland-governor-draws-new-boundaries-for-data-centers",
+      "titulo": "Maryland Governor Draws New Boundaries for Data Centers",
+      "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 24/09 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 25/09 (manhã)",
   "truncated": {}
 }
