@@ -83,6 +83,11 @@ _GN_BAT_EMERGENTES = _google_news(
     '"iron-air battery" OR "flow battery" OR "long-duration energy storage" '
     'OR "lithium-metal battery" OR "silicon anode" OR "semi-solid-state" OR "LMFP" '
     'OR "battery pilot line"', br=False)
+# Termos genéricos para tecnologias que ainda não conhecemos pelo nome
+# (ex.: EnerVenue, níquel-hidrogênio, não estava em nenhuma busca específica).
+_GN_BAT_NOVAS = _google_news(
+    '"next-generation battery" OR "new battery chemistry" OR "novel battery" OR "battery startup" '
+    'OR "battery scale-up" OR "battery production ramp" OR "battery commercialization"', br=False)
 
 TOPICOS = {
     "data_center": {
@@ -127,6 +132,7 @@ TOPICOS = {
             {"url": _GN_BAT_CHINA, "origem": "INT"},
             {"url": _GN_BAT_INOVACAO, "origem": "INT"},
             {"url": _GN_BAT_EMERGENTES, "origem": "INT"},
+            {"url": _GN_BAT_NOVAS, "origem": "INT"},
             {"url": "https://megawhat.uol.com.br/feed/", "origem": "BR"},
             {"url": "https://canalsolar.com.br/feed/", "origem": "BR"},
         ],
