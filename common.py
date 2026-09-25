@@ -77,6 +77,12 @@ _GN_BAT_CHINA = _google_news(
 _GN_BAT_INOVACAO = _google_news(
     '"solid-state battery" OR "sodium-ion battery" OR "battery technology" '
     'OR "battery manufacturing" OR "gigafactory"', br=False)
+# Tecnologias emergentes e sua maturação: a busca de inovação acima não trazia
+# ferro-ar, fluxo, longa duração ou ânodo de silício (ex.: Form Energy).
+_GN_BAT_EMERGENTES = _google_news(
+    '"iron-air battery" OR "flow battery" OR "long-duration energy storage" '
+    'OR "lithium-metal battery" OR "silicon anode" OR "semi-solid-state" OR "LMFP" '
+    'OR "battery pilot line"', br=False)
 
 TOPICOS = {
     "data_center": {
@@ -120,6 +126,7 @@ TOPICOS = {
             {"url": _GN_BAT_US, "origem": "INT"},
             {"url": _GN_BAT_CHINA, "origem": "INT"},
             {"url": _GN_BAT_INOVACAO, "origem": "INT"},
+            {"url": _GN_BAT_EMERGENTES, "origem": "INT"},
             {"url": "https://megawhat.uol.com.br/feed/", "origem": "BR"},
             {"url": "https://canalsolar.com.br/feed/", "origem": "BR"},
         ],

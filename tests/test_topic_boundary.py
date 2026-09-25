@@ -85,3 +85,15 @@ class CarbonMarketTermsTests(unittest.TestCase):
     def test_unrelated_green_news_still_blocked(self):
         for title in ["Shopping distribui mudas no Dia da Árvore", "Rede de farmácias abre 50 lojas"]:
             self.assertFalse(verificar_tema({"titulo": title, "resumo": ""}, "carbono")[0], title)
+
+
+class BatteryTechnologyTermsTests(unittest.TestCase):
+    def test_emerging_technology_headlines_reach_the_ranking(self):
+        for title in ["Form Energy Secures $270 Million Credit Facility to Scale Iron-Air Battery Manufacturing",
+                      "Silicon anode startup opens pilot line",
+                      "LMFP cathode maker signs supply deal",
+                      "Long-duration storage project reaches financial close"]:
+            self.assertTrue(verificar_tema({"titulo": title, "resumo": ""}, "baterias")[0], title)
+
+    def test_unrelated_headline_still_blocked(self):
+        self.assertFalse(verificar_tema({"titulo": "Rede de farmácias abre 50 lojas", "resumo": ""}, "baterias")[0])

@@ -83,6 +83,8 @@ só vê a lista curta de finalistas.
      decisões de governo e Congresso) vem antes de tudo: se houver finalista
      assim no tópico/geografia, ao menos um deve ser escolhido, mesmo que
      ocupe a vaga de uma fonte máxima sobre mercado voluntário;
+   - em baterias no exterior, preço/custo e tecnologia têm o mesmo peso: com
+     duas vagas e finalistas bons dos dois tipos, escolha um de cada;
    - `fonte_maxima: true` vence fontes comuns entre elegíveis, e toda fonte
      máxima elegível deve ser escolhida enquanto houver vaga;
    - depois das fontes máximas, `prioritaria: true` (veículo do catálogo ou

@@ -11,7 +11,11 @@ def texto_limpo(texto):
 
 PADROES = {
     "data_center": r"\b(data[ -]?cent(?:er|re)s?|centros? de dados|red ata|redata|hyperscal\w*)\b",
-    "baterias": r"\b(bateri\w*|batter\w*|bess|armazenamento|energy storage|catl|byd|eve energy|gotion|hithium|solid.state|sodium.ion)\b",
+    # Componentes e químicas também são evidência: "Silicon anode startup opens
+    # pilot line" não diz "battery".
+    "baterias": (r"\b(bateri\w*|batter\w*|bess|armazenamento|energy storage|catl|byd|eve energy|"
+                 r"gotion|hithium|solid.state|sodium.ion|anod\w*|catod\w*|cathod\w*|lfp|lmfp|"
+                 r"iron.air|ferro.ar|long.duration)\b"),
     # Termos do mercado de carbono que não contêm "carbono": projetos de
     # reflorestamento e REDD vendem créditos (ex.: Mombak e o fundo do BNDES).
     "carbono": (r"\b(carbon\w*|emiss\w*|emission\w*|sbce|ets|cap.and.trade|reflorest\w*|"
