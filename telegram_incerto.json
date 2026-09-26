@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/sustainable-data-center-backup-power-is-a-strategy-not-a-battery-chemistry/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/sustainable-data-center-backup-power-is-a-strategy-not-a-battery-chemistry/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/sustainable-data-center-backup-power-is-a-strategy-not-a-battery-chemistry/",
+    "origem": "INT",
+    "resumo": "<p>Data centers continue to walk the tightrope of meeting burgeoning power demands, while also fulfilling sustainability aims and obligations</p>",
+    "titulo": "Sponsored: Sustainable data center backup power is a strategy, not a battery chemistry",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
