@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/virtus-secures-245bn-in-financing-for-data-center-build-out/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/virtus-secures-245bn-in-financing-for-data-center-build-out/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/virtus-secures-245bn-in-financing-for-data-center-build-out/",
+    "origem": "INT",
+    "resumo": "<p>Funds to fuel projects in the UK and mainland Europe</p>",
+    "titulo": "Virtus secures £2.45bn in financing for data center build-out",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
