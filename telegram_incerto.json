@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/goodman-withdraws-application-for-90mw-data-center-campus-in-sydney-australia/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/goodman-withdraws-application-for-90mw-data-center-campus-in-sydney-australia/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/goodman-withdraws-application-for-90mw-data-center-campus-in-sydney-australia/",
+    "origem": "INT",
+    "resumo": "<p>Company says data center policy and regulatory environment had “evolved significantly”</p>",
+    "titulo": "Goodman withdraws application for 90MW data center campus in Sydney, Australia",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
