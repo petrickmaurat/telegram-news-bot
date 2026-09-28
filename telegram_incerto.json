@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://megawhat.uol.com.br/economia-e-politica/empresas/weg-amplia-producao-de-geradores-diante-da-demanda-de-data-centers-nos-eua/"
+  ],
+  "item": {
+    "aliases": [
+      "https://megawhat.uol.com.br/economia-e-politica/empresas/weg-amplia-producao-de-geradores-diante-da-demanda-de-data-centers-nos-eua/"
+    ],
+    "fonte": "MegaWhat",
+    "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/weg-amplia-producao-de-geradores-diante-da-demanda-de-data-centers-nos-eua/",
+    "origem": "BR",
+    "resumo": "<div><figure><img alt=\"\" src=\"https://megawhat.uol.com.br/wp-content/uploads/2024/05/Baterias-Copel-WEG-PeD-Armazenamento.jpg\" /><figcaption>Baterias da WEG em projeto da Copel</figcaption></figure></div><p>A WEG anunciou nesta segunda-feira, 28 de setembro, um investimento de US$ 165 milhões, cerca de R$ 840 milhões, para ampliar a capacidade de produção de geradores na América do Norte. Segundo a companhia, o projeto busca atender ao crescimento da demanda por soluções de geração de energia para aplicações críticas nos Estados Unidos, especialmente [&#8230;]</p>\n<p>O post <a href=\"https://megawhat.uol.com.br/economia-e-politica/empresas/weg-amplia-producao-de-geradores-diante-da-demanda-de-data-centers-nos-eua/\">WEG amplia produção de geradores diante da demanda de data centers nos EUA</a> apareceu primeiro em <a href=\"https://megawhat.uol.com.br\">MegaWhat</a>.</p>",
+    "titulo": "WEG amplia produção de geradores diante da demanda de data centers nos EUA",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
