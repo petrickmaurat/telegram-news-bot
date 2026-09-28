@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/analysis/europes-data-center-efficiency-labeling-scheme-needs-nuance-industry-leaders-warn/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/analysis/europes-data-center-efficiency-labeling-scheme-needs-nuance-industry-leaders-warn/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/analysis/europes-data-center-efficiency-labeling-scheme-needs-nuance-industry-leaders-warn/",
+    "origem": "INT",
+    "resumo": "<p>Cautious welcome for European Commission labeling plans</p>",
+    "titulo": "Europe's data center efficiency labeling scheme needs nuance, industry leaders warn",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
