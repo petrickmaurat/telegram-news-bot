@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://megawhat.uol.com.br/politica-energetica/excluir-gas-do-redata-pode-elevar-custo-da-conta-de-luz-em-r-7-bi-diz-abraget/"
+  ],
+  "item": {
+    "aliases": [
+      "https://megawhat.uol.com.br/politica-energetica/excluir-gas-do-redata-pode-elevar-custo-da-conta-de-luz-em-r-7-bi-diz-abraget/"
+    ],
+    "fonte": "MegaWhat",
+    "link": "https://megawhat.uol.com.br/politica-energetica/excluir-gas-do-redata-pode-elevar-custo-da-conta-de-luz-em-r-7-bi-diz-abraget/",
+    "origem": "BR",
+    "resumo": "<div><figure><img alt=\"Data Center\" src=\"https://uploads.megawhat.energy/uploads/2026/01/Data-Centers.jpg\" /><figcaption>Data Centers</figcaption></figure></div><p>A Associação Brasileira de Geradoras Termelétricas (Abraget) demonstrou preocupação com a possibilidade de o decreto que regulamentará o Regime Especial de Tributação para Serviços de Data Centers (Redata) ser publicado sem a inclusão do gás natural entre as fontes de energia elegíveis aos projetos. Isso porque, segundo a entidade, o gás natural oferece geração firme, [&#8230;]</p>\n<p>O post <a href=\"https://megawhat.uol.com.br/politica-energetica/excluir-gas-do-redata-pode-elevar-custo-da-conta-de-luz-em-r-7-bi-diz-abraget/\">Excluir gás do Redata pode elevar custo da conta de luz em R$ 7 bi, diz Abraget</a> apareceu primeiro em <a href=\"https://megawhat.uol.com.br\">MegaWhat</a>.</p>",
+    "titulo": "Excluir gás do Redata pode elevar custo da conta de luz em R$ 7 bi, diz Abraget",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
