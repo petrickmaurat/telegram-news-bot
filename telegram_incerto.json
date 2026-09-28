@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/marketwatch/beyond-power-availability-what-makes-a-data-center-project-power-ready/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/marketwatch/beyond-power-availability-what-makes-a-data-center-project-power-ready/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/marketwatch/beyond-power-availability-what-makes-a-data-center-project-power-ready/",
+    "origem": "INT",
+    "resumo": "<p>The question has evolved from \"Is there power?\" to \"Is there a credible project behind the request, and can that power actually be delivered when the project needs it?\"</p>",
+    "titulo": "Sponsored: Beyond power availability: What makes a data center project power-ready",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
