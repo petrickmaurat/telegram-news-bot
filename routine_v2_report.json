@@ -1,16 +1,16 @@
 {
   "cached": 0,
   "collection": {
-    "entries": 9907,
+    "entries": 9277,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
       "https://tiinside.com.br/feed/"
     ],
-    "failure_ratio": 0.0095,
+    "failure_ratio": 0.0094,
     "invalid": 1,
-    "ok": 208,
-    "queries": 211
+    "ok": 210,
+    "queries": 213
   },
   "counts": {
     "baterias": {
@@ -27,116 +27,110 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202609251023.82268619394@smtp-relay.mailin.fr>",
-    "sent_at": 1790331830.8608003,
-    "status": "enviado"
-  },
-  "generated_at": 1790331786.5687802,
+  "generated_at": 1790591068.561253,
   "google_links_pending": 0,
-  "needs_evaluation": 1186,
+  "needs_evaluation": 599,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 711,
-      "insuficiente": 441,
-      "trecho_disponivel": 34
+      "artigo_completo": 343,
+      "insuficiente": 236,
+      "trecho_disponivel": 20
     },
     "selected": {
-      "artigo_completo": 10,
-      "trecho_limitado_final": 2
+      "artigo_completo": 12
     }
   },
-  "request_sha256": "47f8667035f36f3135328abde8b2f80eb94d213ef274d2766ea77b1fd8251757",
+  "request_sha256": "c3464c68cf285a0bad5bfb9d3ca4432b7a97b5fe019c34b76cff5640b459f518",
   "selected": [
     {
-      "assunto": "sbce-intervencao-governo",
-      "id": "2aa3e836c754b349d1d0",
-      "link": "https://c-level.folha.uol.com.br/economia-sustentavel/2026/09/intervencao-do-governo-no-mercado-de-carbono-deve-ser-minima-diz-ceo-da-mombak.shtml",
-      "titulo": "Intervenção do governo no mercado de carbono deve ser mínima, diz CEO da Mombak",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "sbce-povos-tradicionais",
-      "id": "46af76a0ddd7d6a559a8",
-      "link": "https://mpf.mp.br/o-mpf/unidades/procuradoria-geral-da-republica-pgr/noticias/mercado-de-carbono-mpf-reafirma-o-papel-da-instituicao-e-defende-seu-historico-de-atuacoes-na-protecao-de-povos-e-comunidades-tradicionais",
-      "titulo": "Mercado de carbono: MPF reafirma o papel da instituição e defende seu histórico de atuações na proteção de povos e comunidades tradicionais",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "piloto-comercio-emissoes-rio",
-      "id": "7a8bb45bd44f0df1ab15",
-      "link": "https://eco-business.com/news/after-gujarat-win-an-emissions-trading-experiment-heads-to-rio/",
-      "titulo": "After Gujarat win, an emissions trading experiment heads to Rio",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "nz-ets-florestal",
-      "id": "30fd72575c415b0a2845",
-      "link": "https://qcintel.com/carbon/article/nz-awards-14-exotic-forestry-permits-under-first-ets-ballot-73570.html",
-      "titulo": "NZ awards 14 'exotic' forestry permits under first ETS ballot",
-      "topico": "carbono"
-    },
-    {
       "assunto": "leilao-baterias",
-      "id": "46ce307b588856764f4b",
-      "link": "https://valor.globo.com/empresas/noticia/2026/09/24/leilao-de-bateria-ja-move-mercado-mas-setor-busca-visao-de-longo-prazo.ghtml",
-      "titulo": "Leilão de bateria já move mercado, mas setor busca visão de longo prazo",
+      "id": "51f0b946ca823d383ff3",
+      "link": "https://megawhat.uol.com.br/armazenamento/baterias-podem-reduzir-curtailment-em-ate-50-diz-ons/",
+      "titulo": "Baterias podem reduzir curtailment em até 50%, diz ONS",
       "topico": "baterias"
     },
     {
-      "assunto": "armazenamento-hidreletrico-reversivel",
-      "id": "3f4fd655919b60adaded",
-      "link": "https://braziljournal.com/play/copel-quer-usar-hidreletricas-como-baterias-e-levara-projetos-ao-governo/",
-      "titulo": "Copel quer usar hidrelétricas como baterias, e levará projetos ao Governo",
+      "assunto": "weg-fabrica-baterias",
+      "id": "c83479cc7929a518703c",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/weg-anuncia-investimento-para-dobrar-capacidade-da-fabrica-de-baterias-em-sc/",
+      "titulo": "WEG anuncia investimento para dobrar capacidade da fábrica de baterias em SC",
       "topico": "baterias"
     },
     {
-      "assunto": "bateria-sodio-ion",
-      "id": "1ea8c3ee0d3afc0f0198",
-      "link": "https://finance.yahoo.com/energy/articles/hithium-launches-4-mwh-sodium-143000374.html",
-      "titulo": "HiTHIUM Launches 4 MWh Sodium-Ion Energy Storage System with New 785 Ah Cell",
+      "assunto": "investimento-fabricacao-baterias",
+      "id": "361fa570070bcdd5e3ca",
+      "link": "https://markets.ft.com/data/announce/detail?dockey=600-202609280500BIZWIRE_USPRX____20260928_BW099425-1",
+      "titulo": "Amprius Secures $75 Million Grant for American High-Energy Density Battery Production – Company Announcement",
       "topico": "baterias"
     },
     {
-      "assunto": "bateria-estado-solido",
-      "id": "28d5fbb99969173db380",
-      "link": "https://news.metal.com/en/newscontent/104133997-solid-state-battery-weekly-li2s-production-line-construction-accelerates-while-cost-contradiction-remains-unresolved",
-      "titulo": "Solid-State Battery Weekly ：Li2S Production Line Construction Accelerates While Cost Contradiction Remains Unresolved",
+      "assunto": "carregamento-rapido-baterias",
+      "id": "833cebb9e96545b49099",
+      "link": "https://estadao.com.br/jornal-do-carro/geely-desafia-byd-com-carregador-de-2250-kw-e-recarga-de-10-a-70-em-4minutos/",
+      "titulo": "Geely desafia BYD com carregador de 2.250 kW e recarga de 10% a 70% em 4minutos",
       "topico": "baterias"
+    },
+    {
+      "assunto": "titularidade-credito-carbono",
+      "id": "a4cdc918a712d13a7256",
+      "link": "https://conjur.com.br/2026-set-25/quem-e-o-dono-do-credito-de-carbono/",
+      "titulo": "Quem é o dono do crédito de carbono? Titularidade nos contratos de arrendamento e parceria",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "mombak-financiamento-carbono",
+      "id": "9fc2e77c59e358a545ac",
+      "link": "https://clickpetroleoegas.com.br/mombak-fundo-reflorestamento-amazonia-salesforce-rss94/",
+      "titulo": "Startup brasileira que já plantou quase 15 milhões de árvores na Amazônia abre novo fundo, mira US$ 150 milhões e fecha acordo de créditos de carbono com a Salesforce",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "fraude-credito-carbono",
+      "id": "657c0ab442b6b715ecde",
+      "link": "https://acritica.net/agro/credito-carbono-pecuaria-reportagem-premiada-ifaj-croacia-2026/",
+      "titulo": "Reportagem premiada na Croácia mostra R$ 3,5 milhões de crédito de carbono pagos a pecuaristas",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "rggi-virginia",
+      "id": "f7496b1af278143318e3",
+      "link": "https://yahoo.com/news/us/articles/virginia-rejoins-carbon-market-utilities-001100220.html",
+      "titulo": "Virginia rejoins carbon market as utilities seek $13 monthly charge after allowance prices surge",
+      "topico": "carbono"
     },
     {
       "assunto": "redata",
-      "id": "9c50123b9b2a02a8c224",
-      "link": "https://canalenergia.com.br/noticias/53356008/lula-sanciona-sem-vetos-a-lei-do-redata",
-      "titulo": "Lula sanciona sem vetos a Lei do Redata",
+      "id": "2210aa7bfcab64c3071a",
+      "link": "https://eixos.com.br/gas-natural/fazenda-pressiona-para-que-lula-assine-decreto-do-redata-sem-gas/",
+      "titulo": "Fazenda pressiona para que Lula assine decreto do Redata sem gás",
       "topico": "data_center"
     },
     {
-      "assunto": "aneel-acesso-transmissao-dc",
-      "id": "64e2a6b3cbbbb5f5c99a",
-      "link": "https://agenciainfra.com/blog/proposta-para-novas-regras-de-transmissao-pode-beneficiar-data-center/",
-      "titulo": "Proposta para novas regras de transmissão pode beneficiar data center",
+      "assunto": "impacto-energetico-data-centers",
+      "id": "2020cddd391b4312a7f9",
+      "link": "https://valor.globo.com/brasil/noticia/2026/09/28/governo-teme-que-data-centers-puxem-alta-da-conta-de-luz.ghtml",
+      "titulo": "Governo teme que data centers puxem alta da conta de luz",
       "topico": "data_center"
     },
     {
-      "assunto": "rn-licenciamento-ambiental-dc",
-      "id": "6616abb70db762d7d53e",
-      "link": "https://g1.globo.com/rn/rio-grande-do-norte/videos-bom-dia-rn/video/data-centers-rn-aprova-regras-para-licenciamento-ambiental-14986333.ghtml",
-      "titulo": "Data centers: RN aprova regras para licenciamento ambiental",
+      "assunto": "beneficios-fiscais-data-centers",
+      "id": "85de053ec7a92c42fd20",
+      "link": "https://justicaemfoco.com.br/noticias/lei-complementar-237-facilita-corte-impostos-data-centers-programas-contra-cancer",
+      "titulo": "Lei Complementar 237 facilita corte de impostos para Data Centers e programas contra câncer",
       "topico": "data_center"
     },
     {
-      "assunto": "maryland-executivo-data-centers",
-      "id": "4dff70b7d9123bd8fb72",
-      "link": "https://govtech.com/policy/maryland-governor-draws-new-boundaries-for-data-centers",
-      "titulo": "Maryland Governor Draws New Boundaries for Data Centers",
+      "assunto": "virginia-executive-order-data-centers",
+      "id": "f8aa69004066bdcc8067",
+      "link": "https://wsls.com/video/news/2026/09/25/what-virginias-new-ai-and-data-center-executive-order-means-now-and-what-comes-next/",
+      "titulo": "What Virginia’s New AI and Data Center Executive Order Means Now and What Comes Next",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 25/09 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 28/09 (manhã)",
   "truncated": {}
 }
