@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/re-engineering-silicon-and-system-design-for-ai-era-workloads/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/re-engineering-silicon-and-system-design-for-ai-era-workloads/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/re-engineering-silicon-and-system-design-for-ai-era-workloads/",
+    "origem": "INT",
+    "resumo": "<p>What does it take to deliver the silicon powering today and tomorrow’s data centers?</p>",
+    "titulo": "Re-engineering silicon and system design for AI-era workloads",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
