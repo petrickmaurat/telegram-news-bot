@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://megawhat.uol.com.br/planejamento/acesso-a-transmissao-exige-mais-flexibilidade-para-data-centers-diz-psr/"
+  ],
+  "item": {
+    "aliases": [
+      "https://megawhat.uol.com.br/planejamento/acesso-a-transmissao-exige-mais-flexibilidade-para-data-centers-diz-psr/"
+    ],
+    "fonte": "MegaWhat",
+    "link": "https://megawhat.uol.com.br/planejamento/acesso-a-transmissao-exige-mais-flexibilidade-para-data-centers-diz-psr/",
+    "origem": "BR",
+    "resumo": "<div><figure><img alt=\"Vista aérea do novo campus de data centers de IA da Microsoft em Mt Pleasant, Wisconsin.\" src=\"https://uploads.megawhat.energy/uploads/2026/09/Aerial-view-of-Microsofts-new-AI-datacenter-campus-in-Mt-Pleasant-Wisconsin-microsoft.jpg\" /><figcaption>Vista aérea do novo campus de data centers de IA da Microsoft em Mt Pleasant, Wisconsin.</figcaption></figure></div><p>A metodologia de acesso à rede de transmissão pode evoluir para incorporar mais flexibilidade no atendimento a grandes consumidores, como data centers, considerando alternativas como faixas de conexão, acesso sujeito a cortes previamente definidos e antecipação de reforços custeada pelo próprio interessado, segundo Rafael Kelman, diretor executivo da PSR. “Hoje, flexibilidade tem que ser pensada [&#8230;]</p>\n<p>O post <a href=\"https://megawhat.uol.com.br/planejamento/acesso-a-transmissao-exige-mais-flexibilidade-para-data-centers-diz-psr/\">Acesso à transmissão exige mais flexibilidade para data centers, diz PSR</a> apareceu primeiro em <a href=\"https://megawhat.uol.com.br\">MegaWhat</a>.</p>",
+    "titulo": "Acesso à transmissão exige mais flexibilidade para data centers, diz PSR",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
