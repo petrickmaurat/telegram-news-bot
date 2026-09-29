@@ -1,7 +1,7 @@
 {
-  "cached": 0,
+  "cached": 224,
   "collection": {
-    "entries": 9277,
+    "entries": 9383,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,115 +27,110 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202609281025.51648052526@smtp-relay.mailin.fr>",
-    "sent_at": 1790591110.5131845,
-    "status": "enviado"
-  },
-  "generated_at": 1790591068.561253,
+  "generated_at": 1790677677.7973993,
   "google_links_pending": 0,
-  "needs_evaluation": 599,
+  "needs_evaluation": 459,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 343,
-      "insuficiente": 236,
-      "trecho_disponivel": 20
+      "artigo_completo": 396,
+      "insuficiente": 274,
+      "trecho_disponivel": 13
     },
     "selected": {
       "artigo_completo": 12
     }
   },
-  "request_sha256": "c3464c68cf285a0bad5bfb9d3ca4432b7a97b5fe019c34b76cff5640b459f518",
+  "request_sha256": "ab36977542340c31d262cfc1eab297ec8694e1c2288ee2bb0695e4275aeacbdf",
   "selected": [
     {
       "assunto": "leilao-baterias",
-      "id": "51f0b946ca823d383ff3",
-      "link": "https://megawhat.uol.com.br/armazenamento/baterias-podem-reduzir-curtailment-em-ate-50-diz-ons/",
-      "titulo": "Baterias podem reduzir curtailment em até 50%, diz ONS",
+      "id": "5dde993022e09ea9d854",
+      "link": "https://megawhat.uol.com.br/armazenamento/risco-de-arrecadacao-divide-agentes-em-discussao-do-edital-do-leilao-de-baterias/",
+      "titulo": "Risco de arrecadação divide agentes em discussão do edital do leilão de baterias",
       "topico": "baterias"
     },
     {
       "assunto": "weg-fabrica-baterias",
-      "id": "c83479cc7929a518703c",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/weg-anuncia-investimento-para-dobrar-capacidade-da-fabrica-de-baterias-em-sc/",
-      "titulo": "WEG anuncia investimento para dobrar capacidade da fábrica de baterias em SC",
+      "id": "4a637c8f38d2859d2e07",
+      "link": "https://aciara.com.br/weg-investe-330-mi-em-fabrica-de-baterias/",
+      "titulo": "WEG investe R$ 330 mi em fábrica de baterias",
       "topico": "baterias"
     },
     {
-      "assunto": "investimento-fabricacao-baterias",
-      "id": "361fa570070bcdd5e3ca",
-      "link": "https://markets.ft.com/data/announce/detail?dockey=600-202609280500BIZWIRE_USPRX____20260928_BW099425-1",
-      "titulo": "Amprius Secures $75 Million Grant for American High-Energy Density Battery Production – Company Announcement",
+      "assunto": "bateria-sodio-ion-china",
+      "id": "a35a568c31f6fb48e667",
+      "link": "https://news.metal.com/en/newscontent/104136599-about-3-billion-yuan-china-bak-new-energys-12-gwh-sodium-ion-battery-project-lands-in-nanjing-jiangsu",
+      "titulo": "About 3 billion yuan! China BAK New Energy’s 12 GWh sodium-ion battery project lands in Nanjing, Jiangsu",
       "topico": "baterias"
     },
     {
-      "assunto": "carregamento-rapido-baterias",
-      "id": "833cebb9e96545b49099",
-      "link": "https://estadao.com.br/jornal-do-carro/geely-desafia-byd-com-carregador-de-2250-kw-e-recarga-de-10-a-70-em-4minutos/",
-      "titulo": "Geely desafia BYD com carregador de 2.250 kW e recarga de 10% a 70% em 4minutos",
+      "assunto": "vw-gotion-jv-europa-africa",
+      "id": "2d976c78dc37f9263af5",
+      "link": "https://just-auto.com/news/volkswagen-powerco-gotion-three-battery-ventures/",
+      "titulo": "Volkswagen, PowerCo and Gotion plan three battery ventures",
       "topico": "baterias"
     },
     {
-      "assunto": "titularidade-credito-carbono",
-      "id": "a4cdc918a712d13a7256",
-      "link": "https://conjur.com.br/2026-set-25/quem-e-o-dono-do-credito-de-carbono/",
-      "titulo": "Quem é o dono do crédito de carbono? Titularidade nos contratos de arrendamento e parceria",
+      "assunto": "sbce",
+      "id": "e9b2afab230dd0abf380",
+      "link": "https://capitalreset.uol.com.br/carbono/mercado-regulado-de-carbono/eleicao-coloca-futuro-do-mercado-regulado-de-carbono-em-jogo/",
+      "titulo": "Eleição coloca futuro do mercado regulado de carbono em jogo",
       "topico": "carbono"
     },
     {
-      "assunto": "mombak-financiamento-carbono",
-      "id": "9fc2e77c59e358a545ac",
-      "link": "https://clickpetroleoegas.com.br/mombak-fundo-reflorestamento-amazonia-salesforce-rss94/",
-      "titulo": "Startup brasileira que já plantou quase 15 milhões de árvores na Amazônia abre novo fundo, mira US$ 150 milhões e fecha acordo de créditos de carbono com a Salesforce",
+      "assunto": "creditos-carbono-seguranca-juridica",
+      "id": "e20a456a08d86b4012e9",
+      "link": "https://migalhas.com.br/coluna/migalhas-notariais-e-registrais/454130/sem-lastro-valor-ou-seguranca-creditos-de-carbono-no-brasil-tem-riscos",
+      "titulo": "Sem lastro,valor ou segurança,créditos de carbono no Brasil têm riscos",
       "topico": "carbono"
     },
     {
-      "assunto": "fraude-credito-carbono",
-      "id": "657c0ab442b6b715ecde",
-      "link": "https://acritica.net/agro/credito-carbono-pecuaria-reportagem-premiada-ifaj-croacia-2026/",
-      "titulo": "Reportagem premiada na Croácia mostra R$ 3,5 milhões de crédito de carbono pagos a pecuaristas",
+      "assunto": "climate-week-forest-carbon",
+      "id": "2a302f73b7566222346b",
+      "link": "https://carbon-pulse.com/554647/",
+      "titulo": "LATAM Roundup: Forest carbon, Article 6 shine at Climate Week NYC",
       "topico": "carbono"
     },
     {
-      "assunto": "rggi-virginia",
-      "id": "f7496b1af278143318e3",
-      "link": "https://yahoo.com/news/us/articles/virginia-rejoins-carbon-market-utilities-001100220.html",
-      "titulo": "Virginia rejoins carbon market as utilities seek $13 monthly charge after allowance prices surge",
+      "assunto": "eu-ets-prazo-devolucao",
+      "id": "9fe20cdb8faf18b5e772",
+      "link": "https://reedsmith.com/our-insights/blogs/viewpoints/102o3pt/eu-ets-deadline-to-surrender-emissions-allowances-draws-near/",
+      "titulo": "EU ETS: deadline to surrender emissions allowances draws near",
       "topico": "carbono"
     },
     {
       "assunto": "redata",
-      "id": "2210aa7bfcab64c3071a",
-      "link": "https://eixos.com.br/gas-natural/fazenda-pressiona-para-que-lula-assine-decreto-do-redata-sem-gas/",
-      "titulo": "Fazenda pressiona para que Lula assine decreto do Redata sem gás",
+      "id": "68f26f085f7e50d8efa7",
+      "link": "https://megawhat.uol.com.br/politica-energetica/excluir-gas-do-redata-pode-elevar-custo-da-conta-de-luz-em-r-7-bi-diz-abraget/",
+      "titulo": "Excluir gás do Redata pode elevar custo da conta de luz em R$ 7 bi, diz Abraget",
       "topico": "data_center"
     },
     {
-      "assunto": "impacto-energetico-data-centers",
-      "id": "2020cddd391b4312a7f9",
-      "link": "https://valor.globo.com/brasil/noticia/2026/09/28/governo-teme-que-data-centers-puxem-alta-da-conta-de-luz.ghtml",
-      "titulo": "Governo teme que data centers puxem alta da conta de luz",
+      "assunto": "sp-dc-capacidade",
+      "id": "2d91a28bec1b728088be",
+      "link": "https://agenciainfra.com/blog/capacidade-de-data-centers-em-sao-paulo-cresce-91-em-um-ano/",
+      "titulo": "Capacidade de data centers em São Paulo cresce 91% em um ano",
       "topico": "data_center"
     },
     {
-      "assunto": "beneficios-fiscais-data-centers",
-      "id": "85de053ec7a92c42fd20",
-      "link": "https://justicaemfoco.com.br/noticias/lei-complementar-237-facilita-corte-impostos-data-centers-programas-contra-cancer",
-      "titulo": "Lei Complementar 237 facilita corte de impostos para Data Centers e programas contra câncer",
+      "assunto": "dc-equipamentos-fpso",
+      "id": "cbe5db3ea9292f4f2cd9",
+      "link": "https://eixos.com.br/videos-e-podcasts/ao-vivo/competicao-por-equipamentos-com-data-centers-pressiona-novos-projetos-de-fpsos-diz-mastrangelo/",
+      "titulo": "Competição por equipamentos com data centers pressiona novos projetos de FPSOs, diz Mastrangelo",
       "topico": "data_center"
     },
     {
-      "assunto": "virginia-executive-order-data-centers",
-      "id": "f8aa69004066bdcc8067",
-      "link": "https://wsls.com/video/news/2026/09/25/what-virginias-new-ai-and-data-center-executive-order-means-now-and-what-comes-next/",
-      "titulo": "What Virginia’s New AI and Data Center Executive Order Means Now and What Comes Next",
+      "assunto": "archbald-power-plant-dc",
+      "id": "0bc8a12be33588ed3246",
+      "link": "https://thetimes-tribune.com/2026/09/28/archbald-to-hear-more-info-on-power-plant-seven-data-centers-this-week/",
+      "titulo": "Archbald to hear more info on power plant, seven data centers this week",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 28/09 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 29/09 (manhã)",
   "truncated": {}
 }
