@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://convergenciadigital.com.br/carreira/curso-abre-35-vagas-para-segunda-turma-gratuita-de-data-center/"
+  ],
+  "item": {
+    "aliases": [
+      "https://convergenciadigital.com.br/carreira/curso-abre-35-vagas-para-segunda-turma-gratuita-de-data-center/"
+    ],
+    "fonte": "ConvergenciaDigital",
+    "link": "https://convergenciadigital.com.br/carreira/curso-abre-35-vagas-para-segunda-turma-gratuita-de-data-center/",
+    "origem": "BR",
+    "resumo": "Programa intensivo da Generation Brasil de 14 semanas prepara pessoas sem experiência para iniciar carreira em tecnologia; iniciativa reúne gigantes do setor como Equinix, Cisco Foundation, ODATA, Vertiv e Cummins.",
+    "titulo": "Curso abre 35 vagas para segunda turma gratuita de Data Center",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
