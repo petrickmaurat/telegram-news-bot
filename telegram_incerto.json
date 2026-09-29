@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/the-faster-we-listen-the-faster-we-can-move/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/the-faster-we-listen-the-faster-we-can-move/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/the-faster-we-listen-the-faster-we-can-move/",
+    "origem": "INT",
+    "resumo": "<p>“The data center industry doesn't have a permitting problem or a communications problem. It has a trust problem”</p>",
+    "titulo": "Sponsored: The faster we listen, the faster we can move",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
