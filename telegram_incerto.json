@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://telesintese.com.br/brasil-deve-dobrar-capacidade-de-data-centers-ate-2030-diz-kanamaru/"
+  ],
+  "item": {
+    "aliases": [
+      "https://telesintese.com.br/brasil-deve-dobrar-capacidade-de-data-centers-ate-2030-diz-kanamaru/"
+    ],
+    "fonte": "TeleSíntese",
+    "link": "https://telesintese.com.br/brasil-deve-dobrar-capacidade-de-data-centers-ate-2030-diz-kanamaru/",
+    "origem": "BR",
+    "resumo": "<p>Em entrevista, Senior advisor do BCG relaciona expansão da infraestrutura ao ReData, à soberania digital e demanda por processamento no País.</p>\n<p>O post <a href=\"https://telesintese.com.br/brasil-deve-dobrar-capacidade-de-data-centers-ate-2030-diz-kanamaru/\">Brasil deve dobrar capacidade de data centers até 2030, diz Kanamaru</a> apareceu primeiro em <a href=\"https://telesintese.com.br\">TeleSíntese</a>.</p>",
+    "titulo": "Brasil deve dobrar capacidade de data centers até 2030, diz Kanamaru",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
