@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/marketwatch/the-pace-of-power-has-changed-future-proofing-power-distribution-in-the-ai-era/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/marketwatch/the-pace-of-power-has-changed-future-proofing-power-distribution-in-the-ai-era/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/marketwatch/the-pace-of-power-has-changed-future-proofing-power-distribution-in-the-ai-era/",
+    "origem": "INT",
+    "resumo": "<p>Mark Swift of Starline, a Legrand brand, on how data centers should update their equipment to keep pace with the AI demands of tomorrow</p>",
+    "titulo": "Sponsored: The pace of power has changed: Future-proofing power distribution in the AI era",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
