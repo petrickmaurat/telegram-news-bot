@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/plans-unveiled-for-largest-data-center-in-italy/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/plans-unveiled-for-largest-data-center-in-italy/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/plans-unveiled-for-largest-data-center-in-italy/",
+    "origem": "INT",
+    "resumo": "<p>An unnamed company has already submitted plans</p>",
+    "titulo": "Plans unveiled for ‘largest’ data center in Italy",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
