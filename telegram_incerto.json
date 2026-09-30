@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://convergenciadigital.com.br/mercado/trump-sai-em-defesa-da-autorregulacao-da-ia-pelas-empresas-dos-eua-e-dos-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://convergenciadigital.com.br/mercado/trump-sai-em-defesa-da-autorregulacao-da-ia-pelas-empresas-dos-eua-e-dos-data-centers/"
+    ],
+    "fonte": "ConvergenciaDigital",
+    "link": "https://convergenciadigital.com.br/mercado/trump-sai-em-defesa-da-autorregulacao-da-ia-pelas-empresas-dos-eua-e-dos-data-centers/",
+    "origem": "BR",
+    "resumo": "Presidente dos Estados Unidos, Donald Trump, disse que vai criar um comitê, com 10 pessoas, para supervisionar a IA. Também rejeitou a possibilidade de trabalhar com a China. \"Nós somos os melhores e quero continuar assim\", disse.",
+    "titulo": "Trump sai em defesa da autorregulação da IA pelas empresas dos EUA e dos data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
