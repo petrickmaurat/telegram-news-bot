@@ -1,7 +1,7 @@
 {
-  "cached": 224,
+  "cached": 493,
   "collection": {
-    "entries": 9383,
+    "entries": 10001,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,115 +27,110 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202609291028.62630680590@smtp-relay.mailin.fr>",
-    "sent_at": 1790677730.4312868,
-    "status": "enviado"
-  },
-  "generated_at": 1790677677.7973993,
+  "generated_at": 1790764036.8091981,
   "google_links_pending": 0,
-  "needs_evaluation": 459,
+  "needs_evaluation": 474,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 396,
-      "insuficiente": 274,
-      "trecho_disponivel": 13
+      "artigo_completo": 560,
+      "insuficiente": 381,
+      "trecho_disponivel": 26
     },
     "selected": {
       "artigo_completo": 12
     }
   },
-  "request_sha256": "ab36977542340c31d262cfc1eab297ec8694e1c2288ee2bb0695e4275aeacbdf",
+  "request_sha256": "e6303895a79bef233e5fdb99231ac37762c02a3300e8c39f6919f0fb32cdc8e3",
   "selected": [
     {
-      "assunto": "leilao-baterias",
-      "id": "5dde993022e09ea9d854",
-      "link": "https://megawhat.uol.com.br/armazenamento/risco-de-arrecadacao-divide-agentes-em-discussao-do-edital-do-leilao-de-baterias/",
-      "titulo": "Risco de arrecadação divide agentes em discussão do edital do leilão de baterias",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "weg-fabrica-baterias",
-      "id": "4a637c8f38d2859d2e07",
-      "link": "https://aciara.com.br/weg-investe-330-mi-em-fabrica-de-baterias/",
-      "titulo": "WEG investe R$ 330 mi em fábrica de baterias",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "bateria-sodio-ion-china",
-      "id": "a35a568c31f6fb48e667",
-      "link": "https://news.metal.com/en/newscontent/104136599-about-3-billion-yuan-china-bak-new-energys-12-gwh-sodium-ion-battery-project-lands-in-nanjing-jiangsu",
-      "titulo": "About 3 billion yuan! China BAK New Energy’s 12 GWh sodium-ion battery project lands in Nanjing, Jiangsu",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "vw-gotion-jv-europa-africa",
-      "id": "2d976c78dc37f9263af5",
-      "link": "https://just-auto.com/news/volkswagen-powerco-gotion-three-battery-ventures/",
-      "titulo": "Volkswagen, PowerCo and Gotion plan three battery ventures",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "sbce",
-      "id": "e9b2afab230dd0abf380",
-      "link": "https://capitalreset.uol.com.br/carbono/mercado-regulado-de-carbono/eleicao-coloca-futuro-do-mercado-regulado-de-carbono-em-jogo/",
-      "titulo": "Eleição coloca futuro do mercado regulado de carbono em jogo",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "creditos-carbono-seguranca-juridica",
-      "id": "e20a456a08d86b4012e9",
-      "link": "https://migalhas.com.br/coluna/migalhas-notariais-e-registrais/454130/sem-lastro-valor-ou-seguranca-creditos-de-carbono-no-brasil-tem-riscos",
-      "titulo": "Sem lastro,valor ou segurança,créditos de carbono no Brasil têm riscos",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "climate-week-forest-carbon",
-      "id": "2a302f73b7566222346b",
-      "link": "https://carbon-pulse.com/554647/",
-      "titulo": "LATAM Roundup: Forest carbon, Article 6 shine at Climate Week NYC",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "eu-ets-prazo-devolucao",
-      "id": "9fe20cdb8faf18b5e772",
-      "link": "https://reedsmith.com/our-insights/blogs/viewpoints/102o3pt/eu-ets-deadline-to-surrender-emissions-allowances-draws-near/",
-      "titulo": "EU ETS: deadline to surrender emissions allowances draws near",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "redata",
-      "id": "68f26f085f7e50d8efa7",
-      "link": "https://megawhat.uol.com.br/politica-energetica/excluir-gas-do-redata-pode-elevar-custo-da-conta-de-luz-em-r-7-bi-diz-abraget/",
-      "titulo": "Excluir gás do Redata pode elevar custo da conta de luz em R$ 7 bi, diz Abraget",
+      "assunto": "transmissao-acesso-dc",
+      "id": "76e56cdff897ba9924a1",
+      "link": "https://megawhat.uol.com.br/transmissao/ons-define-premio-minimo-e-regras-para-data-centers-disputarem-transmissao/",
+      "titulo": "ONS define prêmio mínimo e regras para data centers disputarem transmissão",
       "topico": "data_center"
     },
     {
-      "assunto": "sp-dc-capacidade",
-      "id": "2d91a28bec1b728088be",
-      "link": "https://agenciainfra.com/blog/capacidade-de-data-centers-em-sao-paulo-cresce-91-em-um-ano/",
-      "titulo": "Capacidade de data centers em São Paulo cresce 91% em um ano",
+      "assunto": "redata-gas-natural",
+      "id": "432e34075cae47d4c3ee",
+      "link": "https://agenciainfra.com/blog/copergs-defende-uso-de-gas-natural-no-redata-para-data-centers-no-rs/",
+      "titulo": "Copergs defende uso de gás natural no Redata para data centers no RS",
       "topico": "data_center"
     },
     {
-      "assunto": "dc-equipamentos-fpso",
-      "id": "cbe5db3ea9292f4f2cd9",
-      "link": "https://eixos.com.br/videos-e-podcasts/ao-vivo/competicao-por-equipamentos-com-data-centers-pressiona-novos-projetos-de-fpsos-diz-mastrangelo/",
-      "titulo": "Competição por equipamentos com data centers pressiona novos projetos de FPSOs, diz Mastrangelo",
+      "assunto": "termeletrica-demanda-dc",
+      "id": "37f009046403ff635bee",
+      "link": "https://valor.globo.com/publicacoes/especiais/energia/noticia/2026/09/30/demanda-de-data-centers-assegura-aumento-da-capacidade-das-termeletricas.ghtml",
+      "titulo": "Demanda de data centers assegura aumento da capacidade das termelétricas",
       "topico": "data_center"
     },
     {
-      "assunto": "archbald-power-plant-dc",
-      "id": "0bc8a12be33588ed3246",
-      "link": "https://thetimes-tribune.com/2026/09/28/archbald-to-hear-more-info-on-power-plant-seven-data-centers-this-week/",
-      "titulo": "Archbald to hear more info on power plant, seven data centers this week",
+      "assunto": "senado-eua-data-center-regulacao",
+      "id": "1d8224bbf132ec75bde2",
+      "link": "https://cbs19news.com/news/warner-calls-for-stronger-rules-on-data-center-growth/article_93fed5db-2bb7-4b11-af4d-48b8660e2c85.html",
+      "titulo": "Warner calls for stronger rules on data center growth",
       "topico": "data_center"
+    },
+    {
+      "assunto": "leilao-baterias-custeio",
+      "id": "8df654ff613aef65442f",
+      "link": "https://agenciainfra.com/blog/echoenergia-defende-adiar-leilao-de-baterias-se-regra-de-custeio-nao-mudar/",
+      "titulo": "Echoenergia defende adiar leilão de baterias se regra de custeio não mudar",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "producao-baterias-brasil",
+      "id": "7bb1a17d390aac1e1f66",
+      "link": "https://valor.globo.com/google/amp/publicacoes/especiais/energia/noticia/2026/09/30/a-producao-tropicalizada-de-baterias-garantira-a-seguranca-da-matriz-energetica-brasileira.ghtml",
+      "titulo": "A produção tropicalizada de baterias garantirá a segurança da matriz energética brasileira",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "stellantis-escassez-baterias",
+      "id": "1f5db123e0eb965e4507",
+      "link": "https://valor.globo.com/empresas/noticia/2026/09/29/falta-de-baterias-faz-stellantis-paralisar-tres-fabricas-na-franca-por-ate-duas-semanas.ghtml",
+      "titulo": "Falta de baterias faz Stellantis paralisar três fábricas na França por até duas semanas",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "remuneracao-baterias-eua",
+      "id": "8ccb13e82cf56f6c3667",
+      "link": "https://valor.globo.com/publicacoes/especiais/energia/noticia/2026/09/30/remuneracao-das-baterias-por-multiplos-servicos-e-o-santo-graal-do-mercado.ghtml",
+      "titulo": "Remuneração das baterias por múltiplos serviços é o Santo Graal do mercado",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "sbce-cni-avancos",
+      "id": "cdd18c1fc48f6e0c21da",
+      "link": "https://noticias.portaldaindustria.com.br/noticias/sustentabilidade/conselho-de-meio-ambiente-e-sustentabilidade-da-cni-discute-avancos-no-mercado-de-carbono/",
+      "titulo": "Conselho de Meio Ambiente e Sustentabilidade da CNI discute avanços no mercado de carbono",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "motta-vorcaro-pl-carbono",
+      "id": "3513842088114df2aaa8",
+      "link": "https://poder360.com.br/poder-congresso/motta-conversou-com-vorcaro-sobre-sociedade-e-pl-sobre-carbono/",
+      "titulo": "Motta conversou com Vorcaro sobre “sociedade” e PL sobre carbono",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "eletricas-creditos-carbono",
+      "id": "04c484206fdefa025d9f",
+      "link": "https://valor.globo.com/publicacoes/especiais/energia/noticia/2026/09/30/uma-nova-frente-de-negocios-creditos-de-carbono.ghtml",
+      "titulo": "Uma nova frente de negócios: créditos de carbono",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "eu-ets-italia-tcheca",
+      "id": "cfcc4c20881e917a2035",
+      "link": "https://uk.finance.yahoo.com/news/italy-czech-republic-call-softer-081916718.html",
+      "titulo": "Italy and Czech Republic to call for softer EU rules on carbon permits, energy supply",
+      "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 29/09 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 30/09 (manhã)",
   "truncated": {}
 }
