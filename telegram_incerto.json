@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/hypertec-ceo-we-are-absolutely-considering-taking-data-center-firm-5c-public/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/hypertec-ceo-we-are-absolutely-considering-taking-data-center-firm-5c-public/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/hypertec-ceo-we-are-absolutely-considering-taking-data-center-firm-5c-public/",
+    "origem": "INT",
+    "resumo": "<p>5C set to complete next $5-6bn financing round first</p>",
+    "titulo": "Hypertec CEO: We are \"absolutely considering\" taking data center firm 5C public",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
