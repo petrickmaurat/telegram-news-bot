@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/zutacore-partners-with-options-technology-to-offer-liquid-cooling-to-financial-services/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/zutacore-partners-with-options-technology-to-offer-liquid-cooling-to-financial-services/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/zutacore-partners-with-options-technology-to-offer-liquid-cooling-to-financial-services/",
+    "origem": "INT",
+    "resumo": "<p>Options to offer liquid cooling to its customers across its 40 data center deployments</p>",
+    "titulo": "ZutaCore partners with Options Technology to offer liquid cooling to financial services",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
