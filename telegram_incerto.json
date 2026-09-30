@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/google-cloud-will-double-in-four-years-the-computing-capacity-it-took-nine-years-to-build-in-brazil/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/google-cloud-will-double-in-four-years-the-computing-capacity-it-took-nine-years-to-build-in-brazil/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/google-cloud-will-double-in-four-years-the-computing-capacity-it-took-nine-years-to-build-in-brazil/",
+    "origem": "INT",
+    "resumo": "<p>Executives provide details on the expansion of data centers as well as the arrival of Nvidia Blackwell GPUs in the country</p>",
+    "titulo": "Google to double cloud capacity in Brazil in through 2030",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
