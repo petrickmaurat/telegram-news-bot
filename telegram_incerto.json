@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/nxn-enters-portugal-with-a-1-mw-data-center-and-plans-to-invest-100m/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/nxn-enters-portugal-with-a-1-mw-data-center-and-plans-to-invest-100m/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/nxn-enters-portugal-with-a-1-mw-data-center-and-plans-to-invest-100m/",
+    "origem": "INT",
+    "resumo": "<p>The company has finalized the acquisition a data center in Évora</p>",
+    "titulo": "NxN enters Portugal with 1MW data center and plans to invest €100m",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
