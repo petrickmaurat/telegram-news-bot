@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/marketwatch/how-rethinking-the-grid-could-start-with-natural-gas-power-solutions/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/marketwatch/how-rethinking-the-grid-could-start-with-natural-gas-power-solutions/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/marketwatch/how-rethinking-the-grid-could-start-with-natural-gas-power-solutions/",
+    "origem": "INT",
+    "resumo": "<p>Why natural gas could be a strong solution for data center power generation, and how AI will keep evolving industry expectations</p>",
+    "titulo": "Sponsored: How rethinking the grid could start with natural gas power solutions",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
