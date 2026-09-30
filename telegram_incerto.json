@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/sustainability/how-carbon-aware-scheduling-can-cut-data-center-emissions"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/sustainability/how-carbon-aware-scheduling-can-cut-data-center-emissions"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/sustainability/how-carbon-aware-scheduling-can-cut-data-center-emissions",
+    "origem": "INT",
+    "resumo": "Aligning flexible workloads to cleaner hours and locations turns variability into measurable Scope 2 reductions.",
+    "titulo": "How Carbon-Aware Scheduling Can Cut Data Center Emissions",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
