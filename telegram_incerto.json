@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/haydales-graphene-additive-could-improve-the-efficiency-of-data-center-cooling-fluid/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/haydales-graphene-additive-could-improve-the-efficiency-of-data-center-cooling-fluid/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/haydales-graphene-additive-could-improve-the-efficiency-of-data-center-cooling-fluid/",
+    "origem": "INT",
+    "resumo": "<p>Solution set to be deployed in data centers over the next year</p>",
+    "titulo": "Haydale's graphene additive could improve the efficiency of data center cooling fluid",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
