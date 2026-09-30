@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/product-news/magpro-launches-aerolev-1850-to-advance-water-smart-cooling-for-ai-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/product-news/magpro-launches-aerolev-1850-to-advance-water-smart-cooling-for-ai-data-centers/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/product-news/magpro-launches-aerolev-1850-to-advance-water-smart-cooling-for-ai-data-centers/",
+    "origem": "INT",
+    "resumo": "<p>By eliminating evaporative cooling water, AeroLev 1850 removes a significant operational constraint for data centers in arid and water-stressed regions</p>",
+    "titulo": "Sponsored: MagPro launches AeroLev 1850 to advance water-smart cooling for AI data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
