@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/wiring-the-ai-boom-how-data-centers-are-changing-the-grid/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/wiring-the-ai-boom-how-data-centers-are-changing-the-grid/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/wiring-the-ai-boom-how-data-centers-are-changing-the-grid/",
+    "origem": "INT",
+    "resumo": "<p>Success will belong to the utilities, developers, manufacturers, and contractors who treat power delivery as a shared engineering challenge rather than a series of separate handoffs</p>",
+    "titulo": "Sponsored: Wiring the AI boom: How data centers are changing the grid",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
