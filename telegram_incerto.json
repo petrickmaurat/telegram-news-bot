@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/cables/digital-realty-plans-cable-landing-station-at-los-angeles-data-center"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/cables/digital-realty-plans-cable-landing-station-at-los-angeles-data-center"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/cables/digital-realty-plans-cable-landing-station-at-los-angeles-data-center",
+    "origem": "INT",
+    "resumo": "Digital Realty's first turnkey cable landing station is designed to bring subsea capacity directly into an established data center and interconnection environment.",
+    "titulo": "Digital Realty Plans Cable Landing Station at Los Angeles Data Center",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
