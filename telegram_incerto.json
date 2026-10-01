@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/management/zinc-whiskers-the-hidden-contamination-risk-beneath-data-center-floors"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/management/zinc-whiskers-the-hidden-contamination-risk-beneath-data-center-floors"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/management/zinc-whiskers-the-hidden-contamination-risk-beneath-data-center-floors",
+    "origem": "INT",
+    "resumo": "As AI density and airflow rise, legacy raised-floor and zinc-plated components can shed conductive whiskers that jeopardize equipment reliability.",
+    "titulo": "Zinc Whiskers: The Hidden Contamination Risk Beneath Data Center Floors",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
