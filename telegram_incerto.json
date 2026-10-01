@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/ai-cloud-provider-blackfuel-emerges-from-stealth-plans-first-deployment-in-spain/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/ai-cloud-provider-blackfuel-emerges-from-stealth-plans-first-deployment-in-spain/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/ai-cloud-provider-blackfuel-emerges-from-stealth-plans-first-deployment-in-spain/",
+    "origem": "INT",
+    "resumo": "<p>Will be housed in Digital Realty's BCN1 data center</p>",
+    "titulo": "AI cloud provider Blackfuel emerges from stealth, plans first deployment in Spain",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
