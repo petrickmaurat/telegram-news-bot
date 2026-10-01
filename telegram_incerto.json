@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/nebius-signs-50mw-lease-with-aib-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/nebius-signs-50mw-lease-with-aib-data-centers/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/nebius-signs-50mw-lease-with-aib-data-centers/",
+    "origem": "INT",
+    "resumo": "<p>Capacity to be leased from data center in southeastern US</p>",
+    "titulo": "Nebius signs 50MW lease with AIB Data Centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
