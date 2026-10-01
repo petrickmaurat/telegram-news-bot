@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/cooling/the-hidden-failure-domain-in-n-1-data-center-cooling"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/cooling/the-hidden-failure-domain-in-n-1-data-center-cooling"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/cooling/the-hidden-failure-domain-in-n-1-data-center-cooling",
+    "origem": "INT",
+    "resumo": "N+1 capacity can hide shared-control dependencies, turning many units into a single failure domain. Learn how to design for degraded operation and commission real resilience.",
+    "titulo": "The Hidden Failure Domain in N+1 Data Center Cooling",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
