@@ -1,7 +1,7 @@
 {
-  "cached": 493,
+  "cached": 598,
   "collection": {
-    "entries": 10001,
+    "entries": 10264,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,115 +27,110 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202609301028.39541411215@smtp-relay.mailin.fr>",
-    "sent_at": 1790764089.7269425,
-    "status": "enviado"
-  },
-  "generated_at": 1790764036.8091981,
+  "generated_at": 1790850556.322641,
   "google_links_pending": 0,
-  "needs_evaluation": 474,
+  "needs_evaluation": 433,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 560,
-      "insuficiente": 381,
-      "trecho_disponivel": 26
+      "artigo_completo": 567,
+      "insuficiente": 431,
+      "trecho_disponivel": 33
     },
     "selected": {
       "artigo_completo": 12
     }
   },
-  "request_sha256": "e6303895a79bef233e5fdb99231ac37762c02a3300e8c39f6919f0fb32cdc8e3",
+  "request_sha256": "5248e9d4d7ac1a1b81208160037b43f1751cb476209b3c1cecd571d495406a1f",
   "selected": [
     {
-      "assunto": "transmissao-acesso-dc",
-      "id": "76e56cdff897ba9924a1",
-      "link": "https://megawhat.uol.com.br/transmissao/ons-define-premio-minimo-e-regras-para-data-centers-disputarem-transmissao/",
-      "titulo": "ONS define prêmio mínimo e regras para data centers disputarem transmissão",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "redata-gas-natural",
-      "id": "432e34075cae47d4c3ee",
-      "link": "https://agenciainfra.com/blog/copergs-defende-uso-de-gas-natural-no-redata-para-data-centers-no-rs/",
-      "titulo": "Copergs defende uso de gás natural no Redata para data centers no RS",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "termeletrica-demanda-dc",
-      "id": "37f009046403ff635bee",
-      "link": "https://valor.globo.com/publicacoes/especiais/energia/noticia/2026/09/30/demanda-de-data-centers-assegura-aumento-da-capacidade-das-termeletricas.ghtml",
-      "titulo": "Demanda de data centers assegura aumento da capacidade das termelétricas",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "senado-eua-data-center-regulacao",
-      "id": "1d8224bbf132ec75bde2",
-      "link": "https://cbs19news.com/news/warner-calls-for-stronger-rules-on-data-center-growth/article_93fed5db-2bb7-4b11-af4d-48b8660e2c85.html",
-      "titulo": "Warner calls for stronger rules on data center growth",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "leilao-baterias-custeio",
-      "id": "8df654ff613aef65442f",
-      "link": "https://agenciainfra.com/blog/echoenergia-defende-adiar-leilao-de-baterias-se-regra-de-custeio-nao-mudar/",
-      "titulo": "Echoenergia defende adiar leilão de baterias se regra de custeio não mudar",
+      "assunto": "leilao-baterias",
+      "id": "9a50df32542229d206a1",
+      "link": "https://agenciainfra.com/blog/ons-sugere-reduzir-encargo-de-baterias-conforme-potencia-das-fontes/",
+      "titulo": "ONS sugere reduzir encargo de baterias conforme potência das fontes",
       "topico": "baterias"
     },
     {
-      "assunto": "producao-baterias-brasil",
-      "id": "7bb1a17d390aac1e1f66",
-      "link": "https://valor.globo.com/google/amp/publicacoes/especiais/energia/noticia/2026/09/30/a-producao-tropicalizada-de-baterias-garantira-a-seguranca-da-matriz-energetica-brasileira.ghtml",
-      "titulo": "A produção tropicalizada de baterias garantirá a segurança da matriz energética brasileira",
+      "assunto": "reidi-tributacao-baterias",
+      "id": "c21eddd3cdee108aa1f6",
+      "link": "https://megawhat.uol.com.br/leiloes/reidi-para-baterias-esbarra-em-teto-de-r-1-bi-e-reforma-tributaria/",
+      "titulo": "Reidi para baterias esbarra em teto de R$ 1 bi e reforma tributária",
       "topico": "baterias"
     },
     {
-      "assunto": "stellantis-escassez-baterias",
-      "id": "1f5db123e0eb965e4507",
-      "link": "https://valor.globo.com/empresas/noticia/2026/09/29/falta-de-baterias-faz-stellantis-paralisar-tres-fabricas-na-franca-por-ate-duas-semanas.ghtml",
-      "titulo": "Falta de baterias faz Stellantis paralisar três fábricas na França por até duas semanas",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "remuneracao-baterias-eua",
-      "id": "8ccb13e82cf56f6c3667",
-      "link": "https://valor.globo.com/publicacoes/especiais/energia/noticia/2026/09/30/remuneracao-das-baterias-por-multiplos-servicos-e-o-santo-graal-do-mercado.ghtml",
+      "assunto": "baterias-remuneracao-mercado",
+      "id": "1b2f34d93be98e6e4bc3",
+      "link": "https://valor.globo.com/google/amp/publicacoes/especiais/energia/noticia/2026/09/30/remuneracao-das-baterias-por-multiplos-servicos-e-o-santo-graal-do-mercado.ghtml",
       "titulo": "Remuneração das baterias por múltiplos serviços é o Santo Graal do mercado",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-cni-avancos",
-      "id": "cdd18c1fc48f6e0c21da",
-      "link": "https://noticias.portaldaindustria.com.br/noticias/sustentabilidade/conselho-de-meio-ambiente-e-sustentabilidade-da-cni-discute-avancos-no-mercado-de-carbono/",
-      "titulo": "Conselho de Meio Ambiente e Sustentabilidade da CNI discute avanços no mercado de carbono",
-      "topico": "carbono"
+      "assunto": "china-plano-baterias-solido",
+      "id": "0ec2b568713305751d70",
+      "link": "https://trendforce.com/news/2026/09/29/news-china-unveils-15th-five-year-battery-plan-targets-initial-large-scale-all-solid-state-battery-deployment-by-2030/",
+      "titulo": "[News] China Unveils 15th Five-Year Battery Plan, Targets Initial Large-Scale All-Solid-State Battery Deployment by 2030",
+      "topico": "baterias"
     },
     {
-      "assunto": "motta-vorcaro-pl-carbono",
-      "id": "3513842088114df2aaa8",
-      "link": "https://poder360.com.br/poder-congresso/motta-conversou-com-vorcaro-sobre-sociedade-e-pl-sobre-carbono/",
-      "titulo": "Motta conversou com Vorcaro sobre “sociedade” e PL sobre carbono",
+      "assunto": "alagoas-projeto-credito-carbono",
+      "id": "14fe37ca0c1bc44ff25c",
+      "link": "https://tribunahoje.com/noticias/politica/2026/09/30/195012-judson-cabral-anuncia-projeto-de-politica-estadual-de-credito-de-carbono-em-alagoas",
+      "titulo": "Judson Cabral anuncia projeto de política estadual de crédito de carbono em Alagoas",
       "topico": "carbono"
     },
     {
       "assunto": "eletricas-creditos-carbono",
-      "id": "04c484206fdefa025d9f",
-      "link": "https://valor.globo.com/publicacoes/especiais/energia/noticia/2026/09/30/uma-nova-frente-de-negocios-creditos-de-carbono.ghtml",
+      "id": "2b5f15a960e3a12a3b0a",
+      "link": "https://valor.globo.com/google/amp/publicacoes/especiais/energia/noticia/2026/09/30/uma-nova-frente-de-negocios-creditos-de-carbono.ghtml",
       "titulo": "Uma nova frente de negócios: créditos de carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "eu-ets-italia-tcheca",
-      "id": "cfcc4c20881e917a2035",
-      "link": "https://uk.finance.yahoo.com/news/italy-czech-republic-call-softer-081916718.html",
-      "titulo": "Italy and Czech Republic to call for softer EU rules on carbon permits, energy supply",
+      "assunto": "amazonia-leilao-floresta-carbono",
+      "id": "a4ad3b10091b448d0298",
+      "link": "https://bra1.com.br/geral/id-700109/governo_abre_leilao_para_restaurar_floresta_na_amazonia_com_foco_em_carbono",
+      "titulo": "Governo abre leilão para restaurar floresta na Amazônia com foco em carbono",
       "topico": "carbono"
+    },
+    {
+      "assunto": "colombia-revoga-decreto-carbono",
+      "id": "04a41a34a4e544aba018",
+      "link": "https://carbonherald.com/colombia-moves-to-revoke-carbon-market-rules-issued-under-former-president-petro/",
+      "titulo": "Colombia Moves To Revoke Carbon Market Rules Issued Under Former President Petro",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "redata",
+      "id": "466d5870f19644b0e167",
+      "link": "https://valor.globo.com/google/amp/empresas/noticia/2026/10/01/investidores-aguardam-a-regulamentacao-do-redata.ghtml",
+      "titulo": "Investidores aguardam a regulamentação do Redata",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "soberania-dados-nuvem",
+      "id": "9458bf0f012324dadf3b",
+      "link": "https://estadao.com.br/tecmundo/stem/104808-mp-exige-dados-guardados-nuvem-fiquem-em-data-centers-brasileiros/",
+      "titulo": "MP exige que dados guardados em nuvem fiquem em data centers brasileiros",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "belem-dc-licenciamento-ambiental",
+      "id": "ef43be88a91dd5adaa46",
+      "link": "https://eixos.com.br/transicao-energetica/data-center-em-belem-seguira-rigor-ambiental-e-nao-causara-risco-ao-abastecimento-de-energia-diz-elea/",
+      "titulo": "Data center em Belém seguirá rigor ambiental e não causará risco ao abastecimento de energia, diz Elea",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "texas-congela-permissoes-dc",
+      "id": "8a9cd399f9f575596e7f",
+      "link": "https://ktre.com/2026/09/29/abbott-says-data-center-permits-frozen-until-power-water-concerns-addressed/",
+      "titulo": "Abbott says data center permits frozen until power, water concerns addressed",
+      "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 30/09 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 01/10 (manhã)",
   "truncated": {}
 }
