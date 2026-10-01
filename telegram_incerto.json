@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/sustainability/can-data-center-design-choices-change-public-acceptance-"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/sustainability/can-data-center-design-choices-change-public-acceptance-"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/sustainability/can-data-center-design-choices-change-public-acceptance-",
+    "origem": "INT",
+    "resumo": "Operators use biomimicry, community co-design, and brownfield redevelopment to reduce the visual impact of data centers and improve local acceptance.",
+    "titulo": "Can Data Center Design Choices Change Public Acceptance?",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
