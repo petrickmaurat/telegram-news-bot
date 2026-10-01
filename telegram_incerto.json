@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/civo-plans-8mw-edge-data-center-for-ai-in-hertfordshire-uk/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/civo-plans-8mw-edge-data-center-for-ai-in-hertfordshire-uk/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/civo-plans-8mw-edge-data-center-for-ai-in-hertfordshire-uk/",
+    "origem": "INT",
+    "resumo": "<p>Ultimately planned to scale to 38MW, first of 40 planned sites</p>",
+    "titulo": "Civo plans 8MW Edge data center for AI in Hertfordshire, UK",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
