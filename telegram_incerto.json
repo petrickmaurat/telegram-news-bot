@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/virginia-bans-data-center-ndas-as-part-of-new-digital-infrastructure-framework/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/virginia-bans-data-center-ndas-as-part-of-new-digital-infrastructure-framework/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/virginia-bans-data-center-ndas-as-part-of-new-digital-infrastructure-framework/",
+    "origem": "INT",
+    "resumo": "<p>Governor Spanberger introduces range of measures including AI task force</p>",
+    "titulo": "Virginia bans data center NDAs as part of new digital infrastructure framework",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
