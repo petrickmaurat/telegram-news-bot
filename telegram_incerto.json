@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/intro-group-to-invest-270m-in-egypts-kemet-data-center/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/intro-group-to-invest-270m-in-egypts-kemet-data-center/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/intro-group-to-invest-270m-in-egypts-kemet-data-center/",
+    "origem": "INT",
+    "resumo": "<p>The facility will be developed in two phases</p>",
+    "titulo": "Intro Group to invest $270m in Egypt’s Kemet Data Center",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
