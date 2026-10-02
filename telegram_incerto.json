@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/xeal-wants-to-use-spare-ev-charging-capacity-to-power-edge-data-centers-for-ai-inference/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/xeal-wants-to-use-spare-ev-charging-capacity-to-power-edge-data-centers-for-ai-inference/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/xeal-wants-to-use-spare-ev-charging-capacity-to-power-edge-data-centers-for-ai-inference/",
+    "origem": "INT",
+    "resumo": "<p>GPUs could be coming to a parking lot near you</p>",
+    "titulo": "Xeal wants to use spare EV charging capacity to power Edge data centers for AI inference",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
