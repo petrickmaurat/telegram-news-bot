@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/enetron-park-announces-zoning-approval-for-250mw-data-center-in-pyh%C3%A4joki-finland-despite-local-government-denial/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/enetron-park-announces-zoning-approval-for-250mw-data-center-in-pyh%C3%A4joki-finland-despite-local-government-denial/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/enetron-park-announces-zoning-approval-for-250mw-data-center-in-pyh%C3%A4joki-finland-despite-local-government-denial/",
+    "origem": "INT",
+    "resumo": "<p>Announcement at odds with government decision</p>",
+    "titulo": "Enetron Park announces zoning approval for 250MW data center in Pyhäjoki, Finland, despite local government denial",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
