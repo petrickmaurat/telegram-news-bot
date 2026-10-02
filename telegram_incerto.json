@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/when-racks-outpace-the-infrastructure-retrofitting-data-center-power-systems-for-ai-scale-densities/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/when-racks-outpace-the-infrastructure-retrofitting-data-center-power-systems-for-ai-scale-densities/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/when-racks-outpace-the-infrastructure-retrofitting-data-center-power-systems-for-ai-scale-densities/",
+    "origem": "INT",
+    "resumo": "<p>And why there's constraints to overcome in order to meet AI workload demands</p>",
+    "titulo": "When racks outpace the infrastructure: Retrofitting data center power systems for AI-scale densities",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
