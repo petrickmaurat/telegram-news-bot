@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/managing-complexity-in-the-ai-data-center-era/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/managing-complexity-in-the-ai-data-center-era/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/managing-complexity-in-the-ai-data-center-era/",
+    "origem": "INT",
+    "resumo": "<p>The conversation around AI infrastructure often centers on one question: Where will all the power come from?</p>",
+    "titulo": "Sponsored: Managing complexity in the AI data center era",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
