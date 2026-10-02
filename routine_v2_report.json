@@ -1,7 +1,7 @@
 {
-  "cached": 598,
+  "cached": 576,
   "collection": {
-    "entries": 10264,
+    "entries": 10141,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,115 +27,112 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610011030.41308939148@smtp-relay.mailin.fr>",
-    "sent_at": 1790850607.4436252,
-    "status": "enviado"
-  },
-  "generated_at": 1790850556.322641,
+  "generated_at": 1790937169.4268231,
   "google_links_pending": 0,
-  "needs_evaluation": 433,
+  "needs_evaluation": 434,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 567,
-      "insuficiente": 431,
-      "trecho_disponivel": 33
+      "artigo_completo": 545,
+      "insuficiente": 427,
+      "trecho_disponivel": 38
     },
     "selected": {
-      "artigo_completo": 12
+      "artigo_completo": 10,
+      "trecho_disponivel": 1,
+      "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "5248e9d4d7ac1a1b81208160037b43f1751cb476209b3c1cecd571d495406a1f",
+  "request_sha256": "1460ec5d8aede467a44e7bc419127308c89975280f7def61012cfd134fe842b8",
   "selected": [
     {
-      "assunto": "leilao-baterias",
-      "id": "9a50df32542229d206a1",
-      "link": "https://agenciainfra.com/blog/ons-sugere-reduzir-encargo-de-baterias-conforme-potencia-das-fontes/",
-      "titulo": "ONS sugere reduzir encargo de baterias conforme potência das fontes",
+      "assunto": "leilao-baterias-rateio-custos",
+      "id": "29ff91796f911b98dd32",
+      "link": "https://valor.globo.com/google/amp/publicacoes/especiais/energia/noticia/2026/09/30/leiloes-de-armazenamento-em-baterias-sao-essenciais-mas-rateio-dos-custos-gera-discussao.ghtml",
+      "titulo": "Leilões de armazenamento em baterias são essenciais, mas rateio dos custos gera discussão",
       "topico": "baterias"
     },
     {
-      "assunto": "reidi-tributacao-baterias",
-      "id": "c21eddd3cdee108aa1f6",
-      "link": "https://megawhat.uol.com.br/leiloes/reidi-para-baterias-esbarra-em-teto-de-r-1-bi-e-reforma-tributaria/",
-      "titulo": "Reidi para baterias esbarra em teto de R$ 1 bi e reforma tributária",
+      "assunto": "leilao-baterias-colocalizacao-solar",
+      "id": "949c05797d885edba180",
+      "link": "https://megawhat.uol.com.br/leiloes/baterias-com-solar-podem-reduzir-lance-no-lrcap-em-ate-35-diz-aurora/",
+      "titulo": "Baterias com solar podem reduzir lance no LRCap em até 35%, diz Aurora",
       "topico": "baterias"
     },
     {
-      "assunto": "baterias-remuneracao-mercado",
-      "id": "1b2f34d93be98e6e4bc3",
-      "link": "https://valor.globo.com/google/amp/publicacoes/especiais/energia/noticia/2026/09/30/remuneracao-das-baterias-por-multiplos-servicos-e-o-santo-graal-do-mercado.ghtml",
-      "titulo": "Remuneração das baterias por múltiplos serviços é o Santo Graal do mercado",
+      "assunto": "bateria-estado-solido",
+      "id": "22a4c2a7e33a8ea3c226",
+      "link": "https://autotechinsight.spglobal.com/news/5290889/gotion-claims-solid-state-battery-breakthrough-aims-for-an-energy-density-of-400-wh-kg",
+      "titulo": "Gotion claims solid-state battery breakthrough, aims for an energy density of 400 Wh/kg",
       "topico": "baterias"
     },
     {
-      "assunto": "china-plano-baterias-solido",
-      "id": "0ec2b568713305751d70",
-      "link": "https://trendforce.com/news/2026/09/29/news-china-unveils-15th-five-year-battery-plan-targets-initial-large-scale-all-solid-state-battery-deployment-by-2030/",
-      "titulo": "[News] China Unveils 15th Five-Year Battery Plan, Targets Initial Large-Scale All-Solid-State Battery Deployment by 2030",
+      "assunto": "tributacao-baterias-china",
+      "id": "71903bb647256477db40",
+      "link": "https://valor.globo.com/empresas/noticia/2026/10/01/china-encerra-iseno-fiscal-para-baterias-de-on-ltio-de-veculos-eltricos-aps-11-anos.ghtml",
+      "titulo": "China encerra isenção fiscal para baterias de íon-lítio de veículos elétricos após 11 anos",
       "topico": "baterias"
     },
     {
-      "assunto": "alagoas-projeto-credito-carbono",
-      "id": "14fe37ca0c1bc44ff25c",
-      "link": "https://tribunahoje.com/noticias/politica/2026/09/30/195012-judson-cabral-anuncia-projeto-de-politica-estadual-de-credito-de-carbono-em-alagoas",
-      "titulo": "Judson Cabral anuncia projeto de política estadual de crédito de carbono em Alagoas",
+      "assunto": "sbce-estrategias-corporativas",
+      "id": "9d3eb3e4b5a960071827",
+      "link": "https://portogente.com.br/noticias/transporte-logistica/118144-com-mercado-regulado-de-carbono-a-caminho-empresas-combinam-medicao-energia-limpa-troca-de-combustivel-e-compensacao-para-cortar-emissoes",
+      "titulo": "Com mercado regulado de carbono a caminho, empresas combinam medição, energia limpa, troca de combustível e compensação para cortar emissões",
       "topico": "carbono"
     },
     {
-      "assunto": "eletricas-creditos-carbono",
-      "id": "2b5f15a960e3a12a3b0a",
-      "link": "https://valor.globo.com/google/amp/publicacoes/especiais/energia/noticia/2026/09/30/uma-nova-frente-de-negocios-creditos-de-carbono.ghtml",
-      "titulo": "Uma nova frente de negócios: créditos de carbono",
+      "assunto": "china-brasil-cooperacao-carbono",
+      "id": "3e4b5683e9d95e144447",
+      "link": "https://news.cgtn.com/news/2026-09-30/VHJhbnNjcmlwdDkyNjc2/index.html",
+      "titulo": "Linking Carbon Markets: China, Brazil deepen bilateral carbon market ties",
       "topico": "carbono"
     },
     {
-      "assunto": "amazonia-leilao-floresta-carbono",
-      "id": "a4ad3b10091b448d0298",
-      "link": "https://bra1.com.br/geral/id-700109/governo_abre_leilao_para_restaurar_floresta_na_amazonia_com_foco_em_carbono",
-      "titulo": "Governo abre leilão para restaurar floresta na Amazônia com foco em carbono",
+      "assunto": "mapeamento-mercado-carbono-brasil",
+      "id": "dbc94a18ccde45167f0f",
+      "link": "https://em.com.br/economia/economia-digital/2026/09/7511772-pesquisa-inedita-mapeia-projetos-e-programas-do-mercado-de-carbono-no-brasil-e-em-minas.html",
+      "titulo": "Pesquisa inédita mapeia projetos e programas do mercado de carbono no Brasil e em Minas",
       "topico": "carbono"
     },
     {
-      "assunto": "colombia-revoga-decreto-carbono",
-      "id": "04a41a34a4e544aba018",
-      "link": "https://carbonherald.com/colombia-moves-to-revoke-carbon-market-rules-issued-under-former-president-petro/",
-      "titulo": "Colombia Moves To Revoke Carbon Market Rules Issued Under Former President Petro",
+      "assunto": "lac-precificacao-carbono-cbam",
+      "id": "adc6b7e039ed519b0443",
+      "link": "https://carbon-pulse.com/555740/",
+      "titulo": "DATA DIVE: LAC’s carbon pricing could turn its low EU CBAM exposure into export advantage",
       "topico": "carbono"
     },
     {
       "assunto": "redata",
-      "id": "466d5870f19644b0e167",
-      "link": "https://valor.globo.com/google/amp/empresas/noticia/2026/10/01/investidores-aguardam-a-regulamentacao-do-redata.ghtml",
-      "titulo": "Investidores aguardam a regulamentação do Redata",
+      "id": "8b924ede9f16f7ee96a7",
+      "link": "https://veja.abril.com.br/economia/redata-encontra-fila-de-mais-de-56-gw-por-energia-para-data-centers/",
+      "titulo": "Redata encontra fila de mais de 56 GW por energia para data centers",
       "topico": "data_center"
     },
     {
-      "assunto": "soberania-dados-nuvem",
-      "id": "9458bf0f012324dadf3b",
-      "link": "https://estadao.com.br/tecmundo/stem/104808-mp-exige-dados-guardados-nuvem-fiquem-em-data-centers-brasileiros/",
-      "titulo": "MP exige que dados guardados em nuvem fiquem em data centers brasileiros",
+      "assunto": "mp-investigacao-agua-datacenters-salto",
+      "id": "5784248aa1c41c2725e3",
+      "link": "https://g1.globo.com/sp/sorocaba-jundiai/noticia/2026/10/01/ministerio-publico-apura-impacto-no-consumo-de-agua-por-data-centers-em-salto.ghtml",
+      "titulo": "Ministério Público apura impacto no consumo de água por data centers em Salto",
       "topico": "data_center"
     },
     {
-      "assunto": "belem-dc-licenciamento-ambiental",
-      "id": "ef43be88a91dd5adaa46",
-      "link": "https://eixos.com.br/transicao-energetica/data-center-em-belem-seguira-rigor-ambiental-e-nao-causara-risco-ao-abastecimento-de-energia-diz-elea/",
-      "titulo": "Data center em Belém seguirá rigor ambiental e não causará risco ao abastecimento de energia, diz Elea",
+      "assunto": "planejamento-seguranca-energetica-dc",
+      "id": "cb36b6db0ec312502c9c",
+      "link": "https://valor.globo.com/google/amp/publicacoes/especiais/energia/noticia/2026/09/30/planejando-a-forte-demanda-dos-data-centers-pode-ser-atendida-com-seguranca-energetica.ghtml",
+      "titulo": "Planejando, a forte demanda dos data centers pode ser atendida com segurança energética",
       "topico": "data_center"
     },
     {
-      "assunto": "texas-congela-permissoes-dc",
-      "id": "8a9cd399f9f575596e7f",
-      "link": "https://ktre.com/2026/09/29/abbott-says-data-center-permits-frozen-until-power-water-concerns-addressed/",
-      "titulo": "Abbott says data center permits frozen until power, water concerns addressed",
+      "assunto": "ferc-pjm-data-center-custos",
+      "id": "98390e82cd5537eeab79",
+      "link": "https://energyconnects.com/news/utilities/2026/september/biggest-us-grid-s-data-center-plan-accepted-with-5-month-pause/",
+      "titulo": "Biggest US Grid’s Data-Center Plan Accepted With 5-Month Pause",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 01/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 02/10 (manhã)",
   "truncated": {}
 }
