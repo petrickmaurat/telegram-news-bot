@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/zella-dc-launches-stackable-micro-data-center-boxes/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/zella-dc-launches-stackable-micro-data-center-boxes/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/zella-dc-launches-stackable-micro-data-center-boxes/",
+    "origem": "INT",
+    "resumo": "<p>Company makes its micro DC offering even smaller</p>",
+    "titulo": "Zella DC launches stackable micro data center boxes",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
