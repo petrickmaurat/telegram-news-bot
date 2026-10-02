@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/castle-it-to-open-new-data-center-in-saint-omer-france/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/castle-it-to-open-new-data-center-in-saint-omer-france/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/castle-it-to-open-new-data-center-in-saint-omer-france/",
+    "origem": "INT",
+    "resumo": "<p>Will be colo firm's second facility</p>",
+    "titulo": "Castle IT to open new data center in Saint-Omer, France",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
