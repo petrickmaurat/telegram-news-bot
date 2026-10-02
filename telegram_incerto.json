@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/nation-data-center-breaks-ground-on-new-french-data-center-development/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/nation-data-center-breaks-ground-on-new-french-data-center-development/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/nation-data-center-breaks-ground-on-new-french-data-center-development/",
+    "origem": "INT",
+    "resumo": "<p>The project in Vélizy-Villacoublay town is part of a mixed-use project</p>",
+    "titulo": "Nation Data Center breaks ground on new French data center development",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
