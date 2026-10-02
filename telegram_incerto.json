@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/whitepapers/cybersecurity-in-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/whitepapers/cybersecurity-in-data-centers/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/whitepapers/cybersecurity-in-data-centers/",
+    "origem": "INT",
+    "resumo": "<p>Protecting today’s technology</p>",
+    "titulo": "Cybersecurity in data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
