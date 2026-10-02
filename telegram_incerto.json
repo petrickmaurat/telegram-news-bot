@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://telesintese.com.br/grupo-fonnet-leva-a-futurecom-debate-sobre-pressao-da-ia-em-isps-e-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://telesintese.com.br/grupo-fonnet-leva-a-futurecom-debate-sobre-pressao-da-ia-em-isps-e-data-centers/"
+    ],
+    "fonte": "TeleSíntese",
+    "link": "https://telesintese.com.br/grupo-fonnet-leva-a-futurecom-debate-sobre-pressao-da-ia-em-isps-e-data-centers/",
+    "origem": "BR",
+    "resumo": "<p>Painel com José Felipe Ruppenthal e Fernando Gomes, em 7 de outubro, às 17h, será palco do lançamento da AIKS e de uma plataforma voltada aos desafios operacionais discutidos no encontro.</p>\n<p>O post <a href=\"https://telesintese.com.br/grupo-fonnet-leva-a-futurecom-debate-sobre-pressao-da-ia-em-isps-e-data-centers/\">Grupo FonNet leva à Futurecom debate sobre pressão da IA em ISPs e data centers</a> apareceu primeiro em <a href=\"https://telesintese.com.br\">TeleSíntese</a>.</p>",
+    "titulo": "Grupo FonNet leva à Futurecom debate sobre pressão da IA em ISPs e data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
