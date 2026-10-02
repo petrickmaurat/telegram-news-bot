@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/videos/dcd-talks-inside-the-us-data-center-power-shift-with-richard-reisig-siemens-energy/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/videos/dcd-talks-inside-the-us-data-center-power-shift-with-richard-reisig-siemens-energy/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/videos/dcd-talks-inside-the-us-data-center-power-shift-with-richard-reisig-siemens-energy/",
+    "origem": "INT",
+    "resumo": "<p>Richard Reisig, Managing Director for Siemens Energy, discusses with DCD's Zoe Turner about how surging US data center demand is driving investment in gas-powered generation</p>",
+    "titulo": "DCD Talks: Inside the US data center power shift with Richard Reisig, Siemens Energy",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
