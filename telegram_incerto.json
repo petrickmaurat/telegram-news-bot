@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/aws-drops-non-disclosure-agreements-for-data-center-projects/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/aws-drops-non-disclosure-agreements-for-data-center-projects/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/aws-drops-non-disclosure-agreements-for-data-center-projects/",
+    "origem": "INT",
+    "resumo": "<p>Follows Microsoft's footsteps</p>",
+    "titulo": "AWS drops non-disclosure agreements for data center projects",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
