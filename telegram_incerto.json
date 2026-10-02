@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/crusoe-files-for-48bn-data-center-campus-in-jayton-texas/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/crusoe-files-for-48bn-data-center-campus-in-jayton-texas/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/crusoe-files-for-48bn-data-center-campus-in-jayton-texas/",
+    "origem": "INT",
+    "resumo": "<p>Will feature two data centers, likely connected to project in Childress</p>",
+    "titulo": "Crusoe files for $4.8bn data center campus in Jayton, Texas",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
