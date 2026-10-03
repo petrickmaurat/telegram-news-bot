@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://convergenciadigital.com.br/governo/tcu-cgu-e-cnj-fazem-compra-governamental-pioneira-ao-unificarem-multicloud/"
+  ],
+  "item": {
+    "aliases": [
+      "https://convergenciadigital.com.br/governo/tcu-cgu-e-cnj-fazem-compra-governamental-pioneira-ao-unificarem-multicloud/"
+    ],
+    "fonte": "ConvergenciaDigital",
+    "link": "https://convergenciadigital.com.br/governo/tcu-cgu-e-cnj-fazem-compra-governamental-pioneira-ao-unificarem-multicloud/",
+    "origem": "BR",
+    "resumo": "O contrato da Central de compras públicas do governo para nuvem era limitado e só permitia o catálogo fechado, o que impedia ter acesso às melhores práticas do uso da nuvem. A possibilidade de ter acesso ao catálogo aberto e unificar volume de aquisição permitiu que TCU, CGU e CNJ partissem para uma compra conjunta - inédita no governo - para multicloud. O case foi revelado durante o Fórum Executivo Brasil AWS Setor Público, realizado em Brasília. \n\nEm entrevista à CDTV, do portal Convergência Digital, Lorena Passos, do TCU, e Rafael Ferreira, do CGU, contam como foi integrar equipes para viabilizar o melhor modelo a ser adotado. No caso do CGU, o aprendizado veio também depois de um incidente de segurança cibernética. \"O provedor de então tinha o controle das contas principais e houve um vazamento de dados. Aprendemos que não era possível dar esse controle. Hoje tudo é no mínimo acesso possível. O controle é nosso\", detalha Ferreira.\n\nNo TCU, o modelo de compra conjunta foi aprovado porque ao ter acesso ao catálogo aberto, o ambiente de experimentação se amplia, especialmente com a Multicloud. Mas, Lorena Passos diz que a complexidade também aumenta. \"Cada nuvem exige um data center novo para cuidar. Exige muito conhecimento das equipes técnicas\".\n\nO controle de custos também foi decisivo para facilitar a compra conjunta. Rafael Ferreira, do CGU, diz que \"não dá para ter nuvem sem FINOPS. É preciso ter uma pessoa da equipe tem de ficar dedicada porque é crucial ter um controle financeiro do que está sendo usado na nuvem\", ressalta. Indagados sobre o uso da Inteligência Artificial, os executivos admitem que a jornada está começando. No TCU, a IA usa produtos da AWS, mas a IA agêntica ainda é bem inicial. \"Temos de ver custos, segurança, etc\", observa Lorena Passos. \n\nNo CGU, o FalaBR, um serviço voltado ao cidadão, já usa IA. \"Nós usamos a IA na nuvem para agilizar a busca para o cidadão que abre um chamado. Uma resposta que levava 15 dias, agora está sendo dada em segundos e minutos\", diz. Mas a IA agêntica também ainda é um experimento. Assista a integra da entrevista com Lorena Passos, do TCU, e Rafael Ferreira, do CGU.",
+    "titulo": "TCU, CGU e CNJ fazem compra governamental pioneira ao unificarem multicloud",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
