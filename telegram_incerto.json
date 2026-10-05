@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/it-systems-in-southern-italy-back-online-after-data-center-outage/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/it-systems-in-southern-italy-back-online-after-data-center-outage/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/it-systems-in-southern-italy-back-online-after-data-center-outage/",
+    "origem": "INT",
+    "resumo": "<p>The regional government ruled out a cyberattack</p>",
+    "titulo": "IT systems in southern Italy back online after data center outage",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
