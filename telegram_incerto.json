@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/data-center-site-selection/vertical-data-centers-face-cost-proximity-trade-offs"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/data-center-site-selection/vertical-data-centers-face-cost-proximity-trade-offs"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/data-center-site-selection/vertical-data-centers-face-cost-proximity-trade-offs",
+    "origem": "INT",
+    "resumo": "A proposed 20-story Kansas City data center trades suburban sprawl for urban density, offering proximity and network diversity – but at higher construction costs that only specific workloads may justify.",
+    "titulo": "Vertical Data Centers Face Cost-Proximity Trade-Offs",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
