@@ -1,14 +1,15 @@
 {
-  "cached": 576,
+  "cached": 2,
   "collection": {
-    "entries": 10141,
-    "failed": 2,
+    "entries": 8882,
+    "failed": 3,
     "failed_examples": [
       "https://itforum.com.br/feed/",
-      "https://tiinside.com.br/feed/"
+      "https://tiinside.com.br/feed/",
+      "https://canalsolar.com.br/feed/"
     ],
-    "failure_ratio": 0.0094,
-    "invalid": 1,
+    "failure_ratio": 0.0141,
+    "invalid": 0,
     "ok": 210,
     "queries": 213
   },
@@ -27,117 +28,113 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610021033.42999994944@smtp-relay.mailin.fr>",
-    "sent_at": 1790937228.4631276,
-    "status": "enviado"
-  },
-  "generated_at": 1790937169.4268231,
+  "generated_at": 1791210244.0088441,
   "google_links_pending": 0,
-  "needs_evaluation": 434,
+  "needs_evaluation": 479,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 545,
-      "insuficiente": 427,
-      "trecho_disponivel": 38
+      "artigo_completo": 251,
+      "insuficiente": 220,
+      "trecho_disponivel": 10
     },
     "selected": {
-      "artigo_completo": 10,
+      "artigo_completo": 9,
+      "artigo_lido_pelo_modelo": 1,
       "trecho_disponivel": 1,
       "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "1460ec5d8aede467a44e7bc419127308c89975280f7def61012cfd134fe842b8",
+  "request_sha256": "9d3db3d09f070339a028677e5a7168cd1519438adaef74dc6068bb125481396a",
   "selected": [
     {
-      "assunto": "leilao-baterias-rateio-custos",
-      "id": "29ff91796f911b98dd32",
-      "link": "https://valor.globo.com/google/amp/publicacoes/especiais/energia/noticia/2026/09/30/leiloes-de-armazenamento-em-baterias-sao-essenciais-mas-rateio-dos-custos-gera-discussao.ghtml",
-      "titulo": "Leilões de armazenamento em baterias são essenciais, mas rateio dos custos gera discussão",
+      "assunto": "leilao-baterias-capacidade-dezembro",
+      "id": "b6e70f595b8a07703b1f",
+      "link": "https://agenciainfra.com/blog/ha-espaco-sobrando-para-baterias-no-sistema-de-transmissao-dizem-agentes/",
+      "titulo": "Há espaço sobrando para baterias no sistema de transmissão, dizem agentes",
       "topico": "baterias"
     },
     {
-      "assunto": "leilao-baterias-colocalizacao-solar",
-      "id": "949c05797d885edba180",
-      "link": "https://megawhat.uol.com.br/leiloes/baterias-com-solar-podem-reduzir-lance-no-lrcap-em-ate-35-diz-aurora/",
-      "titulo": "Baterias com solar podem reduzir lance no LRCap em até 35%, diz Aurora",
+      "assunto": "potee-transmissao-bess-acre",
+      "id": "3e4380be2b79598713ae",
+      "link": "https://eixos.com.br/energia-eletrica/plano-de-transmissao-2026-estabelece-implantacao-de-baterias-no-acre/",
+      "titulo": "Plano de Transmissão 2026 estabelece implantação de baterias no Acre",
       "topico": "baterias"
     },
     {
-      "assunto": "bateria-estado-solido",
-      "id": "22a4c2a7e33a8ea3c226",
-      "link": "https://autotechinsight.spglobal.com/news/5290889/gotion-claims-solid-state-battery-breakthrough-aims-for-an-energy-density-of-400-wh-kg",
-      "titulo": "Gotion claims solid-state battery breakthrough, aims for an energy density of 400 Wh/kg",
+      "assunto": "bateria-custo-fabricacao-gm-lg",
+      "id": "e65de6457fc4631b995e",
+      "link": "https://pressreader.com/usa/techlife-news/20261003/281573772632289",
+      "titulo": "GM AND LG PREPARE TENNESSEE PLANT FOR LOWER-COST EV BATTERIES",
       "topico": "baterias"
     },
     {
-      "assunto": "tributacao-baterias-china",
-      "id": "71903bb647256477db40",
-      "link": "https://valor.globo.com/empresas/noticia/2026/10/01/china-encerra-iseno-fiscal-para-baterias-de-on-ltio-de-veculos-eltricos-aps-11-anos.ghtml",
-      "titulo": "China encerra isenção fiscal para baterias de íon-lítio de veículos elétricos após 11 anos",
+      "assunto": "bateria-sodio-ion-tecnologia",
+      "id": "837c198ab8271f937545",
+      "link": "https://solarbytes.info/china-bytes/hithium-sodium-ion-battery-n-785-ah-power-n-4-0-mwh-system-12619915",
+      "titulo": "HiTHIUM launches next-gen sodium-ion BESS for industrial deployment",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-estrategias-corporativas",
-      "id": "9d3eb3e4b5a960071827",
-      "link": "https://portogente.com.br/noticias/transporte-logistica/118144-com-mercado-regulado-de-carbono-a-caminho-empresas-combinam-medicao-energia-limpa-troca-de-combustivel-e-compensacao-para-cortar-emissoes",
-      "titulo": "Com mercado regulado de carbono a caminho, empresas combinam medição, energia limpa, troca de combustível e compensação para cortar emissões",
+      "assunto": "sbce-cni-diretrizes",
+      "id": "4fe24bcec57d38e5631d",
+      "link": "https://brasilinovador.com.br/regulamentacao-do-mercado-de-carbono-avanca-com-diretrizes-estrategicas-da-industria-nacional/",
+      "titulo": "Regulamentação do mercado de carbono avança com diretrizes estratégicas da indústria nacional",
       "topico": "carbono"
     },
     {
-      "assunto": "china-brasil-cooperacao-carbono",
-      "id": "3e4b5683e9d95e144447",
-      "link": "https://news.cgtn.com/news/2026-09-30/VHJhbnNjcmlwdDkyNjc2/index.html",
-      "titulo": "Linking Carbon Markets: China, Brazil deepen bilateral carbon market ties",
+      "assunto": "mercado-carbono-regulacao-explicativo",
+      "id": "c96c0b6696bb8d41d21a",
+      "link": "https://eixos.com.br/tag/mercado-de-carbono/page/23/?password-protected=login",
+      "titulo": "Saiba mais sobre Mercado de Carbono | eixos",
       "topico": "carbono"
     },
     {
-      "assunto": "mapeamento-mercado-carbono-brasil",
-      "id": "dbc94a18ccde45167f0f",
-      "link": "https://em.com.br/economia/economia-digital/2026/09/7511772-pesquisa-inedita-mapeia-projetos-e-programas-do-mercado-de-carbono-no-brasil-e-em-minas.html",
-      "titulo": "Pesquisa inédita mapeia projetos e programas do mercado de carbono no Brasil e em Minas",
+      "assunto": "copagril-credito-carbono",
+      "id": "8822d6d2dd6188a6d6f4",
+      "link": "https://opresenterural.com.br/copagril-distribui-r-75-milhoes-a-produtores-em-programa-de-credito-de-carbono/",
+      "titulo": "Copagril distribui R$ 7,5 milhões a produtores em programa de crédito de carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "lac-precificacao-carbono-cbam",
-      "id": "adc6b7e039ed519b0443",
-      "link": "https://carbon-pulse.com/555740/",
-      "titulo": "DATA DIVE: LAC’s carbon pricing could turn its low EU CBAM exposure into export advantage",
+      "assunto": "colombia-fim-teto-compensacao-carbono",
+      "id": "34ef3d86e48c52be5305",
+      "link": "https://carbon-pulse.com/557162/",
+      "titulo": "LATAM Roundup: Colombian U-turn on offsetting could open EU trade possibilities",
       "topico": "carbono"
     },
     {
       "assunto": "redata",
-      "id": "8b924ede9f16f7ee96a7",
-      "link": "https://veja.abril.com.br/economia/redata-encontra-fila-de-mais-de-56-gw-por-energia-para-data-centers/",
-      "titulo": "Redata encontra fila de mais de 56 GW por energia para data centers",
+      "id": "d8ac578b4133588605d2",
+      "link": "https://oglobo.globo.com/google/amp/economia/negocios/noticia/2026/10/05/capacidade-de-data-centers-pode-duplicar-ou-triplicar-com-o-redata-diz-ceo-da-positivo-tecnologia.ghtml",
+      "titulo": "‘Capacidade de data centers pode duplicar ou triplicar’ com o Redata, diz CEO da Positivo Tecnologia",
       "topico": "data_center"
     },
     {
-      "assunto": "mp-investigacao-agua-datacenters-salto",
-      "id": "5784248aa1c41c2725e3",
-      "link": "https://g1.globo.com/sp/sorocaba-jundiai/noticia/2026/10/01/ministerio-publico-apura-impacto-no-consumo-de-agua-por-data-centers-em-salto.ghtml",
-      "titulo": "Ministério Público apura impacto no consumo de água por data centers em Salto",
+      "assunto": "incentivos-fiscais-datacenter-campinas",
+      "id": "9ed3d3ab6f38fa5c0995",
+      "link": "https://portalporque.com.br/campinas/prefeitura-de-campinas-aprova-isencoes-fiscais-para-mais-um-empreendimento-de-data-center-em-barao-geraldo/",
+      "titulo": "Prefeitura de Campinas aprova isenções fiscais para mais um empreendimento de data center em Barão Geraldo",
       "topico": "data_center"
     },
     {
-      "assunto": "planejamento-seguranca-energetica-dc",
-      "id": "cb36b6db0ec312502c9c",
-      "link": "https://valor.globo.com/google/amp/publicacoes/especiais/energia/noticia/2026/09/30/planejando-a-forte-demanda-dos-data-centers-pode-ser-atendida-com-seguranca-energetica.ghtml",
-      "titulo": "Planejando, a forte demanda dos data centers pode ser atendida com segurança energética",
+      "assunto": "candidatos-presidenciais-data-centers",
+      "id": "98740ce258412c8bf51b",
+      "link": "https://g1.globo.com/tecnologia/noticia/2026/10/03/mico-ou-inovacao-por-que-candidatos-querem-mais-data-centers-no-brasil-enquanto-cresce-a-rejeicao-nos-eua.ghtml",
+      "titulo": "Mico ou inovação? Por que candidatos querem mais data centers no Brasil enquanto cresce a rejeição nos EUA",
       "topico": "data_center"
     },
     {
-      "assunto": "ferc-pjm-data-center-custos",
-      "id": "98390e82cd5537eeab79",
-      "link": "https://energyconnects.com/news/utilities/2026/september/biggest-us-grid-s-data-center-plan-accepted-with-5-month-pause/",
-      "titulo": "Biggest US Grid’s Data-Center Plan Accepted With 5-Month Pause",
+      "assunto": "florida-sb484-tarifas-datacenter",
+      "id": "229f3f8bb4e2acb67b00",
+      "link": "https://floridapolitics.com/archives/823172-mark-mcnees-data-center-tariffs-put-florida-utilities-to-test/",
+      "titulo": "Mark McNees: Data center tariffs put Florida utilities to test",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 02/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 05/10 (manhã)",
   "truncated": {}
 }
