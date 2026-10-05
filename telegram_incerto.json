@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/applied-digital-adds-75mw-of-capacity-at-ellendale-data-center-campus-in-north-dakota/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/applied-digital-adds-75mw-of-capacity-at-ellendale-data-center-campus-in-north-dakota/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/applied-digital-adds-75mw-of-capacity-at-ellendale-data-center-campus-in-north-dakota/",
+    "origem": "INT",
+    "resumo": "<p>Second building now complete, campus totals 250MW</p>",
+    "titulo": "Applied Digital adds 75MW of capacity at Ellendale data center campus in North Dakota",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
