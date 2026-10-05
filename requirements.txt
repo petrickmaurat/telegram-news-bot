@@ -1,7 +1,12 @@
 feedparser
 requests
 googlenewsdecoder==0.2.1
+# selectolax 1.0 (03/10/2026) removeu o backend usado pelo googlenewsdecoder 0.2.1.
+selectolax>=0.4.12,<1.0
 anthropic
 trafilatura
 
 lingua-language-detector>=2,<3
+
+# Versões testadas de todas as dependências; atualizar conscientemente.
+-c constraints.txt
