@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/data-center-site-selection/beyond-the-megawatt-why-data-center-site-selection-is-now-a-three-front-battle"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/data-center-site-selection/beyond-the-megawatt-why-data-center-site-selection-is-now-a-three-front-battle"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/data-center-site-selection/beyond-the-megawatt-why-data-center-site-selection-is-now-a-three-front-battle",
+    "origem": "INT",
+    "resumo": "Data center development now requires addressing grid costs, water use, and community benefits. Securing power alone is no longer enough for approval.",
+    "titulo": "Beyond the Megawatt: Why Data Center Site Selection Is Now a Three-Front Battle",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
