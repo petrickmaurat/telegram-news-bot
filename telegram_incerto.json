@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/green-fuels-plant-in-nova-scotia-canada-could-host-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/green-fuels-plant-in-nova-scotia-canada-could-host-data-centers/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/green-fuels-plant-in-nova-scotia-canada-could-host-data-centers/",
+    "origem": "INT",
+    "resumo": "<p>EverWind Fuels explores potential co-located data center development</p>",
+    "titulo": "Green fuels plant in Nova Scotia, Canada, could host data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
