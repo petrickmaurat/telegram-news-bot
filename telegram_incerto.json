@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/uptime/the-ups-is-uninterruptible-by-design-its-future-is-not-"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/uptime/the-ups-is-uninterruptible-by-design-its-future-is-not-"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/uptime/the-ups-is-uninterruptible-by-design-its-future-is-not-",
+    "origem": "INT",
+    "resumo": "From rack-level batteries to BESS and solid-state transformers, new power architectures are reshaping where and whether the UPS belongs in the data center.",
+    "titulo": "The UPS Is Uninterruptible by Design. Its Future Is Not.",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
