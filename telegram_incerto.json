@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/dayone-ipo-data-center-firm-targets-23gw-capacity-by-2028/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/dayone-ipo-data-center-firm-targets-23gw-capacity-by-2028/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/dayone-ipo-data-center-firm-targets-23gw-capacity-by-2028/",
+    "origem": "INT",
+    "resumo": "<p>Revenue is ramping up, but so are losses</p>",
+    "titulo": "DayOne IPO: Data center firm targets 2.3GW capacity by 2028",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
