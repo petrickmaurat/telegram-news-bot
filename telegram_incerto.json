@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/marketwatch/ai-readiness-starts-with-power/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/marketwatch/ai-readiness-starts-with-power/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/marketwatch/ai-readiness-starts-with-power/",
+    "origem": "INT",
+    "resumo": "<p>Data center operators now need coordinated solutions across hardware, software, and infrastructure layers</p>",
+    "titulo": "Sponsored: AI readiness starts with power",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
