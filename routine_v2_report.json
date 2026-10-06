@@ -1,14 +1,15 @@
 {
-  "cached": 576,
+  "cached": 2,
   "collection": {
-    "entries": 10141,
-    "failed": 2,
+    "entries": 8964,
+    "failed": 3,
     "failed_examples": [
       "https://itforum.com.br/feed/",
-      "https://tiinside.com.br/feed/"
+      "https://tiinside.com.br/feed/",
+      "https://canalsolar.com.br/feed/"
     ],
-    "failure_ratio": 0.0094,
-    "invalid": 1,
+    "failure_ratio": 0.0141,
+    "invalid": 0,
     "ok": 210,
     "queries": 213
   },
@@ -27,117 +28,113 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610021033.42999994944@smtp-relay.mailin.fr>",
-    "sent_at": 1790937228.4631276,
-    "status": "enviado"
-  },
-  "generated_at": 1790937169.4268231,
+  "generated_at": 1791283920.5841067,
   "google_links_pending": 0,
-  "needs_evaluation": 434,
+  "needs_evaluation": 686,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 545,
-      "insuficiente": 427,
-      "trecho_disponivel": 38
+      "artigo_completo": 372,
+      "insuficiente": 301,
+      "trecho_disponivel": 15
     },
     "selected": {
-      "artigo_completo": 10,
+      "artigo_completo": 9,
+      "artigo_lido_pelo_modelo": 1,
       "trecho_disponivel": 1,
       "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "1460ec5d8aede467a44e7bc419127308c89975280f7def61012cfd134fe842b8",
+  "request_sha256": "303c9317d034dca9946ef2fbf8ac06848f85789f757a4cb325ad2db3554f50a3",
   "selected": [
     {
-      "assunto": "leilao-baterias-rateio-custos",
-      "id": "29ff91796f911b98dd32",
-      "link": "https://valor.globo.com/google/amp/publicacoes/especiais/energia/noticia/2026/09/30/leiloes-de-armazenamento-em-baterias-sao-essenciais-mas-rateio-dos-custos-gera-discussao.ghtml",
-      "titulo": "Leilões de armazenamento em baterias são essenciais, mas rateio dos custos gera discussão",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "leilao-baterias-colocalizacao-solar",
-      "id": "949c05797d885edba180",
-      "link": "https://megawhat.uol.com.br/leiloes/baterias-com-solar-podem-reduzir-lance-no-lrcap-em-ate-35-diz-aurora/",
-      "titulo": "Baterias com solar podem reduzir lance no LRCap em até 35%, diz Aurora",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "bateria-estado-solido",
-      "id": "22a4c2a7e33a8ea3c226",
-      "link": "https://autotechinsight.spglobal.com/news/5290889/gotion-claims-solid-state-battery-breakthrough-aims-for-an-energy-density-of-400-wh-kg",
-      "titulo": "Gotion claims solid-state battery breakthrough, aims for an energy density of 400 Wh/kg",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "tributacao-baterias-china",
-      "id": "71903bb647256477db40",
-      "link": "https://valor.globo.com/empresas/noticia/2026/10/01/china-encerra-iseno-fiscal-para-baterias-de-on-ltio-de-veculos-eltricos-aps-11-anos.ghtml",
-      "titulo": "China encerra isenção fiscal para baterias de íon-lítio de veículos elétricos após 11 anos",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "sbce-estrategias-corporativas",
-      "id": "9d3eb3e4b5a960071827",
-      "link": "https://portogente.com.br/noticias/transporte-logistica/118144-com-mercado-regulado-de-carbono-a-caminho-empresas-combinam-medicao-energia-limpa-troca-de-combustivel-e-compensacao-para-cortar-emissoes",
-      "titulo": "Com mercado regulado de carbono a caminho, empresas combinam medição, energia limpa, troca de combustível e compensação para cortar emissões",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "china-brasil-cooperacao-carbono",
-      "id": "3e4b5683e9d95e144447",
-      "link": "https://news.cgtn.com/news/2026-09-30/VHJhbnNjcmlwdDkyNjc2/index.html",
-      "titulo": "Linking Carbon Markets: China, Brazil deepen bilateral carbon market ties",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "mapeamento-mercado-carbono-brasil",
-      "id": "dbc94a18ccde45167f0f",
-      "link": "https://em.com.br/economia/economia-digital/2026/09/7511772-pesquisa-inedita-mapeia-projetos-e-programas-do-mercado-de-carbono-no-brasil-e-em-minas.html",
-      "titulo": "Pesquisa inédita mapeia projetos e programas do mercado de carbono no Brasil e em Minas",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "lac-precificacao-carbono-cbam",
-      "id": "adc6b7e039ed519b0443",
-      "link": "https://carbon-pulse.com/555740/",
-      "titulo": "DATA DIVE: LAC’s carbon pricing could turn its low EU CBAM exposure into export advantage",
-      "topico": "carbono"
-    },
-    {
       "assunto": "redata",
-      "id": "8b924ede9f16f7ee96a7",
-      "link": "https://veja.abril.com.br/economia/redata-encontra-fila-de-mais-de-56-gw-por-energia-para-data-centers/",
-      "titulo": "Redata encontra fila de mais de 56 GW por energia para data centers",
+      "id": "b5d928ba2ce37ba8248f",
+      "link": "https://canalenergia.com.br/noticias/53357474/energia-bloqueia-regulamentacao-do-redata-aponta-brasscom",
+      "titulo": "Energia bloqueia regulamentação do Redata, aponta Brasscom",
       "topico": "data_center"
     },
     {
-      "assunto": "mp-investigacao-agua-datacenters-salto",
-      "id": "5784248aa1c41c2725e3",
-      "link": "https://g1.globo.com/sp/sorocaba-jundiai/noticia/2026/10/01/ministerio-publico-apura-impacto-no-consumo-de-agua-por-data-centers-em-salto.ghtml",
-      "titulo": "Ministério Público apura impacto no consumo de água por data centers em Salto",
+      "assunto": "epe-transmissao-dc-sp",
+      "id": "6b7b408a19da4921d22a",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/epe-propoe-solucao-para-ampliar-espaco-para-data-centers-em-sp/",
+      "titulo": "EPE propõe solução para ampliar espaço para data centers em SP",
       "topico": "data_center"
     },
     {
-      "assunto": "planejamento-seguranca-energetica-dc",
-      "id": "cb36b6db0ec312502c9c",
-      "link": "https://valor.globo.com/google/amp/publicacoes/especiais/energia/noticia/2026/09/30/planejando-a-forte-demanda-dos-data-centers-pode-ser-atendida-com-seguranca-energetica.ghtml",
-      "titulo": "Planejando, a forte demanda dos data centers pode ser atendida com segurança energética",
+      "assunto": "alibaba-cloud-brasil-datacenters",
+      "id": "0f14116c3609dcf3ae49",
+      "link": "https://itforum.com.br/noticias/alibaba-cloud-data-centers-brasil/?amp=",
+      "titulo": "Alibaba Cloud estreia data centers no Brasil com duas zonas em São Paulo",
       "topico": "data_center"
     },
     {
-      "assunto": "ferc-pjm-data-center-custos",
-      "id": "98390e82cd5537eeab79",
-      "link": "https://energyconnects.com/news/utilities/2026/september/biggest-us-grid-s-data-center-plan-accepted-with-5-month-pause/",
-      "titulo": "Biggest US Grid’s Data-Center Plan Accepted With 5-Month Pause",
+      "assunto": "eua-contas-eletricidade-datacenters",
+      "id": "43f798ca7ca1a3a61018",
+      "link": "https://npr.org/2026/10/04/nx-s1-5990822/how-much-are-ai-data-centers-adding-to-your-electricity-bill",
+      "titulo": "How much are AI data centers adding to your electricity bill?",
       "topico": "data_center"
+    },
+    {
+      "assunto": "leilao-baterias-capital-barato",
+      "id": "1de6cc1650ab5472415a",
+      "link": "https://braziljournal.com/play/americano-da-mercurio-leilao-de-baterias-exige-capital-barato/",
+      "titulo": "Americano, da Mercurio: Leilão de baterias exige capital barato",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "leilao-baterias-financiamento-ppa",
+      "id": "6db9370b5b7e67b1cd26",
+      "link": "https://megawhat.uol.com.br/podcasts/como-baterias-e-novos-modelos-de-ppas-podem-destravar-financiamento-da-solar/",
+      "titulo": "🎙️Como baterias e novos modelos de PPAs podem destravar financiamento da solar",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "bess-sodio-industrial-hithium",
+      "id": "837c198ab8271f937545",
+      "link": "https://solarbytes.info/china-bytes/hithium-sodium-ion-battery-n-785-ah-power-n-4-0-mwh-system-12619915",
+      "titulo": "HiTHIUM launches next-gen sodium-ion BESS for industrial deployment",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "byd-fabrica-baterias-shaanxi",
+      "id": "5cd0f8531dde48ffef8b",
+      "link": "https://ad-hoc-news.de/boerse/news/unternehmensnachrichten/byd-brings-16-gwh-battery-plant-online-as-new-seal-07-takes-shape/70237963",
+      "titulo": "BYD Brings 16 GWh Battery Plant Online as New Seal 07 Takes Shape",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "sbce-diretrizes-cni",
+      "id": "4fe24bcec57d38e5631d",
+      "link": "https://brasilinovador.com.br/regulamentacao-do-mercado-de-carbono-avanca-com-diretrizes-estrategicas-da-industria-nacional/",
+      "titulo": "Regulamentação do mercado de carbono avança com diretrizes estratégicas da indústria nacional",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "sbce-alternativas-tributacao",
+      "id": "c96c0b6696bb8d41d21a",
+      "link": "https://eixos.com.br/tag/mercado-de-carbono/page/23/?password-protected=login",
+      "titulo": "Saiba mais sobre Mercado de Carbono | eixos",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "copagril-credito-carbono-voluntario",
+      "id": "1e77a103681d7f2ed3c5",
+      "link": "https://agazetaweb.com/noticia/61006/copagril-reune-produtores-em-dourados-para-entrega-de-valores-do-programa-credito-de-carbono",
+      "titulo": "Copagril reúne produtores em Dourados para entrega de valores do Programa Crédito de Carbono",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "colombia-mercado-carbono-reforma",
+      "id": "34ef3d86e48c52be5305",
+      "link": "https://carbon-pulse.com/557162/",
+      "titulo": "LATAM Roundup: Colombian U-turn on offsetting could open EU trade possibilities",
+      "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 02/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 06/10 (manhã)",
   "truncated": {}
 }
