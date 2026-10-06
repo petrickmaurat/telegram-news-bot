@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/three-ways-data-center-owners-and-developers-can-control-costs-and-preserve-liquidity/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/three-ways-data-center-owners-and-developers-can-control-costs-and-preserve-liquidity/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/three-ways-data-center-owners-and-developers-can-control-costs-and-preserve-liquidity/",
+    "origem": "INT",
+    "resumo": "<p>Three strategies for effective cost containment </p>",
+    "titulo": "Sponsored: Three ways data center owners and developers can control costs and preserve liquidity",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
