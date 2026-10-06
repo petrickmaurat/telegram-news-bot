@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://convergenciadigital.com.br/governo/redata-coloca-brasil-no-mapa-global-de-data-centers-mas-ainda-ha-travas-para-a-competitividade/"
+  ],
+  "item": {
+    "aliases": [
+      "https://convergenciadigital.com.br/governo/redata-coloca-brasil-no-mapa-global-de-data-centers-mas-ainda-ha-travas-para-a-competitividade/"
+    ],
+    "fonte": "ConvergenciaDigital",
+    "link": "https://convergenciadigital.com.br/governo/redata-coloca-brasil-no-mapa-global-de-data-centers-mas-ainda-ha-travas-para-a-competitividade/",
+    "origem": "BR",
+    "resumo": "A recente aprovação do Redata pode dar ao Brasil uma oportunidade inédita de ampliar sua participação no mercado global de data centers, mas o aproveitamento desse potencial dependerá de avanços em tributação, conectividade, energia e segurança jurídica.",
+    "titulo": "Redata coloca Brasil no mapa global de data centers, mas ainda há travas para a competitividade",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
