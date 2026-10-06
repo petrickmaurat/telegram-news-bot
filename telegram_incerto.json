@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/energy-power-supply/ai-power-spikes-demand-chip-to-grid-design-changes"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/energy-power-supply/ai-power-spikes-demand-chip-to-grid-design-changes"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/energy-power-supply/ai-power-spikes-demand-chip-to-grid-design-changes",
+    "origem": "INT",
+    "resumo": "AI data centers’ rapid power swings threaten grid stability, requiring coordinated chip-to-grid strategies across chip makers, operators, utilities, and infrastructure providers.",
+    "titulo": "AI Power Spikes Demand Chip-to-Grid Design Changes",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
