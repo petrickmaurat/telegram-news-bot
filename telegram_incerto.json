@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/videos/dcd-studio-the-uk-data-center-shift-with-allan-bosley-ark-data-centres/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/videos/dcd-studio-the-uk-data-center-shift-with-allan-bosley-ark-data-centres/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/videos/dcd-studio-the-uk-data-center-shift-with-allan-bosley-ark-data-centres/",
+    "origem": "INT",
+    "resumo": "<p>James Raddings speaks with Allan Bosley of Ark Data Centres about the UK's shifting data center landscape, public perception, and critical growth driven by cloud and AI demands.</p>",
+    "titulo": "DCD Studio: The UK data center shift with Allan Bosley, Ark Data Centres",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
