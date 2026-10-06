@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/whitepapers/dcd-survey-data-center-construction/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/whitepapers/dcd-survey-data-center-construction/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/whitepapers/dcd-survey-data-center-construction/",
+    "origem": "INT",
+    "resumo": "<p>Examining the role of third-party material handling in modern data center construction projects</p>",
+    "titulo": "DCD Survey: Data center construction",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
