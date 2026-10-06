@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/aws-plans-36-building-data-center-campus-in-indiana-county-pennsylvania/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/aws-plans-36-building-data-center-campus-in-indiana-county-pennsylvania/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/aws-plans-36-building-data-center-campus-in-indiana-county-pennsylvania/",
+    "origem": "INT",
+    "resumo": "<p>Set for Homer City Energy Campus</p>",
+    "titulo": "AWS plans 36-building data center campus in Indiana County, Pennsylvania",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
