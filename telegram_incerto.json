@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://telesintese.com.br/data-center-como-obrigacao-reflete-novo-ecossistema-de-telecom-avalia-anatel/"
+  ],
+  "item": {
+    "aliases": [
+      "https://telesintese.com.br/data-center-como-obrigacao-reflete-novo-ecossistema-de-telecom-avalia-anatel/"
+    ],
+    "fonte": "TeleSíntese",
+    "link": "https://telesintese.com.br/data-center-como-obrigacao-reflete-novo-ecossistema-de-telecom-avalia-anatel/",
+    "origem": "BR",
+    "resumo": "<p>Nilo Pasquali diz que consulta sobre 6 GHz abre discussão sobre novos compromissos de infraestrutura; agência pretende manter modelo que prioriza investimentos em vez de arrecadação</p>\n<p>O post <a href=\"https://telesintese.com.br/data-center-como-obrigacao-reflete-novo-ecossistema-de-telecom-avalia-anatel/\">Data center como obrigação reflete novo ecossistema de telecom, avalia Anatel</a> apareceu primeiro em <a href=\"https://telesintese.com.br\">TeleSíntese</a>.</p>",
+    "titulo": "Data center como obrigação reflete novo ecossistema de telecom, avalia Anatel",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
