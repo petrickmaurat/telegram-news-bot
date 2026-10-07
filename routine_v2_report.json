@@ -1,7 +1,7 @@
 {
-  "cached": 2,
+  "cached": 434,
   "collection": {
-    "entries": 8964,
+    "entries": 9588,
     "failed": 3,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -19,7 +19,7 @@
       "US": 2
     },
     "carbono": {
-      "BR": 3,
+      "BR": 2,
       "US": 1
     },
     "data_center": {
@@ -28,118 +28,103 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610061053.31816035769@smtp-relay.mailin.fr>",
-    "sent_at": 1791283994.2306247,
-    "status": "enviado"
-  },
-  "generated_at": 1791283920.5841067,
+  "generated_at": 1791368999.1276882,
   "google_links_pending": 0,
-  "needs_evaluation": 686,
+  "needs_evaluation": 432,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 372,
-      "insuficiente": 301,
-      "trecho_disponivel": 15
+      "artigo_completo": 505,
+      "insuficiente": 347,
+      "trecho_disponivel": 14
     },
     "selected": {
-      "artigo_completo": 9,
-      "artigo_lido_pelo_modelo": 1,
-      "trecho_disponivel": 1,
-      "trecho_limitado_final": 1
+      "artigo_completo": 11
     }
   },
-  "request_sha256": "303c9317d034dca9946ef2fbf8ac06848f85789f757a4cb325ad2db3554f50a3",
+  "request_sha256": "8560eaa3bd36fa2491124aeb16882fb2b850ca275e0413044d54d436416ff8fc",
   "selected": [
     {
-      "assunto": "redata",
-      "id": "b5d928ba2ce37ba8248f",
-      "link": "https://canalenergia.com.br/noticias/53357474/energia-bloqueia-regulamentacao-do-redata-aponta-brasscom",
-      "titulo": "Energia bloqueia regulamentação do Redata, aponta Brasscom",
+      "assunto": "redata-regulamentacao",
+      "id": "c92254ab19e9ae395622",
+      "link": "https://mobiletime.com.br/noticias/06/10/2026/redata-mcom-pior-ja-foi/",
+      "titulo": "O mais difícil do Redata já passou, diz ministro do MCom",
       "topico": "data_center"
     },
     {
-      "assunto": "epe-transmissao-dc-sp",
-      "id": "6b7b408a19da4921d22a",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/epe-propoe-solucao-para-ampliar-espaco-para-data-centers-em-sp/",
-      "titulo": "EPE propõe solução para ampliar espaço para data centers em SP",
+      "assunto": "mcom-agenda-infraestrutura-datacenter",
+      "id": "368b22dc371f1230520b",
+      "link": "https://teletime.com.br/06/10/2026/politicas-data-centers-cabos-mcom-2026/",
+      "titulo": "Políticas de data center, cabos submarinos, rodovias e inclusão saem em 2026, diz MCom",
       "topico": "data_center"
     },
     {
-      "assunto": "alibaba-cloud-brasil-datacenters",
-      "id": "0f14116c3609dcf3ae49",
-      "link": "https://itforum.com.br/noticias/alibaba-cloud-data-centers-brasil/?amp=",
-      "titulo": "Alibaba Cloud estreia data centers no Brasil com duas zonas em São Paulo",
+      "assunto": "anatel-obrigacao-6ghz-datacenter",
+      "id": "5c726255f713eb12ba62",
+      "link": "https://telesintese.com.br/data-center-como-obrigacao-reflete-novo-ecossistema-de-telecom-avalia-anatel/",
+      "titulo": "Data center como obrigação reflete novo ecossistema de telecom, avalia Anatel",
       "topico": "data_center"
     },
     {
-      "assunto": "eua-contas-eletricidade-datacenters",
-      "id": "43f798ca7ca1a3a61018",
-      "link": "https://npr.org/2026/10/04/nx-s1-5990822/how-much-are-ai-data-centers-adding-to-your-electricity-bill",
-      "titulo": "How much are AI data centers adding to your electricity bill?",
+      "assunto": "nebraska-banimento-permanente-datacenter",
+      "id": "a4acf57185fe9a196dc0",
+      "link": "https://nebraskapublicmedia.org/en/news/news-articles/eastern-nebraska-village-becomes-first-to-permanently-ban-data-centers/",
+      "titulo": "Eastern Nebraska village becomes first to permanently ban data centers",
       "topico": "data_center"
     },
     {
-      "assunto": "leilao-baterias-capital-barato",
-      "id": "1de6cc1650ab5472415a",
-      "link": "https://braziljournal.com/play/americano-da-mercurio-leilao-de-baterias-exige-capital-barato/",
-      "titulo": "Americano, da Mercurio: Leilão de baterias exige capital barato",
+      "assunto": "custeio-rateio-baterias-aneel",
+      "id": "0704b34ad37f4668d633",
+      "link": "https://agenciainfra.com/blog/aneel-abre-consulta-sobre-custeio-de-baterias-a-ser-rateado-entre-geradores/",
+      "titulo": "ANEEL abre consulta sobre custeio de baterias a ser rateado entre geradores",
       "topico": "baterias"
     },
     {
-      "assunto": "leilao-baterias-financiamento-ppa",
-      "id": "6db9370b5b7e67b1cd26",
-      "link": "https://megawhat.uol.com.br/podcasts/como-baterias-e-novos-modelos-de-ppas-podem-destravar-financiamento-da-solar/",
-      "titulo": "🎙️Como baterias e novos modelos de PPAs podem destravar financiamento da solar",
+      "assunto": "varejo-vendas-recorde-bess-brasil",
+      "id": "a65c10948a4d66334e93",
+      "link": "https://braziljournal.com/mercado-de-baterias-eletricas-vive-boom-de-vendas/",
+      "titulo": "Mercado de baterias elétricas vive boom de vendas",
       "topico": "baterias"
     },
     {
-      "assunto": "bess-sodio-industrial-hithium",
-      "id": "837c198ab8271f937545",
-      "link": "https://solarbytes.info/china-bytes/hithium-sodium-ion-battery-n-785-ah-power-n-4-0-mwh-system-12619915",
-      "titulo": "HiTHIUM launches next-gen sodium-ion BESS for industrial deployment",
+      "assunto": "gotion-leilao-saudita-custo",
+      "id": "3d7a0ad728fbf6bbd49e",
+      "link": "https://bestmag.co.uk/gotion-wins-6-gwh-saudi-battery-storage-deal/",
+      "titulo": "Gotion wins 6 GWh Saudi battery storage deal",
       "topico": "baterias"
     },
     {
-      "assunto": "byd-fabrica-baterias-shaanxi",
-      "id": "5cd0f8531dde48ffef8b",
-      "link": "https://ad-hoc-news.de/boerse/news/unternehmensnachrichten/byd-brings-16-gwh-battery-plant-online-as-new-seal-07-takes-shape/70237963",
-      "titulo": "BYD Brings 16 GWh Battery Plant Online as New Seal 07 Takes Shape",
+      "assunto": "tecnologia-estado-solido-samsung-lg",
+      "id": "eb141dd103b24176c1ff",
+      "link": "https://businesskorea.co.kr/news/articleView.html?idxno=278425",
+      "titulo": "Samsung SDI, LG Energy Solution Diverge on Solid-State Commercialization",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-diretrizes-cni",
-      "id": "4fe24bcec57d38e5631d",
-      "link": "https://brasilinovador.com.br/regulamentacao-do-mercado-de-carbono-avanca-com-diretrizes-estrategicas-da-industria-nacional/",
-      "titulo": "Regulamentação do mercado de carbono avança com diretrizes estratégicas da indústria nacional",
+      "assunto": "sbce-continuidade-politica",
+      "id": "152a5e9526082fbe38cc",
+      "link": "https://qcintel.com/carbon/article/brazil-ets-rollout-to-survive-potential-right-wing-shift-sources-74559.html",
+      "titulo": "Brazil ETS rollout to survive potential right-wing shift: sources",
       "topico": "carbono"
     },
     {
-      "assunto": "sbce-alternativas-tributacao",
-      "id": "c96c0b6696bb8d41d21a",
-      "link": "https://eixos.com.br/tag/mercado-de-carbono/page/23/?password-protected=login",
-      "titulo": "Saiba mais sobre Mercado de Carbono | eixos",
+      "assunto": "redd-beneficios-territoriais",
+      "id": "16b49d5b3b49c2e81db5",
+      "link": "https://capitalreset.uol.com.br/opiniao/carbono-nao-e-tudo-os-beneficios-territoriais-e-sociais-dos-projetos-redd/",
+      "titulo": "Carbono não é tudo: os benefícios territoriais e sociais dos projetos REDD+",
       "topico": "carbono"
     },
     {
-      "assunto": "copagril-credito-carbono-voluntario",
-      "id": "1e77a103681d7f2ed3c5",
-      "link": "https://agazetaweb.com/noticia/61006/copagril-reune-produtores-em-dourados-para-entrega-de-valores-do-programa-credito-de-carbono",
-      "titulo": "Copagril reúne produtores em Dourados para entrega de valores do Programa Crédito de Carbono",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "colombia-mercado-carbono-reforma",
-      "id": "34ef3d86e48c52be5305",
-      "link": "https://carbon-pulse.com/557162/",
-      "titulo": "LATAM Roundup: Colombian U-turn on offsetting could open EU trade possibilities",
+      "assunto": "quenia-regulacao-mercado-carbono",
+      "id": "8c35d5c423ec6002166c",
+      "link": "https://the-star.co.ke/climate-change/2026-10-06-kenya-tightens-carbon-market-rules-to-protect-climate-goals-and-communities",
+      "titulo": "Kenya tightens carbon market rules to protect climate goals and communities",
       "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 06/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 07/10 (manhã)",
   "truncated": {}
 }
