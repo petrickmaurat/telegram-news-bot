@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/firmus-tops-out-data-center-building-in-tasmania/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/firmus-tops-out-data-center-building-in-tasmania/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/firmus-tops-out-data-center-building-in-tasmania/",
+    "origem": "INT",
+    "resumo": "<p>Indonesia site ready to start deploying HyperCube systems</p>",
+    "titulo": "Firmus tops out data center building in Tasmania",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
