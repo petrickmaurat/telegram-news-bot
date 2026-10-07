@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/whitepapers/secure-access-across-global-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/whitepapers/secure-access-across-global-data-centers/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/whitepapers/secure-access-across-global-data-centers/",
+    "origem": "INT",
+    "resumo": "<p>From fragmented access to centralized control across 100+ sites</p>",
+    "titulo": "Secure access across global data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
