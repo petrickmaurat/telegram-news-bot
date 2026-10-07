@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/whitepapers/transforming-data-center-services-ai-driven-condition-based-maintenance/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/whitepapers/transforming-data-center-services-ai-driven-condition-based-maintenance/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/whitepapers/transforming-data-center-services-ai-driven-condition-based-maintenance/",
+    "origem": "INT",
+    "resumo": "<p>Enhancing resilience, reducing costs, and boosting efficiency amid skilled talent shortages</p>",
+    "titulo": "Transforming data center services: AI-driven condition-based maintenance",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
