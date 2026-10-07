@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/videos/dcd-studio-rethinking-data-centers-for-the-ai-era-with-christiaan-naude-vaultica-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/videos/dcd-studio-rethinking-data-centers-for-the-ai-era-with-christiaan-naude-vaultica-data-centers/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/videos/dcd-studio-rethinking-data-centers-for-the-ai-era-with-christiaan-naude-vaultica-data-centers/",
+    "origem": "INT",
+    "resumo": "<p>James Raddings speaks with Christiaan Naude of Vaultica Data Centers on the evolving landscape of data center technology and innovation</p>",
+    "titulo": "DCD Studio: Rethinking data centers for the AI era with Christiaan Naude, Vaultica Data Centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
