@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/a-sealed-server-is-your-license-to-operate-a-data-center/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/a-sealed-server-is-your-license-to-operate-a-data-center/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/a-sealed-server-is-your-license-to-operate-a-data-center/",
+    "origem": "INT",
+    "resumo": "<p>Sealed management solves the water, power, and waste heat problems the public is increasingly wary of</p>",
+    "titulo": "Sponsored: A sealed server is your license to operate a data center",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
