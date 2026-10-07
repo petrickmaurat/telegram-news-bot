@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/energy-power-supply/data-center-power-demand-to-grow-24-annually-by-2030-mckinsey"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/energy-power-supply/data-center-power-demand-to-grow-24-annually-by-2030-mckinsey"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/energy-power-supply/data-center-power-demand-to-grow-24-annually-by-2030-mckinsey",
+    "origem": "INT",
+    "resumo": "Power constraints are pushing operators toward on-site generation, but uncertainty beyond 2030 raises questions about how much infrastructure to build.",
+    "titulo": "Data Center Power Demand to Grow 24% Annually by 2030: McKinsey",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
