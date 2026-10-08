@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/waste-heat-from-goodman-data-center-in-frankfurt-germany-to-power-district-heating-system/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/waste-heat-from-goodman-data-center-in-frankfurt-germany-to-power-district-heating-system/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/waste-heat-from-goodman-data-center-in-frankfurt-germany-to-power-district-heating-system/",
+    "origem": "INT",
+    "resumo": "<p>Firm will recover and supply 50MW to warm buildings and a swimming pool</p>",
+    "titulo": "Waste heat from Goodman data center in Frankfurt, Germany, to power district heating system",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
