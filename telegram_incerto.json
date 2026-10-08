@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/googles-13bn-data-center-buildout-in-finland-under-investigation-for-300-hectare-forest-removal/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/googles-13bn-data-center-buildout-in-finland-under-investigation-for-300-hectare-forest-removal/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/googles-13bn-data-center-buildout-in-finland-under-investigation-for-300-hectare-forest-removal/",
+    "origem": "INT",
+    "resumo": "<p>Finnish Licensing and Supervision Authority requests reports from local municipalities</p>",
+    "titulo": "Google's €13bn data center buildout in Finland under investigation for 300-hectare forest removal",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
