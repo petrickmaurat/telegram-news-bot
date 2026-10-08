@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/yandex-data-center-hit-in-drone-attack-in-russia/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/yandex-data-center-hit-in-drone-attack-in-russia/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/yandex-data-center-hit-in-drone-attack-in-russia/",
+    "origem": "INT",
+    "resumo": "<p>Data center in Ryazan Oblast struck in drone attack</p>",
+    "titulo": "Yandex data center hit in drone attack in Russia",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
