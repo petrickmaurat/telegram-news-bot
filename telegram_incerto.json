@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/whitepapers/empowering-data-centers-for-sustainability-cost-savings/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/whitepapers/empowering-data-centers-for-sustainability-cost-savings/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/whitepapers/empowering-data-centers-for-sustainability-cost-savings/",
+    "origem": "INT",
+    "resumo": "<p>Ablecom AbleCool helps data centers achieve sustainability and cost savings</p>",
+    "titulo": "Empowering data centers for sustainability & cost savings",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
