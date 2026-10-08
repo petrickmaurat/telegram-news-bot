@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/product-news/shell-achieves-nvidia-dsx-ready-coolant-qualification-for-direct-liquid-cooling-advancing-high-performance-ai-computing/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/product-news/shell-achieves-nvidia-dsx-ready-coolant-qualification-for-direct-liquid-cooling-advancing-high-performance-ai-computing/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/product-news/shell-achieves-nvidia-dsx-ready-coolant-qualification-for-direct-liquid-cooling-advancing-high-performance-ai-computing/",
+    "origem": "INT",
+    "resumo": "<p>Shell's direct liquid cooling (DLC) fluid has achieved NVIDIA DSX Ready Coolant qualification, reinforcing Shell's role in supporting the next generation of high-performance, AI-ready data center infrastructure </p>",
+    "titulo": "Sponsored: Shell achieves NVIDIA DSX Ready Coolant qualification for direct liquid cooling, advancing high-performance AI computing",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
