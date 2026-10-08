@@ -1,7 +1,7 @@
 {
-  "cached": 434,
+  "cached": 594,
   "collection": {
-    "entries": 9588,
+    "entries": 10043,
     "failed": 3,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -19,7 +19,7 @@
       "US": 2
     },
     "carbono": {
-      "BR": 2,
+      "BR": 3,
       "US": 1
     },
     "data_center": {
@@ -28,108 +28,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610071030.33945708729@smtp-relay.mailin.fr>",
-    "sent_at": 1791369045.0580783,
-    "status": "enviado"
-  },
-  "generated_at": 1791368999.1276882,
+  "generated_at": 1791455740.494368,
   "google_links_pending": 0,
-  "needs_evaluation": 432,
+  "needs_evaluation": 413,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 505,
-      "insuficiente": 347,
-      "trecho_disponivel": 14
+      "artigo_completo": 563,
+      "insuficiente": 424,
+      "trecho_disponivel": 20
     },
     "selected": {
-      "artigo_completo": 11
+      "artigo_completo": 10,
+      "artigo_lido_pelo_modelo": 2
     }
   },
-  "request_sha256": "8560eaa3bd36fa2491124aeb16882fb2b850ca275e0413044d54d436416ff8fc",
+  "request_sha256": "2e11f0ca5e110966cc074ed0483cd0e1f377ceeafcd1fedf7e1ba46204fc88bd",
   "selected": [
     {
-      "assunto": "redata-regulamentacao",
-      "id": "c92254ab19e9ae395622",
-      "link": "https://mobiletime.com.br/noticias/06/10/2026/redata-mcom-pior-ja-foi/",
-      "titulo": "O mais difícil do Redata já passou, diz ministro do MCom",
+      "assunto": "pnast-228mw-sp",
+      "id": "722a18269066dcb19f0f",
+      "link": "https://eixos.com.br/energia-eletrica/data-centers-levam-228-mw-na-primeira-disputa-por-acesso-a-rede-de-transmissao/",
+      "titulo": "Data centers levam 228 MW na primeira disputa por acesso à rede de transmissão",
       "topico": "data_center"
     },
     {
-      "assunto": "mcom-agenda-infraestrutura-datacenter",
-      "id": "368b22dc371f1230520b",
-      "link": "https://teletime.com.br/06/10/2026/politicas-data-centers-cabos-mcom-2026/",
-      "titulo": "Políticas de data center, cabos submarinos, rodovias e inclusão saem em 2026, diz MCom",
+      "assunto": "pahlavan-liminar-aneel",
+      "id": "9a148b24a7d521e32894",
+      "link": "https://megawhat.uol.com.br/politica-energetica/liminar-obriga-aneel-a-decidir-cautelar-de-data-centers-da-pahlavan/",
+      "titulo": "Liminar obriga Aneel a decidir cautelar de data centers da Pahlavan",
       "topico": "data_center"
     },
     {
-      "assunto": "anatel-obrigacao-6ghz-datacenter",
-      "id": "5c726255f713eb12ba62",
-      "link": "https://telesintese.com.br/data-center-como-obrigacao-reflete-novo-ecossistema-de-telecom-avalia-anatel/",
-      "titulo": "Data center como obrigação reflete novo ecossistema de telecom, avalia Anatel",
+      "assunto": "pwc-projecao-investimento-datacenters-brasil",
+      "id": "b18b89252286709288dd",
+      "link": "https://revistaoe.com.br/data-centers-no-brasil-investimentos/",
+      "titulo": "Projeção de investimentos em data centers no Brasil este ano chega a US$ 11,4 bi",
       "topico": "data_center"
     },
     {
-      "assunto": "nebraska-banimento-permanente-datacenter",
-      "id": "a4acf57185fe9a196dc0",
-      "link": "https://nebraskapublicmedia.org/en/news/news-articles/eastern-nebraska-village-becomes-first-to-permanently-ban-data-centers/",
-      "titulo": "Eastern Nebraska village becomes first to permanently ban data centers",
+      "assunto": "sf-moratoria-data-center",
+      "id": "77c0646c09f488ffb266",
+      "link": "https://missionlocal.org/2026/10/sf-supervisors-pass-data-center-moratorium/",
+      "titulo": "San Francisco supervisors pass 45-day data-center moratorium",
       "topico": "data_center"
     },
     {
-      "assunto": "custeio-rateio-baterias-aneel",
-      "id": "0704b34ad37f4668d633",
-      "link": "https://agenciainfra.com/blog/aneel-abre-consulta-sobre-custeio-de-baterias-a-ser-rateado-entre-geradores/",
-      "titulo": "ANEEL abre consulta sobre custeio de baterias a ser rateado entre geradores",
+      "assunto": "absae-defende-rateio-baterias",
+      "id": "6784c4db8079a01384b8",
+      "link": "https://eixos.com.br/energias-renovaveis/leiloes-com-diferentes-tecnologias-reforcam-defesa-de-rateio-comum-para-baterias-diz-absae/",
+      "titulo": "Leilões com diferentes tecnologias reforçam defesa de rateio comum para baterias, diz Absae",
       "topico": "baterias"
     },
     {
-      "assunto": "varejo-vendas-recorde-bess-brasil",
-      "id": "a65c10948a4d66334e93",
-      "link": "https://braziljournal.com/mercado-de-baterias-eletricas-vive-boom-de-vendas/",
-      "titulo": "Mercado de baterias elétricas vive boom de vendas",
+      "assunto": "you-on-hyperstrong-parceria",
+      "id": "e3934f822d1fcf8e92ca",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/you-on-e-chinesa-hyperstrong-fecham-parceria-para-leiloes-de-baterias/",
+      "titulo": "You.On e chinesa HyperStrong fecham parceria para leilões de baterias",
       "topico": "baterias"
     },
     {
-      "assunto": "gotion-leilao-saudita-custo",
-      "id": "3d7a0ad728fbf6bbd49e",
-      "link": "https://bestmag.co.uk/gotion-wins-6-gwh-saudi-battery-storage-deal/",
-      "titulo": "Gotion wins 6 GWh Saudi battery storage deal",
+      "assunto": "baterias-tech-anodos-silicio-grafite",
+      "id": "86f90f84680f49f14f9d",
+      "link": "https://evinfrastructurenews.com/ev-battery/silicon-vs-graphite-anodes",
+      "titulo": "Silicon vs graphite anodes: EV range, charging and cost",
       "topico": "baterias"
     },
     {
-      "assunto": "tecnologia-estado-solido-samsung-lg",
-      "id": "eb141dd103b24176c1ff",
-      "link": "https://businesskorea.co.kr/news/articleView.html?idxno=278425",
-      "titulo": "Samsung SDI, LG Energy Solution Diverge on Solid-State Commercialization",
+      "assunto": "maryland-procurement-bess",
+      "id": "0e307e2f2298b3a97d91",
+      "link": "https://utilitydive.com/news/maryland-nets-440-mw1760-mwh-in-first-bulk-energy-storage-procurement/832261/",
+      "titulo": "Maryland nets 440 MW/1,760 MWh in first bulk energy storage procurement",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-continuidade-politica",
-      "id": "152a5e9526082fbe38cc",
-      "link": "https://qcintel.com/carbon/article/brazil-ets-rollout-to-survive-potential-right-wing-shift-sources-74559.html",
-      "titulo": "Brazil ETS rollout to survive potential right-wing shift: sources",
+      "assunto": "sbce-regulamentacao-lei15042",
+      "id": "e2d386b54b075922f44a",
+      "link": "https://bra1.com.br/economia/id-704459/regras_do_mercado_de_carbono_no_brasil__o_que_muda_para_as_empresas_e_seus_custos",
+      "titulo": "Regras do mercado de carbono no Brasil: o que muda para as empresas e seus custos",
       "topico": "carbono"
     },
     {
-      "assunto": "redd-beneficios-territoriais",
-      "id": "16b49d5b3b49c2e81db5",
-      "link": "https://capitalreset.uol.com.br/opiniao/carbono-nao-e-tudo-os-beneficios-territoriais-e-sociais-dos-projetos-redd/",
-      "titulo": "Carbono não é tudo: os benefícios territoriais e sociais dos projetos REDD+",
+      "assunto": "creditos-carbono-pequenos-geradores",
+      "id": "1cafebe549ddefbb018a",
+      "link": "https://guarulhosonline.com.br/projeto-venda-creditos-carbono-pequenos-geradores/",
+      "titulo": "Câmara aprova venda de créditos de carbono por pequenos geradores de energia solar",
       "topico": "carbono"
     },
     {
-      "assunto": "quenia-regulacao-mercado-carbono",
-      "id": "8c35d5c423ec6002166c",
-      "link": "https://the-star.co.ke/climate-change/2026-10-06-kenya-tightens-carbon-market-rules-to-protect-climate-goals-and-communities",
-      "titulo": "Kenya tightens carbon market rules to protect climate goals and communities",
+      "assunto": "mt-estatal-creditos-carbono",
+      "id": "15e4830507662e707245",
+      "link": "https://rdnews.com.br/executivo/pivetta-pede-aval-da-almt-para-criar-companhia-estatal-de-creditos-de-carbono/250391",
+      "titulo": "Pivetta pede aval da ALMT para criar companhia estatal de créditos de carbono",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "ue-ets-reforma",
+      "id": "a273e684ad6e6b4cfa07",
+      "link": "https://qcintel.com/carbon/article/eu-ets-reform-could-cut-industry-investment-27-paper-74710.html",
+      "titulo": "EU ETS reform could cut industry investment 27%: paper",
       "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 07/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 08/10 (manhã)",
   "truncated": {}
 }
