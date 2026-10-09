@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://telesintese.com.br/rede-eletrica-precisa-de-r-7-bi-em-investimentos-para-atender-demanda-de-data-centers-diz-epe/"
+  ],
+  "item": {
+    "aliases": [
+      "https://telesintese.com.br/rede-eletrica-precisa-de-r-7-bi-em-investimentos-para-atender-demanda-de-data-centers-diz-epe/"
+    ],
+    "fonte": "TeleSíntese",
+    "link": "https://telesintese.com.br/rede-eletrica-precisa-de-r-7-bi-em-investimentos-para-atender-demanda-de-data-centers-diz-epe/",
+    "origem": "BR",
+    "resumo": "<p>Pedidos de conexão somam 20,7 GW, mas planejamento enfrenta risco de obras ociosas e aumento das tarifas caso investimentos não se concretizem</p>\n<p>O post <a href=\"https://telesintese.com.br/rede-eletrica-precisa-de-r-7-bi-em-investimentos-para-atender-demanda-de-data-centers-diz-epe/\">Rede elétrica precisa de R$ 7 bi em investimentos para atender demanda de data centers, diz EPE</a> apareceu primeiro em <a href=\"https://telesintese.com.br\">TeleSíntese</a>.</p>",
+    "titulo": "Rede elétrica precisa de R$ 7 bi em investimentos para atender demanda de data centers, diz EPE",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
