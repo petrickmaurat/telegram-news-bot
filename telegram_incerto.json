@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/anthropic-linked-366m-data-center-project-filed-for-in-cedar-creek-texas/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/anthropic-linked-366m-data-center-project-filed-for-in-cedar-creek-texas/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/anthropic-linked-366m-data-center-project-filed-for-in-cedar-creek-texas/",
+    "origem": "INT",
+    "resumo": "<p>First building will be located on Earl Callahan Road</p>",
+    "titulo": "Anthropic-linked $366m data center project filed for in Cedar Creek, Texas",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
