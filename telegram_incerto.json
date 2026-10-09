@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/marketwatch/how-800-vdc-could-change-the-liquid-cooling-game/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/marketwatch/how-800-vdc-could-change-the-liquid-cooling-game/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/marketwatch/how-800-vdc-could-change-the-liquid-cooling-game/",
+    "origem": "INT",
+    "resumo": "<p>Schneider Electric’s Mike Donahue rethinks liquid cooling planning for 800 VDC power architectures to scale AI data centers</p>",
+    "titulo": "Sponsored: How 800 VDC could change the liquid cooling game",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
