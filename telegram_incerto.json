@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/whitepapers/how-colocation-providers-find-and-reclaim-stranded-power-capacity/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/whitepapers/how-colocation-providers-find-and-reclaim-stranded-power-capacity/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/whitepapers/how-colocation-providers-find-and-reclaim-stranded-power-capacity/",
+    "origem": "INT",
+    "resumo": "<p>Unlocking millions in hidden revenue across multi-site data center portfolios</p>",
+    "titulo": "How colocation providers find and reclaim stranded power capacity",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
