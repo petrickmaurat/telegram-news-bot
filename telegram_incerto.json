@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/it-service-provider-infomaniak-lists-on-swiss-stock-exchange/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/it-service-provider-infomaniak-lists-on-swiss-stock-exchange/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/it-service-provider-infomaniak-lists-on-swiss-stock-exchange/",
+    "origem": "INT",
+    "resumo": "<p>The firm currently serves more than 300,000 European customers and operates three data centers in Switzerland</p>",
+    "titulo": "IT service provider Infomaniak lists on Swiss stock exchange",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
