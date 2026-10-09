@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/digital-realty-begins-work-on-kix15-data-center-in-japan/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/digital-realty-begins-work-on-kix15-data-center-in-japan/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/digital-realty-begins-work-on-kix15-data-center-in-japan/",
+    "origem": "INT",
+    "resumo": "<p>New building on Osaka campus adds 24MW</p>",
+    "titulo": "Digital Realty begins work on KIX15 data center in Japan",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
