@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/when-noise-ordinances-cant-keep-up-with-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/when-noise-ordinances-cant-keep-up-with-data-centers/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/when-noise-ordinances-cant-keep-up-with-data-centers/",
+    "origem": "INT",
+    "resumo": "<p>And why the issue around noise shouldn't be ignored</p>",
+    "titulo": "When noise ordinances can't keep up with data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
