@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/whitepapers/new-battery-capability-for-dual-use-ups-and-ai-factory-dynamic-power-management/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/whitepapers/new-battery-capability-for-dual-use-ups-and-ai-factory-dynamic-power-management/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/whitepapers/new-battery-capability-for-dual-use-ups-and-ai-factory-dynamic-power-management/",
+    "origem": "INT",
+    "resumo": "<p>How nickel-zinc batteries can provide both UPS backup and rapid dynamic power support for AI data centers facing increasingly volatile power demands</p>",
+    "titulo": "New battery capability for dual-use UPS and AI factory dynamic power management",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
