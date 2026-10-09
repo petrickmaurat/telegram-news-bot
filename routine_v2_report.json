@@ -1,7 +1,7 @@
 {
-  "cached": 594,
+  "cached": 559,
   "collection": {
-    "entries": 10043,
+    "entries": 10092,
     "failed": 3,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -28,116 +28,112 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610081037.55178336998@smtp-relay.mailin.fr>",
-    "sent_at": 1791455834.905246,
-    "status": "enviado"
-  },
-  "generated_at": 1791455740.494368,
+  "generated_at": 1791542035.9935858,
   "google_links_pending": 0,
-  "needs_evaluation": 413,
+  "needs_evaluation": 389,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 563,
-      "insuficiente": 424,
-      "trecho_disponivel": 20
+      "artigo_completo": 500,
+      "insuficiente": 434,
+      "trecho_disponivel": 14
     },
     "selected": {
       "artigo_completo": 10,
-      "artigo_lido_pelo_modelo": 2
+      "artigo_lido_pelo_modelo": 1,
+      "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "2e11f0ca5e110966cc074ed0483cd0e1f377ceeafcd1fedf7e1ba46204fc88bd",
+  "request_sha256": "d530e8e032010fbe7aa937199050c14450418e07ced3bd63cff63b85c6942d9c",
   "selected": [
     {
-      "assunto": "pnast-228mw-sp",
-      "id": "722a18269066dcb19f0f",
-      "link": "https://eixos.com.br/energia-eletrica/data-centers-levam-228-mw-na-primeira-disputa-por-acesso-a-rede-de-transmissao/",
-      "titulo": "Data centers levam 228 MW na primeira disputa por acesso à rede de transmissão",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "pahlavan-liminar-aneel",
-      "id": "9a148b24a7d521e32894",
-      "link": "https://megawhat.uol.com.br/politica-energetica/liminar-obriga-aneel-a-decidir-cautelar-de-data-centers-da-pahlavan/",
-      "titulo": "Liminar obriga Aneel a decidir cautelar de data centers da Pahlavan",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "pwc-projecao-investimento-datacenters-brasil",
-      "id": "b18b89252286709288dd",
-      "link": "https://revistaoe.com.br/data-centers-no-brasil-investimentos/",
-      "titulo": "Projeção de investimentos em data centers no Brasil este ano chega a US$ 11,4 bi",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "sf-moratoria-data-center",
-      "id": "77c0646c09f488ffb266",
-      "link": "https://missionlocal.org/2026/10/sf-supervisors-pass-data-center-moratorium/",
-      "titulo": "San Francisco supervisors pass 45-day data-center moratorium",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "absae-defende-rateio-baterias",
-      "id": "6784c4db8079a01384b8",
-      "link": "https://eixos.com.br/energias-renovaveis/leiloes-com-diferentes-tecnologias-reforcam-defesa-de-rateio-comum-para-baterias-diz-absae/",
-      "titulo": "Leilões com diferentes tecnologias reforçam defesa de rateio comum para baterias, diz Absae",
+      "assunto": "pde2036-baterias",
+      "id": "59a95b6da12a7d0b02d6",
+      "link": "https://agenciainfra.com/blog/governo-preve-72-gw-de-baterias-no-sistema-eletrico-ate-2036/",
+      "titulo": "Governo prevê 7,2 GW de baterias no sistema elétrico até 2036",
       "topico": "baterias"
     },
     {
-      "assunto": "you-on-hyperstrong-parceria",
-      "id": "e3934f822d1fcf8e92ca",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/you-on-e-chinesa-hyperstrong-fecham-parceria-para-leiloes-de-baterias/",
-      "titulo": "You.On e chinesa HyperStrong fecham parceria para leilões de baterias",
+      "assunto": "debate-custeio-legislacao-baterias",
+      "id": "51f49a30b3f52eab8505",
+      "link": "https://megawhat.uol.com.br/leiloes/debate-sobre-custeio-das-baterias-expoe-lacuna-na-legislacao-diz-absae/",
+      "titulo": "Debate sobre custeio das baterias expõe lacuna na legislação, diz Absae",
       "topico": "baterias"
     },
     {
-      "assunto": "baterias-tech-anodos-silicio-grafite",
-      "id": "86f90f84680f49f14f9d",
-      "link": "https://evinfrastructurenews.com/ev-battery/silicon-vs-graphite-anodes",
-      "titulo": "Silicon vs graphite anodes: EV range, charging and cost",
+      "assunto": "bess-custo-vs-gas",
+      "id": "0c49893813b596eabad7",
+      "link": "https://brasilenergia.com.br/energia/panorama/bess-de-4-horas-ja-superam-gas-em-custo-em-43-mercados",
+      "titulo": "BESS de 4 horas já superam gás em custo em 43 mercados",
       "topico": "baterias"
     },
     {
-      "assunto": "maryland-procurement-bess",
-      "id": "0e307e2f2298b3a97d91",
-      "link": "https://utilitydive.com/news/maryland-nets-440-mw1760-mwh-in-first-bulk-energy-storage-procurement/832261/",
-      "titulo": "Maryland nets 440 MW/1,760 MWh in first bulk energy storage procurement",
+      "assunto": "bateria-estado-solido",
+      "id": "da9d39793d42462a8f52",
+      "link": "https://finance.biggo.com/news/7e7fb515-fdd4-48b4-9f94-b4e6c0679c96",
+      "titulo": "South Korea's IL Achieves 10x Energy Density with Substrate-Free All-Solid-State Battery",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-regulamentacao-lei15042",
-      "id": "e2d386b54b075922f44a",
-      "link": "https://bra1.com.br/economia/id-704459/regras_do_mercado_de_carbono_no_brasil__o_que_muda_para_as_empresas_e_seus_custos",
-      "titulo": "Regras do mercado de carbono no Brasil: o que muda para as empresas e seus custos",
+      "assunto": "sbce",
+      "id": "5bc22df04e05ee44226a",
+      "link": "https://esginside.com.br/2026/10/08/strategi-analisa-como-regulamentacao-do-mercado-de-carbono-coloca-empresas-diante-de-novas-exigencias/",
+      "titulo": "Strategi analisa como regulamentação do mercado de carbono coloca empresas diante de novas exigências",
       "topico": "carbono"
     },
     {
-      "assunto": "creditos-carbono-pequenos-geradores",
-      "id": "1cafebe549ddefbb018a",
-      "link": "https://guarulhosonline.com.br/projeto-venda-creditos-carbono-pequenos-geradores/",
-      "titulo": "Câmara aprova venda de créditos de carbono por pequenos geradores de energia solar",
+      "assunto": "eleicao-carbono-politica",
+      "id": "1aac32f7c5c13268363b",
+      "link": "https://moneytimes.com.br/flavio-bolsonaro-promete-fortalecer-mercado-de-carbono-mas-investidores-temem-recuos-na-agenda-climatica/",
+      "titulo": "Flávio Bolsonaro promete fortalecer mercado de carbono, mas investidores temem recuos na agenda climática",
       "topico": "carbono"
     },
     {
-      "assunto": "mt-estatal-creditos-carbono",
-      "id": "15e4830507662e707245",
-      "link": "https://rdnews.com.br/executivo/pivetta-pede-aval-da-almt-para-criar-companhia-estatal-de-creditos-de-carbono/250391",
-      "titulo": "Pivetta pede aval da ALMT para criar companhia estatal de créditos de carbono",
+      "assunto": "compensacao-emissoes-aviacao",
+      "id": "ba9d81031da9de9d75ff",
+      "link": "https://umsoplaneta.globo.com/google/amp/financas/negocios/noticia/2026/10/07/azul-conecta-fecha-acordo-com-auren-para-compensacao-de-emissoes-de-todos-os-voos-de-2026.ghtml",
+      "titulo": "Azul Conecta fecha acordo com Auren para compensação de emissões de todos os voos de 2026",
       "topico": "carbono"
     },
     {
-      "assunto": "ue-ets-reforma",
-      "id": "a273e684ad6e6b4cfa07",
-      "link": "https://qcintel.com/carbon/article/eu-ets-reform-could-cut-industry-investment-27-paper-74710.html",
-      "titulo": "EU ETS reform could cut industry investment 27%: paper",
+      "assunto": "indonesia-mercado-carbono",
+      "id": "8e25fa85e6454120c30d",
+      "link": "https://en.antaranews.com/news/434405/indonesia-to-direct-carbon-market-fund-to-farmers-coastal-communities",
+      "titulo": "Indonesia to direct carbon market fund to farmers, coastal communities",
       "topico": "carbono"
+    },
+    {
+      "assunto": "redata-regime-tributario",
+      "id": "1e74cd7e2b662f701341",
+      "link": "https://migalhas.com.br/depeso/465968/regime-busca-impulsionar-data-centers-infraestrutura-e-ia-no-brasil",
+      "titulo": "Novo regime tributário busca impulsionar data centers, infraestrutura energética e inteligência artificial no Brasil",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "pde-demanda-energetica-dc",
+      "id": "39388c1feaaec46c2403",
+      "link": "https://eixos.com.br/energia/data-centers-devem-demandar-dez-vezes-mais-eletricidade-em-2036-estima-pde/",
+      "titulo": "Data centers devem demandar dez vezes mais eletricidade em 2036, estima PDE",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "aneel-litigio-acesso-rede",
+      "id": "96b323c81b2da5d7a955",
+      "link": "https://agenciainfra.com/blog/justica-da-48h-para-aneel-analisar-pedido-de-data-centers-sobre-acesso-a-rede/",
+      "titulo": "Justiça dá 48h para ANEEL analisar pedido de data centers sobre acesso à rede",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "texas-pausa-permissoes-dc",
+      "id": "80176708f7e026d5914f",
+      "link": "https://a16z.com/why-texas-is-making-data-centers-wait/",
+      "titulo": "Why Texas Is Making Data Centers Wait",
+      "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 08/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 09/10 (manhã)",
   "truncated": {}
 }
