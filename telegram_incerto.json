@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/legacy-data-center-efficiency-now-has-a-compliance-deadline/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/legacy-data-center-efficiency-now-has-a-compliance-deadline/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/legacy-data-center-efficiency-now-has-a-compliance-deadline/",
+    "origem": "INT",
+    "resumo": "<p>Why efficiency in existing facilities has shifted from good intention to obligation</p>",
+    "titulo": "Sponsored: Legacy data center efficiency now has a compliance deadline",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
