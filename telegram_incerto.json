@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/echion-partners-with-proper-voltage-to-develop-16mw-ups-for-ai-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/echion-partners-with-proper-voltage-to-develop-16mw-ups-for-ai-data-centers/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/echion-partners-with-proper-voltage-to-develop-16mw-ups-for-ai-data-centers/",
+    "origem": "INT",
+    "resumo": "<p>Ink MoU to develop an integrated system</p>",
+    "titulo": "Echion partners with Proper Voltage to develop 1.6MW UPS for AI data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
