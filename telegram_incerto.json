@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/product-news/faster-cleaner-data-centers-that-withstand-scrutiny/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/product-news/faster-cleaner-data-centers-that-withstand-scrutiny/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/product-news/faster-cleaner-data-centers-that-withstand-scrutiny/",
+    "origem": "INT",
+    "resumo": "<p>Grid connections for new data centers can take a decade to arrive, and, increasingly, communities want proof that the sector will not strain the energy system and local resources</p>",
+    "titulo": "Sponsored: Faster, cleaner data centers that withstand scrutiny",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
