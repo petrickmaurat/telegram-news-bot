@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/softbank-eyes-possible-ai-data-center-project-in-borneo/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/softbank-eyes-possible-ai-data-center-project-in-borneo/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/softbank-eyes-possible-ai-data-center-project-in-borneo/",
+    "origem": "INT",
+    "resumo": "<p>Company partners with tech company Grab and a government-owned oil and gas firm</p>",
+    "titulo": "SoftBank eyes possible AI data center project in Borneo",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
