@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/opinions/the-overlooked-impact-of-indias-new-data-center-policy/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/opinions/the-overlooked-impact-of-indias-new-data-center-policy/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/opinions/the-overlooked-impact-of-indias-new-data-center-policy/",
+    "origem": "INT",
+    "resumo": "<p>How will it impact investment and buildout in the country?</p>",
+    "titulo": "The overlooked impact of India's new data center policy",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
