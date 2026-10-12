@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/videos/dcd-studio-beyond-the-hype-practical-strategies-for-data-center-development-with-nick-marlow-bcs/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/videos/dcd-studio-beyond-the-hype-practical-strategies-for-data-center-development-with-nick-marlow-bcs/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/videos/dcd-studio-beyond-the-hype-practical-strategies-for-data-center-development-with-nick-marlow-bcs/",
+    "origem": "INT",
+    "resumo": "<p>Seb Moss speaks with Nick Marlow of BCS about the evolving European data center landscape, from rising power demands to the challenges of site selection</p>",
+    "titulo": "DCD Studio: Beyond the hype - Practical strategies for data center development with Nick Marlow, BCS",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
