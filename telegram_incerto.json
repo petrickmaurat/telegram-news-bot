@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/memphis-council-delays-decision-on-year-long-data-center-moratorium-despite-protests/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/memphis-council-delays-decision-on-year-long-data-center-moratorium-despite-protests/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/memphis-council-delays-decision-on-year-long-data-center-moratorium-despite-protests/",
+    "origem": "INT",
+    "resumo": "<p>Home of Musk's xAI data centers could ban new developments for 12 months</p>",
+    "titulo": "Memphis council delays decision on year-long data center moratorium despite protests",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
