@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/whitepapers/north-america-data-center-report-midyear-2026/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/whitepapers/north-america-data-center-report-midyear-2026/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/whitepapers/north-america-data-center-report-midyear-2026/",
+    "origem": "INT",
+    "resumo": "<p>Navigating historic growth and community acceptance</p>",
+    "titulo": "North America data center report: Midyear 2026",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
