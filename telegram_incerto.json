@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/videos/dcd-studio-avks-billion-dollar-investment-into-energy-solutions-with-ben-pritchard-avk/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/videos/dcd-studio-avks-billion-dollar-investment-into-energy-solutions-with-ben-pritchard-avk/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/videos/dcd-studio-avks-billion-dollar-investment-into-energy-solutions-with-ben-pritchard-avk/",
+    "origem": "INT",
+    "resumo": "<p>Seb Moss speaks with Ben Pritchard of AVK about meeting data center power demands via microgrids, innovative pod factories, and creative financing backed by a $1B investment.</p>",
+    "titulo": "DCD Studio: AVK's billion dollar investment into energy solutions, with Ben Pritchard, AVK",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
