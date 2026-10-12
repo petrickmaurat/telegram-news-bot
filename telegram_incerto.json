@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/whitepapers/dc-arc-flash-analysis/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/whitepapers/dc-arc-flash-analysis/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/whitepapers/dc-arc-flash-analysis/",
+    "origem": "INT",
+    "resumo": "<p>A practical study on 800 VDC AI data centers</p>",
+    "titulo": "DC arc flash analysis",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
