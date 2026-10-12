@@ -1,7 +1,7 @@
 {
-  "cached": 559,
+  "cached": 2,
   "collection": {
-    "entries": 10092,
+    "entries": 7904,
     "failed": 3,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -19,7 +19,7 @@
       "US": 2
     },
     "carbono": {
-      "BR": 3,
+      "BR": 0,
       "US": 1
     },
     "data_center": {
@@ -28,117 +28,89 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610091034.79563488414@smtp-relay.mailin.fr>",
-    "sent_at": 1791542091.962977,
-    "status": "enviado"
-  },
-  "generated_at": 1791542035.9935858,
+  "generated_at": 1791801041.4595482,
   "google_links_pending": 0,
-  "needs_evaluation": 389,
+  "needs_evaluation": 480,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 500,
-      "insuficiente": 434,
-      "trecho_disponivel": 14
+      "artigo_completo": 225,
+      "insuficiente": 244,
+      "trecho_disponivel": 13
     },
     "selected": {
-      "artigo_completo": 10,
-      "artigo_lido_pelo_modelo": 1,
-      "trecho_limitado_final": 1
+      "artigo_completo": 9
     }
   },
-  "request_sha256": "d530e8e032010fbe7aa937199050c14450418e07ced3bd63cff63b85c6942d9c",
+  "request_sha256": "6e0b0a51f175eb70e3ab807c4837c7b8baefb669a989b2e67671b572f0953b43",
   "selected": [
     {
-      "assunto": "pde2036-baterias",
-      "id": "59a95b6da12a7d0b02d6",
-      "link": "https://agenciainfra.com/blog/governo-preve-72-gw-de-baterias-no-sistema-eletrico-ate-2036/",
-      "titulo": "Governo prevê 7,2 GW de baterias no sistema elétrico até 2036",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "debate-custeio-legislacao-baterias",
-      "id": "51f49a30b3f52eab8505",
-      "link": "https://megawhat.uol.com.br/leiloes/debate-sobre-custeio-das-baterias-expoe-lacuna-na-legislacao-diz-absae/",
-      "titulo": "Debate sobre custeio das baterias expõe lacuna na legislação, diz Absae",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "bess-custo-vs-gas",
-      "id": "0c49893813b596eabad7",
-      "link": "https://brasilenergia.com.br/energia/panorama/bess-de-4-horas-ja-superam-gas-em-custo-em-43-mercados",
-      "titulo": "BESS de 4 horas já superam gás em custo em 43 mercados",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "bateria-estado-solido",
-      "id": "da9d39793d42462a8f52",
-      "link": "https://finance.biggo.com/news/7e7fb515-fdd4-48b4-9f94-b4e6c0679c96",
-      "titulo": "South Korea's IL Achieves 10x Energy Density with Substrate-Free All-Solid-State Battery",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "sbce",
-      "id": "5bc22df04e05ee44226a",
-      "link": "https://esginside.com.br/2026/10/08/strategi-analisa-como-regulamentacao-do-mercado-de-carbono-coloca-empresas-diante-de-novas-exigencias/",
-      "titulo": "Strategi analisa como regulamentação do mercado de carbono coloca empresas diante de novas exigências",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "eleicao-carbono-politica",
-      "id": "1aac32f7c5c13268363b",
-      "link": "https://moneytimes.com.br/flavio-bolsonaro-promete-fortalecer-mercado-de-carbono-mas-investidores-temem-recuos-na-agenda-climatica/",
-      "titulo": "Flávio Bolsonaro promete fortalecer mercado de carbono, mas investidores temem recuos na agenda climática",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "compensacao-emissoes-aviacao",
-      "id": "ba9d81031da9de9d75ff",
-      "link": "https://umsoplaneta.globo.com/google/amp/financas/negocios/noticia/2026/10/07/azul-conecta-fecha-acordo-com-auren-para-compensacao-de-emissoes-de-todos-os-voos-de-2026.ghtml",
-      "titulo": "Azul Conecta fecha acordo com Auren para compensação de emissões de todos os voos de 2026",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "indonesia-mercado-carbono",
-      "id": "8e25fa85e6454120c30d",
-      "link": "https://en.antaranews.com/news/434405/indonesia-to-direct-carbon-market-fund-to-farmers-coastal-communities",
-      "titulo": "Indonesia to direct carbon market fund to farmers, coastal communities",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "redata-regime-tributario",
-      "id": "1e74cd7e2b662f701341",
-      "link": "https://migalhas.com.br/depeso/465968/regime-busca-impulsionar-data-centers-infraestrutura-e-ia-no-brasil",
-      "titulo": "Novo regime tributário busca impulsionar data centers, infraestrutura energética e inteligência artificial no Brasil",
+      "assunto": "planejamento-decenal-demanda",
+      "id": "c0bade942e82a3fe9208",
+      "link": "https://megawhat.uol.com.br/podcasts/o-novo-modelo-de-preco-e-quem-ganhou-a-disputa-pela-rede-2/",
+      "titulo": "🎙️Mais solar, mais data centers e mais baterias nos próximos dez anos",
       "topico": "data_center"
     },
     {
-      "assunto": "pde-demanda-energetica-dc",
-      "id": "39388c1feaaec46c2403",
-      "link": "https://eixos.com.br/energia/data-centers-devem-demandar-dez-vezes-mais-eletricidade-em-2036-estima-pde/",
-      "titulo": "Data centers devem demandar dez vezes mais eletricidade em 2036, estima PDE",
+      "assunto": "pde2036",
+      "id": "a17fc04132d20091294b",
+      "link": "https://clickpetroleoegas.com.br/pde-2036-preve-r-3-3-trilhoes-em-dez-anos-e-consumo-de-luz-de-702-para-979-twh-plano-do-governo-poe-data-centers-a-30-twh-e-31-9-mil-km-de-linhas-mas-so-ate-6-de-novembro-da-btl96/",
+      "titulo": "PDE 2036 prevê R$ 3,3 trilhões em dez anos e consumo de luz de 702 para 979 TWh: plano do governo põe data centers a 30 TWh e 31,9 mil km de linhas, mas só até 6 de novembro dá para opinar",
       "topico": "data_center"
     },
     {
-      "assunto": "aneel-litigio-acesso-rede",
-      "id": "96b323c81b2da5d7a955",
-      "link": "https://agenciainfra.com/blog/justica-da-48h-para-aneel-analisar-pedido-de-data-centers-sobre-acesso-a-rede/",
-      "titulo": "Justiça dá 48h para ANEEL analisar pedido de data centers sobre acesso à rede",
+      "assunto": "redata",
+      "id": "4d223a9e9d5fc19886d9",
+      "link": "https://bluestudio.estadao.com.br/agencia-de-comunicacao/engrenagens-do-crescimento/redata-torna-brasil-mais-competitivo-para-atrair-data-centers-diz-diretor-da-brasscom/",
+      "titulo": "Agência de Comunicação - Redata torna Brasil mais competitivo para atrair data centers, diz diretor da Brasscom",
       "topico": "data_center"
     },
     {
-      "assunto": "texas-pausa-permissoes-dc",
-      "id": "80176708f7e026d5914f",
-      "link": "https://a16z.com/why-texas-is-making-data-centers-wait/",
-      "titulo": "Why Texas Is Making Data Centers Wait",
+      "assunto": "indiana-aes-google-dc",
+      "id": "bf7d92c27eb9c83d70b8",
+      "link": "https://wfyi.org/statewide/2026-10-12/indiana-approves-aes-plan-to-power-google-data-center-in-monrovia",
+      "titulo": "Indiana approves AES plan to power Google data center in Monrovia",
       "topico": "data_center"
+    },
+    {
+      "assunto": "planejamento-decenal-baterias",
+      "id": "546ca2e800c188ea6efd",
+      "link": "https://megawhat.uol.com.br/podcasts/mais-solar-mais-data-centers-e-mais-baterias-nos-proximos-dez-anos/",
+      "titulo": "🎙️Mais solar, mais data centers e mais baterias nos próximos dez anos",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "pde-flexibilidade-baterias",
+      "id": "f890659c9029167a8cd0",
+      "link": "https://eixos.com.br/newsletters/comece-seu-dia/brasil-pode-contar-com-13-gw-de-flexibilidade-no-setor-eletrico-com-baterias-reversiveis-e-resposta-da-demanda/",
+      "titulo": "Brasil pode contar com 13 GW de flexibilidade no setor elétrico com baterias, reversíveis e resposta da demanda",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "tarifas-preco-baterias-chinesas",
+      "id": "d7fe562994dea74e2d07",
+      "link": "https://thelec.net/news/articleView.html?idxno=14522",
+      "titulo": "US Tariffs, Freight Costs Undercut Chinese Battery Price Advantage",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "maturacao-estado-solido",
+      "id": "3f06cc791f55142a18aa",
+      "link": "https://news.metal.com/newscontent/104149707-solid-state-battery-next-decade-series-part-9-of-9-a-brand-new-track-not-a-simple-sequel-to-liquid-lithium-batteries-smm-analysis",
+      "titulo": "Solid-State Battery Next Decade Series, Part 9 of 9: A Brand-New Track, Not a \"Simple Sequel\" to Liquid Lithium Batteries [SMM Analysis]",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "ue-ets2-reforma",
+      "id": "1b941bcdfaeeda583ab5",
+      "link": "https://brusselstimes.com/2354284/eu-reshapes-carbon-market-rules-with-stricter-controls-ahead-of-2028-launch",
+      "titulo": "EU reshapes carbon market rules with stricter controls ahead of 2028 launch",
+      "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 09/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 12/10 (manhã)",
   "truncated": {}
 }
