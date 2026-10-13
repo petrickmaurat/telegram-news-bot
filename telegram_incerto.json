@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/videos/dcd-talk-critical-power-architectures-for-ai-data-centers-with-mehdi-rajehi-abb/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/videos/dcd-talk-critical-power-architectures-for-ai-data-centers-with-mehdi-rajehi-abb/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/videos/dcd-talk-critical-power-architectures-for-ai-data-centers-with-mehdi-rajehi-abb/",
+    "origem": "INT",
+    "resumo": "<p>ABB's Mehdi Rajehi speaks with DCD's Zoe Turner on how next-generation power architectures are enabling scalable AI data centers</p>",
+    "titulo": "DCD Talk: Critical power architectures for AI data centers with Mehdi Rajehi, ABB",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
