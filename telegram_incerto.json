@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/vivopower-starts-construction-at-42mw-mo-i-rana-data-center-in-norway/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/vivopower-starts-construction-at-42mw-mo-i-rana-data-center-in-norway/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/vivopower-starts-construction-at-42mw-mo-i-rana-data-center-in-norway/",
+    "origem": "INT",
+    "resumo": "<p>To spin off 2.2GW non-Nordic AI data center portfolio into a new listed firm</p>",
+    "titulo": "VivoPower starts construction at 42MW Mo i Rana data center in Norway",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
