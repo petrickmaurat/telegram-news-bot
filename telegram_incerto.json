@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/ntt-to-build-63bn-data-center-for-anthropic-in-japan-report/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/ntt-to-build-63bn-data-center-for-anthropic-in-japan-report/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/ntt-to-build-63bn-data-center-for-anthropic-in-japan-report/",
+    "origem": "INT",
+    "resumo": "<p>Sources say talks are in the \"final stages\"</p>",
+    "titulo": "NTT to build $6.3bn data center for Anthropic in Japan - report",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
