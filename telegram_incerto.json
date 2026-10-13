@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/ferc-approves-pjms-request-to-create-data-center-database/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/ferc-approves-pjms-request-to-create-data-center-database/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/ferc-approves-pjms-request-to-create-data-center-database/",
+    "origem": "INT",
+    "resumo": "<p>Rejects separate request to curtail power to data centers during periods of grid stress</p>",
+    "titulo": "FERC approves PJM's request to create data center database",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
