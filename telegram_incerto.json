@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/naver-cloud-and-fpt-partner-on-ai-buildout-in-asia-pacific/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/naver-cloud-and-fpt-partner-on-ai-buildout-in-asia-pacific/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/naver-cloud-and-fpt-partner-on-ai-buildout-in-asia-pacific/",
+    "origem": "INT",
+    "resumo": "<p>Aim to accelerate development and deployment of AI data centers</p>",
+    "titulo": "Naver Cloud and FPT partner on AI buildout in Asia Pacific",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
