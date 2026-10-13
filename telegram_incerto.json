@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/whitepapers/fire-protection-in-data-center-construction/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/whitepapers/fire-protection-in-data-center-construction/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/whitepapers/fire-protection-in-data-center-construction/",
+    "origem": "INT",
+    "resumo": "<p>The strategic value of passive fire protection in early design</p>",
+    "titulo": "Fire protection in data center construction",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
