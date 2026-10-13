@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/product-news/veir-raises-110-million-series-c-to-accelerate-commercialization-of-superconducting-power-delivery-technology-for-ai-data-centers/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/product-news/veir-raises-110-million-series-c-to-accelerate-commercialization-of-superconducting-power-delivery-technology-for-ai-data-centers/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/product-news/veir-raises-110-million-series-c-to-accelerate-commercialization-of-superconducting-power-delivery-technology-for-ai-data-centers/",
+    "origem": "INT",
+    "resumo": "<p>Matter Venture Partners and Tyche Partners co-lead round supporting first commercial projects, scaled manufacturing, and broader deployment of Veir's high density superconducting power delivery systems</p>",
+    "titulo": "Sponsored: VEIR raises $110 million Series C to accelerate commercialization of superconducting power delivery technology for AI data centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
