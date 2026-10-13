@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterknowledge.com/data-center-chips/how-chiplets-could-transform-server-design-and-data-centers"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterknowledge.com/data-center-chips/how-chiplets-could-transform-server-design-and-data-centers"
+    ],
+    "fonte": "datacenterknowledge",
+    "link": "https://www.datacenterknowledge.com/data-center-chips/how-chiplets-could-transform-server-design-and-data-centers",
+    "origem": "INT",
+    "resumo": "Chiplets are reshaping CPU design, enabling data centers to do more without increasing space or power consumption.",
+    "titulo": "How Chiplets Could Transform Server Design – And Data Centers",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
