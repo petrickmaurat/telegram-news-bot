@@ -1,7 +1,7 @@
 {
-  "cached": 2,
+  "cached": 213,
   "collection": {
-    "entries": 7904,
+    "entries": 9135,
     "failed": 3,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -28,94 +28,90 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610121031.25904072273@smtp-relay.mailin.fr>",
-    "sent_at": 1791801111.6934612,
-    "status": "enviado"
-  },
-  "generated_at": 1791801041.4595482,
+  "generated_at": 1791887484.8523693,
   "google_links_pending": 0,
-  "needs_evaluation": 480,
+  "needs_evaluation": 397,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 225,
-      "insuficiente": 244,
-      "trecho_disponivel": 13
+      "artigo_completo": 300,
+      "insuficiente": 290,
+      "trecho_disponivel": 20
     },
     "selected": {
-      "artigo_completo": 9
+      "artigo_completo": 7,
+      "trecho_limitado_final": 2
     }
   },
-  "request_sha256": "6e0b0a51f175eb70e3ab807c4837c7b8baefb669a989b2e67671b572f0953b43",
+  "request_sha256": "9cb992bfc06393a22a28b758c570a23cdeb3bd023e486515f9d817ce647b1c2e",
   "selected": [
     {
-      "assunto": "planejamento-decenal-demanda",
-      "id": "c0bade942e82a3fe9208",
-      "link": "https://megawhat.uol.com.br/podcasts/o-novo-modelo-de-preco-e-quem-ganhou-a-disputa-pela-rede-2/",
-      "titulo": "🎙️Mais solar, mais data centers e mais baterias nos próximos dez anos",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "pde2036",
-      "id": "a17fc04132d20091294b",
-      "link": "https://clickpetroleoegas.com.br/pde-2036-preve-r-3-3-trilhoes-em-dez-anos-e-consumo-de-luz-de-702-para-979-twh-plano-do-governo-poe-data-centers-a-30-twh-e-31-9-mil-km-de-linhas-mas-so-ate-6-de-novembro-da-btl96/",
-      "titulo": "PDE 2036 prevê R$ 3,3 trilhões em dez anos e consumo de luz de 702 para 979 TWh: plano do governo põe data centers a 30 TWh e 31,9 mil km de linhas, mas só até 6 de novembro dá para opinar",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "redata",
-      "id": "4d223a9e9d5fc19886d9",
-      "link": "https://bluestudio.estadao.com.br/agencia-de-comunicacao/engrenagens-do-crescimento/redata-torna-brasil-mais-competitivo-para-atrair-data-centers-diz-diretor-da-brasscom/",
-      "titulo": "Agência de Comunicação - Redata torna Brasil mais competitivo para atrair data centers, diz diretor da Brasscom",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "indiana-aes-google-dc",
-      "id": "bf7d92c27eb9c83d70b8",
-      "link": "https://wfyi.org/statewide/2026-10-12/indiana-approves-aes-plan-to-power-google-data-center-in-monrovia",
-      "titulo": "Indiana approves AES plan to power Google data center in Monrovia",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "planejamento-decenal-baterias",
-      "id": "546ca2e800c188ea6efd",
-      "link": "https://megawhat.uol.com.br/podcasts/mais-solar-mais-data-centers-e-mais-baterias-nos-proximos-dez-anos/",
-      "titulo": "🎙️Mais solar, mais data centers e mais baterias nos próximos dez anos",
+      "assunto": "leilao-baterias-dezembro",
+      "id": "ba6073ab59611f1031af",
+      "link": "https://clickpetroleoegas.com.br/bateria-de-4-horas-ja-custa-menos-que-turbina-a-gas-de-ponta-em-43-mercados-e-o-leilao-de-baterias-no-brasil-e-em-dezembro-btl96/",
+      "titulo": "Bateria de 4 horas já custa menos que turbina a gás de ponta em 43 mercados, e o leilão de baterias no Brasil é em dezembro",
       "topico": "baterias"
     },
     {
-      "assunto": "pde-flexibilidade-baterias",
-      "id": "f890659c9029167a8cd0",
-      "link": "https://eixos.com.br/newsletters/comece-seu-dia/brasil-pode-contar-com-13-gw-de-flexibilidade-no-setor-eletrico-com-baterias-reversiveis-e-resposta-da-demanda/",
-      "titulo": "Brasil pode contar com 13 GW de flexibilidade no setor elétrico com baterias, reversíveis e resposta da demanda",
+      "assunto": "leilao-reserva-capacidade-biogas",
+      "id": "4b9e5208091c6a85b244",
+      "link": "https://movimentoeconomico.com.br/economia/energia/2026/10/12/leiloes-de-energia-poderao-contratar-biogas-e-biometano-a-partir-de-2027/",
+      "titulo": "Leilões de energia poderão contratar biogás e biometano a partir de 2027",
       "topico": "baterias"
     },
     {
-      "assunto": "tarifas-preco-baterias-chinesas",
-      "id": "d7fe562994dea74e2d07",
-      "link": "https://thelec.net/news/articleView.html?idxno=14522",
-      "titulo": "US Tariffs, Freight Costs Undercut Chinese Battery Price Advantage",
+      "assunto": "custo-bateria-ev-china",
+      "id": "9f86f4324919f992fecd",
+      "link": "https://greentechlead.com/electric-vehicle/why-are-chinese-evs-cheaper-in-2026-battery-costs-manufacturing-scale-and-price-competition-explained-55869",
+      "titulo": "Why Are Chinese EVs Cheaper in 2026? Battery Costs, Manufacturing Scale and Price Competition Explained",
       "topico": "baterias"
     },
     {
-      "assunto": "maturacao-estado-solido",
-      "id": "3f06cc791f55142a18aa",
-      "link": "https://news.metal.com/newscontent/104149707-solid-state-battery-next-decade-series-part-9-of-9-a-brand-new-track-not-a-simple-sequel-to-liquid-lithium-batteries-smm-analysis",
-      "titulo": "Solid-State Battery Next Decade Series, Part 9 of 9: A Brand-New Track, Not a \"Simple Sequel\" to Liquid Lithium Batteries [SMM Analysis]",
+      "assunto": "bateria-sodio-sem-anodo-startup",
+      "id": "a6e2137828a950819e8e",
+      "link": "https://wsj.com/pro/venture-capital/startup-raises-10-15-million-for-anode-free-china-free-sodium-battery-a05717f4",
+      "titulo": "Exclusive | Startup Raises $10.15 Million For Anode-Free, China-Free Sodium Battery",
       "topico": "baterias"
     },
     {
-      "assunto": "ue-ets2-reforma",
-      "id": "1b941bcdfaeeda583ab5",
-      "link": "https://brusselstimes.com/2354284/eu-reshapes-carbon-market-rules-with-stricter-controls-ahead-of-2028-launch",
-      "titulo": "EU reshapes carbon market rules with stricter controls ahead of 2028 launch",
+      "assunto": "onu-credito-carbono-fogareiros",
+      "id": "8b0ffc33d0438d1b1983",
+      "link": "https://climatechangenews.com/2026/10/12/un-carbon-market-forces-cookstove-projects-protect-forest-loss-credits/",
+      "titulo": "UN carbon market forces cookstove projects to protect against forest loss",
       "topico": "carbono"
+    },
+    {
+      "assunto": "estados-regulam-datacenters",
+      "id": "1d50f19d3e22eabf84f5",
+      "link": "https://valor.globo.com/impresso/noticia/2026/10/13/estados-reagem-com-regulacao-a-expansao-dos-data-centers.ghtml",
+      "titulo": "Estados reagem com regulação à expansão dos data centers",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "redata-competitividade-gaps",
+      "id": "36e92672d1550addf8ce",
+      "link": "https://correiobraziliense.com.br/opiniao/2026/10/7519246-o-que-ainda-falta-para-o-brasil-competir-por-investimentos-em-data-centers.html",
+      "titulo": "O que ainda falta para o Brasil competir por investimentos em data centers",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "rn-atrai-data-centers-energia-sobra",
+      "id": "b60bc70b45da3b792681",
+      "link": "https://mossorohoje.com.br/noticias/57356-com-energia-de-sobra-rio-grande-do-norte-tenta-atrair-data-centers-para-evitar-desperdicio",
+      "titulo": "Com energia de sobra, Rio Grande do Norte tenta atrair data centers para evitar desperdício",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "pjm-ferc-registro-datacenters",
+      "id": "4240619277969e62551a",
+      "link": "https://reuters.com/business/energy/us-panel-approves-pjms-registry-data-centers-rejects-plan-curtail-power-them-2026-10-12/",
+      "titulo": "US panel approves PJM's registry of data centers, rejects plan to curtail power to them",
+      "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 12/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 13/10 (manhã)",
   "truncated": {}
 }
