@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/legrand-to-integrate-karman-ai-platform-into-data-center-pdus-and-power-shelves/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/legrand-to-integrate-karman-ai-platform-into-data-center-pdus-and-power-shelves/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/legrand-to-integrate-karman-ai-platform-into-data-center-pdus-and-power-shelves/",
+    "origem": "INT",
+    "resumo": "<p>First deal following Karman's rebrand</p>",
+    "titulo": "Legrand to integrate Karman AI platform into data center PDUs and power shelves",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
