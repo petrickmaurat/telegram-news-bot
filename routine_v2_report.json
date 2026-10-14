@@ -1,7 +1,7 @@
 {
-  "cached": 213,
+  "cached": 447,
   "collection": {
-    "entries": 9135,
+    "entries": 9634,
     "failed": 3,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -19,7 +19,7 @@
       "US": 2
     },
     "carbono": {
-      "BR": 0,
+      "BR": 3,
       "US": 1
     },
     "data_center": {
@@ -28,95 +28,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610131032.46585945061@smtp-relay.mailin.fr>",
-    "sent_at": 1791887541.5629764,
-    "status": "enviado"
-  },
-  "generated_at": 1791887484.8523693,
+  "generated_at": 1791973935.6648953,
   "google_links_pending": 0,
-  "needs_evaluation": 397,
+  "needs_evaluation": 422,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 300,
-      "insuficiente": 290,
-      "trecho_disponivel": 20
+      "artigo_completo": 459,
+      "insuficiente": 384,
+      "trecho_disponivel": 26
     },
     "selected": {
-      "artigo_completo": 7,
-      "trecho_limitado_final": 2
+      "artigo_completo": 11,
+      "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "9cb992bfc06393a22a28b758c570a23cdeb3bd023e486515f9d817ce647b1c2e",
+  "request_sha256": "7a777fc0b949379127df5fb40c807ab17496e40289161df3c272423eccda2475",
   "selected": [
     {
-      "assunto": "leilao-baterias-dezembro",
-      "id": "ba6073ab59611f1031af",
-      "link": "https://clickpetroleoegas.com.br/bateria-de-4-horas-ja-custa-menos-que-turbina-a-gas-de-ponta-em-43-mercados-e-o-leilao-de-baterias-no-brasil-e-em-dezembro-btl96/",
-      "titulo": "Bateria de 4 horas já custa menos que turbina a gás de ponta em 43 mercados, e o leilão de baterias no Brasil é em dezembro",
+      "assunto": "custeio-rateio-pl-baterias",
+      "id": "4b975c3766f4f2d09fb9",
+      "link": "https://valor.globo.com/politica/noticia/2026/10/13/cmara-aprova-urgncia-de-projeto-que-muda-rateio-de-custos-para-contratao-de-baterias-eltricas.ghtml",
+      "titulo": "Câmara aprova urgência de projeto que muda rateio de custos para contratação de baterias elétricas",
       "topico": "baterias"
     },
     {
-      "assunto": "leilao-reserva-capacidade-biogas",
-      "id": "4b9e5208091c6a85b244",
-      "link": "https://movimentoeconomico.com.br/economia/energia/2026/10/12/leiloes-de-energia-poderao-contratar-biogas-e-biometano-a-partir-de-2027/",
-      "titulo": "Leilões de energia poderão contratar biogás e biometano a partir de 2027",
+      "assunto": "armazenamento-curtailment-pde",
+      "id": "8f7f295e91bddf8d89b5",
+      "link": "https://jota.info/executivo/governo-projeta-92-gw-de-armazenamento-em-meio-a-curtailment",
+      "titulo": "Governo projeta 9,2 GW de armazenamento em meio à curtailment",
       "topico": "baterias"
     },
     {
-      "assunto": "custo-bateria-ev-china",
-      "id": "9f86f4324919f992fecd",
-      "link": "https://greentechlead.com/electric-vehicle/why-are-chinese-evs-cheaper-in-2026-battery-costs-manufacturing-scale-and-price-competition-explained-55869",
-      "titulo": "Why Are Chinese EVs Cheaper in 2026? Battery Costs, Manufacturing Scale and Price Competition Explained",
+      "assunto": "custo-bess-projetos-exterior",
+      "id": "a28fb0af3974dfc70d4e",
+      "link": "https://clickpetroleoegas.com.br/chile-reutiliza-area-preparada-para-ampliar-usina-a-carvao-e-instala-160-conteineres-de-baterias-por-us-174-milhoes-parque-de-802-mwh-pode-atender-mais-de-84-mil-casas-por-ate-cinco-h-fcmo87/",
+      "titulo": "Chile reutiliza área preparada para ampliar usina a carvão e instala 160 contêineres de baterias por US$ 174 milhões; parque de 802 MWh pode atender mais de 84 mil casas por até cinco horas",
       "topico": "baterias"
     },
     {
-      "assunto": "bateria-sodio-sem-anodo-startup",
-      "id": "a6e2137828a950819e8e",
-      "link": "https://wsj.com/pro/venture-capital/startup-raises-10-15-million-for-anode-free-china-free-sodium-battery-a05717f4",
-      "titulo": "Exclusive | Startup Raises $10.15 Million For Anode-Free, China-Free Sodium Battery",
+      "assunto": "baterias-estado-solido-china",
+      "id": "7bad3b533cefc41dfd96",
+      "link": "https://carnewschina.com/2026/10/14/changan-and-catl-to-collaborate-on-1500-km-solid-state-cells-establish-75-gwh-battery-lines/",
+      "titulo": "Changan and CATL to collaborate on 1,500 km solid state cells, establish 75 GWh battery lines",
       "topico": "baterias"
     },
     {
-      "assunto": "onu-credito-carbono-fogareiros",
-      "id": "8b0ffc33d0438d1b1983",
-      "link": "https://climatechangenews.com/2026/10/12/un-carbon-market-forces-cookstove-projects-protect-forest-loss-credits/",
-      "titulo": "UN carbon market forces cookstove projects to protect against forest loss",
+      "assunto": "bndes-mombak-carbono-florestal",
+      "id": "6a02caea2dbb7f0d2de8",
+      "link": "https://portalolavodutra.com.br/materias/bndes_poe_r$_200_milhoes_em_projeto_de_carbono_no_para",
+      "titulo": "BNDES põe R$ 200 milhões em projeto de carbono no Pará",
       "topico": "carbono"
     },
     {
-      "assunto": "estados-regulam-datacenters",
-      "id": "1d50f19d3e22eabf84f5",
-      "link": "https://valor.globo.com/impresso/noticia/2026/10/13/estados-reagem-com-regulacao-a-expansao-dos-data-centers.ghtml",
-      "titulo": "Estados reagem com regulação à expansão dos data centers",
+      "assunto": "nil-redd-financiamento",
+      "id": "7e1b063e497674597e43",
+      "link": "https://folhape.com.br/noticia/amp/518083/nil-elabora-modelo-de-contrato-de-financiamento-para-apoiar-projetos/",
+      "titulo": "NIL elabora modelo de contrato de financiamento para apoiar projetos de redução de emissões",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "azul-conecta-auren-compensacao-emissoes",
+      "id": "b35f231590053bbe408c",
+      "link": "https://moneyreport.com.br/negocios/azul-conecta-compensara-emissoes-de-carbono-de-voos-em-parceria-com-a-auren/",
+      "titulo": "Azul Conecta compensará emissões de carbono de voos em parceria com a Auren",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "coreia-gvcm-mercado-carbono-internacional",
+      "id": "af5d7626043b6ee95bef",
+      "link": "https://en.sedaily.com/finance/2026/10/12/korea-to-launch-international-carbon-market-next-year",
+      "titulo": "Korea to Launch International Carbon Market Next Year",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "redata",
+      "id": "9b2285cbca09d9f9e834",
+      "link": "https://convergenciadigital.com.br/internet/gil-torquato-abranet-e-dificil-pensar-na-regulamentacao-do-redata-ainda-este-ano/",
+      "titulo": "Gil Torquato, Abranet: É difícil pensar na regulamentação do Redata ainda este ano",
       "topico": "data_center"
     },
     {
-      "assunto": "redata-competitividade-gaps",
-      "id": "36e92672d1550addf8ce",
-      "link": "https://correiobraziliense.com.br/opiniao/2026/10/7519246-o-que-ainda-falta-para-o-brasil-competir-por-investimentos-em-data-centers.html",
-      "titulo": "O que ainda falta para o Brasil competir por investimentos em data centers",
+      "assunto": "abdi-cpqd-diagnostico-setorial",
+      "id": "8047d7033e4834d5f7e0",
+      "link": "https://acaert.com.br/noticia/63995/agencia-brasileira-de-desenvolvimento-industrial-estuda-regioes-do-brasil-para-instalacao-de-novos-data-centers",
+      "titulo": "Agência Brasileira de Desenvolvimento Industrial estuda regiões do Brasil para instalação de novos data centers",
       "topico": "data_center"
     },
     {
-      "assunto": "rn-atrai-data-centers-energia-sobra",
-      "id": "b60bc70b45da3b792681",
-      "link": "https://mossorohoje.com.br/noticias/57356-com-energia-de-sobra-rio-grande-do-norte-tenta-atrair-data-centers-para-evitar-desperdicio",
-      "titulo": "Com energia de sobra, Rio Grande do Norte tenta atrair data centers para evitar desperdício",
+      "assunto": "federal-replica-modelo-ceara-nordeste",
+      "id": "6f86e95dfbbee3bc9925",
+      "link": "https://mais.opovo.com.br/jornal/economia/2026/10/14/governo-federal-quer-replicar-modelo-de-data-centers-do-ceara-em-todo-o-nordeste.html",
+      "titulo": "Governo Federal quer replicar modelo de data centers do Ceará em todo o Nordeste",
       "topico": "data_center"
     },
     {
-      "assunto": "pjm-ferc-registro-datacenters",
-      "id": "4240619277969e62551a",
-      "link": "https://reuters.com/business/energy/us-panel-approves-pjms-registry-data-centers-rejects-plan-curtail-power-them-2026-10-12/",
-      "titulo": "US panel approves PJM's registry of data centers, rejects plan to curtail power to them",
+      "assunto": "israel-limite-potencia-datacenters",
+      "id": "87f40c13362fcabf0e8a",
+      "link": "https://calcalistech.com/ctechnews/article/e0elh1nl2",
+      "titulo": "Israel to cap new data centers at 200 megawatts amid AI power crunch",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 13/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 14/10 (manhã)",
   "truncated": {}
 }
