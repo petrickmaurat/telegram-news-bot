@@ -1,1 +1,19 @@
-null
+{
+  "aliases": [
+    "https://datacenterdynamics.com/en/news/ls-electric-secures-138m-order-to-supply-switchgear-for-bloom-fuel-cells-at-pennsylvania-data-center/"
+  ],
+  "item": {
+    "aliases": [
+      "https://datacenterdynamics.com/en/news/ls-electric-secures-138m-order-to-supply-switchgear-for-bloom-fuel-cells-at-pennsylvania-data-center/"
+    ],
+    "fonte": "DCD",
+    "link": "https://www.datacenterdynamics.com/en/news/ls-electric-secures-138m-order-to-supply-switchgear-for-bloom-fuel-cells-at-pennsylvania-data-center/",
+    "origem": "INT",
+    "resumo": "<p>Second deal between the companies</p>",
+    "titulo": "LS Electric secures $138m order to supply switchgear for Bloom fuel cells at Pennsylvania data center",
+    "topico": "data_center",
+    "topicos": [
+      "data_center"
+    ]
+  }
+}
