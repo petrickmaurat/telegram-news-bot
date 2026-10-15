@@ -1,7 +1,7 @@
 {
-  "cached": 447,
+  "cached": 556,
   "collection": {
-    "entries": 9634,
+    "entries": 9969,
     "failed": 3,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -28,116 +28,112 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610141033.33763625815@smtp-relay.mailin.fr>",
-    "sent_at": 1791973991.4506793,
-    "status": "enviado"
-  },
-  "generated_at": 1791973935.6648953,
+  "generated_at": 1792060485.1835725,
   "google_links_pending": 0,
-  "needs_evaluation": 422,
+  "needs_evaluation": 419,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 459,
-      "insuficiente": 384,
-      "trecho_disponivel": 26
+      "artigo_completo": 511,
+      "insuficiente": 434,
+      "trecho_disponivel": 30
     },
     "selected": {
-      "artigo_completo": 11,
-      "trecho_limitado_final": 1
+      "artigo_completo": 7,
+      "trecho_disponivel": 1,
+      "trecho_limitado_final": 4
     }
   },
-  "request_sha256": "7a777fc0b949379127df5fb40c807ab17496e40289161df3c272423eccda2475",
+  "request_sha256": "af4e5be0e11f14c0cf668bb502e43c47aa89c28e5b0f93b3dc51d2cc03b54f1d",
   "selected": [
     {
-      "assunto": "custeio-rateio-pl-baterias",
-      "id": "4b975c3766f4f2d09fb9",
-      "link": "https://valor.globo.com/politica/noticia/2026/10/13/cmara-aprova-urgncia-de-projeto-que-muda-rateio-de-custos-para-contratao-de-baterias-eltricas.ghtml",
-      "titulo": "Câmara aprova urgência de projeto que muda rateio de custos para contratação de baterias elétricas",
-      "topico": "baterias"
+      "assunto": "brasil-corrida-global-data-centers-ia",
+      "id": "498b7c7339cbcf9bbc71",
+      "link": "https://valor.globo.com/patrocinado/dino/noticia/2026/10/14/brasil-ganha-espaco-na-corrida-global-por-data-centers-e-ia-1.ghtml",
+      "titulo": "Brasil ganha espaço na corrida global por data centers e IA",
+      "topico": "data_center"
     },
     {
-      "assunto": "armazenamento-curtailment-pde",
-      "id": "8f7f295e91bddf8d89b5",
-      "link": "https://jota.info/executivo/governo-projeta-92-gw-de-armazenamento-em-meio-a-curtailment",
-      "titulo": "Governo projeta 9,2 GW de armazenamento em meio à curtailment",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "custo-bess-projetos-exterior",
-      "id": "a28fb0af3974dfc70d4e",
-      "link": "https://clickpetroleoegas.com.br/chile-reutiliza-area-preparada-para-ampliar-usina-a-carvao-e-instala-160-conteineres-de-baterias-por-us-174-milhoes-parque-de-802-mwh-pode-atender-mais-de-84-mil-casas-por-ate-cinco-h-fcmo87/",
-      "titulo": "Chile reutiliza área preparada para ampliar usina a carvão e instala 160 contêineres de baterias por US$ 174 milhões; parque de 802 MWh pode atender mais de 84 mil casas por até cinco horas",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "baterias-estado-solido-china",
-      "id": "7bad3b533cefc41dfd96",
-      "link": "https://carnewschina.com/2026/10/14/changan-and-catl-to-collaborate-on-1500-km-solid-state-cells-establish-75-gwh-battery-lines/",
-      "titulo": "Changan and CATL to collaborate on 1,500 km solid state cells, establish 75 GWh battery lines",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "bndes-mombak-carbono-florestal",
-      "id": "6a02caea2dbb7f0d2de8",
-      "link": "https://portalolavodutra.com.br/materias/bndes_poe_r$_200_milhoes_em_projeto_de_carbono_no_para",
-      "titulo": "BNDES põe R$ 200 milhões em projeto de carbono no Pará",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "nil-redd-financiamento",
-      "id": "7e1b063e497674597e43",
-      "link": "https://folhape.com.br/noticia/amp/518083/nil-elabora-modelo-de-contrato-de-financiamento-para-apoiar-projetos/",
-      "titulo": "NIL elabora modelo de contrato de financiamento para apoiar projetos de redução de emissões",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "azul-conecta-auren-compensacao-emissoes",
-      "id": "b35f231590053bbe408c",
-      "link": "https://moneyreport.com.br/negocios/azul-conecta-compensara-emissoes-de-carbono-de-voos-em-parceria-com-a-auren/",
-      "titulo": "Azul Conecta compensará emissões de carbono de voos em parceria com a Auren",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "coreia-gvcm-mercado-carbono-internacional",
-      "id": "af5d7626043b6ee95bef",
-      "link": "https://en.sedaily.com/finance/2026/10/12/korea-to-launch-international-carbon-market-next-year",
-      "titulo": "Korea to Launch International Carbon Market Next Year",
-      "topico": "carbono"
+      "assunto": "fundo-financiamento-data-centers-sp",
+      "id": "f3baeee3a8fbdcf068c2",
+      "link": "https://valor.globo.com/financas/noticia/2026/10/14/desenvolve-sp-e-mbius-criam-fidc-de-r-70-milhes-para-financiar-data-centers.ghtml",
+      "titulo": "Desenvolve SP e Möbius criam FIDC de R$ 70 milhões para financiar data centers",
+      "topico": "data_center"
     },
     {
       "assunto": "redata",
-      "id": "9b2285cbca09d9f9e834",
-      "link": "https://convergenciadigital.com.br/internet/gil-torquato-abranet-e-dificil-pensar-na-regulamentacao-do-redata-ainda-este-ano/",
-      "titulo": "Gil Torquato, Abranet: É difícil pensar na regulamentação do Redata ainda este ano",
+      "id": "ed05e0acf468aaaabff4",
+      "link": "https://ipnews.com.br/governo-trabalha-para-regulamentar-o-redata-ate-o-fim-do-ano/?amp=1",
+      "titulo": "Governo trabalha para regulamentar o Redata até o fim do ano",
       "topico": "data_center"
     },
     {
-      "assunto": "abdi-cpqd-diagnostico-setorial",
-      "id": "8047d7033e4834d5f7e0",
-      "link": "https://acaert.com.br/noticia/63995/agencia-brasileira-de-desenvolvimento-industrial-estuda-regioes-do-brasil-para-instalacao-de-novos-data-centers",
-      "titulo": "Agência Brasileira de Desenvolvimento Industrial estuda regiões do Brasil para instalação de novos data centers",
+      "assunto": "oregon-pausa-permissao-data-centers",
+      "id": "34371a59abc298bcc03b",
+      "link": "https://rtoinsider.com/148459-oregon-pauses-data-center-permitting-until-july-2027/",
+      "titulo": "Oregon Pauses Data Center Permitting Until July 2027",
       "topico": "data_center"
     },
     {
-      "assunto": "federal-replica-modelo-ceara-nordeste",
-      "id": "6f86e95dfbbee3bc9925",
-      "link": "https://mais.opovo.com.br/jornal/economia/2026/10/14/governo-federal-quer-replicar-modelo-de-data-centers-do-ceara-em-todo-o-nordeste.html",
-      "titulo": "Governo Federal quer replicar modelo de data centers do Ceará em todo o Nordeste",
-      "topico": "data_center"
+      "assunto": "custeio-rateio-pl-baterias",
+      "id": "33d6008bcb1d45af01a7",
+      "link": "https://eixos.com.br/politica/camara-dos-deputados-aprova-urgencia-de-pl-que-muda-rateio-de-custos-das-baterias/",
+      "titulo": "Câmara dos Deputados aprova urgência de PL que muda rateio de custos das baterias",
+      "topico": "baterias"
     },
     {
-      "assunto": "israel-limite-potencia-datacenters",
-      "id": "87f40c13362fcabf0e8a",
-      "link": "https://calcalistech.com/ctechnews/article/e0elh1nl2",
-      "titulo": "Israel to cap new data centers at 200 megawatts amid AI power crunch",
-      "topico": "data_center"
+      "assunto": "comerc-projecao-leilao-baterias",
+      "id": "e2461cf633476644334b",
+      "link": "https://agenciainfra.com/blog/comerc-projeta-salto-para-baterias-no-brasil-apos-primeiro-leilao/",
+      "titulo": "Comerc projeta salto para baterias no Brasil após primeiro leilão",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "baterias-estado-solido-tecnologia",
+      "id": "680224eecf7f81094372",
+      "link": "https://autonews.gasgoo.com/articles/news/greater-bay-technology-commissions-gwh-scale-all-solid-state-battery-production-line-2110549317063766016",
+      "titulo": "Greater Bay Technology commissions GWh-scale all-solid-state battery production line",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "preco-litio-baterias",
+      "id": "f888895d58cbb0c1b4da",
+      "link": "https://bloomberg.com/news/articles/2026-10-15/lithium-extends-deep-slump-as-battery-demand-concerns-mount",
+      "titulo": "Lithium Extends Deep Slump as Battery Demand Concerns Mount",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "cebds-propoe-ajustes-regulamentacao-sbce",
+      "id": "4cb841135a5ceeacc365",
+      "link": "https://alemdaenergia.engie.com.br/cebds-propoe-ajustes-na-regulamentacao-do-mercado-de-carbono/",
+      "titulo": "CEBDS propõe ajustes na regulamentação do mercado de carbono no Brasil",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "brasil-europa-descompasso-regulatorio-carbono",
+      "id": "14ba4ba6fc3b00a9e06a",
+      "link": "https://cnnbrasil.com.br/blogs/pedro-cortes/economia/money/macroeconomia/analise-mercado-de-carbono-expoe-desafio-brasileiro/",
+      "titulo": "Análise: Mercado de carbono expõe desafio brasileiro",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "estrategia-empresarial-precificacao-carbono",
+      "id": "b29cda44428d5503f400",
+      "link": "https://capitalreset.uol.com.br/opiniao/precificacao-de-carbono-exige-estrategia-nao-reacao/",
+      "titulo": "Precificação de carbono exige estratégia, não reação",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "filipinas-diretriz-mercado-carbono-nacional",
+      "id": "b52f3fb3c1f2407904b9",
+      "link": "https://mb.com.ph/2026/10/15/marcos-orders-formulation-of-national-carbon-market-policy-framework",
+      "titulo": "Marcos orders formulation of national carbon market policy framework",
+      "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 14/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 15/10 (manhã)",
   "truncated": {}
 }
