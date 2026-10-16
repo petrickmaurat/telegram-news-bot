@@ -1,7 +1,7 @@
 {
-  "cached": 556,
+  "cached": 590,
   "collection": {
-    "entries": 9969,
+    "entries": 10071,
     "failed": 3,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -28,117 +28,112 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610151035.13685605528@smtp-relay.mailin.fr>",
-    "sent_at": 1792060547.4199736,
-    "status": "enviado"
-  },
-  "generated_at": 1792060485.1835725,
+  "generated_at": 1792146559.1239755,
   "google_links_pending": 0,
   "needs_evaluation": 419,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 511,
-      "insuficiente": 434,
-      "trecho_disponivel": 30
+      "artigo_completo": 534,
+      "insuficiente": 443,
+      "trecho_disponivel": 31,
+      "trecho_limitado": 1
     },
     "selected": {
-      "artigo_completo": 7,
-      "trecho_disponivel": 1,
-      "trecho_limitado_final": 4
+      "artigo_completo": 11,
+      "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "af4e5be0e11f14c0cf668bb502e43c47aa89c28e5b0f93b3dc51d2cc03b54f1d",
+  "request_sha256": "a7f452f99cef5a81f812b0e55f27f8c19670cc7d18ab5486144c32bda6f47936",
   "selected": [
     {
-      "assunto": "brasil-corrida-global-data-centers-ia",
-      "id": "498b7c7339cbcf9bbc71",
-      "link": "https://valor.globo.com/patrocinado/dino/noticia/2026/10/14/brasil-ganha-espaco-na-corrida-global-por-data-centers-e-ia-1.ghtml",
-      "titulo": "Brasil ganha espaço na corrida global por data centers e IA",
+      "assunto": "redata-decreto-gas-natural",
+      "id": "c004b80fd5aa27feb0d3",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/entidades-pedem-a-lula-regulamentacao-do-redata-com-gas-natural/",
+      "titulo": "Entidades pedem a Lula regulamentação do Redata com gás natural",
       "topico": "data_center"
     },
     {
-      "assunto": "fundo-financiamento-data-centers-sp",
-      "id": "f3baeee3a8fbdcf068c2",
-      "link": "https://valor.globo.com/financas/noticia/2026/10/14/desenvolve-sp-e-mbius-criam-fidc-de-r-70-milhes-para-financiar-data-centers.ghtml",
-      "titulo": "Desenvolve SP e Möbius criam FIDC de R$ 70 milhões para financiar data centers",
+      "assunto": "estados-regulacao-datacenters",
+      "id": "820fbb0a3fb12a43ca4b",
+      "link": "https://megawhat.uol.com.br/megaexpresso/estados-vivem-onda-de-regulacao-para-receber-data-centers-edicao-do-dia/",
+      "titulo": "Estados vivem onda de regulação para receber data centers – Edição do dia",
       "topico": "data_center"
     },
     {
-      "assunto": "redata",
-      "id": "ed05e0acf468aaaabff4",
-      "link": "https://ipnews.com.br/governo-trabalha-para-regulamentar-o-redata-ate-o-fim-do-ano/?amp=1",
-      "titulo": "Governo trabalha para regulamentar o Redata até o fim do ano",
+      "assunto": "rede-eletrica-datacenters",
+      "id": "f3a8004cb613c7b93499",
+      "link": "https://diariodonordeste.verdesmares.com.br/opiniao/colunistas/mariana-lemos/o-que-a-rede-eletrica-brasileira-precisa-para-atender-grandes-data-centers-1.3798607",
+      "titulo": "O que a rede elétrica brasileira precisa para atender grandes data centers?",
       "topico": "data_center"
     },
     {
-      "assunto": "oregon-pausa-permissao-data-centers",
-      "id": "34371a59abc298bcc03b",
-      "link": "https://rtoinsider.com/148459-oregon-pauses-data-center-permitting-until-july-2027/",
-      "titulo": "Oregon Pauses Data Center Permitting Until July 2027",
+      "assunto": "ferc-pjm-curtailment",
+      "id": "6904238c135991f16e22",
+      "link": "https://latitudemedia.com/news/ferc-rejected-pjms-data-center-curtailment-plan-whats-next-for-byoc/",
+      "titulo": "FERC rejected PJM’s data center curtailment plan. What’s next for BYOC?",
       "topico": "data_center"
     },
     {
-      "assunto": "custeio-rateio-pl-baterias",
-      "id": "33d6008bcb1d45af01a7",
-      "link": "https://eixos.com.br/politica/camara-dos-deputados-aprova-urgencia-de-pl-que-muda-rateio-de-custos-das-baterias/",
-      "titulo": "Câmara dos Deputados aprova urgência de PL que muda rateio de custos das baterias",
+      "assunto": "incentivos-fiscais-leilao-baterias",
+      "id": "99f2ce6c6a71ab4f82e1",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/indefinicao-sobre-incentivos-fiscais-pode-encarecer-leiloes-de-baterias/",
+      "titulo": "Indefinição sobre incentivos fiscais pode encarecer leilões de baterias",
       "topico": "baterias"
     },
     {
-      "assunto": "comerc-projecao-leilao-baterias",
-      "id": "e2461cf633476644334b",
-      "link": "https://agenciainfra.com/blog/comerc-projeta-salto-para-baterias-no-brasil-apos-primeiro-leilao/",
-      "titulo": "Comerc projeta salto para baterias no Brasil após primeiro leilão",
+      "assunto": "epe-transmissao-armazenamento-riscos-climaticos",
+      "id": "f61069a06e0e9621f553",
+      "link": "https://megawhat.uol.com.br/planejamento/estudo-defende-reforco-da-transmissao-e-armazenamento-contra-riscos-climaticos/",
+      "titulo": "Estudo defende reforço da transmissão e armazenamento contra riscos climáticos",
       "topico": "baterias"
     },
     {
-      "assunto": "baterias-estado-solido-tecnologia",
-      "id": "680224eecf7f81094372",
-      "link": "https://autonews.gasgoo.com/articles/news/greater-bay-technology-commissions-gwh-scale-all-solid-state-battery-production-line-2110549317063766016",
-      "titulo": "Greater Bay Technology commissions GWh-scale all-solid-state battery production line",
+      "assunto": "taiwan-coreia-mercado-japones-armazenamento",
+      "id": "85beb0f2b2f346a4fab1",
+      "link": "https://valor.globo.com/empresas/noticia/2026/10/15/sem-rivais-chinesas-empresas-taiwanesas-e-sul-coreanas-miram-mercado-japons-de-armazenamento-de-energia.ghtml",
+      "titulo": "Sem rivais chinesas, empresas taiwanesas e sul-coreanas miram mercado japonês de armazenamento de energia",
       "topico": "baterias"
     },
     {
-      "assunto": "preco-litio-baterias",
-      "id": "f888895d58cbb0c1b4da",
-      "link": "https://bloomberg.com/news/articles/2026-10-15/lithium-extends-deep-slump-as-battery-demand-concerns-mount",
-      "titulo": "Lithium Extends Deep Slump as Battery Demand Concerns Mount",
+      "assunto": "changan-catl-solid-state",
+      "id": "b577a32ad5d3114678ec",
+      "link": "https://starnewskorea.com/en/business-life/2026/10/15/2026101508555541743",
+      "titulo": "\"Charged in 9 minutes\": Changan and CATL develop next-generation all-solid-state batteries, make large-scale investments",
       "topico": "baterias"
     },
     {
-      "assunto": "cebds-propoe-ajustes-regulamentacao-sbce",
-      "id": "4cb841135a5ceeacc365",
-      "link": "https://alemdaenergia.engie.com.br/cebds-propoe-ajustes-na-regulamentacao-do-mercado-de-carbono/",
-      "titulo": "CEBDS propõe ajustes na regulamentação do mercado de carbono no Brasil",
+      "assunto": "sbce-gtt-competitividade",
+      "id": "e57f9f3ba542f5be69ec",
+      "link": "https://atlaspublico.com.br/noticias/comite-do-mercado-de-carbono-cria-grupo-de-trabalho-sobre-92682",
+      "titulo": "Comitê do mercado de carbono cria grupo de trabalho sobre competitividade dos setores regulados pelo SBCE",
       "topico": "carbono"
     },
     {
-      "assunto": "brasil-europa-descompasso-regulatorio-carbono",
-      "id": "14ba4ba6fc3b00a9e06a",
-      "link": "https://cnnbrasil.com.br/blogs/pedro-cortes/economia/money/macroeconomia/analise-mercado-de-carbono-expoe-desafio-brasileiro/",
-      "titulo": "Análise: Mercado de carbono expõe desafio brasileiro",
+      "assunto": "nil-redd-financiamento",
+      "id": "eeadda0d272e2dbfa7a4",
+      "link": "https://eixos.com.br/transicao-energetica/nil-elabora-modelo-de-contrato-de-financiamento-para-apoiar-projetos-de-reducao-de-emissoes/",
+      "titulo": "NIL elabora modelo de contrato de financiamento para apoiar projetos de redução de emissões",
       "topico": "carbono"
     },
     {
-      "assunto": "estrategia-empresarial-precificacao-carbono",
-      "id": "b29cda44428d5503f400",
-      "link": "https://capitalreset.uol.com.br/opiniao/precificacao-de-carbono-exige-estrategia-nao-reacao/",
-      "titulo": "Precificação de carbono exige estratégia, não reação",
+      "assunto": "mpf-credito-carbono-acre",
+      "id": "4e480bb06a978ff2e284",
+      "link": "https://ac24horas.com/2026/10/15/projeto-de-creditos-de-carbono-em-reserva-no-ac-sera-acompanhado-pelo-mpf/",
+      "titulo": "Projeto de créditos de carbono em reserva no AC será acompanhado pelo MPF",
       "topico": "carbono"
     },
     {
-      "assunto": "filipinas-diretriz-mercado-carbono-nacional",
-      "id": "b52f3fb3c1f2407904b9",
-      "link": "https://mb.com.ph/2026/10/15/marcos-orders-formulation-of-national-carbon-market-policy-framework",
-      "titulo": "Marcos orders formulation of national carbon market policy framework",
+      "assunto": "industrias-ue-alertam-reforma-ets",
+      "id": "c07f9c6ea5b7ea04d4eb",
+      "link": "https://jornaldenegocios.pt/empresas/industria/detalhe/industrias-alertam-lideres-da-ue-para-riscos-de-reforma-do-mercado-de-carbono-minar-competitividade",
+      "titulo": "Indústrias alertam líderes da UE para riscos de reforma do mercado de carbono minar competitividade",
       "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 15/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 16/10 (manhã)",
   "truncated": {}
 }
