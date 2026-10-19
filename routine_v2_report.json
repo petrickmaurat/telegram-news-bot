@@ -1,16 +1,15 @@
 {
-  "cached": 590,
+  "cached": 1,
   "collection": {
-    "entries": 10071,
-    "failed": 3,
+    "entries": 9440,
+    "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
-      "https://tiinside.com.br/feed/",
       "https://canalsolar.com.br/feed/"
     ],
-    "failure_ratio": 0.0141,
+    "failure_ratio": 0.0094,
     "invalid": 0,
-    "ok": 210,
+    "ok": 211,
     "queries": 213
   },
   "counts": {
@@ -28,117 +27,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610161030.53506906146@smtp-relay.mailin.fr>",
-    "sent_at": 1792146614.1664374,
-    "status": "enviado"
-  },
-  "generated_at": 1792146559.1239755,
+  "generated_at": 1792405915.8395915,
   "google_links_pending": 0,
-  "needs_evaluation": 419,
+  "needs_evaluation": 451,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 534,
-      "insuficiente": 443,
-      "trecho_disponivel": 31,
-      "trecho_limitado": 1
+      "artigo_completo": 247,
+      "insuficiente": 190,
+      "trecho_disponivel": 15
     },
     "selected": {
-      "artigo_completo": 11,
-      "trecho_limitado_final": 1
+      "artigo_completo": 10,
+      "trecho_limitado_final": 2
     }
   },
-  "request_sha256": "a7f452f99cef5a81f812b0e55f27f8c19670cc7d18ab5486144c32bda6f47936",
+  "request_sha256": "1dd3cb926ce5310c1562a11c8a4d5932a0639086077454f550dc16e5f89aa116",
   "selected": [
     {
-      "assunto": "redata-decreto-gas-natural",
-      "id": "c004b80fd5aa27feb0d3",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/entidades-pedem-a-lula-regulamentacao-do-redata-com-gas-natural/",
-      "titulo": "Entidades pedem a Lula regulamentação do Redata com gás natural",
+      "assunto": "anatel-6ghz-obrigacao-datacenter",
+      "id": "f4b4dcbf25787388d240",
+      "link": "https://valor.globo.com/brasil/noticia/2026/10/16/teles-questionam-obrigacao-de-investir-em-data-centers-no-leilao-para-expansao-da-telefonia-movel.ghtml",
+      "titulo": "Teles questionam obrigação de investir em data centers no leilão para expansão da telefonia móvel",
       "topico": "data_center"
     },
     {
-      "assunto": "estados-regulacao-datacenters",
-      "id": "820fbb0a3fb12a43ca4b",
-      "link": "https://megawhat.uol.com.br/megaexpresso/estados-vivem-onda-de-regulacao-para-receber-data-centers-edicao-do-dia/",
-      "titulo": "Estados vivem onda de regulação para receber data centers – Edição do dia",
+      "assunto": "pahlavan-cloudhq-aneel-transmissao-sp",
+      "id": "8a3baaecb121d02c15b7",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/data-center-em-sp-busca-acesso-extra-a-transmissao-fora-do-pnast/",
+      "titulo": "Data center em SP busca acesso extra à transmissão fora do Pnast",
       "topico": "data_center"
     },
     {
-      "assunto": "rede-eletrica-datacenters",
-      "id": "f3a8004cb613c7b93499",
-      "link": "https://diariodonordeste.verdesmares.com.br/opiniao/colunistas/mariana-lemos/o-que-a-rede-eletrica-brasileira-precisa-para-atender-grandes-data-centers-1.3798607",
-      "titulo": "O que a rede elétrica brasileira precisa para atender grandes data centers?",
+      "assunto": "curitiba-regras-ambientais-datacenters",
+      "id": "8fe57d1eeea197c43698",
+      "link": "https://cmc.pr.gov.br/noticias/meio-ambiente/2026/data-centers-novo-substitutivo-altera-regras-ambientais-em-curitiba",
+      "titulo": "Data centers: novo substitutivo altera regras ambientais em Curitiba",
       "topico": "data_center"
     },
     {
-      "assunto": "ferc-pjm-curtailment",
-      "id": "6904238c135991f16e22",
-      "link": "https://latitudemedia.com/news/ferc-rejected-pjms-data-center-curtailment-plan-whats-next-for-byoc/",
-      "titulo": "FERC rejected PJM’s data center curtailment plan. What’s next for BYOC?",
+      "assunto": "us-senate-permitting-bill-datacenters-power",
+      "id": "83b91f961110678acfd8",
+      "link": "https://bisnow.com/news/national/data-center-development/senate-bill-offers-data-centers-a-faster-path-to-power-but-at-a-price",
+      "titulo": "Senate Offers Data Centers Faster Path To Power, At A Price",
       "topico": "data_center"
     },
     {
-      "assunto": "incentivos-fiscais-leilao-baterias",
-      "id": "99f2ce6c6a71ab4f82e1",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/indefinicao-sobre-incentivos-fiscais-pode-encarecer-leiloes-de-baterias/",
-      "titulo": "Indefinição sobre incentivos fiscais pode encarecer leilões de baterias",
+      "assunto": "pac-conteudo-nacional-baterias",
+      "id": "20b925e445c5d2926614",
+      "link": "https://megawhat.uol.com.br/armazenamento/novo-pac-condiciona-operacao-de-baterias-a-comprovacao-de-conteudo-nacional/",
+      "titulo": "Novo PAC condiciona operação de baterias à comprovação de conteúdo nacional",
       "topico": "baterias"
     },
     {
-      "assunto": "epe-transmissao-armazenamento-riscos-climaticos",
-      "id": "f61069a06e0e9621f553",
-      "link": "https://megawhat.uol.com.br/planejamento/estudo-defende-reforco-da-transmissao-e-armazenamento-contra-riscos-climaticos/",
-      "titulo": "Estudo defende reforço da transmissão e armazenamento contra riscos climáticos",
+      "assunto": "ons-garantia-potencia-pico",
+      "id": "03d6ef3f0294544b672d",
+      "link": "https://megawhat.uol.com.br/geracao/novas-usinas-poderao-ter-que-garantir-potencia-no-horario-de-pico/",
+      "titulo": "Novas usinas podem ter que garantir potência no horário de pico",
       "topico": "baterias"
     },
     {
-      "assunto": "taiwan-coreia-mercado-japones-armazenamento",
-      "id": "85beb0f2b2f346a4fab1",
-      "link": "https://valor.globo.com/empresas/noticia/2026/10/15/sem-rivais-chinesas-empresas-taiwanesas-e-sul-coreanas-miram-mercado-japons-de-armazenamento-de-energia.ghtml",
-      "titulo": "Sem rivais chinesas, empresas taiwanesas e sul-coreanas miram mercado japonês de armazenamento de energia",
+      "assunto": "advait-hithium-lfp-preco",
+      "id": "5a50f3abeeea1bf3c8ca",
+      "link": "https://scanx.trade/stock-market-news/companies/advait-energy-transitions-secures-1-gwh-lfp-cell-supply-deal-hithium/51366515",
+      "titulo": "Advait Energy unit signs 1 GWh LFP cell supply deal with Hithium",
       "topico": "baterias"
     },
     {
-      "assunto": "changan-catl-solid-state",
-      "id": "b577a32ad5d3114678ec",
-      "link": "https://starnewskorea.com/en/business-life/2026/10/15/2026101508555541743",
-      "titulo": "\"Charged in 9 minutes\": Changan and CATL develop next-generation all-solid-state batteries, make large-scale investments",
+      "assunto": "iron-air-bateria-arbitragem-tecnologia",
+      "id": "e2ea51ca5de7fdcdd12d",
+      "link": "https://insight.factset.com/modeling-iron-air-battery-arbitrage-in-u.s.-power-markets",
+      "titulo": "Modeling Iron-Air Battery Arbitrage in U.S. Power Markets",
       "topico": "baterias"
     },
     {
       "assunto": "sbce-gtt-competitividade",
-      "id": "e57f9f3ba542f5be69ec",
-      "link": "https://atlaspublico.com.br/noticias/comite-do-mercado-de-carbono-cria-grupo-de-trabalho-sobre-92682",
-      "titulo": "Comitê do mercado de carbono cria grupo de trabalho sobre competitividade dos setores regulados pelo SBCE",
+      "id": "f185edc596bff3ae9a57",
+      "link": "https://carbon-pulse.com/561595/",
+      "titulo": "Brazil establishes competitiveness working group under emerging ETS",
       "topico": "carbono"
     },
     {
-      "assunto": "nil-redd-financiamento",
-      "id": "eeadda0d272e2dbfa7a4",
-      "link": "https://eixos.com.br/transicao-energetica/nil-elabora-modelo-de-contrato-de-financiamento-para-apoiar-projetos-de-reducao-de-emissoes/",
-      "titulo": "NIL elabora modelo de contrato de financiamento para apoiar projetos de redução de emissões",
+      "assunto": "bndes-profloresta-credito-carbono",
+      "id": "41aced8940c099c1ee0e",
+      "link": "https://bra1.com.br/agronegocio/id-709002/bndes_investira_r__6_bilhoes_na_recuperacao_de_florestas_e_no_mercado_de_carbono",
+      "titulo": "BNDES investirá R$ 6 bilhões na recuperação de florestas e no mercado de carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "mpf-credito-carbono-acre",
-      "id": "4e480bb06a978ff2e284",
-      "link": "https://ac24horas.com/2026/10/15/projeto-de-creditos-de-carbono-em-reserva-no-ac-sera-acompanhado-pelo-mpf/",
-      "titulo": "Projeto de créditos de carbono em reserva no AC será acompanhado pelo MPF",
+      "assunto": "imaflora-credito-carbono-floresta-amazonia",
+      "id": "e0ccf5915c9c574a513f",
+      "link": "https://oliberal.com/economia/mercado-de-carbono-transforma-floresta-em-creditos-comercializaveis-na-amazonia-1.1183206",
+      "titulo": "Mercado de carbono transforma floresta em créditos comercializáveis na Amazônia",
       "topico": "carbono"
     },
     {
-      "assunto": "industrias-ue-alertam-reforma-ets",
-      "id": "c07f9c6ea5b7ea04d4eb",
-      "link": "https://jornaldenegocios.pt/empresas/industria/detalhe/industrias-alertam-lideres-da-ue-para-riscos-de-reforma-do-mercado-de-carbono-minar-competitividade",
-      "titulo": "Indústrias alertam líderes da UE para riscos de reforma do mercado de carbono minar competitividade",
+      "assunto": "india-mercado-carbono-lancamento",
+      "id": "07676e5b3eafded94b36",
+      "link": "https://barandbench.com/columns/courting-controversy-green-becomes-the-new-gold-indias-carbon-market-opens-for-business",
+      "titulo": "Courting Controversy: Green becomes the new Gold: India’s Carbon Market opens for business",
       "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 16/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 19/10 (manhã)",
   "truncated": {}
 }
