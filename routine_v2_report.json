@@ -1,7 +1,7 @@
 {
-  "cached": 423,
+  "cached": 579,
   "collection": {
-    "entries": 9378,
+    "entries": 9755,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,117 +27,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610211025.44975897274@smtp-relay.mailin.fr>",
-    "sent_at": 1792578322.9204853,
-    "status": "enviado"
-  },
-  "generated_at": 1792578267.5908055,
+  "generated_at": 1792664883.365306,
   "google_links_pending": 0,
-  "needs_evaluation": 436,
+  "needs_evaluation": 427,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 465,
-      "insuficiente": 356,
+      "artigo_completo": 535,
+      "insuficiente": 433,
       "trecho_disponivel": 38
     },
     "selected": {
-      "artigo_completo": 10,
-      "artigo_lido_pelo_modelo": 1,
+      "artigo_completo": 11,
       "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "ee8c0e7967cc4b629fd83789add30336a0bf8a939e1e7c1b139163fe3dc4e8fc",
+  "request_sha256": "4323a55f380c5c4f3ae8baf8e23c64a909f6870ab8ce7cc0b071e394346da597",
   "selected": [
     {
-      "assunto": "redata-lei-sancionada",
-      "id": "a39b6e6bc43eced0fe08",
-      "link": "https://eixos.com.br/politica/a-corrida-pelos-data-centers-nao-pode-custar-nossa-vantagem-energetica/",
-      "titulo": "A corrida pelos data centers não pode custar nossa vantagem energética",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "aneel-pahlavan-transmissao",
-      "id": "12b580f7de3b83fa67a8",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/data-center-da-pahlavan-perde-recurso-mas-pode-ter-acesso-por-regra-de-transicao/",
-      "titulo": "Data center da Pahlavan perde recurso, mas pode ter acesso por regra de transição",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "reatores-nucleares-datacenters",
-      "id": "519840dffe24b5befc68",
-      "link": "https://telesintese.com.br/reatores-nucleares-para-data-centers-devem-ser-realidade-no-brasil-em-2040-estima-abdc/",
-      "titulo": "Reatores nucleares para data centers devem ser realidade no Brasil em 2040, estima ABDC",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "grid-operator-reliability-rules",
-      "id": "4bded1c51409c3173de5",
-      "link": "https://jsonline.com/story/money/business/energy/2026/10/21/midwest-grid-reliability-rules-data-centers/91585472007/",
-      "titulo": "Power grid operator outlines new reliability rules for data centers",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "leilao-baterias-preco-teto",
-      "id": "2d7e7f893876ff137cd8",
-      "link": "https://agenciainfra.com/blog/leilao-de-baterias-epe-publica-modelo-para-calculo-do-preco-teto/",
-      "titulo": "Leilão de baterias: EPE publica modelo para cálculo do preço-teto",
+      "assunto": "weg-nacionalizacao-baterias",
+      "id": "91c0910c267c3ade9ebd",
+      "link": "https://megawhat.uol.com.br/megaexpresso/weg-ve-espaco-para-nacionalizar-mais-componentes-de-sistemas-de-baterias/",
+      "titulo": "Weg vê espaço para nacionalizar mais componentes de sistemas de baterias – Edição do dia",
       "topico": "baterias"
     },
     {
-      "assunto": "custo-bateria-solar-ranking-global",
-      "id": "1f5a4f9d05bca7c00e87",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/solar-com-baterias-no-brasil-pode-ter-2o-menor-custo-do-mundo-em-2035/",
-      "titulo": "Solar com baterias no Brasil pode ter 2º menor custo do mundo em 2035",
+      "assunto": "irena-custo-solar-baterias-brasil",
+      "id": "0f523e750eb6fb025d41",
+      "link": "https://eixos.com.br/solar/baterias-podem-transformar-brasil-no-segundo-mercado-mais-competitivo-em-energia-solar-do-mundo-diz-irena/",
+      "titulo": "Baterias podem transformar Brasil no segundo mercado mais competitivo em energia solar do mundo, diz Irena",
       "topico": "baterias"
     },
     {
-      "assunto": "custo-bateria-financiamento-armazenamento",
-      "id": "a4e5bcf034c5f2ac867b",
-      "link": "https://esi-africa.com/news/batteries-have-never-been-cheaper-so-why-is-storage-still-waiting-for-its-share-of-money/",
-      "titulo": "Batteries have never been cheaper, so why is storage still waiting for its share of money?",
+      "assunto": "catl-resultado-financeiro",
+      "id": "35b68d98fa0faf4d224a",
+      "link": "https://valor.globo.com/empresas/noticia/2026/10/21/catl-mantem-crescimento-de-vendas-e-lucro-no-3o-trimestre.ghtml",
+      "titulo": "CATL mantém crescimento de vendas e lucro no 3º trimestre",
       "topico": "baterias"
     },
     {
-      "assunto": "nova-plataforma-bateria-800v",
-      "id": "0884d48c1d87011d153d",
-      "link": "https://autotechinsight.spglobal.com/news/5291159/american-battery-solutions-unveils-aventor-800v-battery-platform",
-      "titulo": "American Battery Solutions unveils Aventor 800V battery platform",
+      "assunto": "saft-solid-state-bordeaux",
+      "id": "5e824e0b65747f256e0a",
+      "link": "https://interestingengineering.com/energy/solid-state-battery-lines-for-electric-aircraft",
+      "titulo": "New solid-state battery lines open for electric aircraft with 50% more energy",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-futuro-eleicoes",
-      "id": "e24a0d2837eb4e742a19",
-      "link": "https://c-level.folha.uol.com.br/economia-sustentavel/2026/10/futuro-do-mercado-regulado-de-carbono-depende-do-proximo-presidente.shtml",
-      "titulo": "Futuro do mercado regulado de carbono depende do próximo presidente",
+      "assunto": "sbce-eleicoes-bolsonaro",
+      "id": "40b1fd88d8beb5a03c50",
+      "link": "https://carbon-pulse.com/562800/?site=cpp",
+      "titulo": "PREVIEW: Bolsonaro victory could change course of Brazil’s ETS, threaten environmental policies",
       "topico": "carbono"
     },
     {
-      "assunto": "greenline-creditos-carbono",
-      "id": "63fb5330817c6741539d",
-      "link": "https://forbes.com.br/forbes-agro/2026/10/lucio-lopez-mira-r-250-milhoes-com-ferramenta-inedita-de-creditos-de-carbono/",
-      "titulo": "Lúcio Lopez Mira R$ 250 Milhões com Ferramenta Inédita de Créditos de Carbono",
+      "assunto": "agricultura-regenerativa-carbono-br",
+      "id": "e320eb98a16aa1966099",
+      "link": "https://agfeed.com.br/agregenerativa/do-carbono-a-produtividade-como-slc-agricola-e-amaggi-estao-dando-escala-a-agricultura-regenerativa/",
+      "titulo": "Do carbono à produtividade: como SLC Agrícola e Amaggi estão dando escala à agricultura regenerativa",
       "topico": "carbono"
     },
     {
-      "assunto": "piaui-redd-conselho-gestor",
-      "id": "caddbc62f0334f8060ba",
-      "link": "https://meionews.com/piaui/piaui-avanca-na-politica-de-credito-de-carbono-para-combater-desmatamento-578657",
-      "titulo": "Piauí avança na política de crédito de carbono para combater desmatamento",
+      "assunto": "compensacao-carbono-esportes",
+      "id": "cb2983e64575ae96aba3",
+      "link": "https://maquinadoesporte.com.br/futebol/pallas-compensara-12-mil-toneladas-de-carbono-das-viagens-do-brasileirao-em-parceria-com-ecooar/",
+      "titulo": "Pallas compensará 12 mil toneladas de carbono das viagens do Brasileirão em parceria com Ecooar",
       "topico": "carbono"
     },
     {
-      "assunto": "cftc-regulacao-creditos-carbono",
-      "id": "8a769167fc22232848d5",
-      "link": "https://binance.com/pt-BR/square/post/378848268111975",
-      "titulo": "CFTC avança com quadro regulatório voluntário para créditos de carbono e mitigação ambiental (CAM):",
+      "assunto": "india-ccts-ecossistema",
+      "id": "105f53080686b18a94f1",
+      "link": "https://livemint.com/opinion/online-views/indias-carbon-market-why-it-will-need-wider-support-systems-11792056356719.html",
+      "titulo": "Beyond carbon pricing: India must build an ecosystem that helps industry translate climate ambition into industrial real",
       "topico": "carbono"
+    },
+    {
+      "assunto": "redata",
+      "id": "011a918d47f9837bc663",
+      "link": "https://valor.globo.com/opiniao/coluna/o-problema-ambiental-dos-data-centers.ghtml",
+      "titulo": "O problema ambiental dos data centers",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "ia-demanda-infraestrutura-asia",
+      "id": "3cb7441d77bd5728d98d",
+      "link": "https://valor.globo.com/google/amp/patrocinado/pulse-brand/noticia/2026/10/20/ia-acelera-demanda-por-infraestrutura-e-aproxima-brasil-de-fabricantes-asiaticos-1.ghtml",
+      "titulo": "IA acelera demanda por infraestrutura e aproxima Brasil de fabricantes asiáticos",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "anatel-6ghz-datacenter",
+      "id": "b38d54e490052a65ae41",
+      "link": "https://telesintese.com.br/abrint-e-abranet-questionam-obrigacao-ligada-a-data-centers-no-leilao-de-6-ghz/",
+      "titulo": "Abrint e Abranet questionam obrigação ligada a data centers no leilão de 6 GHz",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "trump-dividendos-datacenters",
+      "id": "adaed38f967e03cf41b4",
+      "link": "https://exame.com/mundo/trump-afirma-que-data-centers-deveriam-dar-dividendos-a-populacoes-locais/",
+      "titulo": "Trump afirma que data centers deveriam dar 'dividendos' a populações locais",
+      "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 21/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 22/10 (manhã)",
   "truncated": {}
 }
