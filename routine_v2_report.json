@@ -27,6 +27,11 @@
     }
   },
   "delivery_links_ready": true,
+  "email": {
+    "message_id": "<202610231021.87337156134@smtp-relay.mailin.fr>",
+    "sent_at": 1792750906.1687,
+    "status": "enviado"
+  },
   "generated_at": 1792750861.152087,
   "google_links_pending": 0,
   "needs_evaluation": 422,
