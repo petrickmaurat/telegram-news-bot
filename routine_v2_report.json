@@ -1,7 +1,7 @@
 {
-  "cached": 579,
+  "cached": 586,
   "collection": {
-    "entries": 9755,
+    "entries": 10010,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,116 +27,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610221028.47833095880@smtp-relay.mailin.fr>",
-    "sent_at": 1792664932.077434,
-    "status": "enviado"
-  },
-  "generated_at": 1792664883.365306,
+  "generated_at": 1792750861.152087,
   "google_links_pending": 0,
-  "needs_evaluation": 427,
+  "needs_evaluation": 422,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 535,
-      "insuficiente": 433,
-      "trecho_disponivel": 38
+      "artigo_completo": 532,
+      "insuficiente": 449,
+      "trecho_disponivel": 27
     },
     "selected": {
-      "artigo_completo": 11,
-      "trecho_limitado_final": 1
+      "artigo_completo": 9,
+      "trecho_limitado_final": 3
     }
   },
-  "request_sha256": "4323a55f380c5c4f3ae8baf8e23c64a909f6870ab8ce7cc0b071e394346da597",
+  "request_sha256": "5ce1562fff4cdc7d8e9ec2c89f7b48bc2d8d0cc6353bff3da41f45516a64eb72",
   "selected": [
     {
-      "assunto": "weg-nacionalizacao-baterias",
-      "id": "91c0910c267c3ade9ebd",
-      "link": "https://megawhat.uol.com.br/megaexpresso/weg-ve-espaco-para-nacionalizar-mais-componentes-de-sistemas-de-baterias/",
-      "titulo": "Weg vê espaço para nacionalizar mais componentes de sistemas de baterias – Edição do dia",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "irena-custo-solar-baterias-brasil",
-      "id": "0f523e750eb6fb025d41",
-      "link": "https://eixos.com.br/solar/baterias-podem-transformar-brasil-no-segundo-mercado-mais-competitivo-em-energia-solar-do-mundo-diz-irena/",
-      "titulo": "Baterias podem transformar Brasil no segundo mercado mais competitivo em energia solar do mundo, diz Irena",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "catl-resultado-financeiro",
-      "id": "35b68d98fa0faf4d224a",
-      "link": "https://valor.globo.com/empresas/noticia/2026/10/21/catl-mantem-crescimento-de-vendas-e-lucro-no-3o-trimestre.ghtml",
-      "titulo": "CATL mantém crescimento de vendas e lucro no 3º trimestre",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "saft-solid-state-bordeaux",
-      "id": "5e824e0b65747f256e0a",
-      "link": "https://interestingengineering.com/energy/solid-state-battery-lines-for-electric-aircraft",
-      "titulo": "New solid-state battery lines open for electric aircraft with 50% more energy",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "sbce-eleicoes-bolsonaro",
-      "id": "40b1fd88d8beb5a03c50",
-      "link": "https://carbon-pulse.com/562800/?site=cpp",
-      "titulo": "PREVIEW: Bolsonaro victory could change course of Brazil’s ETS, threaten environmental policies",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "agricultura-regenerativa-carbono-br",
-      "id": "e320eb98a16aa1966099",
-      "link": "https://agfeed.com.br/agregenerativa/do-carbono-a-produtividade-como-slc-agricola-e-amaggi-estao-dando-escala-a-agricultura-regenerativa/",
-      "titulo": "Do carbono à produtividade: como SLC Agrícola e Amaggi estão dando escala à agricultura regenerativa",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "compensacao-carbono-esportes",
-      "id": "cb2983e64575ae96aba3",
-      "link": "https://maquinadoesporte.com.br/futebol/pallas-compensara-12-mil-toneladas-de-carbono-das-viagens-do-brasileirao-em-parceria-com-ecooar/",
-      "titulo": "Pallas compensará 12 mil toneladas de carbono das viagens do Brasileirão em parceria com Ecooar",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "india-ccts-ecossistema",
-      "id": "105f53080686b18a94f1",
-      "link": "https://livemint.com/opinion/online-views/indias-carbon-market-why-it-will-need-wider-support-systems-11792056356719.html",
-      "titulo": "Beyond carbon pricing: India must build an ecosystem that helps industry translate climate ambition into industrial real",
-      "topico": "carbono"
-    },
-    {
       "assunto": "redata",
-      "id": "011a918d47f9837bc663",
-      "link": "https://valor.globo.com/opiniao/coluna/o-problema-ambiental-dos-data-centers.ghtml",
-      "titulo": "O problema ambiental dos data centers",
+      "id": "3d8b5bc594ab0a55d789",
+      "link": "https://jota.info/executivo/antes-de-sancao-mdic-avisou-que-redata-teria-efeitos-limitados",
+      "titulo": "Antes de sanção, MDIC avisou que Redata teria efeitos limitados",
       "topico": "data_center"
     },
     {
-      "assunto": "ia-demanda-infraestrutura-asia",
-      "id": "3cb7441d77bd5728d98d",
-      "link": "https://valor.globo.com/google/amp/patrocinado/pulse-brand/noticia/2026/10/20/ia-acelera-demanda-por-infraestrutura-e-aproxima-brasil-de-fabricantes-asiaticos-1.ghtml",
-      "titulo": "IA acelera demanda por infraestrutura e aproxima Brasil de fabricantes asiáticos",
+      "assunto": "eleicoes-2026-data-center-ia",
+      "id": "416c62445f3c07bbd2af",
+      "link": "https://olhardigital.com.br/2026/10/21/pro/eleicoes-2026-os-planos-de-lula-e-flavio-bolsonaro-para-ia-data-centers-e-soberania-digital/",
+      "titulo": "Eleições 2026: os planos de Lula e Flávio Bolsonaro para IA, data centers e soberania digital",
       "topico": "data_center"
     },
     {
-      "assunto": "anatel-6ghz-datacenter",
-      "id": "b38d54e490052a65ae41",
-      "link": "https://telesintese.com.br/abrint-e-abranet-questionam-obrigacao-ligada-a-data-centers-no-leilao-de-6-ghz/",
-      "titulo": "Abrint e Abranet questionam obrigação ligada a data centers no leilão de 6 GHz",
+      "assunto": "itaipu-paraguai-datacenter",
+      "id": "46131c4ec1b680f1d250",
+      "link": "https://tribunadoagreste.com.br/geral/2026/10/21/1002751-eua-planejam-usar-energia-da-itaipu-para-data-centers",
+      "titulo": "EUA planejam usar energia da Itaipu para data centers",
       "topico": "data_center"
     },
     {
-      "assunto": "trump-dividendos-datacenters",
-      "id": "adaed38f967e03cf41b4",
-      "link": "https://exame.com/mundo/trump-afirma-que-data-centers-deveriam-dar-dividendos-a-populacoes-locais/",
-      "titulo": "Trump afirma que data centers deveriam dar 'dividendos' a populações locais",
+      "assunto": "texas-tceq-data-center-permissoes",
+      "id": "6d7ba352ba1bf58f51ff",
+      "link": "https://texastribune.org/2026/10/21/data-center-permits-tceq-texas/",
+      "titulo": "TCEQ shuts down permit filing system amid data center dispute",
       "topico": "data_center"
+    },
+    {
+      "assunto": "leilao-baterias-transmissoras",
+      "id": "6703b94c6157610ed914",
+      "link": "https://megawhat.uol.com.br/podcasts/transmissoras-entre-o-leilao-de-baterias-e-os-projetos-que-nao-sairam-do-papel/",
+      "titulo": "🎙️Transmissoras entre o leilão de baterias e os projetos que não saíram do papel",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "ons-baterias-curtailment",
+      "id": "5a83b105154fdb3c9b69",
+      "link": "https://valor.globo.com/patrocinado/pressworks/noticia/2026/10/22/baterias-podem-reduzir-em-ate-50-os-cortes-de-geracao-e-ja-comecam-a-impactar-o-calculo-do-curtailment-1.ghtml",
+      "titulo": "Baterias podem reduzir em até 50% os cortes de geração e já começam a impactar o cálculo do curtailment",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "peak-energy-sodio-ion-financiamento",
+      "id": "8766bb4a3a0172da8f81",
+      "link": "https://energymonitor.ai/news/peak-energy-secures-108m-series-b/",
+      "titulo": "Peak Energy secures $108m in Series B for sodium-ion battery scale-up",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "eve-energy-solid-state-sodio",
+      "id": "dfa330ee9d751d47295b",
+      "link": "https://autonews.gasgoo.com/articles/news/eve-energy-unveils-new-all-solid-state-and-sodium-ion-batteries-2112857283574251520",
+      "titulo": "EVE Energy unveils new all-solid-state and sodium-ion batteries",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "maringa-vrrcc-carbono",
+      "id": "332dbbd06dee1e4dc894",
+      "link": "https://maringapost.com.br/2026/10/22/lei-quer-dar-prioridade-para-contratacoes-carbono-zero-em-licitacoes-da-prefeitura-de-maringa/",
+      "titulo": "Lei quer dar prioridade para contratações carbono zero em licitações da Prefeitura de Maringá",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "google-projeto-carbono-brasil",
+      "id": "68a839a65298b30ab883",
+      "link": "https://comprerural.com/google-aposta-em-projeto-que-une-gado-arvores-e-creditos-de-carbono-no-brasil/",
+      "titulo": "Google aposta em projeto que une gado, árvores e créditos de carbono no Brasil",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "mercados-carbono-importancia-brasil-opiniao",
+      "id": "ac36df725dfe24d166c4",
+      "link": "https://pp.nexojornal.com.br/pergunte-a-um-pesquisador/2026/10/20/barbara-moraes-mercados-de-carbono-e-sua-importancia-para-o-brasil/",
+      "titulo": "Bárbara Moraes: mercados de carbono e sua importância para o Brasil",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "eu-ets-msr-700m",
+      "id": "d76fa1d6c832420409c3",
+      "link": "https://carbonherald.com/eu-strikes-deal-raise-carbon-permit-buffer/",
+      "titulo": "EU Strikes Deal To Raise Carbon Permit Buffer",
+      "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 22/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 23/10 (manhã)",
   "truncated": {}
 }
