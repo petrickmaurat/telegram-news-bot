@@ -1,7 +1,7 @@
 {
-  "cached": 586,
+  "cached": 0,
   "collection": {
-    "entries": 10010,
+    "entries": 9086,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -18,7 +18,7 @@
       "US": 2
     },
     "carbono": {
-      "BR": 3,
+      "BR": 2,
       "US": 1
     },
     "data_center": {
@@ -27,116 +27,106 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610231021.87337156134@smtp-relay.mailin.fr>",
-    "sent_at": 1792750906.1687,
-    "status": "enviado"
-  },
-  "generated_at": 1792750861.152087,
+  "generated_at": 1793010320.3512094,
   "google_links_pending": 0,
-  "needs_evaluation": 422,
+  "needs_evaluation": 530,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 532,
-      "insuficiente": 449,
-      "trecho_disponivel": 27
+      "artigo_completo": 306,
+      "insuficiente": 208,
+      "trecho_disponivel": 15,
+      "trecho_limitado": 1
     },
     "selected": {
-      "artigo_completo": 9,
-      "trecho_limitado_final": 3
+      "artigo_completo": 8,
+      "artigo_lido_pelo_modelo": 2,
+      "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "5ce1562fff4cdc7d8e9ec2c89f7b48bc2d8d0cc6353bff3da41f45516a64eb72",
+  "request_sha256": "6d09a47d37f0ff14150507a75749c0c751a372fff26c8ab40cbb211647e8ae87",
   "selected": [
     {
-      "assunto": "redata",
-      "id": "3d8b5bc594ab0a55d789",
-      "link": "https://jota.info/executivo/antes-de-sancao-mdic-avisou-que-redata-teria-efeitos-limitados",
-      "titulo": "Antes de sanção, MDIC avisou que Redata teria efeitos limitados",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "eleicoes-2026-data-center-ia",
-      "id": "416c62445f3c07bbd2af",
-      "link": "https://olhardigital.com.br/2026/10/21/pro/eleicoes-2026-os-planos-de-lula-e-flavio-bolsonaro-para-ia-data-centers-e-soberania-digital/",
-      "titulo": "Eleições 2026: os planos de Lula e Flávio Bolsonaro para IA, data centers e soberania digital",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "itaipu-paraguai-datacenter",
-      "id": "46131c4ec1b680f1d250",
-      "link": "https://tribunadoagreste.com.br/geral/2026/10/21/1002751-eua-planejam-usar-energia-da-itaipu-para-data-centers",
-      "titulo": "EUA planejam usar energia da Itaipu para data centers",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "texas-tceq-data-center-permissoes",
-      "id": "6d7ba352ba1bf58f51ff",
-      "link": "https://texastribune.org/2026/10/21/data-center-permits-tceq-texas/",
-      "titulo": "TCEQ shuts down permit filing system amid data center dispute",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "leilao-baterias-transmissoras",
-      "id": "6703b94c6157610ed914",
-      "link": "https://megawhat.uol.com.br/podcasts/transmissoras-entre-o-leilao-de-baterias-e-os-projetos-que-nao-sairam-do-papel/",
-      "titulo": "🎙️Transmissoras entre o leilão de baterias e os projetos que não saíram do papel",
+      "assunto": "aneel-reuniao-leilao-baterias",
+      "id": "cdaf0b87e8d3b70cc2e1",
+      "link": "https://agenciainfra.com/blog/aneel-marca-reuniao-extraordinaria-para-discutir-leilao-de-baterias/",
+      "titulo": "ANEEL marca reunião extraordinária para discutir leilão de baterias",
       "topico": "baterias"
     },
     {
-      "assunto": "ons-baterias-curtailment",
-      "id": "5a83b105154fdb3c9b69",
-      "link": "https://valor.globo.com/patrocinado/pressworks/noticia/2026/10/22/baterias-podem-reduzir-em-ate-50-os-cortes-de-geracao-e-ja-comecam-a-impactar-o-calculo-do-curtailment-1.ghtml",
-      "titulo": "Baterias podem reduzir em até 50% os cortes de geração e já começam a impactar o cálculo do curtailment",
+      "assunto": "bndes-credenciamento-leilao-baterias",
+      "id": "e486e0721a89810eeb2d",
+      "link": "https://megawhat.uol.com.br/armazenamento/bndes-credencia-primeira-bateria-para-leilao-com-conteudo-nacional/",
+      "titulo": "BNDES credencia primeira bateria para leilão com conteúdo nacional",
       "topico": "baterias"
     },
     {
-      "assunto": "peak-energy-sodio-ion-financiamento",
-      "id": "8766bb4a3a0172da8f81",
-      "link": "https://energymonitor.ai/news/peak-energy-secures-108m-series-b/",
-      "titulo": "Peak Energy secures $108m in Series B for sodium-ion battery scale-up",
+      "assunto": "solid-state-coreia-samsung-lg",
+      "id": "de65a70b9aee6a9cb8b8",
+      "link": "https://en.koreadaily.com/solid-state-battery-samsung-lg-strategy/",
+      "titulo": "Solid-State Battery — Samsung Accelerates While LG Takes a Cautious Approach",
       "topico": "baterias"
     },
     {
-      "assunto": "eve-energy-solid-state-sodio",
-      "id": "dfa330ee9d751d47295b",
-      "link": "https://autonews.gasgoo.com/articles/news/eve-energy-unveils-new-all-solid-state-and-sodium-ion-batteries-2112857283574251520",
-      "titulo": "EVE Energy unveils new all-solid-state and sodium-ion batteries",
+      "assunto": "eve-energy-resultado-financeiro",
+      "id": "bd707d2495c869735688",
+      "link": "https://finance.biggo.com/news/d51c9b52-c767-463c-bc75-19f9f87fbca0",
+      "titulo": "China's EVE Energy posts CNY 73.39 billion in first three quarters, power battery shipments up over 90%",
       "topico": "baterias"
     },
     {
-      "assunto": "maringa-vrrcc-carbono",
-      "id": "332dbbd06dee1e4dc894",
-      "link": "https://maringapost.com.br/2026/10/22/lei-quer-dar-prioridade-para-contratacoes-carbono-zero-em-licitacoes-da-prefeitura-de-maringa/",
-      "titulo": "Lei quer dar prioridade para contratações carbono zero em licitações da Prefeitura de Maringá",
+      "assunto": "pastagem-estoque-carbono",
+      "id": "c0fd664ff00a12dc4f6f",
+      "link": "https://poder360.com.br/poder-sustentavel/manejo-adequado-recupera-pastagens-e-amplia-estoque-de-carbono/",
+      "titulo": "Manejo adequado recupera pastagens e amplia estoque de carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "google-projeto-carbono-brasil",
-      "id": "68a839a65298b30ab883",
-      "link": "https://comprerural.com/google-aposta-em-projeto-que-une-gado-arvores-e-creditos-de-carbono-no-brasil/",
-      "titulo": "Google aposta em projeto que une gado, árvores e créditos de carbono no Brasil",
+      "assunto": "brasil-china-cooperacao-mercado-carbono",
+      "id": "4bccbe179327ffc60081",
+      "link": "https://e-global.pt/noticias/lusofonia/brasil/brasil-e-china-reforcam-cooperacao-para-desenvolver-mercados-de-carbono/",
+      "titulo": "Brasil e China reforçam cooperação para desenvolver mercados de carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "mercados-carbono-importancia-brasil-opiniao",
-      "id": "ac36df725dfe24d166c4",
-      "link": "https://pp.nexojornal.com.br/pergunte-a-um-pesquisador/2026/10/20/barbara-moraes-mercados-de-carbono-e-sua-importancia-para-o-brasil/",
-      "titulo": "Bárbara Moraes: mercados de carbono e sua importância para o Brasil",
+      "assunto": "eu-cbam-expansao",
+      "id": "62f1dbab263c91eeae5c",
+      "link": "https://eurometal.net/european-industry-groups-push-to-expand-eu-carbon-border-mechanism/",
+      "titulo": "European industry groups push to expand EU carbon border mechanism",
       "topico": "carbono"
     },
     {
-      "assunto": "eu-ets-msr-700m",
-      "id": "d76fa1d6c832420409c3",
-      "link": "https://carbonherald.com/eu-strikes-deal-raise-carbon-permit-buffer/",
-      "titulo": "EU Strikes Deal To Raise Carbon Permit Buffer",
-      "topico": "carbono"
+      "assunto": "redata-regulamentacao-carta-lula",
+      "id": "b00b36acab4e74672858",
+      "link": "https://telesintese.com.br/setor-eletrico-cobra-regulamentacao-do-redata-ainda-em-2026/",
+      "titulo": "Setor elétrico cobra regulamentação do Redata ainda em 2026",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "everest-digital-datacenters-goias",
+      "id": "59261d17942b3394d9a7",
+      "link": "https://convergenciadigital.com.br/mercado/sem-esperar-redata-everest-digital-investe-e-avanca-fora-do-eixo-rio-e-sao-paulo-em-data-centers/",
+      "titulo": "Sem esperar Redata, Everest Digital investe e avança fora do eixo Rio e São Paulo em data centers",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "cts-group-fabrica-datacenters-br",
+      "id": "a8dc82e5863bdab3cbeb",
+      "link": "https://itforum.com.br/noticias/cts-group-escritorio-sp-instala-data-centers/",
+      "titulo": "CTS Group abre escritório em SP e instala fábrica de data centers no Brasil",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "oregon-emergencia-banimento-datacenters",
+      "id": "03bc815b5f4af9b36c85",
+      "link": "https://datacenterdynamics.com/en/news/oregon-city-declares-state-of-emergency-over-lost-data-center-revenue-amid-state-wide-ban/",
+      "titulo": "Oregon city declares state of emergency over lost data center revenue amid state-wide ban",
+      "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 23/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 26/10 (manhã)",
   "truncated": {}
 }
