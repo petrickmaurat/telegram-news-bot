@@ -1,7 +1,7 @@
 {
-  "cached": 0,
+  "cached": 187,
   "collection": {
-    "entries": 9086,
+    "entries": 8151,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -18,7 +18,7 @@
       "US": 2
     },
     "carbono": {
-      "BR": 2,
+      "BR": 3,
       "US": 1
     },
     "data_center": {
@@ -27,111 +27,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610261026.38380171947@smtp-relay.mailin.fr>",
-    "sent_at": 1793010365.4574366,
-    "status": "enviado"
-  },
-  "generated_at": 1793010320.3512094,
+  "generated_at": 1793096729.3707576,
   "google_links_pending": 0,
-  "needs_evaluation": 530,
+  "needs_evaluation": 430,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 306,
-      "insuficiente": 208,
-      "trecho_disponivel": 15,
-      "trecho_limitado": 1
+      "artigo_completo": 345,
+      "insuficiente": 254,
+      "trecho_disponivel": 18
     },
     "selected": {
-      "artigo_completo": 8,
-      "artigo_lido_pelo_modelo": 2,
-      "trecho_limitado_final": 1
+      "artigo_completo": 10,
+      "trecho_limitado_final": 2
     }
   },
-  "request_sha256": "6d09a47d37f0ff14150507a75749c0c751a372fff26c8ab40cbb211647e8ae87",
+  "request_sha256": "043017aadb95d7fd1c8f0c7b02816ae9ce3fddf0e4b08711d1553272775252ef",
   "selected": [
     {
-      "assunto": "aneel-reuniao-leilao-baterias",
-      "id": "cdaf0b87e8d3b70cc2e1",
-      "link": "https://agenciainfra.com/blog/aneel-marca-reuniao-extraordinaria-para-discutir-leilao-de-baterias/",
-      "titulo": "ANEEL marca reunião extraordinária para discutir leilão de baterias",
+      "assunto": "leilao-baterias-regras",
+      "id": "4608455750c65eff7af6",
+      "link": "https://megawhat.uol.com.br/armazenamento/aneel-deve-reduzir-garantias-e-flexibilizar-regras-dos-leiloes-de-baterias/",
+      "titulo": "Aneel deve reduzir garantias e flexibilizar regras dos leilões de baterias",
       "topico": "baterias"
     },
     {
-      "assunto": "bndes-credenciamento-leilao-baterias",
-      "id": "e486e0721a89810eeb2d",
-      "link": "https://megawhat.uol.com.br/armazenamento/bndes-credencia-primeira-bateria-para-leilao-com-conteudo-nacional/",
-      "titulo": "BNDES credencia primeira bateria para leilão com conteúdo nacional",
+      "assunto": "furto-baterias-veiculos",
+      "id": "2910be4588a4f089f1a8",
+      "link": "https://oglobo.globo.com/brasil/sao-paulo/noticia/2026/10/25/alto-valor-das-baterias-e-mercado-ilegal-de-pecas-multiplicam-furtos-e-roubos-de-carros-eletricos-em-sao-paulo.ghtml",
+      "titulo": "Alto valor das baterias e mercado ilegal de peças multiplicam furtos e roubos de carros elétricos em São Paulo",
       "topico": "baterias"
     },
     {
-      "assunto": "solid-state-coreia-samsung-lg",
-      "id": "de65a70b9aee6a9cb8b8",
-      "link": "https://en.koreadaily.com/solid-state-battery-samsung-lg-strategy/",
-      "titulo": "Solid-State Battery — Samsung Accelerates While LG Takes a Cautious Approach",
+      "assunto": "sodio-ion-tecnologia",
+      "id": "9cfd968296d5c80aafdc",
+      "link": "https://igrownews.com/hithium-latest-news/",
+      "titulo": "HiTHIUM Enters Canada With 8-Hour BESS and Cold-Climate Sodium-Ion System",
       "topico": "baterias"
     },
     {
-      "assunto": "eve-energy-resultado-financeiro",
-      "id": "bd707d2495c869735688",
-      "link": "https://finance.biggo.com/news/d51c9b52-c767-463c-bc75-19f9f87fbca0",
-      "titulo": "China's EVE Energy posts CNY 73.39 billion in first three quarters, power battery shipments up over 90%",
+      "assunto": "custo-armazenamento",
+      "id": "00c30b7586472335b29a",
+      "link": "https://interestingengineering.com/energy/gm-backed-sodium-ion-batteries",
+      "titulo": "Sodium-ion batteries without active cooling aim to cut grid storage costs by 20%",
       "topico": "baterias"
+    },
+    {
+      "assunto": "reforma-tributaria-carbono",
+      "id": "1410824aa6708fb0eda6",
+      "link": "https://agenciainfra.com/blog/artigo-o-mercado-de-carbono-e-os-limites-da-neutralidade-tributaria/",
+      "titulo": "Artigo | O mercado de carbono e os limites da neutralidade tributária",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "brasil-eleicao-sbce",
+      "id": "d4fc07c907f5f54ac534",
+      "link": "https://carbon-pulse.com/564014/",
+      "titulo": "LATAM Roundup: Lula wins Brazil election, expected to maintain ETS, environmental policies",
+      "topico": "carbono"
     },
     {
       "assunto": "pastagem-estoque-carbono",
-      "id": "c0fd664ff00a12dc4f6f",
-      "link": "https://poder360.com.br/poder-sustentavel/manejo-adequado-recupera-pastagens-e-amplia-estoque-de-carbono/",
-      "titulo": "Manejo adequado recupera pastagens e amplia estoque de carbono",
+      "id": "d4896bf279072ed38f5b",
+      "link": "https://br.bossanews.com/manejo-adequado-recupera-pastagens-e-aumenta-o-estoque-de-carbono/",
+      "titulo": "Manejo adequado recupera pastagens e aumenta o estoque de carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "brasil-china-cooperacao-mercado-carbono",
-      "id": "4bccbe179327ffc60081",
-      "link": "https://e-global.pt/noticias/lusofonia/brasil/brasil-e-china-reforcam-cooperacao-para-desenvolver-mercados-de-carbono/",
-      "titulo": "Brasil e China reforçam cooperação para desenvolver mercados de carbono",
+      "assunto": "california-mercado-carbono",
+      "id": "2016abfc8e270e0da2a8",
+      "link": "https://santacruzsentinel.com/2026/10/25/californias-carbon-market-changed-this-year-and-the-next-governor-will-inherit-the-fallout/",
+      "titulo": "California’s carbon market changed this year, and the next governor will inherit the fallout",
       "topico": "carbono"
     },
     {
-      "assunto": "eu-cbam-expansao",
-      "id": "62f1dbab263c91eeae5c",
-      "link": "https://eurometal.net/european-industry-groups-push-to-expand-eu-carbon-border-mechanism/",
-      "titulo": "European industry groups push to expand EU carbon border mechanism",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "redata-regulamentacao-carta-lula",
-      "id": "b00b36acab4e74672858",
-      "link": "https://telesintese.com.br/setor-eletrico-cobra-regulamentacao-do-redata-ainda-em-2026/",
-      "titulo": "Setor elétrico cobra regulamentação do Redata ainda em 2026",
+      "assunto": "lula-reeleicao-regulacao-bigtech-datacenters",
+      "id": "3107585aec2ce462cca1",
+      "link": "https://eixos.com.br/newsletters/comece-seu-dia/reeleito-lula-defende-regulacao-de-big-techs-e-reserva-de-data-centers-para-dados-nacionais/",
+      "titulo": "Reeleito, Lula defende regulação de big techs e reserva de data centers para dados nacionais",
       "topico": "data_center"
     },
     {
-      "assunto": "everest-digital-datacenters-goias",
-      "id": "59261d17942b3394d9a7",
-      "link": "https://convergenciadigital.com.br/mercado/sem-esperar-redata-everest-digital-investe-e-avanca-fora-do-eixo-rio-e-sao-paulo-em-data-centers/",
-      "titulo": "Sem esperar Redata, Everest Digital investe e avança fora do eixo Rio e São Paulo em data centers",
+      "assunto": "absolar-curtailment-redata",
+      "id": "4e3a8cd367f5fa049bf0",
+      "link": "https://telesintese.com.br/absolar-ve-data-centers-como-solucao-para-curtailment/",
+      "titulo": "Absolar vê data centers como solução para curtailment",
       "topico": "data_center"
     },
     {
-      "assunto": "cts-group-fabrica-datacenters-br",
-      "id": "a8dc82e5863bdab3cbeb",
-      "link": "https://itforum.com.br/noticias/cts-group-escritorio-sp-instala-data-centers/",
-      "titulo": "CTS Group abre escritório em SP e instala fábrica de data centers no Brasil",
+      "assunto": "elea-redata-impacto-2027",
+      "id": "03d8150ed18ce2540c31",
+      "link": "https://telesintese.com.br/elea-preve-impactos-do-redata-so-em-2027/",
+      "titulo": "Elea prevê impactos do Redata só em 2027",
       "topico": "data_center"
     },
     {
-      "assunto": "oregon-emergencia-banimento-datacenters",
-      "id": "03bc815b5f4af9b36c85",
-      "link": "https://datacenterdynamics.com/en/news/oregon-city-declares-state-of-emergency-over-lost-data-center-revenue-amid-state-wide-ban/",
-      "titulo": "Oregon city declares state of emergency over lost data center revenue amid state-wide ban",
+      "assunto": "espanha-regras-data-centers",
+      "id": "e277844cb78341e407d2",
+      "link": "https://reuters.com/business/energy/spain-relaxes-initial-proposal-data-center-rules-2026-10-26/",
+      "titulo": "Spain relaxes initial proposal for data-center rules",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 26/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 27/10 (manhã)",
   "truncated": {}
 }
