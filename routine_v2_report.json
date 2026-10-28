@@ -1,7 +1,7 @@
 {
-  "cached": 187,
+  "cached": 430,
   "collection": {
-    "entries": 8151,
+    "entries": 8668,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -18,7 +18,7 @@
       "US": 2
     },
     "carbono": {
-      "BR": 3,
+      "BR": 2,
       "US": 1
     },
     "data_center": {
@@ -27,116 +27,104 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610271026.19797616234@smtp-relay.mailin.fr>",
-    "sent_at": 1793096774.0178602,
-    "status": "enviado"
-  },
-  "generated_at": 1793096729.3707576,
+  "generated_at": 1793183955.1923332,
   "google_links_pending": 0,
-  "needs_evaluation": 430,
+  "needs_evaluation": 427,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 345,
-      "insuficiente": 254,
-      "trecho_disponivel": 18
+      "artigo_completo": 465,
+      "insuficiente": 368,
+      "trecho_disponivel": 24
     },
     "selected": {
       "artigo_completo": 10,
-      "trecho_limitado_final": 2
+      "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "043017aadb95d7fd1c8f0c7b02816ae9ce3fddf0e4b08711d1553272775252ef",
+  "request_sha256": "ac8d05df11e436a4124ae063040ec6fd5085221f7d444bffd8635c63d6c482c2",
   "selected": [
     {
-      "assunto": "leilao-baterias-regras",
-      "id": "4608455750c65eff7af6",
-      "link": "https://megawhat.uol.com.br/armazenamento/aneel-deve-reduzir-garantias-e-flexibilizar-regras-dos-leiloes-de-baterias/",
-      "titulo": "Aneel deve reduzir garantias e flexibilizar regras dos leilões de baterias",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "furto-baterias-veiculos",
-      "id": "2910be4588a4f089f1a8",
-      "link": "https://oglobo.globo.com/brasil/sao-paulo/noticia/2026/10/25/alto-valor-das-baterias-e-mercado-ilegal-de-pecas-multiplicam-furtos-e-roubos-de-carros-eletricos-em-sao-paulo.ghtml",
-      "titulo": "Alto valor das baterias e mercado ilegal de peças multiplicam furtos e roubos de carros elétricos em São Paulo",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "sodio-ion-tecnologia",
-      "id": "9cfd968296d5c80aafdc",
-      "link": "https://igrownews.com/hithium-latest-news/",
-      "titulo": "HiTHIUM Enters Canada With 8-Hour BESS and Cold-Climate Sodium-Ion System",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "custo-armazenamento",
-      "id": "00c30b7586472335b29a",
-      "link": "https://interestingengineering.com/energy/gm-backed-sodium-ion-batteries",
-      "titulo": "Sodium-ion batteries without active cooling aim to cut grid storage costs by 20%",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "reforma-tributaria-carbono",
-      "id": "1410824aa6708fb0eda6",
-      "link": "https://agenciainfra.com/blog/artigo-o-mercado-de-carbono-e-os-limites-da-neutralidade-tributaria/",
-      "titulo": "Artigo | O mercado de carbono e os limites da neutralidade tributária",
+      "assunto": "greenline-forum-carbono",
+      "id": "dcd3cc366d04f3787164",
+      "link": "https://jd1noticias.com/meio-ambiente/2026/10/27/greenline-leva-tecnologia-de-carbono-a-forum-em-campo-grande.html",
+      "titulo": "Greenline leva tecnologia de carbono a fórum em Campo Grande",
       "topico": "carbono"
     },
     {
-      "assunto": "brasil-eleicao-sbce",
-      "id": "d4fc07c907f5f54ac534",
-      "link": "https://carbon-pulse.com/564014/",
-      "titulo": "LATAM Roundup: Lula wins Brazil election, expected to maintain ETS, environmental policies",
+      "assunto": "brasil-mercado-carbono-reforma-tributaria",
+      "id": "534c0fbd7bca7bc631be",
+      "link": "https://umsoplaneta.globo.com/financas/negocios/post/2026/10/o-mercado-de-carbono-na-encruzilhada-da-reforma-tributaria.ghtml",
+      "titulo": "O mercado de carbono na encruzilhada da reforma tributária",
       "topico": "carbono"
     },
     {
-      "assunto": "pastagem-estoque-carbono",
-      "id": "d4896bf279072ed38f5b",
-      "link": "https://br.bossanews.com/manejo-adequado-recupera-pastagens-e-aumenta-o-estoque-de-carbono/",
-      "titulo": "Manejo adequado recupera pastagens e aumenta o estoque de carbono",
+      "assunto": "eu-uk-ets-linkage",
+      "id": "08902a18fe1c29d3948f",
+      "link": "https://fastmarkets.com/insights/eu-uk-ets-linkage-allowance-supply-dynamics-shape-european-carbon-market-outlook-carbon-forward-london/",
+      "titulo": "EU-UK ETS linkage, allowance supply dynamics shape European carbon market outlook: Carbon Forward London",
       "topico": "carbono"
     },
     {
-      "assunto": "california-mercado-carbono",
-      "id": "2016abfc8e270e0da2a8",
-      "link": "https://santacruzsentinel.com/2026/10/25/californias-carbon-market-changed-this-year-and-the-next-governor-will-inherit-the-fallout/",
-      "titulo": "California’s carbon market changed this year, and the next governor will inherit the fallout",
-      "topico": "carbono"
+      "assunto": "leilao-baterias",
+      "id": "3819fec1114ff449e5b3",
+      "link": "https://agenciainfra.com/blog/aneel-aprova-editais-dos-leiloes-de-baterias-marcados-para-dezembro/",
+      "titulo": "ANEEL aprova editais dos leilões de baterias, marcados para dezembro",
+      "topico": "baterias"
     },
     {
-      "assunto": "lula-reeleicao-regulacao-bigtech-datacenters",
-      "id": "3107585aec2ce462cca1",
-      "link": "https://eixos.com.br/newsletters/comece-seu-dia/reeleito-lula-defende-regulacao-de-big-techs-e-reserva-de-data-centers-para-dados-nacionais/",
-      "titulo": "Reeleito, Lula defende regulação de big techs e reserva de data centers para dados nacionais",
+      "assunto": "leilao-baterias",
+      "id": "9e576ac415bc1644a907",
+      "link": "https://megawhat.uol.com.br/armazenamento/ons-amplia-margem-para-conexao-de-baterias-em-subestacao-no-ce/",
+      "titulo": "ONS amplia margem para conexão de baterias em subestação no CE",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "china-producao-baterias-exterior",
+      "id": "7c4bf633cfcd4da7ba04",
+      "link": "https://megawhat.uol.com.br/megaexpresso/china-amplia-producao-de-baterias-no-exterior-diante-de-barreiras-comerciais-edicao-do-dia/",
+      "titulo": "China amplia produção de baterias no exterior diante de barreiras comerciais – Edição do dia",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "catl-bateria-estado-solido",
+      "id": "b769e8c663870026f826",
+      "link": "https://news.lavx.hu/article/catl-targets-2027-pilot-production-for-solid-state-batteries",
+      "titulo": "CATL targets 2027 pilot production for solid-state batteries",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "setor-eletrico-estrategia-atracao-datacenters",
+      "id": "91c860a852a120517049",
+      "link": "https://valor.globo.com/empresas/noticia/2026/10/27/setor-eltrico-diverge-sobre-estratgia-para-atrao-de-data-centers-no-pas.ghtml",
+      "titulo": "Setor elétrico diverge sobre estratégia para atração de data centers no país",
       "topico": "data_center"
     },
     {
-      "assunto": "absolar-curtailment-redata",
-      "id": "4e3a8cd367f5fa049bf0",
-      "link": "https://telesintese.com.br/absolar-ve-data-centers-como-solucao-para-curtailment/",
-      "titulo": "Absolar vê data centers como solução para curtailment",
+      "assunto": "cpfl-conexao-datacenters-negada",
+      "id": "0594911bb6438a289a2c",
+      "link": "https://valor.globo.com/empresas/noticia/2026/10/27/demanda-por-data-centers-esta-vindo-mas-em-velocidade-menor-que-a-desejada-diz-ceo-da-cpfl.ghtml",
+      "titulo": "Demanda por data centers está vindo, mas em velocidade menor que a desejada, diz CEO da CPFL",
       "topico": "data_center"
     },
     {
-      "assunto": "elea-redata-impacto-2027",
-      "id": "03d8150ed18ce2540c31",
-      "link": "https://telesintese.com.br/elea-preve-impactos-do-redata-so-em-2027/",
-      "titulo": "Elea prevê impactos do Redata só em 2027",
+      "assunto": "gaispi-datacenter-soberano-eaf",
+      "id": "5944d6f0487ed9488462",
+      "link": "https://telesintese.com.br/gaispi-aprova-proposta-de-data-center-de-r-375-milhoes-para-ia/",
+      "titulo": "Gaispi aprova proposta de data center de R$ 375 milhões para IA",
       "topico": "data_center"
     },
     {
-      "assunto": "espanha-regras-data-centers",
-      "id": "e277844cb78341e407d2",
-      "link": "https://reuters.com/business/energy/spain-relaxes-initial-proposal-data-center-rules-2026-10-26/",
-      "titulo": "Spain relaxes initial proposal for data-center rules",
+      "assunto": "uk-ai-covenant-data-center",
+      "id": "790138fa64f7e7d8caec",
+      "link": "https://ft.com/content/336f8f7c-1a39-403d-8c68-dfca5ff1a2bb?syn-25a6b1a6=1",
+      "titulo": "UK considers forcing data centres to invest locally to meet new AI ‘covenant’",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 27/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 28/10 (manhã)",
   "truncated": {}
 }
