@@ -1,7 +1,7 @@
 {
-  "cached": 430,
+  "cached": 549,
   "collection": {
-    "entries": 8668,
+    "entries": 8945,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -18,7 +18,7 @@
       "US": 2
     },
     "carbono": {
-      "BR": 2,
+      "BR": 1,
       "US": 1
     },
     "data_center": {
@@ -27,109 +27,98 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610281040.68430147379@smtp-relay.mailin.fr>",
-    "sent_at": 1793184008.6665323,
-    "status": "enviado"
-  },
-  "generated_at": 1793183955.1923332,
+  "generated_at": 1793270771.8293848,
   "google_links_pending": 0,
-  "needs_evaluation": 427,
+  "needs_evaluation": 417,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 465,
-      "insuficiente": 368,
-      "trecho_disponivel": 24
+      "artigo_completo": 519,
+      "insuficiente": 415,
+      "trecho_disponivel": 32
     },
     "selected": {
-      "artigo_completo": 10,
+      "artigo_completo": 7,
+      "artigo_lido_pelo_modelo": 2,
       "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "ac8d05df11e436a4124ae063040ec6fd5085221f7d444bffd8635c63d6c482c2",
+  "request_sha256": "7327011880f0183af39381636ec6ed46d56703883dcd0942b5bd1cbb852767e1",
   "selected": [
     {
-      "assunto": "greenline-forum-carbono",
-      "id": "dcd3cc366d04f3787164",
-      "link": "https://jd1noticias.com/meio-ambiente/2026/10/27/greenline-leva-tecnologia-de-carbono-a-forum-em-campo-grande.html",
-      "titulo": "Greenline leva tecnologia de carbono a fórum em Campo Grande",
-      "topico": "carbono"
+      "assunto": "epe-projecao-demanda-datacenters",
+      "id": "f8cfd444171c035e1965",
+      "link": "https://megawhat.uol.com.br/planejamento/demanda-de-data-centers-deve-crescer-dez-vezes-ate-2036-preve-epe/",
+      "titulo": "Demanda de data centers deve crescer dez vezes até 2036, prevê EPE",
+      "topico": "data_center"
     },
     {
-      "assunto": "brasil-mercado-carbono-reforma-tributaria",
-      "id": "534c0fbd7bca7bc631be",
-      "link": "https://umsoplaneta.globo.com/financas/negocios/post/2026/10/o-mercado-de-carbono-na-encruzilhada-da-reforma-tributaria.ghtml",
-      "titulo": "O mercado de carbono na encruzilhada da reforma tributária",
-      "topico": "carbono"
+      "assunto": "edf-datacenters-oferta-energia",
+      "id": "0ee1b1273fd186a0e2e8",
+      "link": "https://megawhat.uol.com.br/armazenamento/edf-ve-espaco-para-data-centers-em-regioes-com-maior-oferta-de-energia/",
+      "titulo": "EDF vê espaço para data centers em regiões com maior oferta de energia",
+      "topico": "data_center"
     },
     {
-      "assunto": "eu-uk-ets-linkage",
-      "id": "08902a18fe1c29d3948f",
-      "link": "https://fastmarkets.com/insights/eu-uk-ets-linkage-allowance-supply-dynamics-shape-european-carbon-market-outlook-carbon-forward-london/",
-      "titulo": "EU-UK ETS linkage, allowance supply dynamics shape European carbon market outlook: Carbon Forward London",
-      "topico": "carbono"
+      "assunto": "cpfl-regime-conexao-datacenters",
+      "id": "82911a18199b436f78b1",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/cpfl-defende-regime-especifico-para-pedidos-de-conexao-de-data-centers/",
+      "titulo": "CPFL defende regime específico para pedidos de conexão de data centers",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "malasia-energia-renovavel-datacenters",
+      "id": "60496de0290d8f4408a1",
+      "link": "https://datacenterdynamics.com/en/news/malaysian-govt-approves-renewable-energy-requirement-for-new-data-centers/",
+      "titulo": "Malaysian gov’t approves renewable energy requirement for new data centers",
+      "topico": "data_center"
     },
     {
       "assunto": "leilao-baterias",
-      "id": "3819fec1114ff449e5b3",
-      "link": "https://agenciainfra.com/blog/aneel-aprova-editais-dos-leiloes-de-baterias-marcados-para-dezembro/",
-      "titulo": "ANEEL aprova editais dos leilões de baterias, marcados para dezembro",
+      "id": "5e1947fdef3252c87333",
+      "link": "https://megawhat.uol.com.br/armazenamento/mudanca-na-lei-antes-de-leiloes-de-baterias-exigira-novas-datas-diz-sandoval/",
+      "titulo": "Mudança na lei antes de leilões de baterias exigirá novas datas, diz Sandoval",
       "topico": "baterias"
     },
     {
       "assunto": "leilao-baterias",
-      "id": "9e576ac415bc1644a907",
-      "link": "https://megawhat.uol.com.br/armazenamento/ons-amplia-margem-para-conexao-de-baterias-em-subestacao-no-ce/",
-      "titulo": "ONS amplia margem para conexão de baterias em subestação no CE",
+      "id": "79394c77de758ba3a960",
+      "link": "https://agenciainfra.com/blog/aneel-abre-espaco-para-incluir-consumidores-no-custeio-das-baterias/",
+      "titulo": "ANEEL abre espaço para incluir consumidores no custeio das baterias",
       "topico": "baterias"
     },
     {
-      "assunto": "china-producao-baterias-exterior",
-      "id": "7c4bf633cfcd4da7ba04",
-      "link": "https://megawhat.uol.com.br/megaexpresso/china-amplia-producao-de-baterias-no-exterior-diante-de-barreiras-comerciais-edicao-do-dia/",
-      "titulo": "China amplia produção de baterias no exterior diante de barreiras comerciais – Edição do dia",
+      "assunto": "preco-armazenamento-baterias-eua",
+      "id": "47efd1f5a6632fd9b8f1",
+      "link": "https://ess-news.com/2026/10/27/us-battery-storage-prices-could-fall-up-to-30-by-2030/",
+      "titulo": "US battery storage prices could fall up to 30% by 2030",
       "topico": "baterias"
     },
     {
-      "assunto": "catl-bateria-estado-solido",
-      "id": "b769e8c663870026f826",
-      "link": "https://news.lavx.hu/article/catl-targets-2027-pilot-production-for-solid-state-batteries",
-      "titulo": "CATL targets 2027 pilot production for solid-state batteries",
+      "assunto": "svolt-bateria-semissolido",
+      "id": "724870283c395217f42a",
+      "link": "https://electrive.com/2026/10/27/svolt-launches-series-production-of-its-semi-solid-state-battery/",
+      "titulo": "SVOLT launches series production of its semi-solid-state battery",
       "topico": "baterias"
     },
     {
-      "assunto": "setor-eletrico-estrategia-atracao-datacenters",
-      "id": "91c860a852a120517049",
-      "link": "https://valor.globo.com/empresas/noticia/2026/10/27/setor-eltrico-diverge-sobre-estratgia-para-atrao-de-data-centers-no-pas.ghtml",
-      "titulo": "Setor elétrico diverge sobre estratégia para atração de data centers no país",
-      "topico": "data_center"
+      "assunto": "stf-creditos-carbono-seguradoras",
+      "id": "289ee6a04a85b7766adb",
+      "link": "https://cj.estrategia.com/portal/aquisicao-creditos-carbono-seguradoras-previdencia/",
+      "titulo": "Aquisição de créditos de carbono por seguradoras de previdência",
+      "topico": "carbono"
     },
     {
-      "assunto": "cpfl-conexao-datacenters-negada",
-      "id": "0594911bb6438a289a2c",
-      "link": "https://valor.globo.com/empresas/noticia/2026/10/27/demanda-por-data-centers-esta-vindo-mas-em-velocidade-menor-que-a-desejada-diz-ceo-da-cpfl.ghtml",
-      "titulo": "Demanda por data centers está vindo, mas em velocidade menor que a desejada, diz CEO da CPFL",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "gaispi-datacenter-soberano-eaf",
-      "id": "5944d6f0487ed9488462",
-      "link": "https://telesintese.com.br/gaispi-aprova-proposta-de-data-center-de-r-375-milhoes-para-ia/",
-      "titulo": "Gaispi aprova proposta de data center de R$ 375 milhões para IA",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "uk-ai-covenant-data-center",
-      "id": "790138fa64f7e7d8caec",
-      "link": "https://ft.com/content/336f8f7c-1a39-403d-8c68-dfca5ff1a2bb?syn-25a6b1a6=1",
-      "titulo": "UK considers forcing data centres to invest locally to meet new AI ‘covenant’",
-      "topico": "data_center"
+      "assunto": "ue-ets-crise-industria",
+      "id": "f2efcb6e68598e1f9ce4",
+      "link": "https://steelnews.biz/co2-emissions-trading-eu-lost-all-sense-proportion/",
+      "titulo": "CO2 Emissions Trading: EU Has Lost All Sense of Proportion",
+      "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 28/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 29/10 (manhã)",
   "truncated": {}
 }
