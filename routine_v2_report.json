@@ -1,7 +1,7 @@
 {
-  "cached": 549,
+  "cached": 544,
   "collection": {
-    "entries": 8945,
+    "entries": 9248,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -18,7 +18,7 @@
       "US": 2
     },
     "carbono": {
-      "BR": 1,
+      "BR": 3,
       "US": 1
     },
     "data_center": {
@@ -27,103 +27,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610291046.54203801773@smtp-relay.mailin.fr>",
-    "sent_at": 1793270816.4349666,
-    "status": "enviado"
-  },
-  "generated_at": 1793270771.8293848,
+  "generated_at": 1793355773.0447795,
   "google_links_pending": 0,
-  "needs_evaluation": 417,
+  "needs_evaluation": 489,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 519,
-      "insuficiente": 415,
-      "trecho_disponivel": 32
+      "artigo_completo": 550,
+      "insuficiente": 454,
+      "trecho_disponivel": 29
     },
     "selected": {
-      "artigo_completo": 7,
-      "artigo_lido_pelo_modelo": 2,
+      "artigo_completo": 11,
       "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "7327011880f0183af39381636ec6ed46d56703883dcd0942b5bd1cbb852767e1",
+  "request_sha256": "e00cec5c1bf0c1f014f35dc03ef378b40e54859cd0d0474077f2b2275e66e1ff",
   "selected": [
     {
-      "assunto": "epe-projecao-demanda-datacenters",
-      "id": "f8cfd444171c035e1965",
-      "link": "https://megawhat.uol.com.br/planejamento/demanda-de-data-centers-deve-crescer-dez-vezes-ate-2036-preve-epe/",
-      "titulo": "Demanda de data centers deve crescer dez vezes até 2036, prevê EPE",
+      "assunto": "redata",
+      "id": "19145542181a83278127",
+      "link": "https://migalhas.com.br/depeso/467295/redata-ja-e-lei-incentivos-para-data-centers-exigem-planejamento",
+      "titulo": "REDATA já é lei: Incentivos para data centers exigem planejamento antes da regulamentação",
       "topico": "data_center"
     },
     {
-      "assunto": "edf-datacenters-oferta-energia",
-      "id": "0ee1b1273fd186a0e2e8",
-      "link": "https://megawhat.uol.com.br/armazenamento/edf-ve-espaco-para-data-centers-em-regioes-com-maior-oferta-de-energia/",
-      "titulo": "EDF vê espaço para data centers em regiões com maior oferta de energia",
+      "assunto": "epe-demanda-datacenters",
+      "id": "1a37f0706d894a178de4",
+      "link": "https://megawhat.uol.com.br/planejamento/demanda-de-data-centers-deve-crescer-dez-vezes-ate-2026-preve-epe/",
+      "titulo": "Demanda de data centers deve crescer dez vezes até 2026, prevê EPE",
       "topico": "data_center"
     },
     {
-      "assunto": "cpfl-regime-conexao-datacenters",
-      "id": "82911a18199b436f78b1",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/cpfl-defende-regime-especifico-para-pedidos-de-conexao-de-data-centers/",
-      "titulo": "CPFL defende regime específico para pedidos de conexão de data centers",
+      "assunto": "engetron-dcd-connect-solucoes",
+      "id": "f9402fe3a3026f9b5f53",
+      "link": "https://valor.globo.com/patrocinado/pulse-brand/noticia/2026/10/29/engetron-apresenta-solucoes-para-eficiencia-energetica-e-continuidade-de-data-centers-no-dcd-connect-brasil-2026-1.ghtml",
+      "titulo": "Engetron apresenta soluções para eficiência energética e continuidade de data centers no DCD Connect Brasil 2026",
       "topico": "data_center"
     },
     {
-      "assunto": "malasia-energia-renovavel-datacenters",
-      "id": "60496de0290d8f4408a1",
-      "link": "https://datacenterdynamics.com/en/news/malaysian-govt-approves-renewable-energy-requirement-for-new-data-centers/",
-      "titulo": "Malaysian gov’t approves renewable energy requirement for new data centers",
+      "assunto": "tailandia-regras-datacenters",
+      "id": "bf70a016b398c028ac36",
+      "link": "https://reuters.com/world/asia-pacific/thailand-sets-new-rules-data-centres-applications-surge-2026-10-27/",
+      "titulo": "Thailand sets new rules for data centres as applications surge",
       "topico": "data_center"
     },
     {
-      "assunto": "leilao-baterias",
-      "id": "5e1947fdef3252c87333",
-      "link": "https://megawhat.uol.com.br/armazenamento/mudanca-na-lei-antes-de-leiloes-de-baterias-exigira-novas-datas-diz-sandoval/",
-      "titulo": "Mudança na lei antes de leilões de baterias exigirá novas datas, diz Sandoval",
+      "assunto": "pl3716-rateio-baterias",
+      "id": "425d49b54e42860ac752",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/congresso/danilo-forte-e-designado-relator-de-pl-que-muda-rateio-de-baterias/",
+      "titulo": "Danilo Forte é designado relator do PL que muda rateio das baterias",
       "topico": "baterias"
     },
     {
-      "assunto": "leilao-baterias",
-      "id": "79394c77de758ba3a960",
-      "link": "https://agenciainfra.com/blog/aneel-abre-espaco-para-incluir-consumidores-no-custeio-das-baterias/",
-      "titulo": "ANEEL abre espaço para incluir consumidores no custeio das baterias",
+      "assunto": "moura-investimento-baterias",
+      "id": "b9e96e50484a7881252f",
+      "link": "https://valor.globo.com/empresas/noticia/2026/10/30/moura-vai-produzir-grandes-baterias-de-olho-em-leilao.ghtml",
+      "titulo": "Moura vai produzir grandes baterias de olho em leilão",
       "topico": "baterias"
     },
     {
-      "assunto": "preco-armazenamento-baterias-eua",
-      "id": "47efd1f5a6632fd9b8f1",
-      "link": "https://ess-news.com/2026/10/27/us-battery-storage-prices-could-fall-up-to-30-by-2030/",
-      "titulo": "US battery storage prices could fall up to 30% by 2030",
+      "assunto": "bnef-previsao-armazenamento-eua",
+      "id": "900cc3940a467d0a32f6",
+      "link": "https://utilitydive.com/news/bnef-ups-us-energy-storage-deployment-forecast-by-30/872870/",
+      "titulo": "BNEF ups US energy storage deployment forecast by 30%",
       "topico": "baterias"
     },
     {
-      "assunto": "svolt-bateria-semissolido",
-      "id": "724870283c395217f42a",
-      "link": "https://electrive.com/2026/10/27/svolt-launches-series-production-of-its-semi-solid-state-battery/",
-      "titulo": "SVOLT launches series production of its semi-solid-state battery",
+      "assunto": "gotion-estado-solido-roadmap",
+      "id": "7cc176c11af511a819e8",
+      "link": "https://news.metal.com/en/newscontent/104186355-solid-state-batteries-are-not-yet-in-mass-production-but-gotions-flags-are-already-planted",
+      "titulo": "Solid-State Batteries Are Not Yet in Mass Production, but Gotion’s Flags Are Already Planted",
       "topico": "baterias"
     },
     {
-      "assunto": "stf-creditos-carbono-seguradoras",
-      "id": "289ee6a04a85b7766adb",
-      "link": "https://cj.estrategia.com/portal/aquisicao-creditos-carbono-seguradoras-previdencia/",
-      "titulo": "Aquisição de créditos de carbono por seguradoras de previdência",
+      "assunto": "sbce-mrv-portaria-3199",
+      "id": "7084c008072608ff65b5",
+      "link": "https://valor.globo.com/google/amp/brasil/noticia/2026/10/30/regra-exige-relato-de-emissoes-para-600-grandes-companhias.ghtml",
+      "titulo": "Regra exige relato de emissões para 600 grandes companhias",
       "topico": "carbono"
     },
     {
-      "assunto": "ue-ets-crise-industria",
-      "id": "f2efcb6e68598e1f9ce4",
-      "link": "https://steelnews.biz/co2-emissions-trading-eu-lost-all-sense-proportion/",
-      "titulo": "CO2 Emissions Trading: EU Has Lost All Sense of Proportion",
+      "assunto": "sbce-pgfn-litigios",
+      "id": "7cd4b869dce6b5f7fb60",
+      "link": "https://gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/pgfn-debate-estrategias-para-reduzir-litigios-no-mercado-regulado-de-carbono",
+      "titulo": "PGFN debate estratégias para reduzir litígios no mercado regulado de carbono — Ministério da Fazenda",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "creditos-carbono-registradora-usp",
+      "id": "2c0de1984abbcc5dfd52",
+      "link": "https://jornal.usp.br/noticias/usp-cria-registradora-de-creditos-de-carbono/",
+      "titulo": "USP cria registradora de créditos de carbono",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "filipinas-mercado-carbono-eo127",
+      "id": "ea0ad80c013f3c4c0852",
+      "link": "https://manilatimes.net/2026/10/29/tmt-anniversary/the-data-that-makes-carbon-markets-credible/2456951",
+      "titulo": "The data that makes carbon markets credible",
       "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 29/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 30/10 (manhã)",
   "truncated": {}
 }
