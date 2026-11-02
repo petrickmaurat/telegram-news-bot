@@ -1,7 +1,7 @@
 {
-  "cached": 544,
+  "cached": 3,
   "collection": {
-    "entries": 9248,
+    "entries": 8119,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,116 +27,112 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202610301023.83663731265@smtp-relay.mailin.fr>",
-    "sent_at": 1793355822.5462074,
-    "status": "enviado"
-  },
-  "generated_at": 1793355773.0447795,
+  "generated_at": 1793614650.0941484,
   "google_links_pending": 0,
-  "needs_evaluation": 489,
+  "needs_evaluation": 464,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 550,
-      "insuficiente": 454,
-      "trecho_disponivel": 29
+      "artigo_completo": 209,
+      "insuficiente": 246,
+      "trecho_disponivel": 12
     },
     "selected": {
-      "artigo_completo": 11,
-      "trecho_limitado_final": 1
+      "artigo_completo": 9,
+      "artigo_lido_pelo_modelo": 1,
+      "trecho_limitado_final": 2
     }
   },
-  "request_sha256": "e00cec5c1bf0c1f014f35dc03ef378b40e54859cd0d0474077f2b2275e66e1ff",
+  "request_sha256": "34aca824df03a2fcef0db22d90621c596a5a099990d2026db09c5ca0b12a1bf5",
   "selected": [
     {
-      "assunto": "redata",
-      "id": "19145542181a83278127",
-      "link": "https://migalhas.com.br/depeso/467295/redata-ja-e-lei-incentivos-para-data-centers-exigem-planejamento",
-      "titulo": "REDATA já é lei: Incentivos para data centers exigem planejamento antes da regulamentação",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "epe-demanda-datacenters",
-      "id": "1a37f0706d894a178de4",
-      "link": "https://megawhat.uol.com.br/planejamento/demanda-de-data-centers-deve-crescer-dez-vezes-ate-2026-preve-epe/",
-      "titulo": "Demanda de data centers deve crescer dez vezes até 2026, prevê EPE",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "engetron-dcd-connect-solucoes",
-      "id": "f9402fe3a3026f9b5f53",
-      "link": "https://valor.globo.com/patrocinado/pulse-brand/noticia/2026/10/29/engetron-apresenta-solucoes-para-eficiencia-energetica-e-continuidade-de-data-centers-no-dcd-connect-brasil-2026-1.ghtml",
-      "titulo": "Engetron apresenta soluções para eficiência energética e continuidade de data centers no DCD Connect Brasil 2026",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "tailandia-regras-datacenters",
-      "id": "bf70a016b398c028ac36",
-      "link": "https://reuters.com/world/asia-pacific/thailand-sets-new-rules-data-centres-applications-surge-2026-10-27/",
-      "titulo": "Thailand sets new rules for data centres as applications surge",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "pl3716-rateio-baterias",
-      "id": "425d49b54e42860ac752",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/congresso/danilo-forte-e-designado-relator-de-pl-que-muda-rateio-de-baterias/",
-      "titulo": "Danilo Forte é designado relator do PL que muda rateio das baterias",
+      "assunto": "bahia-usina-solar-bess",
+      "id": "a67a2612b984daf7aa88",
+      "link": "https://canalsolar.com.br/bahia-usina-solar-bess-producao-frutas/",
+      "titulo": "Bahia inaugura usina solar com BESS de quase R$ 25 milhões para produção de frutas",
       "topico": "baterias"
     },
     {
-      "assunto": "moura-investimento-baterias",
-      "id": "b9e96e50484a7881252f",
-      "link": "https://valor.globo.com/empresas/noticia/2026/10/30/moura-vai-produzir-grandes-baterias-de-olho-em-leilao.ghtml",
-      "titulo": "Moura vai produzir grandes baterias de olho em leilão",
+      "assunto": "rn-parques-baterias",
+      "id": "5a2d86408cb7c646aef4",
+      "link": "https://movimentoeconomico.com.br/economia/energia/2026/10/31/armazenamento-de-energia-avanca-no-rn-com-nove-projetos-de-parques-de-baterias/",
+      "titulo": "Armazenamento de energia avança no RN com nove projetos de parques de baterias",
       "topico": "baterias"
     },
     {
-      "assunto": "bnef-previsao-armazenamento-eua",
-      "id": "900cc3940a467d0a32f6",
-      "link": "https://utilitydive.com/news/bnef-ups-us-energy-storage-deployment-forecast-by-30/872870/",
-      "titulo": "BNEF ups US energy storage deployment forecast by 30%",
+      "assunto": "catl-estado-solido",
+      "id": "454f201f2ae2fc75b61b",
+      "link": "https://ad-hoc-news.de/boerse/news/unternehmensnachrichten/catl-lays-out-solid-state-timetable-as-australian-storage-launch-and-hungary-court-win-broaden-its/70442411",
+      "titulo": "CATL Lays Out Solid-State Timetable as Australian Storage Launch and Hungary Court Win Broaden Its B",
       "topico": "baterias"
     },
     {
-      "assunto": "gotion-estado-solido-roadmap",
-      "id": "7cc176c11af511a819e8",
-      "link": "https://news.metal.com/en/newscontent/104186355-solid-state-batteries-are-not-yet-in-mass-production-but-gotions-flags-are-already-planted",
-      "titulo": "Solid-State Batteries Are Not Yet in Mass Production, but Gotion’s Flags Are Already Planted",
+      "assunto": "china-sodio-ion-fiscal",
+      "id": "8e0f6fd5d4547b865b39",
+      "link": "https://interestingengineering.com/transportation/china-hina-sodium-ion-battery-expansion",
+      "titulo": "China backs sodium-ion battery expansion with tax exemption through 2028",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-mrv-portaria-3199",
-      "id": "7084c008072608ff65b5",
-      "link": "https://valor.globo.com/google/amp/brasil/noticia/2026/10/30/regra-exige-relato-de-emissoes-para-600-grandes-companhias.ghtml",
-      "titulo": "Regra exige relato de emissões para 600 grandes companhias",
+      "assunto": "sbce-cronograma-mrv",
+      "id": "71f18bd3f045b81a0f60",
+      "link": "https://eixos.com.br/newsletters/dialogos-da-transicao/fazenda-define-calendario-do-mercado-de-carbono-aviacao-tera-regras-proprias/",
+      "titulo": "Fazenda define calendário do mercado de carbono; aviação terá regras próprias",
       "topico": "carbono"
     },
     {
-      "assunto": "sbce-pgfn-litigios",
-      "id": "7cd4b869dce6b5f7fb60",
-      "link": "https://gov.br/fazenda/pt-br/assuntos/noticias/2026/outubro/pgfn-debate-estrategias-para-reduzir-litigios-no-mercado-regulado-de-carbono",
-      "titulo": "PGFN debate estratégias para reduzir litígios no mercado regulado de carbono — Ministério da Fazenda",
+      "assunto": "cbam-sbce-dupla-oneracao",
+      "id": "f6deaea57e16ad3e5441",
+      "link": "https://mistobrasil.com/2026/10/31/cbam-e-o-sbce-o-risco-da-dupla-oneracao-sobre-a-industria/",
+      "titulo": "CBAM e o SBCE: o risco da dupla oneração sobre a indústria",
       "topico": "carbono"
     },
     {
-      "assunto": "creditos-carbono-registradora-usp",
-      "id": "2c0de1984abbcc5dfd52",
-      "link": "https://jornal.usp.br/noticias/usp-cria-registradora-de-creditos-de-carbono/",
-      "titulo": "USP cria registradora de créditos de carbono",
+      "assunto": "restauracao-produtiva-creditos-carbono",
+      "id": "a0f86b4c6742bc56362f",
+      "link": "https://oglobo.globo.com/patrocinado/dino/noticia/2026/10/30/restauracao-produtiva-remunera-o-produtor-antes-do-carbono-1.ghtml",
+      "titulo": "Restauração produtiva remunera o produtor antes do carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "filipinas-mercado-carbono-eo127",
-      "id": "ea0ad80c013f3c4c0852",
-      "link": "https://manilatimes.net/2026/10/29/tmt-anniversary/the-data-that-makes-carbon-markets-credible/2456951",
-      "titulo": "The data that makes carbon markets credible",
+      "assunto": "argentina-lei-mercado-carbono",
+      "id": "866516dbd6e2c31ce58b",
+      "link": "https://carbonherald.com/argentinas-senate-backs-carbon-market-bill-in-60-2-vote-opening-door-to-billions-in-potential-exports/",
+      "titulo": "Argentina's Senate Backs Carbon Market Bill In 60-2 Vote, Opening Door To Billions In Potential Exports",
       "topico": "carbono"
+    },
+    {
+      "assunto": "redata-eficiencia-hidrica-energia-renovavel",
+      "id": "7625707d2ec7d597e527",
+      "link": "https://cenarioenergia.com.br/2026/10/30/data-centers-redata-eficiencia-energetica-hidrica-energia-renovavel/",
+      "titulo": "Data centers terão de comprovar eficiência hídrica e contratar energia de fontes renováveis ou de baixa emissão",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "dc-flexibilidade-rede-eletrica",
+      "id": "de4632e632f46ca17210",
+      "link": "https://exame.com/esg/flexibilidade-data-center-rede-eletrica/",
+      "titulo": "Quanto vale a flexibilidade de um data center para a rede elétrica?",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "investimento-data-center-parana",
+      "id": "1b8f17cf7fd8a13d7956",
+      "link": "https://exame.com/negocios/grupo-do-parana-investe-r-50-milhoes-em-data-centers-para-alcancar-primeiro-bilhao/",
+      "titulo": "Grupo do Paraná investe R$ 50 milhões em data centers para alcançar primeiro bilhão",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "australia-dc-regulador-atraso",
+      "id": "65c9245831234a1a1214",
+      "link": "https://reuters.com/world/australian-outback-data-centre-pulls-timeline-after-regulator-stalls-2026-11-01/",
+      "titulo": "EXCLUSIVE: Australian outback data centre pulls timeline after regulator stalls",
+      "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 30/10 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 02/11 (manhã)",
   "truncated": {}
 }
