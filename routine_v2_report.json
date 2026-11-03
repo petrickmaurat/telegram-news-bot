@@ -1,7 +1,7 @@
 {
-  "cached": 3,
+  "cached": 193,
   "collection": {
-    "entries": 8119,
+    "entries": 8316,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,117 +27,112 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611021018.63076379900@smtp-relay.mailin.fr>",
-    "sent_at": 1793614704.1010594,
-    "status": "enviado"
-  },
-  "generated_at": 1793614650.0941484,
+  "generated_at": 1793701228.6860971,
   "google_links_pending": 0,
-  "needs_evaluation": 464,
+  "needs_evaluation": 424,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 209,
-      "insuficiente": 246,
-      "trecho_disponivel": 12
+      "artigo_completo": 326,
+      "insuficiente": 270,
+      "trecho_disponivel": 21
     },
     "selected": {
-      "artigo_completo": 9,
+      "artigo_completo": 7,
       "artigo_lido_pelo_modelo": 1,
-      "trecho_limitado_final": 2
+      "trecho_limitado_final": 4
     }
   },
-  "request_sha256": "34aca824df03a2fcef0db22d90621c596a5a099990d2026db09c5ca0b12a1bf5",
+  "request_sha256": "1063d2e6c0b5684cfc3fe61d3076bcb4504280569a51b3557d61c262f5924ea3",
   "selected": [
     {
-      "assunto": "bahia-usina-solar-bess",
-      "id": "a67a2612b984daf7aa88",
-      "link": "https://canalsolar.com.br/bahia-usina-solar-bess-producao-frutas/",
-      "titulo": "Bahia inaugura usina solar com BESS de quase R$ 25 milhões para produção de frutas",
+      "assunto": "leilao-baterias",
+      "id": "79710120e0437b2d4f5b",
+      "link": "https://canalsolar.com.br/leilao-baterias-chegando-mercado-consumidor-ja-mudou/",
+      "titulo": "O leilão de baterias está chegando; o mercado de baterias no consumidor já chegou",
       "topico": "baterias"
     },
     {
-      "assunto": "rn-parques-baterias",
-      "id": "5a2d86408cb7c646aef4",
-      "link": "https://movimentoeconomico.com.br/economia/energia/2026/10/31/armazenamento-de-energia-avanca-no-rn-com-nove-projetos-de-parques-de-baterias/",
-      "titulo": "Armazenamento de energia avança no RN com nove projetos de parques de baterias",
+      "assunto": "fabrica-baterias-china-brasil",
+      "id": "d0fc62f702fd03beb532",
+      "link": "https://c-level.folha.uol.com.br/economia-sustentavel/2026/11/chinesa-envision-energy-estuda-fabrica-no-brasil-para-baterias-e-turbinas-eolicas.shtml",
+      "titulo": "Chinesa Envision Energy estuda fábrica no Brasil para baterias e turbinas eólicas - 02/11/2026 - Economia sustentável",
       "topico": "baterias"
     },
     {
-      "assunto": "catl-estado-solido",
-      "id": "454f201f2ae2fc75b61b",
-      "link": "https://ad-hoc-news.de/boerse/news/unternehmensnachrichten/catl-lays-out-solid-state-timetable-as-australian-storage-launch-and-hungary-court-win-broaden-its/70442411",
-      "titulo": "CATL Lays Out Solid-State Timetable as Australian Storage Launch and Hungary Court Win Broaden Its B",
+      "assunto": "baterias-estado-solido",
+      "id": "2744763a070a181e0ba0",
+      "link": "https://autoweek.com/news/auto-shows/a74314196/factorial-can-finally-make-solid-state-batteries-real/",
+      "titulo": "Factorial Thinks It Can Finally Make Solid-State Batteries Real",
       "topico": "baterias"
     },
     {
-      "assunto": "china-sodio-ion-fiscal",
-      "id": "8e0f6fd5d4547b865b39",
-      "link": "https://interestingengineering.com/transportation/china-hina-sodium-ion-battery-expansion",
-      "titulo": "China backs sodium-ion battery expansion with tax exemption through 2028",
+      "assunto": "precos-litio-mercado",
+      "id": "6a66b900585ca62086c6",
+      "link": "https://bloomberg.com/news/articles/2026-11-02/citi-cuts-lithium-forecasts-on-worsening-battery-demand-outlook",
+      "titulo": "Citi Cuts Lithium Forecasts on Worsening Battery Demand Outlook",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-cronograma-mrv",
-      "id": "71f18bd3f045b81a0f60",
-      "link": "https://eixos.com.br/newsletters/dialogos-da-transicao/fazenda-define-calendario-do-mercado-de-carbono-aviacao-tera-regras-proprias/",
-      "titulo": "Fazenda define calendário do mercado de carbono; aviação terá regras próprias",
+      "assunto": "sbce-regras-aviacao",
+      "id": "a815ac29c7f868aa57f4",
+      "link": "https://poder360.com.br/poder-economia/mercado-de-carbono-brasileiro-tera-regras-proprias-para-aviacao/",
+      "titulo": "Mercado de carbono brasileiro terá regras próprias para aviação",
       "topico": "carbono"
     },
     {
-      "assunto": "cbam-sbce-dupla-oneracao",
-      "id": "f6deaea57e16ad3e5441",
-      "link": "https://mistobrasil.com/2026/10/31/cbam-e-o-sbce-o-risco-da-dupla-oneracao-sobre-a-industria/",
-      "titulo": "CBAM e o SBCE: o risco da dupla oneração sobre a indústria",
+      "assunto": "sbce-adesao-industria-quimica",
+      "id": "c4b2ea21a4297283ac0d",
+      "link": "https://brasil247.com/industria/industria-quimica-antecipa-entrada-no-mercado-regulado-de-carbono-do-brasil/",
+      "titulo": "Indústria química antecipa entrada no mercado regulado de carbono do Brasil",
       "topico": "carbono"
     },
     {
-      "assunto": "restauracao-produtiva-creditos-carbono",
-      "id": "a0f86b4c6742bc56362f",
-      "link": "https://oglobo.globo.com/patrocinado/dino/noticia/2026/10/30/restauracao-produtiva-remunera-o-produtor-antes-do-carbono-1.ghtml",
-      "titulo": "Restauração produtiva remunera o produtor antes do carbono",
+      "assunto": "creditos-carbono-terra-indigena",
+      "id": "0ec9429fa47cf511e101",
+      "link": "https://radaramazonico.com.br/mpf-pede-suspensao-de-projeto-de-creditos-de-carbono-que-ocupa-areas-indigenas-no-amazonas/",
+      "titulo": "MPF pede suspensão de projeto de créditos de carbono que ocupa áreas indígenas no Amazonas",
       "topico": "carbono"
     },
     {
-      "assunto": "argentina-lei-mercado-carbono",
-      "id": "866516dbd6e2c31ce58b",
-      "link": "https://carbonherald.com/argentinas-senate-backs-carbon-market-bill-in-60-2-vote-opening-door-to-billions-in-potential-exports/",
-      "titulo": "Argentina's Senate Backs Carbon Market Bill In 60-2 Vote, Opening Door To Billions In Potential Exports",
+      "assunto": "artigo6-mercado-carbono-internacional",
+      "id": "bbf7e4a7e755a722b6ed",
+      "link": "https://carbonmarketwatch.org/2026/11/02/missing-the-mark-the-current-state-of-article-6-2-carbon-trades/",
+      "titulo": "Missing the mark: the current state of Article 6.2 carbon trades",
       "topico": "carbono"
     },
     {
-      "assunto": "redata-eficiencia-hidrica-energia-renovavel",
-      "id": "7625707d2ec7d597e527",
-      "link": "https://cenarioenergia.com.br/2026/10/30/data-centers-redata-eficiencia-energetica-hidrica-energia-renovavel/",
-      "titulo": "Data centers terão de comprovar eficiência hídrica e contratar energia de fontes renováveis ou de baixa emissão",
+      "assunto": "brasil-beneficiario-rejeicao-dc-eua",
+      "id": "b1650cad1c87e9c3e671",
+      "link": "https://estadao.com.br/economia/brasil-valvula-escape-rejeicao-eua-data-centers/",
+      "titulo": "Por que o Brasil pode ser a válvula de escape à rejeição dos EUA a projetos de data centers",
       "topico": "data_center"
     },
     {
-      "assunto": "dc-flexibilidade-rede-eletrica",
-      "id": "de4632e632f46ca17210",
-      "link": "https://exame.com/esg/flexibilidade-data-center-rede-eletrica/",
-      "titulo": "Quanto vale a flexibilidade de um data center para a rede elétrica?",
+      "assunto": "custo-construcao-datacenter-brasil",
+      "id": "9ce422d48a8d09854218",
+      "link": "https://exame.com/mercado-imobiliario/construir-data-center-em-sp-sai-22-mais-barato-que-no-vale-do-silicio/",
+      "titulo": "Construir data center em SP sai 22% mais barato que no Vale do Silício",
       "topico": "data_center"
     },
     {
-      "assunto": "investimento-data-center-parana",
-      "id": "1b8f17cf7fd8a13d7956",
-      "link": "https://exame.com/negocios/grupo-do-parana-investe-r-50-milhoes-em-data-centers-para-alcancar-primeiro-bilhao/",
-      "titulo": "Grupo do Paraná investe R$ 50 milhões em data centers para alcançar primeiro bilhão",
+      "assunto": "investimento-datacenters-brasil-2050",
+      "id": "ebfb3303fe6041627d7d",
+      "link": "https://tvsimbrasil.com.br/brasil/tecnologia/noticia/2026/11/03/brasil-pode-atrair-60-bi-anuais-data-centers",
+      "titulo": "Brasil pode atrair US$ 60 bi por ano em data centers até 2050",
       "topico": "data_center"
     },
     {
-      "assunto": "australia-dc-regulador-atraso",
-      "id": "65c9245831234a1a1214",
-      "link": "https://reuters.com/world/australian-outback-data-centre-pulls-timeline-after-regulator-stalls-2026-11-01/",
-      "titulo": "EXCLUSIVE: Australian outback data centre pulls timeline after regulator stalls",
+      "assunto": "eua-moratorias-eleicoes-data-centers",
+      "id": "3da9971f9073f36b8881",
+      "link": "https://bloomberg.com/news/articles/2026-11-02/data-center-restrictions-make-the-ballot-in-dozens-of-us-cities",
+      "titulo": "Data Center Restrictions Make the Ballot in Dozens of US Cities",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 02/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 03/11 (manhã)",
   "truncated": {}
 }
