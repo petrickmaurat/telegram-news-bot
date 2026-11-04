@@ -1,7 +1,7 @@
 {
-  "cached": 193,
+  "cached": 405,
   "collection": {
-    "entries": 8316,
+    "entries": 8978,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,117 +27,110 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611031021.43370115879@smtp-relay.mailin.fr>",
-    "sent_at": 1793701276.1224887,
-    "status": "enviado"
-  },
-  "generated_at": 1793701228.6860971,
+  "generated_at": 1793791432.701288,
   "google_links_pending": 0,
-  "needs_evaluation": 424,
+  "needs_evaluation": 462,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 326,
-      "insuficiente": 270,
-      "trecho_disponivel": 21
+      "artigo_completo": 472,
+      "insuficiente": 367,
+      "trecho_disponivel": 28
     },
     "selected": {
-      "artigo_completo": 7,
-      "artigo_lido_pelo_modelo": 1,
-      "trecho_limitado_final": 4
+      "artigo_completo": 12
     }
   },
-  "request_sha256": "1063d2e6c0b5684cfc3fe61d3076bcb4504280569a51b3557d61c262f5924ea3",
+  "request_sha256": "4c524241222146bb51609e1b7bde922e53da208403eb85733bf43927d97df8ca",
   "selected": [
     {
       "assunto": "leilao-baterias",
-      "id": "79710120e0437b2d4f5b",
-      "link": "https://canalsolar.com.br/leilao-baterias-chegando-mercado-consumidor-ja-mudou/",
-      "titulo": "O leilão de baterias está chegando; o mercado de baterias no consumidor já chegou",
+      "id": "62dff982d5c98168d84b",
+      "link": "https://agenciainfra.com/blog/tag/associacao-brasileira-de-solucoes-de-armazenamento-de-energia/",
+      "titulo": "Arquivos Associação Brasileira de Soluções de Armazenamento de Energia",
       "topico": "baterias"
     },
     {
-      "assunto": "fabrica-baterias-china-brasil",
-      "id": "d0fc62f702fd03beb532",
-      "link": "https://c-level.folha.uol.com.br/economia-sustentavel/2026/11/chinesa-envision-energy-estuda-fabrica-no-brasil-para-baterias-e-turbinas-eolicas.shtml",
-      "titulo": "Chinesa Envision Energy estuda fábrica no Brasil para baterias e turbinas eólicas - 02/11/2026 - Economia sustentável",
+      "assunto": "mercado-solar-baterias",
+      "id": "e65dd08b0a2bf04f93d1",
+      "link": "https://megawhat.uol.com.br/geracao/mercado-solar-muda-de-perfil-com-avanco-de-baterias-e-carros-eletricos/",
+      "titulo": "Mercado solar muda de perfil com avanço de baterias e carros elétricos",
       "topico": "baterias"
     },
     {
-      "assunto": "baterias-estado-solido",
-      "id": "2744763a070a181e0ba0",
-      "link": "https://autoweek.com/news/auto-shows/a74314196/factorial-can-finally-make-solid-state-batteries-real/",
-      "titulo": "Factorial Thinks It Can Finally Make Solid-State Batteries Real",
+      "assunto": "custo-armazenamento-pjm",
+      "id": "2b1feb62f82f0cb99840",
+      "link": "https://utilitydive.com/news/exelon-energy-storage-new-jersey-earnings/873423/",
+      "titulo": "Exelon eyes $8B in energy storage, in part to address PJM supply crunch",
       "topico": "baterias"
     },
     {
-      "assunto": "precos-litio-mercado",
-      "id": "6a66b900585ca62086c6",
-      "link": "https://bloomberg.com/news/articles/2026-11-02/citi-cuts-lithium-forecasts-on-worsening-battery-demand-outlook",
-      "titulo": "Citi Cuts Lithium Forecasts on Worsening Battery Demand Outlook",
+      "assunto": "tecnologia-troca-bateria",
+      "id": "4fa80a92ca778a391191",
+      "link": "https://autotechinsight.spglobal.com/news/5291328/dongfeng-motor-and-catl-deepen-partnership-on-charging-and-battery-swapping",
+      "titulo": "Dongfeng Motor and CATL deepen partnership on charging and battery swapping",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-regras-aviacao",
-      "id": "a815ac29c7f868aa57f4",
-      "link": "https://poder360.com.br/poder-economia/mercado-de-carbono-brasileiro-tera-regras-proprias-para-aviacao/",
-      "titulo": "Mercado de carbono brasileiro terá regras próprias para aviação",
+      "assunto": "sbce-cronograma-mrv",
+      "id": "a0058ab5fdaa9148184e",
+      "link": "https://umsoplaneta.globo.com/google/amp/financas/negocios/noticia/2026/11/03/mercado-regulado-de-carbono-mineracao-e-vidro-entram-antes-refino-fica-para-2029.ghtml",
+      "titulo": "Mercado regulado de carbono: mineração e vidro entram antes; refino fica para 2029",
       "topico": "carbono"
     },
     {
-      "assunto": "sbce-adesao-industria-quimica",
-      "id": "c4b2ea21a4297283ac0d",
-      "link": "https://brasil247.com/industria/industria-quimica-antecipa-entrada-no-mercado-regulado-de-carbono-do-brasil/",
-      "titulo": "Indústria química antecipa entrada no mercado regulado de carbono do Brasil",
+      "assunto": "creditos-carbono-voluntario",
+      "id": "a769b59646f11ac3a828",
+      "link": "https://valor.globo.com/empresas/esg/noticia/2026/11/04/blablacar-estreia-no-brasil-modelo-para-vender-creditos-de-carbono-gerados-por-caronas.ghtml",
+      "titulo": "BlaBlaCar estreia no Brasil modelo para vender créditos de carbono gerados por caronas",
       "topico": "carbono"
     },
     {
-      "assunto": "creditos-carbono-terra-indigena",
-      "id": "0ec9429fa47cf511e101",
-      "link": "https://radaramazonico.com.br/mpf-pede-suspensao-de-projeto-de-creditos-de-carbono-que-ocupa-areas-indigenas-no-amazonas/",
-      "titulo": "MPF pede suspensão de projeto de créditos de carbono que ocupa áreas indígenas no Amazonas",
+      "assunto": "sbce-competitividade-ey",
+      "id": "51f20d24678ada3d8844",
+      "link": "https://timesbrasil.com.br/brasil/mercado-de-carbono-vai-redefinir-competitividade-das-empresas-brasileiras-diz-erica-perin-socia-da-ey-brasil/",
+      "titulo": "Mercado de carbono vai redefinir competitividade das empresas brasileiras, diz Érica Perin, sócia da EY Brasil",
       "topico": "carbono"
     },
     {
-      "assunto": "artigo6-mercado-carbono-internacional",
-      "id": "bbf7e4a7e755a722b6ed",
-      "link": "https://carbonmarketwatch.org/2026/11/02/missing-the-mark-the-current-state-of-article-6-2-carbon-trades/",
-      "titulo": "Missing the mark: the current state of Article 6.2 carbon trades",
+      "assunto": "india-mercado-carbono",
+      "id": "b7ae7a81884eabf99190",
+      "link": "https://tradingview.com/news/moodys:677f4012f3b42:0-from-carbon-compliance-to-carbon-commerce-india-s-market-enters-a-new-phase/",
+      "titulo": "From Carbon Compliance To Carbon Commerce: India’s Market Enters A New Phase",
       "topico": "carbono"
     },
     {
-      "assunto": "brasil-beneficiario-rejeicao-dc-eua",
-      "id": "b1650cad1c87e9c3e671",
-      "link": "https://estadao.com.br/economia/brasil-valvula-escape-rejeicao-eua-data-centers/",
-      "titulo": "Por que o Brasil pode ser a válvula de escape à rejeição dos EUA a projetos de data centers",
+      "assunto": "redata-regulamentacao",
+      "id": "18e39ec39c1dcdd328b4",
+      "link": "https://braziljournal.com/por-que-a-euforia-com-os-data-centers-ja-corre-risco",
+      "titulo": "Por que a euforia com os data centers já corre risco",
       "topico": "data_center"
     },
     {
-      "assunto": "custo-construcao-datacenter-brasil",
-      "id": "9ce422d48a8d09854218",
-      "link": "https://exame.com/mercado-imobiliario/construir-data-center-em-sp-sai-22-mais-barato-que-no-vale-do-silicio/",
-      "titulo": "Construir data center em SP sai 22% mais barato que no Vale do Silício",
+      "assunto": "forum-energia-disponibilidade",
+      "id": "38305330e1ece3c804b5",
+      "link": "https://valor.globo.com/empresas/noticia/2026/11/03/especialistas-destacam-importancia-de-elevar-disponibilidade-de-energia-com-foco-em-novos-data-centers.ghtml",
+      "titulo": "Especialistas destacam importância de elevar disponibilidade de energia com foco em novos data centers",
       "topico": "data_center"
     },
     {
-      "assunto": "investimento-datacenters-brasil-2050",
-      "id": "ebfb3303fe6041627d7d",
-      "link": "https://tvsimbrasil.com.br/brasil/tecnologia/noticia/2026/11/03/brasil-pode-atrair-60-bi-anuais-data-centers",
-      "titulo": "Brasil pode atrair US$ 60 bi por ano em data centers até 2050",
+      "assunto": "investimento-fundo-datacenters",
+      "id": "966c08b121757afe80e9",
+      "link": "https://valor.globo.com/financas/noticia/2026/11/03/emet-e-breal-captam-r-120-mi-no-exterior-para-fundo-de-data-centers-no-brasil.ghtml",
+      "titulo": "Emet e B.Real captam R$ 120 mi no exterior para fundo de data centers no Brasil",
       "topico": "data_center"
     },
     {
-      "assunto": "eua-moratorias-eleicoes-data-centers",
-      "id": "3da9971f9073f36b8881",
-      "link": "https://bloomberg.com/news/articles/2026-11-02/data-center-restrictions-make-the-ballot-in-dozens-of-us-cities",
-      "titulo": "Data Center Restrictions Make the Ballot in Dozens of US Cities",
+      "assunto": "eleicoes-moratorias-datacenters",
+      "id": "aed74d2c0d14476724a0",
+      "link": "https://fortune.com/2026/11/04/ohio-data-center-ballot-measures-midterm-elections/",
+      "titulo": "Ohio already has 125 local data center moratoriums. Early results from its 21 ballot measures on AI infrastructure have determined there will be more",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 03/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 04/11 (manhã)",
   "truncated": {}
 }
