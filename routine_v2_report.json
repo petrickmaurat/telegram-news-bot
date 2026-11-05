@@ -1,7 +1,7 @@
 {
-  "cached": 405,
+  "cached": 566,
   "collection": {
-    "entries": 8978,
+    "entries": 8078,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,115 +27,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611041124.83242649723@smtp-relay.mailin.fr>",
-    "sent_at": 1793791485.037796,
-    "status": "enviado"
-  },
-  "generated_at": 1793791432.701288,
+  "generated_at": 1793874245.37558,
   "google_links_pending": 0,
-  "needs_evaluation": 462,
+  "needs_evaluation": 438,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 472,
-      "insuficiente": 367,
-      "trecho_disponivel": 28
+      "artigo_completo": 538,
+      "insuficiente": 420,
+      "trecho_disponivel": 46
     },
     "selected": {
-      "artigo_completo": 12
+      "artigo_completo": 11,
+      "artigo_lido_pelo_modelo": 1
     }
   },
-  "request_sha256": "4c524241222146bb51609e1b7bde922e53da208403eb85733bf43927d97df8ca",
+  "request_sha256": "71469322f5ff22117be36d6152b1db4ed364fa1d3f37d3805b4338b9c7859cc3",
   "selected": [
     {
-      "assunto": "leilao-baterias",
-      "id": "62dff982d5c98168d84b",
-      "link": "https://agenciainfra.com/blog/tag/associacao-brasileira-de-solucoes-de-armazenamento-de-energia/",
-      "titulo": "Arquivos Associação Brasileira de Soluções de Armazenamento de Energia",
+      "assunto": "leilao-baterias-lrcap",
+      "id": "36ce4b06e3efaf17e495",
+      "link": "https://valor.globo.com/patrocinado/dino/noticia/2026/11/04/leiloes-de-baterias-impulsionam-energia-no-brasil-1.ghtml",
+      "titulo": "Leilões de baterias impulsionam energia no Brasil",
       "topico": "baterias"
     },
     {
-      "assunto": "mercado-solar-baterias",
-      "id": "e65dd08b0a2bf04f93d1",
-      "link": "https://megawhat.uol.com.br/geracao/mercado-solar-muda-de-perfil-com-avanco-de-baterias-e-carros-eletricos/",
-      "titulo": "Mercado solar muda de perfil com avanço de baterias e carros elétricos",
+      "assunto": "leilao-baterias-2026-criticas-advogada",
+      "id": "6c15bee5f9af1497dd63",
+      "link": "https://eixos.com.br/eventos/realizar-o-leilao-de-baterias-em-2026-e-uma-irresponsabilidade-regulatoria-diz-advogada/",
+      "titulo": "Realizar o leilão de baterias em 2026 é uma 'irresponsabilidade regulatória', diz advogada",
       "topico": "baterias"
     },
     {
-      "assunto": "custo-armazenamento-pjm",
-      "id": "2b1feb62f82f0cb99840",
-      "link": "https://utilitydive.com/news/exelon-energy-storage-new-jersey-earnings/873423/",
-      "titulo": "Exelon eyes $8B in energy storage, in part to address PJM supply crunch",
+      "assunto": "bateria-estado-solido-avanco-tecnico",
+      "id": "12efa7e062309504310d",
+      "link": "https://interestingengineering.com/energy/sundow-solid-state-ev-batteries-survive-400f",
+      "titulo": "Solid-state battery survives 400°F heat, exceeds 1,200 cycles, targets 600-mile range",
       "topico": "baterias"
     },
     {
-      "assunto": "tecnologia-troca-bateria",
-      "id": "4fa80a92ca778a391191",
-      "link": "https://autotechinsight.spglobal.com/news/5291328/dongfeng-motor-and-catl-deepen-partnership-on-charging-and-battery-swapping",
-      "titulo": "Dongfeng Motor and CATL deepen partnership on charging and battery swapping",
+      "assunto": "eua-manufatura-baterias-politica-industrial",
+      "id": "c580197f748e0c3565f4",
+      "link": "https://utilitydive.com/news/can-battman-secure-the-us-battery-manufacturing-supply-chain/873599/",
+      "titulo": "Can ‘BattMan’ secure the US battery manufacturing supply chain?",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-cronograma-mrv",
-      "id": "a0058ab5fdaa9148184e",
-      "link": "https://umsoplaneta.globo.com/google/amp/financas/negocios/noticia/2026/11/03/mercado-regulado-de-carbono-mineracao-e-vidro-entram-antes-refino-fica-para-2029.ghtml",
-      "titulo": "Mercado regulado de carbono: mineração e vidro entram antes; refino fica para 2029",
+      "assunto": "sbce-cronograma-setorial-celulose",
+      "id": "644a0096117cffaab6b7",
+      "link": "https://portalcelulose.com.br/papel-e-celulose-entram-na-primeira-fase-do-mercado-regulado-de-carbono-no-brasil/",
+      "titulo": "Papel e celulose entram na primeira fase do mercado regulado de carbono no Brasil",
       "topico": "carbono"
     },
     {
-      "assunto": "creditos-carbono-voluntario",
-      "id": "a769b59646f11ac3a828",
-      "link": "https://valor.globo.com/empresas/esg/noticia/2026/11/04/blablacar-estreia-no-brasil-modelo-para-vender-creditos-de-carbono-gerados-por-caronas.ghtml",
-      "titulo": "BlaBlaCar estreia no Brasil modelo para vender créditos de carbono gerados por caronas",
+      "assunto": "sbce-diplomacia-ndc-partnership",
+      "id": "db9f6dd0f1ff264c1ff4",
+      "link": "https://gov.br/fazenda/pt-br/assuntos/noticias/2026/novembro/ministerio-da-fazenda-destaca-mercado-regulado-de-carbono-em-reuniao-da-ndc-partnership",
+      "titulo": "Ministério da Fazenda destaca mercado regulado de carbono em reunião da NDC Partnership",
       "topico": "carbono"
     },
     {
-      "assunto": "sbce-competitividade-ey",
-      "id": "51f20d24678ada3d8844",
-      "link": "https://timesbrasil.com.br/brasil/mercado-de-carbono-vai-redefinir-competitividade-das-empresas-brasileiras-diz-erica-perin-socia-da-ey-brasil/",
-      "titulo": "Mercado de carbono vai redefinir competitividade das empresas brasileiras, diz Érica Perin, sócia da EY Brasil",
+      "assunto": "creditos-carbono-estrategia-estadual-mt",
+      "id": "3ea07bd7e3bee69ef795",
+      "link": "https://rdnews.com.br/cidades/do-desmatamento-evitado-a-certificacao-a-estrategia-de-mt-para-monetizar-creditos-de-carbono/251610",
+      "titulo": "Do desmatamento evitado à certificação: a estratégia de MT para monetizar créditos de carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "india-mercado-carbono",
-      "id": "b7ae7a81884eabf99190",
-      "link": "https://tradingview.com/news/moodys:677f4012f3b42:0-from-carbon-compliance-to-carbon-commerce-india-s-market-enters-a-new-phase/",
-      "titulo": "From Carbon Compliance To Carbon Commerce: India’s Market Enters A New Phase",
+      "assunto": "taiwan-cbam-ets",
+      "id": "cb27299ea95d7dea8d61",
+      "link": "https://indexbox.io/blog/taiwan-to-develop-domestic-cbam-and-emissions-trading-system/",
+      "titulo": "Taiwan Plans Domestic CBAM, ETS to Boost Net-Zero Competitiveness - News and Statistics",
       "topico": "carbono"
     },
     {
-      "assunto": "redata-regulamentacao",
-      "id": "18e39ec39c1dcdd328b4",
-      "link": "https://braziljournal.com/por-que-a-euforia-com-os-data-centers-ja-corre-risco",
-      "titulo": "Por que a euforia com os data centers já corre risco",
+      "assunto": "redata",
+      "id": "a8b39937ff8272abd306",
+      "link": "https://jc.uol.com.br/colunas/jc-negocios/2026/10/27/incentivos-fiscais-e-transicao-energetica-impulsionam-data-centers-no-brasil.html",
+      "titulo": "Incentivos fiscais e transição energética impulsionam data centers no Brasil",
       "topico": "data_center"
     },
     {
-      "assunto": "forum-energia-disponibilidade",
-      "id": "38305330e1ece3c804b5",
-      "link": "https://valor.globo.com/empresas/noticia/2026/11/03/especialistas-destacam-importancia-de-elevar-disponibilidade-de-energia-com-foco-em-novos-data-centers.ghtml",
-      "titulo": "Especialistas destacam importância de elevar disponibilidade de energia com foco em novos data centers",
+      "assunto": "anatel-gaispi-datacenter",
+      "id": "02bf33f9e318bc2e3a73",
+      "link": "https://mobiletime.com.br/noticias/04/11/2026/gaipsi-data-center-ia-tv/",
+      "titulo": "Anatel aprova destinação de R$ 1,7 bi para data center de IA e kits de TV 3.0",
       "topico": "data_center"
     },
     {
-      "assunto": "investimento-fundo-datacenters",
-      "id": "966c08b121757afe80e9",
-      "link": "https://valor.globo.com/financas/noticia/2026/11/03/emet-e-breal-captam-r-120-mi-no-exterior-para-fundo-de-data-centers-no-brasil.ghtml",
-      "titulo": "Emet e B.Real captam R$ 120 mi no exterior para fundo de data centers no Brasil",
+      "assunto": "mppe-audiencia-pernambuco",
+      "id": "8e688e91ded99c79b68f",
+      "link": "https://portal.mppe.mp.br/group/guest/w/mppe-convoca-audi%C3%AAncia-p%C3%BAblica-sobre-a-potencial-instala%C3%A7%C3%A3o-de-data-centers-em-pernambuco",
+      "titulo": "MPPE convoca audiência pública sobre a potencial instalação de Data Centers em Pernambuco",
       "topico": "data_center"
     },
     {
-      "assunto": "eleicoes-moratorias-datacenters",
-      "id": "aed74d2c0d14476724a0",
-      "link": "https://fortune.com/2026/11/04/ohio-data-center-ballot-measures-midterm-elections/",
-      "titulo": "Ohio already has 125 local data center moratoriums. Early results from its 21 ballot measures on AI infrastructure have determined there will be more",
+      "assunto": "eleicoes-eua-regulacao-datacenters-congresso",
+      "id": "32d9161e73c4fb048f29",
+      "link": "https://valor.globo.com/empresas/noticia/2026/11/04/vitria-democrata-deve-elevar-fiscalizao-e-volatilidade-no-mercado-de-ia-e-data-centers.ghtml",
+      "titulo": "Vitória democrata deve elevar fiscalização e volatilidade no mercado de IA e data centers",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 04/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 05/11 (manhã)",
   "truncated": {}
 }
