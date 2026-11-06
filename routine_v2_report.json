@@ -1,7 +1,7 @@
 {
-  "cached": 566,
+  "cached": 611,
   "collection": {
-    "entries": 8078,
+    "entries": 8210,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,116 +27,110 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611051024.96616265781@smtp-relay.mailin.fr>",
-    "sent_at": 1793874296.8961003,
-    "status": "enviado"
-  },
-  "generated_at": 1793874245.37558,
+  "generated_at": 1793960908.4305062,
   "google_links_pending": 0,
-  "needs_evaluation": 438,
+  "needs_evaluation": 450,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 538,
-      "insuficiente": 420,
-      "trecho_disponivel": 46
+      "artigo_completo": 516,
+      "insuficiente": 484,
+      "trecho_disponivel": 61
     },
     "selected": {
-      "artigo_completo": 11,
-      "artigo_lido_pelo_modelo": 1
+      "artigo_completo": 12
     }
   },
-  "request_sha256": "71469322f5ff22117be36d6152b1db4ed364fa1d3f37d3805b4338b9c7859cc3",
+  "request_sha256": "5e4f31176142642b75dc462a90c1b31d0128dd7a7d3eb21f7a434d08952b4886",
   "selected": [
     {
-      "assunto": "leilao-baterias-lrcap",
-      "id": "36ce4b06e3efaf17e495",
-      "link": "https://valor.globo.com/patrocinado/dino/noticia/2026/11/04/leiloes-de-baterias-impulsionam-energia-no-brasil-1.ghtml",
-      "titulo": "Leilões de baterias impulsionam energia no Brasil",
+      "assunto": "leilao-baterias",
+      "id": "695902066c6a15e82008",
+      "link": "https://eixos.com.br/eventos/edital-do-leilao-de-baterias-permite-absorver-mudancas-no-rateio-dos-custos-diz-diretora-da-aneel/",
+      "titulo": "Edital do leilão de baterias permite absorver mudanças no rateio dos custos, diz diretora da Aneel",
       "topico": "baterias"
     },
     {
-      "assunto": "leilao-baterias-2026-criticas-advogada",
-      "id": "6c15bee5f9af1497dd63",
-      "link": "https://eixos.com.br/eventos/realizar-o-leilao-de-baterias-em-2026-e-uma-irresponsabilidade-regulatoria-diz-advogada/",
-      "titulo": "Realizar o leilão de baterias em 2026 é uma 'irresponsabilidade regulatória', diz advogada",
+      "assunto": "leilao-baterias",
+      "id": "791487e747abf5aa282c",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/resultados/regras-do-lrcap-de-baterias-para-transmissoras-nao-fazem-sentido-diz-isa-energia/",
+      "titulo": "Regras do LRCap de baterias para transmissoras ‘não fazem sentido’, diz ISA Energia",
       "topico": "baterias"
     },
     {
-      "assunto": "bateria-estado-solido-avanco-tecnico",
-      "id": "12efa7e062309504310d",
-      "link": "https://interestingengineering.com/energy/sundow-solid-state-ev-batteries-survive-400f",
-      "titulo": "Solid-state battery survives 400°F heat, exceeds 1,200 cycles, targets 600-mile range",
+      "assunto": "catl-bateria-estado-solido-20ah",
+      "id": "47a767dcb552c40bdf6b",
+      "link": "https://batteriesnews.com/catl-advances-20-ah-solid-state-battery-cells-ahead-of-2027-trial-production/",
+      "titulo": "CATL advances 20 Ah solid-state battery cells ahead of 2027 trial production",
       "topico": "baterias"
     },
     {
-      "assunto": "eua-manufatura-baterias-politica-industrial",
-      "id": "c580197f748e0c3565f4",
-      "link": "https://utilitydive.com/news/can-battman-secure-the-us-battery-manufacturing-supply-chain/873599/",
-      "titulo": "Can ‘BattMan’ secure the US battery manufacturing supply chain?",
+      "assunto": "financiamento-materiais-catodo-eua",
+      "id": "d6c0e6deb429100458dd",
+      "link": "https://markets.ft.com/data/announce/detail?dockey=600-202611051052PR_NEWS_EURO_ND__EN90132-1",
+      "titulo": "6K Receives Conditional Commitment for $250 Million Loan from the U.S. Department of War to Support Domestic Cathode Active Material Expansion – Company Announcement - FT.com",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-cronograma-setorial-celulose",
-      "id": "644a0096117cffaab6b7",
-      "link": "https://portalcelulose.com.br/papel-e-celulose-entram-na-primeira-fase-do-mercado-regulado-de-carbono-no-brasil/",
-      "titulo": "Papel e celulose entram na primeira fase do mercado regulado de carbono no Brasil",
+      "assunto": "sbce-cronograma-mrv-portaria",
+      "id": "45106272b9687cb4d382",
+      "link": "https://c-level.folha.uol.com.br/economia-sustentavel/2026/11/governo-define-setores-que-deverao-relatar-emissoes-de-gases-estufa-para-o-mercado-de-carbono.shtml",
+      "titulo": "Governo define setores que deverão relatar emissões de gases-estufa para o mercado de carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "sbce-diplomacia-ndc-partnership",
-      "id": "db9f6dd0f1ff264c1ff4",
-      "link": "https://gov.br/fazenda/pt-br/assuntos/noticias/2026/novembro/ministerio-da-fazenda-destaca-mercado-regulado-de-carbono-em-reuniao-da-ndc-partnership",
-      "titulo": "Ministério da Fazenda destaca mercado regulado de carbono em reunião da NDC Partnership",
+      "assunto": "mt-estatal-creditos-carbono-pivetta",
+      "id": "a72955e28f2b90d78e67",
+      "link": "https://estadaomatogrosso.com.br/politica/pivetta-quer-criar-empresa-de-r-2-milhoes-para-vender-creditos-de-carbono-e-atrair-investidores/149369",
+      "titulo": "Pivetta quer criar empresa de R$ 2 milhões para vender créditos de carbono e atrair investidores",
       "topico": "carbono"
     },
     {
-      "assunto": "creditos-carbono-estrategia-estadual-mt",
-      "id": "3ea07bd7e3bee69ef795",
-      "link": "https://rdnews.com.br/cidades/do-desmatamento-evitado-a-certificacao-a-estrategia-de-mt-para-monetizar-creditos-de-carbono/251610",
-      "titulo": "Do desmatamento evitado à certificação: a estratégia de MT para monetizar créditos de carbono",
+      "assunto": "creditos-carbono-indigena-mejurua",
+      "id": "7ea9042c97ad3efd6889",
+      "link": "https://segundoasegundo.com.br/2026/11/mpf-pede-suspensao-de-projeto/",
+      "titulo": "MPF aciona empresas na Justiça e pede suspensão de projeto de carbono em terras indígenas no AM",
       "topico": "carbono"
     },
     {
-      "assunto": "taiwan-cbam-ets",
-      "id": "cb27299ea95d7dea8d61",
-      "link": "https://indexbox.io/blog/taiwan-to-develop-domestic-cbam-and-emissions-trading-system/",
-      "titulo": "Taiwan Plans Domestic CBAM, ETS to Boost Net-Zero Competitiveness - News and Statistics",
+      "assunto": "ue-cbam-precos-carbono-reforma",
+      "id": "91bb93527bfeaf326b94",
+      "link": "https://abnamro.com/research/en/our-research/carbon-market-watch-carbon-prices-climb-as-policy-reforms-take-shape",
+      "titulo": "Carbon Market Watch - Carbon prices climb as policy reforms take shape",
       "topico": "carbono"
     },
     {
-      "assunto": "redata",
-      "id": "a8b39937ff8272abd306",
-      "link": "https://jc.uol.com.br/colunas/jc-negocios/2026/10/27/incentivos-fiscais-e-transicao-energetica-impulsionam-data-centers-no-brasil.html",
-      "titulo": "Incentivos fiscais e transição energética impulsionam data centers no Brasil",
+      "assunto": "ons-restricao-energia-sp-sul",
+      "id": "881f37819437c98f94bd",
+      "link": "https://cnnbrasil.com.br/infra/data-centers-em-sp-podem-limitar-envio-de-energia-ao-sul-aponta-ons/",
+      "titulo": "Data centers em SP podem limitar envio de energia ao Sul, aponta ONS",
       "topico": "data_center"
     },
     {
-      "assunto": "anatel-gaispi-datacenter",
-      "id": "02bf33f9e318bc2e3a73",
-      "link": "https://mobiletime.com.br/noticias/04/11/2026/gaipsi-data-center-ia-tv/",
-      "titulo": "Anatel aprova destinação de R$ 1,7 bi para data center de IA e kits de TV 3.0",
+      "assunto": "brasil-oportunidade-investimento-datacenters-restricoes-eua",
+      "id": "129aae39f71b4206cb91",
+      "link": "https://pipelinevalor.globo.com/negocios/noticia/restricoes-a-data-centers-nos-eua-podem-atrair-us-500-bi-ao-brasil.ghtml",
+      "titulo": "Restrições a data centers nos EUA podem atrair US$ 500 bi ao Brasil",
       "topico": "data_center"
     },
     {
-      "assunto": "mppe-audiencia-pernambuco",
-      "id": "8e688e91ded99c79b68f",
-      "link": "https://portal.mppe.mp.br/group/guest/w/mppe-convoca-audi%C3%AAncia-p%C3%BAblica-sobre-a-potencial-instala%C3%A7%C3%A3o-de-data-centers-em-pernambuco",
-      "titulo": "MPPE convoca audiência pública sobre a potencial instalação de Data Centers em Pernambuco",
+      "assunto": "aracruz-data-center-negociacao",
+      "id": "cae0216de98aec0af17c",
+      "link": "https://tribunaonline.com.br/economia/industria-da-inteligencia-artificial-negocia-instalacao-de-data-centers-no-es-334233",
+      "titulo": "Indústria da inteligência artificial negocia instalação de data centers no ES",
       "topico": "data_center"
     },
     {
-      "assunto": "eleicoes-eua-regulacao-datacenters-congresso",
-      "id": "32d9161e73c4fb048f29",
-      "link": "https://valor.globo.com/empresas/noticia/2026/11/04/vitria-democrata-deve-elevar-fiscalizao-e-volatilidade-no-mercado-de-ia-e-data-centers.ghtml",
-      "titulo": "Vitória democrata deve elevar fiscalização e volatilidade no mercado de IA e data centers",
+      "assunto": "texas-hinojosa-governadora-moratoria-datacenters",
+      "id": "ddec28116a7e84756315",
+      "link": "https://epocanegocios.globo.com/inteligencia-artificial/noticia/2026/11/vitoria-de-governadora-democrata-no-texas-ameaca-frear-megaprojetos-de-data-centers-de-ia-no-estado.ghtml",
+      "titulo": "Eleição de Gina Hinojosa como governadora do Texas ameaça frear megaprojetos de data centers de IA no estado",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 05/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 06/11 (manhã)",
   "truncated": {}
 }
