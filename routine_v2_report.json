@@ -1,7 +1,7 @@
 {
-  "cached": 611,
+  "cached": 2,
   "collection": {
-    "entries": 8210,
+    "entries": 7519,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,115 +27,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611061029.86046769208@smtp-relay.mailin.fr>",
-    "sent_at": 1793960962.5446353,
-    "status": "enviado"
-  },
-  "generated_at": 1793960908.4305062,
+  "generated_at": 1794219835.7472458,
   "google_links_pending": 0,
-  "needs_evaluation": 450,
+  "needs_evaluation": 527,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 516,
-      "insuficiente": 484,
-      "trecho_disponivel": 61
+      "artigo_completo": 272,
+      "insuficiente": 250,
+      "trecho_disponivel": 7
     },
     "selected": {
-      "artigo_completo": 12
+      "artigo_completo": 10,
+      "trecho_limitado_final": 2
     }
   },
-  "request_sha256": "5e4f31176142642b75dc462a90c1b31d0128dd7a7d3eb21f7a434d08952b4886",
+  "request_sha256": "3891e838b898e5d4fae8847b8c7a785e321fcbf785e1ccf75becc64d90ba0fe7",
   "selected": [
     {
-      "assunto": "leilao-baterias",
-      "id": "695902066c6a15e82008",
-      "link": "https://eixos.com.br/eventos/edital-do-leilao-de-baterias-permite-absorver-mudancas-no-rateio-dos-custos-diz-diretora-da-aneel/",
-      "titulo": "Edital do leilão de baterias permite absorver mudanças no rateio dos custos, diz diretora da Aneel",
+      "assunto": "leilao-baterias-moura-catl",
+      "id": "63e5f7b7547f550dae64",
+      "link": "https://valor.globo.com/patrocinado/dino/noticia/2026/11/06/moura-se-prepara-para-fornecer-bess-para-vencedoras-do-lrcap-1.ghtml",
+      "titulo": "Moura se prepara para fornecer BESS para vencedoras do LRCAP",
       "topico": "baterias"
     },
     {
-      "assunto": "leilao-baterias",
-      "id": "791487e747abf5aa282c",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/resultados/regras-do-lrcap-de-baterias-para-transmissoras-nao-fazem-sentido-diz-isa-energia/",
-      "titulo": "Regras do LRCap de baterias para transmissoras ‘não fazem sentido’, diz ISA Energia",
+      "assunto": "mercado-armazenamento-cresce",
+      "id": "287f0cdc222f9c1e60a9",
+      "link": "https://megawhat.uol.com.br/armazenamento/mercado-brasileiro-de-baterias-deve-crescer-50-em-2026-aponta-greener/",
+      "titulo": "Mercado brasileiro de baterias deve crescer 50% em 2026, aponta Greener",
       "topico": "baterias"
     },
     {
-      "assunto": "catl-bateria-estado-solido-20ah",
-      "id": "47a767dcb552c40bdf6b",
-      "link": "https://batteriesnews.com/catl-advances-20-ah-solid-state-battery-cells-ahead-of-2027-trial-production/",
-      "titulo": "CATL advances 20 Ah solid-state battery cells ahead of 2027 trial production",
+      "assunto": "sodio-ion-precos",
+      "id": "9d0c78052879b436e756",
+      "link": "https://news.metal.com/en/newscontent/HQLU6VCQNM6ES2ZIP35CGCWTJBZLQFYMDRZYJRI-smm-analysis-oct-sodium-ion-battery-materials-review-volume-up-prices-weak-delivery-capacity-divides-firms",
+      "titulo": "[SMM Analysis] Oct Sodium-ion Battery Materials Review: Volume Up, Prices Weak; Delivery Capacity Divides Firms",
       "topico": "baterias"
     },
     {
-      "assunto": "financiamento-materiais-catodo-eua",
-      "id": "d6c0e6deb429100458dd",
-      "link": "https://markets.ft.com/data/announce/detail?dockey=600-202611051052PR_NEWS_EURO_ND__EN90132-1",
-      "titulo": "6K Receives Conditional Commitment for $250 Million Loan from the U.S. Department of War to Support Domestic Cathode Active Material Expansion – Company Announcement - FT.com",
+      "assunto": "ldes-tecnologia-custos",
+      "id": "1e7a16a553f9082d9b38",
+      "link": "https://greentechlead.com/renewable-energy/long-duration-energy-storage-investment-2026-iron-air-flow-batteries-and-thermal-storage-costs-projects-and-returns-56396",
+      "titulo": "Long-Duration Energy Storage Investment 2026: Iron-Air, Flow Batteries and Thermal Storage Costs, Projects and Returns",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-cronograma-mrv-portaria",
-      "id": "45106272b9687cb4d382",
-      "link": "https://c-level.folha.uol.com.br/economia-sustentavel/2026/11/governo-define-setores-que-deverao-relatar-emissoes-de-gases-estufa-para-o-mercado-de-carbono.shtml",
-      "titulo": "Governo define setores que deverão relatar emissões de gases-estufa para o mercado de carbono",
+      "assunto": "sbce",
+      "id": "fa05ed2a53c346ccfc9d",
+      "link": "https://infomoney.com.br/brasil/governo-define-limites-para-transferencia-internacional-de-creditos-de-carbono/",
+      "titulo": "Governo define limites para transferência internacional de créditos de carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "mt-estatal-creditos-carbono-pivetta",
-      "id": "a72955e28f2b90d78e67",
-      "link": "https://estadaomatogrosso.com.br/politica/pivetta-quer-criar-empresa-de-r-2-milhoes-para-vender-creditos-de-carbono-e-atrair-investidores/149369",
-      "titulo": "Pivetta quer criar empresa de R$ 2 milhões para vender créditos de carbono e atrair investidores",
+      "assunto": "sbn-contratos-carbono",
+      "id": "854ca005eba7abf250fc",
+      "link": "https://brasilinovador.com.br/nature-investment-lab-abre-consulta-publica-para-padronizar-contratos-de-creditos-de-carbono-em-solucoes-baseadas-na-natureza/",
+      "titulo": "Nature Investment Lab abre consulta pública para padronizar contratos de créditos de carbono em soluções baseadas na natureza",
       "topico": "carbono"
     },
     {
-      "assunto": "creditos-carbono-indigena-mejurua",
-      "id": "7ea9042c97ad3efd6889",
-      "link": "https://segundoasegundo.com.br/2026/11/mpf-pede-suspensao-de-projeto/",
-      "titulo": "MPF aciona empresas na Justiça e pede suspensão de projeto de carbono em terras indígenas no AM",
+      "assunto": "reciclarbono-cnmp",
+      "id": "1b89480db7ea9ccf2ea9",
+      "link": "https://acritica.net/meio-ambiente/reciclarbono-mpms-catadores-creditos-carbono-finalista-premio-cnmp/",
+      "titulo": "Projeto Reciclarbono, que transforma reciclagem em créditos de carbono, é finalista do Prêmio CNMP 2026",
       "topico": "carbono"
     },
     {
-      "assunto": "ue-cbam-precos-carbono-reforma",
-      "id": "91bb93527bfeaf326b94",
-      "link": "https://abnamro.com/research/en/our-research/carbon-market-watch-carbon-prices-climb-as-policy-reforms-take-shape",
-      "titulo": "Carbon Market Watch - Carbon prices climb as policy reforms take shape",
+      "assunto": "eu-uk-ets-linkage",
+      "id": "91bc8f96438e94ab8f4b",
+      "link": "https://bloomberg.com/news/articles/2026-11-08/eu-close-to-deal-to-link-uk-carbon-market-after-brexit-split",
+      "titulo": "EU Close to Deal to Link UK Carbon Market After Brexit Split",
       "topico": "carbono"
     },
     {
-      "assunto": "ons-restricao-energia-sp-sul",
-      "id": "881f37819437c98f94bd",
-      "link": "https://cnnbrasil.com.br/infra/data-centers-em-sp-podem-limitar-envio-de-energia-ao-sul-aponta-ons/",
-      "titulo": "Data centers em SP podem limitar envio de energia ao Sul, aponta ONS",
+      "assunto": "redata",
+      "id": "e40095559de546e9bd6e",
+      "link": "https://megawhat.uol.com.br/politica-energetica/governo-preve-anunciar-regulamentacao-do-redata-apos-a-cop31/",
+      "titulo": "Governo prevê anunciar regulamentação do Redata após a COP31",
       "topico": "data_center"
     },
     {
-      "assunto": "brasil-oportunidade-investimento-datacenters-restricoes-eua",
-      "id": "129aae39f71b4206cb91",
-      "link": "https://pipelinevalor.globo.com/negocios/noticia/restricoes-a-data-centers-nos-eua-podem-atrair-us-500-bi-ao-brasil.ghtml",
-      "titulo": "Restrições a data centers nos EUA podem atrair US$ 500 bi ao Brasil",
+      "assunto": "dc-mercado-divida",
+      "id": "33e3027e5342c41a6be1",
+      "link": "https://valor.globo.com/financas/noticia/2026/11/06/data-centers-devem-ganhar-espao-no-mercado-de-dvida-avalia-abc-brasil.ghtml",
+      "titulo": "Data centers devem ganhar espaço no mercado de dívida, avalia ABC Brasil",
       "topico": "data_center"
     },
     {
-      "assunto": "aracruz-data-center-negociacao",
-      "id": "cae0216de98aec0af17c",
-      "link": "https://tribunaonline.com.br/economia/industria-da-inteligencia-artificial-negocia-instalacao-de-data-centers-no-es-334233",
-      "titulo": "Indústria da inteligência artificial negocia instalação de data centers no ES",
+      "assunto": "governo-rede-prisma",
+      "id": "88f0190d1d1bcd7074a6",
+      "link": "https://uol.com.br/tilt/colunas/helton-simoes-gomes/2026/11/06/governo-lula-aprova-r-463-mi-para-rede-nacional-de-data-center.htm",
+      "titulo": "Helton Simões Gomes: Governo Lula aprova R$ 46,3 mi para rede nacional de data center",
       "topico": "data_center"
     },
     {
-      "assunto": "texas-hinojosa-governadora-moratoria-datacenters",
-      "id": "ddec28116a7e84756315",
-      "link": "https://epocanegocios.globo.com/inteligencia-artificial/noticia/2026/11/vitoria-de-governadora-democrata-no-texas-ameaca-frear-megaprojetos-de-data-centers-de-ia-no-estado.ghtml",
-      "titulo": "Eleição de Gina Hinojosa como governadora do Texas ameaça frear megaprojetos de data centers de IA no estado",
+      "assunto": "noruega-restricao-energia",
+      "id": "937e7433412d522c1b5d",
+      "link": "https://reuters.com/business/energy/norways-statnett-pauses-new-grid-capacity-data-centres-protect-power-system-2026-11-09/",
+      "titulo": "Norway’s Statnett pauses new grid capacity for data centres to protect power system",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 06/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 09/11 (manhã)",
   "truncated": {}
 }
