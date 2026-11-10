@@ -1,7 +1,7 @@
 {
-  "cached": 2,
+  "cached": 213,
   "collection": {
-    "entries": 7519,
+    "entries": 7477,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,116 +27,112 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611091024.88343724405@smtp-relay.mailin.fr>",
-    "sent_at": 1794219890.7475483,
-    "status": "enviado"
-  },
-  "generated_at": 1794219835.7472458,
+  "generated_at": 1794306924.0232599,
   "google_links_pending": 0,
-  "needs_evaluation": 527,
+  "needs_evaluation": 455,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 272,
-      "insuficiente": 250,
-      "trecho_disponivel": 7
+      "artigo_completo": 346,
+      "insuficiente": 294,
+      "trecho_disponivel": 28
     },
     "selected": {
       "artigo_completo": 10,
-      "trecho_limitado_final": 2
+      "artigo_lido_pelo_modelo": 1,
+      "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "3891e838b898e5d4fae8847b8c7a785e321fcbf785e1ccf75becc64d90ba0fe7",
+  "request_sha256": "43cabc6bebdc08db4d061cb0a3660f0c290025098c0c595945855c9df1b6675b",
   "selected": [
     {
-      "assunto": "leilao-baterias-moura-catl",
-      "id": "63e5f7b7547f550dae64",
-      "link": "https://valor.globo.com/patrocinado/dino/noticia/2026/11/06/moura-se-prepara-para-fornecer-bess-para-vencedoras-do-lrcap-1.ghtml",
-      "titulo": "Moura se prepara para fornecer BESS para vencedoras do LRCAP",
+      "assunto": "leilao-baterias-resultado",
+      "id": "54f84d57865e3bf8cd4f",
+      "link": "https://valor.globo.com/publicacoes/especiais/revista-infraestrutura-e-logistica/noticia/2026/11/10/leilao-de-baterias-atrai-mais-de-6-mil-projetos-e-movimenta-setor-eletrico.ghtml",
+      "titulo": "Leilão de baterias atrai mais de 6 mil projetos e movimenta setor elétrico",
       "topico": "baterias"
     },
     {
-      "assunto": "mercado-armazenamento-cresce",
-      "id": "287f0cdc222f9c1e60a9",
-      "link": "https://megawhat.uol.com.br/armazenamento/mercado-brasileiro-de-baterias-deve-crescer-50-em-2026-aponta-greener/",
-      "titulo": "Mercado brasileiro de baterias deve crescer 50% em 2026, aponta Greener",
+      "assunto": "pl3716-rateio-custos",
+      "id": "55ff5a40a55cf02a782b",
+      "link": "https://megawhat.uol.com.br/armazenamento/associacoes-acionam-governo-por-aprovacao-de-pl-que-muda-rateio-de-custos-de-baterias/",
+      "titulo": "Associações acionam governo por aprovação de PL que muda rateio de custos de baterias",
       "topico": "baterias"
     },
     {
-      "assunto": "sodio-ion-precos",
-      "id": "9d0c78052879b436e756",
-      "link": "https://news.metal.com/en/newscontent/HQLU6VCQNM6ES2ZIP35CGCWTJBZLQFYMDRZYJRI-smm-analysis-oct-sodium-ion-battery-materials-review-volume-up-prices-weak-delivery-capacity-divides-firms",
-      "titulo": "[SMM Analysis] Oct Sodium-ion Battery Materials Review: Volume Up, Prices Weak; Delivery Capacity Divides Firms",
+      "assunto": "maxell-estado-solido-industrial",
+      "id": "7b8ef3dde5bd66e59488",
+      "link": "https://batteriesnews.com/maxell-begins-mass-production-of-all-solid-state-battery-backup-modules-for-industrial-equipment/",
+      "titulo": "Maxell Begins Mass Production of All-Solid-State Battery Backup Modules for Industrial Equipment",
       "topico": "baterias"
     },
     {
-      "assunto": "ldes-tecnologia-custos",
-      "id": "1e7a16a553f9082d9b38",
-      "link": "https://greentechlead.com/renewable-energy/long-duration-energy-storage-investment-2026-iron-air-flow-batteries-and-thermal-storage-costs-projects-and-returns-56396",
-      "titulo": "Long-Duration Energy Storage Investment 2026: Iron-Air, Flow Batteries and Thermal Storage Costs, Projects and Returns",
+      "assunto": "grafite-pegada-carbono-baterias",
+      "id": "a0c3dce408be2c985e64",
+      "link": "https://eixos.com.br/transicao-energetica/quando-o-grafite-entra-na-conta-das-baterias/",
+      "titulo": "Quando o grafite entra na conta das baterias",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce",
-      "id": "fa05ed2a53c346ccfc9d",
-      "link": "https://infomoney.com.br/brasil/governo-define-limites-para-transferencia-internacional-de-creditos-de-carbono/",
-      "titulo": "Governo define limites para transferência internacional de créditos de carbono",
+      "assunto": "sbce-portaria-mrv",
+      "id": "e75037df7f2e79f1b006",
+      "link": "https://mayerbrown.com/pt/insights/publications/2026/11/semc-publishes-ordinance-defining-the-implementation-stages-of-the-mrv-obligations-and-sectoral-coverage-of-the-sbce",
+      "titulo": "SEMC publica Portaria que define as etapas de implementação das obrigações de MRV e a cobertura setorial do SBCE",
       "topico": "carbono"
     },
     {
-      "assunto": "sbn-contratos-carbono",
-      "id": "854ca005eba7abf250fc",
-      "link": "https://brasilinovador.com.br/nature-investment-lab-abre-consulta-publica-para-padronizar-contratos-de-creditos-de-carbono-em-solucoes-baseadas-na-natureza/",
-      "titulo": "Nature Investment Lab abre consulta pública para padronizar contratos de créditos de carbono em soluções baseadas na natureza",
+      "assunto": "noruega-pagamento-desmatamento",
+      "id": "3bc8d31eeb2b6d3489f9",
+      "link": "https://carbon-pulse.com/569118/?site=cpp",
+      "titulo": "Norway to pay Brazil $64 mln for reducing deforestation rate in the Amazon",
       "topico": "carbono"
     },
     {
-      "assunto": "reciclarbono-cnmp",
-      "id": "1b89480db7ea9ccf2ea9",
-      "link": "https://acritica.net/meio-ambiente/reciclarbono-mpms-catadores-creditos-carbono-finalista-premio-cnmp/",
-      "titulo": "Projeto Reciclarbono, que transforma reciclagem em créditos de carbono, é finalista do Prêmio CNMP 2026",
+      "assunto": "mpms-reciclagem-creditos",
+      "id": "fa2674b313ac6b4ca680",
+      "link": "https://oestadoonline.com.br/cidades/mpms-leva-projeto-de-reciclagem-e-creditos-de-carbono-a-cop31/",
+      "titulo": "MPMS leva projeto de reciclagem e créditos de carbono à COP31",
       "topico": "carbono"
     },
     {
-      "assunto": "eu-uk-ets-linkage",
-      "id": "91bc8f96438e94ab8f4b",
-      "link": "https://bloomberg.com/news/articles/2026-11-08/eu-close-to-deal-to-link-uk-carbon-market-after-brexit-split",
-      "titulo": "EU Close to Deal to Link UK Carbon Market After Brexit Split",
+      "assunto": "eu-comissao-relatorio-emissoes",
+      "id": "d7409f95e3d650b02be9",
+      "link": "https://ieu-monitoring.com/editorial/eu-commission-reports-1-6-emissions-decline-cautions-on-slower-progress-towards-2030/1254393",
+      "titulo": "EU Commission reports 1.6% emissions decline, cautions on slower progress towards 2030",
       "topico": "carbono"
     },
     {
       "assunto": "redata",
-      "id": "e40095559de546e9bd6e",
-      "link": "https://megawhat.uol.com.br/politica-energetica/governo-preve-anunciar-regulamentacao-do-redata-apos-a-cop31/",
-      "titulo": "Governo prevê anunciar regulamentação do Redata após a COP31",
+      "id": "cc263ee7aa6e386e75d1",
+      "link": "https://agenciainfra.com/blog/negociacoes-do-redata-avancam-e-decreto-deve-sair-ate-fim-do-mes/",
+      "titulo": "Negociações do Redata avançam e decreto deve sair até fim do mês",
       "topico": "data_center"
     },
     {
-      "assunto": "dc-mercado-divida",
-      "id": "33e3027e5342c41a6be1",
-      "link": "https://valor.globo.com/financas/noticia/2026/11/06/data-centers-devem-ganhar-espao-no-mercado-de-dvida-avalia-abc-brasil.ghtml",
-      "titulo": "Data centers devem ganhar espaço no mercado de dívida, avalia ABC Brasil",
+      "assunto": "odata-aquisicao-dc-sp",
+      "id": "0f71d6b7c5b2a8263abf",
+      "link": "https://megawhat.uol.com.br/destaques-do-diario/odata-negocia-compra-de-projeto-de-data-center-em-sp/",
+      "titulo": "Odata negocia compra de projeto de data center em SP",
       "topico": "data_center"
     },
     {
-      "assunto": "governo-rede-prisma",
-      "id": "88f0190d1d1bcd7074a6",
-      "link": "https://uol.com.br/tilt/colunas/helton-simoes-gomes/2026/11/06/governo-lula-aprova-r-463-mi-para-rede-nacional-de-data-center.htm",
-      "titulo": "Helton Simões Gomes: Governo Lula aprova R$ 46,3 mi para rede nacional de data center",
+      "assunto": "interesse-investimento-brasil-dc",
+      "id": "140248e9519b61143273",
+      "link": "https://www1.folha.uol.com.br/podcasts/2026/11/podcast-discute-interesse-no-brasil-para-projetos-de-data-center-e-analisa-impactos.shtml",
+      "titulo": "Podcast discute interesse no Brasil para projetos de data center e analisa impactos",
       "topico": "data_center"
     },
     {
-      "assunto": "noruega-restricao-energia",
-      "id": "937e7433412d522c1b5d",
-      "link": "https://reuters.com/business/energy/norways-statnett-pauses-new-grid-capacity-data-centres-protect-power-system-2026-11-09/",
-      "titulo": "Norway’s Statnett pauses new grid capacity for data centres to protect power system",
+      "assunto": "congresso-bill-dc-custo-energia",
+      "id": "2a667b7e7b9c3c59475b",
+      "link": "https://wvtm13.com/article/trump-data-center-bill-pay-more-electricity-costs/74380398",
+      "titulo": "Trump '100%' backs bill to make data centers pay more, potentially lowering electricity costs",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 09/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 10/11 (manhã)",
   "truncated": {}
 }
