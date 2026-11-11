@@ -1,7 +1,7 @@
 {
-  "cached": 213,
+  "cached": 460,
   "collection": {
-    "entries": 7477,
+    "entries": 7855,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,117 +27,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611101036.20538613005@smtp-relay.mailin.fr>",
-    "sent_at": 1794306975.6705968,
-    "status": "enviado"
-  },
-  "generated_at": 1794306924.0232599,
+  "generated_at": 1794392839.0341144,
   "google_links_pending": 0,
-  "needs_evaluation": 455,
+  "needs_evaluation": 429,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 346,
-      "insuficiente": 294,
-      "trecho_disponivel": 28
+      "artigo_completo": 488,
+      "insuficiente": 370,
+      "trecho_disponivel": 31
     },
     "selected": {
-      "artigo_completo": 10,
-      "artigo_lido_pelo_modelo": 1,
-      "trecho_limitado_final": 1
+      "artigo_completo": 9,
+      "trecho_limitado_final": 3
     }
   },
-  "request_sha256": "43cabc6bebdc08db4d061cb0a3660f0c290025098c0c595945855c9df1b6675b",
+  "request_sha256": "36208c629bca2e4c124717b5a51f1e9896f2c7910ec42eb8084e4a959610a34d",
   "selected": [
     {
-      "assunto": "leilao-baterias-resultado",
-      "id": "54f84d57865e3bf8cd4f",
-      "link": "https://valor.globo.com/publicacoes/especiais/revista-infraestrutura-e-logistica/noticia/2026/11/10/leilao-de-baterias-atrai-mais-de-6-mil-projetos-e-movimenta-setor-eletrico.ghtml",
-      "titulo": "Leilão de baterias atrai mais de 6 mil projetos e movimenta setor elétrico",
+      "assunto": "pl-3716-baterias",
+      "id": "1a4fe7aa3744bcc1176d",
+      "link": "https://agenciainfra.com/blog/associacoes-pedem-apoio-do-governo-a-pl-sobre-custeio-de-baterias/",
+      "titulo": "Associações pedem apoio do governo a PL sobre custeio de baterias",
       "topico": "baterias"
     },
     {
-      "assunto": "pl3716-rateio-custos",
-      "id": "55ff5a40a55cf02a782b",
-      "link": "https://megawhat.uol.com.br/armazenamento/associacoes-acionam-governo-por-aprovacao-de-pl-que-muda-rateio-de-custos-de-baterias/",
-      "titulo": "Associações acionam governo por aprovação de PL que muda rateio de custos de baterias",
+      "assunto": "pl-3716-baterias",
+      "id": "24fe6ce937fd6e64c039",
+      "link": "https://eixos.com.br/politica/congresso/danilo-forte-promete-parecer-das-baterias-nesta-terca-10-em-meio-a-pressao-de-associacoes/",
+      "titulo": "Danilo Forte promete parecer das baterias nesta terça (10) em meio a pressão de associações",
       "topico": "baterias"
     },
     {
-      "assunto": "maxell-estado-solido-industrial",
-      "id": "7b8ef3dde5bd66e59488",
-      "link": "https://batteriesnews.com/maxell-begins-mass-production-of-all-solid-state-battery-backup-modules-for-industrial-equipment/",
-      "titulo": "Maxell Begins Mass Production of All-Solid-State Battery Backup Modules for Industrial Equipment",
+      "assunto": "catl-sodio-ion-swap",
+      "id": "c116065d0530b4952989",
+      "link": "https://ad-hoc-news.de/boerse/news/unternehmensnachrichten/catl-ties-battery-swap-rollout-to-sodium-ion-push-as-ya-an-lithium-permit-and-rmb-5-36-billion/70486166",
+      "titulo": "CATL Ties Battery-Swap Rollout to Sodium-Ion Push as Ya'an Lithium Permit and RMB 5.36 Billion Buyba",
       "topico": "baterias"
     },
     {
-      "assunto": "grafite-pegada-carbono-baterias",
-      "id": "a0c3dce408be2c985e64",
-      "link": "https://eixos.com.br/transicao-energetica/quando-o-grafite-entra-na-conta-das-baterias/",
-      "titulo": "Quando o grafite entra na conta das baterias",
+      "assunto": "bmw-fornecedores-bateria",
+      "id": "37988115753732d08a15",
+      "link": "https://bloomberg.com/news/articles/2026-11-09/bmw-widens-battery-component-suppliers-with-samsung-lg-energy",
+      "titulo": "BMW Widens Battery Component Suppliers With Samsung, LG Energy",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-portaria-mrv",
-      "id": "e75037df7f2e79f1b006",
-      "link": "https://mayerbrown.com/pt/insights/publications/2026/11/semc-publishes-ordinance-defining-the-implementation-stages-of-the-mrv-obligations-and-sectoral-coverage-of-the-sbce",
-      "titulo": "SEMC publica Portaria que define as etapas de implementação das obrigações de MRV e a cobertura setorial do SBCE",
+      "assunto": "sbce-autarquia",
+      "id": "c2036c45a192b6a6af02",
+      "link": "https://economia.uol.com.br/colunas/jessica-sant-ana/2026/11/10/governo-planeja-autarquia-com-150-pessoas-para-gerir-mercado-de-carbono.htm",
+      "titulo": "Jéssica Sant'Ana: Governo planeja autarquia com 150 pessoas para gerir mercado de carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "noruega-pagamento-desmatamento",
-      "id": "3bc8d31eeb2b6d3489f9",
-      "link": "https://carbon-pulse.com/569118/?site=cpp",
-      "titulo": "Norway to pay Brazil $64 mln for reducing deforestation rate in the Amazon",
+      "assunto": "impacto-economico-mercado-carbono-br",
+      "id": "c5a96c3d38acdc297af1",
+      "link": "https://monitordomercado.com.br/noticias/435451-mercado-de-carbono-pode-elevar-pib-do-brasil-em-85-ate-2050/",
+      "titulo": "Mercado de carbono pode elevar PIB do Brasil em 8,5% até 2050",
       "topico": "carbono"
     },
     {
-      "assunto": "mpms-reciclagem-creditos",
-      "id": "fa2674b313ac6b4ca680",
-      "link": "https://oestadoonline.com.br/cidades/mpms-leva-projeto-de-reciclagem-e-creditos-de-carbono-a-cop31/",
-      "titulo": "MPMS leva projeto de reciclagem e créditos de carbono à COP31",
+      "assunto": "fundo-carbono-indigena",
+      "id": "e45c414afb2cab138564",
+      "link": "https://capitalreset.uol.com.br/carbono/creditos-de-carbono/everland-cria-fundo-para-destravar-credito-de-carbono-em-terras-indigenas/",
+      "titulo": "Everland cria fundo para destravar crédito de carbono em terras indígenas",
       "topico": "carbono"
     },
     {
-      "assunto": "eu-comissao-relatorio-emissoes",
-      "id": "d7409f95e3d650b02be9",
-      "link": "https://ieu-monitoring.com/editorial/eu-commission-reports-1-6-emissions-decline-cautions-on-slower-progress-towards-2030/1254393",
-      "titulo": "EU Commission reports 1.6% emissions decline, cautions on slower progress towards 2030",
+      "assunto": "eu-ets2-reforma",
+      "id": "889730e925b28bf650f6",
+      "link": "https://table.media/en/europe/opinion/how-can-we-resolve-the-ets-2-dilemma",
+      "titulo": "How can we resolve the ETS 2 dilemma?",
       "topico": "carbono"
     },
     {
-      "assunto": "redata",
-      "id": "cc263ee7aa6e386e75d1",
-      "link": "https://agenciainfra.com/blog/negociacoes-do-redata-avancam-e-decreto-deve-sair-ate-fim-do-mes/",
-      "titulo": "Negociações do Redata avançam e decreto deve sair até fim do mês",
+      "assunto": "aneel-acesso-data-center-casa-dos-ventos",
+      "id": "a6a0323e6fa8507d0ae4",
+      "link": "https://megawhat.uol.com.br/destaques-do-diario/aneel-aprova-acesso-de-data-center-da-casa-dos-ventos-no-ceara/",
+      "titulo": "Aneel aprova acesso de data center da Casa dos Ventos no Ceará",
       "topico": "data_center"
     },
     {
-      "assunto": "odata-aquisicao-dc-sp",
-      "id": "0f71d6b7c5b2a8263abf",
-      "link": "https://megawhat.uol.com.br/destaques-do-diario/odata-negocia-compra-de-projeto-de-data-center-em-sp/",
-      "titulo": "Odata negocia compra de projeto de data center em SP",
+      "assunto": "lula-usinas-proprias-dc",
+      "id": "56208cabd6f46fe7bb4a",
+      "link": "https://megawhat.uol.com.br/megaexpresso/lula-volta-a-defender-usinas-proprias-para-consumo-de-data-centers-edicao-do-dia/",
+      "titulo": "Lula volta a defender usinas próprias para consumo de data centers – Edição do dia",
       "topico": "data_center"
     },
     {
-      "assunto": "interesse-investimento-brasil-dc",
-      "id": "140248e9519b61143273",
-      "link": "https://www1.folha.uol.com.br/podcasts/2026/11/podcast-discute-interesse-no-brasil-para-projetos-de-data-center-e-analisa-impactos.shtml",
-      "titulo": "Podcast discute interesse no Brasil para projetos de data center e analisa impactos",
+      "assunto": "investimento-terrenos-dc",
+      "id": "a1aab21a6b95913abe4d",
+      "link": "https://eixos.com.br/eventos/investidores-buscam-terrenos-proximos-as-infraestruturas-de-energia-para-instalar-data-centers/",
+      "titulo": "Investidores buscam terrenos próximos às infraestruturas de energia para instalar data centers",
       "topico": "data_center"
     },
     {
-      "assunto": "congresso-bill-dc-custo-energia",
-      "id": "2a667b7e7b9c3c59475b",
-      "link": "https://wvtm13.com/article/trump-data-center-bill-pay-more-electricity-costs/74380398",
-      "titulo": "Trump '100%' backs bill to make data centers pay more, potentially lowering electricity costs",
+      "assunto": "chips-china-data-center",
+      "id": "334a944d47892f91eee1",
+      "link": "https://valor.globo.com/empresas/noticia/2026/11/10/microsoft-pressiona-trump-a-desistir-de-proibio-planejada-de-tecnologia-chinesa-para-centros-de-dados.ghtml",
+      "titulo": "Microsoft pressiona Trump a desistir de proibição planejada de tecnologia chinesa para centros de dados",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 10/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 11/11 (manhã)",
   "truncated": {}
 }
