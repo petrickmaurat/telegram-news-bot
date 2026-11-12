@@ -1,7 +1,7 @@
 {
-  "cached": 460,
+  "cached": 563,
   "collection": {
-    "entries": 7855,
+    "entries": 7959,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,116 +27,112 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611111028.41155059713@smtp-relay.mailin.fr>",
-    "sent_at": 1794392892.2982898,
-    "status": "enviado"
-  },
-  "generated_at": 1794392839.0341144,
+  "generated_at": 1794479455.4176965,
   "google_links_pending": 0,
-  "needs_evaluation": 429,
+  "needs_evaluation": 382,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 488,
-      "insuficiente": 370,
-      "trecho_disponivel": 31
+      "artigo_completo": 513,
+      "insuficiente": 402,
+      "trecho_disponivel": 30
     },
     "selected": {
-      "artigo_completo": 9,
-      "trecho_limitado_final": 3
+      "artigo_completo": 10,
+      "artigo_lido_pelo_modelo": 1,
+      "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "36208c629bca2e4c124717b5a51f1e9896f2c7910ec42eb8084e4a959610a34d",
+  "request_sha256": "905e00c1c8cc06e7a11e354ca7ae1ea03a3bb50e8f9a0fc2bbe33995499b2597",
   "selected": [
     {
-      "assunto": "pl-3716-baterias",
-      "id": "1a4fe7aa3744bcc1176d",
-      "link": "https://agenciainfra.com/blog/associacoes-pedem-apoio-do-governo-a-pl-sobre-custeio-de-baterias/",
-      "titulo": "Associações pedem apoio do governo a PL sobre custeio de baterias",
+      "assunto": "reidi-bess",
+      "id": "cf7d40cb42bd6df09e67",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/incerteza-sobre-reidi-para-baterias-mobiliza-mme-antes-de-leiloes/",
+      "titulo": "Incerteza sobre Reidi para baterias mobiliza MME antes de leilões",
       "topico": "baterias"
     },
     {
-      "assunto": "pl-3716-baterias",
-      "id": "24fe6ce937fd6e64c039",
-      "link": "https://eixos.com.br/politica/congresso/danilo-forte-promete-parecer-das-baterias-nesta-terca-10-em-meio-a-pressao-de-associacoes/",
-      "titulo": "Danilo Forte promete parecer das baterias nesta terça (10) em meio a pressão de associações",
+      "assunto": "engie-brownfield-armazenamento",
+      "id": "04f5436bd18f58fbdcf6",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/resultados/engie-avalia-renovaveis-brownfield-e-ve-espaco-para-novos-projetos-de-baterias/",
+      "titulo": "Engie avalia renováveis brownfield e vê espaço para novos projetos de baterias",
       "topico": "baterias"
     },
     {
-      "assunto": "catl-sodio-ion-swap",
-      "id": "c116065d0530b4952989",
-      "link": "https://ad-hoc-news.de/boerse/news/unternehmensnachrichten/catl-ties-battery-swap-rollout-to-sodium-ion-push-as-ya-an-lithium-permit-and-rmb-5-36-billion/70486166",
-      "titulo": "CATL Ties Battery-Swap Rollout to Sodium-Ion Push as Ya'an Lithium Permit and RMB 5.36 Billion Buyba",
+      "assunto": "gm-catl-sodio-preco",
+      "id": "2ec1e7ad5c1a06abb532",
+      "link": "https://geeky-gadgets.com/sodium-ion/",
+      "titulo": "GM and CATL Back $59/kWh Sodium Batteries Built to Last 30 Years",
       "topico": "baterias"
     },
     {
-      "assunto": "bmw-fornecedores-bateria",
-      "id": "37988115753732d08a15",
-      "link": "https://bloomberg.com/news/articles/2026-11-09/bmw-widens-battery-component-suppliers-with-samsung-lg-energy",
-      "titulo": "BMW Widens Battery Component Suppliers With Samsung, LG Energy",
+      "assunto": "catl-swap-rede-sodio",
+      "id": "81ecc3a57491956feba0",
+      "link": "https://bloomberg.com/news/articles/2026-11-10/catl-says-more-swapping-stations-to-help-its-sodium-battery-push",
+      "titulo": "CATL Says More Swapping Stations to Help Its Sodium Battery Push",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-autarquia",
-      "id": "c2036c45a192b6a6af02",
-      "link": "https://economia.uol.com.br/colunas/jessica-sant-ana/2026/11/10/governo-planeja-autarquia-com-150-pessoas-para-gerir-mercado-de-carbono.htm",
-      "titulo": "Jéssica Sant'Ana: Governo planeja autarquia com 150 pessoas para gerir mercado de carbono",
+      "assunto": "sbce",
+      "id": "a278a26510dbccec3e5f",
+      "link": "https://agenciagov.ebc.com.br/noticias/202611/governo-federal-apresenta-resultados-da-primeira-fase-da-implementacao-do-sistema-brasileiro-de-comercio-de-emissoes-na-cop31",
+      "titulo": "Governo apresenta na COP 31 resultados da implementação do mercado de carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "impacto-economico-mercado-carbono-br",
-      "id": "c5a96c3d38acdc297af1",
-      "link": "https://monitordomercado.com.br/noticias/435451-mercado-de-carbono-pode-elevar-pib-do-brasil-em-85-ate-2050/",
-      "titulo": "Mercado de carbono pode elevar PIB do Brasil em 8,5% até 2050",
+      "assunto": "inmetro-blockchain-carbono",
+      "id": "3bfadc6d12d05ca3b1c4",
+      "link": "https://bitnoticias.com.br/tecnologia/inmetro-blockchain-projeto-reduzir-emissoes/",
+      "titulo": "Inmetro aposta em blockchain para rastrear emissões de veículos e gerar créditos de carbono no Brasil",
       "topico": "carbono"
     },
     {
-      "assunto": "fundo-carbono-indigena",
-      "id": "e45c414afb2cab138564",
-      "link": "https://capitalreset.uol.com.br/carbono/creditos-de-carbono/everland-cria-fundo-para-destravar-credito-de-carbono-em-terras-indigenas/",
-      "titulo": "Everland cria fundo para destravar crédito de carbono em terras indígenas",
+      "assunto": "acre-creditos-carbono",
+      "id": "79dbbf0c5f26acca185c",
+      "link": "https://agencia.ac.gov.br/na-turquia-governadora-mailza-avanca-nas-tratativas-para-certificacao-de-creditos-de-carbono-do-acre/",
+      "titulo": "Na Turquia, governadora Mailza avança nas tratativas para certificação de créditos de carbono do Acre",
       "topico": "carbono"
     },
     {
-      "assunto": "eu-ets2-reforma",
-      "id": "889730e925b28bf650f6",
-      "link": "https://table.media/en/europe/opinion/how-can-we-resolve-the-ets-2-dilemma",
-      "titulo": "How can we resolve the ETS 2 dilemma?",
+      "assunto": "indonesia-mercado-carbono",
+      "id": "6761da444f4b6757d9fc",
+      "link": "https://kompas.id/artikel/indonesias-carbon-market-is-ready-to-attract-global-investment?open_from=English_Page",
+      "titulo": "Indonesia's Carbon Market Ready to Attract Global Investment",
       "topico": "carbono"
     },
     {
-      "assunto": "aneel-acesso-data-center-casa-dos-ventos",
-      "id": "a6a0323e6fa8507d0ae4",
-      "link": "https://megawhat.uol.com.br/destaques-do-diario/aneel-aprova-acesso-de-data-center-da-casa-dos-ventos-no-ceara/",
-      "titulo": "Aneel aprova acesso de data center da Casa dos Ventos no Ceará",
+      "assunto": "redata",
+      "id": "b8d8e9d27d01745a1ae5",
+      "link": "https://exame.com/inteligencia-artificial/lula-deve-assinar-regras-do-redata-apos-voltar-da-cop31-diz-alckmin/",
+      "titulo": "Lula deve assinar regras do Redata após voltar da COP31, diz Alckmin",
       "topico": "data_center"
     },
     {
-      "assunto": "lula-usinas-proprias-dc",
-      "id": "56208cabd6f46fe7bb4a",
-      "link": "https://megawhat.uol.com.br/megaexpresso/lula-volta-a-defender-usinas-proprias-para-consumo-de-data-centers-edicao-do-dia/",
-      "titulo": "Lula volta a defender usinas próprias para consumo de data centers – Edição do dia",
+      "assunto": "hitachi-bcri-resiliencia-energetica",
+      "id": "b7c9bcfc861b161625b7",
+      "link": "https://valor.globo.com/empresas/noticia/2026/11/11/hitachi-e-bcr-i-brasil-assinam-contrato-para-resiliencia-energetica-de-data-centers.ghtml",
+      "titulo": "Hitachi e BCR-i Brasil assinam contrato para resiliência energética de data centers",
       "topico": "data_center"
     },
     {
-      "assunto": "investimento-terrenos-dc",
-      "id": "a1aab21a6b95913abe4d",
-      "link": "https://eixos.com.br/eventos/investidores-buscam-terrenos-proximos-as-infraestruturas-de-energia-para-instalar-data-centers/",
-      "titulo": "Investidores buscam terrenos próximos às infraestruturas de energia para instalar data centers",
+      "assunto": "petrobras-turbinas-data-centers",
+      "id": "4b520ac83b9d90a4f59c",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/resultados/petrobras-amplia-fornecedores-de-turbinas-diante-da-concorrencia-de-data-centers/",
+      "titulo": "Petrobras amplia fornecedores de turbinas diante da concorrência de data centers",
       "topico": "data_center"
     },
     {
-      "assunto": "chips-china-data-center",
-      "id": "334a944d47892f91eee1",
-      "link": "https://valor.globo.com/empresas/noticia/2026/11/10/microsoft-pressiona-trump-a-desistir-de-proibio-planejada-de-tecnologia-chinesa-para-centros-de-dados.ghtml",
-      "titulo": "Microsoft pressiona Trump a desistir de proibição planejada de tecnologia chinesa para centros de dados",
+      "assunto": "eua-congresso-lei-custos-data-centers",
+      "id": "85cd467f0c0bdb3ec965",
+      "link": "https://latitudemedia.com/news/are-data-centers-ready-to-pay-double-to-unclog-the-grid/",
+      "titulo": "Are data centers ready to pay double to unclog the grid?",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 11/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 12/11 (manhã)",
   "truncated": {}
 }
