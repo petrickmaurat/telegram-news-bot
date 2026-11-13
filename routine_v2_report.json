@@ -1,7 +1,7 @@
 {
-  "cached": 563,
+  "cached": 492,
   "collection": {
-    "entries": 7959,
+    "entries": 8004,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,117 +27,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611121031.90682808136@smtp-relay.mailin.fr>",
-    "sent_at": 1794479511.6059275,
-    "status": "enviado"
-  },
-  "generated_at": 1794479455.4176965,
+  "generated_at": 1794569019.9635549,
   "google_links_pending": 0,
-  "needs_evaluation": 382,
+  "needs_evaluation": 424,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 513,
-      "insuficiente": 402,
-      "trecho_disponivel": 30
+      "artigo_completo": 504,
+      "insuficiente": 386,
+      "trecho_disponivel": 26
     },
     "selected": {
-      "artigo_completo": 10,
-      "artigo_lido_pelo_modelo": 1,
-      "trecho_limitado_final": 1
+      "artigo_completo": 11,
+      "artigo_lido_pelo_modelo": 1
     }
   },
-  "request_sha256": "905e00c1c8cc06e7a11e354ca7ae1ea03a3bb50e8f9a0fc2bbe33995499b2597",
+  "request_sha256": "9ee416a28f253dc962ebc0553c9f5a967d756d1886c488ef5429836e09431eb7",
   "selected": [
     {
-      "assunto": "reidi-bess",
-      "id": "cf7d40cb42bd6df09e67",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/incerteza-sobre-reidi-para-baterias-mobiliza-mme-antes-de-leiloes/",
-      "titulo": "Incerteza sobre Reidi para baterias mobiliza MME antes de leilões",
+      "assunto": "moura-fenatran-agro",
+      "id": "1f2517bd232bc791f9f7",
+      "link": "https://valor.globo.com/patrocinado/dino/noticia/2026/11/10/moura-lanca-na-fenatran-nova-bateria-para-maquinas-agricolas-1.ghtml",
+      "titulo": "Moura lança na Fenatran nova bateria para máquinas agrícolas",
       "topico": "baterias"
     },
     {
-      "assunto": "engie-brownfield-armazenamento",
-      "id": "04f5436bd18f58fbdcf6",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/resultados/engie-avalia-renovaveis-brownfield-e-ve-espaco-para-novos-projetos-de-baterias/",
-      "titulo": "Engie avalia renováveis brownfield e vê espaço para novos projetos de baterias",
+      "assunto": "leilao-baterias",
+      "id": "4d8c420011eb629e557b",
+      "link": "https://ocafezinho.com/2026-11-11/leilao-de-baterias-reserva-r-30-bilhoes-para-pecas-nacionais/",
+      "titulo": "Leilão de baterias reserva R$ 30 bilhões para peças nacionais",
       "topico": "baterias"
     },
     {
-      "assunto": "gm-catl-sodio-preco",
-      "id": "2ec1e7ad5c1a06abb532",
-      "link": "https://geeky-gadgets.com/sodium-ion/",
-      "titulo": "GM and CATL Back $59/kWh Sodium Batteries Built to Last 30 Years",
+      "assunto": "quantumscape-osprey",
+      "id": "2a22519c6ad9b84206d6",
+      "link": "https://finance.biggo.com/news/d742c402-3a5c-434e-b188-87ab8f9e440a",
+      "titulo": "QuantumScape Unveils Osprey Solid-State Battery Platform, Shares Rebound From 52-Week Low",
       "topico": "baterias"
     },
     {
-      "assunto": "catl-swap-rede-sodio",
-      "id": "81ecc3a57491956feba0",
-      "link": "https://bloomberg.com/news/articles/2026-11-10/catl-says-more-swapping-stations-to-help-its-sodium-battery-push",
-      "titulo": "CATL Says More Swapping Stations to Help Its Sodium Battery Push",
+      "assunto": "catl-custo-litio",
+      "id": "da189e5140dc05292779",
+      "link": "https://energiaestrategica.com/en/notes/el-litio-elevo-un-5-los-costos-de-las-baterias-pero-catl-revela-que-los-bess-siguen-bajo-usd-150-kwh",
+      "titulo": "Lithium has driven up battery costs by 5% in recent months, but CATL reveals that BESS batteries remain below USD 150/kWh",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce",
-      "id": "a278a26510dbccec3e5f",
-      "link": "https://agenciagov.ebc.com.br/noticias/202611/governo-federal-apresenta-resultados-da-primeira-fase-da-implementacao-do-sistema-brasileiro-de-comercio-de-emissoes-na-cop31",
-      "titulo": "Governo apresenta na COP 31 resultados da implementação do mercado de carbono",
+      "assunto": "camara-regulatoria-carbono",
+      "id": "f5351d34e0341adc9844",
+      "link": "https://atlaspublico.com.br/noticias/fazenda-regulamenta-camara-de-assuntos-regulatorios-do-101164",
+      "titulo": "Fazenda regulamenta Câmara de Assuntos Regulatórios do mercado de carbono, com representantes de setores empresariais",
       "topico": "carbono"
     },
     {
-      "assunto": "inmetro-blockchain-carbono",
-      "id": "3bfadc6d12d05ca3b1c4",
-      "link": "https://bitnoticias.com.br/tecnologia/inmetro-blockchain-projeto-reduzir-emissoes/",
-      "titulo": "Inmetro aposta em blockchain para rastrear emissões de veículos e gerar créditos de carbono no Brasil",
+      "assunto": "carbono-indigena-valor",
+      "id": "9f918f524f03e27ee231",
+      "link": "https://oglobo.globo.com/patrocinado/dino/noticia/2026/11/11/especialistas-explicam-quem-fica-com-o-valor-do-carbono-1.ghtml",
+      "titulo": "Especialistas explicam quem fica com o valor do carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "acre-creditos-carbono",
-      "id": "79dbbf0c5f26acca185c",
-      "link": "https://agencia.ac.gov.br/na-turquia-governadora-mailza-avanca-nas-tratativas-para-certificacao-de-creditos-de-carbono-do-acre/",
-      "titulo": "Na Turquia, governadora Mailza avança nas tratativas para certificação de créditos de carbono do Acre",
+      "assunto": "itmo-exportacao-carbonext",
+      "id": "9cb057310908daf15ae7",
+      "link": "https://agfeed.com.br/esg/para-a-carbonext-brasil-pode-deixar-us-12-bilhoes-na-mesa-ao-limitar-exportacao-de-credito-de-carbono/",
+      "titulo": "Para Carbonext, Brasil pode deixar US$ 12 bi na mesa ao limitar exportação de créditos de carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "indonesia-mercado-carbono",
-      "id": "6761da444f4b6757d9fc",
-      "link": "https://kompas.id/artikel/indonesias-carbon-market-is-ready-to-attract-global-investment?open_from=English_Page",
-      "titulo": "Indonesia's Carbon Market Ready to Attract Global Investment",
+      "assunto": "eu-ets-alocacao-gratuita",
+      "id": "c7b59836fd7256d0179a",
+      "link": "https://bluewin.ch/en/news/eu-agreement-relief-for-industry-in-emissions-trading-li.3671939",
+      "titulo": "EU Agreement: Relief for Industry in Emissions Trading",
       "topico": "carbono"
     },
     {
-      "assunto": "redata",
-      "id": "b8d8e9d27d01745a1ae5",
-      "link": "https://exame.com/inteligencia-artificial/lula-deve-assinar-regras-do-redata-apos-voltar-da-cop31-diz-alckmin/",
-      "titulo": "Lula deve assinar regras do Redata após voltar da COP31, diz Alckmin",
+      "assunto": "congresso-credito-serpro",
+      "id": "0d242c4036657776333a",
+      "link": "https://www12.senado.leg.br/noticias/materias/2026/11/12/congresso-aprova-r-34-9-milhoes-para-datacenter-do-serpro",
+      "titulo": "Congresso aprova R$ 34,9 milhões para datacenter do Serpro",
       "topico": "data_center"
     },
     {
-      "assunto": "hitachi-bcri-resiliencia-energetica",
-      "id": "b7c9bcfc861b161625b7",
-      "link": "https://valor.globo.com/empresas/noticia/2026/11/11/hitachi-e-bcr-i-brasil-assinam-contrato-para-resiliencia-energetica-de-data-centers.ghtml",
-      "titulo": "Hitachi e BCR-i Brasil assinam contrato para resiliência energética de data centers",
+      "assunto": "hitachi-bcri-contrato-sp",
+      "id": "f4e7f71d00df716ca5c1",
+      "link": "https://agenciainfra.com/blog/hitachi-energy-fecha-contrato-para-atender-data-center-em-sp/",
+      "titulo": "Hitachi Energy fecha contrato para atender data center em SP",
       "topico": "data_center"
     },
     {
-      "assunto": "petrobras-turbinas-data-centers",
-      "id": "4b520ac83b9d90a4f59c",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/resultados/petrobras-amplia-fornecedores-de-turbinas-diante-da-concorrencia-de-data-centers/",
-      "titulo": "Petrobras amplia fornecedores de turbinas diante da concorrência de data centers",
+      "assunto": "mineracao-infra-dc-ia",
+      "id": "b29af0fd3c83ec1a7a6d",
+      "link": "https://valor.globo.com/legislacao/coluna/mineracao-e-infraestrutura-a-era-da-ia-e-do-data-center.ghtml",
+      "titulo": "Mineração e infraestrutura: a era da IA e do data center",
       "topico": "data_center"
     },
     {
-      "assunto": "eua-congresso-lei-custos-data-centers",
-      "id": "85cd467f0c0bdb3ec965",
-      "link": "https://latitudemedia.com/news/are-data-centers-ready-to-pay-double-to-unclog-the-grid/",
-      "titulo": "Are data centers ready to pay double to unclog the grid?",
+      "assunto": "florida-psc-duke-dc-custos",
+      "id": "87492de392fa74339172",
+      "link": "https://baynews9.com/fl/tampa/news/2026/11/11/florida-public-service-commission-rejected-duke-energy-floridas-proposal-for-handling-cost-tied-to-data-centers",
+      "titulo": "Florida regulators reject Duke Energy data center cost plan",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 12/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 13/11 (manhã)",
   "truncated": {}
 }
