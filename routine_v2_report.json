@@ -1,7 +1,7 @@
 {
-  "cached": 492,
+  "cached": 14,
   "collection": {
-    "entries": 8004,
+    "entries": 6980,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,116 +27,113 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611131124.29452316015@smtp-relay.mailin.fr>",
-    "sent_at": 1794569088.988905,
-    "status": "enviado"
-  },
-  "generated_at": 1794569019.9635549,
+  "generated_at": 1794824946.430719,
   "google_links_pending": 0,
-  "needs_evaluation": 424,
+  "needs_evaluation": 474,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 504,
-      "insuficiente": 386,
-      "trecho_disponivel": 26
+      "artigo_completo": 249,
+      "insuficiente": 228,
+      "trecho_disponivel": 11
     },
     "selected": {
-      "artigo_completo": 11,
-      "artigo_lido_pelo_modelo": 1
+      "artigo_completo": 7,
+      "artigo_lido_pelo_modelo": 2,
+      "trecho_disponivel": 1,
+      "trecho_limitado_final": 2
     }
   },
-  "request_sha256": "9ee416a28f253dc962ebc0553c9f5a967d756d1886c488ef5429836e09431eb7",
+  "request_sha256": "f1265ce3bb24fa751593946cb4d0a0313a0558726e69e680ab01290115b81fa8",
   "selected": [
     {
-      "assunto": "moura-fenatran-agro",
-      "id": "1f2517bd232bc791f9f7",
-      "link": "https://valor.globo.com/patrocinado/dino/noticia/2026/11/10/moura-lanca-na-fenatran-nova-bateria-para-maquinas-agricolas-1.ghtml",
-      "titulo": "Moura lança na Fenatran nova bateria para máquinas agrícolas",
+      "assunto": "leilao-baterias-disputa-stf",
+      "id": "ebc80e3fb5838b733fd6",
+      "link": "https://agenciainfra.com/blog/eolicas-querem-ir-ao-stf-contra-custeio-do-leilao-de-baterias/",
+      "titulo": "Eólicas querem ir ao STF contra custeio do leilão de baterias",
       "topico": "baterias"
     },
     {
-      "assunto": "leilao-baterias",
-      "id": "4d8c420011eb629e557b",
-      "link": "https://ocafezinho.com/2026-11-11/leilao-de-baterias-reserva-r-30-bilhoes-para-pecas-nacionais/",
-      "titulo": "Leilão de baterias reserva R$ 30 bilhões para peças nacionais",
+      "assunto": "pl-3716-rateio-custos-baterias",
+      "id": "0c706634f20a76603e67",
+      "link": "https://megawhat.uol.com.br/armazenamento/arnaldo-jardim-ve-caminho-para-aprovar-pl-das-baterias-com-texto-mais-restrito/",
+      "titulo": "Arnaldo Jardim vê caminho para aprovar PL das baterias com texto mais restrito",
       "topico": "baterias"
     },
     {
-      "assunto": "quantumscape-osprey",
-      "id": "2a22519c6ad9b84206d6",
-      "link": "https://finance.biggo.com/news/d742c402-3a5c-434e-b188-87ab8f9e440a",
-      "titulo": "QuantumScape Unveils Osprey Solid-State Battery Platform, Shares Rebound From 52-Week Low",
+      "assunto": "quimica-catodo-baterias",
+      "id": "9d21d3d5b9840906ede8",
+      "link": "https://spglobal.com/energy/en/news-research/latest-news/metals/111326-ecopro-sticks-to-high-nickel-chemistry-despite-calls-to-pivot-to-lfp",
+      "titulo": "EcoPro sticks to high-nickel chemistry despite calls to pivot to LFP",
       "topico": "baterias"
     },
     {
-      "assunto": "catl-custo-litio",
-      "id": "da189e5140dc05292779",
-      "link": "https://energiaestrategica.com/en/notes/el-litio-elevo-un-5-los-costos-de-las-baterias-pero-catl-revela-que-los-bess-siguen-bajo-usd-150-kwh",
-      "titulo": "Lithium has driven up battery costs by 5% in recent months, but CATL reveals that BESS batteries remain below USD 150/kWh",
+      "assunto": "sodio-ion-custo",
+      "id": "010b50e1a78c53590caf",
+      "link": "https://pv-magazine.com/2026/11/13/sodium-ion-batteries-close-gap-with-lithium-ion-as-utility-scale-storage-opportunities-grow/",
+      "titulo": "Sodium-ion batteries close gap with lithium-ion as utility-scale storage opportunities grow",
       "topico": "baterias"
     },
     {
-      "assunto": "camara-regulatoria-carbono",
-      "id": "f5351d34e0341adc9844",
-      "link": "https://atlaspublico.com.br/noticias/fazenda-regulamenta-camara-de-assuntos-regulatorios-do-101164",
-      "titulo": "Fazenda regulamenta Câmara de Assuntos Regulatórios do mercado de carbono, com representantes de setores empresariais",
+      "assunto": "sbce",
+      "id": "d682ea3a92020a07b266",
+      "link": "https://atlaspublico.com.br/noticias/secretaria-do-mercado-de-carbono-abre-consulta-publica-de-102083",
+      "titulo": "Secretaria do Mercado de Carbono abre consulta pública de 30 dias sobre portaria de atividades, fontes e gases regulados",
       "topico": "carbono"
     },
     {
-      "assunto": "carbono-indigena-valor",
-      "id": "9f918f524f03e27ee231",
-      "link": "https://oglobo.globo.com/patrocinado/dino/noticia/2026/11/11/especialistas-explicam-quem-fica-com-o-valor-do-carbono-1.ghtml",
-      "titulo": "Especialistas explicam quem fica com o valor do carbono",
+      "assunto": "sbce-autarquia",
+      "id": "be9b5a1112d76ad2382b",
+      "link": "https://revistaamazonia.com.br/autarquia-mercado-carbono-150-servidores-cinco-diretores/",
+      "titulo": "Governo prepara autarquia com 150 servidores e cinco diretores para gerir o mercado de carbono e decide com Lula após a COP31",
       "topico": "carbono"
     },
     {
-      "assunto": "itmo-exportacao-carbonext",
-      "id": "9cb057310908daf15ae7",
-      "link": "https://agfeed.com.br/esg/para-a-carbonext-brasil-pode-deixar-us-12-bilhoes-na-mesa-ao-limitar-exportacao-de-credito-de-carbono/",
-      "titulo": "Para Carbonext, Brasil pode deixar US$ 12 bi na mesa ao limitar exportação de créditos de carbono",
+      "assunto": "para-venda-creditos-carbono",
+      "id": "cf99eab8e55d8a38f5b4",
+      "link": "https://veja.abril.com.br/economia/estado-do-para-esta-prestes-a-vender-r-1-bilhao-em-credidos-de-carbono-diz-pesquisador/",
+      "titulo": "‘Estado do Pará está prestes a vender R$ 1 bilhão em créditos de carbono’, diz pesquisador",
       "topico": "carbono"
     },
     {
-      "assunto": "eu-ets-alocacao-gratuita",
-      "id": "c7b59836fd7256d0179a",
-      "link": "https://bluewin.ch/en/news/eu-agreement-relief-for-industry-in-emissions-trading-li.3671939",
-      "titulo": "EU Agreement: Relief for Industry in Emissions Trading",
+      "assunto": "drc-mercado-carbono",
+      "id": "bdfb0c1c6b61e53e9515",
+      "link": "https://qcintel.com/carbon/article/interview-drc-to-relaunch-carbon-market-after-passing-key-bill-77546.html",
+      "titulo": "INTERVIEW: DRC to relaunch carbon market after passing key bill",
       "topico": "carbono"
     },
     {
-      "assunto": "congresso-credito-serpro",
-      "id": "0d242c4036657776333a",
-      "link": "https://www12.senado.leg.br/noticias/materias/2026/11/12/congresso-aprova-r-34-9-milhoes-para-datacenter-do-serpro",
-      "titulo": "Congresso aprova R$ 34,9 milhões para datacenter do Serpro",
+      "assunto": "ons-flexibilidade-dc",
+      "id": "778a51465fb57569240d",
+      "link": "https://megawhat.uol.com.br/politica-energetica/ons-propoe-exigir-flexibilidade-de-data-centers-para-evitar-custos-aos-consumidores/",
+      "titulo": "ONS propõe exigir flexibilidade de data centers para evitar custos aos consumidores",
       "topico": "data_center"
     },
     {
-      "assunto": "hitachi-bcri-contrato-sp",
-      "id": "f4e7f71d00df716ca5c1",
-      "link": "https://agenciainfra.com/blog/hitachi-energy-fecha-contrato-para-atender-data-center-em-sp/",
-      "titulo": "Hitachi Energy fecha contrato para atender data center em SP",
+      "assunto": "redata",
+      "id": "636532dc39cff6443594",
+      "link": "https://oglobo.globo.com/economia/negocios/noticia/2026/11/15/data-centers-devem-atrair-r-1-tri-ate-2036-e-estimular-termicas-no-brasil.ghtml",
+      "titulo": "Data centers devem atrair R$ 1 tri até 2036 e estimular térmicas no Brasil",
       "topico": "data_center"
     },
     {
-      "assunto": "mineracao-infra-dc-ia",
-      "id": "b29af0fd3c83ec1a7a6d",
-      "link": "https://valor.globo.com/legislacao/coluna/mineracao-e-infraestrutura-a-era-da-ia-e-do-data-center.ghtml",
-      "titulo": "Mineração e infraestrutura: a era da IA e do data center",
+      "assunto": "energia-renovavel-expansao-dc",
+      "id": "806397b753d74e20254c",
+      "link": "https://megawhat.uol.com.br/opiniao-da-comunidade/energia-renovavel-pode-colocar-o-brasil-no-centro-da-expansao-global-dos-data-centers/",
+      "titulo": "Energia renovável pode colocar o Brasil no centro da expansão global dos data centers",
       "topico": "data_center"
     },
     {
-      "assunto": "florida-psc-duke-dc-custos",
-      "id": "87492de392fa74339172",
-      "link": "https://baynews9.com/fl/tampa/news/2026/11/11/florida-public-service-commission-rejected-duke-energy-floridas-proposal-for-handling-cost-tied-to-data-centers",
-      "titulo": "Florida regulators reject Duke Energy data center cost plan",
+      "assunto": "irlanda-dc-lawsuit",
+      "id": "a149e9c7bce037cd2027",
+      "link": "https://bloomberg.com/news/articles/2026-11-15/ireland-s-data-center-lawsuit-puts-energy-policy-under-scrutiny",
+      "titulo": "Ireland’s Data-Center Lawsuit Puts Energy Policy Under Scrutiny",
       "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 13/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 16/11 (manhã)",
   "truncated": {}
 }
