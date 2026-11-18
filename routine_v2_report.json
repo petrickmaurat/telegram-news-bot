@@ -1,7 +1,7 @@
 {
-  "cached": 188,
+  "cached": 485,
   "collection": {
-    "entries": 7504,
+    "entries": 7990,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,116 +27,112 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611171030.84278216227@smtp-relay.mailin.fr>",
-    "sent_at": 1794911416.4753783,
-    "status": "enviado"
-  },
-  "generated_at": 1794911376.4323432,
+  "generated_at": 1794998032.4441648,
   "google_links_pending": 0,
-  "needs_evaluation": 518,
+  "needs_evaluation": 462,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 345,
-      "insuficiente": 340,
-      "trecho_disponivel": 21
+      "artigo_completo": 503,
+      "insuficiente": 413,
+      "trecho_disponivel": 31
     },
     "selected": {
       "artigo_completo": 10,
-      "artigo_lido_pelo_modelo": 2
+      "artigo_lido_pelo_modelo": 1,
+      "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "cc97d1e42745ad6354902e984393bc25034c84803fea8d1edd2fc23dd6ae4853",
+  "request_sha256": "3b24e9fd23ddbf075a39866be0cb3fef803c9616d6dadfac2da568e915bebb8c",
   "selected": [
     {
-      "assunto": "redata",
-      "id": "06f222cb171ca150cde2",
-      "link": "https://megawhat.uol.com.br/politica-energetica/redata-pode-perder-investimentos-com-restricoes-ao-gas-natural/",
-      "titulo": "Redata pode perder investimentos com restrições ao gás natural",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "restricao-chips-eua-brasil",
-      "id": "a5e22757c8dbee118427",
-      "link": "https://noticiasdoplanalto.com.br/brasil-pode-contestar-restricoes-dos-eua-a-venda-de-chips-para-data-centers/",
-      "titulo": "Brasil pode contestar restrições dos EUA à venda de chips para data centers",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "data-center-belem-inquerito",
-      "id": "0a679c0a162e71cbb863",
-      "link": "https://g1.globo.com/pa/para/videos-jornal-liberal-2-edicao/video/ministerio-publico-abre-inquerito-para-investigar-a-instalacao-de-data-center-em-belem-15194458.ghtml",
-      "titulo": "Ministério Público abre inquérito para investigar a instalação de data center em Belém",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "noruega-paralisa-data-centers",
-      "id": "05320e2893062b076542",
-      "link": "https://industrialinfo.com/news/article/norway-halts-data-center-projects-as-ai-booms--364814",
-      "titulo": "Norway Halts Data Center Projects as AI Booms",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "leilao-baterias-custeio",
-      "id": "b6b843e865bcb0cf430d",
-      "link": "https://megawhat.uol.com.br/regulacao/abeeolica-questiona-rateio-do-encargo-e-judicializa-leiloes-de-baterias/",
-      "titulo": "Abeeólica questiona rateio do encargo e judicializa leilões de baterias",
+      "assunto": "byd-fabrica-manaus-leilao-baterias",
+      "id": "465a7a65f40b08b12656",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/byd-condiciona-nova-fabrica-de-baterias-em-manaus-a-leilao-e-ve-risco-em-acao-da-abeeolica/",
+      "titulo": "BYD condiciona nova fábrica de baterias em Manaus a leilão e vê risco em ação da Abeeólica",
       "topico": "baterias"
     },
     {
-      "assunto": "tarifa-horaria-baterias",
-      "id": "6b675f0fc2a7f88d1987",
-      "link": "https://megawhat.uol.com.br/noticias/tarifa-horaria-pode-estimular-baterias-e-recarga-de-veiculos-eletricos/",
-      "titulo": "Tarifa horária pode estimular baterias e recarga de veículos elétricos",
+      "assunto": "leilao-baterias-judicializacao-rateio-custos",
+      "id": "18735e35e007f2e1fb41",
+      "link": "https://eixos.com.br/newsletters/comece-seu-dia/leiloes-de-baterias-sao-judicializados-a-duas-semanas-da-contratacao/",
+      "titulo": "Leilões de baterias são judicializados a duas semanas da contratação",
       "topico": "baterias"
     },
     {
-      "assunto": "custo-eolica-solar-bess",
-      "id": "f2195630bc87e6766ee6",
-      "link": "https://electrek.co/2026/11/16/adding-wind-cuts-solar-battery-storage-power-costs-nearly-20-percent/",
-      "titulo": "Adding wind cuts solar + battery storage power costs nearly 20%",
+      "assunto": "panasonic-sila-acordo-anodo-silicio",
+      "id": "bbccd9fd9eb84496ee93",
+      "link": "https://theinformation.com/newsletters/the-electric/finally-next-gen-battery-deal-panasonic-pay-1-billion-sila-nano",
+      "titulo": "Finally, a Next-Gen Battery Deal: Panasonic to Pay $1 Billion to Sila Nano",
       "topico": "baterias"
     },
     {
-      "assunto": "catl-sodio-especificacoes",
-      "id": "b1bba079a8c651ba079a",
-      "link": "https://pv-magazine-australia.com/2026/11/17/clarifying-catl-tener-sodium-with-new-specifications-and-availability/",
-      "titulo": "Clarifying CATL Tener Sodium, with new specifications and availability",
+      "assunto": "catl-estado-solido-2030",
+      "id": "acf425f94a812ec41831",
+      "link": "https://insideevs.com/news/810656/china-solid-state-batteries-2030/",
+      "titulo": "China Wants Mass-Produced Solid-State Batteries By 2030. CATL Knows That's Hard",
       "topico": "baterias"
     },
     {
-      "assunto": "pegada-carbono-veiculos",
-      "id": "e612abb50e8625450575",
-      "link": "https://gov.br/mdic/pt-br/assuntos/sdic/setor-automotivo/consultas-publicas/consulta-publica-no-07-2026/minuta-de-portaria-pegada-de-carbono-veiculos-leves.pdf",
-      "titulo": "DE _ DE 2026 Dispõe sobre o registro da pegada de carbono parcial de veículos leves, relativa ao",
+      "assunto": "anac-probioqav-descarbonizacao",
+      "id": "d924d8f03da5adafd8b2",
+      "link": "https://agenciainfra.com/blog/anac-formaliza-regras-para-descarbonizacao-com-flexibilizacao-de-metas/",
+      "titulo": "ANAC formaliza regras para descarbonização com flexibilização de metas",
       "topico": "carbono"
     },
     {
-      "assunto": "para-venda-creditos-carbono",
-      "id": "84dfa6e200baada5e46f",
-      "link": "https://pontodepauta.com/2026/11/16/amazon-de-jeff-bezos-pode-comprar-r-1-bilhao-em-creditos-de-carbono-do-para-negocio-e-questionado-pelo-mpf/",
-      "titulo": "Amazon, de Jeff Bezos, pode comprar R$ 1 bilhão em créditos de carbono do Pará; negócio é questionado pelo MPF",
+      "assunto": "sbce-portaria-mrv-cronograma-corporativo",
+      "id": "3330476267d6a78875a1",
+      "link": "https://brasilinovador.com.br/regulamentacao-do-sbce-impoe-cronograma-de-conformidade-climatica-e-governanca-de-dados-ao-setor-corporativo/",
+      "titulo": "Regulamentação do SBCE impõe cronograma de conformidade climática e governança de dados ao setor corporativo",
       "topico": "carbono"
     },
     {
-      "assunto": "tecnologia-medicao-carbono-florestal",
-      "id": "6e27601fef37b2cae2a9",
-      "link": "https://oglobo.globo.com/patrocinado/dino/noticia/2026/11/16/originals-mapeia-lidar-e-ia-para-medir-carbono-florestal-1.ghtml",
-      "titulo": "Originals mapeia LiDAR e IA para medir carbono florestal",
+      "assunto": "custo-inventario-emissoes-cooperativas",
+      "id": "e896f8103c906111d07f",
+      "link": "https://universo.coop/mercado-de-carbono-quanto-custa-inventariar-emissoes-antes-de-buscar-receita/",
+      "titulo": "Mercado de carbono: quanto custa inventariar emissões antes de buscar receita?",
       "topico": "carbono"
     },
     {
-      "assunto": "occcm-declaracao-cop31",
-      "id": "a74aef6fccf590fb5f34",
-      "link": "https://gov.br/fazenda/pt-br/assuntos/noticias/2026/novembro/coalizao-aberta-para-mercados-regulados-de-carbono-adota-declaracao-da-cop31",
-      "titulo": "Coalizão Aberta para Mercados Regulados de Carbono adota Declaração da COP31 — Ministério da Fazenda",
+      "assunto": "cop31-revisao-regras-mercado-carbono-onu",
+      "id": "6b140d3d9646b2e0d0fe",
+      "link": "https://climatechangenews.com/2026/11/16/countries-take-up-industry-push-to-loosen-un-carbon-market-rules-at-cop31/",
+      "titulo": "Countries take up industry push to loosen UN carbon market rules at COP31",
       "topico": "carbono"
+    },
+    {
+      "assunto": "redata-decreto-pos-cop31-isencao",
+      "id": "365095c14fce29a8d607",
+      "link": "https://uol.com.br/tilt/colunas/helton-simoes-gomes/2026/11/16/regra-para-data-center-sai-apos-a-cop-31-mas-parte-da-isencao-dura-1-mes.htm",
+      "titulo": "Helton Simões Gomes: Regra para data center sai após a COP 31, mas parte da isenção dura 1 mês",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "brasil-direitos-corrida-data-centers",
+      "id": "83786103f195706d2d60",
+      "link": "https://estadao.com.br/brasil/macaco-eletrico/brasil-atropela-direitos-na-corrida-por-data-centers/",
+      "titulo": "Brasil atropela direitos na corrida por data centers",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "paraguai-itaipu-crise-data-centers",
+      "id": "4fa6a20f7528132bf954",
+      "link": "https://c-level.folha.uol.com.br/negocios/2026/11/crise-no-paraguai-pressiona-revisao-de-acordo-de-itaipu-e-briga-para-atrair-data-centers.shtml",
+      "titulo": "Crise no Paraguai pressiona revisão de acordo de Itaipu e briga para atrair data centers",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "eua-restricao-chips-data-centers-5-paises",
+      "id": "d69be138e12d190c0eef",
+      "link": "https://cnbc.com/2026/11/16/nvidia-commerce-china-lutnick.html",
+      "titulo": "Nvidia fallout: Commerce targets loophole for China's data center use",
+      "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 17/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 18/11 (manhã)",
   "truncated": {}
 }
