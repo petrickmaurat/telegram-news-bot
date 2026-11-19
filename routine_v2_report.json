@@ -1,15 +1,16 @@
 {
-  "cached": 485,
+  "cached": 645,
   "collection": {
-    "entries": 7990,
-    "failed": 2,
+    "entries": 8252,
+    "failed": 3,
     "failed_examples": [
       "https://itforum.com.br/feed/",
-      "https://canalsolar.com.br/feed/"
+      "https://canalsolar.com.br/feed/",
+      "MDIC"
     ],
-    "failure_ratio": 0.0094,
+    "failure_ratio": 0.0141,
     "invalid": 0,
-    "ok": 211,
+    "ok": 210,
     "queries": 213
   },
   "counts": {
@@ -27,117 +28,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611181034.95925310480@smtp-relay.mailin.fr>",
-    "sent_at": 1794998092.729138,
-    "status": "enviado"
-  },
-  "generated_at": 1794998032.4441648,
+  "generated_at": 1795084063.0814555,
   "google_links_pending": 0,
-  "needs_evaluation": 462,
+  "needs_evaluation": 426,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 503,
-      "insuficiente": 413,
-      "trecho_disponivel": 31
+      "artigo_completo": 565,
+      "insuficiente": 476,
+      "trecho_disponivel": 30
     },
     "selected": {
-      "artigo_completo": 10,
-      "artigo_lido_pelo_modelo": 1,
-      "trecho_limitado_final": 1
+      "artigo_completo": 9,
+      "trecho_limitado_final": 3
     }
   },
-  "request_sha256": "3b24e9fd23ddbf075a39866be0cb3fef803c9616d6dadfac2da568e915bebb8c",
+  "request_sha256": "68ae7523d86e19871f1e584a83c9c0da73cff2894070851ac411926d7412ab8b",
   "selected": [
     {
-      "assunto": "byd-fabrica-manaus-leilao-baterias",
-      "id": "465a7a65f40b08b12656",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/byd-condiciona-nova-fabrica-de-baterias-em-manaus-a-leilao-e-ve-risco-em-acao-da-abeeolica/",
-      "titulo": "BYD condiciona nova fábrica de baterias em Manaus a leilão e vê risco em ação da Abeeólica",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "leilao-baterias-judicializacao-rateio-custos",
-      "id": "18735e35e007f2e1fb41",
-      "link": "https://eixos.com.br/newsletters/comece-seu-dia/leiloes-de-baterias-sao-judicializados-a-duas-semanas-da-contratacao/",
-      "titulo": "Leilões de baterias são judicializados a duas semanas da contratação",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "panasonic-sila-acordo-anodo-silicio",
-      "id": "bbccd9fd9eb84496ee93",
-      "link": "https://theinformation.com/newsletters/the-electric/finally-next-gen-battery-deal-panasonic-pay-1-billion-sila-nano",
-      "titulo": "Finally, a Next-Gen Battery Deal: Panasonic to Pay $1 Billion to Sila Nano",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "catl-estado-solido-2030",
-      "id": "acf425f94a812ec41831",
-      "link": "https://insideevs.com/news/810656/china-solid-state-batteries-2030/",
-      "titulo": "China Wants Mass-Produced Solid-State Batteries By 2030. CATL Knows That's Hard",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "anac-probioqav-descarbonizacao",
-      "id": "d924d8f03da5adafd8b2",
-      "link": "https://agenciainfra.com/blog/anac-formaliza-regras-para-descarbonizacao-com-flexibilizacao-de-metas/",
-      "titulo": "ANAC formaliza regras para descarbonização com flexibilização de metas",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "sbce-portaria-mrv-cronograma-corporativo",
-      "id": "3330476267d6a78875a1",
-      "link": "https://brasilinovador.com.br/regulamentacao-do-sbce-impoe-cronograma-de-conformidade-climatica-e-governanca-de-dados-ao-setor-corporativo/",
-      "titulo": "Regulamentação do SBCE impõe cronograma de conformidade climática e governança de dados ao setor corporativo",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "custo-inventario-emissoes-cooperativas",
-      "id": "e896f8103c906111d07f",
-      "link": "https://universo.coop/mercado-de-carbono-quanto-custa-inventariar-emissoes-antes-de-buscar-receita/",
-      "titulo": "Mercado de carbono: quanto custa inventariar emissões antes de buscar receita?",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "cop31-revisao-regras-mercado-carbono-onu",
-      "id": "6b140d3d9646b2e0d0fe",
-      "link": "https://climatechangenews.com/2026/11/16/countries-take-up-industry-push-to-loosen-un-carbon-market-rules-at-cop31/",
-      "titulo": "Countries take up industry push to loosen UN carbon market rules at COP31",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "redata-decreto-pos-cop31-isencao",
-      "id": "365095c14fce29a8d607",
-      "link": "https://uol.com.br/tilt/colunas/helton-simoes-gomes/2026/11/16/regra-para-data-center-sai-apos-a-cop-31-mas-parte-da-isencao-dura-1-mes.htm",
-      "titulo": "Helton Simões Gomes: Regra para data center sai após a COP 31, mas parte da isenção dura 1 mês",
+      "assunto": "prodatapr",
+      "id": "7af8df1dc96bc0b5ed9d",
+      "link": "https://g1.globo.com/pr/parana/noticia/2026/11/18/projeto-lei-parana-incentiva-instalacao-data-centers.ghtml",
+      "titulo": "Deputados do Paraná aprovam projeto de lei que incentiva instalação e expansão de data centers no estado",
       "topico": "data_center"
     },
     {
-      "assunto": "brasil-direitos-corrida-data-centers",
-      "id": "83786103f195706d2d60",
-      "link": "https://estadao.com.br/brasil/macaco-eletrico/brasil-atropela-direitos-na-corrida-por-data-centers/",
-      "titulo": "Brasil atropela direitos na corrida por data centers",
+      "assunto": "anatel-telebras-datacenter",
+      "id": "ffc87e0fd0235513bee2",
+      "link": "https://convergenciadigital.com.br/governo/anatel-confirma-data-center-de-ia-com-investimento-de-r-375-milhoes-na-telebras/",
+      "titulo": "Anatel confirma data center de IA com investimento de R$ 375 milhões na Telebras",
       "topico": "data_center"
     },
     {
-      "assunto": "paraguai-itaipu-crise-data-centers",
-      "id": "4fa6a20f7528132bf954",
-      "link": "https://c-level.folha.uol.com.br/negocios/2026/11/crise-no-paraguai-pressiona-revisao-de-acordo-de-itaipu-e-briga-para-atrair-data-centers.shtml",
-      "titulo": "Crise no Paraguai pressiona revisão de acordo de Itaipu e briga para atrair data centers",
+      "assunto": "fne-credito-datacenters-nordeste",
+      "id": "f2aa52e6a6083751ea1d",
+      "link": "https://paraibabusiness.com.br/fne-prepara-credito-para-data-centers-paraiba-tem-r-42-bi-previstos/",
+      "titulo": "FNE prepara crédito para data centers; Paraíba tem R$ 4,2 bi previstos",
       "topico": "data_center"
     },
     {
-      "assunto": "eua-restricao-chips-data-centers-5-paises",
-      "id": "d69be138e12d190c0eef",
-      "link": "https://cnbc.com/2026/11/16/nvidia-commerce-china-lutnick.html",
-      "titulo": "Nvidia fallout: Commerce targets loophole for China's data center use",
+      "assunto": "trump-restricao-china-datacenters",
+      "id": "ccc6f6f308ad0f4510b7",
+      "link": "https://reuters.com/world/trumps-china-data-center-curb-advances-despite-amazon-google-meta-lobbying-2026-11-17/",
+      "titulo": "EXCLUSIVE: Trump's China data center curb advances despite Amazon, Google, Meta lobbying",
       "topico": "data_center"
+    },
+    {
+      "assunto": "pl-baterias-custeio",
+      "id": "4c1f351bf3676e2da695",
+      "link": "https://eixos.com.br/politica/associacoes-defendem-aprovacao-do-texto-original-do-pl-das-baterias/",
+      "titulo": "Associações defendem aprovação do texto original do PL das baterias",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "moura-tarifa-importacao-baterias",
+      "id": "4cde39e75b1f04f7ea45",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/moura-pede-tarifa-zero-para-importacao-de-baterias-destinadas-ao-lrcap/",
+      "titulo": "Moura pede tarifa zero para importação de baterias destinadas ao LRCap",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "catl-dual-battery-trucks",
+      "id": "e45224fa010f399faf3f",
+      "link": "https://globalfleet.com/en/technology-and-innovation/asia-pacific/news/catl-bets-dual-battery-system-e-trucks-china-and-beyond",
+      "titulo": "CATL bets on dual-battery system for e-trucks in China (and beyond)",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "posco-catl-litio-supply",
+      "id": "70fc6e1ec4bb88871191",
+      "link": "https://finance.biggo.com/news/b790b5fe-c830-4a0f-b91e-958742c16eea",
+      "titulo": "POSCO Signs 3-Year Lithium Supply Deal with CATL, Landing Chinese Battery Giant as Customer",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "sbce-metano-petroliferas",
+      "id": "ae18e90ceb18a0eb920d",
+      "link": "https://jota.info/energia/fazenda-deixa-metano-de-petroliferas-de-fora-de-proposta-inicial-do-sbce",
+      "titulo": "Fazenda deixa metano de petrolíferas de fora de proposta inicial do SBCE",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "ms-participacao-regulamentacao-carbono",
+      "id": "c83af100f2cfe000a656",
+      "link": "https://capitaldopantanal.com.br/meio-ambiente/2026/11/18/ms-garante-participacao-dos-estados-na-regulamentacao-de-creditos-de-carbono-durante-a-cop31.html",
+      "titulo": "MS garante participação dos estados na regulamentação de créditos de carbono durante a COP31",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "greenline-seguro-credito-carbono",
+      "id": "d8a9d2f31ec8908279af",
+      "link": "https://brazileconomy.com.br/green-economy/2026/11/greenline-adota-seguro-obrigatorio-para-reduzir-riscos-no-mercado-de-carbono/",
+      "titulo": "Greenline adota seguro obrigatório para reduzir riscos no mercado de carbono",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "ue-china-cbam-carbono",
+      "id": "a79a0ca92d5b9cfcdef4",
+      "link": "https://caixinglobal.com/2026-11-18/eu-recognizes-chinas-carbon-market-for-border-levy-deductions-102506401.html",
+      "titulo": "EU Recognizes China’s Carbon Market for Border Levy Deductions",
+      "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 18/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 19/11 (manhã)",
   "truncated": {}
 }
