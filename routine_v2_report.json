@@ -1,16 +1,15 @@
 {
-  "cached": 645,
+  "cached": 579,
   "collection": {
-    "entries": 8252,
-    "failed": 3,
+    "entries": 8637,
+    "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
-      "https://canalsolar.com.br/feed/",
-      "MDIC"
+      "https://canalsolar.com.br/feed/"
     ],
-    "failure_ratio": 0.0141,
+    "failure_ratio": 0.0094,
     "invalid": 0,
-    "ok": 210,
+    "ok": 211,
     "queries": 213
   },
   "counts": {
@@ -28,116 +27,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611191028.86706939392@smtp-relay.mailin.fr>",
-    "sent_at": 1795084104.7988155,
-    "status": "enviado"
-  },
-  "generated_at": 1795084063.0814555,
+  "generated_at": 1795170357.871704,
   "google_links_pending": 0,
-  "needs_evaluation": 426,
+  "needs_evaluation": 476,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 565,
-      "insuficiente": 476,
-      "trecho_disponivel": 30
+      "artigo_completo": 526,
+      "insuficiente": 508,
+      "trecho_disponivel": 21
     },
     "selected": {
-      "artigo_completo": 9,
-      "trecho_limitado_final": 3
+      "artigo_completo": 11,
+      "artigo_lido_pelo_modelo": 1
     }
   },
-  "request_sha256": "68ae7523d86e19871f1e584a83c9c0da73cff2894070851ac411926d7412ab8b",
+  "request_sha256": "41a63bc76cdcaefff1d3b517e0a1fb5ed3007f85a48637c95cf4cbe8194b32f0",
   "selected": [
     {
-      "assunto": "prodatapr",
-      "id": "7af8df1dc96bc0b5ed9d",
-      "link": "https://g1.globo.com/pr/parana/noticia/2026/11/18/projeto-lei-parana-incentiva-instalacao-data-centers.ghtml",
-      "titulo": "Deputados do Paraná aprovam projeto de lei que incentiva instalação e expansão de data centers no estado",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "anatel-telebras-datacenter",
-      "id": "ffc87e0fd0235513bee2",
-      "link": "https://convergenciadigital.com.br/governo/anatel-confirma-data-center-de-ia-com-investimento-de-r-375-milhoes-na-telebras/",
-      "titulo": "Anatel confirma data center de IA com investimento de R$ 375 milhões na Telebras",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "fne-credito-datacenters-nordeste",
-      "id": "f2aa52e6a6083751ea1d",
-      "link": "https://paraibabusiness.com.br/fne-prepara-credito-para-data-centers-paraiba-tem-r-42-bi-previstos/",
-      "titulo": "FNE prepara crédito para data centers; Paraíba tem R$ 4,2 bi previstos",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "trump-restricao-china-datacenters",
-      "id": "ccc6f6f308ad0f4510b7",
-      "link": "https://reuters.com/world/trumps-china-data-center-curb-advances-despite-amazon-google-meta-lobbying-2026-11-17/",
-      "titulo": "EXCLUSIVE: Trump's China data center curb advances despite Amazon, Google, Meta lobbying",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "pl-baterias-custeio",
-      "id": "4c1f351bf3676e2da695",
-      "link": "https://eixos.com.br/politica/associacoes-defendem-aprovacao-do-texto-original-do-pl-das-baterias/",
-      "titulo": "Associações defendem aprovação do texto original do PL das baterias",
+      "assunto": "leilao-baterias-custeio-judicial",
+      "id": "e1a0d4a885864c5fd7ce",
+      "link": "https://agenciainfra.com/blog/abeeolica-aciona-stf-contra-custeio-de-baterias-por-geradores-em-leilao/",
+      "titulo": "Abeeólica aciona STF contra custeio de baterias por geradores em leilão",
       "topico": "baterias"
     },
     {
-      "assunto": "moura-tarifa-importacao-baterias",
-      "id": "4cde39e75b1f04f7ea45",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/moura-pede-tarifa-zero-para-importacao-de-baterias-destinadas-ao-lrcap/",
-      "titulo": "Moura pede tarifa zero para importação de baterias destinadas ao LRCap",
+      "assunto": "regras-armazenamento-industria",
+      "id": "ac47324778caaa3ae765",
+      "link": "https://megawhat.uol.com.br/mercado-energetico/eletrificacao-da-industria-passa-por-novas-regras-para-baterias-aponta-estudo/",
+      "titulo": "Eletrificação da indústria passa por novas regras para baterias, aponta estudo",
       "topico": "baterias"
     },
     {
-      "assunto": "catl-dual-battery-trucks",
-      "id": "e45224fa010f399faf3f",
-      "link": "https://globalfleet.com/en/technology-and-innovation/asia-pacific/news/catl-bets-dual-battery-system-e-trucks-china-and-beyond",
-      "titulo": "CATL bets on dual-battery system for e-trucks in China (and beyond)",
+      "assunto": "preco-historico-baterias",
+      "id": "160839140050977a62c2",
+      "link": "https://ourworldindata.org/battery-prices-have-fallen-more-than-99-in-the-last-three-decades",
+      "titulo": "Battery prices have fallen more than 99% in the last three decades",
       "topico": "baterias"
     },
     {
-      "assunto": "posco-catl-litio-supply",
-      "id": "70fc6e1ec4bb88871191",
-      "link": "https://finance.biggo.com/news/b790b5fe-c830-4a0f-b91e-958742c16eea",
-      "titulo": "POSCO Signs 3-Year Lithium Supply Deal with CATL, Landing Chinese Battery Giant as Customer",
+      "assunto": "bateria-estado-solido-producao",
+      "id": "d3ddb3234db5fa768fe2",
+      "link": "https://news.metal.com/newscontent/EJ5YYSHMZ7WU36AEGH3DJWZ4HHLZNKFWDW32CDI-solid-state-battery-gwh-scale-production-line-launched-sulphide-and-lithium-rich-manganese-based-prices-under-pressure",
+      "titulo": "Solid-state battery GWh-scale production line launched; sulphide and lithium-rich manganese-based prices under pressure",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-metano-petroliferas",
-      "id": "ae18e90ceb18a0eb920d",
-      "link": "https://jota.info/energia/fazenda-deixa-metano-de-petroliferas-de-fora-de-proposta-inicial-do-sbce",
-      "titulo": "Fazenda deixa metano de petrolíferas de fora de proposta inicial do SBCE",
+      "assunto": "sbce-camara-regulatoria",
+      "id": "d2bbf77c9cbe0bcb0b8a",
+      "link": "https://atlaspublico.com.br/noticias/secretaria-do-mercado-de-carbono-designa-11-entidades-103951",
+      "titulo": "Secretaria do Mercado de Carbono designa 11 entidades empresariais para a Câmara de Assuntos Regulatórios do SBCE",
       "topico": "carbono"
     },
     {
-      "assunto": "ms-participacao-regulamentacao-carbono",
-      "id": "c83af100f2cfe000a656",
-      "link": "https://capitaldopantanal.com.br/meio-ambiente/2026/11/18/ms-garante-participacao-dos-estados-na-regulamentacao-de-creditos-de-carbono-durante-a-cop31.html",
-      "titulo": "MS garante participação dos estados na regulamentação de créditos de carbono durante a COP31",
+      "assunto": "ms-creditos-carbono-aviacao",
+      "id": "9bf9c7db8a0addfd2ee0",
+      "link": "https://acritica.net/meio-ambiente/ms-creditos-carbono-aviacao/",
+      "titulo": "MS pede prioridade para créditos de carbono de programas estaduais na aviação internacional",
       "topico": "carbono"
     },
     {
-      "assunto": "greenline-seguro-credito-carbono",
-      "id": "d8a9d2f31ec8908279af",
-      "link": "https://brazileconomy.com.br/green-economy/2026/11/greenline-adota-seguro-obrigatorio-para-reduzir-riscos-no-mercado-de-carbono/",
-      "titulo": "Greenline adota seguro obrigatório para reduzir riscos no mercado de carbono",
+      "assunto": "algar-florestas-amazonia-carbono",
+      "id": "52b69b0354526f77dd64",
+      "link": "https://umsoplaneta.globo.com/google/amp/financas/negocios/noticia/2026/11/19/grupo-algar-cria-empresa-independente-na-amazonia-para-escalar-negocios-de-carbono-e-bioeconomia.ghtml",
+      "titulo": "Grupo Algar cria empresa independente na Amazônia para escalar negócios de carbono e bioeconomia",
       "topico": "carbono"
     },
     {
-      "assunto": "ue-china-cbam-carbono",
-      "id": "a79a0ca92d5b9cfcdef4",
-      "link": "https://caixinglobal.com/2026-11-18/eu-recognizes-chinas-carbon-market-for-border-levy-deductions-102506401.html",
-      "titulo": "EU Recognizes China’s Carbon Market for Border Levy Deductions",
+      "assunto": "singapura-artigo6-cop31",
+      "id": "439903b011e8cc1a68fb",
+      "link": "https://carbonherald.com/cop31-singapore-expands-carbon-market-ties-with-kenya-and-zambia-eyes-bangladesh/",
+      "titulo": "COP31: Singapore Expands Carbon Market Ties With Kenya and Zambia, Eyes Bangladesh",
       "topico": "carbono"
+    },
+    {
+      "assunto": "pl-305-incentivos-nordeste",
+      "id": "f766afcfcef3283828c6",
+      "link": "https://telesintese.com.br/coalizao-direitos-na-rede-contesta-pl-que-preve-incentivos-a-data-centers-no-norte-e-nordeste/",
+      "titulo": "Coalizão Direitos na Rede contesta PL que prevê incentivos a data centers no Norte e Nordeste",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "redata-usinas-proprias-lula",
+      "id": "a0254489f279c534fcc3",
+      "link": "https://aepet.org.br/noticia/lula-volta-a-defender-usinas-proprias-para-consumo-de-data-centers/",
+      "titulo": "Lula volta a defender usinas próprias para consumo de data centers",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "restricao-chips-eua-brasil",
+      "id": "f3b6d026eec27ed2043c",
+      "link": "https://infomoney.com.br/mercados/wege3-restricao-dos-eua-a-chips-pode-ameacar-avanco-de-data-centers-e-afetar-a-weg/",
+      "titulo": "Restrição dos EUA a chips pode ameaçar avanço de data centers e afetar a WEG?",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "senado-eua-lei-energia-data-centers",
+      "id": "0de125fbe264c70526be",
+      "link": "https://foxnews.com/politics/senate-republicans-break-through-washington-gridlock-massive-american-energy-data-center-overhaul",
+      "titulo": "Senate Republicans break through Washington gridlock with massive American energy, data center overhaul",
+      "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 19/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 20/11 (manhã)",
   "truncated": {}
 }
