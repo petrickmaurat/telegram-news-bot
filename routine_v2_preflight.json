@@ -1,9 +1,9 @@
 {
-  "generated_at": 1795169422.201944,
+  "generated_at": 1795428590.450884,
   "status": "network_ready",
   "targets": [
     {
-      "bytes": 154804,
+      "bytes": 149937,
       "group": "buscador",
       "name": "google_news",
       "ok": true,
@@ -19,7 +19,7 @@
       "url": "https://megawhat.uol.com.br/feed/"
     },
     {
-      "bytes": 13644,
+      "bytes": 13517,
       "group": "rss_direto",
       "name": "data_center_dynamics",
       "ok": true,
