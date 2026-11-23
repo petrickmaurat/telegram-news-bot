@@ -1,7 +1,7 @@
 {
-  "cached": 579,
+  "cached": 2,
   "collection": {
-    "entries": 8637,
+    "entries": 7594,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -18,7 +18,7 @@
       "US": 2
     },
     "carbono": {
-      "BR": 3,
+      "BR": 1,
       "US": 1
     },
     "data_center": {
@@ -27,116 +27,98 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611201026.58315549576@smtp-relay.mailin.fr>",
-    "sent_at": 1795170412.179281,
-    "status": "enviado"
-  },
-  "generated_at": 1795170357.871704,
+  "generated_at": 1795429672.6063817,
   "google_links_pending": 0,
-  "needs_evaluation": 476,
+  "needs_evaluation": 569,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 526,
-      "insuficiente": 508,
-      "trecho_disponivel": 21
+      "artigo_completo": 263,
+      "insuficiente": 290,
+      "trecho_disponivel": 18
     },
     "selected": {
-      "artigo_completo": 11,
-      "artigo_lido_pelo_modelo": 1
+      "artigo_completo": 8,
+      "artigo_lido_pelo_modelo": 1,
+      "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "41a63bc76cdcaefff1d3b517e0a1fb5ed3007f85a48637c95cf4cbe8194b32f0",
+  "request_sha256": "0803b692dd3513a75cef010343e3415a1073f6d267d4a1d97537b0eaa2b440f3",
   "selected": [
     {
-      "assunto": "leilao-baterias-custeio-judicial",
-      "id": "e1a0d4a885864c5fd7ce",
-      "link": "https://agenciainfra.com/blog/abeeolica-aciona-stf-contra-custeio-de-baterias-por-geradores-em-leilao/",
-      "titulo": "Abeeólica aciona STF contra custeio de baterias por geradores em leilão",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "regras-armazenamento-industria",
-      "id": "ac47324778caaa3ae765",
-      "link": "https://megawhat.uol.com.br/mercado-energetico/eletrificacao-da-industria-passa-por-novas-regras-para-baterias-aponta-estudo/",
-      "titulo": "Eletrificação da indústria passa por novas regras para baterias, aponta estudo",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "preco-historico-baterias",
-      "id": "160839140050977a62c2",
-      "link": "https://ourworldindata.org/battery-prices-have-fallen-more-than-99-in-the-last-three-decades",
-      "titulo": "Battery prices have fallen more than 99% in the last three decades",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "bateria-estado-solido-producao",
-      "id": "d3ddb3234db5fa768fe2",
-      "link": "https://news.metal.com/newscontent/EJ5YYSHMZ7WU36AEGH3DJWZ4HHLZNKFWDW32CDI-solid-state-battery-gwh-scale-production-line-launched-sulphide-and-lithium-rich-manganese-based-prices-under-pressure",
-      "titulo": "Solid-state battery GWh-scale production line launched; sulphide and lithium-rich manganese-based prices under pressure",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "sbce-camara-regulatoria",
-      "id": "d2bbf77c9cbe0bcb0b8a",
-      "link": "https://atlaspublico.com.br/noticias/secretaria-do-mercado-de-carbono-designa-11-entidades-103951",
-      "titulo": "Secretaria do Mercado de Carbono designa 11 entidades empresariais para a Câmara de Assuntos Regulatórios do SBCE",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "ms-creditos-carbono-aviacao",
-      "id": "9bf9c7db8a0addfd2ee0",
-      "link": "https://acritica.net/meio-ambiente/ms-creditos-carbono-aviacao/",
-      "titulo": "MS pede prioridade para créditos de carbono de programas estaduais na aviação internacional",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "algar-florestas-amazonia-carbono",
-      "id": "52b69b0354526f77dd64",
-      "link": "https://umsoplaneta.globo.com/google/amp/financas/negocios/noticia/2026/11/19/grupo-algar-cria-empresa-independente-na-amazonia-para-escalar-negocios-de-carbono-e-bioeconomia.ghtml",
-      "titulo": "Grupo Algar cria empresa independente na Amazônia para escalar negócios de carbono e bioeconomia",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "singapura-artigo6-cop31",
-      "id": "439903b011e8cc1a68fb",
-      "link": "https://carbonherald.com/cop31-singapore-expands-carbon-market-ties-with-kenya-and-zambia-eyes-bangladesh/",
-      "titulo": "COP31: Singapore Expands Carbon Market Ties With Kenya and Zambia, Eyes Bangladesh",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "pl-305-incentivos-nordeste",
-      "id": "f766afcfcef3283828c6",
-      "link": "https://telesintese.com.br/coalizao-direitos-na-rede-contesta-pl-que-preve-incentivos-a-data-centers-no-norte-e-nordeste/",
-      "titulo": "Coalizão Direitos na Rede contesta PL que prevê incentivos a data centers no Norte e Nordeste",
+      "assunto": "omnia-pecem-expansao",
+      "id": "632e9fbdd51eed86548d",
+      "link": "https://braziljournal.com/play/rodrigo-abreu-da-omnia-data-centers-podem-crescer-sem-encarecer-a-conta-de-luz",
+      "titulo": "Rodrigo Abreu, da Omnia: data centers podem crescer sem encarecer a conta de luz",
       "topico": "data_center"
     },
     {
-      "assunto": "redata-usinas-proprias-lula",
-      "id": "a0254489f279c534fcc3",
-      "link": "https://aepet.org.br/noticia/lula-volta-a-defender-usinas-proprias-para-consumo-de-data-centers/",
-      "titulo": "Lula volta a defender usinas próprias para consumo de data centers",
+      "assunto": "redata-decreto-gas-natural",
+      "id": "a1e11c2094983ff3b8cc",
+      "link": "https://cnnbrasil.com.br/politica/decreto-do-redata-tem-impasse-sobre-gas-natural-e-espera-decisao-de-lula/",
+      "titulo": "Decreto do Redata tem impasse sobre gás natural e espera decisão de Lula",
       "topico": "data_center"
     },
     {
-      "assunto": "restricao-chips-eua-brasil",
-      "id": "f3b6d026eec27ed2043c",
-      "link": "https://infomoney.com.br/mercados/wege3-restricao-dos-eua-a-chips-pode-ameacar-avanco-de-data-centers-e-afetar-a-weg/",
-      "titulo": "Restrição dos EUA a chips pode ameaçar avanço de data centers e afetar a WEG?",
+      "assunto": "ons-atibaia-substacao",
+      "id": "fd7718546c1d70c426fc",
+      "link": "https://metropoles.com/sao-paulo/ons-viabiliza-data-center-em-atibaia-apesar-de-risco-na-geracao-de-energia",
+      "titulo": "ONS permite data center em Atibaia apesar de risco na geração de energia",
       "topico": "data_center"
     },
     {
-      "assunto": "senado-eua-lei-energia-data-centers",
-      "id": "0de125fbe264c70526be",
-      "link": "https://foxnews.com/politics/senate-republicans-break-through-washington-gridlock-massive-american-energy-data-center-overhaul",
-      "titulo": "Senate Republicans break through Washington gridlock with massive American energy, data center overhaul",
+      "assunto": "trump-tarifa-data-centers-exterior",
+      "id": "df23366ce0d7fd74b7e9",
+      "link": "https://valor.globo.com/mundo/noticia/2026/11/20/trump-diz-que-no-permitir-que-empresas-americanas-construam-data-centers-fora-dos-eua.ghtml",
+      "titulo": "Trump diz que não permitirá que empresas americanas construam data centers fora dos EUA",
       "topico": "data_center"
+    },
+    {
+      "assunto": "leilao-armazenamento-aneel-editais",
+      "id": "a51dab7cb79f17cb9e63",
+      "link": "https://gov.br/aneel/pt-br/assuntos/noticias/2026/editais-no-05-2026-e-no-06-2026-dos-leiloes-de-armazenamento-de-energia-sao-aprovados-pela-aneel?trk=article-ssr-frontend-pulse_little-text-block",
+      "titulo": "Editais Nº 05/2026 e Nº 06/2026 dos leilões de Armazenamento de Energia são aprovados pela ANEEL",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "leilao-baterias-custeio-stf-abeeolica",
+      "id": "ced5b687525477936b22",
+      "link": "https://eixos.com.br/energia-eletrica/abeeolica-vai-ao-stf-contra-regra-de-custeio-de-baterias-a-serem-contratadas-em-leilao/",
+      "titulo": "Abeeólica vai ao STF contra regra de custeio de baterias a serem contratadas em leilão",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "lutnick-pure-lithium-takeover",
+      "id": "c42c30d56a23d2c95992",
+      "link": "https://reuters.com/world/china/lutnick-asked-battery-startup-pure-lithium-accept-us-takeover-documents-source-2026-11-20/",
+      "titulo": "EXCLUSIVE: Lutnick asked battery startup Pure Lithium to accept US takeover, documents and source say",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "ford-catl-producao-eua",
+      "id": "fba98254e38b99e3aed5",
+      "link": "https://paultan.org/2026/11/23/ford-produce-ev-battery-cells-in-us-catl-technology/",
+      "titulo": "Ford starts making EV battery cells in the US with CATL technology, plans to manufacture battery packs in 2027",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "greenline-seguro-credito-carbono",
+      "id": "1c8f67a2058d11fb3799",
+      "link": "https://revistacobertura.com.br/noticias/seguros-gerais/greenline-anuncia-seguro-obrigatorio-para-creditos-de-carbono-e-eleva-integridade-no-mercado-de-ativos-ambientais/",
+      "titulo": "Greenline anuncia seguro obrigatório para créditos de carbono e eleva integridade no mercado de ativos ambientais",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "uk-eu-ets-link",
+      "id": "23c146d45d40b5c43a61",
+      "link": "https://carbonherald.com/eu-and-uk-seal-carbon-market-deal-opening-billions-in-co2-storage-opportunities/",
+      "titulo": "EU And UK Seal Carbon Market Deal, Opening Billions In CO2 Storage Opportunities",
+      "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 20/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 23/11 (manhã)",
   "truncated": {}
 }
