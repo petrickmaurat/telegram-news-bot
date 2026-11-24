@@ -1,7 +1,7 @@
 {
-  "cached": 2,
+  "cached": 211,
   "collection": {
-    "entries": 7594,
+    "entries": 8628,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -18,7 +18,7 @@
       "US": 2
     },
     "carbono": {
-      "BR": 1,
+      "BR": 3,
       "US": 1
     },
     "data_center": {
@@ -27,103 +27,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611231028.22455709957@smtp-relay.mailin.fr>",
-    "sent_at": 1795429718.9805415,
-    "status": "enviado"
-  },
-  "generated_at": 1795429672.6063817,
+  "generated_at": 1795515929.625688,
   "google_links_pending": 0,
-  "needs_evaluation": 569,
+  "needs_evaluation": 442,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 263,
-      "insuficiente": 290,
-      "trecho_disponivel": 18
+      "artigo_completo": 334,
+      "insuficiente": 298,
+      "trecho_disponivel": 21
     },
     "selected": {
-      "artigo_completo": 8,
-      "artigo_lido_pelo_modelo": 1,
-      "trecho_limitado_final": 1
+      "artigo_completo": 7,
+      "trecho_limitado_final": 5
     }
   },
-  "request_sha256": "0803b692dd3513a75cef010343e3415a1073f6d267d4a1d97537b0eaa2b440f3",
+  "request_sha256": "57f57a2915fdb9157f91e6cbc8f3090138e0ef06895ba6a70bc384fd43e25aa1",
   "selected": [
     {
-      "assunto": "omnia-pecem-expansao",
-      "id": "632e9fbdd51eed86548d",
-      "link": "https://braziljournal.com/play/rodrigo-abreu-da-omnia-data-centers-podem-crescer-sem-encarecer-a-conta-de-luz",
-      "titulo": "Rodrigo Abreu, da Omnia: data centers podem crescer sem encarecer a conta de luz",
+      "assunto": "prodatapr",
+      "id": "8c43320fc99a4125181b",
+      "link": "https://g1.globo.com/pr/parana/videos-boa-noite-parana/video/alep-aprova-incentivos-para-atrair-data-centers-mas-impacto-ambiental-preocupa-entidades-15274869.ghtml",
+      "titulo": "Alep aprova incentivos para atrair data centers, mas impacto ambiental preocupa entidades",
       "topico": "data_center"
     },
     {
-      "assunto": "redata-decreto-gas-natural",
-      "id": "a1e11c2094983ff3b8cc",
-      "link": "https://cnnbrasil.com.br/politica/decreto-do-redata-tem-impasse-sobre-gas-natural-e-espera-decisao-de-lula/",
-      "titulo": "Decreto do Redata tem impasse sobre gás natural e espera decisão de Lula",
+      "assunto": "pressao-infraestrutura-eletrica-datacenters",
+      "id": "38d7920aeb3bcb3957bc",
+      "link": "https://cnnbrasil.com.br/infra/expansao-dos-data-centers-pressiona-infraestrutura-do-setor-eletrico/",
+      "titulo": "Expansão dos data centers pressiona infraestrutura do setor elétrico",
       "topico": "data_center"
     },
     {
-      "assunto": "ons-atibaia-substacao",
-      "id": "fd7718546c1d70c426fc",
-      "link": "https://metropoles.com/sao-paulo/ons-viabiliza-data-center-em-atibaia-apesar-de-risco-na-geracao-de-energia",
-      "titulo": "ONS permite data center em Atibaia apesar de risco na geração de energia",
+      "assunto": "camara-sao-carlos-data-center",
+      "id": "91acad76c1097a70b266",
+      "link": "https://saocarlos.portaldacidade.com/noticias/cidade/camara-de-sao-carlos-realiza-audiencia-sobre-data-center-de-r-2-bi-nesta-terca-24-2938",
+      "titulo": "Câmara de São Carlos realiza audiência sobre data center de R$ 2 bi nesta terça (24)",
       "topico": "data_center"
     },
     {
-      "assunto": "trump-tarifa-data-centers-exterior",
-      "id": "df23366ce0d7fd74b7e9",
-      "link": "https://valor.globo.com/mundo/noticia/2026/11/20/trump-diz-que-no-permitir-que-empresas-americanas-construam-data-centers-fora-dos-eua.ghtml",
-      "titulo": "Trump diz que não permitirá que empresas americanas construam data centers fora dos EUA",
+      "assunto": "espanha-decreto-datacenters",
+      "id": "2f9a4973ebbeeb49d510",
+      "link": "https://datacenterdynamics.com/en/news/spain-approves-decree-on-data-centers-to-curb-electricity-costs/",
+      "titulo": "Spain approves decree on data centers to curb electricity costs",
       "topico": "data_center"
     },
     {
-      "assunto": "leilao-armazenamento-aneel-editais",
-      "id": "a51dab7cb79f17cb9e63",
-      "link": "https://gov.br/aneel/pt-br/assuntos/noticias/2026/editais-no-05-2026-e-no-06-2026-dos-leiloes-de-armazenamento-de-energia-sao-aprovados-pela-aneel?trk=article-ssr-frontend-pulse_little-text-block",
-      "titulo": "Editais Nº 05/2026 e Nº 06/2026 dos leilões de Armazenamento de Energia são aprovados pela ANEEL",
+      "assunto": "leilao-baterias-custeio",
+      "id": "f2a06bba3fd93cd020c4",
+      "link": "https://eixos.com.br/politica/absae-defende-solucao-politica-para-disputa-sobre-custos-de-contratacao-de-baterias-nos-leiloes-de-dezembro/",
+      "titulo": "Absae defende solução política para disputa sobre custos de contratação de baterias nos leilões de dezembro",
       "topico": "baterias"
     },
     {
-      "assunto": "leilao-baterias-custeio-stf-abeeolica",
-      "id": "ced5b687525477936b22",
-      "link": "https://eixos.com.br/energia-eletrica/abeeolica-vai-ao-stf-contra-regra-de-custeio-de-baterias-a-serem-contratadas-em-leilao/",
-      "titulo": "Abeeólica vai ao STF contra regra de custeio de baterias a serem contratadas em leilão",
+      "assunto": "bndes-credenciamento-moura",
+      "id": "66c3c84eb04c1b3b794f",
+      "link": "https://eixos.com.br/transicao-energetica/bndes-credencia-sistema-de-armazenamento-da-moura-para-leilao-de-baterias-com-conteudo-local/",
+      "titulo": "BNDES credencia sistema de armazenamento da Moura para leilão de baterias com conteúdo local",
       "topico": "baterias"
     },
     {
-      "assunto": "lutnick-pure-lithium-takeover",
-      "id": "c42c30d56a23d2c95992",
-      "link": "https://reuters.com/world/china/lutnick-asked-battery-startup-pure-lithium-accept-us-takeover-documents-source-2026-11-20/",
-      "titulo": "EXCLUSIVE: Lutnick asked battery startup Pure Lithium to accept US takeover, documents and source say",
+      "assunto": "preco-litio-carbonato-china",
+      "id": "32d4d7b9ee3381c10ba7",
+      "link": "https://finance.biggo.com/news/c67ddf8e-febf-402d-b509-e7dc70489858",
+      "titulo": "Lithium carbonate falls back to 80,000 yuan range; lithium battery industry bids farewell to universal tax exemption, with many small and mid-sized manufacturers potentially exiting within three years",
       "topico": "baterias"
     },
     {
-      "assunto": "ford-catl-producao-eua",
-      "id": "fba98254e38b99e3aed5",
-      "link": "https://paultan.org/2026/11/23/ford-produce-ev-battery-cells-in-us-catl-technology/",
-      "titulo": "Ford starts making EV battery cells in the US with CATL technology, plans to manufacture battery packs in 2027",
+      "assunto": "baterias-termicas-tecnologia",
+      "id": "f4b8609731f260354dad",
+      "link": "https://canarymedia.com/articles/batteries/24-7-clean-power-giant-heat-batteries",
+      "titulo": "Want 24 7 clean power for data centers? Try giant heat batteries.",
       "topico": "baterias"
     },
     {
-      "assunto": "greenline-seguro-credito-carbono",
-      "id": "1c8f67a2058d11fb3799",
-      "link": "https://revistacobertura.com.br/noticias/seguros-gerais/greenline-anuncia-seguro-obrigatorio-para-creditos-de-carbono-e-eleva-integridade-no-mercado-de-ativos-ambientais/",
-      "titulo": "Greenline anuncia seguro obrigatório para créditos de carbono e eleva integridade no mercado de ativos ambientais",
+      "assunto": "sbce-regulamentacao-investimentos",
+      "id": "d79b7fe74531db6b28ff",
+      "link": "https://broadcast.com.br/ultimas-noticias/mercado-de-carbono-pode-abrir-nova-frente-de-investimentos-no-brasil-com-regulamentacao/",
+      "titulo": "Mercado de carbono pode abrir nova frente de investimentos no Brasil com regulamentação",
       "topico": "carbono"
     },
     {
-      "assunto": "uk-eu-ets-link",
-      "id": "23c146d45d40b5c43a61",
-      "link": "https://carbonherald.com/eu-and-uk-seal-carbon-market-deal-opening-billions-in-co2-storage-opportunities/",
-      "titulo": "EU And UK Seal Carbon Market Deal, Opening Billions In CO2 Storage Opportunities",
+      "assunto": "redd-itmo-exportacao",
+      "id": "4e8ea3d76a18cb83b37c",
+      "link": "https://carbon-pulse.com/574607/?site=cpp",
+      "titulo": "FEATURE: Brazil faces calls to include REDD+ in initial ITMO export priorities",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "parceria-mycarbon-ldc",
+      "id": "3c9d9f4e7c3ecba92dae",
+      "link": "https://globorural.globo.com/especiais/fazenda-sustentavel/noticia/2026/11/mycarbon-e-ldc-querem-dar-escala-a-credito-de-carbono.ghtml",
+      "titulo": "MyCarbon e LDC querem dar escala a crédito de carbono",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "ets2-transposicao-nacional",
+      "id": "9ee584f663320834af0d",
+      "link": "https://russpain.com/news/spain-adds-shipping-to-its-carbon-market-under-new-decree-123374/",
+      "titulo": "Spain adds shipping to its carbon market under new decree",
       "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 23/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 24/11 (manhã)",
   "truncated": {}
 }
