@@ -1,7 +1,7 @@
 {
-  "cached": 211,
+  "cached": 408,
   "collection": {
-    "entries": 8628,
+    "entries": 8594,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,116 +27,111 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611241026.51771974096@smtp-relay.mailin.fr>",
-    "sent_at": 1795515979.3348565,
-    "status": "enviado"
-  },
-  "generated_at": 1795515929.625688,
+  "generated_at": 1795605810.9435527,
   "google_links_pending": 0,
-  "needs_evaluation": 442,
+  "needs_evaluation": 455,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 334,
-      "insuficiente": 298,
-      "trecho_disponivel": 21
+      "artigo_completo": 452,
+      "insuficiente": 379,
+      "trecho_disponivel": 32
     },
     "selected": {
-      "artigo_completo": 7,
-      "trecho_limitado_final": 5
+      "artigo_completo": 11,
+      "artigo_lido_pelo_modelo": 1
     }
   },
-  "request_sha256": "57f57a2915fdb9157f91e6cbc8f3090138e0ef06895ba6a70bc384fd43e25aa1",
+  "request_sha256": "1cd3cc0e9752ec9031b27ccd9012729e711f628de8eb7557a88bc3f5a6a65adb",
   "selected": [
     {
-      "assunto": "prodatapr",
-      "id": "8c43320fc99a4125181b",
-      "link": "https://g1.globo.com/pr/parana/videos-boa-noite-parana/video/alep-aprova-incentivos-para-atrair-data-centers-mas-impacto-ambiental-preocupa-entidades-15274869.ghtml",
-      "titulo": "Alep aprova incentivos para atrair data centers, mas impacto ambiental preocupa entidades",
+      "assunto": "casa-dos-ventos-tiktok-pecem",
+      "id": "6ac9fa8fbf8e562b0cc7",
+      "link": "https://megawhat.uol.com.br/noticias/casa-dos-ventos-pede-prioridade-para-antecipar-carga-de-data-center-do-tik-tok/",
+      "titulo": "Casa dos Ventos tenta antecipar carga de data center do TikTok",
       "topico": "data_center"
     },
     {
-      "assunto": "pressao-infraestrutura-eletrica-datacenters",
-      "id": "38d7920aeb3bcb3957bc",
-      "link": "https://cnnbrasil.com.br/infra/expansao-dos-data-centers-pressiona-infraestrutura-do-setor-eletrico/",
-      "titulo": "Expansão dos data centers pressiona infraestrutura do setor elétrico",
+      "assunto": "odata-cade-aquisicao",
+      "id": "fad471e482b48ba8a045",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/negocios/odata-recebe-aval-do-cade-para-comprar-empresa-de-data-center-em-sp/",
+      "titulo": "Odata recebe aval do Cade para comprar empresa de data center em SP",
       "topico": "data_center"
     },
     {
-      "assunto": "camara-sao-carlos-data-center",
-      "id": "91acad76c1097a70b266",
-      "link": "https://saocarlos.portaldacidade.com/noticias/cidade/camara-de-sao-carlos-realiza-audiencia-sobre-data-center-de-r-2-bi-nesta-terca-24-2938",
-      "titulo": "Câmara de São Carlos realiza audiência sobre data center de R$ 2 bi nesta terça (24)",
+      "assunto": "belem-datacenter-impacto-ambiental",
+      "id": "fa60eb65d1d69dd0b455",
+      "link": "https://pontodepauta.com/2026/11/24/implantacao-de-mega-data-center-em-belem-sera-tema-de-debate-sobre-impactos-ambientais/",
+      "titulo": "Implantação de mega data center em Belém será tema de debate sobre impactos ambientais",
       "topico": "data_center"
     },
     {
-      "assunto": "espanha-decreto-datacenters",
-      "id": "2f9a4973ebbeeb49d510",
-      "link": "https://datacenterdynamics.com/en/news/spain-approves-decree-on-data-centers-to-curb-electricity-costs/",
-      "titulo": "Spain approves decree on data centers to curb electricity costs",
+      "assunto": "tva-data-center-tarifa-grande-carga",
+      "id": "c8aa57b8575a483c5150",
+      "link": "https://utilitydive.com/news/tva-touts-17b-data-center-deal-under-new-large-load-tariff/875630/",
+      "titulo": "TVA touts $1.7B data center deal under new large-load tariff",
       "topico": "data_center"
     },
     {
-      "assunto": "leilao-baterias-custeio",
-      "id": "f2a06bba3fd93cd020c4",
-      "link": "https://eixos.com.br/politica/absae-defende-solucao-politica-para-disputa-sobre-custos-de-contratacao-de-baterias-nos-leiloes-de-dezembro/",
-      "titulo": "Absae defende solução política para disputa sobre custos de contratação de baterias nos leilões de dezembro",
+      "assunto": "leilao-baterias",
+      "id": "c855db56cad52019148a",
+      "link": "https://agenciainfra.com/blog/mme-alerta-para-falta-de-potencia-em-2027-se-leilao-de-baterias-for-suspenso/",
+      "titulo": "MME alerta para falta de potência em 2027 se leilão de baterias for suspenso",
       "topico": "baterias"
     },
     {
-      "assunto": "bndes-credenciamento-moura",
-      "id": "66c3c84eb04c1b3b794f",
-      "link": "https://eixos.com.br/transicao-energetica/bndes-credencia-sistema-de-armazenamento-da-moura-para-leilao-de-baterias-com-conteudo-local/",
-      "titulo": "BNDES credencia sistema de armazenamento da Moura para leilão de baterias com conteúdo local",
+      "assunto": "investimento-baterias-crescimento-mercado",
+      "id": "4d445b4734e9bca6fb83",
+      "link": "https://valor.globo.com/brasil/noticia/2026/11/24/investimento-em-baterias-deve-alcancar-r-465-bi-ate-2031.ghtml",
+      "titulo": "Investimento em baterias deve alcançar R$ 46,5 bi até 2031",
       "topico": "baterias"
     },
     {
-      "assunto": "preco-litio-carbonato-china",
-      "id": "32d4d7b9ee3381c10ba7",
-      "link": "https://finance.biggo.com/news/c67ddf8e-febf-402d-b509-e7dc70489858",
-      "titulo": "Lithium carbonate falls back to 80,000 yuan range; lithium battery industry bids farewell to universal tax exemption, with many small and mid-sized manufacturers potentially exiting within three years",
+      "assunto": "sodio-vs-litio-economia",
+      "id": "ab002dad2db361ae2627",
+      "link": "https://energytech.com/energy-storage/news/55420940/sodium-vs-lithium-new-economics-challenge-lithium-ions-proven-resilience-in-next-gen-energy-storage-markets",
+      "titulo": "Sodium vs. Lithium: New Economics Challenge Lithium-Ion's Proven Resilience in Next-Gen Energy Storage Markets",
       "topico": "baterias"
     },
     {
-      "assunto": "baterias-termicas-tecnologia",
-      "id": "f4b8609731f260354dad",
-      "link": "https://canarymedia.com/articles/batteries/24-7-clean-power-giant-heat-batteries",
-      "titulo": "Want 24 7 clean power for data centers? Try giant heat batteries.",
+      "assunto": "preco-baterias-queda-2027",
+      "id": "c7c02f494a71d637a7b6",
+      "link": "https://thecooldown.com/green-business/lithium-surplus-battery-storage-costs-decline/",
+      "titulo": "Battery storage prices fall as manufacturers face competition, potential lithium surplus in 2027",
       "topico": "baterias"
     },
     {
-      "assunto": "sbce-regulamentacao-investimentos",
-      "id": "d79b7fe74531db6b28ff",
-      "link": "https://broadcast.com.br/ultimas-noticias/mercado-de-carbono-pode-abrir-nova-frente-de-investimentos-no-brasil-com-regulamentacao/",
-      "titulo": "Mercado de carbono pode abrir nova frente de investimentos no Brasil com regulamentação",
+      "assunto": "sbce",
+      "id": "18688f46aeb5c9d1e3f1",
+      "link": "https://megawhat.uol.com.br/destaques-do-diario/fazenda-define-entidades-empresariais-para-a-camara-do-mercado-de-carbono/",
+      "titulo": "Fazenda define entidades empresariais para a câmara do mercado de carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "redd-itmo-exportacao",
-      "id": "4e8ea3d76a18cb83b37c",
-      "link": "https://carbon-pulse.com/574607/?site=cpp",
-      "titulo": "FEATURE: Brazil faces calls to include REDD+ in initial ITMO export priorities",
+      "assunto": "mercado-voluntario-carbono-eolica",
+      "id": "bf47bcf97949037d37d9",
+      "link": "https://canalsolar.com.br/en/Wind-farm--wind-energy--carbon-credits--gold-mine/",
+      "titulo": "Casa dos Ventos abastecerá extração de ouro com eólica e créditos de carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "parceria-mycarbon-ldc",
-      "id": "3c9d9f4e7c3ecba92dae",
-      "link": "https://globorural.globo.com/especiais/fazenda-sustentavel/noticia/2026/11/mycarbon-e-ldc-querem-dar-escala-a-credito-de-carbono.ghtml",
-      "titulo": "MyCarbon e LDC querem dar escala a crédito de carbono",
+      "assunto": "remocao-carbono-financiamento",
+      "id": "7cacacf908dc55d91b17",
+      "link": "https://digitaljournal.com/pr/news/newsfile/inplanet-idemitsu-americas-holdings-close-1370267922.html",
+      "titulo": "InPlanet and Idemitsu Americas Holdings Close Non-Recourse Debt Facility, Setting a New Standard for Financing ERW Carbon Removal.",
       "topico": "carbono"
     },
     {
-      "assunto": "ets2-transposicao-nacional",
-      "id": "9ee584f663320834af0d",
-      "link": "https://russpain.com/news/spain-adds-shipping-to-its-carbon-market-under-new-decree-123374/",
-      "titulo": "Spain adds shipping to its carbon market under new decree",
+      "assunto": "parlamento-ue-reforma-ets-quickfix",
+      "id": "d377c3c5bd9d822cf007",
+      "link": "https://qcintel.com/carbon/article/eu-parliament-backs-quick-fix-supply-balancing-reform-for-ets-78156.html",
+      "titulo": "EU Parliament backs 'quick-fix' supply balancing reform for ETS",
       "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 24/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 25/11 (manhã)",
   "truncated": {}
 }
