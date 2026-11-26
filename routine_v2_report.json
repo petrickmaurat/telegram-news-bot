@@ -1,7 +1,7 @@
 {
-  "cached": 408,
+  "cached": 531,
   "collection": {
-    "entries": 8594,
+    "entries": 9003,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,116 +27,112 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611251124.58468668916@smtp-relay.mailin.fr>",
-    "sent_at": 1795605861.8089821,
-    "status": "enviado"
-  },
-  "generated_at": 1795605810.9435527,
+  "generated_at": 1795688925.845643,
   "google_links_pending": 0,
-  "needs_evaluation": 455,
+  "needs_evaluation": 474,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 452,
-      "insuficiente": 379,
-      "trecho_disponivel": 32
+      "artigo_completo": 564,
+      "insuficiente": 402,
+      "trecho_disponivel": 39
     },
     "selected": {
-      "artigo_completo": 11,
-      "artigo_lido_pelo_modelo": 1
+      "artigo_completo": 10,
+      "trecho_disponivel": 1,
+      "trecho_limitado_final": 1
     }
   },
-  "request_sha256": "1cd3cc0e9752ec9031b27ccd9012729e711f628de8eb7557a88bc3f5a6a65adb",
+  "request_sha256": "d4b20d4a786a15ecd1e193be13aac472b348d8a936869b5fa5418db786d76c29",
   "selected": [
     {
-      "assunto": "casa-dos-ventos-tiktok-pecem",
-      "id": "6ac9fa8fbf8e562b0cc7",
-      "link": "https://megawhat.uol.com.br/noticias/casa-dos-ventos-pede-prioridade-para-antecipar-carga-de-data-center-do-tik-tok/",
-      "titulo": "Casa dos Ventos tenta antecipar carga de data center do TikTok",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "odata-cade-aquisicao",
-      "id": "fad471e482b48ba8a045",
-      "link": "https://megawhat.uol.com.br/economia-e-politica/negocios/odata-recebe-aval-do-cade-para-comprar-empresa-de-data-center-em-sp/",
-      "titulo": "Odata recebe aval do Cade para comprar empresa de data center em SP",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "belem-datacenter-impacto-ambiental",
-      "id": "fa60eb65d1d69dd0b455",
-      "link": "https://pontodepauta.com/2026/11/24/implantacao-de-mega-data-center-em-belem-sera-tema-de-debate-sobre-impactos-ambientais/",
-      "titulo": "Implantação de mega data center em Belém será tema de debate sobre impactos ambientais",
-      "topico": "data_center"
-    },
-    {
-      "assunto": "tva-data-center-tarifa-grande-carga",
-      "id": "c8aa57b8575a483c5150",
-      "link": "https://utilitydive.com/news/tva-touts-17b-data-center-deal-under-new-large-load-tariff/875630/",
-      "titulo": "TVA touts $1.7B data center deal under new large-load tariff",
-      "topico": "data_center"
-    },
-    {
       "assunto": "leilao-baterias",
-      "id": "c855db56cad52019148a",
-      "link": "https://agenciainfra.com/blog/mme-alerta-para-falta-de-potencia-em-2027-se-leilao-de-baterias-for-suspenso/",
-      "titulo": "MME alerta para falta de potência em 2027 se leilão de baterias for suspenso",
+      "id": "0477a1ad1ad6773dc181",
+      "link": "https://eixos.com.br/newsletters/dialogos-da-transicao/leiloes-de-baterias-justica-nega-suspensao-enquanto-rateio-trava-no-congresso/",
+      "titulo": "Leilões de baterias: Justiça nega suspensão, enquanto rateio trava no Congresso",
       "topico": "baterias"
     },
     {
-      "assunto": "investimento-baterias-crescimento-mercado",
-      "id": "4d445b4734e9bca6fb83",
-      "link": "https://valor.globo.com/brasil/noticia/2026/11/24/investimento-em-baterias-deve-alcancar-r-465-bi-ate-2031.ghtml",
-      "titulo": "Investimento em baterias deve alcançar R$ 46,5 bi até 2031",
+      "assunto": "logistica-reversa-baterias",
+      "id": "20704672652038c7f622",
+      "link": "https://valor.globo.com/opiniao/coluna/janela-aberta-para-as-baterias.ghtml",
+      "titulo": "Janela aberta para as baterias",
       "topico": "baterias"
     },
     {
-      "assunto": "sodio-vs-litio-economia",
-      "id": "ab002dad2db361ae2627",
-      "link": "https://energytech.com/energy-storage/news/55420940/sodium-vs-lithium-new-economics-challenge-lithium-ions-proven-resilience-in-next-gen-energy-storage-markets",
-      "titulo": "Sodium vs. Lithium: New Economics Challenge Lithium-Ion's Proven Resilience in Next-Gen Energy Storage Markets",
+      "assunto": "preco-custo-bess-global",
+      "id": "139f723759a3853e99b1",
+      "link": "https://tradingview.com/news/reuters.com,2026:newsml_S8N45Y0BJ:0-italy-awards-all-battery-storage-tendered-at-price-well-under-cap/",
+      "titulo": "Italy awards all battery storage tendered at price well under cap",
       "topico": "baterias"
     },
     {
-      "assunto": "preco-baterias-queda-2027",
-      "id": "c7c02f494a71d637a7b6",
-      "link": "https://thecooldown.com/green-business/lithium-surplus-battery-storage-costs-decline/",
-      "titulo": "Battery storage prices fall as manufacturers face competition, potential lithium surplus in 2027",
+      "assunto": "tecnologia-bateria-estado-solido",
+      "id": "22b94e0659d4b27280e9",
+      "link": "https://m.arenaev.com/china_fixes_solidstate_battery_marketing_myths-amp-6384.php",
+      "titulo": "China fixes solid-state battery marketing myths - ArenaEV",
       "topico": "baterias"
     },
     {
       "assunto": "sbce",
-      "id": "18688f46aeb5c9d1e3f1",
-      "link": "https://megawhat.uol.com.br/destaques-do-diario/fazenda-define-entidades-empresariais-para-a-camara-do-mercado-de-carbono/",
-      "titulo": "Fazenda define entidades empresariais para a câmara do mercado de carbono",
+      "id": "f63af9e029a315ea30c0",
+      "link": "https://exame.com/esg/paris-antalia-e-o-sistema-de-comercio-de-emissoes-brasileiro/",
+      "titulo": "Paris, Antália e o Sistema de Comércio de Emissões Brasileiro",
       "topico": "carbono"
     },
     {
-      "assunto": "mercado-voluntario-carbono-eolica",
-      "id": "bf47bcf97949037d37d9",
-      "link": "https://canalsolar.com.br/en/Wind-farm--wind-energy--carbon-credits--gold-mine/",
-      "titulo": "Casa dos Ventos abastecerá extração de ouro com eólica e créditos de carbono",
+      "assunto": "carbono-aviacao-corsia",
+      "id": "e36ad347c01a4a4e1b83",
+      "link": "https://capitalreset.uol.com.br/carbono/mercado-regulado-de-carbono/brasil-ficara-fora-do-mercado-de-carbono-da-aviacao-internacional-diz-especialista/",
+      "titulo": "Brasil ficará fora do mercado de carbono da aviação internacional, diz especialista",
       "topico": "carbono"
     },
     {
-      "assunto": "remocao-carbono-financiamento",
-      "id": "7cacacf908dc55d91b17",
-      "link": "https://digitaljournal.com/pr/news/newsfile/inplanet-idemitsu-americas-holdings-close-1370267922.html",
-      "titulo": "InPlanet and Idemitsu Americas Holdings Close Non-Recourse Debt Facility, Setting a New Standard for Financing ERW Carbon Removal.",
+      "assunto": "carbono-mt-recuperacao-areas",
+      "id": "66bd5a0cd7021238cd27",
+      "link": "https://matogrosso.canalrural.com.br/politica/mt-garante-r-100-milhoes-para-recuperar-areas-degradadas-e-avancar-no-mercado-de-carbono/",
+      "titulo": "MT garante R$ 100 milhões para recuperar áreas degradadas e avançar no mercado de carbono",
       "topico": "carbono"
     },
     {
-      "assunto": "parlamento-ue-reforma-ets-quickfix",
-      "id": "d377c3c5bd9d822cf007",
-      "link": "https://qcintel.com/carbon/article/eu-parliament-backs-quick-fix-supply-balancing-reform-for-ets-78156.html",
-      "titulo": "EU Parliament backs 'quick-fix' supply balancing reform for ETS",
+      "assunto": "eu-ets2-reforma-debate",
+      "id": "6af47ebcab8c2c469ef4",
+      "link": "https://ca.news.yahoo.com/eight-eu-countries-join-forces-110603285.html",
+      "titulo": "Eight EU countries join forces to defend carbon market against calls for delay",
       "topico": "carbono"
+    },
+    {
+      "assunto": "redata",
+      "id": "797a179f64427c4f254f",
+      "link": "https://valor.globo.com/brasil/noticia/2026/11/25/decreto-que-regulamenta-redata-est-pronto-e-aguarda-deciso-final-de-lula.ghtml",
+      "titulo": "Decreto que regulamenta Redata está pronto e aguarda decisão final de Lula",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "gpu-precos-datacenters",
+      "id": "595297ca5477b1544c1a",
+      "link": "https://valor.globo.com/google/amp/patrocinado/pulse-brand/noticia/2026/11/25/rtx-5090-desaparece-de-lojas-na-crise-de-precos-causada-por-data-centers-de-ia-1.ghtml",
+      "titulo": "RTX 5090 desaparece de lojas na crise de preços causada por data centers de IA",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "anatel-regra-5ms",
+      "id": "d8fa576aabee012f657a",
+      "link": "https://exame.com/tecnologia/anatel-debate-hoje-se-regra-de-5-milissegundos-pode-definir-novos-data-centers-em-cidades/",
+      "titulo": "Anatel debate hoje se 'regra de 5 milissegundos' pode definir novos data centers em cidades",
+      "topico": "data_center"
+    },
+    {
+      "assunto": "fcc-spacex-satelites-datacenter",
+      "id": "faf7c9130eb010b96f28",
+      "link": "https://valor.globo.com/empresas/noticia/2026/11/25/eua-autorizam-spacex-a-lanar-1-milho-de-satlites-para-data-centers.ghtml",
+      "titulo": "EUA autorizam SpaceX a lançar 1 milhão de satélites para data centers",
+      "topico": "data_center"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 25/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 26/11 (manhã)",
   "truncated": {}
 }
