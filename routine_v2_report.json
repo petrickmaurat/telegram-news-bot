@@ -1,7 +1,7 @@
 {
-  "cached": 531,
+  "cached": 593,
   "collection": {
-    "entries": 9003,
+    "entries": 8925,
     "failed": 2,
     "failed_examples": [
       "https://itforum.com.br/feed/",
@@ -27,117 +27,112 @@
     }
   },
   "delivery_links_ready": true,
-  "email": {
-    "message_id": "<202611261029.94926311025@smtp-relay.mailin.fr>",
-    "sent_at": 1795688983.193244,
-    "status": "enviado"
-  },
-  "generated_at": 1795688925.845643,
+  "generated_at": 1795775350.1138976,
   "google_links_pending": 0,
-  "needs_evaluation": 474,
+  "needs_evaluation": 414,
   "note": "A Routine não envia e-mail; o envio ocorre no GitHub Actions.",
   "preview": "/home/user/telegram-news-bot/routine_v2_preview.html",
   "reading": {
     "candidates": {
-      "artigo_completo": 564,
-      "insuficiente": 402,
-      "trecho_disponivel": 39
+      "artigo_completo": 549,
+      "insuficiente": 425,
+      "trecho_disponivel": 33
     },
     "selected": {
-      "artigo_completo": 10,
-      "trecho_disponivel": 1,
-      "trecho_limitado_final": 1
+      "artigo_completo": 9,
+      "artigo_lido_pelo_modelo": 1,
+      "trecho_limitado_final": 2
     }
   },
-  "request_sha256": "d4b20d4a786a15ecd1e193be13aac472b348d8a936869b5fa5418db786d76c29",
+  "request_sha256": "14efd129fa336091726c00d069f6d597aaf8e58fdbb241cbb561326ddaed6219",
   "selected": [
     {
-      "assunto": "leilao-baterias",
-      "id": "0477a1ad1ad6773dc181",
-      "link": "https://eixos.com.br/newsletters/dialogos-da-transicao/leiloes-de-baterias-justica-nega-suspensao-enquanto-rateio-trava-no-congresso/",
-      "titulo": "Leilões de baterias: Justiça nega suspensão, enquanto rateio trava no Congresso",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "logistica-reversa-baterias",
-      "id": "20704672652038c7f622",
-      "link": "https://valor.globo.com/opiniao/coluna/janela-aberta-para-as-baterias.ghtml",
-      "titulo": "Janela aberta para as baterias",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "preco-custo-bess-global",
-      "id": "139f723759a3853e99b1",
-      "link": "https://tradingview.com/news/reuters.com,2026:newsml_S8N45Y0BJ:0-italy-awards-all-battery-storage-tendered-at-price-well-under-cap/",
-      "titulo": "Italy awards all battery storage tendered at price well under cap",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "tecnologia-bateria-estado-solido",
-      "id": "22b94e0659d4b27280e9",
-      "link": "https://m.arenaev.com/china_fixes_solidstate_battery_marketing_myths-amp-6384.php",
-      "titulo": "China fixes solid-state battery marketing myths - ArenaEV",
-      "topico": "baterias"
-    },
-    {
-      "assunto": "sbce",
-      "id": "f63af9e029a315ea30c0",
-      "link": "https://exame.com/esg/paris-antalia-e-o-sistema-de-comercio-de-emissoes-brasileiro/",
-      "titulo": "Paris, Antália e o Sistema de Comércio de Emissões Brasileiro",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "carbono-aviacao-corsia",
-      "id": "e36ad347c01a4a4e1b83",
-      "link": "https://capitalreset.uol.com.br/carbono/mercado-regulado-de-carbono/brasil-ficara-fora-do-mercado-de-carbono-da-aviacao-internacional-diz-especialista/",
-      "titulo": "Brasil ficará fora do mercado de carbono da aviação internacional, diz especialista",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "carbono-mt-recuperacao-areas",
-      "id": "66bd5a0cd7021238cd27",
-      "link": "https://matogrosso.canalrural.com.br/politica/mt-garante-r-100-milhoes-para-recuperar-areas-degradadas-e-avancar-no-mercado-de-carbono/",
-      "titulo": "MT garante R$ 100 milhões para recuperar áreas degradadas e avançar no mercado de carbono",
-      "topico": "carbono"
-    },
-    {
-      "assunto": "eu-ets2-reforma-debate",
-      "id": "6af47ebcab8c2c469ef4",
-      "link": "https://ca.news.yahoo.com/eight-eu-countries-join-forces-110603285.html",
-      "titulo": "Eight EU countries join forces to defend carbon market against calls for delay",
-      "topico": "carbono"
+      "assunto": "porto-acu-termica-datacenters",
+      "id": "e549250e905a7fed5ac6",
+      "link": "https://megawhat.uol.com.br/economia-e-politica/empresas/porto-do-acu-negocia-nova-termica-e-avanca-na-atracao-de-data-centers/",
+      "titulo": "Porto do Açu negocia nova térmica e avança na atração de data centers",
+      "topico": "data_center"
     },
     {
       "assunto": "redata",
-      "id": "797a179f64427c4f254f",
-      "link": "https://valor.globo.com/brasil/noticia/2026/11/25/decreto-que-regulamenta-redata-est-pronto-e-aguarda-deciso-final-de-lula.ghtml",
-      "titulo": "Decreto que regulamenta Redata está pronto e aguarda decisão final de Lula",
+      "id": "7e0917f085567b84da70",
+      "link": "https://tvsimbrasil.com.br/brasil/tecnologia/noticia/2026/11/26/decreto-redata-trava-prazo-desconto-risco",
+      "titulo": "Decreto do Redata trava e põe prazo de desconto em risco",
       "topico": "data_center"
     },
     {
-      "assunto": "gpu-precos-datacenters",
-      "id": "595297ca5477b1544c1a",
-      "link": "https://valor.globo.com/google/amp/patrocinado/pulse-brand/noticia/2026/11/25/rtx-5090-desaparece-de-lojas-na-crise-de-precos-causada-por-data-centers-de-ia-1.ghtml",
-      "titulo": "RTX 5090 desaparece de lojas na crise de preços causada por data centers de IA",
+      "assunto": "atibaia-datacenter",
+      "id": "38e7705c54f16da48692",
+      "link": "https://c-level.folha.uol.com.br/ia/2026/11/data-center-de-r-3-bi-em-atibaia-mobiliza-orgaos-federais-enquanto-prefeitura-nega-ter-recebido-projeto.shtml",
+      "titulo": "Data center de R$ 3 bi em Atibaia mobiliza órgãos federais, enquanto prefeitura nega ter recebido projeto",
       "topico": "data_center"
     },
     {
-      "assunto": "anatel-regra-5ms",
-      "id": "d8fa576aabee012f657a",
-      "link": "https://exame.com/tecnologia/anatel-debate-hoje-se-regra-de-5-milissegundos-pode-definir-novos-data-centers-em-cidades/",
-      "titulo": "Anatel debate hoje se 'regra de 5 milissegundos' pode definir novos data centers em cidades",
+      "assunto": "aurora-colorado-moratoria-datacenter",
+      "id": "8de5af9b4fe6719aa760",
+      "link": "https://datacenterdynamics.com/en/news/vantage-drops-plans-for-trident-data-center-after-colorados-aurora-city-passes-moratorium/",
+      "titulo": "Vantage drops plans for Trident data center after Colorado's Aurora City passes moratorium",
       "topico": "data_center"
     },
     {
-      "assunto": "fcc-spacex-satelites-datacenter",
-      "id": "faf7c9130eb010b96f28",
-      "link": "https://valor.globo.com/empresas/noticia/2026/11/25/eua-autorizam-spacex-a-lanar-1-milho-de-satlites-para-data-centers.ghtml",
-      "titulo": "EUA autorizam SpaceX a lançar 1 milhão de satélites para data centers",
-      "topico": "data_center"
+      "assunto": "leilao-baterias",
+      "id": "bbb99a464264e2994429",
+      "link": "https://valor.globo.com/brasil/noticia/2026/11/26/cmn-reduz-taxa-do-fundo-clima-para-projetos-de-armazenamento-de-energia-com-baterias-produzidas-no-pas.ghtml",
+      "titulo": "CMN reduz taxa do Fundo Clima para projetos de armazenamento de energia com baterias produzidas no país",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "bndes-credito-leilao-baterias",
+      "id": "315d80b058c2fae61dc1",
+      "link": "https://megawhat.uol.com.br/armazenamento/bndes-flexibiliza-credito-para-baterias-e-podera-financiar-ate-80-dos-projetos/",
+      "titulo": "BNDES flexibiliza crédito para baterias e poderá financiar até 80% dos projetos",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "bateria-sem-metais-raros",
+      "id": "b602b52dcdfba3485a09",
+      "link": "https://valor.globo.com/empresas/noticia/2026/11/27/suzuki-aposta-em-baterias-sem-metais-raros-diante-de-riscos-no-fornecimento-pela-china.ghtml",
+      "titulo": "Suzuki aposta em baterias sem metais raros diante de riscos no fornecimento pela China",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "eua-financiamento-baterias",
+      "id": "927b87492da7c3345ff6",
+      "link": "https://theinformation.com/newsletters/the-electric/new-congress-will-likely-restore-billions-funding-battery-startups",
+      "titulo": "The New Congress Will Likely Restore Billions in Funding For Battery Startups",
+      "topico": "baterias"
+    },
+    {
+      "assunto": "sbce-explicativo",
+      "id": "6de7c337263f94faa5d4",
+      "link": "https://capitalreset.uol.com.br/carbono/co2-na-conta-tudo-que-voce-precisa-saber-sobre-os-mercados-de-carbono/",
+      "titulo": "CO2 na conta: tudo que você precisa saber sobre os mercados de carbono",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "cop31-contabilidade-carbono",
+      "id": "f953cc581f8642c05137",
+      "link": "https://ey.com/pt_br/newsroom/2026/11/cop31-competitividade-mercado-carbono-depende-padrao-global-contabilidade",
+      "titulo": "COP31: Competitividade do mercado de carbono depende de padrão global de contabilidade",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "caatinga-remocoes-carbono",
+      "id": "3100152521cc2c132776",
+      "link": "https://gov.br/sudene/pt-br/assuntos/noticias/caatinga-responde-por-40-das-remocoes-de-gases-de-efeito-estufa-no-brasil-e-amplia-potencial-no-mercado-de-carbono-brasileiro",
+      "titulo": "Caatinga responde por 40% das remoções de gases de efeito estufa no Brasil e amplia potencial no mercado de carbono brasileiro",
+      "topico": "carbono"
+    },
+    {
+      "assunto": "nz-ets-reforma",
+      "id": "345c709852773004b4e6",
+      "link": "https://interest.co.nz/public-policy/141237/motu-research-report-eyes-emissions-trading-scheme-solutions-could-work-better",
+      "titulo": "‘Our emissions trading system was designed for a world that no longer exists’",
+      "topico": "carbono"
     }
   ],
   "send_enabled": false,
   "status": "pilot_ready",
-  "subject": "Panorama Data Centers, Baterias & Carbono — 26/11 (manhã)",
+  "subject": "Panorama Data Centers, Baterias & Carbono — 27/11 (manhã)",
   "truncated": {}
 }
